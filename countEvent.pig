@@ -8,7 +8,7 @@ register 'eventudf.py' using jython as eventudf;
 set default_parallel 10
 %default reduceNum 10
 
-%default OUTPUT '/user/zhenyue/bots/noti.weather.fb.perDay'
+%default OUTPUT '/user/rmeng/bots/noti.weather.fb.perDay'
 
 data = LOAD 'uapi_analytics.uapi_logs' USING org.apache.hive.hcatalog.pig.HCatLoader();
 
