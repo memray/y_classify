@@ -4,22 +4,22 @@
 
 --register 'eventudf.py' using jython as eventudf;
 
-bot_name = 'Family Assistant'
-time_start = '2017-04-01-00'
-time_end   = '2017-04-30-24'
+%default BOT_NAME 'Family Assistant';
+%default time_start '2017-04-01-00';
+%default time_end '2017-04-30-24';
 
-set default_parallel 10
-%default reduceNum 10
-%default OUTPUT '/user/rmeng/' + bot_name
+SET default_parallel 10;
+%default reduceNum 10;
+%default OUTPUT '/user/rmeng/$BOT_NAME';
 
 data = LOAD 'uapi_analytics.uapi_logs' USING org.apache.hive.hcatalog.pig.HCatLoader();
 
 data_filtered = filter data by (
-	and msg_sentto_displayname matches bot_name
+	msg_sentto_displayname matches bot_name
     and msg_sentto_env != NULL
     and msg_sentto_env == 'prod'
-    and dt >= time_start
-    and dt < time_end
+--    and dt >= time_start
+--    and dt < time_end
     and (direction == 'bot_to_sb' or direction == 'user_to_sb')
 	);
 
@@ -36,11 +36,11 @@ data_processed = foreach data_filtered generate
 	(chararray) SUBSTRING (dt,0,10) as dt_day,
 	-- time stamp
 	(int)(ts/1000) as ts_in_second,
-	(chararray) platform_message_id;
+	(chararray) platform_message_id,
 	-- text
 	(chararray) msg_text,
 	-- NLU
-	(chararray) botlog_intent;
+	(chararray) botlog_intent,
 	(chararray) botlog_slots;
 
 
