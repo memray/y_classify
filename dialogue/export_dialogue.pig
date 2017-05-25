@@ -15,7 +15,7 @@ SET default_parallel 10;
 data = LOAD 'uapi_analytics.uapi_logs' USING org.apache.hive.hcatalog.pig.HCatLoader();
 
 data_filtered = filter data by (
-	msg_sentto_displayname matches bot_name
+	msg_sentto_displayname matches BOT_NAME
     and msg_sentto_env != NULL
     and msg_sentto_env == 'prod'
 --    and dt >= time_start

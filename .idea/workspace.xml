@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="correct the output path from zhenyue/ to rmeng/">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/event/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/event/countEvent.pig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/event/eventudf.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/countEvent.pig" afterPath="$PROJECT_DIR$/dialogue/export_dialogue.pig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/eventudf.py" afterPath="$PROJECT_DIR$/dialogue/udf_export.py" />
+    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/export_dialogue.pig" afterPath="$PROJECT_DIR$/dialogue/export_dialogue.pig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +30,8 @@
       <file leaf-file-name="export_dialogue.pig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/export_dialogue.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -147,8 +143,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="FullScreen" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -608,7 +604,7 @@
       <updated>1495664222373</updated>
       <workItem from="1495668715500" duration="24000" />
       <workItem from="1495668750067" duration="86000" />
-      <workItem from="1495668847979" duration="4811000" />
+      <workItem from="1495668847979" duration="5549000" />
     </task>
     <task id="LOCAL-00001" summary="correct the output path from zhenyue/ to rmeng/">
       <created>1495666165640</created>
@@ -617,11 +613,25 @@
       <option name="project" value="LOCAL" />
       <updated>1495666165640</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="export_dialogue">
+      <created>1495752892404</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1495752892404</updated>
+    </task>
+    <task id="LOCAL-00003" summary="debug export_dialogue">
+      <created>1495753495501</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1495753495501</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4921000" />
+    <option name="totallyTimeSpent" value="5659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -675,7 +685,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="correct the output path from zhenyue/ to rmeng/" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct the output path from zhenyue/ to rmeng/" />
+    <MESSAGE value="export_dialogue" />
+    <MESSAGE value="debug export_dialogue" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug export_dialogue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -822,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/export_dialogue.pig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="255">
+          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
           <folding />
         </state>
       </provider>
