@@ -4,7 +4,7 @@
 
 --register 'eventudf.py' using jython as eventudf;
 
-%default BOT_NAME 'Family Assistant';
+%default BOT_NAME 'Family\ Assistant';
 %default time_start '2017-04-01-00';
 %default time_end '2017-04-30-24';
 
