@@ -40,8 +40,8 @@
       <file leaf-file-name="export_dialogue.pig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/export_dialogue.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="242">
+              <caret line="54" column="2" lean-forward="true" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -615,7 +615,7 @@
       <updated>1495664222373</updated>
       <workItem from="1495668715500" duration="24000" />
       <workItem from="1495668750067" duration="86000" />
-      <workItem from="1495668847979" duration="9419000" />
+      <workItem from="1495668847979" duration="9800000" />
     </task>
     <task id="LOCAL-00001" summary="correct the output path from zhenyue/ to rmeng/">
       <created>1495666165640</created>
@@ -701,11 +701,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495779986801</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="debug export_dialogue">
+      <created>1495781283838</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1495781283838</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9529000" />
+    <option name="totallyTimeSpent" value="9910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="88" y="50" width="1214" height="810" extended-state="0" />
@@ -908,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/export_dialogue.pig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="242">
+          <caret line="54" column="2" lean-forward="true" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
           <folding />
         </state>
       </provider>
