@@ -10,7 +10,8 @@
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME';
+%default OUTPUT '/user/rmeng/$BOT_NAME.20170525-0319.csv';
+rmf $OUTPUT
 
 data = LOAD 'uapi_analytics.uapi_logs' USING org.apache.hive.hcatalog.pig.HCatLoader();
 
@@ -37,19 +38,18 @@ data_processed = foreach data_filtered generate
 	-- time stamp
 	(int)(ts/1000) as ts_in_second,
 	(chararray) platform_message_id,
-	-- text
-	(chararray) msg_text,
 	-- NLU
 	(chararray) botlog_intent,
-	(chararray) botlog_slots;
+	(chararray) botlog_slots,
+	-- text
+	(chararray) msg_text;
 
 
 data_group = GROUP data_processed BY (useruuid, dt_day);
---
+
 --data_group_processed = FOREACH data_group  {
 --               ordered = ORDER $1 BY ts_in_second ASC;
---               GENERATE FLATTEN (group) AS (useruuid, dt_day),
---               ordered AS events;
+--               GENERATE FLATTEN (group) AS (useruuid, dt_day);
 --               }
 --
 --
@@ -59,4 +59,5 @@ data_group = GROUP data_processed BY (useruuid, dt_day);
 --
 data = DISTINCT data_group PARALLEL 1;
 
-STORE data INTO '$OUTPUT.20170525-0319' USING org.apache.pig.piggybank.storage.PigStorageSchema();
+--STORE data INTO '$OUTPUT.20170525-0319' USING org.apache.pig.piggybank.storage.PigStorageSchema();
+STORE data INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.CSVExcelStorage();
