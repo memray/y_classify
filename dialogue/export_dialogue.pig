@@ -15,13 +15,13 @@ SET default_parallel 10;
 data = LOAD 'uapi_analytics.uapi_logs' USING org.apache.hive.hcatalog.pig.HCatLoader();
 
 data_filtered = filter data by (
-	msg_sentto_displayname == 'Family Assistant'
-    and msg_sentto_env != NULL
+	msg_sentto_displayname matches 'Family.*Assistant'
     and msg_sentto_env == 'prod'
+    and msg_text IS NOT NULL
 --    and dt >= time_start
 --    and dt < time_end
     and (direction == 'bot_to_sb' or direction == 'user_to_sb')
-	);
+);
 
 data_processed = foreach data_filtered generate
     -- metadata
@@ -60,4 +60,3 @@ data_group = GROUP data_processed BY (useruuid, dt_day);
 --data = DISTINCT data_group PARALLEL 1;
 
 STORE data_group INTO '$OUTPUT.20170525-0319' USING org.apache.pig.piggybank.storage.PigStorageSchema();
-
