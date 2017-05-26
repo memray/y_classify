@@ -45,7 +45,7 @@ data_processed = foreach data_filtered generate
 	(chararray) msg_text;
 
 
-data_group = GROUP data_processed BY (useruuid, dt_day);
+--data_group = GROUP data_processed BY (useruuid, dt_day);
 
 --data_group_processed = FOREACH data_group  {
 --               ordered = ORDER $1 BY ts_in_second ASC;
@@ -57,7 +57,7 @@ data_group = GROUP data_processed BY (useruuid, dt_day);
 --                  AS (n_message, n_notification, n_delivery, n_read, n_bottosb, n_bottouser, n_bottouser_post,
 --                  visit_span, delivery_span, read_span);
 --
-data = DISTINCT data_group PARALLEL 1;
+data = DISTINCT data_processed PARALLEL 1;
 
 --STORE data INTO '$OUTPUT.20170525-0319' USING org.apache.pig.piggybank.storage.PigStorageSchema();
 STORE data INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.CSVExcelStorage();
