@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/analysis/parse_session.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/presto_data_process.iml" afterPath="$PROJECT_DIR$/.idea/presto_data_process.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/sessionize_dialogue.pig" afterPath="$PROJECT_DIR$/dialogue/sessionize_dialogue.pig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/udf_session.py" afterPath="$PROJECT_DIR$/dialogue/udf_session.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/event/countEvent.pig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="799">
-              <caret line="47" column="96" lean-forward="true" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
+              <caret line="47" column="96" lean-forward="false" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -41,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/event/eventudf.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="698">
-              <caret line="57" column="47" lean-forward="true" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+              <caret line="57" column="47" lean-forward="false" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -49,24 +52,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sessionize_dialogue.pig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sessionize_dialogue.pig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/sessionize_dialogue.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="982">
-              <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+            <state relative-caret-position="200">
+              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="udf_session.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="udf_session.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/udf_session.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+            <state relative-caret-position="510">
+              <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parse_session.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dialogue/analysis/parse_session.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,8 +122,9 @@
         <option value="$PROJECT_DIR$/dialogue/export_dialogue.pig" />
         <option value="$PROJECT_DIR$/dialogue/export_utterance.pig" />
         <option value="$PROJECT_DIR$/event/countEvent.pig" />
-        <option value="$PROJECT_DIR$/dialogue/udf_session.py" />
+        <option value="$PROJECT_DIR$/dialogue/analysis/parse_session.py" />
         <option value="$PROJECT_DIR$/dialogue/sessionize_dialogue.pig" />
+        <option value="$PROJECT_DIR$/dialogue/udf_session.py" />
       </list>
     </option>
   </component>
@@ -178,6 +192,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dialogue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataset" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Family_Assistant.interval=5min.sessionized" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -655,7 +687,7 @@
       <updated>1495664222373</updated>
       <workItem from="1495668715500" duration="24000" />
       <workItem from="1495668750067" duration="86000" />
-      <workItem from="1495668847979" duration="22052000" />
+      <workItem from="1495668847979" duration="22404000" />
     </task>
     <task id="LOCAL-00001" summary="correct the output path from zhenyue/ to rmeng/">
       <created>1495666165640</created>
@@ -832,11 +864,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496097799936</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="debug export_dialogue">
+      <created>1496100224583</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1496100224583</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22162000" />
+    <option name="totallyTimeSpent" value="22514000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1047,7 +1086,7 @@
     <entry file="file://$PROJECT_DIR$/event/eventudf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="698">
-          <caret line="57" column="47" lean-forward="true" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+          <caret line="57" column="47" lean-forward="false" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -1057,26 +1096,34 @@
     <entry file="file://$PROJECT_DIR$/event/countEvent.pig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
-          <caret line="47" column="96" lean-forward="true" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
+          <caret line="47" column="96" lean-forward="false" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/sessionize_dialogue.pig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/analysis/parse_session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/udf_session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+        <state relative-caret-position="510">
+          <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/sessionize_dialogue.pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="982">
-          <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
