@@ -10,7 +10,7 @@ register 'udf_session.py' using jython as sessionudf;
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.interval=5min.sessionized';
+%default OUTPUT '/user/rmeng/$BOT_NAME.interval=30min.sessionized';
 
 rmf $OUTPUT
 
