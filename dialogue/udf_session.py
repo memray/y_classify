@@ -6,9 +6,21 @@ import re
 
 # -*- coding: utf-8 -*-
 
-@outputSchema("record:{(n_message:int, n_notification:int, n_delivery:int, n_read:int, n_bottosb:int, n_bottouser:int, "
-              "n_bottouser_post:int, visit_span:int, delivery_span:int, read_span:int)}")
-
+@outputSchema('session:bag{t:('
+              'time:                    chararray, '
+              'useruuid:                chararray, '
+              'direction:               chararray, '
+              'platform:                chararray, '
+              'msg_sentto:              chararray,'
+              'msg_types:               chararray, '
+              'msg_sentto_displayname:  chararray, '
+              'dt_day:                  chararray, '
+              'ts_in_second:            int, '
+              'platform_message_id:     chararray, '
+              'botlog_intent:           chararray, '
+              'botlog_slots:            chararray, '
+              'msg_text:                chararray'
+              ')}')
 
 def split_session(user_utterances, max_session_interval):
     '''
@@ -39,7 +51,7 @@ def split_session(user_utterances, max_session_interval):
     if len(current_session) > 0:
         session_list.append(current_session)
 
-    return (session_list)
+    return session_list
 
 
 
