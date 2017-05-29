@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/udf_export.py" afterPath="$PROJECT_DIR$/dialogue/udf_session.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/export_utterance.pig" afterPath="$PROJECT_DIR$/dialogue/export_utterance.pig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/sessionize_dialogue.pig" afterPath="$PROJECT_DIR$/dialogue/sessionize_dialogue.pig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event/countEvent.pig" afterPath="$PROJECT_DIR$/event/countEvent.pig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -652,7 +647,7 @@
       <updated>1495664222373</updated>
       <workItem from="1495668715500" duration="24000" />
       <workItem from="1495668750067" duration="86000" />
-      <workItem from="1495668847979" duration="18404000" />
+      <workItem from="1495668847979" duration="18411000" />
     </task>
     <task id="LOCAL-00001" summary="correct the output path from zhenyue/ to rmeng/">
       <created>1495666165640</created>
@@ -766,11 +761,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495832383678</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="debug export_dialogue">
+      <created>1496092136961</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1496092136961</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18514000" />
+    <option name="totallyTimeSpent" value="18521000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
