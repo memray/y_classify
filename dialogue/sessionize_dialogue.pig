@@ -2,19 +2,18 @@
     Pig script to count the number of different types of events per user per day
  */
 
---register 'eventudf.py' using jython as eventudf;
+register 'udf_session.py' using jython as sessionudf;
 
 %default BOT_NAME 'Family_Assistant';
 %default time_start '2017-04-01-00';
 %default time_end '2017-04-30-24';
+%default MAX_SESSION_INTERVAL 300; -- in second, try two interval values: 300 (5 mins) and 1800 (30 mins)
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.20170525-0319';
-
+%default OUTPUT '/user/rmeng/$BOT_NAME.interval=5min.sessionized';
 
 rmf $OUTPUT
-
 
 data = LOAD 'uapi_analytics.uapi_logs' USING org.apache.hive.hcatalog.pig.HCatLoader();
 
@@ -41,25 +40,24 @@ data_processed = foreach data_filtered generate
 	-- time stamp
 	(int)(ts/1000) as ts_in_second,
 	(chararray) platform_message_id,
-	-- text
-	(chararray) msg_text,
-	-- NLU
+	-- NLU,
 	(chararray) botlog_intent,
-	(chararray) botlog_slots;
+	(chararray) botlog_slots,
+	-- text
+	(chararray) msg_text;
 
+-- Group utterances by useruuid
+data_group = GROUP data_processed BY (useruuid);
 
-data_group = GROUP data_processed BY (useruuid, dt_day);
+-- For each group (utterances of one user), order utterances by time and do sessionization
+data_group_sessionized = FOREACH data_group  {
+                               ordered_groups = ORDER $1 BY ts_in_second ASC;
+                               GENERATE useruuid, FLATTEN(sessionudf.split_session(ordered_groups, $MAX_SESSION_INTERVAL));
+                         }
 
-data_group_processed = FOREACH data_group  {
-               ordered = ORDER $1 BY ts_in_second ASC;
-               GENERATE FLATTEN (group) AS (useruuid, dt_day);
-               }
---
---
---data_perDay = FOREACH data_group_processed GENERATE useruuid, dt_day, FLATTEN(eventudf.count_event(events))
---                  AS (n_message, n_notification, n_delivery, n_read, n_bottosb, n_bottouser, n_bottouser_post,
---                  visit_span, delivery_span, read_span);
---
-data = DISTINCT data_group PARALLEL 1;
+-- Reduce results
+reduced_data = DISTINCT data_group_sessionized PARALLEL 1;
 
-STORE data INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
+-- Write results into JSON
+--STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
+STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.builtin.JsonStorage();

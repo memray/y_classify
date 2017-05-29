@@ -10,7 +10,7 @@
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.20170525-0319.csv';
+%default OUTPUT '/user/rmeng/$BOT_NAME.20170525-0319';
 rmf $OUTPUT
 
 data = LOAD 'uapi_analytics.uapi_logs' USING org.apache.hive.hcatalog.pig.HCatLoader();

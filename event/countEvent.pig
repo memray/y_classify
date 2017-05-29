@@ -34,10 +34,9 @@ data_group = GROUP data_processed BY (useruuid, dt_day);
 
 data_group_processed = FOREACH data_group  {
                ordered = ORDER $1 BY ts_in_second ASC;
-               GENERATE FLATTEN (group) AS (useruuid, dt_day),
+               GENERATE FLATTEN ($0) AS (useruuid, dt_day),
                ordered AS events;
                }
-
 
 data_perDay = FOREACH data_group_processed GENERATE useruuid, dt_day, FLATTEN(eventudf.count_event(events))
                   AS (n_message, n_notification, n_delivery, n_read, n_bottosb, n_bottouser, n_bottouser_post,
