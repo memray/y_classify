@@ -22,11 +22,13 @@ import re
               'msg_text:                chararray'
               ')}')
 
-def split_session(user_utterances, max_session_interval):
+def split_session(user_utterances):
     '''
     Given a handful of utterances of one user, segment the utterances into sessions
     :return: a list of sessions, each session consists of a few utterances
     '''
+
+    max_session_interval = 300 # in second, try two interval values: 300 (5 mins) and 1800 (30 mins)
     session_list = []
     current_session = []
     last_utterance_time = None
