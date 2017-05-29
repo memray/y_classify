@@ -52,7 +52,7 @@ data_group = GROUP data_processed BY (useruuid);
 -- For each group (utterances of one user), order utterances by time and do sessionization
 data_group_sessionized = FOREACH data_group  {
                                ordered_groups = ORDER $1 BY ts_in_second ASC;
-                               GENERATE useruuid, FLATTEN(sessionudf.split_session(ordered_groups, MAX_SESSION_INTERVAL));
+                               GENERATE FLATTEN ($0) AS useruuid, sessionudf.split_session(ordered_groups, MAX_SESSION_INTERVAL);
                          }
 
 -- Reduce results

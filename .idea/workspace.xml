@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/udf_session.py" afterPath="$PROJECT_DIR$/dialogue/udf_session.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/sessionize_dialogue.pig" afterPath="$PROJECT_DIR$/dialogue/sessionize_dialogue.pig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event/countEvent.pig" afterPath="$PROJECT_DIR$/event/countEvent.pig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,8 +31,8 @@
       <file leaf-file-name="countEvent.pig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/event/countEvent.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="42" column="56" lean-forward="false" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+            <state relative-caret-position="459">
+              <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -47,31 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="export_utterance_groupby_days.pig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogue/export_utterance_groupby_days.pig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sessionize_dialogue.pig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sessionize_dialogue.pig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/sessionize_dialogue.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="694">
+              <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="udf_session.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="udf_session.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/udf_session.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+            <state relative-caret-position="594">
+              <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -111,9 +102,9 @@
         <option value="$PROJECT_DIR$/countEvent.pig" />
         <option value="$PROJECT_DIR$/dialogue/export_dialogue.pig" />
         <option value="$PROJECT_DIR$/dialogue/export_utterance.pig" />
+        <option value="$PROJECT_DIR$/dialogue/udf_session.py" />
         <option value="$PROJECT_DIR$/event/countEvent.pig" />
         <option value="$PROJECT_DIR$/dialogue/sessionize_dialogue.pig" />
-        <option value="$PROJECT_DIR$/dialogue/udf_session.py" />
       </list>
     </option>
   </component>
@@ -658,7 +649,7 @@
       <updated>1495664222373</updated>
       <workItem from="1495668715500" duration="24000" />
       <workItem from="1495668750067" duration="86000" />
-      <workItem from="1495668847979" duration="19387000" />
+      <workItem from="1495668847979" duration="20548000" />
     </task>
     <task id="LOCAL-00001" summary="correct the output path from zhenyue/ to rmeng/">
       <created>1495666165640</created>
@@ -793,11 +784,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496093579752</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="debug export_dialogue">
+      <created>1496094431691</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1496094431691</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19497000" />
+    <option name="totallyTimeSpent" value="20658000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -981,14 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/event/countEvent.pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="42" column="56" lean-forward="false" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/export_utterance.pig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -997,18 +987,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/sessionize_dialogue.pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/export_utterance_groupby_days.pig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="41" column="10" lean-forward="false" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        <state relative-caret-position="659">
+          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1021,13 +1003,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/event/countEvent.pig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/udf_session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+        <state relative-caret-position="594">
+          <caret line="37" column="45" lean-forward="true" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/sessionize_dialogue.pig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
