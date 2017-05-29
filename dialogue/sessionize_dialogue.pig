@@ -59,5 +59,5 @@ data_group_sessionized = FOREACH data_group  {
 reduced_data = DISTINCT data_group_sessionized PARALLEL 1;
 
 -- Write results into JSON
---STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
-STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.builtin.JsonStorage();
+STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
+--STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.builtin.JsonStorage();
