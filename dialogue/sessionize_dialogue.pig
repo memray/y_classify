@@ -50,9 +50,10 @@ data_group = GROUP data_processed BY (useruuid);
 
 -- For each group (utterances of one user), order utterances by time and do sessionization
 data_group_sessionized = FOREACH data_group  {
-                               ordered_groups = ORDER $1 BY ts_in_second ASC;
-                               GENERATE FLATTEN ($0) AS useruuid, sessionudf.split_session(ordered_groups);
-                         }
+   ordered_groups = ORDER $1 BY ts_in_second ASC;
+   GENERATE FLATTEN ($0) AS useruuid, FLATTEN(sessionudf.split_session(ordered_groups)) AS
+              (time: chararray, useruuid: chararray, direction: chararray, platform: chararray, msg_sentto: chararray, msg_types: chararray, msg_sentto_displayname: chararray, dt_day: chararray, ts_in_second: int, platform_message_id: chararray, botlog_intent: chararray, botlog_slots: chararray, msg_text: chararray)
+           }
 
 -- Reduce results
 reduced_data = DISTINCT data_group_sessionized PARALLEL 1;
