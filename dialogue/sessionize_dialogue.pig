@@ -6,7 +6,7 @@ register 'udf_session.py' using jython as sessionudf;
 
 %default BOT_NAME 'Weather';
 %default time_start '2017-04-01-00';
-%default time_end '2017-05-30-24';
+%default time_end '2017-04-30-24';
 
 SET default_parallel 10;
 %default reduceNum 10;
@@ -21,8 +21,8 @@ data_filtered = filter data by (
 	msg_sentto_displayname == 'Weather' OR msg_sentto_displayname == 'SamWeatherBot'
     and msg_sentto_env == 'prod'
     and msg_text IS NOT NULL
-    and dt >= time_start
-    and dt < time_end
+    and dt >= '$time_start'
+    and dt < '$time_end'
     and (direction == 'bot_to_sb' or direction == 'user_to_sb')
 );
 

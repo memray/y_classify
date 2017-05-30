@@ -197,7 +197,7 @@ if __name__ == '__main__':
             session_dict[user_id] = session_list
 
     # filter the sessions that have only one direction (not a dialogue)
-    # valid_session_dict = filter_invalid_session(valid_session_dict)
+    valid_session_dict = filter_invalid_session(session_dict)
 
     # session_number_distribution(session_dict)
     # most_active_user(session_dict)
