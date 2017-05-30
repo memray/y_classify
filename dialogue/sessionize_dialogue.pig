@@ -10,7 +10,7 @@ register 'udf_session.py' using jython as sessionudf;
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.interval=30min.sessionized';
+%default OUTPUT '/user/rmeng/$BOT_NAME.interval=5min.session';
 
 rmf $OUTPUT
 
@@ -50,7 +50,7 @@ data_group = GROUP data_processed BY (useruuid);
 
 -- For each group (utterances of one user), order utterances by time and do sessionization
 data_group_sessionized = FOREACH data_group  {
-   ordered_groups = ORDER $1 BY ts_in_second ASC;
+   ordered_groups = ORDER $1 BY time ASC;
    GENERATE FLATTEN ($0) AS userid, FLATTEN(sessionudf.split_session(ordered_groups)) AS
               (time: chararray, useruuid: chararray, direction: chararray, platform: chararray, msg_sentto: chararray, msg_types: chararray, msg_sentto_displayname: chararray, dt_day: chararray, ts_in_second: int, platform_message_id: chararray, botlog_intent: chararray, botlog_slots: chararray, msg_text: chararray);
            }
