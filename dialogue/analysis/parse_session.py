@@ -128,6 +128,7 @@ def basic_statistics(session_dict):
     print('utterance_count = %d' % (user_utterance_count+system_utterance_count))
     print('user_utterance_count = %d' % user_utterance_count)
     print('system_utterance_count = %d' % system_utterance_count)
+    print('average_session_length = %.5f' % (float(system_utterance_count)/float(session_count)))
 
 def JaccardDistance(str1, str2):
     str1 = set(re.split('\W+', str1.lower()))
@@ -145,20 +146,29 @@ def find_repetition_session(session_dict):
         for session in sessions:
             max_jaccard = 0
             last_user_utterance = None
+            last_user_utterance_id = None
             most_similar_pair = None
+            most_similar_ids = None
 
-            for uid, utt in enumerate(session):
+            for utterance_id, utt in enumerate(session):
                 if utt.direction == 'user_to_sb':
+                    # ignore the utterances that length is less than 3 (simple commands like Skip)
+                    if len(re.split('\W+', utt.msg_text.lower())) < 3:
+                        continue
+
                     if last_user_utterance == None:
                         last_user_utterance = utt
+                        last_user_utterance_id = utterance_id
                         continue
                     else:
-                        current_jaccard = JaccardDistance(last_user_utterance.msg_text, session[uid].msg_text)
+                        current_jaccard = JaccardDistance(last_user_utterance.msg_text, session[utterance_id].msg_text)
                         if current_jaccard > max_jaccard:
                             max_jaccard = current_jaccard
-                            most_similar_pair = (last_user_utterance, session[uid])
+                            most_similar_pair = (last_user_utterance, session[utterance_id])
+                            most_similar_ids = (last_user_utterance_id, utterance_id)
 
-                        last_user_utterance = session[uid]
+                        last_user_utterance = session[utterance_id]
+                        last_user_utterance_id = utterance_id
 
             if max_jaccard >= SIMILARITY_THRESHOLD:
                 new_sessions.append(session)
@@ -172,9 +182,12 @@ def find_repetition_session(session_dict):
                 print('Intersection:\t%s' % (str1 & str2))
                 print('Union:\t\t\t%s' % (str1 | str2))
 
-                for u_ in session:
-                    print(u_)
-
+                for u_id, u_ in enumerate(session):
+                    if u_id in most_similar_ids:
+                        print('\t\t' + '-' * 25 + ' START '+ '-' * 25)
+                        print(str(u_) + '\t\t' + '-' * 25 + ' END '+ '-' * 25)
+                    else:
+                        print(u_)
 
         if len(new_sessions) > 0:
             new_session_dict[user_id] = new_sessions
@@ -203,7 +216,7 @@ if __name__ == '__main__':
     # most_active_user(session_dict)
     # session_length_distribution(session_dict)
 
-    # high_repetition_session_dict = find_repetition_session(valid_session_dict)
+    high_repetition_session_dict = find_repetition_session(valid_session_dict)
 
-    basic_statistics(session_dict)
+    basic_statistics(high_repetition_session_dict)
     # print_session_at_length_K(valid_session_dict, K=4, equal=True)
