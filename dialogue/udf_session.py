@@ -45,7 +45,10 @@ def split_session(user_utterances):
             current_session.append(utterance)
             last_utterance_time = ts_in_second
         else:
-            session_list.append(current_session)
+            # filter the sessions of which length is less than 4
+            if len(current_session) >= 4:
+                session_list.append(current_session)
+
             current_session = []
             current_session.append(utterance)
             last_utterance_time = ts_in_second

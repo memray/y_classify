@@ -49,9 +49,9 @@ def str_to_session(session_content):
     return session
 
 # Session number distribution
-def session_number_distribution():
+def session_number_distribution(session_dict):
     session_count = {}
-    for k, v in valid_session_dict.items():
+    for k, v in session_dict.items():
         session_count[len(v)] = session_count.get(len(v), 0) + 1
     sorted_count = sorted(session_count.items(), key=lambda k:k[0])
     print('Session Number Distribution')
@@ -59,9 +59,9 @@ def session_number_distribution():
         print('%d\t%d' % (n_session, amount))
 
 # check the most active users
-def most_active_user():
+def most_active_user(session_dict):
     user_session_count = {}
-    for k, v in valid_session_dict.items():
+    for k, v in session_dict.items():
         user_session_count[k] = len(v)
     user_session_count = sorted(user_session_count.items(), key=lambda k:k[1], reverse=True)
     print('The most active users')
@@ -69,9 +69,9 @@ def most_active_user():
         print('%s\t%d' % (user_id, amount))
 
 # check session length distribution
-def session_length_distribution():
+def session_length_distribution(session_dict):
     session_length_count = {}
-    for user_id, session in valid_session_dict.items():
+    for user_id, session in session_dict.items():
         session_length_count[len(session)] = session_length_count.get(len(session), 0) + 1
     print('Session Length Distribution')
     sorted_count = sorted(session_length_count.items(), key=lambda k:k[0])
@@ -182,9 +182,9 @@ def find_repetition_session(session_dict):
 
 if __name__ == '__main__':
     root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
-    file_dir = root_dir + '/dataset/Family_Assistant.interval=30min.sessionized/part-v002-o000-r-00000'
+    file_dir = root_dir + '/dataset/Family_Assistant.interval=5min.session/part-v002-o000-r-00000'
 
-    valid_session_dict = {}
+    session_dict = {}
 
     with open(file_dir, 'r') as f_:
         for session_line in f_.readlines():
@@ -192,18 +192,18 @@ if __name__ == '__main__':
             user_id = session_line[:delimeter_idx]
             session_content = session_line[delimeter_idx:]
 
-            session_list = valid_session_dict.get(user_id, [])
+            session_list = session_dict.get(user_id, [])
             session_list.append(str_to_session(session_content))
-            valid_session_dict[user_id] = session_list
+            session_dict[user_id] = session_list
 
     # filter the sessions that have only one direction (not a dialogue)
-    valid_session_dict = filter_invalid_session(valid_session_dict)
+    # valid_session_dict = filter_invalid_session(valid_session_dict)
 
-    # session_number_distribution()
-    # most_active_user()
-    # session_length_distribution()
+    # session_number_distribution(session_dict)
+    # most_active_user(session_dict)
+    # session_length_distribution(session_dict)
 
-    high_repetition_session_dict = find_repetition_session(valid_session_dict)
+    # high_repetition_session_dict = find_repetition_session(valid_session_dict)
 
-    basic_statistics(high_repetition_session_dict)
+    basic_statistics(session_dict)
     # print_session_at_length_K(valid_session_dict, K=4, equal=True)
