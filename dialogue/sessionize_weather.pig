@@ -20,7 +20,7 @@ data_filtered = filter data by (
 --	msg_sentto_displayname matches 'Family.*Assistant'
 	(msg_sentto_displayname == 'Weather' OR msg_sentto_displayname == 'SamWeatherBot')
     AND msg_sentto_env == 'prod'
-    AND platform = 'facebook'
+    AND platform == 'facebook'
 --    AND msg_text IS NOT NULL # filter later
     AND dt >= '$time_start'
     AND dt < '$time_end'
