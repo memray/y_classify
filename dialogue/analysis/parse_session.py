@@ -139,7 +139,7 @@ def JaccardDistance(str1, str2):
 
 def find_repetition_session(session_dict):
     new_session_dict = {}
-    SIMILARITY_THRESHOLD = 0.8
+    SIMILARITY_THRESHOLD = 0.5
 
     for user_id, sessions in session_dict.items():
         new_sessions = []

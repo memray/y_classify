@@ -28,7 +28,7 @@ def split_session(user_utterances):
     :return: a list of sessions, each session consists of a few utterances
     '''
 
-    max_session_interval = 1800 # in second, try two interval values: 300 (5 mins) and 1800 (30 mins)
+    max_session_interval = 300 # in second, try two interval values: 300 (5 mins) and 1800 (30 mins)
     session_list = []
     current_session = []
     last_utterance_time = None
