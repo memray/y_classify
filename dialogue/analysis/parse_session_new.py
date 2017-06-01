@@ -6,19 +6,22 @@ import os, re
 
 class Utterance():
     def __init__(self, record):
-        self.time = record[0]
-        self.useruuid = record[1]
-        self.direction = record[2]
-        # self.platform = record[3]
-        # self.msg_sentto = record[4]
-        self.msg_types = record[5]
-        # self.msg_sentto_displayname = record[6]
-        # self.dt_day = record[7]
-        # self.ts_in_second = record[8]
-        # self.platform_message_id = record[9]
-        # self.botlog_intent = record[10]
-        # self.botlog_slots = record[11]
-        self.msg_text  = record[12]
+        for k,v in record.items():
+            setattr(self, k, v)
+
+        # self.time = record[0]
+        # self.useruuid = record[1]
+        # self.direction = record[2]
+        # # self.platform = record[3]
+        # # self.msg_sentto = record[4]
+        # self.msg_types = record[5]
+        # # self.msg_sentto_displayname = record[6]
+        # # self.dt_day = record[7]
+        # # self.ts_in_second = record[8]
+        # # self.platform_message_id = record[9]
+        # # self.botlog_intent = record[10]
+        # # self.botlog_slots = record[11]
+        # self.msg_text  = record[12]
 
     def __str__(self):
         str_ = ''
@@ -31,22 +34,13 @@ def str_to_session(session_content):
     '''
     parse string to a session list
     :param session_content:
-    :return:
     '''
     session = []
-    json_ = json.loads(session_content)
+    utterance_list = json.loads(session_content)
 
-    for csv_str in json_:
-        csv_str = csv_str.replace('\"', '\\"')
-        csv_str = csv_str.replace('\\\\"', '\"')
-        parsed_result = csv.reader([csv_str])
-        record = list(parsed_result)
-        if record is not None:
-            u_ = Utterance(record[0])
-            # [Important] CSV reader will cut message into pieces, seems only for direction='bot_to_sb'
-            if u_.direction == 'bot_to_sb':
-                u_.msg_text = re.findall('\[.*?\]', csv_str)[-1]
-            session.append(u_)
+    for record in utterance_list:
+        u_ = Utterance(record)
+        session.append(u_)
 
     return session
 
