@@ -194,7 +194,7 @@ FAMILY_PATH = root_dir + '/dataset/Family_Assistant.interval=5min.session/part-v
 WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
 MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
 
-file_dir = WEATHER_PATH
+file_dir = MONKEY_PATH
 
 if __name__ == '__main__':
 

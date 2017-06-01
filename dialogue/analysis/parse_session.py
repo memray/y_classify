@@ -32,13 +32,11 @@ def str_to_session(session_content):
     :param session_content:
     :return:
     '''
-    pattern = '\((20.*?),\)'
+    pattern = '\((20.*?)\)'
     session = []
 
     csv_strs = re.findall(pattern, session_content)
     for csv_str in csv_strs:
-        csv_str = csv_str.replace('\"', '\\"')
-        csv_str = csv_str.replace('\\\\"', '\"')
         parsed_result = csv.reader([csv_str])
         record = list(parsed_result)
         if record is not None:
@@ -119,7 +117,6 @@ def filter_invalid_session(session_dict):
 
     return new_session_dict
 
-
 def basic_statistics(session_dict):
     user_count = len(session_dict)
     session_count = sum([len(s) for s in session_dict.values()])
@@ -131,7 +128,11 @@ def basic_statistics(session_dict):
     print('utterance_count = %d' % (user_utterance_count+system_utterance_count))
     print('user_utterance_count = %d' % user_utterance_count)
     print('system_utterance_count = %d' % system_utterance_count)
-    print('average_session_length = %.5f' % (float(system_utterance_count)/float(session_count)))
+    if session_count > 0:
+        average_session_length = float(system_utterance_count)/float(session_count)
+    else:
+        average_session_length = 0
+    print('average_session_length = %.5f' % (average_session_length))
 
 def JaccardDistance(str1, str2):
     str1 = set(re.split('\W+', str1.lower()))
