@@ -45,7 +45,7 @@ def split_session(user_utterances):
 
     # iterate all the utterances and identify sessions
     for utterance in user_utterances:
-        (time, dt_day, ts_in_second, useruuid, direction, msg, msg_sentto, msg_types, msg_sentto_displayname, platform_message_id, msg_text, botlog, botlog_intent, botlog_slots) = utterance
+        (time, dt_day, ts_in_second, useruuid, direction, msg, msg_sentto, msg_types, msg_sentto_displayname, platform_message_id, msg_text, is_suggested_response, botlog, botlog_intent, botlog_slots) = utterance
 
         # ignore the "show-typing" message
         if msg_types == '["show-typing"]':
