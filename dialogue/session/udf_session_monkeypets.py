@@ -34,6 +34,7 @@ def split_session(user_utterances):
         if msg_types == '["show-typing"]':
             continue
 
+        # put in the first utterance
         if len(current_session) == 0:
             current_session.append(utterance_dict)
             last_utterance_time = ts_in_second
@@ -68,7 +69,7 @@ def split_session(user_utterances):
                 session_list.append(current_session)
 
             current_session = []
-            current_session.append(utterance)
+            current_session.append(utterance_dict)
             last_utterance_time = ts_in_second
 
     if len(current_session) > 0:

@@ -104,15 +104,16 @@ def filter_invalid_session(session_dict):
             if len(session) < min_session_length:
                 continue
 
-            # filter by direction (both directions must occur)
-            dir_dict = set()
+            # filter by direction (both directions must occur) and #('user_to_sb') >= 2
+            direction_dict = {}
             for utt in session:
                 if utt.direction!=None and utt.direction!='':
-                    dir_dict.add(utt.direction)
-            if len(dir_dict) <= 1:
+                    direction_dict[utt.direction] = direction_dict.get(utt.direction, 0) + 1
+            if len(direction_dict) <= 1 or direction_dict.get('user_to_sb', 0) < 2:
                 continue
 
             new_sessions.append(session)
+
         if len(new_sessions) > 0:
             new_session_dict[user_id] = new_sessions
 
@@ -139,9 +140,8 @@ def JaccardDistance(str1, str2):
         return float(len(str1 & str2)) / len(str1 | str2)
     return 0.0
 
-def find_repetition_session(session_dict):
+def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
     new_session_dict = {}
-    SIMILARITY_THRESHOLD = 0.5
 
     for user_id, sessions in session_dict.items():
         new_sessions = []
@@ -155,13 +155,11 @@ def find_repetition_session(session_dict):
             for utterance_id, utt in enumerate(session):
                 if utt.direction == 'user_to_sb':
                     # ignore the utterances that length is less than 3 (simple commands like Skip)
-                    if len(re.split('\W+', utt.msg_text.lower())) < 3:
-                        continue
-
-                    if last_user_utterance == None:
+                    if last_user_utterance == None or len(re.split('\W+', utt.msg_text.lower())) < 3:
                         last_user_utterance = utt
                         last_user_utterance_id = utterance_id
                         continue
+
                     else:
                         current_jaccard = JaccardDistance(last_user_utterance.msg_text, session[utterance_id].msg_text)
                         if current_jaccard > max_jaccard:
@@ -200,7 +198,7 @@ FAMILY_PATH = root_dir + '/dataset/Family_Assistant.interval=5min.session/part-v
 WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
 MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
 
-file_dir = WEATHER_PATH
+file_dir = FAMILY_PATH
 
 if __name__ == '__main__':
 
@@ -219,9 +217,9 @@ if __name__ == '__main__':
     print('%' * 20 + 'RAW Data' + '%' * 20)
     basic_statistics(session_dict)
     # filter the sessions that have only one direction (not a dialogue)
-    valid_session_dict = filter_invalid_session(session_dict)
 
     print('%' * 20 + 'Valid Data' + '%' * 20)
+    valid_session_dict = filter_invalid_session(session_dict)
     basic_statistics(valid_session_dict)
 
     # session_number_distribution(session_dict)
