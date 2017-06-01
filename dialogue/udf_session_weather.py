@@ -1,6 +1,5 @@
 from __future__ import division
 
-import json
 import string
 import sys
 import math
@@ -28,10 +27,6 @@ import re
               'botlog_intent:           chararray, '
               'botlog_slots:            chararray'
               ')}')
-
-def extract_json_value(json_content, field_name):
-    data = json.load(json_content)
-    return data[field_name]
 
 def split_session(user_utterances):
     '''
