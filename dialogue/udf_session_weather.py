@@ -72,7 +72,7 @@ def split_session(user_utterances):
             # filter the sessions which have user messages msg_text==None
                     if u[10] == None or u[10] == '':
                         is_valid = False
-            if len(number_user_message) < 3:
+            if number_user_message < 3:
                 is_valid = False
 
             # keep the valid sessions and messages only
@@ -85,5 +85,6 @@ def split_session(user_utterances):
 
     if len(current_session) > 0:
         session_list.append(current_session)
-
-    return session_list
+        return session_list
+    else
+        return None
