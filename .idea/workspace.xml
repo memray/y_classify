@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/session/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/export_utterance.pig" afterPath="$PROJECT_DIR$/dialogue/session/export_utterance.pig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/export_utterance_groupby_days.pig" afterPath="$PROJECT_DIR$/dialogue/session/export_utterance_groupby_days.pig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/sessionize_family_assistant.pig" afterPath="$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/sessionize_monkeypets.pig" afterPath="$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/sessionize_weather.pig" afterPath="$PROJECT_DIR$/dialogue/session/sessionize_weather.pig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/udf_session_family_assistant.py" afterPath="$PROJECT_DIR$/dialogue/session/udf_session_family_assistant.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/udf_session_monkeypets.py" afterPath="$PROJECT_DIR$/dialogue/session/udf_session_monkeypets.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/udf_session_weather.py" afterPath="$PROJECT_DIR$/dialogue/session/udf_session_weather.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/sessionize_monkeypets.pig" afterPath="$PROJECT_DIR$/dialogue/sessionize_monkeypets.pig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/udf_session_monkeypets.py" afterPath="$PROJECT_DIR$/dialogue/udf_session_monkeypets.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/analysis/parse_session.py" afterPath="$PROJECT_DIR$/dialogue/analysis/parse_session.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/presto_data_process$parse_session.coverage" NAME="parse_session Coverage Results" MODIFIED="1496184816128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
+    <SUITE FILE_PATH="coverage/presto_data_process$parse_session.coverage" NAME="parse_session Coverage Results" MODIFIED="1496341139935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -54,39 +62,61 @@
         </entry>
       </file>
       <file leaf-file-name="sessionize_weather.pig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogue/sessionize_weather.pig">
+        <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_weather.pig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
-              <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+              <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="sessionize_monkeypets.pig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dialogue/sessionize_monkeypets.pig">
+        <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="468">
+              <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parse_session.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dialogue/analysis/parse_session.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_csv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2017.1/python_stubs/-952534906/_csv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="20" column="72" lean-forward="true" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="udf_session_monkeypets.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogue/udf_session_monkeypets.py">
+        <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session_monkeypets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="646">
+              <caret line="69" column="39" lean-forward="false" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="udf_session_weather.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogue/udf_session_weather.py">
+        <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session_weather.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="735">
               <caret line="88" column="9" lean-forward="false" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -114,6 +144,7 @@
       <find>2017-05-16T20:47:58.220Z</find>
       <find>2017-01-27T01:50:15.943Z</find>
       <find>kiss</find>
+      <find>process</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -137,12 +168,14 @@
         <option value="$PROJECT_DIR$/event/countEvent.pig" />
         <option value="$PROJECT_DIR$/dialogue/sessionize_dialogue.pig" />
         <option value="$PROJECT_DIR$/dialogue/udf_session.py" />
-        <option value="$PROJECT_DIR$/dialogue/analysis/parse_session.py" />
         <option value="$PROJECT_DIR$/dialogue/sessionize_family_assistant.pig" />
         <option value="$PROJECT_DIR$/dialogue/udf_session_family_assistant.py" />
         <option value="$PROJECT_DIR$/dialogue/sessionize_weather.pig" />
         <option value="$PROJECT_DIR$/dialogue/udf_session_weather.py" />
         <option value="$PROJECT_DIR$/dialogue/sessionize_monkeypets.pig" />
+        <option value="$PROJECT_DIR$/dialogue/analysis/parse_session.py" />
+        <option value="$PROJECT_DIR$/dialogue/session/udf_session_monkeypets.py" />
+        <option value="$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig" />
       </list>
     </option>
   </component>
@@ -153,8 +186,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="-2560" />
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -211,18 +245,8 @@
               <option name="myItemId" value="dialogue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="presto_data_process" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presto_data_process" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataset" />
+              <option name="myItemId" value="session" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -236,11 +260,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dataset" />
+              <option name="myItemId" value="dialogue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Family_Assistant.interval=5min.sessionized" />
+              <option name="myItemId" value="analysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataset" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,6 +300,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dialogue/session" />
       <recent name="$PROJECT_DIR$/event" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -747,7 +786,7 @@
       <workItem from="1495668715500" duration="24000" />
       <workItem from="1495668750067" duration="86000" />
       <workItem from="1495668847979" duration="37206000" />
-      <workItem from="1496174219627" duration="12918000" />
+      <workItem from="1496174219627" duration="16717000" />
     </task>
     <task id="LOCAL-00001" summary="correct the output path from zhenyue/ to rmeng/">
       <created>1495666165640</created>
@@ -1036,11 +1075,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496304459487</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="debug sessionize weather">
+      <created>1496305007662</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1496305007662</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50234000" />
+    <option name="totallyTimeSpent" value="54033000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1052,22 +1098,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30011722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34816942" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11953125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39985642" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1095,12 +1141,30 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dialogue/analysis/parse_session.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dialogue/analysis/parse_session.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dialogue/analysis/parse_session.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="record" language="Python" />
         <watch expression="csv_str" language="Python" />
+        <watch expression="csv_str.replace('\\\\&quot;', '\&quot;')" language="Python" />
         <watch expression="re.findall('\[.*?\]', csv_str)[-1]" language="Python" />
       </configuration>
     </watches-manager>
@@ -1128,7 +1192,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/sessionize_family_assistant.pig">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
@@ -1136,7 +1200,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/udf_session_family_assistant.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session_family_assistant.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
@@ -1272,14 +1336,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/export_utterance.pig">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/export_utterance.pig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="50" column="37" lean-forward="false" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/export_utterance_groupby_days.pig">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/export_utterance_groupby_days.pig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
           <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
@@ -1294,17 +1358,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/analysis/parse_session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="e#24#34#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/udf_session_family_assistant.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session_family_assistant.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
@@ -1314,7 +1368,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/sessionize_family_assistant.pig">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
@@ -1332,9 +1386,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/udf_session_weather.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_weather.pig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="629">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session_weather.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
           <caret line="88" column="9" lean-forward="false" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -1342,26 +1404,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/sessionize_weather.pig">
+    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2017.1/python_stubs/-952534906/_csv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        <state relative-caret-position="26">
+          <caret line="20" column="72" lean-forward="true" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/udf_session_monkeypets.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/analysis/parse_session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        <state relative-caret-position="253">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/sessionize_monkeypets.pig">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session_monkeypets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        <state relative-caret-position="646">
+          <caret line="69" column="39" lean-forward="false" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding />
         </state>
       </provider>
