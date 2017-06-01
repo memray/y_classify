@@ -24,17 +24,23 @@ def split_session(user_utterances):
     for utterance in user_utterances:
         (time, dt_day, ts_in_second, useruuid, direction, msg, msg_sentto, msg_types, msg_sentto_displayname, platform_message_id, msg_text, is_suggested_response, botlog, botlog_intent, botlog_slots) = utterance
 
+        # convert to a dict
+        field_names = ['time', 'dt_day', 'ts_in_second', 'useruuid', 'direction', 'msg', 'msg_sentto', 'msg_types', 'msg_sentto_displayname', 'platform_message_id', 'msg_text', 'is_suggested_response', 'botlog', 'botlog_intent', 'botlog_slots'];
+        utterance_dict = {}
+        for v_id, val in enumerate(utterance):
+            utterance_dict[field_names[v_id]] = val
+
         # ignore the "show-typing" message
         if msg_types == '["show-typing"]':
             continue
 
         if len(current_session) == 0:
-            current_session.append(utterance)
+            current_session.append(utterance_dict)
             last_utterance_time = ts_in_second
             continue
 
         if ts_in_second - last_utterance_time <= max_session_interval:
-            current_session.append(utterance)
+            current_session.append(utterance_dict)
             last_utterance_time = ts_in_second
         else:
             '''
