@@ -2,7 +2,7 @@
     Pig script to count the number of different types of events per user per day
  */
 
-register 'udf_session.py' using jython as sessionudf;
+register 'udf_session_family_assistant.py' using jython as sessionudf;
 
 %default BOT_NAME 'Weather';
 %default time_start '2017-04-01-00';
@@ -10,7 +10,7 @@ register 'udf_session.py' using jython as sessionudf;
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.interval=30min.session';
+%default OUTPUT '/user/rmeng/$BOT_NAME.interval=5min.session';
 
 rmf $OUTPUT
 
