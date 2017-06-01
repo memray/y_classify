@@ -1,4 +1,5 @@
 from __future__ import division
+import com.xhaus.jyson.JysonCodec as json
 
 import string
 import sys
@@ -7,26 +8,7 @@ import re
 
 # -*- coding: utf-8 -*-
 
-@outputSchema('session:bag{t:('
-              'time:                    chararray, '
-              'dt_day:                  chararray, '
-              'ts_in_second:            int, '
-
-              'useruuid:                chararray, '
-              'direction:               chararray, '
-
-              'msg:                     chararray, '
-              'msg_sentto:              chararray, '
-              'msg_types:               chararray, '
-              'msg_sentto_displayname:  chararray, '
-              'platform_message_id:     chararray, '
-              'msg_text:                chararray, '
-              'is_suggested_response:   boolean, '
-
-              'botlog:                  chararray, '
-              'botlog_intent:           chararray, '
-              'botlog_slots:            chararray'
-              ')}')
+@outputSchema('session_json: chararray')
 
 def split_session(user_utterances):
     '''
@@ -85,6 +67,6 @@ def split_session(user_utterances):
 
     if len(current_session) > 0:
         session_list.append(current_session)
-        return session_list
+        return json.dumps(session_list)
     else:
         return None

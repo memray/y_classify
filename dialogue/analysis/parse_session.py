@@ -32,12 +32,14 @@ def str_to_session(session_content):
     :param session_content:
     :return:
     '''
-    pattern = '\((20.*?)\)'
+    pattern = '\((20.*?),\)'
     session = []
 
     csv_strs = re.findall(pattern, session_content)
     for csv_str in csv_strs:
-        parsed_result = csv.reader([csv_str], skipinitialspace=True)
+        csv_str = csv_str.replace('\"', '\\"')
+        csv_str = csv_str.replace('\\\\"', '\"')
+        parsed_result = csv.reader([csv_str])
         record = list(parsed_result)
         if record is not None:
             u_ = Utterance(record[0])
@@ -193,9 +195,14 @@ def find_repetition_session(session_dict):
             new_session_dict[user_id] = new_sessions
     return new_session_dict
 
+root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
+FAMILY_PATH = root_dir + '/dataset/Family_Assistant.interval=5min.session/part-v002-o000-r-00000'
+WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
+MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
+
+file_dir = WEATHER_PATH
+
 if __name__ == '__main__':
-    root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
-    file_dir = root_dir + '/dataset/Family_Assistant.interval=5min.session/part-v002-o000-r-00000'
 
     session_dict = {}
 
@@ -209,8 +216,13 @@ if __name__ == '__main__':
             session_list.append(str_to_session(session_content))
             session_dict[user_id] = session_list
 
+    print('%' * 20 + 'RAW Data' + '%' * 20)
+    basic_statistics(session_dict)
     # filter the sessions that have only one direction (not a dialogue)
     valid_session_dict = filter_invalid_session(session_dict)
+
+    print('%' * 20 + 'Valid Data' + '%' * 20)
+    basic_statistics(valid_session_dict)
 
     # session_number_distribution(session_dict)
     # most_active_user(session_dict)
@@ -218,5 +230,6 @@ if __name__ == '__main__':
 
     high_repetition_session_dict = find_repetition_session(valid_session_dict)
 
+    print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
     basic_statistics(high_repetition_session_dict)
     # print_session_at_length_K(valid_session_dict, K=4, equal=True)
