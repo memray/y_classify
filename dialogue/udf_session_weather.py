@@ -86,5 +86,5 @@ def split_session(user_utterances):
     if len(current_session) > 0:
         session_list.append(current_session)
         return session_list
-    else
+    else:
         return None
