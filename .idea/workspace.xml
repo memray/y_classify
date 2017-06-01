@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/session/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/export_utterance.pig" afterPath="$PROJECT_DIR$/dialogue/session/export_utterance.pig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/export_utterance_groupby_days.pig" afterPath="$PROJECT_DIR$/dialogue/session/export_utterance_groupby_days.pig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/sessionize_family_assistant.pig" afterPath="$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/sessionize_monkeypets.pig" afterPath="$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/sessionize_weather.pig" afterPath="$PROJECT_DIR$/dialogue/session/sessionize_weather.pig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/udf_session_family_assistant.py" afterPath="$PROJECT_DIR$/dialogue/session/udf_session_family_assistant.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/udf_session_monkeypets.py" afterPath="$PROJECT_DIR$/dialogue/session/udf_session_monkeypets.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/udf_session_weather.py" afterPath="$PROJECT_DIR$/dialogue/session/udf_session_weather.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/analysis/parse_session.py" afterPath="$PROJECT_DIR$/dialogue/analysis/parse_session.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig" afterPath="$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,8 +65,8 @@
       <file leaf-file-name="sessionize_monkeypets.pig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="68">
+              <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -786,7 +777,7 @@
       <workItem from="1495668715500" duration="24000" />
       <workItem from="1495668750067" duration="86000" />
       <workItem from="1495668847979" duration="37206000" />
-      <workItem from="1496174219627" duration="16717000" />
+      <workItem from="1496174219627" duration="16899000" />
     </task>
     <task id="LOCAL-00001" summary="correct the output path from zhenyue/ to rmeng/">
       <created>1495666165640</created>
@@ -1082,11 +1073,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496305007662</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="debug sessionize weather">
+      <created>1496342480076</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1496342480076</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54033000" />
+    <option name="totallyTimeSpent" value="54215000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1340,6 +1338,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="50" column="37" lean-forward="false" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1347,6 +1346,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
           <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,8 +1432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+        <state relative-caret-position="68">
+          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
           <folding />
         </state>
       </provider>

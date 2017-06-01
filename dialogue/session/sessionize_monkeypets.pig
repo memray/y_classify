@@ -2,8 +2,8 @@
     Pig script to count the number of different types of events per user per day
  */
 
-register 'udf_session_monkeypets.py' using jython as sessionudf;
 register /homes/rmeng/lib/jyson-1.0.2.jar;
+register 'udf_session_monkeypets.py' using jython as sessionudf;
 
 %default BOT_NAME 'Monkey_Pets';
 %default time_start '2017-04-01-00';
