@@ -55,10 +55,10 @@ def split_session(user_utterances):
             # filter the sessions which have less 2 user utterances
             number_user_message = 0
             for u in current_session:
-                if u[4] == 'user_to_sb':
+                if u['direction'] == 'user_to_sb':
                     number_user_message += 1
             # filter the sessions which have user messages msg_text==None
-                    if u[10] == None or u[10] == '':
+                    if u['msg_text'] == None or u['msg_text'] == '':
                         is_valid = False
             if number_user_message < 3:
                 is_valid = False
