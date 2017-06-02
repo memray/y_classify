@@ -3,7 +3,7 @@
  */
 
 register /homes/rmeng/lib/jyson-1.0.2.jar;
-register 'udf_session' using jython as sessionudf;
+register 'udf_session.py' using jython as sessionudf;
 
 %default BOT_NAME 'Monkey_Pets';
 %default time_start '2017-04-01-00';
