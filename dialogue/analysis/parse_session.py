@@ -174,6 +174,7 @@ def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
             if max_jaccard >= SIMILARITY_THRESHOLD:
                 new_sessions.append(session)
 
+                # '''
                 print("================== Find similar pair! ==================")
                 str1 = set(re.split('\W+', most_similar_pair[0].msg_text.lower()))
                 str2 = set(re.split('\W+', most_similar_pair[1].msg_text.lower()))
@@ -189,6 +190,7 @@ def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
                         print(str(u_) + '\t\t' + '-' * 25 + ' END '+ '-' * 25)
                     else:
                         print(u_)
+                # '''
 
         if len(new_sessions) > 0:
             new_session_dict[user_id] = new_sessions
@@ -215,19 +217,19 @@ if __name__ == '__main__':
             session_list.append(str_to_session(session_content))
             session_dict[user_id] = session_list
 
-    print('%' * 20 + 'RAW Data' + '%' * 20)
-    basic_statistics(session_dict)
+    # print('%' * 20 + 'RAW Data' + '%' * 20)
+    # basic_statistics(session_dict)
     # filter the sessions that have only one direction (not a dialogue)
 
-    print('%' * 20 + 'Valid Data' + '%' * 20)
+    # print('%' * 20 + 'Valid Data' + '%' * 20)
     valid_session_dict = filter_invalid_session(session_dict)
-    basic_statistics(valid_session_dict)
+    # basic_statistics(valid_session_dict)
 
     # session_number_distribution(session_dict)
     # most_active_user(session_dict)
     # session_length_distribution(session_dict)
 
-    high_repetition_session_dict = find_repetition_session(valid_session_dict)
+    high_repetition_session_dict = find_repetition_session(valid_session_dict, 0.1)
 
     print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
     basic_statistics(high_repetition_session_dict)

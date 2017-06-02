@@ -36,7 +36,7 @@ def str_to_session(session_content):
     :param session_content:
     '''
     session = []
-    utterance_list = json.loads(session_content)
+    utterance_list = json.loads(session_content)[0]
 
     for record in utterance_list:
         u_ = Utterance(record)
@@ -133,9 +133,8 @@ def JaccardDistance(str1, str2):
         return float(len(str1 & str2)) / len(str1 | str2)
     return 0.0
 
-def find_repetition_session(session_dict):
+def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
     new_session_dict = {}
-    SIMILARITY_THRESHOLD = 0.5
 
     for user_id, sessions in session_dict.items():
         new_sessions = []
@@ -148,14 +147,17 @@ def find_repetition_session(session_dict):
 
             for utterance_id, utt in enumerate(session):
                 if utt.direction == 'user_to_sb':
-                    # ignore the utterances that length is less than 3 (simple commands like Skip)
-                    if len(re.split('\W+', utt.msg_text.lower())) < 3:
+                    if utt.msg_text == None:
+                        last_user_utterance = None
+                        last_user_utterance_id = None
                         continue
 
-                    if last_user_utterance == None:
+                    # ignore the utterances that length is less than 3 (simple commands like Skip)
+                    if last_user_utterance == None or len(re.split('\W+', utt.msg_text.lower())) < 3:
                         last_user_utterance = utt
                         last_user_utterance_id = utterance_id
                         continue
+
                     else:
                         current_jaccard = JaccardDistance(last_user_utterance.msg_text, session[utterance_id].msg_text)
                         if current_jaccard > max_jaccard:
@@ -168,7 +170,7 @@ def find_repetition_session(session_dict):
 
             if max_jaccard >= SIMILARITY_THRESHOLD:
                 new_sessions.append(session)
-
+                '''
                 print("================== Find similar pair! ==================")
                 str1 = set(re.split('\W+', most_similar_pair[0].msg_text.lower()))
                 str2 = set(re.split('\W+', most_similar_pair[1].msg_text.lower()))
@@ -184,6 +186,7 @@ def find_repetition_session(session_dict):
                         print(str(u_) + '\t\t' + '-' * 25 + ' END '+ '-' * 25)
                     else:
                         print(u_)
+                '''
 
         if len(new_sessions) > 0:
             new_session_dict[user_id] = new_sessions
@@ -207,7 +210,10 @@ if __name__ == '__main__':
             session_content = session_line[delimeter_idx:]
 
             session_list = session_dict.get(user_id, [])
-            session_list.append(str_to_session(session_content))
+
+            new_session = str_to_session(session_content)
+            if len(new_session) > 4:
+                session_list.append(new_session)
             session_dict[user_id] = session_list
 
     print('%' * 20 + 'RAW Data' + '%' * 20)
