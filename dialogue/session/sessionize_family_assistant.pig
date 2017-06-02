@@ -2,7 +2,8 @@
     Pig script to count the number of different types of events per user per day
  */
 
-register 'udf_session_family_assistant.py' using jython as sessionudf;
+register /homes/rmeng/lib/jyson-1.0.2.jar;
+register 'udf_session.py' using jython as sessionudf;
 
 %default BOT_NAME 'Family_Assistant';
 %default time_start '2017-04-01-00';
@@ -18,33 +19,36 @@ data = LOAD 'uapi_analytics.uapi_logs' USING org.apache.hive.hcatalog.pig.HCatLo
 
 data_filtered = filter data by (
 	msg_sentto_displayname matches 'Family.*Assistant'
---	msg_sentto_displayname == 'Weather' OR msg_sentto_displayname == 'SamWeatherBot'
-    and msg_sentto_env == 'prod'
-    and msg_text IS NOT NULL
-    and dt >= '$time_start'
-    and dt < '$time_end'
-    and (direction == 'bot_to_sb' or direction == 'user_to_sb')
+    AND msg_sentto_env == 'prod'
+--    AND platform == 'facebook'
+--    AND msg_text IS NOT NULL # filter later
+--    AND dt >= '$time_start'
+--    AND dt < '$time_end'
+    AND (direction == 'bot_to_sb' or direction == 'user_to_sb')
+    AND (event_trigger == 'message' OR event_trigger == 'notification') -- doesn't matter, all records belong to these two events
 );
 
 data_processed = foreach data_filtered generate
-    -- metadata
+	-- date
 	(chararray) time,
+	(chararray) SUBSTRING (dt,0,10) as dt_day,
+	(int)(ts/1000) as ts_in_second,
+    -- metadata
 	(chararray) useruuid,
 	(chararray) direction,
-	(chararray) platform,
+    -- message
+	(chararray) msg,
 	(chararray) msg_sentto,
 	(chararray) msg_types,
 	(chararray) msg_sentto_displayname,
-	-- date
-	(chararray) SUBSTRING (dt,0,10) as dt_day,
-	-- time stamp
-	(int)(ts/1000) as ts_in_second,
 	(chararray) platform_message_id,
-	-- NLU,
+	(chararray) msg_text,
+	(boolean) is_suggested_response,
+	
+	-- botlog
+	(chararray) botlog,
 	(chararray) botlog_intent,
-	(chararray) botlog_slots,
-	-- text
-	(chararray) msg_text;
+	(chararray) botlog_slots;
 
 -- Group utterances by useruuid
 data_group = GROUP data_processed BY (useruuid);
@@ -52,8 +56,7 @@ data_group = GROUP data_processed BY (useruuid);
 -- For each group (utterances of one user), order utterances by time and do sessionization
 data_group_sessionized = FOREACH data_group  {
    ordered_groups = ORDER $1 BY time ASC;
-   GENERATE FLATTEN ($0) AS userid, FLATTEN(sessionudf.split_session(ordered_groups)) AS
-              (time: chararray, useruuid: chararray, direction: chararray, platform: chararray, msg_sentto: chararray, msg_types: chararray, msg_sentto_displayname: chararray, dt_day: chararray, ts_in_second: int, platform_message_id: chararray, botlog_intent: chararray, botlog_slots: chararray, msg_text: chararray);
+   GENERATE FLATTEN ($0) AS userid, sessionudf.split_session(ordered_groups);
            }
 
 -- Reduce results
