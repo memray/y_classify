@@ -24,8 +24,8 @@ data_filtered = filter data by (
 --    AND msg_text IS NOT NULL # filter later
 --    AND dt >= '$time_start'
 --    AND dt < '$time_end'
-    AND (direction == 'bot_to_sb' or direction == 'user_to_sb')
-    AND (event_trigger == 'message' OR event_trigger == 'notification') -- doesn't matter, all records belong to these two events
+    AND (direction == 'bot_to_sb' OR direction == 'user_to_sb')
+--    AND (event_trigger == 'message' OR event_trigger == 'notification') -- doesn't matter, all records belong to these two events
 );
 
 data_processed = foreach data_filtered generate
