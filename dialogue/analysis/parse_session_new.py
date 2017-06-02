@@ -124,7 +124,11 @@ def basic_statistics(session_dict):
     print('utterance_count = %d' % (user_utterance_count+system_utterance_count))
     print('user_utterance_count = %d' % user_utterance_count)
     print('system_utterance_count = %d' % system_utterance_count)
-    print('average_session_length = %.5f' % (float(system_utterance_count)/float(session_count)))
+    if session_count > 0:
+        average_session_length = float(system_utterance_count)/float(session_count)
+    else:
+        average_session_length = 0
+    print('average_session_length = %.5f' % (average_session_length))
 
 def JaccardDistance(str1, str2):
     str1 = set(re.split('\W+', str1.lower()))
@@ -170,7 +174,7 @@ def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
 
             if max_jaccard >= SIMILARITY_THRESHOLD:
                 new_sessions.append(session)
-                '''
+                # '''
                 print("================== Find similar pair! ==================")
                 str1 = set(re.split('\W+', most_similar_pair[0].msg_text.lower()))
                 str2 = set(re.split('\W+', most_similar_pair[1].msg_text.lower()))
@@ -186,7 +190,7 @@ def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
                         print(str(u_) + '\t\t' + '-' * 25 + ' END '+ '-' * 25)
                     else:
                         print(u_)
-                '''
+                # '''
 
         if len(new_sessions) > 0:
             new_session_dict[user_id] = new_sessions
@@ -199,6 +203,8 @@ MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o
 
 file_dir = MONKEY_PATH
 
+print(WEATHER_PATH)
+
 if __name__ == '__main__':
 
     session_dict = {}
@@ -207,22 +213,25 @@ if __name__ == '__main__':
         for session_line in f_.readlines():
             delimeter_idx = session_line.find('\t')
             user_id = session_line[:delimeter_idx]
-            session_content = session_line[delimeter_idx:]
+            session_content = session_line[delimeter_idx+1:]
 
             session_list = session_dict.get(user_id, [])
+
+            if (session_content == None or session_content.strip() == ''):
+                continue
 
             new_session = str_to_session(session_content)
             if len(new_session) > 4:
                 session_list.append(new_session)
             session_dict[user_id] = session_list
 
-    print('%' * 20 + 'RAW Data' + '%' * 20)
-    basic_statistics(session_dict)
+    # print('%' * 20 + 'RAW Data' + '%' * 20)
+    # basic_statistics(session_dict)
     # filter the sessions that have only one direction (not a dialogue)
     valid_session_dict = filter_invalid_session(session_dict)
 
-    print('%' * 20 + 'Valid Data' + '%' * 20)
-    basic_statistics(valid_session_dict)
+    # print('%' * 20 + 'Valid Data' + '%' * 20)
+    # basic_statistics(valid_session_dict)
 
     # session_number_distribution(session_dict)
     # most_active_user(session_dict)
@@ -230,6 +239,6 @@ if __name__ == '__main__':
 
     high_repetition_session_dict = find_repetition_session(valid_session_dict)
 
-    print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
-    basic_statistics(high_repetition_session_dict)
+    # print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
+    # basic_statistics(high_repetition_session_dict)
     # print_session_at_length_K(valid_session_dict, K=4, equal=True)
