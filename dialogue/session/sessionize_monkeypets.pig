@@ -18,10 +18,9 @@ rmf $OUTPUT
 data = LOAD 'uapi_analytics.uapi_logs' USING org.apache.hive.hcatalog.pig.HCatLoader();
 
 data_filtered = filter data by (
-	(msg_sentto_displayname == 'Weather' OR msg_sentto_displayname == 'SamWeatherBot')
---	(msg_sentto_displayname == 'Weather' OR msg_sentto_displayname == 'SamWeatherBot')
+	msg_sentto_displayname matches 'Monkey.*Pets'
     AND msg_sentto_env == 'prod'
-    AND platform == 'facebook'
+    AND (platform == 'facebook' OR platform == 'kik')
 --    AND msg_text IS NOT NULL # filter later
 --    AND dt >= '$time_start'
 --    AND dt < '$time_end'

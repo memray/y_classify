@@ -1,27 +1,23 @@
 # -*- coding: utf-8 -*-
 import csv
-import json
 
 import os, re
 
 class Utterance():
     def __init__(self, record):
-        for k,v in record.items():
-            setattr(self, k, v)
-
-        # self.time = record[0]
-        # self.useruuid = record[1]
-        # self.direction = record[2]
-        # # self.platform = record[3]
-        # # self.msg_sentto = record[4]
-        # self.msg_types = record[5]
-        # # self.msg_sentto_displayname = record[6]
-        # # self.dt_day = record[7]
-        # # self.ts_in_second = record[8]
-        # # self.platform_message_id = record[9]
-        # # self.botlog_intent = record[10]
-        # # self.botlog_slots = record[11]
-        # self.msg_text  = record[12]
+        self.time = record[0]
+        self.useruuid = record[1]
+        self.direction = record[2]
+        # self.platform = record[3]
+        # self.msg_sentto = record[4]
+        self.msg_types = record[5]
+        # self.msg_sentto_displayname = record[6]
+        # self.dt_day = record[7]
+        # self.ts_in_second = record[8]
+        # self.platform_message_id = record[9]
+        # self.botlog_intent = record[10]
+        # self.botlog_slots = record[11]
+        self.msg_text  = record[12]
 
     def __str__(self):
         str_ = ''
@@ -34,13 +30,21 @@ def str_to_session(session_content):
     '''
     parse string to a session list
     :param session_content:
+    :return:
     '''
+    pattern = '\((20.*?)\)'
     session = []
-    utterance_list = json.loads(session_content)[0]
 
-    for record in utterance_list:
-        u_ = Utterance(record)
-        session.append(u_)
+    csv_strs = re.findall(pattern, session_content)
+    for csv_str in csv_strs:
+        parsed_result = csv.reader([csv_str])
+        record = list(parsed_result)
+        if record is not None:
+            u_ = Utterance(record[0])
+            # [Important] CSV reader will cut message into pieces, seems only for direction='bot_to_sb'
+            if u_.direction == 'bot_to_sb':
+                u_.msg_text = re.findall('\[.*?\]', csv_str)[-1]
+            session.append(u_)
 
     return session
 
@@ -98,20 +102,20 @@ def filter_invalid_session(session_dict):
             if len(session) < min_session_length:
                 continue
 
-            # filter by direction (both directions must occur)
-            dir_dict = set()
+            # filter by direction (both directions must occur) and #('user_to_sb') >= 2
+            direction_dict = {}
             for utt in session:
                 if utt.direction!=None and utt.direction!='':
-                    dir_dict.add(utt.direction)
-            if len(dir_dict) <= 1:
+                    direction_dict[utt.direction] = direction_dict.get(utt.direction, 0) + 1
+            if len(direction_dict) <= 1 or direction_dict.get('user_to_sb', 0) < 2:
                 continue
 
             new_sessions.append(session)
+
         if len(new_sessions) > 0:
             new_session_dict[user_id] = new_sessions
 
     return new_session_dict
-
 
 def basic_statistics(session_dict):
     user_count = len(session_dict)
@@ -151,11 +155,6 @@ def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
 
             for utterance_id, utt in enumerate(session):
                 if utt.direction == 'user_to_sb':
-                    if utt.msg_text == None:
-                        last_user_utterance = None
-                        last_user_utterance_id = None
-                        continue
-
                     # ignore the utterances that length is less than 3 (simple commands like Skip)
                     if last_user_utterance == None or len(re.split('\W+', utt.msg_text.lower())) < 3:
                         last_user_utterance = utt
@@ -174,6 +173,7 @@ def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
 
             if max_jaccard >= SIMILARITY_THRESHOLD:
                 new_sessions.append(session)
+
                 # '''
                 print("================== Find similar pair! ==================")
                 str1 = set(re.split('\W+', most_similar_pair[0].msg_text.lower()))
@@ -201,9 +201,7 @@ FAMILY_PATH = root_dir + '/dataset/Family_Assistant.interval=5min.session/part-v
 WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
 MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
 
-file_dir = MONKEY_PATH
-
-print(WEATHER_PATH)
+file_dir = FAMILY_PATH
 
 if __name__ == '__main__':
 
@@ -213,32 +211,26 @@ if __name__ == '__main__':
         for session_line in f_.readlines():
             delimeter_idx = session_line.find('\t')
             user_id = session_line[:delimeter_idx]
-            session_content = session_line[delimeter_idx+1:]
+            session_content = session_line[delimeter_idx:]
 
             session_list = session_dict.get(user_id, [])
-
-            if (session_content == None or session_content.strip() == ''):
-                continue
-
-            new_session = str_to_session(session_content)
-            if len(new_session) > 4:
-                session_list.append(new_session)
+            session_list.append(str_to_session(session_content))
             session_dict[user_id] = session_list
 
     # print('%' * 20 + 'RAW Data' + '%' * 20)
     # basic_statistics(session_dict)
     # filter the sessions that have only one direction (not a dialogue)
-    valid_session_dict = filter_invalid_session(session_dict)
 
     # print('%' * 20 + 'Valid Data' + '%' * 20)
+    valid_session_dict = filter_invalid_session(session_dict)
     # basic_statistics(valid_session_dict)
 
     # session_number_distribution(session_dict)
     # most_active_user(session_dict)
     # session_length_distribution(session_dict)
 
-    high_repetition_session_dict = find_repetition_session(valid_session_dict)
+    high_repetition_session_dict = find_repetition_session(valid_session_dict, 0.1)
 
-    # print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
-    # basic_statistics(high_repetition_session_dict)
+    print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
+    basic_statistics(high_repetition_session_dict)
     # print_session_at_length_K(valid_session_dict, K=4, equal=True)
