@@ -5,7 +5,7 @@
 register /homes/rmeng/lib/jyson-1.0.2.jar;
 register 'udf_session.py' using jython as sessionudf;
 
-%default BOT_NAME 'Monkey_Pets';
+%default BOT_NAME 'Weather';
 %default time_start '2017-04-01-00';
 %default time_end '2017-04-30-24';
 

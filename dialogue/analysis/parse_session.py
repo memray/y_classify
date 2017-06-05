@@ -67,8 +67,10 @@ def most_active_user(session_dict):
 # check session length distribution
 def session_length_distribution(session_dict):
     session_length_count = {}
-    for user_id, session in session_dict.items():
-        session_length_count[len(session)] = session_length_count.get(len(session), 0) + 1
+    for user_id, sessions in session_dict.items():
+        for session in sessions:
+            print(len(session))
+            session_length_count[len(session)] = session_length_count.get(len(session), 0) + 1
     print('Session Length Distribution')
     sorted_count = sorted(session_length_count.items(), key=lambda k:k[0])
     for n_utterance, amount in sorted_count:
@@ -104,9 +106,9 @@ def is_valid_session(session):
             if u.msg_text == None or u.msg_text == '':
                 is_valid = False
         # 4. not a on-board session
-        else:
-            if u.botlog.find('onboard') != -1:
-                is_valid = False
+        # else:
+        #     if u.botlog != None and u.botlog.find('onboard') != -1:
+        #         is_valid = False
 
     if number_user_message < 3:
         is_valid = False
@@ -210,15 +212,18 @@ def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
             new_session_dict[user_id] = new_sessions
     return new_session_dict
 
+BOT_INDEX = 1
+BOT_NAMES = ['Family_Assistant', 'Monkey_Pets', 'Weather']
+BOT_NAME  = BOT_NAMES[BOT_INDEX]
+
 root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
 FAMILY_PATH = root_dir + '/dataset/Family_Assistant.interval=5min.session/part-v002-o000-r-00000'
-WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
 MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
+WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
+PATHS = [FAMILY_PATH, MONKEY_PATH, WEATHER_PATH]
+file_dir  = PATHS[BOT_INDEX]
 
-file_dir = FAMILY_PATH
-
-print(WEATHER_PATH)
-
+print(BOT_NAME + ' : ' + file_dir)
 if __name__ == '__main__':
 
     session_dict = {}
@@ -242,17 +247,19 @@ if __name__ == '__main__':
     # print('%' * 20 + 'RAW Data' + '%' * 20)
     # basic_statistics(session_dict)
     # filter the sessions that have only one direction (not a dialogue)
-    valid_session_dict = filter_invalid_session(session_dict)
+    session_dict = filter_invalid_session(session_dict)
 
-    # print('%' * 20 + 'Valid Data' + '%' * 20)
-    # basic_statistics(valid_session_dict)
+    print('%' * 20 + 'Valid Data' + '%' * 20)
+    basic_statistics(session_dict)
 
     # session_number_distribution(session_dict)
     # most_active_user(session_dict)
-    # session_length_distribution(session_dict)
+    session_length_distribution(session_dict)
 
-    high_repetition_session_dict = find_repetition_session(valid_session_dict)
+    # high_repetition_session_dict = find_repetition_session(valid_session_dict)
 
     # print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
     # basic_statistics(high_repetition_session_dict)
     # print_session_at_length_K(valid_session_dict, K=4, equal=True)
+
+    # export_ramdom_samples()
