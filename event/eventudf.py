@@ -70,11 +70,3 @@ def count_event(events):
 
 
     return ((n_message, n_notification, n_delivery, n_read, n_bottosb, n_bottouser, n_bottouser_post, visit_span, delivery_span, read_span))
-
-
-
-
-
-
-
-
