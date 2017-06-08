@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 import csv
 import json
+import pickle
+import random
 
+import numpy
 import os, re
 
 class Utterance():
@@ -25,9 +28,13 @@ class Utterance():
 
     def __str__(self):
         str_ = ''
-        for attr in dir(self):
-            if not attr.startswith('__') and getattr(self, attr) != None and getattr(self, attr)!='':
-                str_ += '\t\t%s : %s\n' % (attr, getattr(self, attr))
+        # for attr in dir(self):
+        #     if not attr.startswith('__') and getattr(self, attr) != None and getattr(self, attr)!='':
+                # str_ += '\t\t%s : %s\n' % (attr, getattr(self, attr))
+        str_ += '\t\t%s : %s\n' % ('useruuid', getattr(self, 'useruuid'))
+        str_ += '\t\t%s : %s\n' % ('time', getattr(self, 'time'))
+        str_ += '\t\t%s : %s\n' % ('direction', getattr(self, 'direction'))
+        str_ += '\t\t%s : %s\n' % ('msg_text', getattr(self, 'msg_text'))
         return str_
 
 def str_to_session(session_content):
@@ -69,7 +76,7 @@ def session_length_distribution(session_dict):
     session_length_count = {}
     for user_id, sessions in session_dict.items():
         for session in sessions:
-            print(len(session))
+            # print(len(session))
             session_length_count[len(session)] = session_length_count.get(len(session), 0) + 1
     print('Session Length Distribution')
     sorted_count = sorted(session_length_count.items(), key=lambda k:k[0])
@@ -105,10 +112,11 @@ def is_valid_session(session):
             # 3. filter the sessions which have user messages msg_text==None
             if u.msg_text == None or u.msg_text == '':
                 is_valid = False
-        # 4. not a on-board session
+        # 4. not a on-board session (this is not useful, too broad about the 'onboard')
         # else:
         #     if u.botlog != None and u.botlog.find('onboard') != -1:
         #         is_valid = False
+        # key: user_case value: onboarding
 
     if number_user_message < 3:
         is_valid = False
@@ -153,7 +161,7 @@ def JaccardDistance(str1, str2):
         return float(len(str1 & str2)) / len(str1 | str2)
     return 0.0
 
-def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
+def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.8):
     new_session_dict = {}
 
     for user_id, sessions in session_dict.items():
@@ -162,8 +170,8 @@ def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
             max_jaccard = 0
             last_user_utterance = None
             last_user_utterance_id = None
-            most_similar_pair = None
-            most_similar_ids = None
+            # most_similar_pairs = []
+            most_similar_idxs = []
 
             for utterance_id, utt in enumerate(session):
                 if utt.direction == 'user_to_sb':
@@ -172,47 +180,170 @@ def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
                         last_user_utterance_id = None
                         continue
 
-                    # ignore the utterances that length is less than 3 (simple commands like Skip)
-                    if last_user_utterance == None or len(re.split('\W+', utt.msg_text.lower())) < 3:
+                    # ignore the utterances that length is less than 5 (simple commands like Skip)
+                    if last_user_utterance == None or len(set(re.split('\W+', last_user_utterance.msg_text))) <= 5 or len(set(re.split('\W+', utt.msg_text))) <= 5:
                         last_user_utterance = utt
                         last_user_utterance_id = utterance_id
                         continue
 
                     else:
-                        current_jaccard = JaccardDistance(last_user_utterance.msg_text, session[utterance_id].msg_text)
+                        current_jaccard = JaccardDistance(last_user_utterance.msg_text, utt.msg_text)
                         if current_jaccard > max_jaccard:
                             max_jaccard = current_jaccard
-                            most_similar_pair = (last_user_utterance, session[utterance_id])
-                            most_similar_ids = (last_user_utterance_id, utterance_id)
+                            # most_similar_pairs.append((last_user_utterance, utt))
+                            most_similar_idxs.append((last_user_utterance_id, utterance_id))
 
-                        last_user_utterance = session[utterance_id]
+                        last_user_utterance = utt
                         last_user_utterance_id = utterance_id
 
             if max_jaccard >= SIMILARITY_THRESHOLD:
                 new_sessions.append(session)
-                # '''
+                '''
+                similar_idx_dict0 = {}
+                similar_idx_dict1 = {}
                 print("================== Find similar pair! ==================")
-                str1 = set(re.split('\W+', most_similar_pair[0].msg_text.lower()))
-                str2 = set(re.split('\W+', most_similar_pair[1].msg_text.lower()))
-
                 print('Session length:\t%d' % len(session))
-                print('Jaccard similarity:\t%f' % max_jaccard)
-                print('Intersection:\t%s' % (str1 & str2))
-                print('Union:\t\t\t%s' % (str1 | str2))
+                for m_id, most_similar_idx in enumerate(most_similar_idxs):
+                    str1 = set(re.split('\W+', session[most_similar_idx[0]].msg_text.lower()))
+                    str2 = set(re.split('\W+', session[most_similar_idx[1]].msg_text.lower()))
+                    similar_idx_dict0[most_similar_idx[0]] = m_id
+                    similar_idx_dict1[most_similar_idx[1]] = m_id
+
+                    print('Jaccard similarity:\t%f' % max_jaccard)
+                    print('String 1: id = %d \t contect = %s' % (most_similar_idx[0], str1))
+                    print('String 2: id = %d \t contect = %s' % (most_similar_idx[1], str2))
+                    print('Intersection:\t%s' % (str1 & str2))
+                    print('Union:\t\t\t%s\n' % (str1 | str2))
 
                 for u_id, u_ in enumerate(session):
-                    if u_id in most_similar_ids:
-                        print('\t\t' + '-' * 25 + ' START '+ '-' * 25)
-                        print(str(u_) + '\t\t' + '-' * 25 + ' END '+ '-' * 25)
-                    else:
-                        print(u_)
+                    if u_id in similar_idx_dict0:
+                        print('\t\t' + '-' * 25 + ' START - HEAD %d ' % similar_idx_dict0[u_id] + '-' * 25)
+                    if u_id in similar_idx_dict1:
+                        print('\t\t' + '-' * 25 + ' START - TAIL %d ' % similar_idx_dict1[u_id] + '-' * 25)
+                    print(u_)
+                    if u_id in similar_idx_dict0:
+                        print('\t\t' + '-' * 25 + ' END - HEAD %d ' % similar_idx_dict0[u_id] + '-' * 25)
+                    if u_id in similar_idx_dict1:
+                        print('\t\t' + '-' * 25 + ' END - TAIL %d ' % similar_idx_dict1[u_id] + '-' * 25)
                 # '''
 
         if len(new_sessions) > 0:
             new_session_dict[user_id] = new_sessions
     return new_session_dict
 
-BOT_INDEX = 1
+
+def filter_on_board_utterances(BOT_NAME, session):
+    new_session = []
+    for u in session:
+        if BOT_NAME == 'Family_Assistant':
+            if u.msg_text.startswith('[Hi') or u.msg_text.startswith('["Cool! Let\'s start with your shopping list') or u.msg_text.startswith('["Ok! Let\'s start with grocery list') or u.msg_text.startswith('["Cool! I\'ll introduce shopping list') or u.msg_text.startswith('["Cool! I\'ll introduce shopping list') or u.msg_text.startswith('["Great to meet you'):
+                new_session = []
+        new_session.append(u)
+    return new_session
+
+
+def is_post_valid(BOT_NAME, session):
+    is_valid = True
+
+    user_count = 0
+    nontrivial_count = 0
+    for u in session:
+        if u.direction == 'user_to_sb':
+            user_count += 1
+
+            if BOT_NAME == 'Family_Assistant':
+                t = u.msg_text.lower()
+                # check appearance of complete commands
+                if not t.startswith('"skip"') and not t.startswith('"help"') and not t.startswith('"show') and not t.startswith('"remove"'): # and not t.startswith('"add"')
+                    nontrivial_count += 1
+
+        if u.direction == 'bot_to_sb':
+            if BOT_NAME == 'Family_Assistant':
+                # check if it contains on-boarding utterances
+                if u.msg_text.find('your family assistant') != -1 or u.msg_text.find('get started') != -1 or u.msg_text.startswith('["Cool! Let\'s start with') or u.msg_text.startswith('["Ok! Let\'s start with') or u.msg_text.startswith('["Cool! I\'ll introduce shopping list') or u.msg_text.startswith('["Cool! I\'ll introduce shopping list') or u.msg_text.startswith('["Great to meet you'):
+                    is_valid = False
+                if u.msg_text.find('start with grocery') != -1 or u.msg_text.find('My verification code') != -1:
+                    is_valid = False
+
+    if nontrivial_count < 2:
+        is_valid = is_valid and False
+
+    if len(session) <= 4 or user_count <= 2:
+        is_valid = is_valid and False
+    else:
+        is_valid = is_valid and True
+
+    return is_valid
+
+
+def find_nontrivial_session(session_dict):
+    '''
+    filter on_board utterance and trivial sessions
+    :param session_dict:
+    :return:
+    '''
+    new_session_dict = {}
+
+    for user_id, sessions in session_dict.items():
+        new_sessions = []
+        for session in sessions:
+            # session = filter_on_board_utterances(BOT_NAME, session)
+
+            if not is_post_valid(BOT_NAME, session):
+                continue
+
+            new_sessions.append(session)
+
+        if len(new_sessions) > 0:
+            new_session_dict[user_id] = new_sessions
+
+    return new_session_dict
+
+def export_ramdom_samples(session_list, BOT_NAME, N=100):
+    '''
+    Randomly sample N data points
+    :return:
+    '''
+    # 1. convert to numpy array
+    session_list = numpy.asarray(session_list)
+    print('Exporting samples to CSV file')
+    # 2. load cache if exists, otherwise resample it, if N==1 means to export all
+    root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
+
+    if N != 1:
+        sample_cache_path = root_dir + '/dataset/sample/%s.N=%s.pkl' % (BOT_NAME, N)
+        if os.path.exists(sample_cache_path):
+            with open(sample_cache_path, 'rb') as f_:
+                sample_index = pickle.load(f_)
+        else:
+            sample_index = random.sample(range(len(session_list)), N)
+            with open(sample_cache_path, 'wb') as f_:
+                pickle.dump(sample_index, f_)
+        session_list = session_list[sample_index]
+
+    # 3. dump the samples to a CSV file
+    sample_path = root_dir + '/dataset/sample/%s.N=%s.sampled.csv' % (BOT_NAME, N)
+    valid_count = 0
+
+    with open(sample_path, 'w') as csvfile:
+        # attrs = [attr for attr in dir(session_list[0][0]) if not attr.startswith('__')]
+        # print(attrs)
+        # attrs = ['useruuid', 'time', 'direction', 'msg', 'botlog']
+        attrs = ['useruuid', 'time', 'direction', 'msg_text']
+
+        csvfile = csv.writer(csvfile)
+        csvfile.writerow(attrs)
+
+        for session in session_list:
+            for u_ in session:
+                csvfile.writerow([getattr(u_, attr) for attr in attrs])
+            csvfile.writerow([])
+
+            valid_count += 1
+
+    print('#(valid samples) = %d' % valid_count)
+
+BOT_INDEX = 0
 BOT_NAMES = ['Family_Assistant', 'Monkey_Pets', 'Weather']
 BOT_NAME  = BOT_NAMES[BOT_INDEX]
 
@@ -224,6 +355,7 @@ PATHS = [FAMILY_PATH, MONKEY_PATH, WEATHER_PATH]
 file_dir  = PATHS[BOT_INDEX]
 
 print(BOT_NAME + ' : ' + file_dir)
+
 if __name__ == '__main__':
 
     session_dict = {}
@@ -244,22 +376,36 @@ if __name__ == '__main__':
                 session_list.append(new_session)
             session_dict[user_id] = session_list
 
-    # print('%' * 20 + 'RAW Data' + '%' * 20)
-    # basic_statistics(session_dict)
+    print('%' * 20 + 'RAW Data' + '%' * 20)
+    basic_statistics(session_dict)
+
     # filter the sessions that have only one direction (not a dialogue)
     session_dict = filter_invalid_session(session_dict)
-
     print('%' * 20 + 'Valid Data' + '%' * 20)
     basic_statistics(session_dict)
+    # session_length_distribution(session_dict)
 
     # session_number_distribution(session_dict)
     # most_active_user(session_dict)
-    session_length_distribution(session_dict)
+    # session_length_distribution(session_dict)
 
-    # high_repetition_session_dict = find_repetition_session(valid_session_dict)
 
+    session_dict = find_nontrivial_session(session_dict)
+    print('%' * 20 + 'Data after filtering trivia' + '%' * 20)
+    basic_statistics(session_dict)
+    # session_length_distribution(nontrivial_session)
+
+    # high_repetition_session_dict = find_repetition_session(nontrivial_session)
     # print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
+    # basic_statistics(high_repetition_session_dict)
+    # session_length_distribution(high_repetition_session_dict)
+
     # basic_statistics(high_repetition_session_dict)
     # print_session_at_length_K(valid_session_dict, K=4, equal=True)
 
-    # export_ramdom_samples()
+    session_list = []
+    # flatten the sessions
+    for sessions in session_dict.values():
+        session_list.extend(sessions)
+
+    export_ramdom_samples(session_list, BOT_NAME, N=1)
