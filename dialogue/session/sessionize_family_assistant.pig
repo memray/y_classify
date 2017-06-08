@@ -21,7 +21,7 @@ data_filtered = filter data by (
 	msg_sentto_displayname matches 'Family.*Assistant'
     AND msg_sentto_env == 'prod'
 --    AND platform == 'facebook'
-    AND msg_text IS NOT NULL # filter later
+--    AND msg_text IS NOT NULL # filter later
     AND dt >= '$time_start'
 --    AND dt < '$time_end'
     AND (direction == 'bot_to_sb' OR direction == 'user_to_sb')
