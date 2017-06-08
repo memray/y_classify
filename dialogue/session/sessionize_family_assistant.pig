@@ -6,12 +6,12 @@ register /homes/rmeng/lib/jyson-1.0.2.jar;
 register 'udf_session.py' using jython as sessionudf;
 
 %default BOT_NAME 'Family_Assistant';
-%default time_start '2017-04-01-00';
+%default time_start '2017-03-07-00';
 %default time_end '2017-04-30-24';
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.interval=5min.session';
+%default OUTPUT '/user/rmeng/$BOT_NAME.20170307.interval=5min.session';
 
 rmf $OUTPUT
 
@@ -21,8 +21,8 @@ data_filtered = filter data by (
 	msg_sentto_displayname matches 'Family.*Assistant'
     AND msg_sentto_env == 'prod'
 --    AND platform == 'facebook'
---    AND msg_text IS NOT NULL # filter later
---    AND dt >= '$time_start'
+    AND msg_text IS NOT NULL # filter later
+    AND dt >= '$time_start'
 --    AND dt < '$time_end'
     AND (direction == 'bot_to_sb' OR direction == 'user_to_sb')
 --    AND (event_trigger == 'message' OR event_trigger == 'notification') -- doesn't matter, all records belong to these two events

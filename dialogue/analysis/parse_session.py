@@ -246,29 +246,33 @@ def is_post_valid(BOT_NAME, session):
     is_valid = True
 
     user_count = 0
-    nontrivial_count = 0
+    # nontrivial_count = 0
     for u in session:
         if u.direction == 'user_to_sb':
             user_count += 1
 
-            if BOT_NAME == 'Family_Assistant':
-                t = u.msg_text.lower()
-                # check appearance of complete commands
-                if not t.startswith('"skip"') and not t.startswith('"help"') and not t.startswith('"show') and not t.startswith('"remove"'): # and not t.startswith('"add"')
-                    nontrivial_count += 1
+            # if BOT_NAME == 'Family_Assistant':
+            #     t = u.msg_text.lower()
+            #     # check appearance of complete commands
+            #     if not t.startswith('"skip"') and not t.startswith('"help"') and not t.startswith('"show') and not t.startswith('"remove"'): # and not t.startswith('"add"')
+            #         nontrivial_count += 1
 
         if u.direction == 'bot_to_sb':
             if BOT_NAME == 'Family_Assistant':
                 # check if it contains on-boarding utterances
-                if u.msg_text.find('your family assistant') != -1 or u.msg_text.find('get started') != -1 or u.msg_text.startswith('["Cool! Let\'s start with') or u.msg_text.startswith('["Ok! Let\'s start with') or u.msg_text.startswith('["Cool! I\'ll introduce shopping list') or u.msg_text.startswith('["Cool! I\'ll introduce shopping list') or u.msg_text.startswith('["Great to meet you'):
-                    is_valid = False
-                if u.msg_text.find('start with grocery') != -1 or u.msg_text.find('My verification code') != -1:
-                    is_valid = False
+                # if u.msg_text.find('your family assistant') != -1 or u.msg_text.find('get started') != -1 or u.msg_text.startswith('["Cool! Let\'s start with') or u.msg_text.startswith('["Ok! Let\'s start with') or u.msg_text.startswith('["Cool! I\'ll introduce shopping list') or u.msg_text.startswith('["Cool! I\'ll introduce shopping list') or u.msg_text.startswith('["Great to meet you'):
+                #     is_valid = False
+                # if u.msg_text.find('start with grocery') != -1 or u.msg_text.find('My verification code') != -1:
+                #     is_valid = False
+                if u.botlog != None:
+                    bot_log_json = json.loads(u.botlog)
+                    if 'use_case' in bot_log_json and len(bot_log_json['use_case']) > 0 and bot_log_json['use_case'][0] != None and bot_log_json['use_case'][0].strip() == 'onboarding':
+                        is_valid = False
 
-    if nontrivial_count < 2:
-        is_valid = is_valid and False
+    # if nontrivial_count < 2:
+    #     is_valid = is_valid and False
 
-    if len(session) <= 4 or user_count <= 2:
+    if len(session)-user_count < 2 or user_count < 2:
         is_valid = is_valid and False
     else:
         is_valid = is_valid and True
