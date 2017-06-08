@@ -25,7 +25,7 @@ def is_valid_session(current_session):
             # filter the sessions which have user messages msg_text==None
             if u['msg_text'] == None or u['msg_text'] == '':
                 is_valid = False
-    if number_user_message < 3:
+    if number_user_message < 2:
         is_valid = False
 
     return is_valid
