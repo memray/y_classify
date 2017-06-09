@@ -9,6 +9,7 @@ import os, re
 
 class Utterance():
     def __init__(self, record):
+        self.sessionid = ''
         for k,v in record.items():
             setattr(self, k, v)
 
@@ -333,13 +334,15 @@ def export_ramdom_samples(session_list, BOT_NAME, N=100):
         # attrs = [attr for attr in dir(session_list[0][0]) if not attr.startswith('__')]
         # print(attrs)
         # attrs = ['useruuid', 'time', 'direction', 'msg', 'botlog']
-        attrs = ['useruuid', 'time', 'direction', 'msg_text']
+        attrs = ['sessionid', 'useruuid', 'time', 'direction', 'msg_text']
 
         csvfile = csv.writer(csvfile)
+        # csvfile = csv.writer(csvfile, delimiter='\t', lineterminator='\n')
         csvfile.writerow(attrs)
 
-        for session in session_list:
+        for session_num, session in enumerate(session_list):
             for u_ in session:
+                u_.sessionid = '%s_%d' % (u_.useruuid, session_num)
                 csvfile.writerow([getattr(u_, attr) for attr in attrs])
             csvfile.writerow([])
 
@@ -352,7 +355,7 @@ BOT_NAMES = ['Family_Assistant', 'Monkey_Pets', 'Weather']
 BOT_NAME  = BOT_NAMES[BOT_INDEX]
 
 root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
-FAMILY_PATH = root_dir + '/dataset/Family_Assistant.interval=5min.session/part-v002-o000-r-00000'
+FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.interval=5min.session/part-v002-o000-r-00000'
 MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
 WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
 PATHS = [FAMILY_PATH, MONKEY_PATH, WEATHER_PATH]
