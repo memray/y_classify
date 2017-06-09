@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/analysis/parse_session.py" afterPath="$PROJECT_DIR$/dialogue/analysis/parse_session.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig" afterPath="$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/session/udf_session.py" afterPath="$PROJECT_DIR$/dialogue/session/udf_session.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,8 +56,8 @@
       <file leaf-file-name="sessionize_family_assistant.pig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="27" column="119" lean-forward="true" selection-start-line="27" selection-start-column="119" selection-end-line="27" selection-end-column="119" />
+            <state relative-caret-position="216">
+              <caret line="13" column="86" lean-forward="true" selection-start-line="13" selection-start-column="86" selection-end-line="13" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -69,8 +66,8 @@
       <file leaf-file-name="udf_session.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            <state relative-caret-position="437">
+              <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -885,14 +882,7 @@
       <workItem from="1495668715500" duration="24000" />
       <workItem from="1495668750067" duration="86000" />
       <workItem from="1495668847979" duration="37206000" />
-      <workItem from="1496174219627" duration="66383000" />
-    </task>
-    <task id="LOCAL-00013" summary="debug export_dialogue">
-      <created>1495781283838</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1495781283838</updated>
+      <workItem from="1496174219627" duration="66671000" />
     </task>
     <task id="LOCAL-00014" summary="debug export_dialogue">
       <created>1495782938320</created>
@@ -1230,11 +1220,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496962034304</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="debug sessionize family assistant">
+      <created>1496968868141</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1496968868141</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103699000" />
+    <option name="totallyTimeSpent" value="103987000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1639,16 +1636,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        <state relative-caret-position="437">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="27" column="119" lean-forward="true" selection-start-line="27" selection-start-column="119" selection-end-line="27" selection-end-column="119" />
+        <state relative-caret-position="216">
+          <caret line="13" column="86" lean-forward="true" selection-start-line="13" selection-start-column="86" selection-end-line="13" selection-end-column="86" />
           <folding />
         </state>
       </provider>
