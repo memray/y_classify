@@ -274,10 +274,10 @@ def is_post_valid(BOT_NAME, session):
     # if nontrivial_count < 2:
     #     is_valid = is_valid and False
 
-    if len(session)-user_count < 2 or user_count < 2:
-        is_valid = is_valid and False
-    else:
-        is_valid = is_valid and True
+    # if len(session)-user_count < 2 or user_count < 2:
+    #     is_valid = is_valid and False
+    # else:
+    #     is_valid = is_valid and True
 
     return is_valid
 
@@ -356,7 +356,7 @@ BOT_NAMES = ['Family_Assistant', 'Monkey_Pets', 'Weather']
 BOT_NAME  = BOT_NAMES[BOT_INDEX]
 
 root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
-FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.interval=5min.session/part-v002-o000-r-00000'
+FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.nolengthfilter.interval=5min.session/part-v002-o000-r-00000'
 MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
 WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
 PATHS = [FAMILY_PATH, MONKEY_PATH, WEATHER_PATH]
