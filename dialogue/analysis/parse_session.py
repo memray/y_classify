@@ -265,6 +265,7 @@ def is_post_valid(BOT_NAME, session):
                 #     is_valid = False
                 # if u.msg_text.find('start with grocery') != -1 or u.msg_text.find('My verification code') != -1:
                 #     is_valid = False
+
                 if u.botlog != None:
                     bot_log_json = json.loads(u.botlog)
                     if 'use_case' in bot_log_json and len(bot_log_json['use_case']) > 0 and bot_log_json['use_case'][0] != None and bot_log_json['use_case'][0].strip() == 'onboarding':
@@ -415,4 +416,4 @@ if __name__ == '__main__':
     for sessions in session_dict.values():
         session_list.extend(sessions)
 
-    export_ramdom_samples(session_list, BOT_NAME, N=1)
+    export_ramdom_samples(session_list, BOT_NAME, N=100)
