@@ -12,8 +12,8 @@ def is_valid_session(current_session):
     is_valid = True
 
     # filter the sessions of which length is less than 4
-    if len(current_session) < 4:
-        is_valid = False
+    # if len(current_session) < 4:
+    #     is_valid = False
 
     # filter the sessions of which length is larger than 100
     # if len(current_session) > 100:
@@ -26,8 +26,8 @@ def is_valid_session(current_session):
             # filter the sessions which have user messages msg_text==None (Not correct!!!)
             # if u['msg_text'] == None or u['msg_text'] == '':
             #     is_valid = False
-    if number_user_message < 2:
-        is_valid = False
+    # if number_user_message < 2:
+    #     is_valid = False
 
     return is_valid
 
