@@ -83,7 +83,8 @@ def split_session(user_utterances):
 
     # reach the end of data
     # if is_valid_session(current_session):
-    session_list.append(current_session)
+    if len(current_session) > 0:
+        session_list.append(current_session)
 
     # if empty return None
     if len(session_list) > 0:

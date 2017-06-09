@@ -11,7 +11,7 @@ register 'udf_session.py' using jython as sessionudf;
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.20170307.nolengthfilter.interval=5min.session';
+%default OUTPUT '/user/rmeng/$BOT_NAME.20170307.newnolengthfilter.interval=5min.session';
 
 rmf $OUTPUT
 
