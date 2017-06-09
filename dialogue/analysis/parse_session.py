@@ -380,8 +380,9 @@ if __name__ == '__main__':
                 continue
 
             new_session = str_to_session(session_content)
-            if len(new_session) > 4:
-                session_list.append(new_session)
+            # if len(new_session) > 4:
+            session_list.append(new_session)
+
             session_dict[user_id] = session_list
 
     print('%' * 20 + 'RAW Data' + '%' * 20)
