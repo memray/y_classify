@@ -50,6 +50,9 @@ data_processed = foreach data_filtered generate
 	(chararray) botlog_intent,
 	(chararray) botlog_slots;
 
+LOG_COUNT = FOREACH (GROUP data_processed ALL) GENERATE COUNT(data_processed);
+dump LOG_COUNT;
+
 -- Group utterances by useruuid
 data_group = GROUP data_processed BY (useruuid);
 
@@ -59,9 +62,12 @@ data_group_sessionized = FOREACH data_group  {
    GENERATE FLATTEN ($0) AS userid, sessionudf.split_session(ordered_groups);
            }
 
+SESSION_COUNT = FOREACH (GROUP data_group_sessionized ALL) GENERATE COUNT(data_group_sessionized);
+dump SESSION_COUNT;
+
 -- Reduce results
-reduced_data = DISTINCT data_group_sessionized PARALLEL 1;
+--reduced_data = DISTINCT data_group_sessionized PARALLEL 1;
 
 -- Write results into JSON
-STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
+--STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
 --STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.builtin.JsonStorage();

@@ -243,8 +243,8 @@ def filter_on_board_utterances(BOT_NAME, session):
     return new_session
 
 
-def is_post_valid(BOT_NAME, session):
-    is_valid = True
+def has_onboarding_session(BOT_NAME, session):
+    has_onboarding = True
 
     user_count = 0
     # nontrivial_count = 0
@@ -269,7 +269,7 @@ def is_post_valid(BOT_NAME, session):
                 if u.botlog != None:
                     bot_log_json = json.loads(u.botlog)
                     if 'use_case' in bot_log_json and len(bot_log_json['use_case']) > 0 and bot_log_json['use_case'][0] != None and bot_log_json['use_case'][0].strip() == 'onboarding':
-                        is_valid = False
+                        has_onboarding = False
 
     # if nontrivial_count < 2:
     #     is_valid = is_valid and False
@@ -279,7 +279,7 @@ def is_post_valid(BOT_NAME, session):
     # else:
     #     is_valid = is_valid and True
 
-    return is_valid
+    return has_onboarding
 
 
 def find_nontrivial_session(session_dict):
@@ -298,7 +298,7 @@ def find_nontrivial_session(session_dict):
             count_sessions += 1
             # session = filter_on_board_utterances(BOT_NAME, session)
 
-            if not is_post_valid(BOT_NAME, session):
+            if not has_onboarding_session(BOT_NAME, session):
                 count_onboarding_sessions += 1
                 continue
 
@@ -378,7 +378,8 @@ BOT_NAMES = ['Family_Assistant', 'Monkey_Pets', 'Weather']
 BOT_NAME  = BOT_NAMES[BOT_INDEX]
 
 root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
-FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.haslengthfilter.interval=5min.session/part-v002-o000-r-00000'
+# FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.haslengthfilter.interval=5min.session/part-v002-o000-r-00000'
+FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.nolengthfilter.interval=5min.session/part-v002-o000-r-00000'
 MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
 WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
 PATHS = [FAMILY_PATH, MONKEY_PATH, WEATHER_PATH]
