@@ -78,7 +78,7 @@ def load_data(DATA_NAME, data_dir):
                 for third_dir in os.listdir(os.path.join(data_dir, first_dir, second_dir)):
                     if DATA_NAME == 'DSTC1':
                         file_path = os.path.abspath(os.path.join(data_dir, first_dir, second_dir, third_dir, 'dstc.log.json'))
-                    elif DATA_NAME == 'DSTC2':
+                    elif DATA_NAME == 'DSTC2' or DATA_NAME == 'DSTC3':
                         file_path = os.path.abspath(os.path.join(data_dir, first_dir, second_dir, third_dir, 'log.json'))
 
                     if os.path.exists(file_path):
@@ -179,14 +179,16 @@ def find_repetition_session(session_list, SIMILARITY_THRESHOLD = 0.8):
 
 
 
-DATA_INDEX = 1
-DATA_NAMES = ['DSTC1', 'DSTC2']
+DATA_INDEX = 2
+DATA_NAMES = ['DSTC1', 'DSTC2', 'DSTC3']
 DATA_NAME  = DATA_NAMES[DATA_INDEX]
 
 root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
 DSTC1_PATH = root_dir + '/dataset/DSTC1/'
 DSTC2_PATH = root_dir + '/dataset/DSTC2/'
-PATHS = [DSTC1_PATH, DSTC2_PATH]
+DSTC3_PATH = root_dir + '/dataset/DSTC3_test/'
+
+PATHS = [DSTC1_PATH, DSTC2_PATH, DSTC3_PATH]
 data_dir  = PATHS[DATA_INDEX]
 
 print(DATA_NAME + ' : ' + data_dir)

@@ -289,13 +289,17 @@ def find_nontrivial_session(session_dict):
     :return:
     '''
     new_session_dict = {}
+    count_sessions = 0
+    count_onboarding_sessions = 0
 
     for user_id, sessions in session_dict.items():
         new_sessions = []
         for session in sessions:
+            count_sessions += 1
             # session = filter_on_board_utterances(BOT_NAME, session)
 
             if not is_post_valid(BOT_NAME, session):
+                count_onboarding_sessions += 1
                 continue
 
             new_sessions.append(session)
@@ -303,6 +307,24 @@ def find_nontrivial_session(session_dict):
         if len(new_sessions) > 0:
             new_session_dict[user_id] = new_sessions
 
+
+    count_utterances = 0
+    count_onboarding_utterances = 0
+    for user_id, sessions in session_dict.items():
+        for session in sessions:
+            for u in session:
+                count_utterances += 1
+
+                if u.botlog != None:
+                    bot_log_json = json.loads(u.botlog)
+                    if 'use_case' in bot_log_json and len(bot_log_json['use_case']) > 0 and bot_log_json['use_case'][0] != None and bot_log_json['use_case'][0].strip() == 'onboarding':
+                        count_onboarding_utterances += 1
+
+    print('count_sessions = %d' % count_sessions)
+    print('count_onboarding_sessions = %d' % count_onboarding_sessions)
+
+    print('count_utterances = %d' % count_utterances)
+    print('count_onboarding_utterances = %d' % count_onboarding_utterances)
     return new_session_dict
 
 def export_ramdom_samples(session_list, BOT_NAME, N=100):
@@ -356,7 +378,7 @@ BOT_NAMES = ['Family_Assistant', 'Monkey_Pets', 'Weather']
 BOT_NAME  = BOT_NAMES[BOT_INDEX]
 
 root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
-FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.nolengthfilter.interval=5min.session/part-v002-o000-r-00000'
+FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.haslengthfilter.interval=5min.session/part-v002-o000-r-00000'
 MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
 WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
 PATHS = [FAMILY_PATH, MONKEY_PATH, WEATHER_PATH]
@@ -417,4 +439,4 @@ if __name__ == '__main__':
     for sessions in session_dict.values():
         session_list.extend(sessions)
 
-    export_ramdom_samples(session_list, BOT_NAME, N=100)
+    # export_ramdom_samples(session_list, BOT_NAME, N=100)
