@@ -10,6 +10,28 @@ import re
 
 @outputSchema('u_count: int')
 
+def is_valid_session(current_session):
+    is_valid = True
+
+    # filter the sessions of which length is less than 4
+    # if len(current_session) < 4:
+    #     is_valid = False
+
+    # filter the sessions of which length is larger than 100
+    # if len(current_session) > 100:
+    #     is_valid = False
+    # filter the sessions which have less 2 user utterances
+    number_user_message = 0
+    for u in current_session:
+        if u['direction'] == 'user_to_sb':
+            number_user_message += 1
+            # filter the sessions which have user messages msg_text==None (Not correct!!!)
+            # if u['msg_text'] == None or u['msg_text'] == '':
+            #     is_valid = False
+    # if number_user_message < 2:
+    #     is_valid = False
+
+    return is_valid
 def split_session(user_utterances):
     '''
     Given a handful of utterances of one user, segment the utterances into sessions
@@ -46,14 +68,16 @@ def split_session(user_utterances):
             identify the validity of current session
             '''
             # keep the valid sessions and messages only
-            session_list.append(current_session)
+            if is_valid_session(current_session):
+                session_list.append(current_session)
 
             current_session = []
             current_session.append(utterance_dict)
             last_utterance_time = ts_in_second
 
     # reach the end of data
-    session_list.append(current_session)
+    if is_valid_session(current_session):
+        session_list.append(current_session)
 
     utterance_count = sum([len(s) for s in session_list])
 
