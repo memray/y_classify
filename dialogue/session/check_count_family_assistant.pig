@@ -11,7 +11,7 @@ register 'udf_check_count.py' using jython as sessionudf;
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.20170307.log_count';
+%default OUTPUT '/user/rmeng/$BOT_NAME.20170307.log_count_after_filter';
 
 rmf $OUTPUT
 
