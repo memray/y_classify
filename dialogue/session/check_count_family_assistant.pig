@@ -3,7 +3,7 @@
  */
 
 register /homes/rmeng/lib/jyson-1.0.2.jar;
-register 'udf_session.py' using jython as sessionudf;
+register 'udf_check_count.py' using jython as sessionudf;
 
 %default BOT_NAME 'Family_Assistant';
 %default time_start '2017-03-07-00';
@@ -11,7 +11,7 @@ register 'udf_session.py' using jython as sessionudf;
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.20170307.nolengthfilter.interval=5min.session';
+%default OUTPUT '/user/rmeng/$BOT_NAME.20170307.log_count';
 
 rmf $OUTPUT
 
@@ -50,18 +50,24 @@ data_processed = foreach data_filtered generate
 	(chararray) botlog_intent,
 	(chararray) botlog_slots;
 
+LOG_COUNT = FOREACH (GROUP data_processed ALL) GENERATE COUNT(data_processed);
+dump LOG_COUNT;
+
 -- Group utterances by useruuid
 data_group = GROUP data_processed BY (useruuid);
 
 -- For each group (utterances of one user), order utterances by time and do sessionization
-data_group_sessionized = FOREACH data_group  {
+log_count_each_user = FOREACH data_group  {
    ordered_groups = ORDER $1 BY time ASC;
-   GENERATE FLATTEN ($0) AS userid, sessionudf.split_session(ordered_groups);
+   GENERATE FLATTEN ($0) AS userid, sessionudf.split_session(ordered_groups) AS u_count;
            }
 
+LOG_COUNT_AFTER_SESSION = FOREACH (GROUP log_count_each_user ALL) GENERATE SUM(u_count);
+dump LOG_COUNT_AFTER_SESSION;
+
 -- Reduce results
-reduced_data = DISTINCT data_group_sessionized PARALLEL 1;
+--reduced_data = DISTINCT data_group_sessionized PARALLEL 1;
 
 -- Write results into JSON
-STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
+STORE LOG_COUNT, LOG_COUNT_AFTER_SESSION INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
 --STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.builtin.JsonStorage();
