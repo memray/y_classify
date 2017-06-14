@@ -25,13 +25,12 @@ def is_valid_session(current_session):
     for u in current_session:
         if u['direction'] == 'user_to_sb':
             number_user_message += 1
-            # filter the sessions which have user messages msg_text==None (Not correct!!!)
-            # if u['msg_text'] == None or u['msg_text'] == '':
-            #     is_valid = False
+
     if number_user_message < 2:
         is_valid = False
 
     return is_valid
+
 def split_session(user_utterances):
     '''
     Given a handful of utterances of one user, segment the utterances into sessions

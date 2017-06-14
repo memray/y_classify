@@ -51,7 +51,6 @@ data_processed = foreach data_filtered generate
 	(chararray) botlog_slots;
 
 LOG_COUNT = FOREACH (GROUP data_processed ALL) GENERATE COUNT(data_processed);
-dump LOG_COUNT;
 
 -- Group utterances by useruuid
 data_group = GROUP data_processed BY (useruuid);
@@ -64,7 +63,6 @@ log_count_each_user = FOREACH data_group  {
 
 log_count_group = GROUP log_count_each_user ALL;
 LOG_COUNT_AFTER_SESSION = FOREACH log_count_group GENERATE SUM(log_count_each_user.u_count);
-dump LOG_COUNT_AFTER_SESSION;
 
 -- Reduce results
 --reduced_data = DISTINCT data_group_sessionized PARALLEL 1;
