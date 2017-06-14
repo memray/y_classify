@@ -52,8 +52,8 @@ def split_session(user_utterances):
             utterance_dict[field_names[v_id]] = val
 
         # ignore the "show-typing" message
-        # if msg_types == '["show-typing"]':
-        #     continue
+        if msg_types == '["show-typing"]':
+            continue
 
         # put in the first utterance
         if len(current_session) == 0:
@@ -81,4 +81,7 @@ def split_session(user_utterances):
         session_list.append(current_session)
 
     # if empty return None
-    return json.dumps(session_list)
+    if len(session_list) > 0:
+        return json.dumps(session_list)
+    else:
+        return None

@@ -43,14 +43,16 @@ def str_to_session(session_content):
     parse string to a session list
     :param session_content:
     '''
-    session = []
-    utterance_list = json.loads(session_content)[0]
+    session_list = []
 
-    for record in utterance_list:
-        u_ = Utterance(record)
-        session.append(u_)
+    for session_json in json.loads(session_content):
+        session = []
+        for record in session_json:
+            u_ = Utterance(record)
+            session.append(u_)
+        session_list.append(session)
 
-    return session
+    return session_list
 
 # Session number distribution
 def session_number_distribution(session_dict):
@@ -379,7 +381,8 @@ BOT_NAME  = BOT_NAMES[BOT_INDEX]
 
 root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
 # FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.haslengthfilter.interval=5min.session/part-v002-o000-r-00000'
-FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.nolengthfilter.interval=5min.session/part-v002-o000-r-00000'
+# FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170307.nolengthfilter.interval=5min.session/part-v002-o000-r-00000'
+FAMILY_PATH = root_dir + '/dataset/Family_Assistant.20170306.interval=5min.session/part-v002-o000-r-00000'
 MONKEY_PATH = root_dir + '/dataset/Monkey_Pets.interval=5min.session/part-v002-o000-r-00000'
 WEATHER_PATH = root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
 PATHS = [FAMILY_PATH, MONKEY_PATH, WEATHER_PATH]
@@ -402,9 +405,12 @@ if __name__ == '__main__':
             if (session_content == None or session_content.strip() == ''):
                 continue
 
-            new_session = str_to_session(session_content)
+            if len(session_content) < 4:
+                continue
+
+            new_sessions = str_to_session(session_content)
             # if len(new_session) > 4:
-            session_list.append(new_session)
+            session_list.extend(new_sessions)
 
             session_dict[user_id] = session_list
 
@@ -440,4 +446,4 @@ if __name__ == '__main__':
     for sessions in session_dict.values():
         session_list.extend(sessions)
 
-    # export_ramdom_samples(session_list, BOT_NAME, N=100)
+    export_ramdom_samples(session_list, BOT_NAME, N=1)
