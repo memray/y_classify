@@ -8,7 +8,7 @@ import re
 
 # -*- coding: utf-8 -*-
 
-@outputSchema('utterance_count: int')
+@outputSchema('u_count: int')
 
 def split_session(user_utterances):
     '''
