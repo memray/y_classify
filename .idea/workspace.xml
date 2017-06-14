@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/session/udf_check_count.py" afterPath="$PROJECT_DIR$/dialogue/session/udf_check_count.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig" afterPath="$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,20 +56,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="check_count_family_assistant.pig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="check_count_family_assistant.pig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+            <state relative-caret-position="292">
+              <caret line="64" column="78" lean-forward="false" selection-start-line="64" selection-start-column="78" selection-end-line="64" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="udf_check_count.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="udf_check_count.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/session/udf_check_count.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="-497">
               <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding />
             </state>
@@ -153,8 +153,8 @@
         <option value="$PROJECT_DIR$/dialogue/session/udf_session.py" />
         <option value="$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig" />
         <option value="$PROJECT_DIR$/dialogue/session/udf_checkcount.py" />
-        <option value="$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig" />
         <option value="$PROJECT_DIR$/dialogue/session/udf_check_count.py" />
+        <option value="$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig" />
       </list>
     </option>
   </component>
@@ -986,14 +986,7 @@
       <workItem from="1495668750067" duration="86000" />
       <workItem from="1495668847979" duration="37206000" />
       <workItem from="1496174219627" duration="88824000" />
-      <workItem from="1497243405384" duration="9909000" />
-    </task>
-    <task id="LOCAL-00025" summary="debug export_dialogue">
-      <created>1496097799936</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1496097799936</updated>
+      <workItem from="1497243405384" duration="10195000" />
     </task>
     <task id="LOCAL-00026" summary="debug export_dialogue">
       <created>1496100224583</created>
@@ -1331,7 +1324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497425970933</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="debug sessionize family assistant">
+      <created>1497426322444</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1497426322444</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1343,7 +1343,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136049000" />
+    <option name="totallyTimeSpent" value="136335000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1834,18 +1834,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_check_count.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+        <state relative-caret-position="-497">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_check_count.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state relative-caret-position="292">
+          <caret line="64" column="78" lean-forward="false" selection-start-line="64" selection-start-column="78" selection-end-line="64" selection-end-column="78" />
           <folding />
         </state>
       </provider>

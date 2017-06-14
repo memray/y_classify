@@ -62,7 +62,7 @@ log_count_each_user = FOREACH data_group  {
    GENERATE FLATTEN ($0) AS userid, sessionudf.split_session(ordered_groups) AS (u_count: int);
            }
 
-LOG_COUNT_AFTER_SESSION = FOREACH log_count_each_user GENERATE SUM(u_count);
+LOG_COUNT_AFTER_SESSION = FOREACH log_count_each_user GENERATE SUM(data_group.u_count);
 dump LOG_COUNT_AFTER_SESSION;
 
 -- Reduce results
