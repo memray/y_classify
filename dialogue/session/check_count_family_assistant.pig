@@ -69,6 +69,8 @@ dump LOG_COUNT_AFTER_SESSION;
 -- Reduce results
 --reduced_data = DISTINCT data_group_sessionized PARALLEL 1;
 
+output_union = UNION LOG_COUNT, LOG_COUNT_AFTER_SESSION;
+output = FOREACH output_union GENERATE $0, $1;
 -- Write results into JSON
-STORE LOG_COUNT, LOG_COUNT_AFTER_SESSION INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
+STORE output INTO '$OUTPUT' USING org.apache.pig.piggybank.storage.PigStorageSchema();
 --STORE reduced_data INTO '$OUTPUT' USING org.apache.pig.builtin.JsonStorage();
