@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig" afterPath="$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/session/udf_check_count.py" afterPath="$PROJECT_DIR$/dialogue/session/udf_check_count.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +79,7 @@
       <file leaf-file-name="udf_check_count.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/session/udf_check_count.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-531">
+            <state relative-caret-position="263">
               <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
@@ -997,14 +996,7 @@
       <workItem from="1495668750067" duration="86000" />
       <workItem from="1495668847979" duration="37206000" />
       <workItem from="1496174219627" duration="88824000" />
-      <workItem from="1497243405384" duration="12098000" />
-    </task>
-    <task id="LOCAL-00032" summary="debug export_dialogue">
-      <created>1496180893313</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1496180893313</updated>
+      <workItem from="1497243405384" duration="12706000" />
     </task>
     <task id="LOCAL-00033" summary="debug export_dialogue">
       <created>1496301362869</created>
@@ -1342,7 +1334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497428966133</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="debug sessionize family assistant">
+      <created>1497462727124</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1497462727124</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1354,7 +1353,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138238000" />
+    <option name="totallyTimeSpent" value="138846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1855,7 +1854,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/session/udf_check_count.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
+        <state relative-caret-position="263">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
