@@ -6,12 +6,12 @@ register /homes/rmeng/lib/jyson-1.0.2.jar;
 register 'udf_session.py' using jython as sessionudf;
 
 %default BOT_NAME 'Family_Assistant';
-%default time_start '2017-03-07-00';
+%default time_start '2017-03-06-00';
 %default time_end '2017-04-30-24';
 
 SET default_parallel 10;
 %default reduceNum 10;
-%default OUTPUT '/user/rmeng/$BOT_NAME.20170307.nolengthfilter.interval=5min.session';
+%default OUTPUT '/user/rmeng/$BOT_NAME.20170306.interval=5min.session';
 
 rmf $OUTPUT
 
