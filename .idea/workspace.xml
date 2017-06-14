@@ -59,8 +59,8 @@
       <file leaf-file-name="check_count_family_assistant.pig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+            <state relative-caret-position="379">
+              <caret line="74" column="16" lean-forward="false" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -986,14 +986,7 @@
       <workItem from="1495668750067" duration="86000" />
       <workItem from="1495668847979" duration="37206000" />
       <workItem from="1496174219627" duration="88824000" />
-      <workItem from="1497243405384" duration="11109000" />
-    </task>
-    <task id="LOCAL-00029" summary="debug export_dialogue">
-      <created>1496170020683</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1496170020683</updated>
+      <workItem from="1497243405384" duration="11319000" />
     </task>
     <task id="LOCAL-00030" summary="debug export_dialogue">
       <created>1496176963247</created>
@@ -1331,7 +1324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497427511351</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="debug sessionize family assistant">
+      <created>1497428045172</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1497428045172</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1343,7 +1343,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137249000" />
+    <option name="totallyTimeSpent" value="137459000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1844,8 +1844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+        <state relative-caret-position="379">
+          <caret line="74" column="16" lean-forward="false" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
           <folding />
         </state>
       </provider>
