@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
+    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="debug sessionize family assistant">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig" afterPath="$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig" />
     </list>
@@ -59,8 +59,8 @@
       <file leaf-file-name="check_count_family_assistant.pig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="64" column="78" lean-forward="false" selection-start-line="64" selection-start-column="78" selection-end-line="64" selection-end-column="78" />
+            <state relative-caret-position="135">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -986,14 +986,7 @@
       <workItem from="1495668750067" duration="86000" />
       <workItem from="1495668847979" duration="37206000" />
       <workItem from="1496174219627" duration="88824000" />
-      <workItem from="1497243405384" duration="10195000" />
-    </task>
-    <task id="LOCAL-00026" summary="debug export_dialogue">
-      <created>1496100224583</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1496100224583</updated>
+      <workItem from="1497243405384" duration="10653000" />
     </task>
     <task id="LOCAL-00027" summary="debug export_dialogue">
       <created>1496101483445</created>
@@ -1331,7 +1324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497426322444</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="debug sessionize family assistant">
+      <created>1497426690100</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1497426690101</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1343,7 +1343,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136335000" />
+    <option name="totallyTimeSpent" value="136793000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1844,8 +1844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="64" column="78" lean-forward="false" selection-start-line="64" selection-start-column="78" selection-end-line="64" selection-end-column="78" />
+        <state relative-caret-position="135">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
