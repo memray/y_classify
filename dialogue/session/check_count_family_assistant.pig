@@ -59,7 +59,7 @@ data_group = GROUP data_processed BY (useruuid);
 -- For each group (utterances of one user), order utterances by time and do sessionization
 log_count_each_user = FOREACH data_group  {
    ordered_groups = ORDER $1 BY time ASC;
-   GENERATE FLATTEN ($0) AS userid, sessionudf.split_session(ordered_groups) AS u_count;
+   GENERATE FLATTEN ($0) AS userid, sessionudf.split_session(ordered_groups) AS (u_count: int);
            }
 
 LOG_COUNT_AFTER_SESSION = FOREACH (GROUP log_count_each_user ALL) GENERATE SUM(u_count);
