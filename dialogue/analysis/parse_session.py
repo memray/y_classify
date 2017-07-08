@@ -164,7 +164,7 @@ def JaccardDistance(str1, str2):
         return float(len(str1 & str2)) / len(str1 | str2)
     return 0.0
 
-def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.8):
+def find_repetition_session(session_dict, SIMILARITY_THRESHOLD = 0.5):
     new_session_dict = {}
 
     for user_id, sessions in session_dict.items():
@@ -433,9 +433,9 @@ if __name__ == '__main__':
     basic_statistics(session_dict)
     # session_length_distribution(nontrivial_session)
 
-    # high_repetition_session_dict = find_repetition_session(nontrivial_session)
-    # print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
-    # basic_statistics(high_repetition_session_dict)
+    high_repetition_session_dict = find_repetition_session(session_dict)
+    print('%' * 20 + 'Data after Jaccard Filtering' + '%' * 20)
+    basic_statistics(high_repetition_session_dict)
     # session_length_distribution(high_repetition_session_dict)
 
     # basic_statistics(high_repetition_session_dict)
@@ -446,4 +446,4 @@ if __name__ == '__main__':
     for sessions in session_dict.values():
         session_list.extend(sessions)
 
-    export_ramdom_samples(session_list, BOT_NAME, N=1)
+    # export_ramdom_samples(session_list, BOT_NAME, N=1)
