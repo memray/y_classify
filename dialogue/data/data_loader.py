@@ -4,11 +4,13 @@ import json
 import pickle
 import random
 
-import numpy
+import numpy as np
 import six
 import os
+import sys
 import re
 
+from collections import Counter
 from bs4 import BeautifulSoup
 
 __author__ = "Rui Meng"
@@ -38,7 +40,7 @@ def data_loader(identifier, kwargs=None):
 
 
 class Utterance():
-    def __init__(self, session_id , time, userid, direction, text, botlog=None):
+    def __init__(self, session_id , time, userid, direction, text, botlog=None, **kwargs):
         self.session_id = session_id
         self.time = time
         self.userid = userid
@@ -55,6 +57,10 @@ class Utterance():
         self.msg_text  = text
         self.botlog  = botlog
 
+        # add anything maybe useful later
+        for (k,v) in kwargs.items():
+            setattr(self, k, v)
+
     def __str__(self):
         str_ = ''
         # for attr in dir(self):
@@ -67,40 +73,53 @@ class Utterance():
         str_ += '\t\t%s : %s\n' % ('msg_text', getattr(self, 'msg_text'))
         return str_
 
-class Dialogue():
-    def __init__(self, path, dialogue_id):
-        with open(path, 'r') as json_:
-            self.json = json.load(json_)
-            self.path = path
-            self.session_id = self.json['session-id']
-
-            # print(self.session_id + '*' * 20)
-            self.utterances = []
-            for turn_id, turn in enumerate(self.json['turns']):
-                if 'transcript' in turn['output']:
-                    self.utterances.append(Utterance(dialogue_id, turn_id, '', 'bot_to_sb', turn['output']['transcript']))
-                else:
-                    self.utterances.append(Utterance(dialogue_id, turn_id, '', 'bot_to_sb', ''))
-                # print('\t\t bot: %s' % self.utterances[-1].msg_text)
-
-                if turn['input']['live']['asr-hyps'] == []:
-                    self.utterances.append(Utterance(dialogue_id, turn_id, '', 'user_to_sb', ''))
-                else:
-                    self.utterances.append(Utterance(dialogue_id, turn_id, '', 'user_to_sb', turn['input']['live']['asr-hyps'][0]['asr-hyp']))
-                    # print('\t\t user:  %s' % self.utterances[-1].msg_text)
-
-    def __len__(self):
-        return len(self.utterances)
-
-    def __iter__(self):
-        return iter(self.utterances)
-
 class DataLoader(object):
     def __init__(self, **kwargs):
-        self.root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
+        self.config = kwargs['config']
+        self.logger = self.config.logger
+
+        self.root_dir = self.config['root_path'] #os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
         self.__dict__.update(kwargs)
         self.name    = self.__class__.__name__
         self.session_list    = []
+        self.annoteted_list  = []
+
+    class Dialogue():
+        def __init__(self, session_id):
+            self.utterances = []
+            self.session_id = session_id
+
+        def load_from_file(self, log_path, label_path, dialogue_number):
+            log_json = json.load(open(log_path, 'r'))
+            label_json = json.load(open(label_path, 'r'))
+
+            self.path = log_path
+            self.session_id = log_json['session-id']
+
+            # logger.info(self.session_id + '*' * 20)
+
+
+            for turn_id, (log_turn, label_turn) in enumerate(zip(log_json['turns'], label_json["turns"])):
+                if 'transcript' in log_turn['output']:
+                    self.utterances.append(Utterance(self.session_id, turn_id, dialogue_number, 'bot_to_sb', log_turn['output']['transcript']))
+                else:
+                    self.utterances.append(Utterance(self.session_id, turn_id, dialogue_number, 'bot_to_sb', ''))
+                # logger.info('\t\t bot: %s' % self.utterances[-1].msg_text)
+
+                if 'transcription' in label_turn:
+                    self.utterances.append(Utterance(self.session_id, turn_id, dialogue_number, 'user_to_sb', label_turn['transcription']))
+                else:
+                    self.utterances.append(Utterance(self.session_id, turn_id, dialogue_number, 'user_to_sb', ''))
+                    # logger.info('\t\t user:  %s' % self.utterances[-1].msg_text)
+
+        def __len__(self):
+            return len(self.utterances)
+
+        def __iter__(self):
+            return iter(self.utterances)
+
+        def __getitem__(self,index):
+            return self.utterances[index]
 
     def __call__(self):
         '''
@@ -113,20 +132,106 @@ class DataLoader(object):
         if self.__class__.__name__.lower().startswith('dstc'):
             self.load_dstc()
             return self.session_list
-        if self.__class__.__name__ == 'Maluuba':
-            self.load_()
-            return self.session_list
-        if self.__class__.__name__ == 'MATCH':
+        if self.__class__.__name__ == 'Maluuba' or self.__class__.__name__ == 'MATCH' or self.__class__.__name__ == 'GHOME':
             self.load_()
             return self.session_list
 
         raise 'Not Recognized Dataset Name'
 
+    def load_annotated_data(self):
+        '''
+        Load the annotated CSV data
+        :return: a list of dialogues
+        '''
+        if not os.path.exists(self.annotated_data_path):
+            raise 'annotated file does not exist: %s' % self.annotated_data_path
+
+        dialogue_dict = {}
+        with open(self.annotated_data_path, 'r') as annotated_csv:
+            csv_file = csv.reader(annotated_csv)
+            for row_num, csv_row in enumerate(csv_file):
+                if row_num == 0:
+                    header = csv_row
+                    continue
+
+                if csv_row == None or len(csv_row) == 0:
+                    continue
+
+                row = {}
+                for c_idx, c_name in enumerate(header):
+                    row[c_name] = csv_row[c_idx]
+
+                session_id = row['conversation #'] # there is something wrong with the session_id in Family_Assistant
+                dialogue = dialogue_dict.get(session_id, self.Dialogue(session_id))
+
+                utt_ = Utterance(session_id, row['time'], row['userid'], row['direction'], row['msg_text'], '')
+
+                for (k,v) in row.items():
+                    setattr(utt_, k, v.strip())
+
+                if utt_.direction == 'user_to_sb':
+                    utt_.type = utt_.Annotation.strip()
+                    # 'Corrented_by_bot' is removed in the latest update
+                    if hasattr(utt_, 'Corrected_by_bot') and utt_.Corrected_by_bot != '':
+                        utt_.type = 'CC'
+                    # (temporary) overwrite the annotation with Rui's correction
+                    if hasattr(utt_, 'Corrected by Rui') and getattr(utt_, 'Corrected by Rui') != '':
+                        utt_.type = getattr(utt_, 'Corrected by Rui').strip()
+
+                # merge the multiple 'bot_to_sb' messages to one
+                if utt_.direction == 'bot_to_sb' and len(dialogue) > 0 and dialogue.utterances[-1].direction == 'bot_to_sb':
+                    dialogue.utterances[-1].msg_text += utt_.msg_text
+                else:
+                    dialogue.utterances.append(utt_)
+
+                dialogue_dict[session_id] = dialogue
+
+        self.annoteted_list = dialogue_dict.values()
+        return dialogue_dict.keys(), dialogue_dict.values()
+
+    def stats(self):
+        session_count = len(self.session_list)
+        user_utterance_count = sum([len([u for u in s if u.direction=='user_to_sb']) for s in self.session_list])
+        system_utterance_count = sum([len([u for u in s if u.direction=='bot_to_sb']) for s in self.session_list])
+
+        self.logger.info('session_count = %d' % session_count)
+        self.logger.info('utterance_count = %d' % (user_utterance_count+system_utterance_count))
+        self.logger.info('user_utterance_count = %d' % user_utterance_count)
+        self.logger.info('system_utterance_count = %d' % system_utterance_count)
+        if session_count > 0:
+            average_session_length = float(user_utterance_count + system_utterance_count)/float(session_count)
+        else:
+            average_session_length = 0
+        self.logger.info('average_session_length = %.5f' % (average_session_length))
+
+        '''
+        stats of annotated data
+        '''
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.stats.csv'), 'w') as csv_file:
+            csv_file.write('Type, #(Utterance)'+'\n')
+
+            labels = np.concatenate([[u_.type for u_ in s if u_.direction == 'user_to_sb' and u_.type in self.config.param['valid_type']] for s in self.annoteted_list]).ravel()
+            for l,c in Counter(labels).items():
+                csv_file.write(','.join([str(l), str(c)])+'\n')
+            csv_file.write(','.join(['Total', str(len(labels))])+'\n')
+        # if len(self.annoteted_list) > 0 :
+        #     logger.info('*' * 20 + ' Annotated Data '+ '*' * 20 )
+        #     labels = np.concatenate([[u_.type for u_ in s if u_.direction == 'user_to_sb'] for s in self.annoteted_list]).ravel()
+        #     logger.info(Counter(labels))
+
+        # length distribution
+        # count_session_length = {}
+        # for s in self.session_list:
+        #     count_session_length[len(s)] = count_session_length.get(len(s), 0) + 1
+        # sorted_length_count = sorted(count_session_length.items(), key=lambda x:x[0])
+        # for k,v in sorted_length_count:
+        #     logger.info('\t%d\t%d' % (k,v))
+
     def load_pig_log(self):
         '''
         Load family assistant and weather data
         '''
-        print(self.name + ' : ' + self.data_path)
+        self.logger.info(self.name + ' : ' + self.data_path)
         session_list = []
         session_count = 0
 
@@ -139,14 +244,15 @@ class DataLoader(object):
                 if (session_content == None or session_content.strip() == ''):
                     continue
 
-                session = []
-                utterance_list = json.loads(session_content)[0]
+                session_json = json.loads(session_content)
 
-                for record in utterance_list:
-                    u_ = Utterance('%s_%s' % (record['useruuid'], record['time']) , record['time'], record['useruuid'], record['direction'], record['msg_text'], record['botlog'])
-                    session.append(u_)
+                for s_ in session_json:
+                    session = []
+                    for record in s_:
+                        u_ = Utterance('%s_%s' % (record['useruuid'], record['time']) , record['time'], record['useruuid'], record['direction'], record['msg_text'], record['botlog'])
+                        session.append(u_)
 
-                session_list.append(session)
+                    session_list.append(session)
 
         self.session_list =  session_list
 
@@ -158,7 +264,7 @@ class DataLoader(object):
         if os.path.exists(os.path.join(data_dir, DATA_NAME+'.pkl')):
             with open(os.path.join(data_dir, DATA_NAME+'.pkl'), 'rb') as f_:
                 dialogue_list = pickle.load(f_)
-            print('Loading %s cache complete' % DATA_NAME)
+            self.logger.info('Loading %s cache complete' % DATA_NAME)
         else:
             dialogue_count = 0
             for first_dir in os.listdir(data_dir):
@@ -167,16 +273,20 @@ class DataLoader(object):
                 for second_dir in os.listdir(data_dir+first_dir):
                     if os.path.isfile(os.path.join(data_dir, first_dir, second_dir)):
                         continue
-                    print(os.path.join(data_dir, first_dir, second_dir))
+                    self.logger.info(os.path.join(data_dir, first_dir, second_dir))
                     for third_dir in os.listdir(os.path.join(data_dir, first_dir, second_dir)):
                         if DATA_NAME == 'DSTC1':
-                            file_path = os.path.abspath(os.path.join(data_dir, first_dir, second_dir, third_dir, 'dstc.log.json'))
+                            log_path = os.path.abspath(os.path.join(data_dir, first_dir, second_dir, third_dir, 'dstc.log.json'))
+                            label_path = os.path.abspath(os.path.join(data_dir, first_dir, second_dir, third_dir, 'dstc.labels.json'))
                         elif DATA_NAME == 'DSTC2' or DATA_NAME == 'DSTC3':
-                            file_path = os.path.abspath(os.path.join(data_dir, first_dir, second_dir, third_dir, 'log.json'))
+                            log_path = os.path.abspath(os.path.join(data_dir, first_dir, second_dir, third_dir, 'log.json'))
+                            label_path = os.path.abspath(os.path.join(data_dir, first_dir, second_dir, third_dir, 'label.json'))
 
-                        if os.path.exists(file_path):
+                        if os.path.exists(log_path):
                             dialogue_count += 1
-                            dialogue_list.append(self.Dialogue(file_path, dialogue_count))
+                            new_dialogue = self.Dialogue()
+                            new_dialogue.load_from_file(log_path, label_path, dialogue_count)
+                            dialogue_list.append(new_dialogue)
 
             with open(os.path.join(data_dir, DATA_NAME+'.pkl'), 'wb') as f_:
                 pickle.dump(dialogue_list, f_)
@@ -189,8 +299,8 @@ class DataLoader(object):
         :return:
         '''
         # 1. convert to numpy array
-        session_list = numpy.asarray(self.session_list)
-        print('Exporting samples to CSV file')
+        session_list = np.asarray(self.session_list)
+        self.logger.info('Exporting samples to CSV file')
         # 2. load cache if exists, otherwise resample it, if N==1 means to export all
         root_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
 
@@ -207,32 +317,38 @@ class DataLoader(object):
 
         # 3. dump the samples to a CSV file
         sample_path = root_dir + '/dataset/sample/%s.N=%s.sampled.csv' % (self.name, N)
-        print(sample_path)
+        self.logger.info(sample_path)
         valid_count = 0
 
         with open(sample_path, 'w') as csvfile:
             # attrs = [attr for attr in dir(session_list[0][0]) if not attr.startswith('__')]
-            # print(attrs)
+            # self.logger.info(attrs)
             # attrs = ['useruuid', 'time', 'direction', 'msg', 'botlog']
             attrs = ['session_id', 'userid', 'time', 'direction', 'msg_text']
 
             csvfile = csv.writer(csvfile)
             # csvfile = csv.writer(csvfile, delimiter='\t', lineterminator='\n')
-            csvfile.writerow(attrs)
+            header = ['conversation #']
+            header.extend(attrs)
+            csvfile.writerow(header)
 
             for session_num, session in enumerate(session_list):
                 for u_ in session:
-                    csvfile.writerow([getattr(u_, attr) for attr in attrs])
+                    row = [session_num + 1]
+                    row.extend([getattr(u_, attr) for attr in attrs])
+                    csvfile.writerow(row)
                 csvfile.writerow([])
 
                 valid_count += 1
 
-        print('#(valid samples) = %d' % valid_count)
+        self.logger.info('#(valid samples) = %d' % valid_count)
 
 class Family_Assistant(DataLoader):
     def __init__(self, **kwargs):
         super(Family_Assistant, self).__init__(**kwargs)
-        self.data_path = self.root_dir + '/dataset/Family_Assistant.20170307.haslengthfilter.interval=5min.session/part-v002-o000-r-00000'
+        self.annotated_data_path = self.root_dir + '/dataset/Family_Assistant.20170306.interval=5min.session/In Progress - Family_Assistant.N=1000.sampled.csv  - Family_Assistant.N=1000.sampled.csv'
+
+        self.data_path = self.root_dir + '/dataset/Family_Assistant.20170306.interval=5min.session/part-v002-o000-r-00000'
         self.name = self.__class__.__name__
 
     def is_valid(self, session):
@@ -276,16 +392,146 @@ class DSTC1(DataLoader):
         super(DSTC1, self).__init__(**kwargs)
         self.data_path = self.root_dir + '/dataset/DSTC1/'
 
+    def is_valid(self, session):
+        count_trash_utterance = 0
+
+        for u in session:
+            if u.direction == 'user_to_sb' and u.msg_text.strip()=='NON_UNDERSTANDABLE':
+                count_trash_utterance += 1
+            if u.msg_text.strip() == '':
+                count_trash_utterance += 1
+
+        if len(session) < 4:
+            return False
+
+        if count_trash_utterance > 1:
+            return False
+
+        return True
+
+    def filter_invalid_sessions(self):
+        new_session_list = []
+
+        for session_number, session in enumerate(self.session_list):
+            # session = filter_on_board_utterances(BOT_NAME, session)
+            if not self.is_valid(session):
+                continue
+            new_session_list.append(session)
+
+        self.session_list = new_session_list
+
 class DSTC2(DataLoader):
     def __init__(self, **kwargs):
         super(DSTC2, self).__init__(**kwargs)
-        self.data_path = self.root_dir + '/dataset/DSTC2/'
+        self.annotated_data_path = self.root_dir + '/dataset/DSTC2/In progress - DSTC2.N=1000.sampled.csv  - DSTC2.N=1000.sampled.csv'
 
+        self.data_path = self.root_dir + '/dataset/DSTC2/'
 
 class DSTC3(DataLoader):
     def __init__(self, **kwargs):
         super(DSTC3, self).__init__(**kwargs)
         self.data_path = self.root_dir + '/dataset/DSTC3_test/'
+
+class GHOME(DataLoader):
+    def __init__(self, **kwargs):
+        super(GHOME, self).__init__(**kwargs)
+        self.annotated_data_path = self.root_dir + '/dataset/GHome/In Progress  - (1 of 2) 500 GHOME.N=1000.sampled.csv - GHOME.N=1000.sampled.csv'
+
+        self.raw_data_path = self.root_dir + '/dataset/GHome/raw-dialogue.csv'
+        # self.data_path = self.root_dir + '/dataset/GHome/sorted-dialogue.csv'
+        self.data_path = self.root_dir + '/dataset/GHome/GHome-Utterances-All-with-Tags-Chronological.csv'
+        self.need_sort = False
+
+        if self.need_sort:
+            turns_dict = {}
+            in_csv = open(self.raw_data_path, 'r')
+            out_csv = open(self.data_path, 'w')
+
+            current_user = None
+            current_time = None
+            current_session = None
+            cache = []
+
+            for row_num, row_str in enumerate(in_csv):
+                row_csv = list(csv.reader([row_str]))[0]
+
+                if row_num == 0:
+                    header = row_csv
+                    out_csv.write(row_str)
+                    continue
+                row = {}
+                for c_idx, c_name in enumerate(header):
+                    row[c_name] = row_csv[c_idx]
+
+                if row['user'] != current_user or row['datetime'] != current_time or row['session'] != current_session:
+                    # for str_ in cache[::-1]:
+                    for str_ in cache:
+                        out_csv.write(str_)
+                    cache = [row_str]
+                    current_user = row['user']
+                    current_time = row['datetime']
+                    current_session = row['session']
+                else:
+                    cache.append(row_str)
+
+            for str_ in cache:
+                out_csv.write(str_)
+            in_csv.close()
+            out_csv.close()
+
+    def load_(self):
+        session_dict = {}
+        count = 0
+        with open(self.data_path, 'r') as f_:
+            data_csv = csv.reader(f_)
+
+            for row_num, row_csv in enumerate(data_csv):
+                if row_num == 0:
+                    header = row_csv
+                    continue
+
+                # if row_csv[12].strip().startswith('Location info'):
+                #     self.logger.info(row_csv)
+                #     count += 1
+
+                row = {}
+                for c_idx, c_name in enumerate(header):
+                    row[c_name] = row_csv[c_idx]
+
+                if row['r1'] == 'com.google.homeautomation': # or row['r1'] == 'Location info':
+                    for i in range(1, 6):
+                        row['r%d' % i] = row['r%d' % (i+1)]
+
+                for i in range(6, 0, -1):
+                    # find the index of last reply
+                    if row['r%d' % i].strip() != '':
+                        row['last_index'] = i
+
+                        if row['last_index'] > 1:
+                            str_ = row['r1']
+                            for j in range(2, i+1):
+                                str_ += ' '+row['r%d' % j]
+                                row['r%d' % j] = ''
+
+                            row['r1'] = str_
+                            break
+
+                session_id = '%s_%s' % (row['user'], row['session'])
+
+
+                # filter out the empty utterances
+                dialog_ = session_dict.get(session_id, self.Dialogue(session_id))
+                if row['utterance'].strip() != '':
+                    utt_ = Utterance(session_id, row['datetime'], row['user'], 'user_to_sb', row['utterance'], row['intent'], **row)
+                    dialog_.utterances.append(utt_)
+                if row['r1'].strip() != '':
+                    utt_ = Utterance(session_id, row['datetime'], row['user'], 'bot_to_sb' , row['r1'], row['intent'], **row)
+                    dialog_.utterances.append(utt_)
+
+                session_dict[session_id] = dialog_
+
+        for dialog_id, dialog in session_dict.items():
+            self.session_list.append(dialog.utterances)
 
 class Maluuba(DataLoader):
     def __init__(self, **kwargs):
@@ -330,7 +576,7 @@ class MATCH(DataLoader):
         dialogue_list = []
 
         for turn_file in os.listdir(turn_dir):
-            print(os.path.join(turn_dir, turn_file))
+            self.logger.info(os.path.join(turn_dir, turn_file))
 
             dialogue_id = turn_file[:turn_file.find('.turns.xml')]
             dialogue = self.Dialogue(dialogue_id)
@@ -373,7 +619,7 @@ class MATCH(DataLoader):
                     else:
                         segments[segment_id] = ' '
 
-                    # print('%s - %s' % (segment_id, P_segments[segment_id]))
+                    # self.logger.info('%s - %s' % (segment_id, P_segments[segment_id]))
 
             with open(os.path.join(transcript_path, dialogue_id + '.W.segments.xml'), 'r') as fp:
                 segment_W_soup = BeautifulSoup(fp)
@@ -393,7 +639,7 @@ class MATCH(DataLoader):
                     else:
                         segments[segment_id] = ' '
 
-                    # print('%s - %s' % (segment_id, W_segments[segment_id]))
+                    # self.logger.info('%s - %s' % (segment_id, W_segments[segment_id]))
 
             for u_id, turn in enumerate(turn_soup.find_all('turn')):
                 turn_id = turn['nite:id']
@@ -404,14 +650,14 @@ class MATCH(DataLoader):
                 else:
                     raise ('WHAT\'S THIS DERECTION?')
 
-                # print('*' * 30)
-                # print(turn_id)
+                # self.logger.info('*' * 30)
+                # self.logger.info(turn_id)
 
                 for child in turn.find_all('nite:child'):
                     child_href = child['href']
                     url = os.path.join(transcript_path, child_href)
                     segment_id = re.search('id\((.*?)\)', url)
-                    # print(segments[segment_id.group(1)])
+                    # self.logger.info(segments[segment_id.group(1)])
 
                     u_ = Utterance(dialogue_id , u_id, '', direction, segments[segment_id.group(1)], '')
                     dialogue.utterances.append(u_)
@@ -426,15 +672,40 @@ dstc2 = DSTC2
 dstc3 = DSTC3
 maluuba = Maluuba
 match = MATCH
+ghome = GHOME
 
-DATA_NAME = 'family'
+DATA_NAME = 'ghome'
+
 if __name__ == '__main__':
     loader = data_loader(DATA_NAME)
     loader()
-    print(len(loader.session_list))
+    loader.stats()
 
-    if DATA_NAME == 'family':
+    if DATA_NAME == 'family' or DATA_NAME == 'dstc1':
+        loader.logger.info('filtering the family dataset by removing all the invalid dialogues (short or on-boarding)')
         loader.filter_invalid_sessions()
-        print(len(loader.session_list))
 
-    loader.export_ramdom_samples(100)
+    if DATA_NAME == 'ghome':
+        loader.logger.info('*'*20 + 'Filtering short sessions and Location info' + '*'*20)
+        loader.session_list = list(filter(lambda x:len(x) > 4, loader.session_list))
+
+        def count_location_info(session):
+            count = 0
+            for utt_number, utt in enumerate(session):
+                if utt.msg_text.strip() == 'Location info':
+                    count += 1
+            return count
+
+        def count_system_response(session):
+            count = 0
+            for utt_number, utt in enumerate(session):
+                if utt.direction == 'bot_to_sb':
+                    count += 1
+            return count
+        # filter out sessions having more than 2 'Location info'
+        loader.session_list = list(filter(lambda x:count_location_info(x) < 3, loader.session_list))
+        # filter out sessions having less than 3 System Responses
+        loader.session_list = list(filter(lambda x:count_system_response(x) >= 2, loader.session_list))
+
+    loader.stats()
+    loader.export_ramdom_samples(1000)
