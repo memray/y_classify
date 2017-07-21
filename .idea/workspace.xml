@@ -1,18 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="debug sessionize family assistant">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/demo/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/demo/grid_search_text_feature_extraction.ipynb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/demo/hetero_feature_union.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/satisfaction/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/satisfaction/configuration.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/satisfaction/entry.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/satisfaction/experimenter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/satisfaction/feature_extracter.py" />
+    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="all features, ready to run">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/dstc3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/dstc3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/dstc3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/dstc3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/dstc3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/dstc3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/dstc2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/dstc2.test.numbers" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/dstc3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/dstc3.test.numbers" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/family.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/family.test.numbers" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/ghome.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/ghome.test.numbers" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/analysis/family_assistant(old).txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/analysis/family_assistant.jaccard=0.5.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/analysis/family_assistant.jaccard&gt;0.8.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/analysis/monkeypets.jaccard=0.5.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/analysis/monkeypets.jaccard&gt;0.8.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/analysis/weather.jaccard=0.5.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/analysis/weather.jaccard&gt;0.8.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/classify/feature_extractor.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/classify/parser_api.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/demo/hetero_feature_union_modified.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/build.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/examples/csamp.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/examples/lee_example.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files_to_stdout.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files_to_stdout_example.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/run_examples.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/sample.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp/setup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/corenlp/JsonPipeline.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/corenlp/PipeRunner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/corenlp/SocketServer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/util/Arr.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/util/BasicFileIO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/util/JsonUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/util/U.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/util/misc/Pair.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/util/misc/Triple.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/rcorenlp.r" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/sockwrap.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/dstc2.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/dstc2.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/family.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/family.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/ghome.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/ghome.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-152314.4_1/summary_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/dstc2.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/dstc2.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/family.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/family.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/ghome.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/ghome.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-170756.4_1.4_2/summary_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/dstc2.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/dstc2.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/family.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/family.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/ghome.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/ghome.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/prelimibary/utterance_type.20170707-181415.4_1.4_2.4_3/summary_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/dstc2.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/dstc2.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/dstc3.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/dstc3.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/family.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/family.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/ghome.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/ghome.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170714-152307.feature=[1,2,4]/summary_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/all.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/best_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/data.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/dstc2.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/dstc3.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/family.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-154111[1-4]/ghome.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/all.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/best_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/data.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/dstc2.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/dstc3.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/family.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-172623[1-5]/ghome.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/all.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/best_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/data.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/dstc2.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/dstc3.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/family.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/ghome.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/all.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/best_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/data.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/dstc2.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/dstc3.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/family.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-115224[1-7]/ghome.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/all.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/best_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/data.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/dstc2.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/dstc3.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/family.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170718-154817[1-7,8.1]/ghome.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/all.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/best_of_each_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/data.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/dstc2.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/dstc3.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/family.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-000626[1-8]/ghome.test.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-005240/data.stats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/utterance_type.20170720-223703/data.stats.csv" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dialogue/satisfaction/feature_extracter.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/satisfaction/__init__.py" afterPath="$PROJECT_DIR$/dialogue/classify/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/satisfaction/configuration.py" afterPath="$PROJECT_DIR$/dialogue/classify/configuration.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/satisfaction/entry.py" afterPath="$PROJECT_DIR$/dialogue/classify/entry.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dialogue/satisfaction/experimenter.py" afterPath="$PROJECT_DIR$/dialogue/classify/experimenter.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/event/__init__.py" afterPath="$PROJECT_DIR$/event_from_zhen/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/event/countEvent.pig" afterPath="$PROJECT_DIR$/event_from_zhen/countEvent.pig" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/event/eventudf.py" afterPath="$PROJECT_DIR$/event_from_zhen/eventudf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/presto_data_process.iml" afterPath="$PROJECT_DIR$/.idea/presto_data_process.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/analysis/parse_session.py" afterPath="$PROJECT_DIR$/dialogue/analysis/parse_session.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/data/data_loader.py" afterPath="$PROJECT_DIR$/dialogue/data/data_loader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/demo/hetero_feature_union.py" afterPath="$PROJECT_DIR$/dialogue/demo/hetero_feature_union.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,15 +172,23 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/presto_data_process$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1498440314322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
-    <SUITE FILE_PATH="coverage/presto_data_process$main.coverage" NAME="main Coverage Results" MODIFIED="1499476006062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
-    <SUITE FILE_PATH="coverage/presto_data_process$experimenter.coverage" NAME="experimenter Coverage Results" MODIFIED="1499384122315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
-    <SUITE FILE_PATH="coverage/presto_data_process$feature_extracter.coverage" NAME="feature_extracter Coverage Results" MODIFIED="1498728002651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
-    <SUITE FILE_PATH="coverage/presto_data_process$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1499471707987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
+    <SUITE FILE_PATH="coverage/presto_data_process$main.coverage" NAME="main Coverage Results" MODIFIED="1500075261947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
+    <SUITE FILE_PATH="coverage/presto_data_process$Unittests_in_sockwrap_py.coverage" NAME="Unittests in sockwrap.py Coverage Results" MODIFIED="1500257660413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp/stanford_corenlp_pywrapper" />
+    <SUITE FILE_PATH="coverage/presto_data_process$parser_api.coverage" NAME="parser_api Coverage Results" MODIFIED="1500077154608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
+    <SUITE FILE_PATH="coverage/presto_data_process$proc_text_files_to_stdout_example.coverage" NAME="proc_text_files_to_stdout_example Coverage Results" MODIFIED="1500262881296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp" />
+    <SUITE FILE_PATH="coverage/presto_data_process$parser_api__1_.coverage" NAME="parser_api (1) Coverage Results" MODIFIED="1500315512001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$feature_extracter.coverage" NAME="feature_extracter Coverage Results" MODIFIED="1499819371797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
     <SUITE FILE_PATH="coverage/presto_data_process$parse_session.coverage" NAME="parse_session Coverage Results" MODIFIED="1496352675018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
-    <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union.coverage" NAME="hetero_feature_union Coverage Results" MODIFIED="1498502095391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
-    <SUITE FILE_PATH="coverage/presto_data_process$parse_session_new.coverage" NAME="parse_session_new Coverage Results" MODIFIED="1497473026561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
+    <SUITE FILE_PATH="coverage/presto_data_process$proc_text_files.coverage" NAME="proc_text_files Coverage Results" MODIFIED="1500258204257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp" />
     <SUITE FILE_PATH="coverage/presto_data_process$dstc_analyzer.coverage" NAME="dstc_analyzer Coverage Results" MODIFIED="1496985467932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
+    <SUITE FILE_PATH="coverage/presto_data_process$feature_extractor.coverage" NAME="feature_extractor Coverage Results" MODIFIED="1500325794274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$entry.coverage" NAME="entry Coverage Results" MODIFIED="1500615421509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$experimenter.coverage" NAME="experimenter Coverage Results" MODIFIED="1499384122315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
+    <SUITE FILE_PATH="coverage/presto_data_process$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1499471707987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
+    <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union.coverage" NAME="hetero_feature_union Coverage Results" MODIFIED="1499817447220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
+    <SUITE FILE_PATH="coverage/presto_data_process$parse_session_new.coverage" NAME="parse_session_new Coverage Results" MODIFIED="1497473026561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
     <SUITE FILE_PATH="coverage/presto_data_process$Unittests_in_data_loader_py.coverage" NAME="Unittests in data_loader.py Coverage Results" MODIFIED="1497042247634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
+    <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union__1_.coverage" NAME="hetero_feature_union (1) Coverage Results" MODIFIED="1499818104427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -49,10 +206,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="entry.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogue/satisfaction/entry.py">
+        <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="192">
+              <caret line="39" column="49" lean-forward="false" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -60,46 +217,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feature_extracter.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dialogue/satisfaction/feature_extracter.py">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="138" column="68" lean-forward="false" selection-start-line="138" selection-start-column="68" selection-end-line="138" selection-end-column="68" />
-              <folding>
-                <element signature="e#24#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/feature_extraction/text.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="1260" column="15" lean-forward="true" selection-start-line="1260" selection-start-column="15" selection-end-line="1260" selection-end-column="15" />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dict_vectorizer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/feature_extraction/dict_vectorizer.py">
+      <file leaf-file-name="feature_extractor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dialogue/classify/feature_extractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="340">
+              <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipeline.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/pipeline.py">
+      <file leaf-file-name="experimenter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dialogue/classify/experimenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="765" column="15" lean-forward="true" selection-start-line="765" selection-start-column="15" selection-end-line="765" selection-end-column="15" />
+            <state relative-caret-position="2007">
+              <caret line="129" column="37" lean-forward="false" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
               <folding>
-                <element signature="e#285#320#0" expanded="true" />
+                <element signature="e#24#61#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="67" column="20" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,23 +262,9 @@
       <file leaf-file-name="data_loader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/data/data_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="417" column="24" lean-forward="false" selection-start-line="417" selection-start-column="24" selection-end-line="417" selection-end-column="24" />
-              <folding>
-                <element signature="e#24#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogue/satisfaction/configuration.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="72" column="7" lean-forward="false" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
-              <folding>
-                <element signature="e#24#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1833">
+              <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,36 +281,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>load_</find>
-      <find>csv</find>
-      <find>header</find>
-      <find>data</find>
-      <find>load</find>
-      <find>DataLoader</find>
-      <find>stats</find>
-      <find>Count</find>
-      <find>base</find>
-      <find>TextStats</find>
-      <find>feat</find>
-      <find>feature_</find>
-      <find>avg / total</find>
-      <find>accuracy</find>
-      <find>annotated_data_path</find>
-      <find>famil</find>
-      <find>feature_names</find>
-      <find>ghome</find>
-      <find>}</find>
-      <find>-</find>
-      <find>next_system_utterance_count</find>
-      <find>print</find>
-      <find>benchmark</find>
-      <find>utterance_text</find>
-      <find>4.1-ngram</find>
-      <find>self.vocabulary_</find>
-      <find>get_feature_names</find>
-      <find>Concatenate</find>
-      <find>itemgetter</find>
+      <find>raw_feature_path</find>
+      <find>raw_fea</find>
+      <find>np</find>
+      <find>dict</find>
+      <find>vocabulary_</find>
+      <find>vocab</find>
+      <find>next_user_utterance</find>
+      <find>8.2 Cosine Similarity after LDA/W2V vectorization</find>
+      <find>transformer_list</find>
+      <find>np.zer</find>
+      <find>.wv</find>
+      <find>KeyedVectors</find>
+      <find>&gt;&gt;&gt;</find>
       <find>zero</find>
+      <find>get_feature_names</find>
+      <find>get_fea</find>
+      <find>Rui</find>
+      <find>memray</find>
+      <find>get</find>
+      <find>itemgetter</find>
+      <find>_nx</find>
+      <find>avg / total</find>
+      <find>LogisticRegression</find>
+      <find>LinearSVC</find>
+      <find>X_train</find>
+      <find>f1_score</find>
+      <find>f1_score:   0.6</find>
+      <find>f1_score:   0.68</find>
+      <find>penalty</find>
+      <find>data</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -220,12 +361,27 @@
         <option value="$PROJECT_DIR$/dialogue/demo/grid_search_text_feature_extraction.ipynb" />
         <option value="$PROJECT_DIR$/dialogue/satisfaction/main.py" />
         <option value="$PROJECT_DIR$/dialogue/demo/hetero_feature_union.py" />
-        <option value="$PROJECT_DIR$/dialogue/data/data_loader.py" />
+        <option value="$PROJECT_DIR$/dialogue/satisfaction/configuration.py" />
         <option value="$PROJECT_DIR$/dialogue/satisfaction/experimenter.py" />
         <option value="$PROJECT_DIR$/dialogue/satisfaction/entry.py" />
-        <option value="$PROJECT_DIR$/dialogue/satisfaction/configuration.py" />
-        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/pipeline.py" />
         <option value="$PROJECT_DIR$/dialogue/satisfaction/feature_extracter.py" />
+        <option value="$PROJECT_DIR$/dialogue/satisfaction/parser_api.py" />
+        <option value="$PROJECT_DIR$/dialogue/stanford_corenlp/build.sh" />
+        <option value="$PROJECT_DIR$/dialogue/stanford_corenlp/stanford_corenlp_pywrapper/sockwrap.py" />
+        <option value="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/__init__.py" />
+        <option value="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/sockwrap.py" />
+        <option value="$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files_to_stdout.py" />
+        <option value="$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files_to_stdout_example.py" />
+        <option value="$PROJECT_DIR$/dialogue/classify/feature_extracter.py" />
+        <option value="$PROJECT_DIR$/dialogue/classify/parser_api.py" />
+        <option value="$PROJECT_DIR$/dialogue/data/data_loader.py" />
+        <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/pipeline.py" />
+        <option value="$PROJECT_DIR$/dialogue/classify/feature_extractor.py" />
+        <option value="$PROJECT_DIR$/dialogue/classify/configuration.py" />
+        <option value="$PROJECT_DIR$/output/utterance_type.20170720-005240/output.log" />
+        <option value="$PROJECT_DIR$/dialogue/classify/experimenter.py" />
+        <option value="$PROJECT_DIR$/dialogue/classify/entry.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -236,9 +392,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2560" />
-    <option name="width" value="2560" />
-    <option name="height" value="1440" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -271,6 +426,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dialogue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stanford_corenlp_pywrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dialogue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -286,17 +473,23 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/rmeng/Project/presto_data_process/dialogue/classify/entry.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dialogue/demo" />
       <recent name="$PROJECT_DIR$/dialogue/session" />
       <recent name="$PROJECT_DIR$/event" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dialogue/stanford_corenlp" />
+      <recent name="$PROJECT_DIR$/dialogue/satisfaction" />
       <recent name="$PROJECT_DIR$/dialogue/demo" />
       <recent name="$PROJECT_DIR$/dialogue/session" />
       <recent name="$PROJECT_DIR$/dialogue/analysis" />
-      <recent name="$PROJECT_DIR$/dialogue" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -311,97 +504,97 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.entry">
+    <configuration default="false" name="parser_api (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/satisfaction" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/classify" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="presto_data_process" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/satisfaction/entry.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/classify/parser_api.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="hetero_feature_union" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="proc_text_files_to_stdout_example" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/demo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/stanford_corenlp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="presto_data_process" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/demo/hetero_feature_union.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files_to_stdout_example.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="feature_extracter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="proc_text_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/satisfaction" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/stanford_corenlp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="presto_data_process" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/satisfaction/feature_extracter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="experimenter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="entry" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/satisfaction" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/classify" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="presto_data_process" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/satisfaction/experimenter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/classify/entry.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="configuration" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="feature_extractor" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/satisfaction" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dialogue/classify" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="presto_data_process" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/satisfaction/configuration.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/classify/feature_extractor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -479,6 +672,17 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
@@ -833,19 +1037,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.hetero_feature_union" />
-      <item index="2" class="java.lang.String" itemvalue="Python.feature_extracter" />
-      <item index="3" class="java.lang.String" itemvalue="Python.experimenter" />
-      <item index="4" class="java.lang.String" itemvalue="Python.configuration" />
+      <item index="0" class="java.lang.String" itemvalue="Python.parser_api (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.proc_text_files_to_stdout_example" />
+      <item index="2" class="java.lang.String" itemvalue="Python.proc_text_files" />
+      <item index="3" class="java.lang.String" itemvalue="Python.entry" />
+      <item index="4" class="java.lang.String" itemvalue="Python.feature_extractor" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.configuration" />
-        <item index="2" class="java.lang.String" itemvalue="Python.experimenter" />
-        <item index="3" class="java.lang.String" itemvalue="Python.feature_extracter" />
-        <item index="4" class="java.lang.String" itemvalue="Python.hetero_feature_union" />
+        <item index="0" class="java.lang.String" itemvalue="Python.entry" />
+        <item index="1" class="java.lang.String" itemvalue="Python.feature_extractor" />
+        <item index="2" class="java.lang.String" itemvalue="Python.parser_api (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.proc_text_files_to_stdout_example" />
+        <item index="4" class="java.lang.String" itemvalue="Python.proc_text_files" />
       </list>
     </recent_temporary>
   </component>
@@ -865,14 +1069,9 @@
       <workItem from="1496174219627" duration="88824000" />
       <workItem from="1497243405384" duration="23654000" />
       <workItem from="1497919002769" duration="46526000" />
-      <workItem from="1499363245127" duration="23546000" />
-    </task>
-    <task id="LOCAL-00038" summary="debug sessionize weather">
-      <created>1496302965290</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1496302965290</updated>
+      <workItem from="1499363245127" duration="32193000" />
+      <workItem from="1483229924318" duration="65606000" />
+      <workItem from="1500499303147" duration="26032000" />
     </task>
     <task id="LOCAL-00039" summary="debug sessionize weather">
       <created>1496303457903</created>
@@ -1210,7 +1409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497467793930</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="machine learning framework">
+      <created>1499476062489</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1499476062490</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1220,11 +1426,17 @@
     <history-entry file="Unittests_in_data_loader_py - 2017.06.09 at 14h 04m 07s.xml">
       <configuration name="Unittests in data_loader.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_sockwrap_py - 2017.07.16 at 19h 13m 37s.xml">
+      <configuration name="Unittests in sockwrap.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_sockwrap_py - 2017.07.16 at 19h 14m 20s.xml">
+      <configuration name="Unittests in sockwrap.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219866000" />
+    <option name="totallyTimeSpent" value="320151000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -1234,24 +1446,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50120485" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27951807" sideWeight="0.49841145" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22846715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.49841145" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16640191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30615166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15131056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45301205" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42481753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2017229" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1259,7 +1471,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1275,25 +1486,42 @@
     <MESSAGE value="debug sessionize weather" />
     <MESSAGE value="debug sessionize weather and monkey" />
     <MESSAGE value="debug sessionize family assistant" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug sessionize family assistant" />
+    <MESSAGE value="machine learning framework" />
+    <MESSAGE value="all features, ready to run" />
+    <option name="LAST_COMMIT_MESSAGE" value="all features, ready to run" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dialogue/data/data_loader.py</url>
-          <line>455</line>
-          <option name="timeStamp" value="121" />
+          <url>file://$PROJECT_DIR$/dialogue/demo/hetero_feature_union_modified.py</url>
+          <line>183</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dialogue/demo/hetero_feature_union_modified.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="188" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/dialogue/demo/hetero_feature_union.py</url>
-          <line>181</line>
-          <option name="timeStamp" value="140" />
+          <line>185</line>
+          <option name="timeStamp" value="189" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/dialogue/satisfaction/feature_extracter.py</url>
-          <line>179</line>
-          <option name="timeStamp" value="184" />
+          <url>file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/validation.py</url>
+          <line>389</line>
+          <option name="timeStamp" value="318" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/linalg/linalg.py</url>
+          <line>2183</line>
+          <option name="timeStamp" value="324" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dialogue/classify/feature_extractor.py</url>
+          <line>947</line>
+          <option name="timeStamp" value="331" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1303,182 +1531,16 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="187" />
+      <option name="time" value="335" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="union_features.get_feature_names()[-1]" language="Python" />
-        <watch expression="union_features.get_feature_names()" language="Python" />
-        <watch expression="transformer[1].steps[-1]" language="Python" />
-        <watch expression="len(union_features.get_feature_names())" language="Python" />
-        <watch expression="X" language="Python" />
-        <watch expression="self.config['X_raw']" language="Python" />
-      </configuration>
-    </watches-manager>
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/event/countEvent.pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="47" column="96" lean-forward="false" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session_weather.py" />
-    <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_weather.pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/analysis/parse_session(old).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="129" column="65" lean-forward="false" selection-start-line="129" selection-start-column="65" selection-end-line="129" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/Cython/Includes/libcpp/string.pxd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_weather.pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_monkeypets.pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event/eventudf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/sample/Family_Assistant.N=1000.sampled.csv" />
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/json/decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="354" column="0" lean-forward="false" selection-start-line="354" selection-start-column="0" selection-end-line="354" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5865">
-          <caret line="347" column="0" lean-forward="false" selection-start-line="347" selection-start-column="0" selection-end-line="347" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/xml/etree/ElementPath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/bs4/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="316" column="0" lean-forward="false" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/analysis/dstc_analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2427">
-          <caret line="186" column="41" lean-forward="false" selection-start-line="186" selection-start-column="41" selection-end-line="186" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session_family_assistant(old).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_family_assistant(old).pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="55" column="212" lean-forward="true" selection-start-line="55" selection-start-column="195" selection-end-line="55" selection-end-column="212" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/analysis/parse_session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="382" column="65" lean-forward="false" selection-start-line="382" selection-start-column="65" selection-end-line="382" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_check_count.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="80" column="49" lean-forward="false" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/GHome/raw-dialogue.csv.new.csv" />
-    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2017.1/python_stubs/-952534906/_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="99" column="10" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/check_count_family_assistant.pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="71" column="56" lean-forward="false" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/udf_session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/sessionize_family_assistant.pig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="65" column="16" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/satisfaction/__init__.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp/sample.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1486,225 +1548,402 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/session/__init__.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/demo/grid_search_text_feature_extraction.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/pickle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="1574" column="17" lean-forward="false" selection-start-line="1574" selection-start-column="17" selection-end-line="1574" selection-end-column="17" />
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/pydevd.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="1017" column="0" lean-forward="false" selection-start-line="1017" selection-start-column="0" selection-end-line="1017" selection-end-column="0" />
-          <folding>
-            <marker date="1497243392000" expanded="true" signature="53224:53419" ph="..." />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/scipy/sparse/base.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files_to_stdout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="232" column="0" lean-forward="false" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/svm/base.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/sockwrap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="484" column="0" lean-forward="false" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2017.1/python_stubs/-952534906/builtins.py">
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="2789" column="23" lean-forward="false" selection-start-line="2789" selection-start-column="23" selection-end-line="2789" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/demo/hetero_feature_union.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="147" column="37" lean-forward="false" selection-start-line="147" selection-start-column="37" selection-end-line="147" selection-end-column="37" />
-          <folding>
-            <element signature="e#1087#1124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="499" column="27" lean-forward="false" selection-start-line="499" selection-start-column="27" selection-end-line="499" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="694" column="4" lean-forward="false" selection-start-line="694" selection-start-column="4" selection-end-line="694" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/metrics/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="274" column="12" lean-forward="false" selection-start-line="274" selection-start-column="12" selection-end-line="274" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/collections/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="521" column="40" lean-forward="false" selection-start-line="521" selection-start-column="40" selection-end-line="521" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2017.1/python_stubs/-952534906/numpy/core/multiarray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="2412" column="55" lean-forward="false" selection-start-line="2412" selection-start-column="55" selection-end-line="2412" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/numeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="381" column="22" lean-forward="true" selection-start-line="381" selection-start-column="22" selection-end-line="381" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/satisfaction/experimenter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="209" column="13" lean-forward="true" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
-          <folding>
-            <element signature="e#24#61#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/satisfaction/configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="72" column="7" lean-forward="false" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/data/data_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="417" column="24" lean-forward="false" selection-start-line="417" selection-start-column="24" selection-end-line="417" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/leven/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="37" />
+        <state relative-caret-position="288">
+          <caret line="1053" column="0" lean-forward="false" selection-start-line="1053" selection-start-column="0" selection-end-line="1053" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="225">
           <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/satisfaction/entry.py">
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/python/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="473">
+          <caret line="1590" column="0" lean-forward="false" selection-start-line="1590" selection-start-column="0" selection-end-line="1590" selection-end-column="0" />
           <folding>
-            <element signature="e#24#61#0" expanded="true" />
+            <marker date="1497243392000" expanded="true" signature="53224:53419" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/operator.py">
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/records.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="272" column="8" lean-forward="false" selection-start-line="272" selection-start-column="8" selection-end-line="272" selection-end-column="8" />
+        <state relative-caret-position="320">
+          <caret line="509" column="0" lean-forward="false" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp/proc_text_files_to_stdout_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/requests/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="849" column="0" lean-forward="false" selection-start-line="849" selection-start-column="0" selection-end-line="849" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/parser_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="207" column="70" lean-forward="true" selection-start-line="207" selection-start-column="70" selection-end-line="207" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2017.1/python_stubs/-952534906/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="4311" column="8" lean-forward="false" selection-start-line="4311" selection-start-column="8" selection-end-line="4311" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.20170717-153722/all.test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/all.test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="78" lean-forward="false" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.20170717-173829[1-6]/best_of_each_dataset.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/gensim/corpora/mmcorpus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/gensim/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2646">
+          <caret line="253" column="8" lean-forward="false" selection-start-line="253" selection-start-column="8" selection-end-line="253" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="631">
+          <caret line="512" column="20" lean-forward="true" selection-start-line="512" selection-start-column="20" selection-end-line="512" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/gensim/models/keyedvectors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/dill/dill.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="194" column="4" lean-forward="false" selection-start-line="194" selection-start-column="4" selection-end-line="194" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/pickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="495" column="0" lean-forward="false" selection-start-line="495" selection-start-column="0" selection-end-line="495" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/metrics/pairwise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/utils/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="389" column="0" lean-forward="false" selection-start-line="389" selection-start-column="0" selection-end-line="389" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2017.1/python_stubs/-952534906/numpy/core/multiarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="836" column="37" lean-forward="false" selection-start-line="836" selection-start-column="37" selection-end-line="836" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/linalg/linalg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="2166" column="27" lean-forward="false" selection-start-line="2166" selection-start-column="27" selection-end-line="2166" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="765" column="15" lean-forward="true" selection-start-line="765" selection-start-column="15" selection-end-line="765" selection-end-column="15" />
+        <state relative-caret-position="391">
+          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding>
-            <element signature="e#285#320#0" expanded="true" />
+            <element signature="e#285#320#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/feature_extraction/dict_vectorizer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        <state relative-caret-position="85">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/feature_extraction/text.py">
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="1260" column="15" lean-forward="true" selection-start-line="1260" selection-start-column="15" selection-end-line="1260" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/satisfaction/feature_extracter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="138" column="68" lean-forward="false" selection-start-line="138" selection-start-column="68" selection-end-line="138" selection-end-column="68" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#24#42#0" expanded="true" />
+            <element signature="e#0#64#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2017.1/python_stubs/-952534906/numpy/core/umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="2591" column="4" lean-forward="false" selection-start-line="2591" selection-start-column="4" selection-end-line="2591" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/lib/type_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="396" column="36" lean-forward="false" selection-start-line="396" selection-start-column="36" selection-end-line="396" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.20170719-230656/output.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="949">
+          <caret line="97" column="63" lean-forward="false" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/linear_model/ridge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="721" column="19" lean-forward="false" selection-start-line="721" selection-start-column="19" selection-end-line="721" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/svm/classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="568" column="0" lean-forward="true" selection-start-line="568" selection-start-column="0" selection-end-line="568" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/preprocessing/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.20170720-000626/all.test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.20170720-000626/data.stats.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.20170720-000626/dstc2.test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.20170720-005240/output.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7816">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/linear_model/logistic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1697">
+          <caret line="978" column="0" lean-forward="false" selection-start-line="978" selection-start-column="0" selection-end-line="983" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="67" column="20" lean-forward="false" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/data/data_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1833">
+          <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper/javasrc/util/misc/Triple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="58" column="11" lean-forward="false" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/experimenter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2007">
+          <caret line="129" column="37" lean-forward="false" selection-start-line="129" selection-start-column="37" selection-end-line="129" selection-end-column="37" />
+          <folding>
+            <element signature="e#24#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="39" column="49" lean-forward="false" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+          <folding>
+            <element signature="e#24#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/feature_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -15,6 +15,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
 from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.linear_model import RidgeClassifier
+from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC, SVC
 from sklearn.linear_model import SGDClassifier
@@ -116,7 +117,7 @@ class Experimenter():
                 train_idx = []
                 test_idx = []
                 for i in range(self.config['#cross_validation']):
-                    train_ = np.random.choice(num_data, int(0.8 * num_data))
+                    train_ = np.random.choice(num_data, int(0.9 * num_data))
                     train_set = set(train_)
                     test_  = np.asarray([i for i in range(num_data) if i not in train_set])
                     train_idx.append(train_)
@@ -126,7 +127,8 @@ class Experimenter():
 
         cv_results = []
         global X_train, Y_train, X_test, Y_test
-        for train_id, test_id in zip(train_idx, test_idx):
+        for r_id, (train_id, test_id) in enumerate(zip(train_idx, test_idx)):
+            self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
             X_train = X[train_id]
             Y_train = Y[train_id]
             X_test  = X[test_id]
@@ -153,43 +155,44 @@ class Experimenter():
         # Y_test  = Y[int(0.8 * num_data):]
 
         results = []
-        # for clf, name in (
-        #         (RidgeClassifier(tol=1e-2, solver="lsqr"), "Ridge Classifier"),
-        #         (Perceptron(n_iter=50), "Perceptron"),
-        #         (PassiveAggressiveClassifier(n_iter=50), "Passive-Aggressive"),
-        #         (KNeighborsClassifier(n_neighbors=10), "kNN"),
-        #         (RandomForestClassifier(n_estimators=100), "Random forest")):
-        #     self.logger.info('=' * 80)
-        #     self.logger.info(name)
-        #     results.append(self.benchmark(clf))
+        for clf, name in (
+                (RidgeClassifier(tol=1e-2, solver="lsqr"), "Ridge Classifier"),
+                (Perceptron(n_iter=50), "Perceptron"),
+                (PassiveAggressiveClassifier(n_iter=50), "Passive-Aggressive"),
+                (KNeighborsClassifier(n_neighbors=10), "kNN"),
+                (RandomForestClassifier(n_estimators=100), "Random forest")):
+            self.logger.info('=' * 80)
+            self.logger.info(name)
+            results.append(self.benchmark(name, clf))
 
         for penalty in ["l2", "l1"]:
             self.logger.info('=' * 80)
             self.logger.info("%s penalty" % penalty.upper())
+
             # Train Liblinear model
             results.append(self.benchmark('LinearSVC.loss=l2.penalty=%s' % penalty, LinearSVC(loss='l2', penalty=penalty,
                                                dual=False, tol=1e-3)))
 
             # Train SGD model
-            results.append(self.benchmark('SGDClassifier.penalty=%s' % penalty, SGDClassifier(alpha=.0001, n_iter=50,
-                                                   penalty=penalty)))
+            # results.append(self.benchmark('SGDClassifier.penalty=%s' % penalty, SGDClassifier(alpha=.0001, n_iter=50,
+            #                                        penalty=penalty)))
 
         # Train SGD with Elastic Net penalty
-        self.logger.info('=' * 80)
-        self.logger.info("Elastic-Net penalty")
-        results.append(self.benchmark('SGDClassifier.penalty=%s' % 'elasticnet', SGDClassifier(alpha=.0001, n_iter=50,
-                                               penalty="elasticnet")))
+        # self.logger.info('=' * 80)
+        # self.logger.info("Elastic-Net penalty")
+        # results.append(self.benchmark('SGDClassifier.penalty=%s' % 'elasticnet', SGDClassifier(alpha=.0001, n_iter=50,
+        #                                        penalty="elasticnet")))
 
         # Train NearestCentroid without threshold
-        self.logger.info('=' * 80)
-        self.logger.info("NearestCentroid (aka Rocchio classifier)")
-        results.append(self.benchmark('NearestCentroid', NearestCentroid()))
+        # self.logger.info('=' * 80)
+        # self.logger.info("NearestCentroid (aka Rocchio classifier)")
+        # results.append(self.benchmark('NearestCentroid', NearestCentroid()))
 
         # Train sparse Naive Bayes classifiers
-        self.logger.info('=' * 80)
-        self.logger.info("Naive Bayes")
-        results.append(self.benchmark('MultinomialNB', MultinomialNB(alpha=.01)))
-        results.append(self.benchmark('BernoulliNB', BernoulliNB(alpha=.01)))
+        # self.logger.info('=' * 80)
+        # self.logger.info("Naive Bayes")
+        # results.append(self.benchmark('MultinomialNB', MultinomialNB(alpha=.01)))
+        # results.append(self.benchmark('BernoulliNB', BernoulliNB(alpha=.01)))
 
         self.logger.info('=' * 80)
         self.logger.info("LinearSVC with L1-based feature selection")
@@ -200,7 +203,17 @@ class Experimenter():
             ('classification', LinearSVC())
         ])))
 
-        for C in [1, 5, 10]:
+        for C in [0.1, 1, 10]:
+            self.logger.info('=' * 80)
+            self.logger.info("Logistic Regression with penalty=l1, C=%f" % C)
+            # Train Logistic Regression model
+            results.append(self.benchmark('Logistic Regression Classifier.penalty=l1.C=%s' % C, LogisticRegression(solver="liblinear", penalty='l1', C=C)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("Logistic Regression with penalty=l2, C=%f" % C)
+            # Train Logistic Regression model
+            results.append(self.benchmark('Logistic Regression Classifier.penalty=l2.C=%s' % C, LogisticRegression(solver="liblinear", penalty='l2', C=C)))
+
             self.logger.info('=' * 80)
             self.logger.info("RBF SVC with C=%f" % C)
             results.append(self.benchmark('RBF SVC with C=%f' % C, SVC(C=C, cache_size=200, class_weight=None,
@@ -213,8 +226,14 @@ class Experimenter():
 
     @staticmethod
     def export_summary(results, csv_path):
-        with open(csv_path, 'w') as csv_file:
-            csv_file.write(','.join(['model', 'accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time'])+'\n')
+        if not os.path.exists(csv_path):
+            print_header = True
+        else:
+            print_header = False
+
+        with open(csv_path, 'a') as csv_file:
+            if print_header:
+                csv_file.write(','.join(['dataset', 'model', 'accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time'])+'\n')
             for result in results:
                 csv_file.write(','.join([str(r) for r in result])+'\n')
 
@@ -230,17 +249,17 @@ class Experimenter():
 
         avg_results = []
         for clf_name, clf_scores in score_dict.items():
-            avg_score = np.average(np.asarray(clf_scores).reshape((6,len(clf_scores)/6), order='F'), axis=1)
-            r = [clf_name]
+            avg_score = np.average(np.asarray(clf_scores).reshape((6, int(len(clf_scores)/6)), order='F'), axis=1)
+            r = [self.config.param['data_name'], clf_name]
             r.extend(avg_score)
             avg_results.append(r)
 
         # make some plots
         indices = np.arange(len(avg_results))
         # transpose the result matrix
-        t_results = [[x[i] for x in avg_results] for i in range(7)]
+        t_results = [[x[i] for x in avg_results] for i in range(len(avg_results[0]))]
 
-        clf_names, accuracy, precision_score, recall_score, f1_score, training_time, test_time = t_results
+        dataset_names, clf_names, accuracy, precision_score, recall_score, f1_score, training_time, test_time = t_results
         training_time = np.array(training_time) / np.max(training_time)
         test_time = np.array(test_time) / np.max(test_time)
 
@@ -262,6 +281,7 @@ class Experimenter():
 
         # plt.show()
         plt.savefig(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.jpg'))
-        self.export_summary(avg_results, os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.csv'))
+        self.export_summary(avg_results, os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.csv'))
+        self.export_summary(avg_results, os.path.join(self.config.param['experiment_path'], 'all.test.csv'))
 
         return avg_results

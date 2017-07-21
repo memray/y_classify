@@ -138,11 +138,11 @@ pipeline = Pipeline([
             ])),
 
             # Pipeline for standard bag-of-words model for body
-            # ('body_bow', Pipeline([
-            #     ('selector', ItemSelector(key='body')),
-            #     ('tfidf', TfidfVectorizer()),
-            #     ('best', TruncatedSVD(n_components=50)),
-            # ])),
+            ('body_bow', Pipeline([
+                ('selector', ItemSelector(key='body')),
+                ('tfidf', TfidfVectorizer()),
+                ('best', TruncatedSVD(n_components=50)),
+            ])),
 
             # Pipeline for pulling ad hoc features from post's body
             ('body_stats', Pipeline([
@@ -162,7 +162,7 @@ pipeline = Pipeline([
     )),
 
     # Use a SVC classifier on the combined features
-    # ('svc', SVC(kernel='linear')),
+    ('svc', SVC(kernel='linear')),
 ])
 
 # limit the list of categories to make running this example faster.
@@ -176,14 +176,11 @@ test = fetch_20newsgroups(random_state=1,
                           categories=categories,
                           )
 
+subject_body_extractor = SubjectBodyExtractor()
+train_subject_body = subject_body_extractor.fit_transform(train.data)
+body_selector = ItemSelector(key='body')
+train_body = body_selector.fit_transform(train.data)
+
 pipeline.fit(train.data, train.target)
-union_features = pipeline.steps[-1][-1]
-
-for transformer in union_features.transformer_list:
-    if transformer[1].__class__.__name__ == 'Pipeline':
-        transformer[1].vocabulary_ = transformer[1].steps[-1][1].vocabulary_
-
-union_features.get_feature_names()
-
 y = pipeline.predict(test.data)
 print(classification_report(y, test.target))

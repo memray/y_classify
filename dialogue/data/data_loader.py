@@ -4,6 +4,7 @@ import json
 import pickle
 import random
 
+import dill
 import numpy as np
 import six
 import os
@@ -38,6 +39,30 @@ def data_loader(identifier, kwargs=None):
                                   kwargs=kwargs)
     return data_loader
 
+
+def deserialize_from_file(path):
+    f = open(path, 'rb')
+    obj = pickle.load(f)
+    f.close()
+    return obj
+
+def serialize_to_file(obj, path, protocol=pickle.HIGHEST_PROTOCOL):
+    print('serialize to %s' % path)
+    f = open(path, 'wb')
+    pickle.dump(obj, f, protocol=protocol)
+    f.close()
+
+def deserialize_from_file_by_dill(path):
+    f = open(path, 'rb')
+    obj = dill.load(f)
+    f.close()
+    return obj
+
+def serialize_to_file_by_dill(obj, path):
+    print('serialize to %s' % path)
+    f = open(path, 'wb')
+    dill.dump(obj, f)
+    f.close()
 
 class Utterance():
     def __init__(self, session_id , time, userid, direction, text, botlog=None, **kwargs):
@@ -144,7 +169,7 @@ class DataLoader(object):
         :return: a list of dialogues
         '''
         if not os.path.exists(self.annotated_data_path):
-            raise 'annotated file does not exist: %s' % self.annotated_data_path
+            raise Exception('annotated file does not exist: %s' % self.annotated_data_path)
 
         dialogue_dict = {}
         with open(self.annotated_data_path, 'r') as annotated_csv:
@@ -164,19 +189,20 @@ class DataLoader(object):
                 session_id = row['conversation #'] # there is something wrong with the session_id in Family_Assistant
                 dialogue = dialogue_dict.get(session_id, self.Dialogue(session_id))
 
-                utt_ = Utterance(session_id, row['time'], row['userid'], row['direction'], row['msg_text'], '')
+                utt_ = Utterance(session_id, row['time'], row['userid'], row['direction'], row['msg_text'].strip(' []"'), '')
 
+                # put all the other fields into utt_
                 for (k,v) in row.items():
                     setattr(utt_, k, v.strip())
 
                 if utt_.direction == 'user_to_sb':
                     utt_.type = utt_.Annotation.strip()
                     # 'Corrented_by_bot' is removed in the latest update
-                    if hasattr(utt_, 'Corrected_by_bot') and utt_.Corrected_by_bot != '':
-                        utt_.type = 'CC'
+                    # if hasattr(utt_, 'Corrected_by_bot') and utt_.Corrected_by_bot != '':
+                    #     utt_.type = 'CC'
                     # (temporary) overwrite the annotation with Rui's correction
-                    if hasattr(utt_, 'Corrected by Rui') and getattr(utt_, 'Corrected by Rui') != '':
-                        utt_.type = getattr(utt_, 'Corrected by Rui').strip()
+                    if hasattr(utt_, 'Rui\'s Correction') and getattr(utt_, 'Rui\'s Correction') != '':
+                        utt_.type = getattr(utt_, 'Rui\'s Correction').strip()
 
                 # merge the multiple 'bot_to_sb' messages to one
                 if utt_.direction == 'bot_to_sb' and len(dialogue) > 0 and dialogue.utterances[-1].direction == 'bot_to_sb':
@@ -207,13 +233,25 @@ class DataLoader(object):
         '''
         stats of annotated data
         '''
-        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.stats.csv'), 'w') as csv_file:
-            csv_file.write('Type, #(Utterance)'+'\n')
+        if not os.path.exists(os.path.join(self.config.param['experiment_path'], 'data.stats.csv')):
+            print_header = True
+        else:
+            print_header = False
 
-            labels = np.concatenate([[u_.type for u_ in s if u_.direction == 'user_to_sb' and u_.type in self.config.param['valid_type']] for s in self.annoteted_list]).ravel()
-            for l,c in Counter(labels).items():
-                csv_file.write(','.join([str(l), str(c)])+'\n')
-            csv_file.write(','.join(['Total', str(len(labels))])+'\n')
+        types = list(['F', 'C', 'R', 'N', 'CC', 'A', 'Chitchat', 'G', 'O', 'Total'])
+        type_set = list(['F', 'C', 'R', 'N', 'CC', 'A', 'Chitchat', 'G', 'O', 'Total'])
+        labels          = np.concatenate([[u_.type for u_ in s if u_.direction == 'user_to_sb' and u_.type in type_set] for s in self.annoteted_list]).ravel()
+        counter = Counter(labels)
+        counter['Total'] = len(labels)
+        label_values    = [str(counter[l]) for l in types]
+
+        with open(os.path.join(self.config.param['experiment_path'], 'data.stats.csv'), 'a') as csv_file:
+
+            if print_header:
+                csv_file.write('Dataset,' + ','.join(types)+'\n')
+
+            csv_file.write(self.config.param['data_name'] + ',' + ','.join(label_values)+'\n')
+
         # if len(self.annoteted_list) > 0 :
         #     logger.info('*' * 20 + ' Annotated Data '+ '*' * 20 )
         #     labels = np.concatenate([[u_.type for u_ in s if u_.direction == 'user_to_sb'] for s in self.annoteted_list]).ravel()
@@ -346,9 +384,9 @@ class DataLoader(object):
 class Family_Assistant(DataLoader):
     def __init__(self, **kwargs):
         super(Family_Assistant, self).__init__(**kwargs)
-        self.annotated_data_path = self.root_dir + '/dataset/Family_Assistant.20170306.interval=5min.session/In Progress - Family_Assistant.N=1000.sampled.csv  - Family_Assistant.N=1000.sampled.csv'
+        self.annotated_data_path = os.path.join(self.root_dir, 'dataset', 'editorial_annotations', 'done', 'Done-Family_Assistant.N=1000.sampled.csv')
 
-        self.data_path = self.root_dir + '/dataset/Family_Assistant.20170306.interval=5min.session/part-v002-o000-r-00000'
+        self.data_path = os.path.join(self.root_dir, 'dataset', 'raw_datasets', 'Family_Assistant.20170306.interval=5min.session', 'part-v002-o000-r-00000')
         self.name = self.__class__.__name__
 
     def is_valid(self, session):
@@ -384,13 +422,13 @@ class Family_Assistant(DataLoader):
 class Yahoo_Weather(DataLoader):
     def __init__(self, **kwargs):
         super(Yahoo_Weather, self).__init__(**kwargs)
-        self.data_path = self.root_dir + '/dataset/Weather.interval=5min.session/part-v002-o000-r-00000'
+        self.data_path = os.path.join(self.root_dir, 'dataset', 'raw_datasets', 'Weather.interval=5min.session', 'part-v002-o000-r-00000')
         self.name = self.__class__.__name__
 
 class DSTC1(DataLoader):
     def __init__(self, **kwargs):
         super(DSTC1, self).__init__(**kwargs)
-        self.data_path = self.root_dir + '/dataset/DSTC1/'
+        self.data_path = os.path.join(self.root_dir, 'dataset', 'raw_datasets', 'DSTC1')
 
     def is_valid(self, session):
         count_trash_utterance = 0
@@ -423,23 +461,23 @@ class DSTC1(DataLoader):
 class DSTC2(DataLoader):
     def __init__(self, **kwargs):
         super(DSTC2, self).__init__(**kwargs)
-        self.annotated_data_path = self.root_dir + '/dataset/DSTC2/In progress - DSTC2.N=1000.sampled.csv  - DSTC2.N=1000.sampled.csv'
-
-        self.data_path = self.root_dir + '/dataset/DSTC2/'
+        self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'done', 'Done-DSTC2.N=1000.sampled.csv')
+        self.data_path = os.path.join(self.root_dir, 'dataset', 'raw_datasets', 'DSTC2')
 
 class DSTC3(DataLoader):
     def __init__(self, **kwargs):
         super(DSTC3, self).__init__(**kwargs)
-        self.data_path = self.root_dir + '/dataset/DSTC3_test/'
+        self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'done', 'Done-Merged.DSTC3.N=1000.sampled.csv')
+        self.data_path = os.path.join(self.root_dir, 'dataset', 'raw_datasets', 'DSTC3_test')
 
 class GHOME(DataLoader):
     def __init__(self, **kwargs):
         super(GHOME, self).__init__(**kwargs)
-        self.annotated_data_path = self.root_dir + '/dataset/GHome/In Progress  - (1 of 2) 500 GHOME.N=1000.sampled.csv - GHOME.N=1000.sampled.csv'
+        self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'done', 'Done-Merged.GHOME.N=1000.sampled.csv')
 
         self.raw_data_path = self.root_dir + '/dataset/GHome/raw-dialogue.csv'
         # self.data_path = self.root_dir + '/dataset/GHome/sorted-dialogue.csv'
-        self.data_path = self.root_dir + '/dataset/GHome/GHome-Utterances-All-with-Tags-Chronological.csv'
+        self.data_path = os.path.join(self.root_dir, 'dataset', 'raw_datasets', 'GHome', 'GHome-Utterances-All-with-Tags-Chronological.csv')
         self.need_sort = False
 
         if self.need_sort:
