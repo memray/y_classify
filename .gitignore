@@ -1,9 +1,17 @@
 # add by Rui Meng
 dialogue/analysis/*
-dataset/
+
+# make the cross_validation fold gitable
+dataset/editorial_annotations/
+dataset/feature/
+dataset/raw_datasets/
+dataset/sample/
+
 dataset_backup/
 data_for_analysis/
 .idea/
+dataset.tar.gz
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -94,4 +102,3 @@ ENV/
 
 # Rope project settings
 .ropeproject
-dataset.tar.gz
