@@ -39,18 +39,29 @@ if __name__ == '__main__':
         X_raw, Y                = extractor.split_to_instances(annotated_sessions)
         X                       = extractor.extract()
 
+        '''
+        the 1st version is scaled to zero-mean and uni-variance
+        now it's scaled with MinMaxScaler to make feature values non-negative
+        '''
         X                       = np.nan_to_num(X.todense())
         X_scaled                = preprocessing.scale(X)
+        # min_max_scaler = preprocessing.MinMaxScaler()
+        # X_scaled = min_max_scaler.fit_transform(X)
         X_clear                 = np.nan_to_num(X_scaled)
         # print("Checkinf for NaN and Inf")
         # print("np.inf=", np.where(np.isnan(X)))
         # print("is.inf=", np.where(np.isinf(X)))
         # print("np.max=", np.max(abs(X)))
 
-        result                  = exp.run_cross_validation(X_clear, Y)
+        if config['experiment_mode'] == 'feature_selection':
+            result                  = exp.run_cross_validation_with_feature_selection(X_clear, Y)
+        elif config['experiment_mode'] == 'leave_one_out':
+            result                  = exp.run_cross_validation_with_leave_one_out(X_clear, Y)
+        else:
+            result                  = exp.run_cross_validation(X_clear, Y)
 
-        # find the best classifier (with best F1-score)
-        result = result[np.asarray(result).T[4].argmax()]
-        best_results[data_name] = result
+            # find the best classifier (with best F1-score)
+            result = result[np.asarray(result).T[4].argmax()]
+            best_results[data_name] = result
 
     exp.export_summary(best_results.values(), os.path.join(config.param['experiment_path'], 'best_of_each_dataset.csv'))

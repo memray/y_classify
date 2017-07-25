@@ -53,7 +53,10 @@ def load_config():
 
     param['task_name']       = 'utterance_type'
     param['timemark']        = time.strftime('%Y%m%d-%H%M%S', time.localtime(time.time()))
-    param['experiment_name'] = '.'.join([param['task_name'], param['timemark']])
+
+    param['experiment_mode'] = ['normal', 'feature_selection', 'leave_one_out'][0]
+
+    param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
     param['experiment_path'] = os.path.join(param['root_path'], 'output', param['experiment_name'])
 
     if not os.path.exists(param['experiment_path']):
@@ -76,7 +79,8 @@ def load_config():
     cross-validation
     '''
     param['do_cross_validation'] = True
-    param['#cross_validation'] = 10
+    param['#division'] = 1    # number of random divisions, set to 1 in preliminary experimentss
+    param['#cross_validation'] = 5 # number of folds
     param['cv_index_cache_path'] = '' # the path is set in experimenter.py line 109 because it depends on the dataset name
 
     '''
