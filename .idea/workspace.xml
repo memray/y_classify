@@ -2,353 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="Merge branch 'master' of https://github.com/memray/y_classify&#10;Add keep-one-only&#10;some testing experiments&#10;ready for final experiments&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=1.#feature=97.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=10.#feature=969.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=100.#feature=9684.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=20.#feature=1936.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=40.#feature=3874.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=5.#feature=484.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=60.#feature=5810.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=80.#feature=7747.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.model=Random forest.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=1.#feature=133.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=10.#feature=1327.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=100.#feature=13278.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=20.#feature=2655.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=40.#feature=5311.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=5.#feature=664.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=60.#feature=7966.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=80.#feature=10622.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.model=Random forest.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=1.#feature=492.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=10.#feature=4921.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=100.#feature=49219.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=20.#feature=9844.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=40.#feature=19688.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=5.#feature=2460.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=60.#feature=29531.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=80.#feature=39375.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.model=Random forest.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=1.#feature=382.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=10.#feature=3825.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=100.#feature=38250.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=20.#feature=7650.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=40.#feature=15300.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=5.#feature=1913.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=60.#feature=22950.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=80.#feature=30600.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.model=Random forest.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=0.all.#=9684.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=1.utt_len.#=9681.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=2.user_act.#=9631.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=3.time.#=9679.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=4.n-gram.#=4497.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=5.phrasal.#=7259.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=7.syntactic.#=8726.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=8.semantic.#=8631.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.model=Random forest.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=0.all.#=13278.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=1.utt_len.#=13275.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=2.user_act.#=13227.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=3.time.#=13273.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=4.n-gram.#=5414.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=5.phrasal.#=10182.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=7.syntactic.#=12072.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=8.semantic.#=12225.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.model=Random forest.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/family.leave-out-features=0.all.#=49219.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/family.leave-out-features=1.utt_len.#=49216.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/family.leave-out-features=2.user_act.#=49162.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/family.leave-out-features=3.time.#=49214.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=0.all.#=38250.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=1.utt_len.#=38247.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=2.user_act.#=38163.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=3.time.#=38245.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=4.n-gram.#=25331.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=5.phrasal.#=19364.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=7.syntactic.#=32953.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=8.semantic.#=37197.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.model=Random forest.feature_selection.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=2.user_act.#=53.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=4.n-gram.#=5187.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=5.phrasal.#=2425.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=7.syntactic.#=958.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=8.semantic.#=1053.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.model=LR.pen=l1.C=1.keep_one_only.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.model=LinearSVC.pen=l1.C=1.keep_one_only.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.model=Random forest.keep_one_only.plot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc3.keeo-one-only=2.user_act.#=51.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/all.test.numbers" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc2.test.numbers" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc3.test.numbers" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/family.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/family.test.numbers" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/ghome.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/ghome.test.numbers" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/all.test.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/best_of_each_dataset.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/data.stats.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=1.#feature=97.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=10.#feature=969.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=100.#feature=9684.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=20.#feature=1936.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=40.#feature=3874.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=5.#feature=484.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=60.#feature=5810.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc2.#percent=80.#feature=7747.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=1.#feature=133.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=10.#feature=1327.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=100.#feature=13278.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=20.#feature=2655.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=40.#feature=5311.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=5.#feature=664.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=60.#feature=7966.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/dstc3.#percent=80.#feature=10622.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=1.#feature=492.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=10.#feature=4921.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=100.#feature=49219.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=20.#feature=9844.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=40.#feature=19688.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=5.#feature=2460.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=60.#feature=29531.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/family.#percent=80.#feature=39375.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=1.#feature=382.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=10.#feature=3825.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=100.#feature=38250.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=20.#feature=7650.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=40.#feature=15300.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=5.#feature=1913.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=60.#feature=22950.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.feature_selection.20170725-014037/ghome.#percent=80.#feature=30600.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/all.test.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/data.stats.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=0.all.#=9684.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=1.utt_len.#=9681.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=2.user_act.#=9631.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=3.time.#=9679.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=4.n-gram.#=4497.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=5.phrasal.#=7259.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=7.syntactic.#=8726.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=8.semantic.#=8631.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=0.all.#=13278.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=1.utt_len.#=13275.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=2.user_act.#=13227.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=3.time.#=13273.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=4.n-gram.#=5414.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=5.phrasal.#=10182.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=7.syntactic.#=12072.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=8.semantic.#=12225.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/family.leave-out-features=0.all.#=49219.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/family.leave-out-features=1.utt_len.#=49216.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/family.leave-out-features=2.user_act.#=49162.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/family.leave-out-features=3.time.#=49214.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=0.all.#=38250.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=1.utt_len.#=38247.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=2.user_act.#=38163.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=3.time.#=38245.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=4.n-gram.#=25331.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=5.phrasal.#=19364.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=7.syntactic.#=32953.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=8.semantic.#=37197.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/all.test.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/data.stats.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=2.user_act.#=53.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=4.n-gram.#=5187.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=5.phrasal.#=2425.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=7.syntactic.#=958.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc2.keeo-one-only=8.semantic.#=1053.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[for testing]utterance_type.keep_one_only.20170725-151157/dstc3.keeo-one-only=2.user_act.#=51.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/all.test.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/best_of_each_dataset.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/data.stats.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc2.test.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc3.test.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/family.test.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/[random division,not evenly]utterance_type.comprehensive-classifier-comparison.20170720-223703/ghome.test.csv" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/all.test.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/best_of_each_dataset.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/data.stats.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc2.test.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc2.test.numbers" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc3.test.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/dstc3.test.numbers" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/family.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/family.test.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/family.test.numbers" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/ghome.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/ghome.test.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.comprehensive-classifier-comparison.20170720-223703/ghome.test.numbers" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/all.test.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/best_of_each_dataset.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/data.stats.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=1.#feature=97.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=1.#feature=97.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=10.#feature=969.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=10.#feature=969.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=100.#feature=9684.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=100.#feature=9684.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=20.#feature=1936.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=20.#feature=1936.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=40.#feature=3874.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=40.#feature=3874.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=5.#feature=484.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=5.#feature=484.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=60.#feature=5810.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=60.#feature=5810.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=80.#feature=7747.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.#percent=80.#feature=7747.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc2.model=Random forest.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=1.#feature=133.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=1.#feature=133.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=10.#feature=1327.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=10.#feature=1327.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=100.#feature=13278.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=100.#feature=13278.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=20.#feature=2655.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=20.#feature=2655.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=40.#feature=5311.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=40.#feature=5311.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=5.#feature=664.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=5.#feature=664.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=60.#feature=7966.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=60.#feature=7966.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=80.#feature=10622.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.#percent=80.#feature=10622.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/dstc3.model=Random forest.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=1.#feature=492.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=1.#feature=492.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=10.#feature=4921.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=10.#feature=4921.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=100.#feature=49219.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=100.#feature=49219.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=20.#feature=9844.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=20.#feature=9844.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=40.#feature=19688.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=40.#feature=19688.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=5.#feature=2460.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=5.#feature=2460.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=60.#feature=29531.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=60.#feature=29531.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=80.#feature=39375.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.#percent=80.#feature=39375.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/family.model=Random forest.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=1.#feature=382.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=1.#feature=382.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=10.#feature=3825.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=10.#feature=3825.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=100.#feature=38250.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=100.#feature=38250.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=20.#feature=7650.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=20.#feature=7650.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=40.#feature=15300.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=40.#feature=15300.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=5.#feature=1913.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=5.#feature=1913.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=60.#feature=22950.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=60.#feature=22950.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=80.#feature=30600.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.#percent=80.#feature=30600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170725-014037/ghome.model=Random forest.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/all.test.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/data.stats.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=0.all.#=9684.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=0.all.#=9684.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=1.utt_len.#=9681.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=1.utt_len.#=9681.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=2.user_act.#=9631.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=2.user_act.#=9631.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=3.time.#=9679.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=3.time.#=9679.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=4.n-gram.#=4497.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=4.n-gram.#=4497.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=5.phrasal.#=7259.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=5.phrasal.#=7259.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=7.syntactic.#=8726.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=7.syntactic.#=8726.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=8.semantic.#=8631.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.leave-out-features=8.semantic.#=8631.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc2.model=Random forest.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=0.all.#=13278.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=0.all.#=13278.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=1.utt_len.#=13275.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=1.utt_len.#=13275.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=2.user_act.#=13227.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=2.user_act.#=13227.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=3.time.#=13273.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=3.time.#=13273.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=4.n-gram.#=5414.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=4.n-gram.#=5414.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=5.phrasal.#=10182.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=5.phrasal.#=10182.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=7.syntactic.#=12072.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=7.syntactic.#=12072.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=8.semantic.#=12225.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.leave-out-features=8.semantic.#=12225.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/dstc3.model=Random forest.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=0.all.#=49219.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=0.all.#=49219.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=1.utt_len.#=49216.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=1.utt_len.#=49216.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=2.user_act.#=49162.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=2.user_act.#=49162.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=3.time.#=49214.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=3.time.#=49214.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=0.all.#=38250.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=0.all.#=38250.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=1.utt_len.#=38247.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=1.utt_len.#=38247.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=2.user_act.#=38163.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=2.user_act.#=38163.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=3.time.#=38245.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=3.time.#=38245.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=4.n-gram.#=25331.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=4.n-gram.#=25331.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=5.phrasal.#=19364.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=5.phrasal.#=19364.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=7.syntactic.#=32953.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=7.syntactic.#=32953.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=8.semantic.#=37197.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.leave-out-features=8.semantic.#=37197.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/ghome.model=Random forest.feature_selection.plot.jpg" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc2.index_cache.#cv=10.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc2.index_cache.#cv=2.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc2.index_cache.evenly.#div=1.#cv=10.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc2.index_cache.evenly.#div=1.#cv=5.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc3.index_cache.#cv=2.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc3.index_cache.evenly.#div=1.#cv=10.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/family.index_cache.#cv=2.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/family.index_cache.evenly.#div=1.#cv=10.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/ghome.index_cache.#cv=2.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/ghome.index_cache.evenly.#div=1.#cv=10.pkl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/demo/document_classification_20newsgroups.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/presto_data_process.iml" afterPath="$PROJECT_DIR$/.idea/presto_data_process.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/configuration.py" afterPath="$PROJECT_DIR$/dialogue/classify/configuration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/entry.py" afterPath="$PROJECT_DIR$/dialogue/classify/entry.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/experimenter.py" afterPath="$PROJECT_DIR$/dialogue/classify/experimenter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/all.test.csv" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/all.test.csv" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -366,7 +33,7 @@
     <SUITE FILE_PATH="coverage/presto_data_process$Unittests_in_data_loader_py.coverage" NAME="Unittests in data_loader.py Coverage Results" MODIFIED="1497042247634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
     <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union.coverage" NAME="hetero_feature_union Coverage Results" MODIFIED="1499817447220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
     <SUITE FILE_PATH="coverage/presto_data_process$feature_extractor.coverage" NAME="feature_extractor Coverage Results" MODIFIED="1500325794274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
-    <SUITE FILE_PATH="coverage/presto_data_process$entry.coverage" NAME="entry Coverage Results" MODIFIED="1501021405344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$entry.coverage" NAME="entry Coverage Results" MODIFIED="1501022543082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
     <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union__1_.coverage" NAME="hetero_feature_union (1) Coverage Results" MODIFIED="1499818104427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
     <SUITE FILE_PATH="coverage/presto_data_process$parse_session.coverage" NAME="parse_session Coverage Results" MODIFIED="1496352675018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
     <SUITE FILE_PATH="coverage/presto_data_process$experimenter.coverage" NAME="experimenter Coverage Results" MODIFIED="1499384122315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
@@ -397,7 +64,32 @@
     <favorites_list name="presto_data_process" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="entry.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+              <folding>
+                <element signature="e#24#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+              <folding>
+                <element signature="e#24#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -507,9 +199,9 @@
         <option value="$PROJECT_DIR$/dialogue/classify/feature_extractor.py" />
         <option value="$PROJECT_DIR$/output/utterance_type.20170720-005240/output.log" />
         <option value="$PROJECT_DIR$/dialogue/classify/entry.py" />
-        <option value="$PROJECT_DIR$/dialogue/classify/configuration.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/experimenter.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/dialogue/classify/configuration.py" />
       </list>
     </option>
   </component>
@@ -542,6 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -614,28 +307,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presto_data_process" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presto_data_process" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataset" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cross_validation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1394,12 +1068,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23272438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23431295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843652" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28029197" sideWeight="0.5079428" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28029197" sideWeight="0.5095314" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28029197" sideWeight="0.49205717" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28029197" sideWeight="0.49046862" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15131056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1585,7 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="1863" column="37" lean-forward="false" selection-start-line="1863" selection-start-column="32" selection-end-line="1863" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1615,30 +1289,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="80" column="20" lean-forward="false" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/classify/experimenter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
           </folding>
@@ -1650,6 +1304,26 @@
         <state relative-caret-position="375">
           <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#24#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
