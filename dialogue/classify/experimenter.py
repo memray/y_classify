@@ -28,7 +28,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neighbors import NearestCentroid
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.extmath import density
-from sklearn import metrics
+from sklearn import metrics, preprocessing
 
 __author__ = "Rui Meng"
 __email__ = "rui.meng@pitt.edu"
@@ -136,6 +136,7 @@ class Experimenter():
         precision_score = metrics.precision_score(Y_test, pred, average='macro')
         recall_score = metrics.recall_score(Y_test, pred, average='macro')
         f1_score = metrics.f1_score(Y_test, pred, average='macro')
+
         self.logger.info("accuracy:   %0.3f" % acc_score)
         self.logger.info("f1_score:   %0.3f" % f1_score)
 
@@ -164,15 +165,19 @@ class Experimenter():
         return model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time
 
     def run_cross_validation(self, X, Y):
+        X = np.nan_to_num(X.todense())
+
         train_ids, test_ids = self.load_cv_index(X, Y)
         cv_results = []
+
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
             self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
-            X_train = X[train_id]
+            X_train = np.nan_to_num(preprocessing.scale(X[train_id]))
             Y_train = Y[train_id]
-            X_test  = X[test_id]
-            Y_test  = Y[test_id]
+            X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
+            Y_test = Y[test_id]
+
             cv_results.append(self.run_experiment())
 
         # get the average score of cross-validation
@@ -181,6 +186,8 @@ class Experimenter():
         return avg_results
 
     def run_cross_validation_with_feature_selection(self, X, Y):
+        X = np.nan_to_num(X.todense())
+
         train_ids, test_ids = self.load_cv_index(X, Y)
         cv_results = []
         global X_train, Y_train, X_test, Y_test
@@ -191,8 +198,9 @@ class Experimenter():
 
         # iterate the percentile of features to retain
         for percentile in percentiles:
-            # X_new = SelectPercentile(chi2, percentile=percentile).fit_transform(X, Y)
-            X_new = X
+            X_new = SelectPercentile(chi2, percentile=percentile).fit_transform(X, Y)
+            X_new = np.nan_to_num(X_new)
+
             self.logger.info('%' * 50)
             self.logger.info(' '*10 + 'Percentile=%d' % percentile)
             self.logger.info(' '*10 + 'X_new.shape=%s' % str(X_new.shape))
@@ -204,10 +212,11 @@ class Experimenter():
             # iterate folds for cross validation and get the average score
             for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
                 self.logger.info('*' * 20 + ' %s - Percentile=%d, #(Feature)=%d, Round %d ' % (self.config['data_name'], percentile, X_new.shape[1], r_id) + '*' * 20)
-                X_train = X_new[train_id]
+                X_train = np.nan_to_num(preprocessing.scale(X[train_id]))
                 Y_train = Y[train_id]
-                X_test  = X_new[test_id]
-                Y_test  = Y[test_id]
+                X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
+                Y_test = Y[test_id]
+
                 cv_results.append(self.run_experiment())
 
             # get the average score of cross-validation
@@ -232,24 +241,41 @@ class Experimenter():
 
 
     def run_cross_validation_with_leave_one_out(self, X, Y):
+        X = np.nan_to_num(X.todense())
+
         train_ids, test_ids = self.load_cv_index(X, Y)
         cv_results = []
         global X_train, Y_train, X_test, Y_test
 
         feature_names = self.config['feature_names']
-        feature_series = ['0', '1', '2', '3', '4', '5', '7', '8']
-        feature_series_names = ['0.all', '1.utt_len', '2.user_act', '3.time', '4.n-gram', '5.phrasal', '7.syntactic', '8.semantic']
+        if self.config['experiment_mode'] == 'keep_one_only':
+            # skip the feature sets with too few features
+            feature_series = ['0', '2', '4', '5', '7', '8']
+            feature_series_names = ['0.all', '2.user_act', '4.n-gram', '5.phrasal', '7.syntactic', '8.semantic']
+        elif self.config['experiment_mode'] == 'leave_one_out':
+            feature_series = ['0', '1', '2', '3', '4', '5', '7', '8']
+            feature_series_names = ['0.all', '1.utt_len', '2.user_act', '3.time', '4.n-gram', '5.phrasal', '7.syntactic', '8.semantic']
+
         avg_result_dict = {}
 
         # iterate the features to leave out
         for f_series, f_series_name in zip(feature_series, feature_series_names):
-            feature_indices = [f_id for f_id,f_name in enumerate(feature_names) if f_name.startswith(f_series)]
-            if f_series == '5': # merge the entity and phrasal features
-                feature_indices = [f_id for f_id,f_name in enumerate(feature_names) if f_name.startswith('5') or f_name.startswith('6')]
+            if self.config['experiment_mode'] == 'keep_one_only':
+                task_label_to_print = 'feature_to_keep'
+                feature_indices = [f_id for f_id,f_name in enumerate(feature_names) if not f_name.startswith(f_series)]
+                if f_series == '0': # merge the entity and phrasal features
+                    feature_indices = []
+                elif f_series == '5': # merge the entity and phrasal features
+                    feature_indices = [f_id for f_id,f_name in enumerate(feature_names) if not f_name.startswith('5') and not f_name.startswith('6')]
+            elif self.config['experiment_mode'] == 'leave_one_out':
+                task_label_to_print = 'leave_out_features'
+                feature_indices = [f_id for f_id,f_name in enumerate(feature_names) if f_name.startswith(f_series)]
+                if f_series == '5': # merge the entity and phrasal features
+                    feature_indices = [f_id for f_id,f_name in enumerate(feature_names) if f_name.startswith('5') or f_name.startswith('6')]
 
             X_new = np.delete(copy.deepcopy(X), feature_indices, axis=1)
             self.logger.info('%' * 50)
-            self.logger.info(' '*10 + ' leave-out-features=%s.#=%d' % (f_series_name, len(feature_indices)))
+            self.logger.info(' '*10 + ' %s=%s.#=%d' % (task_label_to_print, f_series_name, len(feature_indices)))
             self.logger.info(' '*10 + ' X_new.shape=%s' % str(X_new.shape))
             self.logger.info('%' * 50)
 
@@ -258,11 +284,11 @@ class Experimenter():
 
             # iterate folds for cross validation and get the average score
             for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-                self.logger.info('*' * 20 + ' %s - leave_out_feature=%s, #(feature)=%d, Round %d ' % (self.config['data_name'], f_series_name, X_new.shape[1], r_id) + '*' * 20)
-                X_train = X_new[train_id]
+                self.logger.info('*' * 20 + ' %s - %s=%s, #(feature)=%d, Round %d ' % (self.config['data_name'], task_label_to_print, f_series_name, X_new.shape[1], r_id) + '*' * 20)
+                X_train = np.nan_to_num(preprocessing.scale(X_new[train_id]))
                 Y_train = Y[train_id]
-                X_test  = X_new[test_id]
-                Y_test  = Y[test_id]
+                X_test = np.nan_to_num(preprocessing.scale(X_new[test_id]))
+                Y_test = Y[test_id]
                 cv_results.append(self.run_experiment())
 
             # get the average score of cross-validation
@@ -292,7 +318,7 @@ class Experimenter():
                              label='F1-score')
 
             ax.set_title(
-                'Performance of the %s by leaving out specific features' % model_name)
+                'Performance of the %s by %s' % (model_name, task_label_to_print))
             ax.set_xlabel('Leave-out-feature')
             ax.set_ylabel('Prediction rate')
 
@@ -317,7 +343,7 @@ class Experimenter():
 
             ax.axis('tight')
             # plt.show()
-            fig.savefig(os.path.join(self.config.param['experiment_path'], '%s.model=%s.feature_selection.plot.jpg' % (self.config.param['data_name'], model_name)))
+            fig.savefig(os.path.join(self.config.param['experiment_path'], '%s.model=%s.%s.plot.jpg' % (self.config.param['data_name'], model_name, self.config.param['experiment_mode'])))
 
 
     def run_experiment(self):
@@ -396,7 +422,7 @@ class Experimenter():
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%d" % C)
             results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C,
-                                          LinearSVC(loss='l2', penalty='l1', dual=False, tol=1e-3)))
+                                          LinearSVC(loss='squared_hinge', penalty='l1', dual=False, tol=1e-3)))
             '''
             self.logger.info('=' * 80)
             self.logger.info("Logistic Regression with penalty=l2, C=%f" % C)
@@ -431,11 +457,13 @@ class Experimenter():
     def average_results(self, cv_results):
         # average the results of cross validation
         score_dict = {}
+        num_metrics = 0
         for cv_result in cv_results:
             for clf_result in cv_result:
-                clf_names, accuracy, precision_score, recall_score, f1_score, training_time, test_time = clf_result
+                clf_names, accuracy, precision_score, recall_score, f1_score, training_time, test_time= clf_result
+                num_metrics = len(clf_result) - 1
                 clf_scores = score_dict.get(clf_names, [])
-                clf_scores.extend(clf_result[1:7])
+                clf_scores.extend([accuracy, precision_score, recall_score, f1_score, training_time, test_time])
                 score_dict[clf_names] = clf_scores
 
         '''
@@ -445,9 +473,9 @@ class Experimenter():
             [['dstc2', 'Random forest', 0.47469487219062767, 0.13496877853565034, 0.25207010891040588, 0.16629532360650451, 1.0303024768829345, 0.042631435394287112], [], ... []]
         '''
         avg_results = []
-        field_names = ['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+        field_names = self.config['metrics'] #['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
         for clf_name, clf_scores in score_dict.items():
-            score_rows = np.asarray(clf_scores).reshape((6, int(len(clf_scores) / 6)), order='F')
+            score_rows = np.asarray(clf_scores).reshape((num_metrics, int(len(clf_scores) / num_metrics)), order='F')
             avg_score = np.average(score_rows, axis=1)
             std_score = np.std(score_rows, axis=1)
             dict_ = {}
@@ -455,6 +483,8 @@ class Experimenter():
                 dict_['dataset'] = '%s.#percent=%d.#feature=%d' % (self.config['data_name'], self.config['percentile'], self.config['#features'])
             elif self.config['experiment_mode'] == 'leave_one_out':
                 dict_['dataset'] = '%s.leave-out-features=%s.#=%d' % (self.config['data_name'], self.config['f_series_name'], self.config['#features'])
+            elif self.config['experiment_mode'] == 'keep_one_only':
+                dict_['dataset'] = '%s.feature-to-keep=%s.#=%d' % (self.config['data_name'], self.config['f_series_name'], self.config['#features'])
             else:
                 dict_['dataset'] = self.config['data_name']
 
@@ -473,7 +503,8 @@ class Experimenter():
             avg_results.append(r)
         '''
 
-        field_names = ['dataset', 'model', 'accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+        field_names = ['dataset', 'model']
+        field_names.extend(self.config['metrics'])
         # make some plots
         indices = np.arange(len(avg_results))
         # transpose the result matrix
@@ -508,6 +539,10 @@ class Experimenter():
         elif self.config['experiment_mode'] == 'leave_one_out':
             plt.savefig(os.path.join(self.config.param['experiment_path'], '%s.leave-out-features=%s.#=%d.jpg' % (self.config['data_name'], self.config['f_series_name'], self.config['#features'])))
             self.export_summary(avg_results, os.path.join(self.config.param['experiment_path'], '%s.leave-out-features=%s.#=%d.csv' % (self.config['data_name'], self.config['f_series_name'], self.config['#features'])))
+            self.export_summary(avg_results, os.path.join(self.config.param['experiment_path'], 'all.test.csv'))
+        elif self.config['experiment_mode'] == 'keep_one_only':
+            plt.savefig(os.path.join(self.config.param['experiment_path'], '%s.keeo-one-only=%s.#=%d.jpg' % (self.config['data_name'], self.config['f_series_name'], self.config['#features'])))
+            self.export_summary(avg_results, os.path.join(self.config.param['experiment_path'], '%s.keeo-one-only=%s.#=%d.csv' % (self.config['data_name'], self.config['f_series_name'], self.config['#features'])))
             self.export_summary(avg_results, os.path.join(self.config.param['experiment_path'], 'all.test.csv'))
         else:
             plt.savefig(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.jpg'))

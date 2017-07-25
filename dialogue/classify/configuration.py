@@ -54,7 +54,7 @@ def load_config():
     param['task_name']       = 'utterance_type'
     param['timemark']        = time.strftime('%Y%m%d-%H%M%S', time.localtime(time.time()))
 
-    param['experiment_mode'] = ['normal', 'feature_selection', 'leave_one_out'][0]
+    param['experiment_mode'] = ['normal', 'feature_selection', 'leave_one_out', 'keep_one_only'][3]
 
     param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
     param['experiment_path'] = os.path.join(param['root_path'], 'output', param['experiment_name'])
@@ -66,7 +66,7 @@ def load_config():
     param['valid_type'] = set(['F', 'C', 'R', 'A'])  # 'F', 'C', 'R', 'N', 'CC', 'A', 'Chitchat', 'G', 'O'\
 
     '''
-    dataset and features
+    dataset and experiment settings
     '''
     param['data_name'] = '' # current dataset that the experiment is running about, is set in entry.py line 22
     param['data_names']  = ['dstc2', 'dstc3', 'ghome', 'family'] # 'dstc2', 'ghome', 'family'
@@ -75,12 +75,14 @@ def load_config():
     param['extracted_feature_path'] = os.path.join(param['root_path'], 'dataset', 'feature', '%s.extracted_feature.pkl')
     param['pipeline_path'] = os.path.join(param['root_path'], 'dataset', 'feature', '%s.pipeline.pkl')
 
+    param['metrics'] = ['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+
     '''
     cross-validation
     '''
     param['do_cross_validation'] = True
     param['#division'] = 1    # number of random divisions, set to 1 in preliminary experimentss
-    param['#cross_validation'] = 5 # number of folds
+    param['#cross_validation'] = 2 # number of folds
     param['cv_index_cache_path'] = '' # the path is set in experimenter.py line 109 because it depends on the dataset name
 
     '''
