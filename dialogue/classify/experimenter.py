@@ -198,13 +198,17 @@ class Experimenter():
 
         w2v_feature_indices = [fid for fid, fname in enumerate(self.config['feature_names']) if fname.startswith('8.3')]
         X_w2v           =   copy.deepcopy(X)[:,w2v_feature_indices]
+        X_not_w2v       =   np.delete(copy.deepcopy(X), w2v_feature_indices, axis=1)
+        negative_index  =   np.where(X_not_w2v < 0)
+        for x,y in zip(negative_index[0], negative_index[1]):
+            X_not_w2v[x, y] = 0.0
 
         # iterate the percentile of features to retain
         for percentile in percentiles:
-            X_to_select     =   np.delete(copy.deepcopy(X), w2v_feature_indices, axis=1)
-            X_new = SelectPercentile(chi2, percentile=percentile).fit_transform(X_to_select, Y)
-            X_new = np.concatenate((X_new, X_w2v), axis=1)
-            X_new = np.nan_to_num(X_new)
+            X_to_select     =   copy.deepcopy(X_not_w2v)
+            X_new           = SelectPercentile(chi2, percentile=percentile).fit_transform(X_to_select, Y)
+            X_new           = np.concatenate((X_new, X_w2v), axis=1)
+            X_new           = np.nan_to_num(X_new)
 
             self.logger.info('%' * 50)
             self.logger.info(' '*10 + 'Percentile=%d' % percentile)
@@ -370,7 +374,10 @@ class Experimenter():
                 # (Perceptron(n_iter=50), "Perceptron"),
                 # (PassiveAggressiveClassifier(n_iter=50), "Passive-Aggressive"),
                 # (KNeighborsClassifier(n_neighbors=10), "kNN"),
-                (RandomForestClassifier(n_estimators=100), "Random forest")]:
+                (RandomForestClassifier(n_estimators=100), "Random forest.#tree=100"),
+                # (RandomForestClassifier(n_estimators=300), "Random forest.#tree=300"),
+                # (RandomForestClassifier(n_estimators=500), "Random forest.#tree=500")
+        ]:
             self.logger.info('=' * 80)
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
@@ -416,6 +423,7 @@ class Experimenter():
         ])))
         '''
 
+        '''
         for C in [1]:
         # for C in [0.1, 1, 10]:
             self.logger.info('=' * 80)
@@ -428,7 +436,7 @@ class Experimenter():
             self.logger.info("LinearSVC.pen=l1, C=%d" % C)
             results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C,
                                           LinearSVC(loss='squared_hinge', penalty='l1', dual=False, tol=1e-3)))
-            '''
+
             self.logger.info('=' * 80)
             self.logger.info("Logistic Regression with penalty=l2, C=%f" % C)
             # Train Logistic Regression model
@@ -441,7 +449,7 @@ class Experimenter():
                                           max_iter=-1, probability=False, random_state=None, shrinking=True,
                                           tol=0.001, verbose=False))
             )
-            '''
+        '''
 
         return results
 
