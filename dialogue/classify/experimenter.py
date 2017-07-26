@@ -196,9 +196,14 @@ class Experimenter():
 
         avg_result_dict = {}
 
+        w2v_feature_indices = [fid for fid, fname in enumerate(self.config['feature_names']) if fname.startswith('8.3')]
+        X_w2v           =   copy.deepcopy(X)[:,w2v_feature_indices]
+
         # iterate the percentile of features to retain
         for percentile in percentiles:
-            X_new = SelectPercentile(chi2, percentile=percentile).fit_transform(X, Y)
+            X_to_select     =   np.delete(copy.deepcopy(X), w2v_feature_indices, axis=1)
+            X_new = SelectPercentile(chi2, percentile=percentile).fit_transform(X_to_select, Y)
+            X_new = np.concatenate((X_new, X_w2v), axis=1)
             X_new = np.nan_to_num(X_new)
 
             self.logger.info('%' * 50)

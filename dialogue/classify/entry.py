@@ -44,6 +44,7 @@ if __name__ == '__main__':
         now it's scaled with MinMaxScaler to make feature values non-negative
         '''
         # print("Checkinf for NaN and Inf")
+        # print("np.inf=", np.where(X<0))
         # print("np.inf=", np.where(np.isnan(X)))
         # print("is.inf=", np.where(np.isinf(X)))
         # print("np.max=", np.max(abs(X)))
@@ -56,7 +57,7 @@ if __name__ == '__main__':
             result                  = exp.run_cross_validation(X, Y)
 
             # find the best classifier (with best F1-score)
-            result = result[np.asarray(result).T[4].argmax()]
-            best_results[data_name] = result
+            # result = result[np.asarray(result).T[4].argmax()]
+            # best_results[data_name] = result
 
     exp.export_summary(best_results.values(), os.path.join(config.param['experiment_path'], 'best_of_each_dataset.csv'))

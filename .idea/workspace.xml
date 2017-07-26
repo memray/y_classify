@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="Merge branch 'master' of https://github.com/memray/y_classify&#10;Add keep-one-only&#10;some testing experiments&#10;ready for final experiments&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc2.index_cache.#cv=10.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc2.index_cache.#cv=2.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc2.index_cache.evenly.#div=1.#cv=10.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc2.index_cache.evenly.#div=1.#cv=5.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc3.index_cache.#cv=2.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/dstc3.index_cache.evenly.#div=1.#cv=10.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/family.index_cache.#cv=2.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/family.index_cache.evenly.#div=1.#cv=10.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/ghome.index_cache.#cv=2.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataset/cross_validation/ghome.index_cache.evenly.#div=1.#cv=10.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogue/demo/document_classification_20newsgroups.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/best_of_each_dataset.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=4.n-gram.#=24739.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=4.n-gram.#=24739.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=5.phrasal.#=31097.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=5.phrasal.#=31097.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=7.syntactic.#=43720.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=7.syntactic.#=43720.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=8.semantic.#=48166.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.leave-out-features=8.semantic.#=48166.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.model=LinearSVC.pen=l1.C=1.feature_selection.plot.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.leave_one_out.20170725-014021/family.model=Random forest.feature_selection.plot.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/configuration.py" afterPath="$PROJECT_DIR$/dialogue/classify/configuration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/all.test.csv" afterPath="$PROJECT_DIR$/output/[bad performance]utterance_type.leave_one_out.20170725-014021/all.test.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/entry.py" afterPath="$PROJECT_DIR$/dialogue/classify/entry.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/experimenter.py" afterPath="$PROJECT_DIR$/dialogue/classify/experimenter.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +35,7 @@
     <SUITE FILE_PATH="coverage/presto_data_process$Unittests_in_data_loader_py.coverage" NAME="Unittests in data_loader.py Coverage Results" MODIFIED="1497042247634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
     <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union.coverage" NAME="hetero_feature_union Coverage Results" MODIFIED="1499817447220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
     <SUITE FILE_PATH="coverage/presto_data_process$feature_extractor.coverage" NAME="feature_extractor Coverage Results" MODIFIED="1500325794274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
-    <SUITE FILE_PATH="coverage/presto_data_process$entry.coverage" NAME="entry Coverage Results" MODIFIED="1501022543082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$entry.coverage" NAME="entry Coverage Results" MODIFIED="1501050529805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
     <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union__1_.coverage" NAME="hetero_feature_union (1) Coverage Results" MODIFIED="1499818104427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
     <SUITE FILE_PATH="coverage/presto_data_process$parse_session.coverage" NAME="parse_session Coverage Results" MODIFIED="1496352675018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
     <SUITE FILE_PATH="coverage/presto_data_process$experimenter.coverage" NAME="experimenter Coverage Results" MODIFIED="1499384122315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
@@ -65,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="entry.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="entry.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state relative-caret-position="370">
+              <caret line="46" column="41" lean-forward="false" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -77,11 +79,43 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="defmatrix.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/matrixlib/defmatrix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="experimenter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dialogue/classify/experimenter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="263" column="3" lean-forward="false" selection-start-line="263" selection-start-column="3" selection-end-line="263" selection-end-column="3" />
+              <folding>
+                <element signature="e#24#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multiarray.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.1/python_stubs/-118409483/numpy/core/multiarray.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="560" column="4" lean-forward="false" selection-start-line="560" selection-start-column="4" selection-end-line="560" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+            <state relative-caret-position="343">
+              <caret line="56" column="98" lean-forward="false" selection-start-line="56" selection-start-column="98" selection-end-line="56" selection-end-column="98" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -101,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>LogisticRegression</find>
       <find>X_train</find>
       <find>f1_score</find>
       <find>f1_score:   0.6</find>
@@ -131,6 +164,7 @@
       <find>f1_score_micro</find>
       <find>export_summary</find>
       <find>height</find>
+      <find>nan</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -143,6 +177,22 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info target-remote="github" target-branch="master" repo="$PROJECT_DIR$" source="master" />
+    </push-targets>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="github/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -198,9 +248,9 @@
         <option value="$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/pipeline.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/feature_extractor.py" />
         <option value="$PROJECT_DIR$/output/utterance_type.20170720-005240/output.log" />
-        <option value="$PROJECT_DIR$/dialogue/classify/entry.py" />
-        <option value="$PROJECT_DIR$/dialogue/classify/experimenter.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/dialogue/classify/experimenter.py" />
+        <option value="$PROJECT_DIR$/dialogue/classify/entry.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/configuration.py" />
       </list>
     </option>
@@ -317,7 +367,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/anaconda/bin/python3.6" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -694,13 +744,6 @@
       <workItem from="1500499303147" duration="26032000" />
       <workItem from="1501005782401" duration="69000" />
     </task>
-    <task id="LOCAL-00040" summary="debug sessionize weather">
-      <created>1496303757082</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1496303757082</updated>
-    </task>
     <task id="LOCAL-00041" summary="debug sessionize weather">
       <created>1496304459487</created>
       <option name="number" value="00041" />
@@ -1037,7 +1080,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501022121373</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Merge branch 'master' of https://github.com/memray/y_classify&#10;Add keep-one-only&#10;some testing experiments&#10;ready for final experiments&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1501022600099</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1501022600099</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1068,18 +1118,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23431295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23431295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843652" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28029197" sideWeight="0.5095314" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4510949" sideWeight="0.5087371" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28029197" sideWeight="0.49046862" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15131056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.49841145" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4510949" sideWeight="0.49296874" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4510949" sideWeight="0.4912629" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1155,6 +1204,11 @@
           <line>290</line>
           <option name="timeStamp" value="360" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dialogue/classify/experimenter.py</url>
+          <line>203</line>
+          <option name="timeStamp" value="388" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -1166,19 +1220,12 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="383" />
+      <option name="time" value="389" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="dict_" language="Python" />
-        <watch expression="X_train" language="Python" />
-        <watch expression="X_test" language="Python" />
-        <watch expression="clf_result" language="Python" />
-        <watch expression="[[result[name] for result in avg_results] for name in field_names]" language="Python" />
-        <watch expression="[r['accuracy'] for r in model_result]" language="Python" />
-        <watch expression="[r['accuracy_std'] for r in model_result]" language="Python" />
-        <watch expression="index" language="Python" />
-        <watch expression="[r['f1_score'] for r in model_result]" language="Python" />
+        <watch expression="X_new.shape" language="Python" />
+        <watch expression="X_to_select.shape" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -1187,10 +1234,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/gensim/utils.py" />
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/base.py" />
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/gensim/models/keyedvectors.py" />
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/dill/dill.py" />
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/pickle.py" />
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/_methods.py" />
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/metrics/pairwise.py" />
@@ -1289,16 +1332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/classify/experimenter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1307,10 +1340,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.1/python_stubs/-118409483/numpy/core/multiarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="560" column="4" lean-forward="false" selection-start-line="560" selection-start-column="4" selection-end-line="560" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/matrixlib/defmatrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.normal.20170725-154224/data.stats.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.normal.20170725-154224/output.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="202" column="15" lean-forward="false" selection-start-line="202" selection-start-column="15" selection-end-line="202" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+        <state relative-caret-position="343">
+          <caret line="56" column="98" lean-forward="false" selection-start-line="56" selection-start-column="98" selection-end-line="56" selection-end-column="98" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
           </folding>
@@ -1319,8 +1384,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="370">
+          <caret line="46" column="41" lean-forward="false" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+          <folding>
+            <element signature="e#24#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/experimenter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="263" column="3" lean-forward="false" selection-start-line="263" selection-start-column="3" selection-end-line="263" selection-end-column="3" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
           </folding>
