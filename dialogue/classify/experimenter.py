@@ -56,9 +56,14 @@ class Experimenter():
 
     def load_cv_index(self, X, Y):
         # load the data index for cross-validation
-        cv_index_cache_path = os.path.join(self.config.param['root_path'], 'dataset', 'cross_validation',
-                                           self.config.param['data_name'] + '.index_cache.evenly.#div=%d.#cv=%d.pkl' % (
-                                               self.config['#division'], self.config['#cross_validation']))
+        if self.config['experiment_mode'] == 'reformulation_detection' or self.config['experiment_mode'] == 'task_boundary_detection':
+            cv_index_cache_path = os.path.join(self.config.param['root_path'], 'dataset', 'cross_validation',
+                                               self.config.param['data_name'] + '.%s.index_cache.evenly.#div=%d.#cv=%d.pkl' % (
+                                                   self.config['experiment_mode'], self.config['#division'], self.config['#cross_validation']))
+        else:
+            cv_index_cache_path = os.path.join(self.config.param['root_path'], 'dataset', 'cross_validation',
+                                               self.config.param['data_name'] + '.index_cache.evenly.#div=%d.#cv=%d.pkl' % (
+                                                   self.config['#division'], self.config['#cross_validation']))
         if os.path.exists(cv_index_cache_path):
             with open(cv_index_cache_path, 'rb') as idx_cache:
                 train_ids, test_ids = pickle.load(idx_cache)
@@ -109,7 +114,7 @@ class Experimenter():
 
         return train_ids, test_ids
 
-    def benchmark(self, model_name, clf):
+    def benchmark(self, model_name, clf, return_y_pred = False):
         global X_train, Y_train, X_test, Y_test
 
         if 'vectorizer' in self.config:
@@ -162,10 +167,112 @@ class Experimenter():
             self.logger.info('\n'+str(metrics.confusion_matrix(Y_test, pred)))
 
         clf_descr = str(clf) # str(clf).split('(')[0]
-        return model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time
+        if return_y_pred:
+            return [model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time], pred
+        else:
+            return model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time
 
     def run_cross_validation(self, X, Y):
         X = np.nan_to_num(X.todense())
+
+        train_ids, test_ids = self.load_cv_index(X, Y)
+        cv_results = []
+
+        global X_train, Y_train, X_test, Y_test
+        for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
+            self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
+            X_train = np.nan_to_num(preprocessing.scale(X[train_id]))
+            Y_train = Y[train_id]
+            X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
+            Y_test = Y[test_id]
+
+            cv_results.append(self.run_experiment())
+
+        # get the average score of cross-validation
+        avg_results = self.average_results(cv_results)
+
+        return avg_results
+
+    def run_cross_validation_bad_case(self, X, Y):
+        X = np.nan_to_num(X.todense())
+
+        train_ids, test_ids = self.load_cv_index(X, Y)
+        cv_results  = []
+        y_preds     = []
+
+        diff_idx_cache_path = os.path.join(self.config.param['root_path'], 'dataset', 'bad_case_index',
+                                           self.config.param[
+                                               'data_name'] + '.%s.index_cache.evenly.#div=%d.#cv=%d.pkl' % (
+                                               self.config['experiment_mode'], self.config['#division'],
+                                               self.config['#cross_validation']))
+        if os.path.exists(diff_idx_cache_path):
+            with open(diff_idx_cache_path, 'rb') as idx_cache:
+                cv_results, diff_idx, test_idx, y_tests, y_preds = pickle.load(idx_cache)
+        else:
+            global X_train, Y_train, X_test, Y_test
+            for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
+                self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
+                X_train = np.nan_to_num(preprocessing.scale(X[train_id]))
+                Y_train = Y[train_id]
+                X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
+                Y_test = Y[test_id]
+
+                score, y_pred = self.run_experiment_bad_case()
+                cv_results.append([score])
+                y_preds.extend(y_pred)
+
+            test_idx = np.concatenate(test_ids)
+            y_tests  = Y[test_idx]
+            diff_idx = np.where([y_p != y_t for y_p,y_t in zip(y_preds, y_tests)])
+
+            with open(diff_idx_cache_path, 'wb') as idx_cache:
+                pickle.dump([cv_results, diff_idx, test_idx, y_tests, y_preds], idx_cache)
+
+        labels   = self.config['label_encoder'].classes_
+
+        for x_raw, y_pred, y_test in zip(np.asarray(self.config['X_raw'])[diff_idx], np.asarray(y_preds)[diff_idx], np.asarray(y_tests)[diff_idx]):
+            x_index     = 0#x_raw['index'], wrong!!!
+            dialogue    = x_raw['dialogue']
+            utterance   = x_raw['utterance']
+
+            self.logger.info('*' * 50)
+            self.logger.info(' ' * 10 + 'index=%d, true label=%s, predicted=%s' % (x_index, labels[y_test], labels[y_pred]))
+            self.logger.info('*' * 50)
+            for u_id, u in enumerate(dialogue):
+                if x_raw['utterance'] != u:
+                    self.logger.info('\t [%s][%s] %s' % (u.time, u.direction, u.msg_text))
+                else:
+                    self.logger.info('\t [%s][%s][True=%s,Pred=%s] %s' % (u.time, u.direction, labels[y_test], labels[y_pred], u.msg_text))
+            self.logger.info('*' * 50)
+
+        # get the average score of cross-validation
+        avg_results = self.average_results(cv_results)
+
+        return avg_results
+
+    def run_cross_validation_binary_task(self, X, Y):
+        X = np.nan_to_num(X.todense())
+        label_encoder = self.config['label_encoder']
+
+        if self.config['experiment_mode'] == 'reformulation_detection':
+            positive_labels = ['R']
+            negative_labels = ['A', 'C', 'F']
+            classes_ = np.asarray(['reform', 'non-reform'])
+        elif self.config['experiment_mode'] == 'task_boundary_detection':
+            positive_labels = ['F', 'A']
+            negative_labels = ['C', 'R']
+            classes_ = np.asarray(['end', 'ongoing'])
+        label_to_y = dict([(l, y) for y, l in enumerate(label_encoder.classes_)])
+        Y_new = copy.deepcopy(Y)
+
+        for l in positive_labels:
+            Y_new[np.where(Y == label_to_y[l])] = 0
+        for l in negative_labels:
+            Y_new[np.where(Y == label_to_y[l])] = 1
+
+        label_encoder.classes_ = classes_
+        Y = Y_new
+        self.config['label_encoder'] = label_encoder
 
         train_ids, test_ids = self.load_cv_index(X, Y)
         cv_results = []
@@ -192,7 +299,9 @@ class Experimenter():
         cv_results = []
         global X_train, Y_train, X_test, Y_test
 
-        percentiles = (1, 5, 10, 20, 40, 60, 80, 100)
+        # percentiles = (0.1, 0.2, 0.5, 1, 2, 5, 10, 100)
+        # percentiles = (1, 5, 10, 20, 40, 60, 80, 100)
+        percentiles = (1, 5, 10, 20, 50, 100)
 
         avg_result_dict = {}
 
@@ -203,12 +312,50 @@ class Experimenter():
         for x,y in zip(negative_index[0], negative_index[1]):
             X_not_w2v[x, y] = 0.0
 
+        if self.config['experiment_mode'] == 'print_important_features':
+            feature_names = self.config['feature_names']
+            chi2_stats, pvals = chi2(X_not_w2v, Y)
+            chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
+
+            sorted_idx = np.argsort(chi2_stats)[::-1]
+
+            with open(os.path.join(self.config['experiment_path'], '%s.top_features.csv' % self.config['data_name']), 'w') as csv_writer:
+                csv_writer.write('id\tname\tprefix\tchi2\tpval\n')
+                for f_id, (f_name, chi2_stat, pval) in enumerate(zip(np.asarray(feature_names)[sorted_idx], chi2_stats[sorted_idx], pvals[sorted_idx])):
+                    # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
+                    csv_writer.write('%d\t%s\t%s\t%.4f\t%.4f\n' % (f_id, f_name, f_name[:f_name.find('-')], chi2_stat, pval))
+
+            if os.path.exists(os.path.join(self.config['experiment_path'], '%s.feature_stats.csv' % self.config['data_name'])):
+                print_header = False
+            else:
+                print_header = True
+
+            feature_prefixes  = sorted(list(set([f[:f.find('-')] for f in feature_names])))
+            feature_set_names = {'1':'1. utterance length', '2.1':'2.1 user action words', '2.2': '2.2 number of user action words', '2.3':'2.3 jaccard_similarity of user action words',
+                                 '3':'3. time features', '4.1':'4.1 n_gram', '4.2':'4.2 edit distance', '4.3':'4.3 jaccard_similarity',
+                                 '5':'5. noun phrase', '6':'6. entity', '7':'7. syntactic features',
+                                 '8.1':'8.1 LDA_features', '8.2':'8.2 LDA_cosine', '8.3':'8.3 w2v_features', '8.4':'8.4 w2v_cosine', '8.5':'8.5 wmv_distance'
+                                 }
+            with open(os.path.join(self.config['experiment_path'], 'feature_stats.csv'), 'a') as csv_writer:
+                if print_header:
+                    csv_writer.write(',%s\n' % (','.join(feature_prefixes)))
+                    csv_writer.write(',%s\n' % (','.join([feature_set_names[p_] for p_ in feature_prefixes])))
+                num_feature = []
+                for prefix, feature_set_name in zip(feature_prefixes, feature_set_names):
+                    self.logger.info('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
+                    # csv_writer.write('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
+                    num_feature.append(len([f for f in feature_names if f.startswith(prefix)]))
+                csv_writer.write('%s,%s\n' % (self.config['data_name'], ','.join([str(n) for n in num_feature])))
+
+            return
+
         # iterate the percentile of features to retain
         for percentile in percentiles:
             X_to_select     =   copy.deepcopy(X_not_w2v)
             X_new           = SelectPercentile(chi2, percentile=percentile).fit_transform(X_to_select, Y)
-            X_new           = np.concatenate((X_new, X_w2v), axis=1)
+            # X_new           = np.concatenate((X_new, X_w2v), axis=1)
             X_new           = np.nan_to_num(X_new)
+            X               = X_new
 
             self.logger.info('%' * 50)
             self.logger.info(' '*10 + 'Percentile=%d' % percentile)
@@ -225,6 +372,8 @@ class Experimenter():
                 Y_train = Y[train_id]
                 X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
                 Y_test = Y[test_id]
+                self.logger.info(' ' * 10 + 'X_train.shape=%s' % str(X_train.shape))
+                self.logger.info(' ' * 10 + 'X_test.shape=%s' % str(X_test.shape))
 
                 cv_results.append(self.run_experiment())
 
@@ -369,6 +518,7 @@ class Experimenter():
         # Y_test  = Y[int(0.8 * num_data):]
 
         results = []
+        '''
         for clf, name in [
                 # (RidgeClassifier(tol=1e-2, solver="lsqr"), "Ridge Classifier"),
                 # (Perceptron(n_iter=50), "Perceptron"),
@@ -381,6 +531,7 @@ class Experimenter():
             self.logger.info('=' * 80)
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
+        '''
 
         '''
         for penalty in ["l2", "l1"]:
@@ -423,7 +574,7 @@ class Experimenter():
         ])))
         '''
 
-        '''
+
         for C in [1]:
         # for C in [0.1, 1, 10]:
             self.logger.info('=' * 80)
@@ -431,7 +582,7 @@ class Experimenter():
             # Train Logistic Regression model
             results.append(self.benchmark('LR.pen=l1.C=%d' % C,
                                           LogisticRegression(solver="liblinear", penalty='l1', C=C)))
-
+        '''
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%d" % C)
             results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C,
@@ -452,6 +603,18 @@ class Experimenter():
         '''
 
         return results
+
+    def run_experiment_bad_case(self):
+        '''
+
+        :return: 'model_name', 'accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time'
+        '''
+        C = 1.0
+        self.logger.info('=' * 80)
+        self.logger.info("LR.pen=l1.C=%f" % C)
+        # Train Logistic Regression model
+        return self.benchmark('LR.pen=l1.C=%d' % C,
+                                      LogisticRegression(solver="liblinear", penalty='l1', C=C), return_y_pred = True)
 
     @staticmethod
     def export_summary(results, csv_path):
