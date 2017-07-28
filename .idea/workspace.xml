@@ -2,16 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/presto_data_process.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/best_of_each_dataset.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/dstc2.feature_stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/dstc2.top_features.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/dstc3.feature_stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/dstc3.top_features.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/family.feature_stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/family.top_features.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/ghome.feature_stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.print_important_features.20170727-115525/ghome.top_features.csv" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/all.test.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/all.test.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/best_of_each_dataset.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/best_of_each_dataset.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/data.stats.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/data.stats.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=1.#feature=88.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=1.#feature=88.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=1.#feature=88.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=1.#feature=88.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=10.#feature=878.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=10.#feature=878.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=10.#feature=878.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=10.#feature=878.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=100.#feature=8784.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=100.#feature=8784.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=100.#feature=8784.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=100.#feature=8784.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=20.#feature=1757.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=20.#feature=1757.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=20.#feature=1757.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=20.#feature=1757.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=5.#feature=440.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=5.#feature=440.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=5.#feature=440.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=5.#feature=440.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=50.#feature=4392.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=50.#feature=4392.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.#percent=50.#feature=4392.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.#percent=50.#feature=4392.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc2.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=1.#feature=124.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=1.#feature=124.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=1.#feature=124.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=1.#feature=124.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=10.#feature=1238.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=10.#feature=1238.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=10.#feature=1238.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=10.#feature=1238.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=100.#feature=12378.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=100.#feature=12378.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=100.#feature=12378.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=100.#feature=12378.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=20.#feature=2469.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=20.#feature=2469.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=20.#feature=2469.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=20.#feature=2469.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=5.#feature=619.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=5.#feature=619.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=5.#feature=619.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=5.#feature=619.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=50.#feature=6189.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=50.#feature=6189.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.#percent=50.#feature=6189.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.#percent=50.#feature=6189.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125919/dstc3.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/all.test.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/all.test.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/best_of_each_dataset.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/best_of_each_dataset.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/data.stats.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/data.stats.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=1.#feature=484.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=1.#feature=484.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=1.#feature=484.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=1.#feature=484.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=10.#feature=4831.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=10.#feature=4831.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=10.#feature=4831.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=10.#feature=4831.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=100.#feature=48319.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=100.#feature=48319.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=100.#feature=48319.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=100.#feature=48319.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=20.#feature=9663.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=20.#feature=9663.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=20.#feature=9663.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=20.#feature=9663.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=5.#feature=2415.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=5.#feature=2415.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=5.#feature=2415.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=5.#feature=2415.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=50.#feature=24159.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=50.#feature=24159.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.#percent=50.#feature=24159.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.#percent=50.#feature=24159.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/family.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=1.#feature=374.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=1.#feature=374.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=1.#feature=374.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=1.#feature=374.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=10.#feature=3735.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=10.#feature=3735.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=10.#feature=3735.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=10.#feature=3735.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=100.#feature=37350.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=100.#feature=37350.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=100.#feature=37350.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=100.#feature=37350.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=20.#feature=7470.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=20.#feature=7470.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=20.#feature=7470.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=20.#feature=7470.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=5.#feature=1867.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=5.#feature=1867.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=5.#feature=1867.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=5.#feature=1867.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=50.#feature=18675.csv" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=50.#feature=18675.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.#percent=50.#feature=18675.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.#percent=50.#feature=18675.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-125934/ghome.model=LR.pen=l1.C=1.feature_selection.plot.jpg" afterPath="$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.model=LR.pen=l1.C=1.feature_selection.plot.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/configuration.py" afterPath="$PROJECT_DIR$/dialogue/classify/configuration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/entry.py" afterPath="$PROJECT_DIR$/dialogue/classify/entry.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/experimenter.py" afterPath="$PROJECT_DIR$/dialogue/classify/experimenter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/feature_extractor.py" afterPath="$PROJECT_DIR$/dialogue/classify/feature_extractor.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,7 +90,7 @@
     <SUITE FILE_PATH="coverage/presto_data_process$Unittests_in_data_loader_py.coverage" NAME="Unittests in data_loader.py Coverage Results" MODIFIED="1497042247634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
     <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union.coverage" NAME="hetero_feature_union Coverage Results" MODIFIED="1499817447220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
     <SUITE FILE_PATH="coverage/presto_data_process$feature_extractor.coverage" NAME="feature_extractor Coverage Results" MODIFIED="1500325794274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
-    <SUITE FILE_PATH="coverage/presto_data_process$entry.coverage" NAME="entry Coverage Results" MODIFIED="1501188528635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$entry.coverage" NAME="entry Coverage Results" MODIFIED="1501219705688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
     <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union__1_.coverage" NAME="hetero_feature_union (1) Coverage Results" MODIFIED="1499818104427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
     <SUITE FILE_PATH="coverage/presto_data_process$parse_session.coverage" NAME="parse_session Coverage Results" MODIFIED="1496352675018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
     <SUITE FILE_PATH="coverage/presto_data_process$experimenter.coverage" NAME="experimenter Coverage Results" MODIFIED="1499384122315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
@@ -61,21 +122,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="entry.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="entry.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+            <state relative-caret-position="630">
+              <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="experimenter.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="experimenter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/experimenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="244" column="40" lean-forward="false" selection-start-line="244" selection-start-column="40" selection-end-line="244" selection-end-column="40" />
+            <state relative-caret-position="321">
+              <caret line="306" column="0" lean-forward="true" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -86,8 +147,8 @@
       <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="56" column="192" lean-forward="false" selection-start-line="56" selection-start-column="192" selection-end-line="56" selection-end-column="192" />
+            <state relative-caret-position="885">
+              <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -255,7 +316,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,7 +356,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utterance_type.feature_selection.20170727-125919" />
+              <option name="myItemId" value="utterance_type.print_important_features.20170727-115829" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presto_data_process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utterance_type.feature_selection.20170727-222828" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,6 +444,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
@@ -751,13 +830,6 @@
       <workItem from="1500499303147" duration="26032000" />
       <workItem from="1501005782401" duration="69000" />
     </task>
-    <task id="LOCAL-00042" summary="debug sessionize weather">
-      <created>1496305007662</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1496305007662</updated>
-    </task>
     <task id="LOCAL-00043" summary="debug sessionize weather">
       <created>1496342480076</created>
       <option name="number" value="00043" />
@@ -1094,7 +1166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501051634530</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="add some new experiments&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1501218151850</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1501218151851</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1127,11 +1206,11 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35693848" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36194563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843652" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4510949" sideWeight="0.5087371" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4253012" sideWeight="0.49046862" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4253012" sideWeight="0.49046862" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15131056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1200,7 +1279,8 @@
     <MESSAGE value="all features, ready to run" />
     <MESSAGE value="finish the keep-one-only task&#10;some testing experiments&#10;ready for final experiments" />
     <MESSAGE value="Merge branch 'master' of https://github.com/memray/y_classify&#10;Add keep-one-only&#10;some testing experiments&#10;ready for final experiments&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/memray/y_classify&#10;Add keep-one-only&#10;some testing experiments&#10;ready for final experiments&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="add some new experiments&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some new experiments&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1277,12 +1357,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/pipeline.py" />
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/feature_extraction/dict_vectorizer.py" />
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/core/numeric.py" />
-    <entry file="file://$USER_HOME$/Library/Caches/IntelliJIdea2017.1/python_stubs/-952534906/numpy/core/umath.py" />
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/lib/type_check.py" />
-    <entry file="file://$PROJECT_DIR$/output/utterance_type.20170719-230656/output.log" />
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/linear_model/ridge.py" />
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/svm/classes.py" />
     <entry file="file://$PROJECT_DIR$/output/utterance_type.20170720-000626/all.test.csv" />
@@ -1351,18 +1425,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/output/utterance_type.normal.20170725-154224/data.stats.csv" />
     <entry file="file://$PROJECT_DIR$/output/utterance_type.normal.20170725-154224/output.log" />
-    <entry file="file://$PROJECT_DIR$/output/utterance_type.normal.three_classifilers.20170725-225510/all.test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.normal.three_classifilers.20170725-225510/all.test.csv" />
     <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/numpy/matrixlib/defmatrix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1373,13 +1440,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/utterance_type.normal.three_classifilers.20170725-225510/data.stats.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.normal.three_classifilers.20170725-225510/data.stats.csv" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.1/python_stubs/-118409483/numpy/core/multiarray.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -1392,23 +1453,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="74" column="36" lean-forward="false" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/utterance_type.feature_selection[wo w2v].[dstc2&amp;3].20170726-200921/all.test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.feature_selection[wo w2v].[dstc2&amp;3].20170726-200921/all.test.csv" />
     <entry file="file://$PROJECT_DIR$/output/utterance_type.reformulation_detection.20170727-015240/all.test.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,31 +1490,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc3.model=LR.pen=l1.C=1.feature_selection.plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.feature_selection[dstc2,dstc3].20170727-125919/dstc2.model=LR.pen=l1.C=1.feature_selection.plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/family.model=LR.pen=l1.C=1.feature_selection.plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.feature_selection[ghome,family].20170727-125934/ghome.model=LR.pen=l1.C=1.feature_selection.plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="56" column="192" lean-forward="false" selection-start-line="56" selection-start-column="192" selection-end-line="56" selection-end-column="192" />
+        <state relative-caret-position="885">
+          <caret line="64" column="37" lean-forward="false" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/classify/experimenter.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="244" column="40" lean-forward="false" selection-start-line="244" selection-start-column="40" selection-end-line="244" selection-end-column="40" />
-          <folding>
-            <element signature="e#24#61#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="630">
+          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/classify/entry.py">
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-222828/family.model=LR.pen=l1.C=1.feature_selection.plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.feature_selection.20170727-222828/ghome.model=LR.pen=l1.C=1.feature_selection.plot.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/experimenter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="321">
+          <caret line="306" column="0" lean-forward="true" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

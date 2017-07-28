@@ -54,7 +54,7 @@ def load_config():
     param['task_name']       = 'utterance_type'
     param['timemark']        = time.strftime('%Y%m%d-%H%M%S', time.localtime(time.time()))
 
-    param['experiment_mode'] = ['normal', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][6]
+    param['experiment_mode'] = ['normal', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
 
     param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
     param['experiment_path'] = os.path.join(param['root_path'], 'output', param['experiment_name'])
@@ -69,7 +69,7 @@ def load_config():
     dataset and experiment settings
     '''
     param['data_name'] = '' # current dataset that the experiment is running about, is set in entry.py line 22
-    param['data_names']  = ['dstc2', 'dstc3', 'ghome', 'family'] # 'dstc2', 'dstc3', 'ghome', 'family'
+    param['data_names']  = ['ghome', 'family'] # 'dstc2', 'dstc3', 'ghome', 'family'
 
     param['raw_feature_path']       = os.path.join(param['root_path'], 'dataset', 'feature', '%s.raw_feature.pkl')
     param['extracted_feature_path'] = os.path.join(param['root_path'], 'dataset', 'feature', '%s.extracted_feature.pkl')
