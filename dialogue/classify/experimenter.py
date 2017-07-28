@@ -299,9 +299,9 @@ class Experimenter():
         cv_results = []
         global X_train, Y_train, X_test, Y_test
 
-        # percentiles = (0.1, 0.2, 0.5, 1, 2, 5, 10, 100)
+        percentiles = (0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 100)
         # percentiles = (1, 5, 10, 20, 40, 60, 80, 100)
-        percentiles = (1, 5, 10, 20, 50, 100)
+        # percentiles = (1, 5, 10, 20, 50, 100)
 
         avg_result_dict = {}
 
