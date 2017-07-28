@@ -49,10 +49,14 @@ if __name__ == '__main__':
         # print("is.inf=", np.where(np.isinf(X)))
         # print("np.max=", np.max(abs(X)))
 
-        if config['experiment_mode'] == 'feature_selection':
+        if config['experiment_mode'] == 'feature_selection' or config['experiment_mode'] == 'print_important_features':
             result                  = exp.run_cross_validation_with_feature_selection(X, Y)
         elif config['experiment_mode'] == 'leave_one_out' or config['experiment_mode'] == 'keep_one_only':
             result                  = exp.run_cross_validation_with_leave_one_out(X, Y)
+        elif config['experiment_mode'] == 'reformulation_detection' or config['experiment_mode'] == 'task_boundary_detection':
+            result                  = exp.run_cross_validation_binary_task(X, Y)
+        elif config['experiment_mode'] == 'bad_case':
+            result                  = exp.run_cross_validation_bad_case(X, Y)
         else:
             result                  = exp.run_cross_validation(X, Y)
 

@@ -378,11 +378,11 @@ class PhraseFeature(BaseEstimator, TransformerMixin):
 
             # 5.2 noun_phrase_overlap:  True, if there is any NP overlap between two user utterances
             if len(inter_np) > 0:
-                np_dict['noun_phrases__have_overlop']    = True
-                np_dict['noun_phrases__#overlop']        = len(inter_np)
+                np_dict['noun_phrases__have_overlap']    = True
+                np_dict['noun_phrases__#overlap']        = len(inter_np)
             else:
-                np_dict['noun_phrases__have_overlop']    = False
-                np_dict['noun_phrases__#overlop']        = 0
+                np_dict['noun_phrases__have_overlap']    = False
+                np_dict['noun_phrases__#overlap']        = 0
 
             # 5.3 np_jaccard_similarity: Jaccard similarity of NPs.
             np_dict['noun_phrases__jaccard_similarity']  = jaccard_similarity(current_np_set, next_np_set)
@@ -436,11 +436,11 @@ class EntityFeature(BaseEstimator, TransformerMixin):
 
             # 6.2 entity_overlap:  True, if there is any entity overlap between two user utterances
             if len(inter_entity) > 0:
-                entity_dict['entity__have_overlop']    = True
-                entity_dict['entity__#overlop']        = len(inter_entity)
+                entity_dict['entity__have_overlap']    = True
+                entity_dict['entity__#overlap']        = len(inter_entity)
             else:
-                entity_dict['entity__have_overlop']    = False
-                entity_dict['entity__#overlop']        = 0
+                entity_dict['entity__have_overlap']    = False
+                entity_dict['entity__#overlap']        = 0
 
             # 6.3 entity_jaccard_similarity: Jaccard similarity of entities.
             entity_dict['entity__jaccard_similarity']  = jaccard_similarity(current_entity_set, next_entity_set)
