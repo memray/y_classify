@@ -864,11 +864,15 @@ class Experimenter():
                 # (Perceptron(n_iter=50), "Perceptron"),
                 # (PassiveAggressiveClassifier(n_iter=50), "Passive-Aggressive"),
                 # (KNeighborsClassifier(n_neighbors=10), "kNN"),
-                (RandomForestClassifier(n_estimators=50), "Random forest.#tree=50"),
-                (RandomForestClassifier(n_estimators=100), "Random forest.#tree=100"),
-                (RandomForestClassifier(n_estimators=300), "Random forest.#tree=300"),
-                # (RandomForestClassifier(n_estimators=500), "Random forest.#tree=500")
-        ]:
+                # (RandomForestClassifier(n_estimators=50), "Random forest.#tree=50"),
+                # (RandomForestClassifier(n_estimators=100, n_jobs=-1), "Random forest.#tree=100"),
+                # (RandomForestClassifier(n_estimators=300, n_jobs=-1), "Random forest.#tree=300"),
+                # (RandomForestClassifier(n_estimators=500, n_jobs=-1), "Random forest.#tree=500")
+                (RandomForestClassifier(n_estimators=64, n_jobs=-1), "Random forest.#tree=64"),
+                (RandomForestClassifier(n_estimators=128, n_jobs=-1), "Random forest.#tree=128"),
+                (RandomForestClassifier(n_estimators=256, n_jobs=-1), "Random forest.#tree=256"),
+                (RandomForestClassifier(n_estimators=512, n_jobs=-1), "Random forest.#tree=512")
+        ] * 5:
             self.logger.info('=' * 80)
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
@@ -912,7 +916,7 @@ class Experimenter():
         #     ('classification', LinearSVC())
         # ])))
 
-
+        """
         for C in [0.1, 1, 10]:
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
@@ -935,6 +939,7 @@ class Experimenter():
                                           max_iter=-1, probability=False, random_state=None, shrinking=True,
                                           tol=0.001, verbose=False))
             )
+        """
 
         return results
 

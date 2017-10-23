@@ -57,9 +57,9 @@ def load_config():
     param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
 
     # two key feature settings
-    param['context_set']     = ['current', 'next', 'last', 'all'][1]
+    param['context_set']     = ['current', 'next', 'last', 'all'][0]
 
-    selected_feature_set_id  = 1
+    selected_feature_set_id  = 5
     param['feature_set']     = ['0-all', '1-basic', '2-lexical', '3-syntactic', '4-lda', '5-w2v', '6-d2v'][selected_feature_set_id]
     param['feature_set_number']  = [['1','2','3','4','5','6','7','8','9','10'], ['1','2','3'], ['4'], ['5','6','7'], ['8'], ['9'], ['10']][selected_feature_set_id]
     param['similarity_feature']  = False
