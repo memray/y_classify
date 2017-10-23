@@ -60,7 +60,7 @@ def load_config():
     param['context_set']     = ['current', 'next', 'last', 'all'][1]
 
     selected_feature_set_id  = 1
-    param['feature_set']     = ['0.all', '1.basic', '2.lexical', '3.syntactic', '4.lda', '5.w2v', '6.d2v'][selected_feature_set_id]
+    param['feature_set']     = ['0-all', '1-basic', '2-lexical', '3-syntactic', '4-lda', '5-w2v', '6-d2v'][selected_feature_set_id]
     param['feature_set_number']  = [['1','2','3','4','5','6','7','8','9','10'], ['1','2','3'], ['4'], ['5','6','7'], ['8'], ['9'], ['10']][selected_feature_set_id]
     param['similarity_feature']  = False
 
@@ -76,7 +76,7 @@ def load_config():
         param['utterance_range'] = param['utterance_names']
 
     # param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
-    param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=%s' % 'true' if param['similarity_feature'] else 'false'])
+    param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
 
     param['experiment_path'] = os.path.join(param['root_path'], 'output', param['experiment_name'])
 

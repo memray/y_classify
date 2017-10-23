@@ -1,3 +1,0 @@
-dataset,context_set,feature_set,model,valid-accuracy,valid-precision,valid-recall,valid-f1_score,test-accuracy,test-precision,test-recall,test-f1_score
-dstc3,next,w/o similarity,LR.pen=l1.C=1,0.694256756757,0.733021712366,0.493930643645,0.492602045405,0.689189189189,0.733571405572,0.495855761593,0.503924339953
-dstc3,next,w/o similarity,LR.pen=l2.C=1,0.692567567568,0.730738062091,0.49304096393,0.491612855421,0.6875,0.606570428118,0.483355761593,0.481044999715

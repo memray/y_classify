@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
+    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="add new name">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171022-212409.context=next.feature=1.basic/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171022-212409.context=next.feature=1.basic/dstc2.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171022-212409.context=next.feature=1.basic/dstc2.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171022-212409.context=next.feature=1.basic/dstc3.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171022-212409.context=next.feature=1.basic/dstc3.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171022-212409.context=next.feature=1.basic/family.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171022-212409.context=next.feature=1.basic/family.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171022-212409.context=next.feature=1.basic/ghome.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171022-212409.context=next.feature=1.basic/ghome.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/all.test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/best_of_each_dataset.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/dstc2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/dstc2.test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/dstc3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/dstc3.test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/family.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/family.test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/ghome.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/ghome.test.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/configuration.py" afterPath="$PROJECT_DIR$/dialogue/classify/configuration.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/cv_experimenter.py" afterPath="$PROJECT_DIR$/dialogue/classify/cv_experimenter.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +51,7 @@
     <SUITE FILE_PATH="coverage/y_classify$Unittest_DataLoader_load_annotated_data.coverage" NAME="Unittest DataLoader.load_annotated_data Coverage Results" MODIFIED="1508471482853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
     <SUITE FILE_PATH="coverage/y_classify$sockwrap.coverage" NAME="sockwrap Coverage Results" MODIFIED="1508483288605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper" />
     <SUITE FILE_PATH="coverage/y_classify$example.coverage" NAME="example Coverage Results" MODIFIED="1508514856492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/pycorenlp" />
-    <SUITE FILE_PATH="coverage/y_classify$entry.coverage" NAME="entry Coverage Results" MODIFIED="1508721847646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/y_classify$entry.coverage" NAME="entry Coverage Results" MODIFIED="1508725692290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
     <SUITE FILE_PATH="coverage/presto_data_process$proc_text_files_to_stdout_example.coverage" NAME="proc_text_files_to_stdout_example Coverage Results" MODIFIED="1500262881296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp" />
     <SUITE FILE_PATH="coverage/presto_data_process$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1499471707987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
     <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union.coverage" NAME="hetero_feature_union Coverage Results" MODIFIED="1499817447220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
@@ -64,8 +85,8 @@
       <file leaf-file-name="entry_cv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/entry_cv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state relative-caret-position="471">
+              <caret line="69" column="59" lean-forward="false" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -73,10 +94,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="naive_bayes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/naive_bayes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="689" column="0" lean-forward="false" selection-start-line="689" selection-start-column="0" selection-end-line="689" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="data_loader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/data/data_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="6795">
               <caret line="466" column="47" lean-forward="false" selection-start-line="466" selection-start-column="47" selection-end-line="466" selection-end-column="47" />
               <folding>
                 <element signature="e#24#34#0" expanded="true" />
@@ -88,8 +119,8 @@
       <file leaf-file-name="cv_experimenter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/cv_experimenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="444" column="61" lean-forward="false" selection-start-line="444" selection-start-column="61" selection-end-line="444" selection-end-column="61" />
+            <state relative-caret-position="-543">
+              <caret line="886" column="57" lean-forward="false" selection-start-line="886" selection-start-column="57" selection-end-line="886" selection-end-column="57" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -97,10 +128,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="classes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/svm/classes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="150" column="8" lean-forward="false" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="2430">
               <caret line="181" column="4" lean-forward="false" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
               <folding />
             </state>
@@ -110,7 +151,7 @@
       <file leaf-file-name="feature_extractor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/feature_extractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="17775">
               <caret line="1185" column="80" lean-forward="false" selection-start-line="1185" selection-start-column="80" selection-end-line="1185" selection-end-column="80" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
@@ -122,8 +163,8 @@
       <file leaf-file-name="configuration.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+            <state relative-caret-position="510">
+              <caret line="67" column="152" lean-forward="false" selection-start-line="67" selection-start-column="152" selection-end-line="67" selection-end-column="152" />
               <folding />
             </state>
           </provider>
@@ -141,7 +182,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'utterance_range'</find>
       <find>Raw</find>
       <find>RawFeatureExtractor</find>
       <find>ItemSelector</find>
@@ -171,6 +211,7 @@
       <find>feature_names</find>
       <find>experiment_path</find>
       <find>dstc2</find>
+      <find>NB</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -246,8 +287,8 @@
         <option value="$PROJECT_DIR$/dialogue/classify/entry_doc2vec.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/entry_cv.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/feature_extractor.py" />
-        <option value="$PROJECT_DIR$/dialogue/classify/cv_experimenter.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/dialogue/classify/cv_experimenter.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/configuration.py" />
       </list>
     </option>
@@ -281,7 +322,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,6 +331,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="y_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="y_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="y_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="output" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,6 +414,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -765,13 +820,6 @@
       <workItem from="1483229924318" duration="65606000" />
       <workItem from="1500499303147" duration="26032000" />
     </task>
-    <task id="LOCAL-00046" summary="debug sessionize weather and monkey">
-      <created>1496349079561</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1496349079561</updated>
-    </task>
     <task id="LOCAL-00047" summary="debug sessionize weather and monkey">
       <created>1496350184598</created>
       <option name="number" value="00047" />
@@ -1108,7 +1156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508723719654</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="add new name">
+      <created>1508724994133</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1508724994133</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1142,7 +1197,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843652" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1152,9 +1207,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3377551" sideWeight="0.4884005" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.4957265" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32478634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32844934" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327551" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15131056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3059406" sideWeight="0.4920635" order="6" side_tool="false" content_ui="tabs" />
@@ -1170,6 +1224,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2017229" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327551" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1192,7 +1247,8 @@
     <MESSAGE value="debug the feature-selection: remove the w2v part and concatenate it later" />
     <MESSAGE value="add d2v and single run experiments" />
     <MESSAGE value="remove sth" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove sth" />
+    <MESSAGE value="add new name" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1304,20 +1360,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp/pycorenlp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp/stanford_corenlp_pywrapper/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1339,7 +1381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1359,7 +1400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="359" column="57" lean-forward="true" selection-start-line="359" selection-start-column="57" selection-end-line="359" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,7 +1421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="1405" column="0" lean-forward="false" selection-start-line="1405" selection-start-column="0" selection-end-line="1405" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1407,7 +1446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="637" column="13" lean-forward="false" selection-start-line="637" selection-start-column="13" selection-end-line="637" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1418,39 +1456,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/best_of_each_dataset.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/data.stats.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/best_of_each_dataset.csv" />
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/data.stats.csv" />
     <entry file="file://$PROJECT_DIR$/dialogue/classify/entry_doc2vec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding>
-            <element signature="e#24#61#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/output.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="237" lean-forward="true" selection-start-line="22" selection-start-column="237" selection-end-line="22" selection-end-column="237" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/output.log" />
     <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -1458,22 +1473,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/dstc2.test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/all.test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/dstc2.test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/all.test.csv" />
     <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/scipy/sparse/coo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-481">
@@ -1485,7 +1486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="1185" column="0" lean-forward="false" selection-start-line="1185" selection-start-column="0" selection-end-line="1185" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1493,133 +1493,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="127" column="20" lean-forward="false" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-162910.context=current.feature=[basic]/dstc2.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-174149.context=current.feature=[basic]/data.stats.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-174149.context=current.feature=[basic]/dstc2.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-191832.context=current.feature=[basic]/dstc2.valid_test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-191832.context=current.feature=[basic]/dstc2.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output/20171022-162910.context=current.feature=[basic]/dstc2.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-174149.context=current.feature=[basic]/data.stats.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-174149.context=current.feature=[basic]/dstc2.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-191832.context=current.feature=[basic]/dstc2.valid_test.json" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-191832.context=current.feature=[basic]/dstc2.valid_test.csv" />
     <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1387">
           <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/dstc2.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/dstc2.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/dstc3.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/dstc3.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/family.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/family.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/ghome.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/ghome.valid_test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/dstc2.valid_test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-693">
-          <caret line="0" column="1849" lean-forward="true" selection-start-line="0" selection-start-column="1849" selection-end-line="0" selection-end-column="1849" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/dstc2.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/dstc2.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/dstc3.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/dstc3.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/family.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/family.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/ghome.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/ghome.valid_test.csv" />
+    <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/dstc2.valid_test.json" />
     <entry file="file://$PROJECT_DIR$/dialogue/classify/feature_extractor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="17775">
           <caret line="1185" column="80" lean-forward="false" selection-start-line="1185" selection-start-column="80" selection-end-line="1185" selection-end-column="80" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
@@ -1629,19 +1529,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="2430">
           <caret line="181" column="4" lean-forward="false" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/classify/cv_experimenter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="444" column="61" lean-forward="false" selection-start-line="444" selection-start-column="61" selection-end-line="444" selection-end-column="61" />
-          <folding>
-            <element signature="e#24#61#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1653,19 +1543,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/classify/entry_cv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding>
-            <element signature="e#24#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/data/data_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
+        <state relative-caret-position="6795">
           <caret line="466" column="47" lean-forward="false" selection-start-line="466" selection-start-column="47" selection-end-line="466" selection-end-column="47" />
           <folding>
             <element signature="e#24#34#0" expanded="true" />
@@ -1673,10 +1553,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/svm/classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="150" column="8" lean-forward="false" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/naive_bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="689" column="0" lean-forward="false" selection-start-line="689" selection-start-column="0" selection-end-line="689" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/cv_experimenter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-543">
+          <caret line="886" column="57" lean-forward="false" selection-start-line="886" selection-start-column="57" selection-end-line="886" selection-end-column="57" />
+          <folding>
+            <element signature="e#24#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/entry_cv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="69" column="59" lean-forward="false" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
+          <folding>
+            <element signature="e#24#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="77" column="30" lean-forward="false" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+        <state relative-caret-position="510">
+          <caret line="67" column="152" lean-forward="false" selection-start-line="67" selection-start-column="152" selection-end-line="67" selection-end-column="152" />
           <folding />
         </state>
       </provider>
