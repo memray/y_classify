@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 
+import json
 import logging
 import copy
 import pickle
+
+import gensim
 import numpy as np
 from optparse import OptionParser
 import sys, os
@@ -11,6 +14,8 @@ from time import time
 import matplotlib.pyplot as plt
 from collections import Counter
 
+from gensim.models import Doc2Vec
+from gensim.models.doc2vec import LabeledSentence, TaggedDocument
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
@@ -29,6 +34,9 @@ from sklearn.neighbors import NearestCentroid
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.extmath import density
 from sklearn import metrics, preprocessing
+
+from classify.feature_extractor import ItemSelector
+from data import data_loader
 
 __author__ = "Rui Meng"
 __email__ = "rui.meng@pitt.edu"
@@ -54,6 +62,69 @@ class Experimenter():
         self.config = config
         self.logger = self.config.logger
 
+    def load_single_run_index(self, X, Y):
+        '''
+        Split data into 8:1:1 randomly
+        :param X:
+        :param Y:
+        :return:
+        '''
+        # load the data index for cross-validation
+        if self.config['experiment_mode'] == 'reformulation_detection' or self.config['experiment_mode'] == 'task_boundary_detection':
+            sr_index_cache_path = os.path.join(self.config.param['root_path'], 'dataset', 'single_run',
+                                               self.config.param['data_name'] + '.%s.index_cache.evenly.pkl' % (
+                                                   self.config['experiment_mode']))
+        else:
+            sr_index_cache_path = os.path.join(self.config.param['root_path'], 'dataset', 'single_run',
+                                               self.config.param['data_name'] + '.index_cache.evenly.pkl')
+
+        if os.path.exists(sr_index_cache_path):
+            with open(sr_index_cache_path, 'rb') as idx_cache:
+                train_ids, valid_ids, test_ids = pickle.load(idx_cache)
+        else:
+            if not os.path.exists(os.path.join(self.config.param['root_path'], 'dataset', 'single_run')):
+                os.makedirs(os.path.join(self.config.param['root_path'], 'dataset', 'single_run'))
+
+            with open(sr_index_cache_path, 'wb') as idx_cache:
+                # get ids and sort out by Y
+                y_dict = {}
+                for y_id, y in enumerate(Y):
+                    y_list = y_dict.get(y, [])
+                    y_list.append(y_id)
+                    y_dict[y] = y_list
+
+                # get a new division - shuffle the data of each class
+                data_dict_copy = copy.deepcopy(y_dict)
+                for y, y_list in data_dict_copy.items():
+                    np.random.shuffle(y_list)
+                    data_dict_copy[y] = np.asarray(y_list)
+                # print('*' * 20 + ' div=%d ' % div)
+
+                # segment to folds evenly to avoid data skewness
+                # initialize lists for the train/test id of this div-fold
+                train_ids = np.array([], dtype=int)
+                valid_ids = np.array([], dtype=int)
+                test_ids = np.array([], dtype=int)
+                # pick up the specific fold of data from each class
+                for y, y_list in data_dict_copy.items():
+                    fold_size = int(len(y_list) / self.config['#cross_validation'])
+
+                    test_idx = np.asarray(range(fold_size))
+                    valid_idx = np.asarray(range(fold_size, 2*fold_size))
+                    train_idx = np.asarray([i for i in range(len(y_list)) if i not in test_idx and i not in valid_idx])
+
+                    # print('fold=%d, #(%s)=%d, #(train)=%d, #(test)=%d' % (
+                    #     fold, y, len(y_list), len(train_idx), len(test_idx)))
+
+                    train_ids = np.append(train_ids, y_list[train_idx])
+                    valid_ids = np.append(valid_ids, y_list[valid_idx])
+                    test_ids  = np.append(test_ids, y_list[test_idx])
+
+                pickle.dump([train_ids, valid_ids, test_ids], idx_cache)
+
+        return train_ids, valid_ids, test_ids
+
+
     def load_cv_index(self, X, Y):
         # load the data index for cross-validation
         if self.config['experiment_mode'] == 'reformulation_detection' or self.config['experiment_mode'] == 'task_boundary_detection':
@@ -68,6 +139,9 @@ class Experimenter():
             with open(cv_index_cache_path, 'rb') as idx_cache:
                 train_ids, test_ids = pickle.load(idx_cache)
         else:
+            if not os.path.exists(os.path.join(self.config.param['root_path'], 'dataset', 'cross_validation')):
+                os.makedirs(os.path.join(self.config.param['root_path'], 'dataset', 'cross_validation'))
+
             with open(cv_index_cache_path, 'wb') as idx_cache:
                 num_data = len(Y)
                 train_ids = []
@@ -114,8 +188,100 @@ class Experimenter():
 
         return train_ids, test_ids
 
-    def benchmark(self, model_name, clf, return_y_pred = False):
-        global X_train, Y_train, X_test, Y_test
+    def benchmark(self, model_name, clf):
+        global X_train, Y_train, X_test, Y_test, X_valid, Y_valid
+        results = []
+
+        if 'vectorizer' in self.config:
+            feature_names = np.asarray(self.config['vectorizer'].get_feature_names())
+        else:
+            feature_names = None
+        # feature_names = np.asarray(self.config['vectorizer'].get_feature_names())
+        target_names  = np.asarray(self.config['label_encoder'].classes_)
+
+        self.logger.info('_' * 80)
+        self.logger.info("Training: ")
+        self.logger.info(clf)
+        t0 = time()
+        clf.fit(X_train, Y_train)
+        train_time = time() - t0
+        self.logger.info("train time: %0.3fs" % train_time)
+
+        for valid_test, X, Y in [('valid', X_valid, Y_valid), ('test', X_test, Y_test)]:
+            t0 = time()
+            pred = clf.predict(X)
+            test_time = time() - t0
+            self.logger.info("test time:  %0.3fs" % test_time)
+
+            acc_score = metrics.accuracy_score(Y, pred)
+            precision_score = metrics.precision_score(Y, pred, average='macro')
+            recall_score = metrics.recall_score(Y, pred, average='macro')
+            f1_score = metrics.f1_score(Y, pred, average='macro')
+
+            self.logger.info("accuracy:   %0.3f" % acc_score)
+            self.logger.info("f1_score:   %0.3f" % f1_score)
+
+            if (not hasattr(clf, 'kernel')) or (hasattr(clf, 'kernel') and clf.kernel != 'rbf'):
+                if hasattr(clf, 'coef_'):
+                    self.logger.info("dimensionality: %d" % clf.coef_.shape[1])
+                    self.logger.info("density: %f" % density(clf.coef_))
+
+                    if opts.print_top10 and feature_names is not None:
+                        self.logger.info("top 10 keywords per class:")
+                        for i, label in enumerate(target_names):
+                            top10 = np.argsort(clf.coef_[i])[-10:]
+                            self.logger.info("%s: %s" % (label, " ".join(feature_names[top10])))
+                    self.logger.info('')
+
+            if opts.print_report:
+                self.logger.info("classification report:")
+                report = metrics.classification_report(Y, pred,
+                                                    target_names=target_names)
+                self.logger.info(report)
+
+            if opts.print_cm:
+                self.logger.info("confusion matrix:")
+                confusion_mat = str(metrics.confusion_matrix(Y, pred))
+                self.logger.info('\n'+confusion_mat)
+
+            clf_descr = str(clf) # str(clf).split('(')[0]
+
+            result = {}
+            result['dataset']          = self.config.param['data_name']
+            result['model']            = model_name
+            result['valid_test']       = valid_test
+
+            result['accuracy']         = acc_score
+            result['precision']        = precision_score
+            result['recall']           = recall_score
+            result['f1_score']         = f1_score
+            result['training_time']    = train_time
+            result['test_time']        = test_time
+            result['report']           = report
+            result['confusion_matrix'] = confusion_mat
+            result['y_test']           = Y.tolist()
+            result['y_pred']           = pred.tolist()
+
+            results.append(result)
+
+        # if return_y_pred:
+        #     return [model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time], pred
+        # else:
+        #     return model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time
+
+        # return a list, the 1st item is validation result, the 2nd is testing result
+        return results
+
+    def benchmark_train_test(self, model_name, clf, return_y_pred = False):
+        '''
+        old benchmark method, only do train and then test, have to train twice if needs validation
+        :param model_name:
+        :param clf:
+        :param return_y_pred:
+        :return:
+        '''
+        global X_train, Y_train, X_test, Y_test, X_valid, Y_valid
+        results = {}
 
         if 'vectorizer' in self.config:
             feature_names = np.asarray(self.config['vectorizer'].get_feature_names())
@@ -159,18 +325,38 @@ class Experimenter():
 
         if opts.print_report:
             self.logger.info("classification report:")
-            self.logger.info(metrics.classification_report(Y_test, pred,
-                                                target_names=target_names))
+            report = metrics.classification_report(Y_test, pred,
+                                                target_names=target_names)
+            self.logger.info(report)
 
         if opts.print_cm:
             self.logger.info("confusion matrix:")
-            self.logger.info('\n'+str(metrics.confusion_matrix(Y_test, pred)))
+            confusion_mat = str(metrics.confusion_matrix(Y_test, pred))
+            self.logger.info('\n'+confusion_mat)
 
         clf_descr = str(clf) # str(clf).split('(')[0]
-        if return_y_pred:
-            return [model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time], pred
-        else:
-            return model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time
+
+        results['dataset']          = self.config.param['data_name']
+        results['model']            = model_name
+        if 'valid_test' in self.config.param:
+            results['valid_test']   = self.config.param['valid_test']
+
+        results['accuracy']         = acc_score
+        results['precision']        = precision_score
+        results['recall']           = recall_score
+        results['f1_score']         = f1_score
+        results['training_time']    = train_time
+        results['test_time']        = test_time
+        results['report']           = report
+        results['confusion_matrix'] = confusion_mat
+        results['y_test']           = Y_test.tolist()
+        results['y_pred']           = pred.tolist()
+
+        # if return_y_pred:
+        #     return [model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time], pred
+        # else:
+        #     return model_name, acc_score, precision_score, recall_score, f1_score, train_time, test_time
+        return results
 
     def run_cross_validation(self, X, Y):
         X = np.nan_to_num(X.todense())
@@ -192,6 +378,161 @@ class Experimenter():
         avg_results = self.average_results(cv_results)
 
         return avg_results
+
+
+    def run_single_pass(self, X, Y):
+        X = np.nan_to_num(X.todense())
+
+        train_id, valid_id, test_id = self.load_single_run_index(X, Y)
+
+        global X_train, Y_train, X_test, Y_test, X_valid, Y_valid
+        X_train = np.nan_to_num(preprocessing.scale(X[train_id]))
+        Y_train = Y[train_id]
+
+        # validation set
+        X_valid = np.nan_to_num(preprocessing.scale(X[valid_id]))
+        Y_valid = Y[valid_id]
+        # test set
+        X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
+        Y_test = Y[test_id]
+        result = self.run_experiment()
+
+        self.export_single_pass_results(result)
+        return
+
+
+    def run_single_pass_context_feature(self, X, Y):
+        X = np.nan_to_num(X.todense())
+
+        train_id, valid_id, test_id = self.load_single_run_index(X, Y)
+        global X_train, Y_train, X_test, Y_test, X_valid, Y_valid
+
+        if self.config.param['context_set'] == 'current':
+            excluded_context_keywords = ['next', 'last']
+        if self.config.param['context_set'] == 'next':
+            excluded_context_keywords = ['last']
+        if self.config.param['context_set'] == 'last':
+            excluded_context_keywords = ['next']
+        if self.config.param['context_set'] == 'all':
+            excluded_context_keywords = []
+
+        retained_feature_indices = []
+        retained_feature_names = []
+
+        # get the features
+        for f_id,f_name in enumerate(self.config['feature_names']):
+            f_start_number = f_name[0:f_name.find('-')]
+            if f_start_number.find('.') > 0:
+                f_start_number = f_name[0:f_start_number.find('.')]
+
+            if f_start_number not in self.config.param['feature_set_number']:
+                continue
+
+            if not self.config.param['similarity_feature'] and f_name.find('similarity') > 0:
+                continue
+
+            within_context = True
+            for context_keyword in excluded_context_keywords:
+                if f_name.find(context_keyword) > 0:
+                    within_context = False
+            if not within_context:
+                continue
+
+            retained_feature_indices.append(f_id)
+            retained_feature_names.append(f_name)
+
+
+        X_new = copy.deepcopy(X)[:, retained_feature_indices]
+        self.logger.info('%' * 50)
+        self.logger.info('retained features: [%s]' % (','.join(retained_feature_names)))
+        self.logger.info('context=%s, feature=%s, #=%d' % (self.config.param['context_set'], self.config.param['feature_set'], len(retained_feature_indices)))
+        self.logger.info('retained feature numbers=[%s]' % ', '.join(list(set([f[0:f.find('-')] for f in retained_feature_names]))))
+        self.logger.info('X_new.shape=%s' % str(X_new.shape))
+        self.logger.info('%' * 50)
+
+        X_train = np.nan_to_num(preprocessing.scale(X_new[train_id]))
+        Y_train = Y[train_id]
+        # validation set
+        X_valid = np.nan_to_num(preprocessing.scale(X_new[valid_id]))
+        Y_valid = Y[valid_id]
+        # test set
+        X_test = np.nan_to_num(preprocessing.scale(X_new[test_id]))
+        Y_test = Y[test_id]
+        result = self.run_experiment()
+
+        self.export_single_pass_results(result)
+        return
+
+    def run_single_pass_doc2vec(self, X_raw_feature, Y):
+        train_id, valid_id, test_id = self.load_single_run_index(X_raw_feature, Y)
+
+        documents = []
+        selector = ItemSelector(keys=self.config['utterance_range'])
+        for item_no, sents in enumerate(zip(*selector.transform(X_raw_feature))):
+            sents = '. '.join(sents) # can be multiple sentences
+            doc = TaggedDocument(words=gensim.utils.to_unicode(sents).split(), tags=[item_no])
+            documents.append(doc)
+
+        X_train_docs = [documents[i] for i in train_id]
+        X_valid_docs = [documents[i] for i in valid_id]
+        X_test_docs  = [documents[i] for i in test_id]
+
+        '''
+        Load or train Doc2Vec
+        '''
+        if os.path.exists(self.config['d2v_model_path'] % self.config['data_name']) and os.path.exists(self.config['d2v_vector_path'] % self.config['data_name']):
+            d2v_model  = Doc2Vec.load(self.config['d2v_model_path'] % self.config['data_name'])
+            d2v_vector = data_loader.deserialize_from_file(self.config['d2v_vector_path'] % self.config['data_name'])
+        else:
+            # d2v_model = Doc2Vec(size=self.config['d2v_vector_length'], window=self.config['d2v_window_size'], min_count=self.config['d2v_min_count'], workers=4, alpha=0.025, min_alpha=0.025) # use fixed documents rate
+            d2v_model = Doc2Vec(size=self.config['d2v_vector_length'], window=self.config['d2v_window_size'], min_count=self.config['d2v_min_count'], workers=4)
+            d2v_model.build_vocab(X_train_docs)
+            d2v_model.intersect_word2vec_format(self.config['w2v_path'], binary=True)
+            for epoch in range(10):
+                d2v_model.train(X_train_docs, total_examples=len(X_train_docs), epochs=1)
+                # d2v_model.alpha -= 0.002  # decrease the learning rate
+                # d2v_model.min_alpha = d2v_model.alpha  # fix the learning rate, no decay
+
+            d2v_vector = [[] for i in range(len(documents))]
+            for id in train_id:
+                d2v_vector[id] = d2v_model.docvecs[id]
+            for id, doc in zip(valid_id, X_valid_docs):
+                d2v_vector[id] = d2v_model.infer_vector(doc.words)
+            for id, doc in zip(test_id, X_test_docs):
+                d2v_vector[id] = d2v_model.infer_vector(doc.words)
+
+            # store the model to mmap-able files
+            d2v_model.save(self.config['d2v_model_path'] % self.config['data_name'])
+            data_loader.serialize_to_file(d2v_vector, self.config['d2v_vector_path'] % self.config['data_name'])
+
+
+        '''
+        Training and Testing
+        '''
+        X = np.asarray(d2v_vector)
+        cv_results = []
+        global X_train, Y_train, X_test, Y_test
+        X_train = X[train_id]
+        Y_train = Y[train_id]
+
+        # run experiment on validation set
+        X_test = X[valid_id]
+        Y_test = Y[valid_id]
+        valid_result = self.run_experiment()
+        cv_results.append(valid_result)
+
+        print('*' * 50 + '\nValidation Performance \n ' + str(valid_result) + '\n' + '*' * 50)
+
+        # run experiment on test set
+        X_test = X[test_id]
+        Y_test = Y[test_id]
+        test_result = (self.run_experiment())
+        cv_results.append(test_result)
+        print('*' * 50 + '\nTest Performance \n ' + str(test_result) + '\n' + '*' * 50)
+
+        avg_results = self.average_results(cv_results)
+        return avg_results
+
 
     def run_cross_validation_bad_case(self, X, Y):
         X = np.nan_to_num(X.todense())
@@ -563,17 +904,22 @@ class Experimenter():
         # results.append(self.benchmark('MultinomialNB', MultinomialNB(alpha=.01)))
         # results.append(self.benchmark('BernoulliNB', BernoulliNB(alpha=.01)))
 
-        '''
-        self.logger.info('=' * 80)
-        self.logger.info("LinearSVC with L1-based feature selection")
+        # self.logger.info('=' * 80)
+        # self.logger.info("LinearSVC with L1-based feature selection")
         # The smaller C, the stronger the regularization.
         # The more regularization, the more sparsity.
-        results.append(self.benchmark('LinearSVC+L1-FeatSel', Pipeline([
-            ('feature_selection', LinearSVC(penalty="l1", dual=False, tol=1e-3)),
-            ('classification', LinearSVC())
-        ])))
-        '''
+        # results.append(self.benchmark('LinearSVC+L1-FeatSel', Pipeline([
+        #     ('feature_selection', LinearSVC(penalty="l1", dual=False, tol=1e-3)),
+        #     ('classification', LinearSVC())
+        # ])))
 
+        # self.logger.info('=' * 80)
+        # self.logger.info("LinearSVC")
+        # # The smaller C, the stronger the regularization.
+        # # The more regularization, the more sparsity.
+        # results.append(self.benchmark('LinearSVC', Pipeline([
+        #     ('classification', LinearSVC())
+        # ])))
 
         for C in [1]:
         # for C in [0.1, 1, 10]:
@@ -582,6 +928,11 @@ class Experimenter():
             # Train Logistic Regression model
             results.append(self.benchmark('LR.pen=l1.C=%d' % C,
                                           LogisticRegression(solver="liblinear", penalty='l1', C=C)))
+            self.logger.info('=' * 80)
+            self.logger.info("LR.pen=l2.C=%f" % C)
+            # Train Logistic Regression model
+            results.append(self.benchmark('LR.pen=l2.C=%d' % C,
+                                          LogisticRegression(solver="liblinear", penalty='l2', C=C, dual=True)))
         '''
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%d" % C)
@@ -630,10 +981,26 @@ class Experimenter():
             for result in results:
                 csv_file.write(','.join([str(result[fn]) for fn in field_names])+'\n')
 
+    def export_single_pass_results(self, results):
+        # field_names in results of benchmarks = ['dataset', 'model', 'valid_test', 'accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time', 'report', 'confusion_mat', 'y_test', 'y_pred']
+        field_names = ['dataset', 'context_set','feature_set', 'model', 'valid-accuracy', 'valid-precision', 'valid-recall', 'valid-f1_score', 'test-accuracy', 'test-precision', 'test-recall', 'test-f1_score']
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.valid_test.csv'), 'w') as csv_file:
+            csv_file.write(','.join(field_names) + '\n')
+
+            for valid, test in results:
+                field_values = [self.config.param['data_name'], self.config.param['context_set'], self.config.param['feature_set'] + ' w/ similarity' if self.config.param['similarity_feature'] else 'w/o similarity', valid['model']]
+                [field_values.append(str(valid[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
+                [field_values.append(str(test[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
+                csv_file.write(','.join(field_values) + '\n')
+
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.valid_test.json'), 'w') as json_file:
+            json.dump(results, json_file)
+
     def average_results(self, cv_results):
         # average the results of cross validation
         score_dict = {}
         num_metrics = 0
+
         for cv_result in cv_results:
             for clf_result in cv_result:
                 clf_names, accuracy, precision_score, recall_score, f1_score, training_time, test_time= clf_result

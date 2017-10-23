@@ -6,6 +6,9 @@ from __future__ import division
 import subprocess, tempfile, time, os, logging, re, struct, socket, atexit, glob, itertools
 from copy import copy,deepcopy
 from pprint import pprint
+
+from classify import configuration
+
 try:
     import ujson as json
 except ImportError:
@@ -75,9 +78,8 @@ def command(mode=None, configfile=None, configdict=None, comm_mode=None,
 
 
     cmd = """exec {java_command} {java_options} -cp '{classpath}' 
-    corenlp.SocketServer {comm_info} {more_config}"""
+    edu.stanford.nlp.pipeline.StanfordCoreNLP {comm_info} {more_config}"""
     return cmd.format(**d).replace("\n", " ")
-
 
 class SubprocessCrashed(Exception):
     pass
@@ -87,15 +89,15 @@ class CoreNLP:
 
     def __init__(self, mode=None, 
             configfile=None, configdict=None,
-            corenlp_jars=(
-                "/Users/rmeng/Project/stanford-corenlp-full-2017-06-09/*",
-                "/Users/rmeng/Project/stanford-corenlp-full-2017-06-09/stanford-english-kbp-corenlp-2017-06-09-models.jar",
-                ),
+            corenlp_jars=None,
             comm_mode='PIPE',  # SOCKET or PIPE
-            server_port=12340, outpipe_filename_prefix="/tmp/corenlp_pywrap_pipe",
+            server_port=9000, outpipe_filename_prefix="/tmp/corenlp_pywrap_pipe",
             **more_configdict_args
             ):
         """
+        !!!RUI: SOCKET IS BROKEN
+
+
         mode: if you supply this as a single string, we'll use a prebaked set
         of annotators.  if you don't want this, specify either (configfile or
         configdict) and set 'annotators' there.
@@ -177,9 +179,10 @@ class CoreNLP:
         if self.comm_mode=='SOCKET':
             sock = self.get_socket(num_retries=100, retry_interval=STARTUP_BUSY_WAIT_INTERVAL_SEC)
             sock.close()
-        elif self.comm_mode=='PIPE':
-            self.outpipe_fp = open(self.outpipe, 'rb')
+        # elif self.comm_mode=='PIPE':
+        #     self.outpipe_fp = open(self.outpipe, 'rb')
 
+        '''
         while True:
             # This loop is for if you have timeouts for the socket connection
             # The pipe system doesn't have timeouts, so this should run only
@@ -195,6 +198,7 @@ class CoreNLP:
                 LOG.info("Waiting for startup: ping got exception: %s %s" % (type(e), e))
                 LOG.info("pausing before retry")
                 time.sleep(STARTUP_BUSY_WAIT_INTERVAL_SEC)
+        '''
 
         LOG.info("Subprocess is ready.")
 
@@ -218,7 +222,8 @@ class CoreNLP:
             os.kill(self.proc.pid, 9)
 
     def parse_doc(self, text, timeout=PARSEDOC_TIMEOUT_SEC, raw=False):
-        cmd = "PARSEDOC\t%s" % json.dumps(text)
+        # cmd = '%s' % json.dumps(text)
+        cmd = text
         return self.send_command_and_parse_result(cmd, timeout, raw=raw)
 
     def get_socket(self, num_retries=1, retry_interval=1):
@@ -263,18 +268,21 @@ class CoreNLP:
         if self.comm_mode == 'SOCKET':
             sock = self.get_socket(num_retries=100)
             sock.settimeout(timeout)
-            sock.sendall(cmd + "\n")
+
+            sock.sendall((cmd + "\n").encode())
             size_info_str = sock.recv(8)
         elif self.comm_mode == 'PIPE':
-            self.proc.stdin.write(bytes(cmd + "\n", 'utf_8'))
-            self.proc.stdin.flush()
-            size_info_str = self.outpipe_fp.read(8)
+            # self.proc.stdin.write(bytes(cmd + "\n", 'utf_8'))
+            # self.proc.stdin.flush()
+            # size_info_str = self.outpipe_fp.read(8)
+            size_info_str = self.proc.communicate(cmd.encode())[0]
 
         # java "long" is 8 bytes, which python struct calls "long long".
         # java default byte ordering is big-endian.
-        size_info = struct.unpack('>Q', size_info_str)[0]
+        # size_info = struct.unpack('>Q', size_info_str)[0]
         # print "size expected", size_info
 
+        '''
         chunks = []
         curlen = lambda: sum(len(x) for x in chunks)
         while True:
@@ -282,13 +290,15 @@ class CoreNLP:
             if self.comm_mode == 'SOCKET':
                 data = sock.recv(remaining_size)
             elif self.comm_mode == 'PIPE':
-                data = self.outpipe_fp.read(remaining_size)
+                # data = self.outpipe_fp.read(remaining_size)
+                data = self.proc.communicate()[0]
             chunks.append(data)
             if curlen() >= size_info: break
             if len(chunks) > 1000:
                 LOG.warning("Incomplete value from server")
                 return None
             time.sleep(0.01)
+        '''
         return ''.join([c.decode("utf-8")  for c in chunks])
 
 
@@ -332,21 +342,25 @@ def assert_no_java(msg=""):
     print(''.join(javalines))
     assert len(javalines) == 0, msg
 
-# def test_doctimeout():
-#     assert_no_java("no java when starting")
-#
-#     p = CoreNLP("pos")
-#     ret = p.parse_doc(open("allbrown.txt").read(), 0.5)
-#     assert ret is None
-#     p.kill_proc_if_running()
-#     assert_no_java()
+def test_doctimeout():
+    assert_no_java("no java when starting")
+
+    config = configuration.load_config()
+
+    p = CoreNLP('nerparse', corenlp_jars=config['corenlp_jars'], comm_mode='PIPE', outputFormat='json')
+    ret = p.parse_doc("Does this work?")
+    assert ret is None
+    p.kill_proc_if_running()
+    assert_no_java()
 
 if __name__=='__main__':
-    import sys
-    if sys.argv[1]=='modes':
-        for mode,d in MODES_items:
-            print("  * `%s`: %s" % (mode, d['description']))
-    if sys.argv[1]=='modes_json':
-        # import json as stdjson
-        # print stdjson.dumps(MODES, indent=4)
-        print('"%s"' % json.dumps(MODES).replace('"', r'\"'))
+    # import sys
+    # if sys.argv[1]=='modes':
+    #     for mode,d in MODES_items:
+    #         print("  * `%s`: %s" % (mode, d['description']))
+    # if sys.argv[1]=='modes_json':
+    #     # import json as stdjson
+    #     # print stdjson.dumps(MODES, indent=4)
+    #     print('"%s"' % json.dumps(MODES).replace('"', r'\"'))
+
+    test_doctimeout()

@@ -109,3 +109,8 @@ ENV/
 # Rope project settings
 .ropeproject
 dataset.tar.gz
+/dataset/
+!/dataset/single_run/
+/output@Yahoo/
+/event_from_zhen/
+/dataset_old/

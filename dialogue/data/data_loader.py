@@ -384,7 +384,8 @@ class DataLoader(object):
 class Family_Assistant(DataLoader):
     def __init__(self, **kwargs):
         super(Family_Assistant, self).__init__(**kwargs)
-        self.annotated_data_path = os.path.join(self.root_dir, 'dataset', 'editorial_annotations', 'done', 'Done-Family_Assistant.N=1000.sampled.csv')
+        self.annotated_data_path = os.path.join(self.root_dir, 'dataset', 'editorial_annotations', 'finished', 'Final-Family_Assistant.N=1000.sampled.csv_.csv')
+        # self.annotated_data_path = os.path.join(self.root_dir, 'dataset', 'editorial_annotations', 'done', 'Done-Family_Assistant.N=1000.sampled.csv')
 
         self.data_path = os.path.join(self.root_dir, 'dataset', 'raw_datasets', 'Family_Assistant.20170306.interval=5min.session', 'part-v002-o000-r-00000')
         self.name = self.__class__.__name__
@@ -461,19 +462,22 @@ class DSTC1(DataLoader):
 class DSTC2(DataLoader):
     def __init__(self, **kwargs):
         super(DSTC2, self).__init__(**kwargs)
-        self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'done', 'Done-DSTC2.N=1000.sampled.csv')
+        self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'finished', 'Final-DSTC2.N=1000.sampled.csv')
+        # self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'done', 'Done-DSTC2.N=1000.sampled.csv')
         self.data_path = os.path.join(self.root_dir, 'dataset', 'raw_datasets', 'DSTC2')
 
 class DSTC3(DataLoader):
     def __init__(self, **kwargs):
         super(DSTC3, self).__init__(**kwargs)
-        self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'done', 'Done-Merged.DSTC3.N=1000.sampled.csv')
+        self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'finished', 'Final-Merged.DSTC3.N=1000.sampled.csv')
+        # self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'done', 'Done-Merged.DSTC3.N=1000.sampled.csv')
         self.data_path = os.path.join(self.root_dir, 'dataset', 'raw_datasets', 'DSTC3_test')
 
 class GHOME(DataLoader):
     def __init__(self, **kwargs):
         super(GHOME, self).__init__(**kwargs)
-        self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'done', 'Done-Merged.GHOME.N=1000.sampled.csv')
+        self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'finished', 'Final-Merged.GHOME.N=1000.sampled.csv')
+        # self.annotated_data_path = os.path.join(self.root_dir, 'dataset','editorial_annotations', 'done', 'Done-Merged.GHOME.N=1000.sampled.csv')
 
         self.raw_data_path = self.root_dir + '/dataset/GHome/raw-dialogue.csv'
         # self.data_path = self.root_dir + '/dataset/GHome/sorted-dialogue.csv'
