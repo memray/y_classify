@@ -4,7 +4,9 @@ import os
 import nltk
 import numpy as np
 from gensim import corpora
+from gensim.models import Doc2Vec
 from gensim.models import LdaModel
+from gensim.models.doc2vec import TaggedDocument
 from sklearn import preprocessing
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
@@ -22,7 +24,7 @@ import numpy.core.numeric as _nx
 from numpy.core import getlimits, umath
 
 # initialize the Stanford wrapper
-from stanford_corenlp_pywrapper import CoreNLP
+from stanford_corenlp.pycorenlp.corenlp import StanfordCoreNLP
 import gensim
 from sklearn.externals import joblib
 
@@ -121,24 +123,38 @@ class RawFeatureExtractor(BaseEstimator, TransformerMixin):
             features = data_loader.deserialize_from_file(feature_cache_path)
         else:
             logger.info('Not found saved raw feature of %s, extracting...' % (config['data_name']))
-            corenlp = CoreNLP('nerparse')  # need to override corenlp_jars
 
             features = np.recarray(shape=(len(X_raw),),
                                    dtype=[('current_user_utterance', object),
                                           ('next_system_utterance', object),
                                           ('next_user_utterance', object),
-                                          ('user_utterance_pairs', object),
+                                          ('next_user_utterance_pairs', object),
+                                          ('last_system_utterance', object),
+                                          ('last_user_utterance', object),
+                                          ('last_user_utterance_pairs', object),
                                           ('parsed_results__current_user_utterance', object),
                                           ('parsed_results__next_system_utterance', object),
                                           ('parsed_results__next_user_utterance', object),
+                                          ('parsed_results__last_system_utterance', object),
+                                          ('parsed_results__last_user_utterance', object),
                                           ('noun_phrases__current_user_utterance', object),
                                           ('noun_phrases__next_system_utterance', object),
                                           ('noun_phrases__next_user_utterance', object),
+                                          ('noun_phrases__last_system_utterance', object),
+                                          ('noun_phrases__last_user_utterance', object),
                                           ('x_raw', object)])
 
             next_system_utterance_count = 0
             next_user_utterance_count = 0
+
+            # corenlp = CoreNLP('nerparse', corenlp_jars=config['corenlp_jars'], comm_mode='PIPE')
+
+            nlp = StanfordCoreNLP('http://localhost:9000')
+
+            logger.info('Generating raw feature of %s' % (config['data_name']))
             for i, x_raw in enumerate(X_raw):
+                if i % 1000 == 0:
+                    print(i)
                 '''
                 1. Raw features of current_user_utterance
                 '''
@@ -165,15 +181,56 @@ class RawFeatureExtractor(BaseEstimator, TransformerMixin):
                     if features['next_user_utterance'][i] != '':
                         next_user_utterance_count += 1
                         # self.logger.info('%s - %s' % ('next_user_utterance', features['next_user_utterance'][i]))
-                    features['user_utterance_pairs'][i] = (x_raw['utterance'].msg_text, x_raw['dialogue'][x_index+2].msg_text)
+                    features['next_user_utterance_pairs'][i] = (x_raw['utterance'].msg_text, x_raw['dialogue'][x_index+2].msg_text)
                 else:
                     features['next_user_utterance'][i] = ''
-                    features['user_utterance_pairs'][i] = (x_raw['utterance'].msg_text, '')
+                    features['next_user_utterance_pairs'][i] = (x_raw['utterance'].msg_text, '')
 
+                '''
+                4. Raw features of last_system_utterance
+                '''
+                x_index = x_raw['index']
+                if x_index - 1 >= 0 and x_raw['dialogue'][x_index-1].direction == 'bot_to_sb':
+                    features['last_system_utterance'][i] = x_raw['dialogue'][x_index-1].msg_text
+                    if features['last_system_utterance'][i] != '':
+                        next_system_utterance_count += 1
+                        # self.logger.info('%s - %s' % ('next_system_utterance', features['next_system_utterance'][i]))
+                else:
+                    features['last_system_utterance'][i] = ''
+
+                '''
+                5. Raw features of last_user_utterance
+                '''
+                if x_index - 2 >= 0 and x_raw['dialogue'][x_index-2].direction == 'user_to_sb':
+                    features['last_user_utterance'][i] = x_raw['dialogue'][x_index-2].msg_text
+                    if features['last_user_utterance'][i] != '':
+                        next_user_utterance_count += 1
+                    features['last_user_utterance_pairs'][i] = (x_raw['utterance'].msg_text, x_raw['dialogue'][x_index-2].msg_text)
+                else:
+                    features['last_user_utterance'][i] = ''
+                    features['last_user_utterance_pairs'][i] = (x_raw['utterance'].msg_text, '')
+
+            logger.info('Extracting basic features by CoreNLP')
+            # Extract basic features by CoreNLP
             for i, x_raw in enumerate(X_raw):
+                print("*" * 50)
+                print(i)
+                #
+                # if i < 1108:
+                #     continue
+
                 for utterance_type in config['utterance_range']:
-                    # consists of ['deps_cc', 'pos', 'lemmas', 'tokens', 'char_offsets', 'ner', 'entitymentions', 'parse', 'deps_basic', 'normner']
+                    print(features[utterance_type][i])
+                    '''
+                    # Changed from CoreNLP to PyCoreNLP
+                    consists of ['deps_cc', 'pos', 'lemmas', 'tokens', 'char_offsets', 'ner', 'entitymentions', 'parse', 'deps_basic', 'normner']
                     parsed_results = corenlp.parse_doc(features[utterance_type][i])
+                    '''
+
+                    parsed_results = nlp.annotate(features[utterance_type][i], properties={
+                        'annotators': 'tokenize, ssplit, pos, lemma, ner, entitymentions, parse',
+                        'outputFormat': 'json', 'timeout': 60000
+                    })
 
                     # if len(parsed_results['sentences']) > 1:
                     #     print('Find %d sentences' % len(parsed_results['sentences']))
@@ -189,16 +246,26 @@ class RawFeatureExtractor(BaseEstimator, TransformerMixin):
 
                         # should be a list of dicts
                         features['parsed_results__%s' % utterance_type][i] = parsed_results['sentences']
-                        # could be multiple sentences in one utterance, so merge them into one array
+
+                        '''
+                        # Changed from CoreNLP to PyCoreNLP
                         tokens = np.concatenate([[t.lower() for t in s['tokens']] for s in parsed_results['sentences']])
                         pos    = np.concatenate([s['pos'] for s in parsed_results['sentences']])
-                        features['noun_phrases__%s' % utterance_type][i] = extract_noun_phrases(tokens, pos)
+                        '''
+                        # could be multiple sentences in one utterance, so merge them into one array
+                        words = np.concatenate(
+                            [[t['originalText'].lower() for t in s['tokens']] for s in parsed_results['sentences']])
+                        pos = np.concatenate([[t['pos'] for t in s['tokens']] for s in parsed_results['sentences']])
+
+                        features['noun_phrases__%s' % utterance_type][i] = extract_noun_phrases(words, pos)
 
             # logger.info('has_next_system_utterance_count = %d/%d' % (next_system_utterance_count, len(X_raw)))
             # logger.info('has_next_user_utterance_count = %d/%d' % (next_user_utterance_count, len(X_raw)))
 
             logger.info('Saving raw feature of %s to %s' % (config['data_name'], feature_cache_path))
             data_loader.serialize_to_file(features, feature_cache_path)
+
+        config.param['raw_feature'] = features
 
         return features
 
@@ -363,29 +430,45 @@ class PhraseFeature(BaseEstimator, TransformerMixin):
         return_list = []
 
         # iterate each data sample, contains three parts (currrent_user, current_system, next_user)
-        for k, np_record in enumerate(zip(np_records[0],np_records[1],np_records[2])):
+        for k, np_record in enumerate(zip(*np_records)):
             # iterate each type of utterance
             np_dict = {}
 
             # 5.1 noun_phrase: one-hot representation of all noun phrases (extracted by POS-tagging patterns)
-            for i in range(3):
+            for i in range(len(self.config['utterance_range'])):
                 # iterate each phrase in the sentence, np[0] is words, np[1] is postags
                 for np_ in np_record[i]:
                     np_dict['noun_phrases__%s__%s' % (self.config['utterance_range'][i], '_'.join(np_[0]))] = True
-            current_np_set  = set(['_'.join(np_[0]) for np_ in np_record[0]])
-            next_np_set     = set(['_'.join(np_[0]) for np_ in np_record[2]])
-            inter_np        = set.intersection(current_np_set, next_np_set)
+                    
+            last_index_in_dict  = self.config['utterance_range'].index("last_user_utterance")
+            current_index_in_dict  = self.config['utterance_range'].index("current_user_utterance")
+            next_index_in_dict  = self.config['utterance_range'].index("next_user_utterance")
+
+            last_np_set  = set(['_'.join(np_[0]) for np_ in np_record[last_index_in_dict]])
+            current_np_set  = set(['_'.join(np_[0]) for np_ in np_record[current_index_in_dict]])
+            next_np_set     = set(['_'.join(np_[0]) for np_ in np_record[next_index_in_dict]])
+
+            last_inter_np        = set.intersection(current_np_set, last_np_set)
+            next_inter_np        = set.intersection(current_np_set, next_np_set)
 
             # 5.2 noun_phrase_overlap:  True, if there is any NP overlap between two user utterances
-            if len(inter_np) > 0:
-                np_dict['noun_phrases__have_overlap']    = True
-                np_dict['noun_phrases__#overlap']        = len(inter_np)
+            if len(last_inter_np) > 0:
+                np_dict['last_noun_phrases__have_overlap']    = True
+                np_dict['last_noun_phrases__#overlap']        = len(last_inter_np)
             else:
-                np_dict['noun_phrases__have_overlap']    = False
-                np_dict['noun_phrases__#overlap']        = 0
+                np_dict['last_noun_phrases__have_overlap']    = False
+                np_dict['last_noun_phrases__#overlap']        = 0
+
+            if len(next_inter_np) > 0:
+                np_dict['next_noun_phrases__have_overlap']    = True
+                np_dict['next_noun_phrases__#overlap']        = len(next_inter_np)
+            else:
+                np_dict['next_noun_phrases__have_overlap']    = False
+                np_dict['next_noun_phrases__#overlap']        = 0
 
             # 5.3 np_jaccard_similarity: Jaccard similarity of NPs.
-            np_dict['noun_phrases__jaccard_similarity']  = jaccard_similarity(current_np_set, next_np_set)
+            np_dict['last_noun_phrases__jaccard_similarity']  = jaccard_similarity(current_np_set, last_np_set)
+            np_dict['next_noun_phrases__jaccard_similarity']  = jaccard_similarity(current_np_set, next_np_set)
 
             return_list.append(np_dict)
 
@@ -405,18 +488,24 @@ class EntityFeature(BaseEstimator, TransformerMixin):
     def transform(self, parse_records):
         return_list = []
 
-        # iterate each data sample, contains three parts (currrent_user, current_system, next_user)
-        for k, parse_record in enumerate(zip(parse_records[0],parse_records[1],parse_records[2])):
+        # iterate each data sample, contains five parts (last_user, last_system, currrent_user, current_system, next_user)
+        for k, parse_record in enumerate(zip(*parse_records)):
             # iterate each type of utterance
             entity_dict = {}
 
             entity_lists = []
             # 6.1 entity: one-hot representation of all entities
-            for i in range(3):
+            for i in range(len(self.config['utterance_range'])):
                 entity_list = []
                 cache = []
                 # iterate each word and NER tag
                 if len(parse_record[i]) > 0:
+                    for ner in np.concatenate([r['entitymentions'] for r in parse_record[i]]):
+                        entity_dict[
+                            'entity__%s__%s_%s' % (self.config['utterance_range'][i], ner['text'].lower(), ner['ner'])] = True
+
+                    '''
+                    # Changed to pycorenlp
                     for token, ner in zip(np.concatenate([r['tokens'] for r in parse_record[i]]), np.concatenate([r['ner'] for r in parse_record[i]])):
                         if len(cache) > 0 and ner != cache[-1][1]:
                             entity_name = '_'.join([c[0] for c in cache])
@@ -428,22 +517,37 @@ class EntityFeature(BaseEstimator, TransformerMixin):
                             continue
                         else:
                             cache.append((token, ner))
+                    '''
                 entity_lists.append(entity_list)
 
-            current_entity_set  = set([e for e in entity_lists[0]])
-            next_entity_set     = set([e for e in entity_lists[2]])
-            inter_entity        = set.intersection(current_entity_set, next_entity_set)
+            last_index_in_dict  = self.config['utterance_range'].index("last_user_utterance")
+            current_index_in_dict  = self.config['utterance_range'].index("current_user_utterance")
+            next_index_in_dict  = self.config['utterance_range'].index("next_user_utterance")
+            last_entity_set  = set([e for e in entity_lists[last_index_in_dict]])
+            current_entity_set  = set([e for e in entity_lists[current_index_in_dict]])
+            next_entity_set     = set([e for e in entity_lists[next_index_in_dict]])
+
+            last_inter_entity        = set.intersection(current_entity_set, last_entity_set)
+            next_inter_entity        = set.intersection(current_entity_set, next_entity_set)
 
             # 6.2 entity_overlap:  True, if there is any entity overlap between two user utterances
-            if len(inter_entity) > 0:
-                entity_dict['entity__have_overlap']    = True
-                entity_dict['entity__#overlap']        = len(inter_entity)
+            if len(last_inter_entity) > 0:
+                entity_dict['last_entity__have_overlap']    = True
+                entity_dict['last_entity__#overlap']        = len(last_inter_entity)
             else:
-                entity_dict['entity__have_overlap']    = False
-                entity_dict['entity__#overlap']        = 0
+                entity_dict['last_entity__have_overlap']    = False
+                entity_dict['last_entity__#overlap']        = 0
+
+            if len(next_inter_entity) > 0:
+                entity_dict['next_entity__have_overlap']    = True
+                entity_dict['next_entity__#overlap']        = len(next_inter_entity)
+            else:
+                entity_dict['next_entity__have_overlap']    = False
+                entity_dict['next_entity__#overlap']        = 0
 
             # 6.3 entity_jaccard_similarity: Jaccard similarity of entities.
-            entity_dict['entity__jaccard_similarity']  = jaccard_similarity(current_entity_set, next_entity_set)
+            entity_dict['last_entity__jaccard_similarity']  = jaccard_similarity(current_entity_set, last_entity_set)
+            entity_dict['next_entity__jaccard_similarity'] = jaccard_similarity(current_entity_set, next_entity_set)
 
             return_list.append(entity_dict)
         return return_list
@@ -463,68 +567,102 @@ class SyntacticFeature(BaseEstimator, TransformerMixin):
         return_list = []
 
         # iterate each data sample, contains three parts (currrent_user, current_system, next_user)
-        for k, parse_record in enumerate(zip(parse_records[0],parse_records[1],parse_records[2])):
+        for k, parse_record in enumerate(zip(*parse_records)):
             # iterate each type of utterance
-            entity_dict = {}
+            dependency_dict = {}
 
             # 7.1-7.3 key syntactic components
+            last_root       = set()
             current_root    = set()
             next_root       = set()
+
+            last_subj       = set()
             current_subj    = set()
             next_subj       = set()
+
+            last_obj        = set()
             current_obj     = set()
             next_obj        = set()
+            
+            last_index_in_dict  = self.config['utterance_range'].index("last_user_utterance")
+            current_index_in_dict  = self.config['utterance_range'].index("current_user_utterance")
+            next_index_in_dict  = self.config['utterance_range'].index("next_user_utterance")
 
-            for i in range(3):
+            for i in range(len(self.config['utterance_range'])):
                 if len(parse_record[i]) > 0:
                     # iterate each parsed sentence
                     for sent in parse_record[i]:
                         # 7.1 root_word: the word that at the root of parse tree (shot).
-                        for dep in sent['deps_basic']:
-                            if dep[0] == 'root':
-                                entity_dict['root_word__%s__%s' % (self.config['utterance_range'][i], sent['tokens'][dep[2]])] = True
-                                root_index = dep[2]
-                                if i == 0:
-                                    current_root.add(stemmer.stem(sent['tokens'][dep[2]].lower()))
-                                elif i == 2:
-                                    next_root.add(stemmer.stem(sent['tokens'][dep[2]].lower()))
+                        # for dep in sent['deps_basic']:
+                        for dep in sent['basicDependencies']:
+                            if dep['dep'].lower() == 'root':
+                                dep_word = stemmer.stem(dep['dependentGloss'].lower())
+                                dependency_dict['root_word__%s__%s' % (self.config['utterance_range'][i], dep_word)] = True
+                                root_index = dep['dependent']
+                                if i == current_index_in_dict:
+                                    current_root.add(dep_word)
+                                elif i == next_index_in_dict:
+                                    next_root.add(dep_word)
+                                elif i == last_index_in_dict:
+                                    last_root.add(dep_word)
                                 break
 
                         # 7.2 subj_word: the topmost subjects
-                        for dep in sent['deps_basic']:
-                            if dep[0].endswith('subj') and dep[1] == root_index:
-                                entity_dict['subj_word__%s__%s' % (self.config['utterance_range'][i], sent['tokens'][dep[2]])] = True
-                                if i == 0:
-                                    current_subj.add(stemmer.stem(sent['tokens'][dep[2]].lower()))
-                                elif i == 2:
-                                    next_subj.add(stemmer.stem(sent['tokens'][dep[2]].lower()))
+                        for dep in sent['basicDependencies']:
+                            if dep['dep'].lower().endswith('subj') and dep['governor'] == root_index:
+                                dep_word = stemmer.stem(dep['dependentGloss'].lower())
+                                dependency_dict['subj_word__%s__%s' % (self.config['utterance_range'][i], dep_word)] = True
+                                if i == current_index_in_dict:
+                                    current_subj.add(dep_word)
+                                elif i == next_index_in_dict:
+                                    next_subj.add(dep_word)
+                                elif i == last_index_in_dict:
+                                    last_subj.add(dep_word)
 
                         # 7.3 obj_word: the topmost object
-                        for dep in sent['deps_basic']:
-                            if dep[0].endswith('obj') and dep[1] == root_index:
-                                entity_dict['obj_word__%s__%s' % (self.config['utterance_range'][i], sent['tokens'][dep[2]])] = True
-                                if i == 0:
-                                    current_obj.add(stemmer.stem(sent['tokens'][dep[2]].lower()))
-                                elif i == 2:
-                                    next_obj.add(stemmer.stem(sent['tokens'][dep[2]].lower()))
+                        for dep in sent['basicDependencies']:
+                            if dep['dep'].lower().endswith('obj') and dep['governor'] == root_index:
+                                dep_word = stemmer.stem(dep['dependentGloss'].lower())
+                                dependency_dict['obj_word__%s__%s' % (self.config['utterance_range'][i], dep_word)] = True
+                                if i == current_index_in_dict:
+                                    current_obj.add(dep_word)
+                                elif i == next_index_in_dict:
+                                    next_obj.add(dep_word)
+                                elif i == last_index_in_dict:
+                                    last_obj.add(dep_word)
 
             # 7.4-7.6 root_words_overlap: True if any of the root words of two user utterances are same.
             if len(set.intersection(current_root, next_root)) > 0:
-                entity_dict['root_words_overlap'] = True
+                dependency_dict['next_root_words_overlap'] = True
             else:
-                entity_dict['root_words_overlap'] = False
+                dependency_dict['next_root_words_overlap'] = False
 
             if len(set.intersection(current_subj, next_subj)) > 0:
-                entity_dict['subj_words_overlap'] = True
+                dependency_dict['next_subj_words_overlap'] = True
             else:
-                entity_dict['subj_words_overlap'] = False
+                dependency_dict['next_subj_words_overlap'] = False
 
             if len(set.intersection(current_obj, next_obj)) > 0:
-                entity_dict['obj_words_overlap'] = True
+                dependency_dict['next_obj_words_overlap'] = True
             else:
-                entity_dict['obj_words_overlap'] = False
+                dependency_dict['next_obj_words_overlap'] = False
 
-            return_list.append(entity_dict)
+            if len(set.intersection(current_root, last_root)) > 0:
+                dependency_dict['last_root_words_overlap'] = True
+            else:
+                dependency_dict['last_root_words_overlap'] = False
+
+            if len(set.intersection(current_subj, last_subj)) > 0:
+                dependency_dict['last_subj_words_overlap'] = True
+            else:
+                dependency_dict['last_subj_words_overlap'] = False
+
+            if len(set.intersection(current_obj, last_obj)) > 0:
+                dependency_dict['last_obj_words_overlap'] = True
+            else:
+                dependency_dict['last_obj_words_overlap'] = False
+
+            return_list.append(dependency_dict)
         return return_list
 
 class LDAFeature(BaseEstimator, TransformerMixin):
@@ -533,6 +671,7 @@ class LDAFeature(BaseEstimator, TransformerMixin):
     '''
     def load_dict_corpus(self, dict_path, corpus_path):
         if not os.path.exists(dict_path) or not os.path.exists(corpus_path):
+
             all_sessions = self.config['data_loader']()
             documents = []
             for session in all_sessions:
@@ -566,6 +705,9 @@ class LDAFeature(BaseEstimator, TransformerMixin):
         return dictionary, corpus
 
     def load_or_train_LDA(self, model_path, topic_number):
+        if not os.path.exists(config['gensim_dict_path']):
+            os.makedirs(config['gensim_dict_path'])
+
         dict_path           = config['gensim_dict_path'] % config['data_name']
         corpus_path         = config['gensim_corpus_path'] % config['data_name']
         id2word, mmcorpus   = self.load_dict_corpus(dict_path, corpus_path)
@@ -655,7 +797,7 @@ class CosineSimilarity(BaseEstimator, TransformerMixin):
 
 class Word2VecFeature(BaseEstimator, TransformerMixin):
     '''
-    8.3 Word2Vec_features
+    9.1 Word2Vec_features
     '''
     def __init__(self, config):
         self.config = config
@@ -692,7 +834,7 @@ class Word2VecFeature(BaseEstimator, TransformerMixin):
 
 class WmdDistance(BaseEstimator, TransformerMixin):
     '''
-    8.5 WMD_features
+    9.3 WMD_features
     '''
     def __init__(self, config, vectorizer):
         self.config = config
@@ -716,6 +858,91 @@ class WmdDistance(BaseEstimator, TransformerMixin):
             distance = self.model.wmdistance(s1, s2)
 
             return_list.append({'wmd_distance': distance})
+
+        return return_list
+
+class Doc2VecFeature(BaseEstimator, TransformerMixin):
+    '''
+    10.1 Doc2Vec_features
+    '''
+    def get_id(self, doc_str):
+        '''
+        Given a str, return its ID
+        :param doc_str:
+        :return:
+        '''
+        if not doc_str in self.doc2idx_dict:
+            self.doc2idx_dict[doc_str] = len(self.doc2idx_dict) + 1
+        return self.doc2idx_dict[doc_str]
+
+    def __init__(self, config):
+        self.config = config
+        self.doc2idx_dict = {}
+        self.d2v_model, self.d2v_vector, self.doc2idx_dict = self.load_or_train_D2V()
+
+    def load_or_train_D2V(self):
+        '''
+        Load or train Doc2Vec
+        '''
+        if os.path.exists(self.config['d2v_model_path'] % self.config['data_name']) and os.path.exists(self.config['d2v_vector_path'] % self.config['data_name']):
+            d2v_model  = Doc2Vec.load(self.config['d2v_model_path'] % self.config['data_name'])
+            d2v_vector, doc2idx_dict = data_loader.deserialize_from_file(self.config['d2v_vector_path'] % self.config['data_name'])
+        else:
+            all_sessions = self.config['data_loader']()
+            documents = []
+            for session in all_sessions:
+                for utt in session:
+                    doc_id = self.get_id(utt.msg_text)
+                    words  = gensim.utils.to_unicode(utt.msg_text).split()
+                    doc = TaggedDocument(words=words, tags=[doc_id])
+                    documents.append(doc)
+
+            # d2v_model = Doc2Vec(size=self.config['d2v_vector_length'], window=self.config['d2v_window_size'], min_count=self.config['d2v_min_count'], workers=4, alpha=0.025, min_alpha=0.025) # use fixed documents rate
+            d2v_model = Doc2Vec(size=self.config['d2v_vector_length'], window=self.config['d2v_window_size'], min_count=self.config['d2v_min_count'], workers=4)
+            d2v_model.build_vocab(documents)
+            d2v_model.intersect_word2vec_format(self.config['w2v_path'], binary=True)
+            for epoch in range(10):
+                d2v_model.train(documents, total_examples=len(documents), epochs=1)
+                # d2v_model.alpha -= 0.002  # decrease the learning rate
+                # d2v_model.min_alpha = d2v_model.alpha  # fix the learning rate, no decay
+
+            d2v_vector = d2v_model.docvecs
+
+            # store the model to mmap-able files
+            d2v_model.save(self.config['d2v_model_path'] % self.config['data_name'])
+            data_loader.serialize_to_file([d2v_vector, self.doc2idx_dict], self.config['d2v_vector_path'] % self.config['data_name'])
+
+        return d2v_model, d2v_vector, self.doc2idx_dict
+
+    def vectorize(self, x):
+        '''
+        for a sentence x
+        :param x:
+        :return:
+        '''
+        if x in self.doc2idx_dict:
+            return  self.d2v_model.docvecs[self.doc2idx_dict[x]]
+        else:
+            return self.d2v_model.infer_vector(x.lower().split())
+
+    def fit(self, x, y=None):
+        '''
+        for an array of sentence
+        :param x:
+        :return:
+        '''
+        return self
+
+    def transform(self, utterances):
+        return_list = []
+
+        for k, utt in enumerate(utterances):
+            vec_dict    = {}
+            vec         = self.vectorize(utt)
+            for i,v in enumerate(vec):
+                vec_dict['d2v_dim=%d' % i] = v
+
+            return_list.append(vec_dict)
 
         return return_list
 
@@ -748,8 +975,8 @@ class Feature_Extractor():
 
     def do_extract(self):
         '''
-    Extract features from utterances
-    '''
+        Extract features from utterances
+        '''
         '''
         Define feature extractors
         '''
@@ -791,8 +1018,15 @@ class Feature_Extractor():
             # 2.3 jaccard_similarity of user action words
             if utterance_type == 'current_user_utterance':
                 transformer_list.append(
-                    ('2.3-action_jaccard_similarity', Pipeline([
-                        ('selector', ItemSelector(keys=['user_utterance_pairs'])),
+                    ('2.3.1-action_jaccard_similarity.next_user_utterance_pairs', Pipeline([
+                        ('selector', ItemSelector(keys=['next_user_utterance_pairs'])),
+                        ('action_jaccard_similarity', UserActionJaccardSimilarity(self.config['action_words'])),
+                        ('vectorize', DictVectorizer()),
+                    ]))
+                )
+                transformer_list.append(
+                    ('2.3.2-action_jaccard_similarity.last_user_utterance_pairs', Pipeline([
+                        ('selector', ItemSelector(keys=['last_user_utterance_pairs'])),
                         ('action_jaccard_similarity', UserActionJaccardSimilarity(self.config['action_words'])),
                         ('vectorize', DictVectorizer()),
                     ]))
@@ -827,16 +1061,30 @@ class Feature_Extractor():
             if utterance_type == 'current_user_utterance':
                 #   4.2 edit_distance
                 transformer_list.append(
-                    ('4.2-edit_distance', Pipeline([
-                        ('selector', ItemSelector(keys=['user_utterance_pairs'])),
+                    ('4.2.1-edit_distance.next_user_utterance_pairs', Pipeline([
+                        ('selector', ItemSelector(keys=['next_user_utterance_pairs'])),
+                        ('edit_distance', EditDistance()),
+                        ('vectorize', DictVectorizer()),
+                    ]))
+                )
+                transformer_list.append(
+                    ('4.2.2-edit_distance.last_user_utterance_pairs', Pipeline([
+                        ('selector', ItemSelector(keys=['last_user_utterance_pairs'])),
                         ('edit_distance', EditDistance()),
                         ('vectorize', DictVectorizer()),
                     ]))
                 )
                 #   4.3 jaccard_similarity
                 transformer_list.append(
-                    ('4.3-jaccard_similarity', Pipeline([
-                        ('selector', ItemSelector(keys=['user_utterance_pairs'])),
+                    ('4.3.1-jaccard_similarity.next_user_utterance_pairs', Pipeline([
+                        ('selector', ItemSelector(keys=['next_user_utterance_pairs'])),
+                        ('jaccard_similarity', JaccardSimilarity()),
+                        ('vectorize', DictVectorizer()),
+                    ]))
+                )
+                transformer_list.append(
+                    ('4.3.2-jaccard_similarity.last_user_utterance_pairs', Pipeline([
+                        ('selector', ItemSelector(keys=['last_user_utterance_pairs'])),
                         ('jaccard_similarity', JaccardSimilarity()),
                         ('vectorize', DictVectorizer()),
                     ]))
@@ -882,50 +1130,99 @@ class Feature_Extractor():
 
         # 8.2 LDA similarity
         transformer_list.append(
-            ('8.2-lda_similarity', Pipeline([
+            ('8.2.1-lda_similarity.next_user_utterance_pairs', Pipeline([
                 ('selector', ItemSelector(keys=['current_user_utterance', 'next_user_utterance'])),
                 ('cosine_similarity', CosineSimilarity(self.config, lda_feature_extractor)),
                 ('vectorize', DictVectorizer()),
             ]))
         )
+        transformer_list.append(
+            ('8.2.2-lda_similarity.last_user_utterance_pairs', Pipeline([
+                ('selector', ItemSelector(keys=['current_user_utterance', 'last_user_utterance'])),
+                ('cosine_similarity', CosineSimilarity(self.config, lda_feature_extractor)),
+                ('vectorize', DictVectorizer()),
+            ]))
+        )
 
-        # 8.3 W2V Feature
+
+        # 9.1 W2V Feature
         w2v_feature_extractor = Word2VecFeature(self.config)
         for utterance_type in self.config['utterance_range']:
             transformer_list.append(
-                ('8.3-w2v_feature.%s' % utterance_type, Pipeline([
+                ('9.1-w2v_feature.%s' % utterance_type, Pipeline([
                     ('selector', ItemSelector(keys=[utterance_type])),
                     ('w2v_feature', w2v_feature_extractor),
                     ('vectorize', DictVectorizer()),
                 ]))
             )
 
-        # 8.4 W2V similarity
+        # 9.2 W2V similarity
         transformer_list.append(
-            ('8.4-w2v_similarity', Pipeline([
+            ('9.2.1-w2v_similarity.next_user_utterance_pairs', Pipeline([
                 ('selector', ItemSelector(keys=['current_user_utterance', 'next_user_utterance'])),
                 ('cosine_similarity', CosineSimilarity(self.config, w2v_feature_extractor)),
                 ('vectorize', DictVectorizer()),
             ]))
         )
-
-        # 8.5 WMD Distance
         transformer_list.append(
-            ('8.5-wmd_distance', Pipeline([
-                ('selector', ItemSelector(keys=['current_user_utterance', 'next_user_utterance'])),
-                ('wmd_distance', WmdDistance(self.config, w2v_feature_extractor)),
+            ('9.2.2-w2v_similarity.last_user_utterance_pairs', Pipeline([
+                ('selector', ItemSelector(keys=['current_user_utterance', 'last_user_utterance'])),
+                ('cosine_similarity', CosineSimilarity(self.config, w2v_feature_extractor)),
                 ('vectorize', DictVectorizer()),
             ]))
         )
 
+        # 9.3 WMD Distance
+        transformer_list.append(
+            ('9.3.1-wmd_similarity.next_user_utterance_pairs', Pipeline([
+                ('selector', ItemSelector(keys=['current_user_utterance', 'next_user_utterance'])),
+                ('wmd_similarity', WmdDistance(self.config, w2v_feature_extractor)),
+                ('vectorize', DictVectorizer()),
+            ]))
+        )
+        transformer_list.append(
+            ('9.3.2-wmd_similarity.last_user_utterance_pairs', Pipeline([
+                ('selector', ItemSelector(keys=['current_user_utterance', 'last_user_utterance'])),
+                ('wmd_similarity', WmdDistance(self.config, w2v_feature_extractor)),
+                ('vectorize', DictVectorizer()),
+            ]))
+        )
+
+        # 10.1 Doc2Vec
+        d2v_feature_extractor = Doc2VecFeature(self.config)
+        for utterance_type in self.config['utterance_range']:
+            transformer_list.append(
+                ('10.1-d2v_feature.%s' % utterance_type, Pipeline([
+                    ('selector', ItemSelector(keys=[utterance_type])),
+                    ('d2v_feature', d2v_feature_extractor),
+                    ('vectorize', DictVectorizer()),
+                ]))
+            )
+
+        # 10.2 D2V similarity
+        transformer_list.append(
+            ('10.2.1-d2v_similarity.next_user_utterance_pairs', Pipeline([
+                ('selector', ItemSelector(keys=['current_user_utterance', 'next_user_utterance'])),
+                ('cosine_similarity', CosineSimilarity(self.config, d2v_feature_extractor)),
+                ('vectorize', DictVectorizer()),
+            ]))
+        )
+        transformer_list.append(
+            ('10.2.2-d2v_similarity.last_user_utterance_pairs', Pipeline([
+                ('selector', ItemSelector(keys=['current_user_utterance', 'last_user_utterance'])),
+                ('cosine_similarity', CosineSimilarity(self.config, d2v_feature_extractor)),
+                ('vectorize', DictVectorizer()),
+            ]))
+        )
         '''
         Run the extracting pipeline
         '''
         union_features = FeatureUnion(transformer_list=transformer_list)
 
         pipeline = Pipeline([
+            # 1. Set the context utterances up
             ('raw_feature_extractor', RawFeatureExtractor(self.config)),
-            # Use FeatureUnion to combine the features
+            # 2. Use FeatureUnion to extract features
             ('union', union_features)
         ])
 
@@ -969,9 +1266,21 @@ class Feature_Extractor():
 
         return X
 
+    def extract_raw_feature(self):
+        '''
+        Extract and return the basic things by loading the transformer RawFeatureExtractor(), before it's embedded in do_extract()
+        But for doc2vec, I only need these sentences
+
+            ('raw_feature_extractor', RawFeatureExtractor(self.config))
+        '''
+        extractor = RawFeatureExtractor(self.config)
+        X_raw_feature = extractor.fit_transform(self.config['X_raw'])
+
+        return X_raw_feature
+
+
     def split_to_instances(self, annotated_sessions):
         '''
-        for now just return the text of corresponding utterances (ignore any context information)
         :param annotated_sessions:
         :return:
         X_raw = [], a list of dicts, contains all the usable information of current utterance (utterance, index, and dialogue)
@@ -983,6 +1292,7 @@ class Feature_Extractor():
         valid_type = self.config.param['valid_type']
 
         for session in annotated_sessions:
+            # convert the corpus to individual training instances in desired raw format ('index', 'utterance' and the contextual 'dialogue')
             for u_idx, u_ in enumerate(session):
                 if u_.direction != 'user_to_sb':
                     continue
@@ -992,7 +1302,7 @@ class Feature_Extractor():
                 raw_features = {}
                 raw_features['index'] = u_idx # position of current utterance
                 raw_features['utterance'] = u_ # current utterance
-                raw_features['dialogue'] = session # context
+                raw_features['dialogue'] = session # the whole dialogue as context
                 X_raw.append(raw_features)
                 Y_raw.append(u_.type)
 

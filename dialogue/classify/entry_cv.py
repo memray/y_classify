@@ -6,7 +6,7 @@ from sklearn import preprocessing
 from dialogue.data.data_loader import data_loader, DataLoader, Utterance
 from dialogue.classify import configuration
 from dialogue.classify.feature_extractor import Feature_Extractor
-from dialogue.classify.experimenter import Experimenter
+from dialogue.classify.cv_experimenter import Experimenter
 import numpy as np
 import os
 
@@ -57,11 +57,18 @@ if __name__ == '__main__':
             result                  = exp.run_cross_validation_binary_task(X, Y)
         elif config['experiment_mode'] == 'bad_case':
             result                  = exp.run_cross_validation_bad_case(X, Y)
-        else:
+        elif config['experiment_mode'] == 'normal_cv':
             result                  = exp.run_cross_validation(X, Y)
+        elif config['experiment_mode'] == 'single_run':
+            result                  = exp.run_single_pass(X, Y)
+        elif config['experiment_mode'] == 'single_run_context_feature':
+            result                  = exp.run_single_pass_context_feature(X, Y)
+        else:
+            assert "experiment type invalid"
+
 
             # find the best classifier (with best F1-score)
             # result = result[np.asarray(result).T[4].argmax()]
             # best_results[data_name] = result
 
-    exp.export_summary(best_results.values(), os.path.join(config.param['experiment_path'], 'best_of_each_dataset.csv'))
+    # exp.export_summary(best_results.values(), os.path.join(config.param['experiment_path'], 'best_of_each_dataset.csv'))
