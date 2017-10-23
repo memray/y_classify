@@ -859,20 +859,19 @@ class Experimenter():
         # Y_test  = Y[int(0.8 * num_data):]
 
         results = []
-        '''
         for clf, name in [
                 # (RidgeClassifier(tol=1e-2, solver="lsqr"), "Ridge Classifier"),
                 # (Perceptron(n_iter=50), "Perceptron"),
                 # (PassiveAggressiveClassifier(n_iter=50), "Passive-Aggressive"),
                 # (KNeighborsClassifier(n_neighbors=10), "kNN"),
+                (RandomForestClassifier(n_estimators=50), "Random forest.#tree=50"),
                 (RandomForestClassifier(n_estimators=100), "Random forest.#tree=100"),
-                # (RandomForestClassifier(n_estimators=300), "Random forest.#tree=300"),
+                (RandomForestClassifier(n_estimators=300), "Random forest.#tree=300"),
                 # (RandomForestClassifier(n_estimators=500), "Random forest.#tree=500")
         ]:
             self.logger.info('=' * 80)
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
-        '''
 
         '''
         for penalty in ["l2", "l1"]:
@@ -913,16 +912,8 @@ class Experimenter():
         #     ('classification', LinearSVC())
         # ])))
 
-        # self.logger.info('=' * 80)
-        # self.logger.info("LinearSVC")
-        # # The smaller C, the stronger the regularization.
-        # # The more regularization, the more sparsity.
-        # results.append(self.benchmark('LinearSVC', Pipeline([
-        #     ('classification', LinearSVC())
-        # ])))
 
-        for C in [1]:
-        # for C in [0.1, 1, 10]:
+        for C in [0.1, 1, 10]:
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
             # Train Logistic Regression model
@@ -933,17 +924,10 @@ class Experimenter():
             # Train Logistic Regression model
             results.append(self.benchmark('LR.pen=l2.C=%d' % C,
                                           LogisticRegression(solver="liblinear", penalty='l2', C=C, dual=True)))
-        '''
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%d" % C)
             results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C,
-                                          LinearSVC(loss='squared_hinge', penalty='l1', dual=False, tol=1e-3)))
-
-            self.logger.info('=' * 80)
-            self.logger.info("Logistic Regression with penalty=l2, C=%f" % C)
-            # Train Logistic Regression model
-            results.append(self.benchmark('Logistic Regression Classifier.penalty=l2.C=%s' % C, LogisticRegression(solver="liblinear", penalty='l2', C=C)))
-
+                                          LinearSVC(loss='squared_hinge', penalty='l1', dual=False, tol=1e-3, C=C)))
             self.logger.info('=' * 80)
             self.logger.info("RBF SVC with C=%f" % C)
             results.append(self.benchmark('RBF SVC with C=%f' % C, SVC(C=C, cache_size=200, class_weight=None,
@@ -951,7 +935,6 @@ class Experimenter():
                                           max_iter=-1, probability=False, random_state=None, shrinking=True,
                                           tol=0.001, verbose=False))
             )
-        '''
 
         return results
 
