@@ -76,7 +76,7 @@ def load_config():
         param['utterance_range'] = param['utterance_names']
 
     # param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
-    param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set']])
+    param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=%s' % 'true' if param['similarity_feature'] else 'false'])
 
     param['experiment_path'] = os.path.join(param['root_path'], 'output', param['experiment_name'])
 
