@@ -1,7 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
+    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="remove sth">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/dstc2.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/dstc2.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/dstc3.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/dstc3.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/family.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/family.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/ghome.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/ghome.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/dstc2.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/dstc2.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/dstc3.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/dstc3.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/family.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/family.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/ghome.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/ghome.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/dstc2.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/dstc2.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/dstc3.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/dstc3.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/family.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/family.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/ghome.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/ghome.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/dstc2.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/dstc2.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/dstc3.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/dstc3.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/family.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/family.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/ghome.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/ghome.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/dstc2.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/dstc2.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/dstc3.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/dstc3.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/family.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/family.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/ghome.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/ghome.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/dstc2.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/dstc2.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/dstc3.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/dstc3.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/family.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/family.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/ghome.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/ghome.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/data.stats.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/dstc2.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/dstc2.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/dstc3.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/dstc3.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/family.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/family.valid_test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/ghome.valid_test.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/ghome.valid_test.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/presto_data_process.iml" afterPath="$PROJECT_DIR$/.idea/presto_data_process.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -16,34 +79,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/y_classify$entry_doc2vec.coverage" NAME="entry_doc2vec Coverage Results" MODIFIED="1508633461268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
     <SUITE FILE_PATH="coverage/presto_data_process$parser_api.coverage" NAME="parser_api Coverage Results" MODIFIED="1500077154608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
-    <SUITE FILE_PATH="coverage/presto_data_process$feature_extracter.coverage" NAME="feature_extracter Coverage Results" MODIFIED="1499819371797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
-    <SUITE FILE_PATH="coverage/y_classify$entry.coverage" NAME="entry Coverage Results" MODIFIED="1508791227472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
-    <SUITE FILE_PATH="coverage/presto_data_process$Unittests_in_data_loader_py.coverage" NAME="Unittests in data_loader.py Coverage Results" MODIFIED="1497042247634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
-    <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union.coverage" NAME="hetero_feature_union Coverage Results" MODIFIED="1499817447220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
-    <SUITE FILE_PATH="coverage/y_classify$entry_single_run.coverage" NAME="entry_single_run Coverage Results" MODIFIED="1508528442059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
-    <SUITE FILE_PATH="coverage/presto_data_process$entry.coverage" NAME="entry Coverage Results" MODIFIED="1500615421509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
-    <SUITE FILE_PATH="coverage/y_classify$Unittest_DataLoader_load_annotated_data.coverage" NAME="Unittest DataLoader.load_annotated_data Coverage Results" MODIFIED="1508471482853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
-    <SUITE FILE_PATH="coverage/presto_data_process$parse_session.coverage" NAME="parse_session Coverage Results" MODIFIED="1496352675018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
-    <SUITE FILE_PATH="coverage/presto_data_process$proc_text_files.coverage" NAME="proc_text_files Coverage Results" MODIFIED="1500258204257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp" />
-    <SUITE FILE_PATH="coverage/presto_data_process$proc_text_files_to_stdout_example.coverage" NAME="proc_text_files_to_stdout_example Coverage Results" MODIFIED="1500262881296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp" />
-    <SUITE FILE_PATH="coverage/presto_data_process$Unittests_in_sockwrap_py.coverage" NAME="Unittests in sockwrap.py Coverage Results" MODIFIED="1500257660413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp/stanford_corenlp_pywrapper" />
-    <SUITE FILE_PATH="coverage/y_classify$example__1_.coverage" NAME="example (1) Coverage Results" MODIFIED="1508515374176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/corenlp/pycorenlp" />
-    <SUITE FILE_PATH="coverage/presto_data_process$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1499471707987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
-    <SUITE FILE_PATH="coverage/y_classify$feature_extractor.coverage" NAME="feature_extractor Coverage Results" MODIFIED="1508477497464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
-    <SUITE FILE_PATH="coverage/y_classify$sockwrap.coverage" NAME="sockwrap Coverage Results" MODIFIED="1508483288605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper" />
-    <SUITE FILE_PATH="coverage/presto_data_process$parse_session_new.coverage" NAME="parse_session_new Coverage Results" MODIFIED="1497473026561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
-    <SUITE FILE_PATH="coverage/y_classify$example__2_.coverage" NAME="example (2) Coverage Results" MODIFIED="1508521657270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp/pycorenlp" />
-    <SUITE FILE_PATH="coverage/presto_data_process$feature_extractor.coverage" NAME="feature_extractor Coverage Results" MODIFIED="1500325794274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
-    <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union__1_.coverage" NAME="hetero_feature_union (1) Coverage Results" MODIFIED="1499818104427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
-    <SUITE FILE_PATH="coverage/presto_data_process$experimenter.coverage" NAME="experimenter Coverage Results" MODIFIED="1499384122315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
     <SUITE FILE_PATH="coverage/y_classify$document_classification_20newsgroups.coverage" NAME="document_classification_20newsgroups Coverage Results" MODIFIED="1500933723337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
+    <SUITE FILE_PATH="coverage/presto_data_process$feature_extracter.coverage" NAME="feature_extracter Coverage Results" MODIFIED="1499819371797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
+    <SUITE FILE_PATH="coverage/y_classify$example__2_.coverage" NAME="example (2) Coverage Results" MODIFIED="1508521657270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp/pycorenlp" />
+    <SUITE FILE_PATH="coverage/y_classify$entry_doc2vec.coverage" NAME="entry_doc2vec Coverage Results" MODIFIED="1508633461268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/y_classify$Unittest_DataLoader_load_annotated_data.coverage" NAME="Unittest DataLoader.load_annotated_data Coverage Results" MODIFIED="1508471482853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
+    <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union.coverage" NAME="hetero_feature_union Coverage Results" MODIFIED="1499817447220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
+    <SUITE FILE_PATH="coverage/presto_data_process$hetero_feature_union__1_.coverage" NAME="hetero_feature_union (1) Coverage Results" MODIFIED="1499818104427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/demo" />
+    <SUITE FILE_PATH="coverage/presto_data_process$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1499471707987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
     <SUITE FILE_PATH="coverage/presto_data_process$main.coverage" NAME="main Coverage Results" MODIFIED="1500075261947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
-    <SUITE FILE_PATH="coverage/presto_data_process$parser_api__1_.coverage" NAME="parser_api (1) Coverage Results" MODIFIED="1500315512001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
-    <SUITE FILE_PATH="coverage/presto_data_process$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1498440314322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
-    <SUITE FILE_PATH="coverage/presto_data_process$dstc_analyzer.coverage" NAME="dstc_analyzer Coverage Results" MODIFIED="1496985467932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
+    <SUITE FILE_PATH="coverage/presto_data_process$Unittests_in_data_loader_py.coverage" NAME="Unittests in data_loader.py Coverage Results" MODIFIED="1497042247634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
+    <SUITE FILE_PATH="coverage/presto_data_process$Unittests_in_sockwrap_py.coverage" NAME="Unittests in sockwrap.py Coverage Results" MODIFIED="1500257660413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp/stanford_corenlp_pywrapper" />
+    <SUITE FILE_PATH="coverage/presto_data_process$parse_session.coverage" NAME="parse_session Coverage Results" MODIFIED="1496352675018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
+    <SUITE FILE_PATH="coverage/y_classify$example__1_.coverage" NAME="example (1) Coverage Results" MODIFIED="1508515374176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/corenlp/pycorenlp" />
+    <SUITE FILE_PATH="coverage/y_classify$entry_single_run.coverage" NAME="entry_single_run Coverage Results" MODIFIED="1508528442059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
     <SUITE FILE_PATH="coverage/y_classify$example.coverage" NAME="example Coverage Results" MODIFIED="1508514856492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/pycorenlp" />
+    <SUITE FILE_PATH="coverage/presto_data_process$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1498440314322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/data" />
+    <SUITE FILE_PATH="coverage/presto_data_process$parse_session_new.coverage" NAME="parse_session_new Coverage Results" MODIFIED="1497473026561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
+    <SUITE FILE_PATH="coverage/y_classify$feature_extractor.coverage" NAME="feature_extractor Coverage Results" MODIFIED="1508477497464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$feature_extractor.coverage" NAME="feature_extractor Coverage Results" MODIFIED="1500325794274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$parser_api__1_.coverage" NAME="parser_api (1) Coverage Results" MODIFIED="1500315512001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$entry.coverage" NAME="entry Coverage Results" MODIFIED="1500615421509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/y_classify$sockwrap.coverage" NAME="sockwrap Coverage Results" MODIFIED="1508483288605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp_pywrapper" />
+    <SUITE FILE_PATH="coverage/presto_data_process$experimenter.coverage" NAME="experimenter Coverage Results" MODIFIED="1499384122315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/satisfaction" />
+    <SUITE FILE_PATH="coverage/presto_data_process$proc_text_files.coverage" NAME="proc_text_files Coverage Results" MODIFIED="1500258204257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp" />
+    <SUITE FILE_PATH="coverage/y_classify$entry.coverage" NAME="entry Coverage Results" MODIFIED="1508793695377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/classify" />
+    <SUITE FILE_PATH="coverage/presto_data_process$proc_text_files_to_stdout_example.coverage" NAME="proc_text_files_to_stdout_example Coverage Results" MODIFIED="1500262881296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/stanford_corenlp" />
+    <SUITE FILE_PATH="coverage/presto_data_process$dstc_analyzer.coverage" NAME="dstc_analyzer Coverage Results" MODIFIED="1496985467932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/analysis" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -66,8 +129,8 @@
       <file leaf-file-name="entry_cv.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/entry_cv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="403">
+              <caret line="44" column="11" lean-forward="true" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -75,11 +138,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2006">
+              <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="data_loader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/data/data_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="297" column="26" lean-forward="false" selection-start-line="297" selection-start-column="26" selection-end-line="297" selection-end-column="26" />
+            <state relative-caret-position="102">
+              <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -88,8 +161,8 @@
       <file leaf-file-name="cv_experimenter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/cv_experimenter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="874" column="14" lean-forward="false" selection-start-line="874" selection-start-column="14" selection-end-line="874" selection-end-column="14" />
+            <state relative-caret-position="-456">
+              <caret line="867" column="41" lean-forward="false" selection-start-line="867" selection-start-column="41" selection-end-line="867" selection-end-column="41" />
               <folding>
                 <element signature="e#24#61#0" expanded="true" />
               </folding>
@@ -97,21 +170,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/ensemble/forest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="921" column="23" lean-forward="false" selection-start-line="921" selection-start-column="17" selection-end-line="921" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="feature_extractor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/feature_extractor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17775">
-              <caret line="1185" column="80" lean-forward="false" selection-start-line="1185" selection-start-column="80" selection-end-line="1185" selection-end-column="80" />
+            <state relative-caret-position="-493">
+              <caret line="565" column="34" lean-forward="false" selection-start-line="565" selection-start-column="34" selection-end-line="565" selection-end-column="34" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -122,8 +185,8 @@
       <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="59" column="67" lean-forward="false" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
+            <state relative-caret-position="324">
+              <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -141,12 +204,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'utterance_range'</find>
-      <find>Raw</find>
-      <find>RawFeatureExtractor</find>
-      <find>ItemSelector</find>
-      <find>__get</find>
-      <find>TaggedDocument</find>
       <find>load</find>
       <find>path</find>
       <find>total_examples</find>
@@ -170,7 +227,13 @@
       <find>f_series</find>
       <find>feature_names</find>
       <find>experiment_path</find>
-      <find>random</find>
+      <find>dstc2</find>
+      <find>DSTC2</find>
+      <find>f1_score</find>
+      <find>DSTC3</find>
+      <find>dstc3</find>
+      <find>rando</find>
+      <find>--------------------</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -242,11 +305,11 @@
         <option value="$PROJECT_DIR$/dialogue/corenlp/pycorenlp/example.py" />
         <option value="$PROJECT_DIR$/dialogue/stanford_corenlp/pycorenlp/__init__.py" />
         <option value="$PROJECT_DIR$/dialogue/stanford_corenlp/pycorenlp/example.py" />
-        <option value="$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/pipeline.py" />
+        <option value="$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/pipeline.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/entry_doc2vec.py" />
-        <option value="$PROJECT_DIR$/dialogue/classify/entry_cv.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/feature_extractor.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/dialogue/classify/entry_cv.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/cv_experimenter.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/configuration.py" />
       </list>
@@ -259,8 +322,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1615" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -280,6 +345,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -316,20 +383,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dialogue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="y_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="y_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dataset" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="y_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="y_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataset" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feature" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="y_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="y_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataset" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="editorial_annotations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/sanqiang/reh_project/text_simplification" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -342,10 +457,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/output/lr_svm_rf" />
+      <recent name="$PROJECT_DIR$/output/20171022-231228.context=next.feature=0-all.similarity=false" />
       <recent name="$PROJECT_DIR$/dialogue/corenlp" />
       <recent name="$PROJECT_DIR$/dialogue/pycorenlp" />
       <recent name="$PROJECT_DIR$/dialogue/demo" />
-      <recent name="$PROJECT_DIR$/dialogue/session" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -372,8 +487,10 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/presto_data_process.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/dialogue/classify/configuration.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/dialogue/classify/cv_experimenter.py</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -381,6 +498,195 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144833.context=next.feature=3-syntactic.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-144838.context=next.feature=4-lda.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-152755.context=next.feature=2-lexical.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-152755.context=next.feature=2-lexical.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-152755.context=next.feature=2-lexical.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-152755.context=next.feature=2-lexical.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-152755.context=next.feature=2-lexical.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-152755.context=next.feature=2-lexical.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-152755.context=next.feature=2-lexical.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-152755.context=next.feature=2-lexical.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-152755.context=next.feature=2-lexical.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162750.context=next.feature=3-syntactic.similarity=true/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-162755.context=next.feature=4-lda.similarity=true/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164019.context=current.feature=4-lda.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164027.context=last.feature=4-lda.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/20171023-164032.context=all.feature=4-lda.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-224524.context=next.feature=1-basic.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-224524.context=next.feature=1-basic.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-224524.context=next.feature=1-basic.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-224524.context=next.feature=1-basic.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-224524.context=next.feature=1-basic.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-224524.context=next.feature=1-basic.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-224524.context=next.feature=1-basic.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-224524.context=next.feature=1-basic.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-224524.context=next.feature=1-basic.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-231347.context=next.feature=4-lda.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-231347.context=next.feature=4-lda.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-231347.context=next.feature=4-lda.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-231347.context=next.feature=4-lda.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-231347.context=next.feature=4-lda.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-231347.context=next.feature=4-lda.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-231347.context=next.feature=4-lda.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-231347.context=next.feature=4-lda.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-231347.context=next.feature=4-lda.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232118.context=next.feature=4-lda.similarity=true/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232118.context=next.feature=4-lda.similarity=true/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232118.context=next.feature=4-lda.similarity=true/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232118.context=next.feature=4-lda.similarity=true/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232118.context=next.feature=4-lda.similarity=true/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232118.context=next.feature=4-lda.similarity=true/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232118.context=next.feature=4-lda.similarity=true/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232118.context=next.feature=4-lda.similarity=true/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232118.context=next.feature=4-lda.similarity=true/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232228.context=all.feature=4-lda.similarity=true/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232228.context=all.feature=4-lda.similarity=true/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232228.context=all.feature=4-lda.similarity=true/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232228.context=all.feature=4-lda.similarity=true/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232228.context=all.feature=4-lda.similarity=true/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232228.context=all.feature=4-lda.similarity=true/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232228.context=all.feature=4-lda.similarity=true/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232228.context=all.feature=4-lda.similarity=true/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232228.context=all.feature=4-lda.similarity=true/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232429.context=current.feature=4-lda.similarity=true/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232429.context=current.feature=4-lda.similarity=true/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232429.context=current.feature=4-lda.similarity=true/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232429.context=current.feature=4-lda.similarity=true/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232429.context=current.feature=4-lda.similarity=true/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232429.context=current.feature=4-lda.similarity=true/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232429.context=current.feature=4-lda.similarity=true/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232429.context=current.feature=4-lda.similarity=true/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232429.context=current.feature=4-lda.similarity=true/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232438.context=last.feature=4-lda.similarity=true/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232438.context=last.feature=4-lda.similarity=true/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232438.context=last.feature=4-lda.similarity=true/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232438.context=last.feature=4-lda.similarity=true/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232438.context=last.feature=4-lda.similarity=true/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232438.context=last.feature=4-lda.similarity=true/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232438.context=last.feature=4-lda.similarity=true/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232438.context=last.feature=4-lda.similarity=true/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232438.context=last.feature=4-lda.similarity=true/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232508.context=current.feature=4-lda.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232508.context=current.feature=4-lda.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232508.context=current.feature=4-lda.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232508.context=current.feature=4-lda.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232508.context=current.feature=4-lda.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232508.context=current.feature=4-lda.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232508.context=current.feature=4-lda.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232508.context=current.feature=4-lda.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232508.context=current.feature=4-lda.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232516.context=last.feature=4-lda.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232516.context=last.feature=4-lda.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232516.context=last.feature=4-lda.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232516.context=last.feature=4-lda.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232516.context=last.feature=4-lda.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232516.context=last.feature=4-lda.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232516.context=last.feature=4-lda.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232516.context=last.feature=4-lda.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232516.context=last.feature=4-lda.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232521.context=all.feature=4-lda.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232521.context=all.feature=4-lda.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232521.context=all.feature=4-lda.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232521.context=all.feature=4-lda.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232521.context=all.feature=4-lda.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232521.context=all.feature=4-lda.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232521.context=all.feature=4-lda.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232521.context=all.feature=4-lda.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/lr_svm_rf/20171022-232521.context=all.feature=4-lda.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-135330.context=current.feature=3-syntactic.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-135330.context=current.feature=3-syntactic.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-135330.context=current.feature=3-syntactic.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-135330.context=current.feature=3-syntactic.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-135330.context=current.feature=3-syntactic.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-135330.context=current.feature=3-syntactic.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-135330.context=current.feature=3-syntactic.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-135330.context=current.feature=3-syntactic.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-135330.context=current.feature=3-syntactic.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-141917.context=next.feature=4-lda.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-141917.context=next.feature=4-lda.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-141917.context=next.feature=4-lda.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-141917.context=next.feature=4-lda.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-141917.context=next.feature=4-lda.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-141917.context=next.feature=4-lda.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-141917.context=next.feature=4-lda.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-141917.context=next.feature=4-lda.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-141917.context=next.feature=4-lda.similarity=false/ghome.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-142216.context=next.feature=2-lexical.similarity=false/data.stats.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-142216.context=next.feature=2-lexical.similarity=false/dstc2.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-142216.context=next.feature=2-lexical.similarity=false/dstc2.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-142216.context=next.feature=2-lexical.similarity=false/dstc3.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-142216.context=next.feature=2-lexical.similarity=false/dstc3.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-142216.context=next.feature=2-lexical.similarity=false/family.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-142216.context=next.feature=2-lexical.similarity=false/family.valid_test.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-142216.context=next.feature=2-lexical.similarity=false/ghome.valid_test.csv</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/output/rf[100,300,500]/20171023-142216.context=next.feature=2-lexical.similarity=false/ghome.valid_test.json</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -498,7 +804,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/classify/entry_cv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="example (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -517,7 +822,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/corenlp/pycorenlp/example.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="example (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -536,7 +840,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/stanford_corenlp/pycorenlp/example.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="entry_single_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -555,7 +858,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/classify/entry_single_run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="entry_doc2vec" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -574,7 +876,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dialogue/classify/entry_doc2vec.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -595,13 +896,6 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -657,7 +951,6 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
@@ -687,6 +980,26 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="presto_data_process" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -720,10 +1033,15 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="presto_data_process" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -737,9 +1055,16 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="presto_data_process" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
@@ -753,10 +1078,18 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="presto_data_process" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
     <list size="5">
@@ -775,26 +1108,6 @@
         <item index="4" class="java.lang.String" itemvalue="Python.example (1)" />
       </list>
     </recent_temporary>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="presto_data_process" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -818,20 +1131,6 @@
       <workItem from="1499363245127" duration="32193000" />
       <workItem from="1483229924318" duration="65606000" />
       <workItem from="1500499303147" duration="26032000" />
-    </task>
-    <task id="LOCAL-00045" summary="debug sessionize weather and monkey">
-      <created>1496348190849</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1496348190849</updated>
-    </task>
-    <task id="LOCAL-00046" summary="debug sessionize weather and monkey">
-      <created>1496349079561</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1496349079561</updated>
     </task>
     <task id="LOCAL-00047" summary="debug sessionize weather and monkey">
       <created>1496350184598</created>
@@ -1162,7 +1461,21 @@
       <option name="project" value="LOCAL" />
       <updated>1508723657243</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="remove sth">
+      <created>1508723719654</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1508723719654</updated>
+    </task>
+    <task id="LOCAL-00095" summary="change random forest to 64,128,256,512 and run 5 times">
+      <created>1508784237401</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1508784237402</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1195,21 +1508,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1615" height="1054" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36552218" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3916084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843652" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32004198" sideWeight="0.51159954" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32771084" sideWeight="0.4884005" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.491453" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.491453" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36373392" sideWeight="0.4884005" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15131056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871288" sideWeight="0.4957265" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3059406" sideWeight="0.4920635" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3059406" sideWeight="0.4920635" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1220,6 +1532,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32904148" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2017229" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1246,7 +1559,8 @@
     <MESSAGE value="debug the feature-selection: remove the w2v part and concatenate it later" />
     <MESSAGE value="add d2v and single run experiments" />
     <MESSAGE value="remove sth" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove sth" />
+    <MESSAGE value="change random forest to 64,128,256,512 and run 5 times" />
+    <option name="LAST_COMMIT_MESSAGE" value="change random forest to 64,128,256,512 and run 5 times" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1358,23 +1672,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp/stanford_corenlp_pywrapper/sockwrap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="84" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="84" />
-          <folding>
-            <element signature="e#64#95#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/stanford_corenlp/pycorenlp/corenlp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1394,17 +1691,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/classify/entry_single_run.py" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/collections/__init__.py" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/gensim/models/keyedvectors.py" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/smart_open/smart_open_lib.py" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/gensim/models/word2vec.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/collections/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/gensim/models/keyedvectors.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/smart_open/smart_open_lib.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/gensim/models/word2vec.py" />
     <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171021-172249/best_of_each_dataset.csv" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/utils/validation.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/utils/validation.py" />
     <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171021-203624/best_of_each_dataset.csv" />
     <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171021-203624/data.stats.csv" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/base.py" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/gensim/models/doc2vec.py" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/gensim/utils.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/base.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/gensim/models/doc2vec.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/gensim/utils.py" />
     <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/best_of_each_dataset.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1427,7 +1724,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/output.log" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/pipeline.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/pipeline.py" />
     <entry file="file://$PROJECT_DIR$/output/utterance_type.single_run.20171022-030945/dstc2.test.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1442,15 +1739,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/scipy/sparse/coo.py" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/linear_model/logistic.py" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/json/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/scipy/sparse/coo.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/linear_model/logistic.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/json/__init__.py" />
     <entry file="file://$PROJECT_DIR$/output/20171022-162910.context=current.feature=[basic]/dstc2.valid_test.csv" />
     <entry file="file://$PROJECT_DIR$/output/20171022-174149.context=current.feature=[basic]/data.stats.csv" />
     <entry file="file://$PROJECT_DIR$/output/20171022-174149.context=current.feature=[basic]/dstc2.valid_test.csv" />
     <entry file="file://$PROJECT_DIR$/output/20171022-191832.context=current.feature=[basic]/dstc2.valid_test.json" />
     <entry file="file://$PROJECT_DIR$/output/20171022-191832.context=current.feature=[basic]/dstc2.valid_test.csv" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py" />
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py" />
     <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/dstc2.valid_test.csv" />
     <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/dstc2.valid_test.csv" />
     <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/dstc3.valid_test.csv" />
@@ -1460,53 +1757,69 @@
     <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/ghome.valid_test.csv" />
     <entry file="file://$PROJECT_DIR$/output/20171022-192415.context=current.feature=[basic]/ghome.valid_test.csv" />
     <entry file="file://$PROJECT_DIR$/output/20171022-200209.context=current.feature=[basic]/dstc2.valid_test.json" />
-    <entry file="file://$PROJECT_DIR$/dialogue/classify/feature_extractor.py">
+    <entry file="file://$PROJECT_DIR$/../../anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py" />
+    <entry file="file://$PROJECT_DIR$/output/lr_svm_rf/20171022-223724.context=next.feature=1-basic.similarity=false(py=3.5,scikit-learn=0.18.1)/dstc2.valid_test.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17775">
-          <caret line="1185" column="80" lean-forward="false" selection-start-line="1185" selection-start-column="80" selection-end-line="1185" selection-end-column="80" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="13" column="160" lean-forward="true" selection-start-line="13" selection-start-column="160" selection-end-line="13" selection-end-column="160" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/output/lr_svm_rf/20171022-224435.context=next.feature=1-basic.similarity=false(py=3.5,scikit-learn=0.18.2)/ghome.valid_test.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/data/data_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="297" column="26" lean-forward="false" selection-start-line="297" selection-start-column="26" selection-end-line="297" selection-end-column="26" />
+        <state relative-caret-position="102">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/lr_svm_rf/20171022-223000.context=next.feature=3-syntactic.similarity=false/dstc2.valid_test.csv">
+    <entry file="file://$PROJECT_DIR$/../../acm/acm_dl/data/keyphrase/textbook/ir_textbook.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="297">
+          <caret line="630" column="1392" lean-forward="false" selection-start-line="630" selection-start-column="1392" selection-end-line="630" selection-end-column="1392" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python3.6/site-packages/sklearn/ensemble/forest.py">
+    <entry file="file://$PROJECT_DIR$/dialogue/classify/feature_extractor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="921" column="23" lean-forward="false" selection-start-line="921" selection-start-column="17" selection-end-line="921" selection-end-column="23" />
+        <state relative-caret-position="-493">
+          <caret line="565" column="34" lean-forward="false" selection-start-line="565" selection-start-column="34" selection-end-line="565" selection-end-column="34" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/20171023-154135.context=next.feature=3-syntactic.similarity=true/dstc2.valid_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="75" lean-forward="false" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/classify/cv_experimenter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="874" column="14" lean-forward="false" selection-start-line="874" selection-start-column="14" selection-end-line="874" selection-end-column="14" />
+        <state relative-caret-position="-456">
+          <caret line="867" column="41" lean-forward="false" selection-start-line="867" selection-start-column="41" selection-end-line="867" selection-end-column="41" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
           </folding>
@@ -1515,16 +1828,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/classify/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="59" column="67" lean-forward="false" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
+        <state relative-caret-position="324">
+          <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogue/classify/entry_cv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="403">
+          <caret line="44" column="11" lean-forward="true" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
           <folding>
             <element signature="e#24#61#0" expanded="true" />
           </folding>
