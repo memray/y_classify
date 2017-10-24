@@ -9,10 +9,7 @@ dataset/sample/
 
 dataset_backup/
 data_for_analysis/
-.idea/
-/.idea
-.idea/*
-.idea/workspace.xml
+.idea
 *.tar
 *.gz
 *.zip
@@ -116,3 +113,4 @@ dataset.tar.gz
 dialogue/.DS_Store
 output/.DS_Store
 /dataset/bad_case_index/
+output/3-syntactic/
