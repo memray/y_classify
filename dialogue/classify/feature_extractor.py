@@ -3,6 +3,7 @@ import os
 
 import nltk
 import numpy as np
+import torch
 from gensim import corpora
 from gensim.models import Doc2Vec
 from gensim.models import LdaModel
@@ -14,6 +15,8 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.metrics import jaccard_similarity_score
 from sklearn.metrics.pairwise import cosine_similarity
+
+from skipthought.skipthoughts import BiSkip
 
 import leven
 from nltk.stem.porter import *
@@ -871,8 +874,6 @@ class Doc2VecFeature(BaseEstimator, TransformerMixin):
         :param doc_str:
         :return:
         '''
-        if not doc_str in self.doc2idx_dict:
-            self.doc2idx_dict[doc_str] = len(self.doc2idx_dict) + 1
         return self.doc2idx_dict[doc_str]
 
     def __init__(self, config):
@@ -889,13 +890,21 @@ class Doc2VecFeature(BaseEstimator, TransformerMixin):
             d2v_vector, doc2idx_dict = data_loader.deserialize_from_file(self.config['d2v_vector_path'] % self.config['data_name'])
         else:
             all_sessions = self.config['data_loader']()
+            document_dict = {}
+            doc2idx_dict  = {}
             documents = []
             for session in all_sessions:
                 for utt in session:
-                    doc_id = self.get_id(utt.msg_text)
-                    words  = gensim.utils.to_unicode(utt.msg_text).split()
-                    doc = TaggedDocument(words=words, tags=[doc_id])
-                    documents.append(doc)
+                    if utt.msg_text not in document_dict:
+                        doc_id = len(document_dict)
+                        words  = gensim.utils.to_unicode(utt.msg_text.strip().lower()).split()
+                        doc = TaggedDocument(words=words, tags=[doc_id])
+                        document_dict[utt.msg_text] = (doc_id, doc)
+                        doc2idx_dict[utt.msg_text] = doc_id
+
+                        documents.append(doc)
+                        if doc_id != documents.index(doc):
+                            assert 'docid Error'
 
             # d2v_model = Doc2Vec(size=self.config['d2v_vector_length'], window=self.config['d2v_window_size'], min_count=self.config['d2v_min_count'], workers=4, alpha=0.025, min_alpha=0.025) # use fixed documents rate
             d2v_model = Doc2Vec(size=self.config['d2v_vector_length'], window=self.config['d2v_window_size'], min_count=self.config['d2v_min_count'], workers=4)
@@ -910,9 +919,9 @@ class Doc2VecFeature(BaseEstimator, TransformerMixin):
 
             # store the model to mmap-able files
             d2v_model.save(self.config['d2v_model_path'] % self.config['data_name'])
-            data_loader.serialize_to_file([d2v_vector, self.doc2idx_dict], self.config['d2v_vector_path'] % self.config['data_name'])
+            data_loader.serialize_to_file([d2v_vector, doc2idx_dict], self.config['d2v_vector_path'] % self.config['data_name'])
 
-        return d2v_model, d2v_vector, self.doc2idx_dict
+        return d2v_model, d2v_vector, doc2idx_dict
 
     def vectorize(self, x):
         '''
@@ -921,9 +930,9 @@ class Doc2VecFeature(BaseEstimator, TransformerMixin):
         :return:
         '''
         if x in self.doc2idx_dict:
-            return  self.d2v_model.docvecs[self.doc2idx_dict[x]]
+            return self.d2v_model.docvecs[self.get_id(x)]
         else:
-            return self.d2v_model.infer_vector(x.lower().split())
+            return self.d2v_model.infer_vector(x.strip().lower().split())
 
     def fit(self, x, y=None):
         '''
@@ -945,6 +954,110 @@ class Doc2VecFeature(BaseEstimator, TransformerMixin):
             return_list.append(vec_dict)
 
         return return_list
+
+class SkipThoughtFeature(BaseEstimator, TransformerMixin):
+    '''
+    11.1 SkipThought_features
+    '''
+    def words_to_one_hot(self, str):
+        '''
+        Given a str, return its ID
+        :param doc_str:
+        :return:
+        '''
+        str = str.strip().lower()
+        word_list = str.split()
+        one_hot = [self.word2idx[w] for w in word_list if w in self.word2idx]
+
+        if len(str) == 0 or len(one_hot) == 0:
+            word_list = ['UNK']
+            one_hot = [self.word2idx[w] for w in word_list if w in self.word2idx]
+
+        print(word_list)
+        print(one_hot)
+
+        return torch.autograd.Variable(torch.LongTensor([one_hot]))
+
+    def __init__(self, config):
+        self .config = config
+        self.word2idx = {}
+        self.model, self.st_vector, self.word2idx, self.vocab = self.load_or_train_SkipThought()
+
+    def load_or_train_SkipThought(self):
+        '''
+        Load or train Doc2Vec
+        '''
+        if os.path.exists(self.config['skipthought_data_path'] % self.config['data_name']):
+            model, st_vector, self.word2idx, vocab = data_loader.deserialize_from_file(self.config['skipthought_data_path'] % self.config['data_name'])
+        else:
+            dir_st = self.config['skipthought_model_path']
+
+            # vocab = ['robots', 'are', 'very', 'cool', '<eos>', 'BiDiBu']
+            vocab = set()
+
+            all_sessions = self.config['data_loader']()
+
+            document_dict = {}
+            for session in all_sessions:
+                for utt in session:
+                    if utt.msg_text not in document_dict:
+                        words = utt.msg_text.strip().lower().split()
+                        [vocab.add(w) for w in words]
+                        document_dict[utt.msg_text] = (utt.msg_text, words)
+
+            vocab       = ['<eos>', 'UNK'] + list(vocab)
+            for id, word in enumerate(vocab):
+                self.word2idx[word] = id
+
+            st_vector =  {}
+            model = BiSkip(dir_st, vocab)
+            tally = 0
+            for text, words in document_dict.values():
+                tally += 1
+                if tally % 100 == 0:
+                    print('%d/%d' % (tally, len(document_dict)))
+
+                one_hot = self.words_to_one_hot(text)
+                st_vector[text] = model(one_hot).data.numpy()[0]
+
+            # store the model to mmap-able files
+            data_loader.serialize_to_file([model, st_vector, self.word2idx, vocab], self.config['skipthought_data_path'] % self.config['data_name'])
+
+        return model, st_vector, self.word2idx, vocab
+
+    def vectorize(self, x):
+        '''
+        for a sentence x
+        :param x:
+        :return:
+        '''
+        print(x)
+        if x in self.st_vector:
+            return self.st_vector[x]
+        else:
+            return self.model(self.words_to_one_hot(x)).data.numpy()[0]
+
+    def fit(self, x, y=None):
+        '''
+        for an array of sentence
+        :param x:
+        :return:
+        '''
+        return self
+
+    def transform(self, utterances):
+        return_list = []
+
+        for k, utt in enumerate(utterances):
+            vec_dict    = {}
+            vec         = self.vectorize(utt)
+            for i,v in enumerate(vec):
+                vec_dict['skipthought_dim=%d' % i] = v
+
+            return_list.append(vec_dict)
+
+        return return_list
+
 
 class Feature_Extractor():
     def __init__(self, config_arg):
@@ -984,6 +1097,7 @@ class Feature_Extractor():
         Define transformer_list
         '''
         transformer_list = []
+
         # extract features from each utterance in range
         for utterance_type in self.config['utterance_range']:
             # 1. Basic Feature
@@ -1211,6 +1325,33 @@ class Feature_Extractor():
             ('10.2.2-d2v_similarity.last_user_utterance_pairs', Pipeline([
                 ('selector', ItemSelector(keys=['current_user_utterance', 'last_user_utterance'])),
                 ('cosine_similarity', CosineSimilarity(self.config, d2v_feature_extractor)),
+                ('vectorize', DictVectorizer()),
+            ]))
+        )
+
+        # 11.1 Skip-thought
+        skipthought_feature_extractor = SkipThoughtFeature(self.config)
+        for utterance_type in self.config['utterance_range']:
+            transformer_list.append(
+                ('11.1-skipthought_feature.%s' % utterance_type, Pipeline([
+                    ('selector', ItemSelector(keys=[utterance_type])),
+                    ('skipthought_feature', skipthought_feature_extractor),
+                    ('vectorize', DictVectorizer()),
+                ]))
+            )
+
+        # 11.2 Skip-thought similarity
+        transformer_list.append(
+            ('11.2.1-skipthought_similarity.next_user_utterance_pairs', Pipeline([
+                ('selector', ItemSelector(keys=['current_user_utterance', 'next_user_utterance'])),
+                ('cosine_similarity', CosineSimilarity(self.config, skipthought_feature_extractor)),
+                ('vectorize', DictVectorizer()),
+            ]))
+        )
+        transformer_list.append(
+            ('11.2.2-skipthought_similarity.last_user_utterance_pairs', Pipeline([
+                ('selector', ItemSelector(keys=['current_user_utterance', 'last_user_utterance'])),
+                ('cosine_similarity', CosineSimilarity(self.config, skipthought_feature_extractor)),
                 ('vectorize', DictVectorizer()),
             ]))
         )

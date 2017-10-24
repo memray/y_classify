@@ -66,7 +66,6 @@ if __name__ == '__main__':
         else:
             assert "experiment type invalid"
 
-
             # find the best classifier (with best F1-score)
             # result = result[np.asarray(result).T[4].argmax()]
             # best_results[data_name] = result

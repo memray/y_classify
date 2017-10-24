@@ -428,7 +428,7 @@ class Experimenter():
             if f_start_number not in self.config.param['feature_set_number']:
                 continue
 
-            if not self.config.param['similarity_feature'] and f_name.find('similarity') > 0:
+            if not self.config.param['similarity_feature'] and (f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
                 continue
 
             within_context = True
