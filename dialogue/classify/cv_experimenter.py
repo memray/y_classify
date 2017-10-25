@@ -976,7 +976,7 @@ class Experimenter():
             csv_file.write(','.join(field_names) + '\n')
 
             for valid, test in results:
-                field_values = [self.config.param['data_name'], self.config.param['context_set'], self.config.param['feature_set'] + ' w/ similarity' if self.config.param['similarity_feature'] else 'w/o similarity', valid['model']]
+                field_values = [self.config.param['data_name'], self.config.param['context_set'], self.config.param['feature_set'] + ' w/ similarity' if self.config.param['similarity_feature'] else self.config.param['feature_set'] + 'w/o similarity', valid['model']]
                 [field_values.append(str(valid[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
                 [field_values.append(str(test[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
                 csv_file.write(','.join(field_values) + '\n')

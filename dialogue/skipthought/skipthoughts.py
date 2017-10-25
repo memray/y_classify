@@ -392,6 +392,92 @@ class BiSkip(AbstractBiSkip):
         return hn
 
 
+class BiSkipClassifier(AbstractBiSkip):
+    def __init__(self, dir_st, vocab, save=False, dropout=0.25, fixed_emb=False, hidden_size=None, output_size=None):
+        super(BiSkipClassifier, self).__init__(dir_st, vocab, save, dropout, fixed_emb)
+        # Remove bias_ih_l0 (== zero all the time)
+        # del self.gru._parameters['bias_hh_l0']
+        # del self.gru._all_weights[0][3]
+
+        assert hidden_size != None
+        assert output_size != None
+
+        self.i2o = nn.Linear(hidden_size, output_size)
+        self.softmax = nn.LogSoftmax()
+
+    def _load_rnn(self):
+        self.rnn = nn.GRU(input_size=620,
+                          hidden_size=1200,
+                          batch_first=True,
+                          dropout=self.dropout,
+                          bidirectional=True)
+        parameters = self._load_rnn_params()
+        state_dict = self._make_rnn_state_dict(parameters)
+        self.rnn.load_state_dict(state_dict)
+        return self.rnn
+
+    def _make_rnn_state_dict(self, p):
+        s = OrderedDict()
+        s['bias_ih_l0'] = torch.zeros(3600)
+        s['bias_hh_l0'] = torch.zeros(3600)  # must stay equal to 0
+        s['weight_ih_l0'] = torch.zeros(3600, 620)
+        s['weight_hh_l0'] = torch.zeros(3600, 1200)
+
+        s['bias_ih_l0_reverse'] = torch.zeros(3600)
+        s['bias_hh_l0_reverse'] = torch.zeros(3600)  # must stay equal to 0
+        s['weight_ih_l0_reverse'] = torch.zeros(3600, 620)
+        s['weight_hh_l0_reverse'] = torch.zeros(3600, 1200)
+
+        s['weight_ih_l0'][:2400] = torch.from_numpy(p['encoder_W']).t()
+        s['weight_ih_l0'][2400:] = torch.from_numpy(p['encoder_Wx']).t()
+        s['bias_ih_l0'][:2400] = torch.from_numpy(p['encoder_b'])
+        s['bias_ih_l0'][2400:] = torch.from_numpy(p['encoder_bx'])
+        s['weight_hh_l0'][:2400] = torch.from_numpy(p['encoder_U']).t()
+        s['weight_hh_l0'][2400:] = torch.from_numpy(p['encoder_Ux']).t()
+
+        s['weight_ih_l0_reverse'][:2400] = torch.from_numpy(p['encoder_r_W']).t()
+        s['weight_ih_l0_reverse'][2400:] = torch.from_numpy(p['encoder_r_Wx']).t()
+        s['bias_ih_l0_reverse'][:2400] = torch.from_numpy(p['encoder_r_b'])
+        s['bias_ih_l0_reverse'][2400:] = torch.from_numpy(p['encoder_r_bx'])
+        s['weight_hh_l0_reverse'][:2400] = torch.from_numpy(p['encoder_r_U']).t()
+        s['weight_hh_l0_reverse'][2400:] = torch.from_numpy(p['encoder_r_Ux']).t()
+        return s
+
+    def _argsort(self, seq):
+        return sorted(range(len(seq)), key=seq.__getitem__)
+
+    def forward(self, input, lengths=None):
+        batch_size = input.size(0)
+        if lengths is None:
+            lengths = self._process_lengths(input)
+        sorted_lengths = sorted(lengths)
+        sorted_lengths = sorted_lengths[::-1]
+        idx = self._argsort(lengths)
+        idx = idx[::-1]  # decreasing order
+        inverse_idx = self._argsort(idx)
+        idx = Variable(torch.LongTensor(idx))
+        inverse_idx = Variable(torch.LongTensor(inverse_idx))
+        if input.data.is_cuda:
+            idx = idx.cuda()
+            inverse_idx = inverse_idx.cuda()
+
+        x = torch.index_select(input, 0, idx)
+
+        x = self.embedding(x)
+        x = nn.utils.rnn.pack_padded_sequence(x, sorted_lengths, batch_first=True)
+        x, hn = self.rnn(x)  # seq2seq
+        hn = hn.transpose(0, 1)
+        hn = hn.contiguous()
+        hn = hn.view(batch_size, 2 * hn.size(2))
+
+        hn = torch.index_select(hn, 0, inverse_idx)
+
+        hn = torch.cat(hn, dim=0)
+
+        output = self.i2o(hn)
+        output = self.softmax(output)
+        return output
+
 if __name__ == '__main__':
     dir_st = '/Users/memray/Data/skip-thought'
     vocab = ['robots', 'are', 'very', 'cool', '<eos>', 'BiDiBu']
