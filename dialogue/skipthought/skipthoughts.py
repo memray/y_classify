@@ -9,8 +9,8 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 from collections import OrderedDict
 
-from skipthought.gru import BayesianGRU, GRU
-from skipthought.dropout import EmbeddingDropout, SequentialDropout
+from dialogue.skipthought.gru import BayesianGRU, GRU
+from dialogue.skipthought.dropout import EmbeddingDropout, SequentialDropout
 
 urls = {}
 urls['dictionary'] = 'http://www.cs.toronto.edu/~rkiros/models/dictionary.txt'
@@ -479,7 +479,8 @@ class BiSkipClassifier(AbstractBiSkip):
         return output
 
 if __name__ == '__main__':
-    dir_st = '/Users/memray/Data/skip-thought'
+    # dir_st = '/Users/memray/Data/skip-thought'
+    dir_st = '/home/memray/Data/skip-thought'
     vocab = ['robots', 'are', 'very', 'cool', '<eos>', 'BiDiBu']
     #model = BayesianUniSkip(dir_st, vocab)
     model = BiSkip(dir_st, vocab)

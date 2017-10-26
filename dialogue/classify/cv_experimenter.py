@@ -35,8 +35,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.extmath import density
 from sklearn import metrics, preprocessing
 
-from classify.feature_extractor import ItemSelector
-from data import data_loader
+from dialogue.classify.feature_extractor import ItemSelector
+from dialogue.data import data_loader
 
 __author__ = "Rui Meng"
 __email__ = "rui.meng@pitt.edu"

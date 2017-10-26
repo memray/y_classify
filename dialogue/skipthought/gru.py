@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
-from skipthought.dropout import SequentialDropout
+from dialogue.skipthought.dropout import SequentialDropout
 
 class AbstractGRUCell(nn.Module):
 

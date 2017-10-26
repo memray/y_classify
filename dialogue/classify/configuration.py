@@ -57,11 +57,35 @@ def load_config():
     param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
 
     # two key feature settings
-    param['context_set']     = ['current', 'next', 'last', 'all'][3]
+    param['context_set']     = ['current', 'next', 'last', 'all'][0]
 
-    selected_feature_set_id  = 7
-    param['feature_set']     = ['0-all', '1-basic', '2-lexical', '3-syntactic', '4-lda', '5-w2v', '6-d2v', '7-skipthought'][selected_feature_set_id]
-    param['feature_set_number']  = [['1','2','3','4','5','6','7','8','9','10'], ['1','2','3'], ['4'], ['5','6','7'], ['8'], ['9'], ['10'], ['11']][selected_feature_set_id]
+    selected_feature_set_id  = 0
+    '''
+    Feature Combination:
+    '0-all', '1-basic', '2-lexical', '3-syntactic', '4-lda', '5-w2v', '6-d2v', '7-skipthought'
+    '8-[1,2,3]'
+    '9-[1,3,4]'
+    '10-[1,3,5]'
+    '11-[1,3,6]'
+    '12-[1,3,7]'
+    '''
+    param['feature_set']     = ['0-all', '1-basic', '2-lexical', '3-syntactic', '4-lda', '5-w2v', '6-d2v', '7-skipthought', '8-[1,2,3]', '9-[1,3,4]', '10-[1,3,5]', '11-[1,3,6]', '12-[1,3,7]'][selected_feature_set_id]
+
+    '''
+    Feature Set
+    1. basic - utterance length
+    2. user action
+    3. time feature
+    4. n-gram
+    5. noun phrase
+    6. entity
+    7. syntactic
+    8. lda
+    9. w2v
+    10. d2v
+    11. skip-thought
+    '''
+    param['feature_set_number']  = [['1','2','3','4','5','6','7','8','9','10'], ['1','2','3'], ['4'], ['5','6','7'], ['8'], ['9'], ['10'], ['11'], ['1','2','3','5','6','7', '4'], ['1','2','3','5','6','7', '8'], ['1','2','3','5','6','7', '9'], ['1','2','3','5','6','7', '10'], ['1','2','3','5','6','7', '11']][selected_feature_set_id]
     param['similarity_feature']  = False
 
     # context window
@@ -155,9 +179,9 @@ def load_config():
 
 
     # Skip-thought setting
-    param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
+    # param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
+    param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
     param['skipthought_data_path']      = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector')
-
 
 
 

@@ -5,12 +5,14 @@ from torch import nn
 from torch.autograd import Variable
 from torch.optim import Adam
 
-from classify import configuration
-from classify.cv_experimenter import Experimenter
-from classify.feature_extractor import Feature_Extractor, ItemSelector
+from dialogue.classify import configuration
+from dialogue.classify.cv_experimenter import Experimenter
+from dialogue.classify.feature_extractor import Feature_Extractor, ItemSelector
 from dialogue.data.data_loader import data_loader, DataLoader, Utterance
-from skipthought.skipthoughts import BiSkip, BiSkipClassifier
+from dialogue.skipthought.skipthoughts import BiSkip, BiSkipClassifier
 
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import numpy as np
 
 def str_to_one_hot(str, word2idx):
@@ -32,14 +34,7 @@ def str_to_one_hot(str, word2idx):
 
     return one_hot
 
-def init_Skip_Thought(config, hidden_size, output_size):
-    word2idx = {}
-
-    '''
-    Load or train Doc2Vec
-    '''
-    dir_st = config['skipthought_model_path']
-
+def init_Skip_Thought_dict(config):
     vocab = set()
 
     all_sessions = config['data_loader']()
@@ -53,10 +48,12 @@ def init_Skip_Thought(config, hidden_size, output_size):
                 document_dict[utt.msg_text] = (utt.msg_text, words)
 
     vocab       = ['<eos>', 'UNK'] + list(vocab)
+
+    word2idx = {}
     for id, word in enumerate(vocab):
         word2idx[word] = id
 
-    return BiSkipClassifier(dir_st, vocab, hidden_size=hidden_size, output_size=output_size), word2idx
+    return vocab, word2idx
 
 if __name__ == '__main__':
     # initialize
@@ -97,11 +94,19 @@ if __name__ == '__main__':
         X_texts     = ItemSelector(keys=context_range).transform(X_raw_feature)
         X_texts     = list(zip(*X_texts))
 
+        fixed_emb = True
         hidden_size = 2400 * len(context_range)
         output_size = 4
 
-        model, word2idx = init_Skip_Thought(config, hidden_size, output_size)
-        optimizer = Adam(params=model.parameters(), lr=1e-4)
+        vocab, word2idx = init_Skip_Thought_dict(config)
+        model = BiSkipClassifier(config['skipthought_model_path'], vocab, hidden_size=hidden_size, output_size=output_size, fixed_emb=fixed_emb, dropout=0.5)
+        # optimizer = Adam(params=model.parameters(), lr=1e-4)
+        for p in model.parameters():
+            p.requires_grad = False
+        for p in model.i2o.parameters():
+            p.requires_grad = True
+        optimizer = Adam(params=filter(lambda p: p.requires_grad, model.parameters()), lr=1e-5)
+        # optimizer = Adam(params=[model.i2o], lr=1e-4)
         criterion = nn.NLLLoss()
 
         X_onehot = [[str_to_one_hot(sent, word2idx) for sent in s] for s in X_texts]
@@ -128,13 +133,26 @@ if __name__ == '__main__':
             return x_new
                 # torch.cat([tensor, tensor.new(length - tensor.size(0), *tensor.size()[1:]).zero_()])
 
+        if torch.cuda.is_available():
+            model.cuda()
+            print('Running on GPU!')
+
+        all_training_losses = []
+        all_valid_losses = []
+
+        '''
+        Training
+        '''
         for epoch in range(epoch_num):
 
             training_losses = []
             for i, (x,y) in enumerate(zip(X_train_onehot, Y_train)):
                 x = pad(x)
-                # y = Variable(torch.LongTensor(np.asarray([1  if i==y else 0 for i in range(output_size)]))).view(1,-1)
                 y = Variable(torch.LongTensor([y.tolist()]))
+
+                if torch.cuda.is_available():
+                    x = x.cuda()
+                    y = y.cuda()
 
                 output = model.forward(x).view(1,-1)
                 loss = criterion.forward(output, y)
@@ -144,28 +162,25 @@ if __name__ == '__main__':
                 optimizer.step()
                 training_losses.append(loss.data[0])
 
-                print('Training %d/%d, loss=%.5f' % (i, len(Y_train), loss.data[0]))
-                if i > 10:
-                    break
+                if i % 500 == 0:
+                    print('Training %d/%d, loss=%.5f' % (i, len(Y_train), np.average(training_losses[-100:])))
 
             training_loss_mean = torch.mean(torch.FloatTensor(training_losses))
+            all_training_losses.append(training_loss_mean)
 
+            '''
+            Validating
+            '''
             valid_losses = []
             valid_pred   = []
             for i, (x_t, x,y) in enumerate(zip(X_valid_text, X_valid_onehot, Y_valid)):
                 x = pad(x)
-
-                # if i < 164:
-                #     continue
-                # print('*' * 20 + str(i) + '*' * 20)
-                # print('x = ')
-                # print(x_t)
-                # # print(x)
-                # print('y = [%d]' % y)
-                # print(x.size())
+                y = Variable(torch.LongTensor([y.tolist()]))
+                if torch.cuda.is_available():
+                    x = x.cuda()
+                    y = y.cuda()
 
                 output = model.forward(x).view(1,-1)
-                y = Variable(torch.LongTensor([y.tolist()]))
 
                 # print('output_size      = %s' % str(output.size()))
                 # print('y_tensor         = %s' % str(y.data))
@@ -173,22 +188,31 @@ if __name__ == '__main__':
                 loss = criterion.forward(output, y)
                 valid_losses.append(loss.data[0])
                 prob_i, pred_i = output.data.topk(1)
-                valid_pred.append(pred_i.numpy())
 
-                print('Validating %d/%d, loss=%.5f' % (i, len(Y_valid), loss.data[0]))
+                if torch.cuda.is_available():
+                    valid_pred.append(pred_i.cpu().numpy())
+                else:
+                    valid_pred.append(pred_i.numpy())
+
+                if i % 500 == 0:
+                    print('Validating %d/%d, loss=%.5f' % (i, len(Y_valid), np.average(valid_losses[-100:])))
                 # if i > 20:
                 #     break
 
-
             valid_loss_mean = torch.mean(torch.FloatTensor(valid_losses))
+            all_valid_losses.append(valid_loss_mean)
             is_best_loss = valid_loss_mean < best_loss
-            best_loss = min(valid_loss_mean, best_loss)
 
             print('*' * 50)
             print('Epoch=%d' % epoch)
             print('Training loss=%.5f' % training_loss_mean)
             print('Valid loss=%.5f' % valid_loss_mean)
-            print('Best loss=%.5f' % best_loss)
+            if is_best_loss:
+                print('Update best loss=%.5f, last bess loss=%.5f' % (valid_loss_mean, best_loss))
+            else:
+                print('Best loss is not updated, =%.5f' % best_loss)
+
+            best_loss = min(valid_loss_mean, best_loss)
 
 
             print("Classification report:")
@@ -196,35 +220,58 @@ if __name__ == '__main__':
             report = metrics.classification_report(Y_valid, valid_pred,
                                                    target_names=np.asarray(config['label_encoder'].classes_))
             print(report)
+
+            print("confusion matrix:")
+            confusion_mat = str(metrics.confusion_matrix(Y_valid, valid_pred))
+            print('\n' + confusion_mat)
+
+            acc_score = metrics.accuracy_score(Y_valid, valid_pred)
+            f1_score = metrics.f1_score(Y_valid, valid_pred, average='macro')
+
+            print("accuracy:   %0.3f" % acc_score)
+            print("f1_score:   %0.3f" % f1_score)
+
             print('*' * 50)
+
+            plt.plot(all_training_losses)
+            plt.figure()
 
             if is_best_loss:
                 stop_increasing = 0
             else:
                 stop_increasing += 1
 
-            if stop_increasing >= 0:
+            if stop_increasing >= 2:
                 print('Have not increased for %d epoches, stop training' % stop_increasing)
+                break
 
-
+        '''
+        Testing
+        '''
         test_pred   = []
         test_losses = []
         for i, (x,y) in enumerate(zip(X_test_onehot, Y_test)):
             x = pad(x)
             y = Variable(torch.LongTensor([y.tolist()]))
 
-            # print(x_t)
-            # print(x)
-            # print(x.size())
+            if torch.cuda.is_available():
+                x = x.cuda()
+                y = y.cuda()
 
             optimizer.zero_grad()
 
             output = model.forward(x).view(1,-1)
             prob_i, pred_i = output.data.topk(1)
-            test_pred.append(pred_i.numpy())
+
+            if torch.cuda.is_available():
+                test_pred.append(pred_i.cpu().numpy())
+            else:
+                test_pred.append(pred_i.numpy())
+
             test_losses.append(loss.data[0])
 
-            print('Testing %d/%d, loss=%.5f' % (i, len(Y_test), loss.data[0]))
+            if i % 500 == 0:
+                print('Testing %d/%d, loss=%.5f' % (i, len(Y_test), loss.data[0]))
 
             # if i > 20:
             #     break
@@ -237,5 +284,16 @@ if __name__ == '__main__':
         report = metrics.classification_report(Y_test, test_pred,
                                                target_names=np.asarray(config['label_encoder'].classes_))
         print(report)
+
+        print("confusion matrix:")
+        confusion_mat = str(metrics.confusion_matrix(Y_test, test_pred))
+        print('\n' + confusion_mat)
+
+        acc_score = metrics.accuracy_score(Y_test, test_pred)
+        f1_score = metrics.f1_score(Y_test, test_pred, average='macro')
+
+        print("accuracy:   %0.3f" % acc_score)
+        print("f1_score:   %0.3f" % f1_score)
+
         print('*' * 50)
 

@@ -16,7 +16,7 @@ from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.metrics import jaccard_similarity_score
 from sklearn.metrics.pairwise import cosine_similarity
 
-from skipthought.skipthoughts import BiSkip
+from dialogue.skipthought.skipthoughts import BiSkip
 
 import leven
 from nltk.stem.porter import *
@@ -27,7 +27,7 @@ import numpy.core.numeric as _nx
 from numpy.core import getlimits, umath
 
 # initialize the Stanford wrapper
-from stanford_corenlp.pycorenlp.corenlp import StanfordCoreNLP
+from dialogue.stanford_corenlp.pycorenlp.corenlp import StanfordCoreNLP
 import gensim
 from sklearn.externals import joblib
 
