@@ -57,7 +57,7 @@ def load_config():
     param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
 
     # two key feature settings
-    param['context_set']     = ['current', 'next', 'last', 'all'][0]
+    param['context_set']     = ['current', 'next', 'last', 'all'][3]
 
     selected_feature_set_id  = 0
     '''
