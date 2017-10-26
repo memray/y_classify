@@ -1,5 +1,6 @@
 # add by Rui Meng
 dialogue/analysis/*
+*.DS_Store
 
 # make the cross_validation fold gitable
 dataset/editorial_annotations/
@@ -106,6 +107,15 @@ ENV/
 # Rope project settings
 .ropeproject
 dataset.tar.gz
+/dataset/
+/dataset/*
+/output@Yahoo/
+/event_from_zhen/
+/dataset_old/
+dialogue/.DS_Store
+output/.DS_Store
+/dataset/bad_case_index/
+/dataset/feature_cache@Yahoo/
 /dataset/
 /output@Yahoo/
 /event_from_zhen/
