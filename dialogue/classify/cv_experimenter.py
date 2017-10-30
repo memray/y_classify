@@ -23,6 +23,7 @@ from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.feature_selection import SelectPercentile
 from sklearn.linear_model import RidgeClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.multiclass import OneVsRestClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC, SVC
 from sklearn.linear_model import SGDClassifier
@@ -125,6 +126,81 @@ class Experimenter():
         return train_ids, valid_ids, test_ids
 
 
+    def load_cv_index_train8_valid1_test1(self, Y):
+        '''
+        load the data index for cross-validation, split into 3 parts
+        '''
+        cv_index_cache_path = os.path.join(self.config.param['root_path'], 'dataset', 'cross_validation',
+                                           self.config.param['data_name'] + '.index_cache.evenly.#div=%d.#cv=%d.pkl' % (
+                                           self.config['#division'], self.config['#cross_validation']))
+
+        if os.path.exists(cv_index_cache_path):
+            with open(cv_index_cache_path, 'rb') as idx_cache:
+                train_ids, valid_ids, test_ids = pickle.load(idx_cache)
+        else:
+            if not os.path.exists(os.path.join(self.config.param['root_path'], 'dataset', 'cross_validation')):
+                os.makedirs(os.path.join(self.config.param['root_path'], 'dataset', 'cross_validation'))
+
+            num_data = len(Y)
+            train_ids = []
+            valid_ids = []
+            test_ids  = []
+
+            # get ids and sort out by Y
+            data_dict = {}
+            for y_id, y in enumerate(Y):
+                data_list = data_dict.get(y, [])
+                data_list.append(y_id)
+                data_dict[y] = data_list
+
+            # get a new division - shuffle the data of each class
+            for div in range(self.config['#division']):
+                data_dict_copy = copy.deepcopy(data_dict)
+                for y, y_list in data_dict_copy.items():
+                    np.random.shuffle(y_list)
+                    data_dict_copy[y] = np.asarray(y_list)
+                # print('*' * 20 + ' div=%d ' % div)
+
+                # segment to folds evenly to avoid data skewness
+                for fold in range(self.config['#cross_validation']):
+                    # initialize lists for the train/test id of this div-fold
+                    train_id = np.array([], dtype=int)
+                    valid_id = np.array([], dtype=int)
+                    test_id = np.array([], dtype=int)
+
+                    # pick up the specific fold of data from each class
+                    for y, y_list in data_dict_copy.items():
+                        fold_size = int(len(y_list) / self.config['#cross_validation'])
+                        if fold == self.config['#cross_validation'] - 1:
+                            test_idx = np.asarray(range(fold * fold_size, len(y_list)))
+                            valid_idx = np.asarray(range(0, fold_size))
+                            print('fold=%d, test=[%d, %d], valid=[%d, %d]' % (fold, fold * fold_size, len(y_list), 0, fold * fold_size))
+                        else:
+                            test_idx = np.asarray(range(fold * fold_size, (fold + 1) * fold_size))
+                            valid_idx = np.asarray(range((fold + 1) * fold_size, (fold + 2) * fold_size))
+                            print('fold=%d, test=[%d, %d], valid=[%d, %d]' % (fold, fold * fold_size, (fold + 1) * fold_size, (fold + 1) * fold_size, (fold + 2) * fold_size))
+
+                        train_idx = np.asarray([i for i in range(len(y_list)) if i not in test_idx and i not in valid_idx])
+
+                        train_id = np.append(train_id, y_list[train_idx])
+                        valid_id = np.append(valid_id, y_list[valid_idx])
+                        test_id = np.append(test_id, y_list[test_idx])
+
+                        print('fold=%d, #(%s)=%d, #(train)=%d, #(valid)=%d, #(test)=%d' % (
+                            fold, y, len(y_list), len(train_idx), len(valid_idx), len(test_idx)))
+
+                        print('*' * 50)
+
+                    # finish generation of this round, append to *_ids
+                    train_ids.append(train_id)
+                    test_ids.append(test_id)
+                    valid_ids.append(valid_id)
+
+            with open(cv_index_cache_path, 'wb') as idx_cache:
+                pickle.dump([train_ids, valid_ids, test_ids], idx_cache)
+
+        return train_ids, valid_ids, test_ids
+
     def load_cv_index(self, X, Y):
         # load the data index for cross-validation
         if self.config['experiment_mode'] == 'reformulation_detection' or self.config['experiment_mode'] == 'task_boundary_detection':
@@ -189,7 +265,7 @@ class Experimenter():
         return train_ids, test_ids
 
     def benchmark(self, model_name, clf):
-        global X_train, Y_train, X_test, Y_test, X_valid, Y_valid
+        global X_train, Y_train, X_test, Y_test
         results = []
 
         if 'vectorizer' in self.config:
@@ -207,7 +283,16 @@ class Experimenter():
         train_time = time() - t0
         self.logger.info("train time: %0.3fs" % train_time)
 
-        for valid_test, X, Y in [('valid', X_valid, Y_valid), ('test', X_test, Y_test)]:
+        '''
+        have to handle validation results
+        '''
+        if 'X_valid' in globals() and 'Y_valid' in globals():
+            global X_valid, Y_valid
+            data_for_output = [('valid', X_valid, Y_valid), ('test', X_test, Y_test)]
+        else:
+            data_for_output = [('test', X_test, Y_test)]
+
+        for valid_or_test, X, Y in data_for_output:
             t0 = time()
             pred = clf.predict(X)
             test_time = time() - t0
@@ -221,17 +306,17 @@ class Experimenter():
             self.logger.info("accuracy:   %0.3f" % acc_score)
             self.logger.info("f1_score:   %0.3f" % f1_score)
 
-            if (not hasattr(clf, 'kernel')) or (hasattr(clf, 'kernel') and clf.kernel != 'rbf'):
-                if hasattr(clf, 'coef_'):
-                    self.logger.info("dimensionality: %d" % clf.coef_.shape[1])
-                    self.logger.info("density: %f" % density(clf.coef_))
-
-                    if opts.print_top10 and feature_names is not None:
-                        self.logger.info("top 10 keywords per class:")
-                        for i, label in enumerate(target_names):
-                            top10 = np.argsort(clf.coef_[i])[-10:]
-                            self.logger.info("%s: %s" % (label, " ".join(feature_names[top10])))
-                    self.logger.info('')
+            # if (not hasattr(clf, 'kernel')) or (hasattr(clf, 'kernel') and clf.kernel != 'rbf'):
+            #     if hasattr(clf, 'coef_'):
+            #         self.logger.info("dimensionality: %d" % clf.coef_.shape[1])
+            #         self.logger.info("density: %f" % density(clf.coef_))
+            #
+            #         if opts.print_top10 and feature_names is not None:
+            #             self.logger.info("top 10 keywords per class:")
+            #             for i, label in enumerate(target_names):
+            #                 top10 = np.argsort(clf.coef_[i])[-10:]
+            #                 self.logger.info("%s: %s" % (label, " ".join(feature_names[top10])))
+            #         self.logger.info('')
 
             if opts.print_report:
                 self.logger.info("classification report:")
@@ -249,7 +334,10 @@ class Experimenter():
             result = {}
             result['dataset']          = self.config.param['data_name']
             result['model']            = model_name
-            result['valid_test']       = valid_test
+            result['valid_test']       = valid_or_test
+            result['test_round']       = self.config.param['test_round']
+            result['context_set']      = self.config.param['context_set']
+            result['feature_set']      = self.config.param['feature_set']
 
             result['accuracy']         = acc_score
             result['precision']        = precision_score
@@ -361,23 +449,27 @@ class Experimenter():
     def run_cross_validation(self, X, Y):
         X = np.nan_to_num(X.todense())
 
-        train_ids, test_ids = self.load_cv_index(X, Y)
+        train_ids, valid_ids, test_ids = self.load_cv_index_train8_valid1_test1(Y)
         cv_results = []
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
             self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
+            self.config['test_round'] = r_id
+
             X_train = np.nan_to_num(preprocessing.scale(X[train_id]))
             Y_train = Y[train_id]
             X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
             Y_test = Y[test_id]
 
-            cv_results.append(self.run_experiment())
+            cv_results.extend(self.run_experiment())
+
+        self.export_cv_results(cv_results, test_ids, Y)
 
         # get the average score of cross-validation
-        avg_results = self.average_results(cv_results)
+        # avg_results = self.average_results(cv_results)
 
-        return avg_results
+        return cv_results
 
 
     def run_single_pass(self, X, Y):
@@ -395,9 +487,9 @@ class Experimenter():
         # test set
         X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
         Y_test = Y[test_id]
-        result = self.run_experiment()
+        results = self.run_experiment()
 
-        self.export_single_pass_results(result)
+        self.export_single_pass_results(results)
         return
 
 
@@ -572,7 +664,7 @@ class Experimenter():
         labels   = self.config['label_encoder'].classes_
 
         for x_raw, y_pred, y_test in zip(np.asarray(self.config['X_raw'])[diff_idx], np.asarray(y_preds)[diff_idx], np.asarray(y_tests)[diff_idx]):
-            x_index     = 0#x_raw['index'], wrong!!!
+            x_index     = 0 #x_raw['index'], wrong!!!
             dialogue    = x_raw['dialogue']
             utterance   = x_raw['utterance']
 
@@ -868,14 +960,51 @@ class Experimenter():
                 # (RandomForestClassifier(n_estimators=100, n_jobs=-1), "Random forest.#tree=100"),
                 # (RandomForestClassifier(n_estimators=300, n_jobs=-1), "Random forest.#tree=300"),
                 # (RandomForestClassifier(n_estimators=500, n_jobs=-1), "Random forest.#tree=500")
-                (RandomForestClassifier(n_estimators=64, n_jobs=-1), "Random forest.#tree=64"),
-                (RandomForestClassifier(n_estimators=128, n_jobs=-1), "Random forest.#tree=128"),
+                # (RandomForestClassifier(n_estimators=64, n_jobs=-1), "Random forest.#tree=64"),
+                # (RandomForestClassifier(n_estimators=128, n_jobs=-1), "Random forest.#tree=128"),
                 (RandomForestClassifier(n_estimators=256, n_jobs=-1), "Random forest.#tree=256"),
                 (RandomForestClassifier(n_estimators=512, n_jobs=-1), "Random forest.#tree=512")
-        ] * 5:
+                (RandomForestClassifier(n_estimators=1024, n_jobs=-1), "Random forest.#tree=1024")
+        ]:
             self.logger.info('=' * 80)
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
+
+        for C in [1, 4, 8, 16]: # 1, 10
+            self.logger.info('=' * 80)
+            self.logger.info("LR.pen=l1.C=%f" % C)
+            # Train Logistic Regression model
+            # results.append(self.benchmark('LR.pen=l1.C=%d' % C,
+            #                               LogisticRegression(solver="liblinear", multi_class='multinomial', penalty='l1', C=C)))
+            results.append(self.benchmark('LR.pen=l1.C=%d' % C, OneVsRestClassifier(LogisticRegression(solver="liblinear", multi_class='ovr', penalty='l1', C=C), n_jobs=-1)))
+            self.logger.info('=' * 80)
+            self.logger.info("LR.pen=l2.C=%f" % C)
+            # Train Logistic Regression model
+            results.append(self.benchmark('LR.pen=l2.C=%d' % C,
+                                          LogisticRegression(solver="lbfgs", multi_class='multinomial', penalty='l2', C=C, dual=False)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("LinearSVC.pen=l1, C=%d" % C)
+            # results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C,
+            #                               LinearSVC(loss='squared_hinge', penalty='l1', dual=True, tol=1e-3, C=C)))
+            results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("LinearSVC.pen=l2, C=%d" % C)
+            # results.append(self.benchmark('LinearSVC.pen=l2.C=%d' % C,
+            #                               LinearSVC(loss='hinge', penalty='l2', dual=True, tol=1e-3, C=C)))
+            results.append(self.benchmark('LinearSVC.pen=l2.C=%d' % C, OneVsRestClassifier(LinearSVC(penalty='l2', tol=1e-3, C=C), n_jobs=-1)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("RBF SVC with C=%f" % C)
+            # results.append(self.benchmark('RBF SVC with C=%f' % C, SVC(C=C, cache_size=200, class_weight=None,
+            #                               degree=3, gamma='auto', kernel='rbf',
+            #                               max_iter=-1, probability=False, random_state=None, shrinking=True,
+            #                               tol=0.001, verbose=False)))
+            results.append(self.benchmark('LinearSVC.pen=l2.C=%d' % C, OneVsRestClassifier(SVC(C=C, cache_size=200, class_weight=None,
+                                          degree=3, gamma='auto', kernel='rbf',
+                                          max_iter=-1, probability=False, random_state=None, shrinking=True,
+                                          tol=0.001, verbose=False), n_jobs=-1)))
 
         '''
         for penalty in ["l2", "l1"]:
@@ -887,59 +1016,36 @@ class Experimenter():
                                                dual=False, tol=1e-3)))
 
             # Train SGD model
-            # results.append(self.benchmark('SGDClassifier.penalty=%s' % penalty, SGDClassifier(alpha=.0001, n_iter=50,
-            #                                        penalty=penalty)))
-        '''
+            results.append(self.benchmark('SGDClassifier.penalty=%s' % penalty, SGDClassifier(alpha=.0001, n_iter=50,
+                                                   penalty=penalty)))
+
         # Train SGD with Elastic Net penalty
-        # self.logger.info('=' * 80)
-        # self.logger.info("Elastic-Net penalty")
-        # results.append(self.benchmark('SGDClassifier.penalty=%s' % 'elasticnet', SGDClassifier(alpha=.0001, n_iter=50,
-        #                                        penalty="elasticnet")))
+        self.logger.info('=' * 80)
+        self.logger.info("Elastic-Net penalty")
+        results.append(self.benchmark('SGDClassifier.penalty=%s' % 'elasticnet', SGDClassifier(alpha=.0001, n_iter=50,
+                                               penalty="elasticnet")))
 
         # Train NearestCentroid without threshold
-        # self.logger.info('=' * 80)
-        # self.logger.info("NearestCentroid (aka Rocchio classifier)")
-        # results.append(self.benchmark('NearestCentroid', NearestCentroid()))
+        self.logger.info('=' * 80)
+        self.logger.info("NearestCentroid (aka Rocchio classifier)")
+        results.append(self.benchmark('NearestCentroid', NearestCentroid()))
 
         # Train sparse Naive Bayes classifiers
-        # self.logger.info('=' * 80)
-        # self.logger.info("Naive Bayes")
-        # results.append(self.benchmark('MultinomialNB', MultinomialNB(alpha=.01)))
-        # results.append(self.benchmark('BernoulliNB', BernoulliNB(alpha=.01)))
+        self.logger.info('=' * 80)
+        self.logger.info("Naive Bayes")
+        results.append(self.benchmark('MultinomialNB', MultinomialNB(alpha=.01)))
+        results.append(self.benchmark('BernoulliNB', BernoulliNB(alpha=.01)))
 
-        # self.logger.info('=' * 80)
-        # self.logger.info("LinearSVC with L1-based feature selection")
+        self.logger.info('=' * 80)
+        self.logger.info("LinearSVC with L1-based feature selection")
         # The smaller C, the stronger the regularization.
         # The more regularization, the more sparsity.
-        # results.append(self.benchmark('LinearSVC+L1-FeatSel', Pipeline([
-        #     ('feature_selection', LinearSVC(penalty="l1", dual=False, tol=1e-3)),
-        #     ('classification', LinearSVC())
-        # ])))
+        results.append(self.benchmark('LinearSVC+L1-FeatSel', Pipeline([
+            ('feature_selection', LinearSVC(penalty="l1", dual=False, tol=1e-3)),
+            ('classification', LinearSVC())
+        ])))
+        '''
 
-        """
-        for C in [0.1, 1, 10]:
-            self.logger.info('=' * 80)
-            self.logger.info("LR.pen=l1.C=%f" % C)
-            # Train Logistic Regression model
-            results.append(self.benchmark('LR.pen=l1.C=%d' % C,
-                                          LogisticRegression(solver="liblinear", penalty='l1', C=C)))
-            self.logger.info('=' * 80)
-            self.logger.info("LR.pen=l2.C=%f" % C)
-            # Train Logistic Regression model
-            results.append(self.benchmark('LR.pen=l2.C=%d' % C,
-                                          LogisticRegression(solver="liblinear", penalty='l2', C=C, dual=True)))
-            self.logger.info('=' * 80)
-            self.logger.info("LinearSVC.pen=l1, C=%d" % C)
-            results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C,
-                                          LinearSVC(loss='squared_hinge', penalty='l1', dual=False, tol=1e-3, C=C)))
-            self.logger.info('=' * 80)
-            self.logger.info("RBF SVC with C=%f" % C)
-            results.append(self.benchmark('RBF SVC with C=%f' % C, SVC(C=C, cache_size=200, class_weight=None,
-                                          degree=3, gamma='auto', kernel='rbf',
-                                          max_iter=-1, probability=False, random_state=None, shrinking=True,
-                                          tol=0.001, verbose=False))
-            )
-        """
 
         return results
 
@@ -955,6 +1061,130 @@ class Experimenter():
         return self.benchmark('LR.pen=l1.C=%d' % C,
                                       LogisticRegression(solver="liblinear", penalty='l1', C=C), return_y_pred = True)
 
+    def export_single_pass_results(self, results):
+        # field_names in results of benchmarks = ['dataset', 'model', 'valid_test', 'accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time', 'report', 'confusion_mat', 'y_test', 'y_pred']
+        field_names = ['dataset', 'context_set','feature_set', 'model', 'valid-accuracy', 'valid-precision', 'valid-recall', 'valid-f1_score', 'test-accuracy', 'test-precision', 'test-recall', 'test-f1_score']
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.valid_test.csv'), 'w') as csv_file:
+            csv_file.write(','.join(field_names) + '\n')
+
+            for valid, test in results:
+                field_values = [self.config.param['data_name'], self.config.param['context_set'], self.config.param['feature_set'] + ' w/ similarity' if self.config.param['similarity_feature'] else self.config.param['feature_set'] + 'w/o similarity', valid['model']]
+                [field_values.append(str(valid[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
+                [field_values.append(str(test[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
+                csv_file.write(','.join(field_values) + '\n')
+
+        with open(os.path.join(self.config.param['experiment_path'], 'all.test.csv'), 'a') as csv_file:
+            csv_file.write(','.join(field_names) + '\n')
+
+            for valid, test in results:
+                field_values = [self.config.param['data_name'], self.config.param['context_set'], self.config.param['feature_set'] + ' w/ similarity' if self.config.param['similarity_feature'] else self.config.param['feature_set'] + 'w/o similarity', valid['model']]
+                [field_values.append(str(valid[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
+                [field_values.append(str(test[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
+                csv_file.write(','.join(field_values) + '\n')
+
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.valid_test.json'), 'w') as json_file:
+            json.dump(results, json_file)
+
+    def export_cv_results(self, results, test_ids, Y):
+        # field_names in results of benchmarks = ['dataset', 'model', 'valid_test', 'accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time', 'report', 'confusion_mat', 'y_test', 'y_pred']
+        field_names = ['dataset', 'context_set','feature_set', 'model', 'test_round','accuracy', 'precision', 'recall', 'f1_score']
+
+        '''
+        export to individual files
+        '''
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.csv'), 'w') as csv_file:
+            csv_file.write(','.join(field_names) + '\n')
+
+            for result in results:
+                field_values = [self.config.param['data_name'], self.config.param['context_set'], self.config.param['feature_set'] + ' w/ similarity' if self.config.param['similarity_feature'] else self.config.param['feature_set'] + ' w/o similarity', result[0]['model'], result[0]['test_round']]
+                [field_values.append(str(result[0][k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
+                field_values = [str(v).replace(',', '.') for v in field_values]
+                csv_file.write(','.join(field_values) + '\n')
+
+        '''
+        Append all results to one file
+        '''
+        if os.path.exists(os.path.join(self.config.param['experiment_path'], 'all.test.csv')):
+            print_header = False
+        else:
+            print_header = True
+
+        with open(os.path.join(self.config.param['experiment_path'], 'all.test.csv'), 'a') as csv_file:
+            if print_header:
+                csv_file.write(','.join(field_names) + '\n')
+
+            for result in results:
+                field_values = [self.config.param['data_name'], self.config.param['context_set'], self.config.param['feature_set'] + ' w/ similarity' if self.config.param['similarity_feature'] else self.config.param['feature_set'] + ' w/o similarity', result[0]['model'], result[0]['test_round']]
+                [field_values.append(str(result[0][k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
+                field_values = [str(v).replace(',', '.') for v in field_values]
+                csv_file.write(','.join(field_values) + '\n')
+
+        '''
+        Export all the preds vs groundtruth for further error analysis
+        '''
+        x_raws   = [np.asarray(self.config['X_raw'])[t_id] for t_id in test_ids]
+        y_tests  = [Y[t_id].tolist() for t_id in test_ids]
+        y_preds  = [result[0]['y_pred'] for result in results]
+
+        sorted_preds            = {}
+        sorted_correctness      = {}
+        # iterate each round of CV
+        for x_raw, test_id, y_test, y_pred in zip(x_raws, test_ids, y_tests, y_preds):
+            # iterate each prediction
+            for id, test, pred in zip(test_id, y_test, y_pred):
+                pred_list = sorted_preds.get(id, [])
+                tf_list   = sorted_correctness.get(id, [])
+
+                pred_list.append(pred)
+                tf_list.append(1 if pred==test else 0)
+
+                sorted_preds[id] = pred_list
+                sorted_correctness[id] = tf_list
+
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.truth.txt'), 'w') as txt_file:
+            txt_file.write('\n'.join([str(i) for i in Y.tolist()]))
+
+        sorted_preds = sorted(sorted_preds.items(), key=lambda x:x[0])
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.pred.txt'), 'w') as txt_file:
+            txt_file.write('\n'.join([','.join([str(t_) for t_ in t[1]]) for t in sorted_preds]))
+
+        sorted_correctness = sorted(sorted_correctness.items(), key=lambda x:x[0])
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.corr.txt'), 'w') as txt_file:
+            txt_file.write('\n'.join([','.join([str(t_) for t_ in t[1]]) for t in sorted_correctness]))
+
+        '''
+        pickle all these results
+        '''
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.json'), 'w') as json_file:
+            json.dump(results, json_file)
+        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.pkl'), 'wb') as pkl_file:
+            pickle.dump(results, pkl_file)
+
+    def export_averaged_summary(self, results, csv_path):
+        '''
+        Average the test performances of all cv rounds for each model
+        :param results:
+        :param csv_path:
+        :return:
+        '''
+        result_dict = {}
+        field_names = ['dataset', 'context_set','feature_set', 'model', 'accuracy', 'precision', 'recall', 'f1_score']
+
+        for result in results:
+            result_key = result[0]['dataset']+'_'+result[0]['model']
+            result_list = result_dict.get(result_key, [])
+            result_list.append(result[0])
+            result_dict[result_key] = result_list
+
+        with open(csv_path, 'a') as csv_file:
+            csv_file.write(','.join(field_names) + '\n')
+
+            for exp_name, result in result_dict.items():
+                field_values    = [result[0]['dataset'], result[0]['context_set'], result[0]['feature_set'], result[0]['model']]
+                [field_values.append(str(np.average([r[k] for r in result]))) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
+                field_values    = [str(v).replace(',', '.') for v in field_values]
+                csv_file.write(','.join(field_values) + '\n')
+
     @staticmethod
     def export_summary(results, csv_path):
         if not os.path.exists(csv_path):
@@ -968,30 +1198,6 @@ class Experimenter():
                 csv_file.write(','.join(field_names)+'\n')
             for result in results:
                 csv_file.write(','.join([str(result[fn]) for fn in field_names])+'\n')
-
-    def export_single_pass_results(self, results):
-        # field_names in results of benchmarks = ['dataset', 'model', 'valid_test', 'accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time', 'report', 'confusion_mat', 'y_test', 'y_pred']
-        field_names = ['dataset', 'context_set','feature_set', 'model', 'valid-accuracy', 'valid-precision', 'valid-recall', 'valid-f1_score', 'test-accuracy', 'test-precision', 'test-recall', 'test-f1_score']
-        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.valid_test.csv'), 'w') as csv_file:
-            csv_file.write(','.join(field_names) + '\n')
-
-            for valid, test in results:
-                field_values = [self.config.param['data_name'], self.config.param['context_set'], self.config.param['feature_set'] + ' w/ similarity' if self.config.param['similarity_feature'] else self.config.param['feature_set'] + 'w/o similarity', valid['model']]
-                [field_values.append(str(valid[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
-                [field_values.append(str(test[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
-                csv_file.write(','.join(field_values) + '\n')
-
-        with open(os.path.join(self.config.param['experiment_path'], 'all.test.csv'), 'w+') as csv_file:
-            csv_file.write(','.join(field_names) + '\n')
-
-            for valid, test in results:
-                field_values = [self.config.param['data_name'], self.config.param['context_set'], self.config.param['feature_set'] + ' w/ similarity' if self.config.param['similarity_feature'] else self.config.param['feature_set'] + 'w/o similarity', valid['model']]
-                [field_values.append(str(valid[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
-                [field_values.append(str(test[k])) for k in ['accuracy', 'precision', 'recall', 'f1_score']]
-                csv_file.write(','.join(field_values) + '\n')
-
-        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.valid_test.json'), 'w') as json_file:
-            json.dump(results, json_file)
 
     def average_results(self, cv_results):
         # average the results of cross validation

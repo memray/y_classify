@@ -1405,7 +1405,7 @@ class Feature_Extractor():
         # self.config['union_features']       = union_features
         # self.config['transformer_list']     = transformer_list
 
-        return X
+        return X, feature_names
 
     def extract_raw_feature(self):
         '''
@@ -1455,4 +1455,4 @@ class Feature_Extractor():
         self.config['label_encoder']   = le
         self.config['X_raw']           = X_raw
         self.config['Y']               = Y
-        return X_raw, Y
+        return X_raw, Y, le
