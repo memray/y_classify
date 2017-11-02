@@ -6,9 +6,9 @@ from multiprocessing import Queue
 from multiprocessing import freeze_support
 from multiprocessing import current_process
 
-from classify import configuration
-from classify.cv_experimenter import Experimenter
-from classify.feature_extractor import Feature_Extractor
+from dialogue.classify import configuration
+from dialogue.classify.cv_experimenter import Experimenter
+from dialogue.classify.feature_extractor import Feature_Extractor
 from dialogue.data.data_loader import data_loader, DataLoader, Utterance
 
 def range_to_params(ranges_items, params, cache):
@@ -32,7 +32,7 @@ def range_to_params(ranges_items, params, cache):
 
 def init_task_queue():
     queue            = Queue()
-    parameter_ranges = {'selected_context_id': [0], 'selected_feature_set_id': [2,6], 'similarity_feature': [False]}
+    parameter_ranges = {'selected_context_id': [0], 'selected_feature_set_id': [2], 'similarity_feature': [False]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
     # parameter_ranges = {'selected_context_id': list(range(1, 2)), 'selected_feature_set_id': list(range(0, 13)), 'similarity_feature': [True]}
@@ -90,19 +90,19 @@ def worker(q, data_dict):
 
 if __name__ == '__main__':
     freeze_support()
-    n_workers   = 2
+    n_workers   = 1
     workers     = []
     q           = init_task_queue()
 
     data_dict   = preload_X_Y()
 
-    # worker(q, data_dict)
+    worker(q, data_dict)
 
-    for i in range(n_workers):
-        p = multiprocessing.Process(target = worker, args = (q, data_dict))
-        workers.append(p)
-        p.start()
-
-    # stop workers
-    for i in range(n_workers):
-        q.put(None)
+    # for i in range(n_workers):
+    #     p = multiprocessing.Process(target = worker, args = (q, data_dict))
+    #     workers.append(p)
+    #     p.start()
+    #
+    # # stop workers
+    # for i in range(n_workers):
+    #     q.put(None)
