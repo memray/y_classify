@@ -130,7 +130,7 @@ def load_config():
     cross-validation
     '''
     param['do_cross_validation'] = True
-    param['#division'] = 3    # number of random divisions, set to 1 in preliminary experiments
+    param['#division'] = 5    # number of random divisions, set to 1 in preliminary experiments
     param['#cross_validation'] = 10 # number of folds
     param['cv_index_cache_path'] = '' # the path is set in experimenter.py because it depends on the dataset name
 
@@ -155,8 +155,8 @@ def load_config():
 
     # CoreNLP setting
     param['corenlp_jars'] = (
-        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*",
-        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
+        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/*",
+        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
     )
 
     # LDA setting
@@ -168,7 +168,7 @@ def load_config():
     param['gensim_dict_path']           = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.dict' % ('%s'))
 
     # Word2Vec setting
-    param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    param['w2v_path']                   = os.path.join('/Users/rmeng/Data/glove', 'GoogleNews-vectors-negative300.bin')
     param['w2v_vector_length']          = 300
 
     # param['4.1-ngram']     = True
@@ -183,8 +183,8 @@ def load_config():
 
 
     # Skip-thought setting
-    param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
-    # param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
+    param['skipthought_model_path']     = '/Users/rmeng/Data/skip-thought'
+    # param['skipthought_model_path']     = '/Users/rmeng/Data/skip-thought'
     param['skipthought_data_path']      = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector')
 
 
@@ -238,8 +238,8 @@ def load_basic_config():
 
     # CoreNLP setting
     param['corenlp_jars'] = (
-        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*",
-        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
+        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/*",
+        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
     )
 
     # LDA setting
@@ -251,7 +251,7 @@ def load_basic_config():
     param['gensim_dict_path']           = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.dict' % ('%s'))
 
     # Word2Vec setting
-    param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    param['w2v_path']                   = os.path.join('/Users/rmeng/Data/glove', 'GoogleNews-vectors-negative300.bin')
     param['w2v_vector_length']          = 300
 
     # param['4.1-ngram']     = True
@@ -266,8 +266,8 @@ def load_basic_config():
 
 
     # Skip-thought setting
-    # param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
-    param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
+    # param['skipthought_model_path']     = '/Users/rmeng/Data/skip-thought'
+    param['skipthought_model_path']     = '/Users/rmeng/Data/skip-thought'
     param['skipthought_data_path']      = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector')
 
 
@@ -377,8 +377,8 @@ def load_batch_config(key_params):
 
     # CoreNLP setting
     param['corenlp_jars'] = (
-        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*",
-        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
+        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/*",
+        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
     )
 
     # LDA setting
@@ -390,7 +390,7 @@ def load_batch_config(key_params):
     param['gensim_dict_path']           = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.dict' % ('%s'))
 
     # Word2Vec setting
-    param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    param['w2v_path']                   = os.path.join('/Users/rmeng/Data/glove', 'GoogleNews-vectors-negative300.bin')
     param['w2v_vector_length']          = 300
 
     # param['4.1-ngram']     = True
@@ -427,8 +427,8 @@ def load_batch_config(key_params):
 
     # Skip-thought setting
     param['skipthought_setting'] = {
-        "skipthought_model_path": '/home/memray/Data/skip-thought',
-        # "skipthought_model_path": '/Users/memray/Data/skip-thought',
+        "skipthought_model_path": '/Users/rmeng/Data/skip-thought',
+        # "skipthought_model_path": '/Users/rmeng/Data/skip-thought',
         "skipthought_data_path": os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector'),
         "fixed_emb": True,
         "sentence_num": len(param['utterance_range']),

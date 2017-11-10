@@ -46,3 +46,5 @@ for f in *.valid_test.csv; do cat "$f"| tail -n +2 -q | grep "#tree=512" | awk -
 for f in *.valid_test.csv; do cat "$f"| tail -n +2 -q | grep "#tree=512" | awk -F"," '{acc+=$9;f1+=$12; ++n} END { printf ("%s\t\t%s\t\t%s\t\tacc=%.7f\t\tf1=%.7f\n", $1, $3, $4, acc/n, f1/n)}'; done
 
 awk -F"," '{acc+=$2;++n} END { printf ("%s\t\t%s\t\t%s\t\tacc=%.7f\n", $1, $3, $4, acc/n)}' dstc2.y_test_corr.txt
+
+#

@@ -6,8 +6,8 @@ from multiprocessing import Queue
 from multiprocessing import freeze_support
 from multiprocessing import current_process
 
-from classify import exp_deepmodel
-from classify import exp_shallowmodel
+from dialogue.classify import exp_deepmodel
+from dialogue.classify import exp_shallowmodel
 from dialogue.classify import configuration
 from dialogue.classify.feature_extractor import Feature_Extractor
 from dialogue.data.data_loader import data_loader, DataLoader, Utterance
