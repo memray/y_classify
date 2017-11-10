@@ -1,7 +1,0 @@
-dataset,context_set,feature_set,model,test_round,accuracy,precision,recall,f1_score
-dstc3,next,0-all w/o similarity,Random forest.#tree=64,0,0.767324228629,0.805276842598,0.561430811135,0.58110993572
-dstc3,next,0-all w/o similarity,Random forest.#tree=64,1,0.764289327264,0.795007063821,0.540182784334,0.544274707189
-dstc3,next,0-all w/o similarity,Random forest.#tree=64,2,0.772727272727,0.814599168346,0.554777735553,0.565649599531
-dstc3,next,0-all w/o similarity,Random forest.#tree=64,3,0.763277693475,0.805877440252,0.557884711844,0.578208656139
-dstc3,next,0-all w/o similarity,Random forest.#tree=64,4,0.786545270612,0.820524340309,0.569129435318,0.580479155218
-dstc3,next,0-all w/o similarity,Random forest.#tree=64,5,0.759595959596,0.799728678056,0.538594224818,0.546333270963

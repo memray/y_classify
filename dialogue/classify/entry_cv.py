@@ -6,7 +6,7 @@ from sklearn import preprocessing
 from dialogue.data.data_loader import data_loader, DataLoader, Utterance
 from dialogue.classify import configuration
 from dialogue.classify.feature_extractor import Feature_Extractor
-from dialogue.classify.cv_experimenter import Experimenter
+from dialogue.classify.exp_shallowmodel import Experimenter
 import numpy as np
 import os
 

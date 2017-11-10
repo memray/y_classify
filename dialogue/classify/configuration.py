@@ -65,14 +65,15 @@ def load_config():
     selected_feature_set_id  = 12
     '''
     Feature Combination:
-    '0-all', '1-basic', '2-lexical', '3-syntactic', '4-lda', '5-w2v', '6-d2v', '7-skipthought'
-    '8-[1.2.3]'
-    '9-[1.3.4]'
-    '10-[1.3.5]'
-    '11-[1.3.6]'
-    '12-[1.3.7]'
+    20171104: insert 3.phrasal again
+    '0-all', '1-basic', '2-lexical', '3-phrasal', '4-syntactic', '5-lda', '6-w2v', '7-d2v', '8-skipthought'
+    '9-[1.2.3]'
+    '10-[1.3.4]'
+    '11-[1.3.5]'
+    '12-[1.3.6]'
+    '13-[1.3.7]'
     '''
-    param['feature_set']     = ['0-all', '1-basic', '2-lexical', '3-syntactic', '4-lda', '5-w2v', '6-d2v', '7-skipthought', '8-[1.2.3]', '9-[1.3.4]', '10-[1.3.5]', '11-[1.3.6]', '12-[1.3.7]'][selected_feature_set_id]
+    param['feature_set']     = ['0-all', '1-basic', '2-lexical', '3-phrasal', '4-syntactic', '5-lda', '6-w2v', '7-d2v', '8-skipthought', '9-[1.2.3]', '10-[1.3.4]', '11-[1.3.5]', '12-[1.3.6]', '13-[1.3.7]'][selected_feature_set_id]
 
     '''
     Feature Set
@@ -88,7 +89,7 @@ def load_config():
     10. d2v
     11. skip-thought
     '''
-    param['feature_set_number']  = [['1','2','3','4','5','6','7','8','9','10'], ['1','2','3'], ['4'], ['5','6','7'], ['8'], ['9'], ['10'], ['11'], ['1','2','3','5','6','7', '4'], ['1','2','3','5','6','7', '8'], ['1','2','3','5','6','7', '9'], ['1','2','3','5','6','7', '10'], ['1','2','3','5','6','7', '11']][selected_feature_set_id]
+    param['feature_set_number']  = [['1','2','3','4','5','6','7','8','9','10'], ['1','2','3'], ['4'], ['5','6'], ['7'], ['8'], ['9'], ['10'], ['11'], ['1','2','3','5','6','7', '4'], ['1','2','3','5','6','7', '8'], ['1','2','3','5','6','7', '9'], ['1','2','3','5','6','7', '10'], ['1','2','3','5','6','7', '11']][selected_feature_set_id]
     param['similarity_feature']  = False
 
     # context window
@@ -182,8 +183,8 @@ def load_config():
 
 
     # Skip-thought setting
-    # param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
-    param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
+    param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
+    # param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
     param['skipthought_data_path']      = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector')
 
 
@@ -289,17 +290,9 @@ def load_batch_config(key_params):
     param['task_name']       = 'utterance_type'
     param['timemark']        = time.strftime('%Y%m%d-%H%M%S', time.localtime(time.time()))
 
-    param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
 
     # selected_context_id: 0-3
     param['context_set']     = ['next', 'current', 'last', 'all'][param['selected_context_id']]
-
-    # selected_feature_set_id: 0-12
-    param['feature_set']     = ['0-all', '1-basic', '2-lexical', '3-syntactic', '4-lda', '5-w2v', '6-d2v', '7-skipthought', '8-[1.2.3]', '9-[1.3.4]', '10-[1.3.5]', '11-[1.3.6]', '12-[1.3.7]'][param['selected_feature_set_id']]
-
-    param['feature_set_number']  = [['1','2','3','4','5','6','7','8','9','10'], ['1','2','3'], ['4'], ['5','6','7'], ['8'], ['9'], ['10'], ['11'], ['1','2','3','5','6','7', '4'], ['1','2','3','5','6','7', '8'], ['1','2','3','5','6','7', '9'], ['1','2','3','5','6','7', '10'], ['1','2','3','5','6','7', '11']][param['selected_feature_set_id']]
-
-    param['similarity_feature']  = param['similarity_feature']
 
     # context window
     param['utterance_names'] = ['last_user_utterance', 'last_system_utterance','current_user_utterance', 'next_system_utterance', 'next_user_utterance']
@@ -312,8 +305,28 @@ def load_batch_config(key_params):
     elif param['context_set']   == 'all':
         param['utterance_range'] = param['utterance_names']
 
-    # param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
-    param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
+
+    if not param['deep_model']:
+        param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
+
+        # selected_feature_set_id: 0-12
+        param['feature_set'] = \
+                ['0-all', '1-basic', '2-lexical', '3-phrasal', '4-syntactic', '5-lda', '6-w2v', '7-d2v', '8-skipthought',
+                 '9-[1.2.3]', '10-[1.3.4]', '11-[1.3.5]', '12-[1.3.6]', '13-[1.3.7]'][param['selected_feature_set_id']]
+
+        param['feature_set_number'] = \
+                [['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], ['1', '2', '3'], ['4'], ['5', '6'], ['7'], ['8'], ['9'],
+                 ['10'], ['11'], ['1', '2', '3', '5', '6', '7', '4'], ['1', '2', '3', '5', '6', '7', '8'],
+                 ['1', '2', '3', '5', '6', '7', '9'], ['1', '2', '3', '5', '6', '7', '10'],
+                 ['1', '2', '3', '5', '6', '7', '11']][param['selected_feature_set_id']]
+
+        param['similarity_feature']  = param['similarity_feature']
+
+        # param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
+        param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
+    else:
+        param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'model=%s' % param['deep_model_name']])
+
 
     param['experiment_path'] = os.path.join(param['root_path'], 'output', param['experiment_name'])
 
@@ -390,12 +403,53 @@ def load_batch_config(key_params):
     param['d2v_model_path']             = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%%s.doc2vec.dim=%d.window=%d.min_count=%d.model' % (param['d2v_vector_length'], param['d2v_window_size'], param['d2v_min_count']))
     param['d2v_vector_path']             = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%%s.doc2vec.dim=%d.window=%d.min_count=%d.vector' % (param['d2v_vector_length'], param['d2v_window_size'], param['d2v_min_count']))
 
+    '''
+    Deep models setting
+    '''
+    param['batch_size']                 = 128
+    param['max_epoch']                  = 50
+    param['early_stop_tolerance']       = 2
+    param['concat_sents']               = True
+
+    # CNN setting
+    param['cnn_setting'] = {
+        "MODEL": 'multichannel', # available models: rand, static, non-static, multichannel
+        "EARLY_STOPPING": True,
+        "WORD_DIM": 300,
+        "FILTERS": [3, 4, 5],
+        "FILTER_NUM": [100, 100, 100],
+        'CLASS_SIZE': len(param['valid_type']),
+        'BATCH_SIZE': param['batch_size'],
+        "LEARNING_RATE": 1.0e-3,
+        "NORM_LIMIT": 10,
+        "DROPOUT_PROB": 0.5,
+    }
 
     # Skip-thought setting
-    # param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
-    param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
-    param['skipthought_data_path']      = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector')
+    param['skipthought_setting'] = {
+        "skipthought_model_path": '/home/memray/Data/skip-thought',
+        # "skipthought_model_path": '/Users/memray/Data/skip-thought',
+        "skipthought_data_path": os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector'),
+        "fixed_emb": True,
+        "sentence_num": len(param['utterance_range']),
+        "hidden_size": 2400 * len(param['utterance_range']),
+        "CLASS_SIZE": len(param['valid_type']),
+        "LEARNING_RATE": 1.0e-4,
+        "NORM_LIMIT": 3,
+        "DROPOUT_PROB": 0.5,
+    }
 
+    # LSTM setting
+    param['lstm_setting'] = {
+        'hidden_size'       : 32,
+        'embedding_size'    : 32,
+        'num_layers'        : 1,
+        "LEARNING_RATE"     : 1.0e-4,
+        "CLASS_SIZE": len(param['valid_type']),
+        "NORM_LIMIT": 5,
+        'clip_grad_norm': 2,
+        "DROPOUT_PROB": 0.5,
+    }
 
     config = Config(param)
     for k,v in param.items():

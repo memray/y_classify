@@ -16,7 +16,7 @@ from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.metrics import jaccard_similarity_score
 from sklearn.metrics.pairwise import cosine_similarity
 
-from dialogue.skipthought.skipthoughts import BiSkip
+from dialogue.deep.skipthought.skipthoughts import BiSkip
 
 import leven
 from nltk.stem.porter import *

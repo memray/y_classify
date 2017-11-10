@@ -4,16 +4,79 @@ from sklearn import metrics
 from torch import nn
 from torch.autograd import Variable
 from torch.optim import Adam
+from torch.utils.data.dataloader import DataLoader
 
 from dialogue.classify import configuration
-from dialogue.classify.cv_experimenter import Experimenter
+from dialogue.classify.exp_shallowmodel import ShallowExperimenter
 from dialogue.classify.feature_extractor import Feature_Extractor, ItemSelector
 from dialogue.data.data_loader import data_loader, DataLoader, Utterance
-from dialogue.skipthought.skipthoughts import BiSkip, BiSkipClassifier
+from dialogue.deep.skipthought.skipthoughts import BiSkip, BiSkipClassifier
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
+
+
+def plot_learning_curve(train_scores, test_scores, title, curve1_name='curve1_name', curve2_name='curve2_name', ylim=None, save_path=None):
+    """
+    Generate a simple plot of the test and training learning curve.
+
+    Parameters
+    ----------
+    title : string
+        Title for the chart.
+
+    ylim : tuple, shape (ymin, ymax), optional
+        Defines minimum and maximum yvalues plotted.
+
+    cv : int, cross-validation generator or an iterable, optional
+        Determines the cross-validation splitting strategy.
+        Possible inputs for cv are:
+          - None, to use the default 3-fold cross-validation,
+          - integer, to specify the number of folds.
+          - An object to be used as a cross-validation generator.
+          - An iterable yielding train/test splits.
+
+        For integer/None inputs, if ``y`` is binary or multiclass,
+        :class:`StratifiedKFold` used. If the estimator is not a classifier
+        or if ``y`` is neither binary nor multiclass, :class:`KFold` is used.
+
+        Refer :ref:`User Guide <cross_validation>` for the various
+        cross-validators that can be used here.
+
+    n_jobs : integer, optional
+        Number of jobs to run in parallel (default 1).
+    """
+    train_sizes=np.linspace(.1, 1.0, len(train_scores))
+    plt.figure()
+    plt.title(title)
+    if ylim is not None:
+        plt.ylim(*ylim)
+    plt.xlabel("Training examples")
+    plt.ylabel("Score")
+
+    train_scores_mean = np.mean(train_scores, axis=1)
+    train_scores_std = np.std(train_scores, axis=1)
+    test_scores_mean = np.mean(test_scores, axis=1)
+    test_scores_std = np.std(test_scores, axis=1)
+    plt.grid()
+
+    plt.fill_between(train_sizes, train_scores_mean - train_scores_std,
+                     train_scores_mean + train_scores_std, alpha=0.1,
+                     color="r")
+    plt.fill_between(train_sizes, test_scores_mean - test_scores_std,
+                     test_scores_mean + test_scores_std, alpha=0.1, color="g")
+    plt.plot(train_sizes, train_scores_mean, 'o-', color="r",
+             label=curve1_name)
+    plt.plot(train_sizes, test_scores_mean, 'o-', color="g",
+             label=curve2_name)
+
+    plt.legend(loc="best")
+    # plt.show()
+    if save_path:
+        plt.savefig(save_path, bbox_inches='tight')
+
+    return plt
 
 def str_to_one_hot(str, word2idx):
     '''
@@ -59,7 +122,7 @@ if __name__ == '__main__':
     # initialize
     config = configuration.load_config()
     extractor = Feature_Extractor(config)
-    exp = Experimenter(config)
+    exp = ShallowExperimenter(config)
 
     best_results = {}
     # iterate each dataset
@@ -78,7 +141,7 @@ if __name__ == '__main__':
         loader.stats()
 
         # train and test
-        X_raw, Y                = extractor.split_to_instances(annotated_sessions)
+        X_raw, Y, label_encoder = extractor.split_to_instances(annotated_sessions)
         X_raw_feature           = extractor.extract_raw_feature()
 
         if config.param['context_set'] == 'current':
@@ -95,21 +158,41 @@ if __name__ == '__main__':
         X_texts     = list(zip(*X_texts))
 
         fixed_emb = True
-        hidden_size = 2400 * len(context_range)
-        output_size = 4
+        sentence_num = len(context_range)
+        hidden_size  = 2400 * len(context_range)
+        output_size  = 4
 
         vocab, word2idx = init_Skip_Thought_dict(config)
-        model = BiSkipClassifier(config['skipthought_model_path'], vocab, hidden_size=hidden_size, output_size=output_size, fixed_emb=fixed_emb, dropout=0.5)
+        model = BiSkipClassifier(config['skipthought_model_path'], vocab, hidden_size=hidden_size, output_size=output_size, sentence_num=sentence_num, fixed_emb=fixed_emb, dropout=0.5)
+
+        if torch.cuda.is_available():
+            model.cuda()
+            print('Running on GPU!')
+
+        '''
+        clip most of the parameters except for the softmax
+        '''
         # optimizer = Adam(params=model.parameters(), lr=1e-4)
         for p in model.parameters():
             p.requires_grad = False
-        for p in model.i2o.parameters():
+        for p in model.fc.parameters():
             p.requires_grad = True
+
+
         optimizer = Adam(params=filter(lambda p: p.requires_grad, model.parameters()), lr=1e-5)
         # optimizer = Adam(params=[model.i2o], lr=1e-4)
-        criterion = nn.NLLLoss()
+        # criterion = nn.NLLLoss()
+        criterion = nn.CrossEntropyLoss()
 
-        X_onehot = [[str_to_one_hot(sent, word2idx) for sent in s] for s in X_texts]
+        def pad(x):
+            x_ = x.flatten()
+            max_length = len(sorted(x_, key=len, reverse=True)[0])
+            x_new = np.array([[v + [0] * (max_length - len(v)) for v in xi] for xi in x])
+            x_new = torch.from_numpy(x_new)
+            return x_new
+                # torch.cat([tensor, tensor.new(length - tensor.size(0), *tensor.size()[1:]).zero_()])
+
+        X_onehot = pad(np.asarray([[str_to_one_hot(sent, word2idx) for sent in s] for s in X_texts]))
 
         train_id, valid_id, test_id = exp.load_single_run_index(X_texts, Y)
         X_train_text   = [X_texts[i] for i in train_id]
@@ -124,37 +207,34 @@ if __name__ == '__main__':
         Y_test         = [Y[i] for i in test_id]
 
         epoch_num  = 20
+        batch_size = 128
+
         best_loss = sys.float_info.max
-
-        def pad(x):
-            max_length = len(sorted(x, key=len, reverse=True)[0])
-            x_new = np.array([xi + [0] * (max_length - len(xi)) for xi in x])
-            x_new = Variable(torch.from_numpy(x_new))
-            return x_new
-                # torch.cat([tensor, tensor.new(length - tensor.size(0), *tensor.size()[1:]).zero_()])
-
-        if torch.cuda.is_available():
-            model.cuda()
-            print('Running on GPU!')
-
+        stop_increasing = 0
         all_training_losses = []
         all_valid_losses = []
+        all_accuracy = []
+        all_f1_score = []
 
-        '''
-        Training
-        '''
+        train_batch_loader = torch.utils.data.DataLoader(dataset=list(zip(X_train_onehot, Y_train)), batch_size=batch_size, shuffle=True, drop_last=False)
+        valid_batch_loader = torch.utils.data.DataLoader(dataset=list(zip(X_valid_onehot, Y_valid)), batch_size=batch_size, shuffle=False, drop_last=False)
+        test_batch_loader  = torch.utils.data.DataLoader(dataset=list(zip(X_test_onehot, Y_test)), batch_size=batch_size, shuffle=False, drop_last=False)
+        if torch.cuda.is_available():
+            train_batch_loader.pin_memory = True
+            valid_batch_loader.pin_memory = True
+            test_batch_loader.pin_memory = True
+
         for epoch in range(epoch_num):
-
+            '''
+            Training
+            '''
+            model.train()
             training_losses = []
-            for i, (x,y) in enumerate(zip(X_train_onehot, Y_train)):
-                x = pad(x)
-                y = Variable(torch.LongTensor([y.tolist()]))
+            for i, (x,y) in enumerate(train_batch_loader):
+                x = Variable(x)
+                y = Variable(y)
 
-                if torch.cuda.is_available():
-                    x = x.cuda()
-                    y = y.cuda()
-
-                output = model.forward(x).view(1,-1)
+                output = model.forward(x)
                 loss = criterion.forward(output, y)
 
                 optimizer.zero_grad()
@@ -162,61 +242,41 @@ if __name__ == '__main__':
                 optimizer.step()
                 training_losses.append(loss.data[0])
 
-                if i % 500 == 0:
-                    print('Training %d/%d, loss=%.5f' % (i, len(Y_train), np.average(training_losses[-100:])))
-
-            training_loss_mean = torch.mean(torch.FloatTensor(training_losses))
-            all_training_losses.append(training_loss_mean)
+                print('Training %d/%d, loss=%.5f, norm=%.5f' % (i, len(Y_train)/batch_size, np.average(loss.data[0]), float(model.fc.weight.norm().data.numpy())))
+            all_training_losses.append(training_losses)
+            training_loss_mean = np.average(training_losses)
 
             '''
             Validating
             '''
+            model.eval()
             valid_losses = []
             valid_pred   = []
-            for i, (x_t, x,y) in enumerate(zip(X_valid_text, X_valid_onehot, Y_valid)):
-                x = pad(x)
-                y = Variable(torch.LongTensor([y.tolist()]))
-                if torch.cuda.is_available():
-                    x = x.cuda()
-                    y = y.cuda()
+            for i, (x, y) in enumerate(valid_batch_loader):
+                x = Variable(x)
+                y = Variable(y)
 
-                output = model.forward(x).view(1,-1)
-
-                # print('output_size      = %s' % str(output.size()))
-                # print('y_tensor         = %s' % str(y.data))
-                # print('y_tensor_size    = %s' % str(y.size()))
+                output = model.forward(x)
                 loss = criterion.forward(output, y)
                 valid_losses.append(loss.data[0])
                 prob_i, pred_i = output.data.topk(1)
 
                 if torch.cuda.is_available():
-                    valid_pred.append(pred_i.cpu().numpy())
+                    valid_pred.extend(pred_i.cpu().numpy().flatten().tolist())
                 else:
-                    valid_pred.append(pred_i.numpy())
+                    valid_pred.extend(pred_i.numpy().flatten().tolist())
 
-                if i % 500 == 0:
-                    print('Validating %d/%d, loss=%.5f' % (i, len(Y_valid), np.average(valid_losses[-100:])))
-                # if i > 20:
-                #     break
+                print('Validating %d/%d, loss=%.5f' % (i, len(Y_valid)/batch_size, np.average(loss.data[0])))
 
-            valid_loss_mean = torch.mean(torch.FloatTensor(valid_losses))
-            all_valid_losses.append(valid_loss_mean)
-            is_best_loss = valid_loss_mean < best_loss
+            valid_loss_mean = np.average(valid_losses)
+            all_valid_losses.append(valid_losses)
 
             print('*' * 50)
             print('Epoch=%d' % epoch)
             print('Training loss=%.5f' % training_loss_mean)
             print('Valid loss=%.5f' % valid_loss_mean)
-            if is_best_loss:
-                print('Update best loss=%.5f, last bess loss=%.5f' % (valid_loss_mean, best_loss))
-            else:
-                print('Best loss is not updated, =%.5f' % best_loss)
-
-            best_loss = min(valid_loss_mean, best_loss)
-
 
             print("Classification report:")
-            valid_pred = [v[0][0] for v in valid_pred]
             report = metrics.classification_report(Y_valid, valid_pred,
                                                    target_names=np.asarray(config['label_encoder'].classes_))
             print(report)
@@ -227,59 +287,63 @@ if __name__ == '__main__':
 
             acc_score = metrics.accuracy_score(Y_valid, valid_pred)
             f1_score = metrics.f1_score(Y_valid, valid_pred, average='macro')
+            all_accuracy.append([acc_score])
+            all_f1_score.append([f1_score])
 
             print("accuracy:   %0.3f" % acc_score)
             print("f1_score:   %0.3f" % f1_score)
 
-            print('*' * 50)
-
-            plt.plot(all_training_losses)
-            plt.figure()
+            is_best_loss = f1_score < best_loss
+            rate_of_change = float(f1_score - best_loss)/float(best_loss)
 
             if is_best_loss:
-                stop_increasing = 0
+                print('Update best f1 (%.4f --> %.4f), rate of change (ROC)=%.2f' % (best_loss, f1_score, rate_of_change * 100))
             else:
-                stop_increasing += 1
+                print('Best f1 is not updated (%.4f --> %.4f), rate of change (ROC)=%.2f' % (best_loss, f1_score, rate_of_change * 100))
 
-            if stop_increasing >= 2:
+            best_loss = min(f1_score, best_loss)
+
+            print('*' * 50)
+
+            if rate_of_change > -0.01:
+                stop_increasing += 1
+            else:
+                stop_increasing = 0
+
+            if stop_increasing >= config['early_stop_tolerance']:
                 print('Have not increased for %d epoches, stop training' % stop_increasing)
                 break
+
+        plot_learning_curve(all_training_losses, all_valid_losses, 'Training and Validation', curve1_name='Training Error', curve2_name='Validation Error', save_path=config['experiment_path']+'/%s-train_valid_curve.png' % data_name)
+        plot_learning_curve(all_accuracy, all_f1_score, 'Accuracy and F1-score', curve1_name='Accuracy', curve2_name='F1-score', save_path=config['experiment_path']+'/%s-train_f1_curve.png' % data_name)
 
         '''
         Testing
         '''
+        model.eval()
         test_pred   = []
         test_losses = []
-        for i, (x,y) in enumerate(zip(X_test_onehot, Y_test)):
-            x = pad(x)
-            y = Variable(torch.LongTensor([y.tolist()]))
+        for i, (x, y) in enumerate(test_batch_loader):
+            x = Variable(x)
+            y = Variable(y)
 
-            if torch.cuda.is_available():
-                x = x.cuda()
-                y = y.cuda()
-
-            optimizer.zero_grad()
-
-            output = model.forward(x).view(1,-1)
+            output = model.forward(x)
+            loss = criterion.forward(output, y)
+            test_losses.append(loss.data[0])
             prob_i, pred_i = output.data.topk(1)
 
             if torch.cuda.is_available():
-                test_pred.append(pred_i.cpu().numpy())
+                test_pred.extend(pred_i.cpu().numpy().flatten().tolist())
             else:
-                test_pred.append(pred_i.numpy())
+                test_pred.extend(pred_i.numpy().flatten().tolist())
 
             test_losses.append(loss.data[0])
 
-            if i % 500 == 0:
-                print('Testing %d/%d, loss=%.5f' % (i, len(Y_test), loss.data[0]))
+            print('Testing %d/%d, loss=%.5f' % (i, len(Y_test)/batch_size, loss.data[0]))
 
-            # if i > 20:
-            #     break
-
-        valid_loss_mean = torch.mean(torch.FloatTensor(test_losses))
-        test_pred = [v[0][0] for v in test_pred]
+        test_loss_mean = np.average(test_losses)
         print('*' * 50)
-        print('Testing loss=%.5f' % valid_loss_mean)
+        print('Testing loss=%.5f' % test_loss_mean)
         print("Classification report:")
         report = metrics.classification_report(Y_test, test_pred,
                                                target_names=np.asarray(config['label_encoder'].classes_))
