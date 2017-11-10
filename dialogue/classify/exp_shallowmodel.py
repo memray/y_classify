@@ -19,6 +19,7 @@ from gensim.models.doc2vec import LabeledSentence, TaggedDocument
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
+from sklearn.feature_selection import SelectFromModel
 from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.feature_selection import SelectPercentile
 from sklearn.linear_model import RidgeClassifier
@@ -401,6 +402,9 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
+            if r_id >= 10:
+                break
+
             self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
             self.config['test_round'] = r_id
 
@@ -895,6 +899,7 @@ class ShallowExperimenter():
         # Y_test  = Y[int(0.8 * num_data):]
 
         results = []
+
         for clf, name in [
                 # (RidgeClassifier(tol=1e-2, solver="lsqr"), "Ridge Classifier"),
                 # (Perceptron(n_iter=50), "Perceptron"),
@@ -914,41 +919,33 @@ class ShallowExperimenter():
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
 
-        for C in [1, 4, 8, 16]: # 1, 10
+        for C in [2**x for x in [-4, 0, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
+            self.logger.info('=' * 80)
+            self.logger.info("LinearSVC.pen=l1, C=%f" % C)
+            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C, max_iter=1000), n_jobs=-1)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("LinearSVC.pen=l2, C=%f" % C)
+            results.append(self.benchmark('LinearSVC.pen=l2.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l2', tol=1e-3, C=C, max_iter=1000), n_jobs=-1)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("RBF SVC with gamma=auto, C=%f" % C)
+            results.append(self.benchmark('RBF SVC with C=%f' % C, OneVsRestClassifier(SVC(C=C, cache_size=2000, class_weight=None, degree=3, gamma='auto', kernel='rbf', max_iter=-1, probability=False, random_state=None, shrinking=True, tol=0.001, verbose=False), n_jobs=-1)))
+
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
-            # Train Logistic Regression model
-            # results.append(self.benchmark('LR.pen=l1.C=%d' % C,
-            #                               LogisticRegression(solver="liblinear", multi_class='multinomial', penalty='l1', C=C)))
-            results.append(self.benchmark('LR.pen=l1.C=%d' % C, OneVsRestClassifier(LogisticRegression(solver="liblinear", multi_class='ovr', penalty='l1', C=C), n_jobs=-1)))
+            results.append(self.benchmark('LR.pen=l1.C=%f' % C, OneVsRestClassifier(LogisticRegression(solver="liblinear", multi_class='ovr', penalty='l1', C=C), n_jobs=-1)))
+
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l2.C=%f" % C)
-            # Train Logistic Regression model
-            results.append(self.benchmark('LR.pen=l2.C=%d' % C,
-                                          LogisticRegression(solver="lbfgs", multi_class='multinomial', penalty='l2', C=C, dual=False)))
+            results.append(self.benchmark('LR.pen=l2.C=%f' % C, LogisticRegression(solver="lbfgs", multi_class='multinomial', penalty='l2', C=C, dual=False)))
 
-            self.logger.info('=' * 80)
-            self.logger.info("LinearSVC.pen=l1, C=%d" % C)
-            # results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C,
-            #                               LinearSVC(loss='squared_hinge', penalty='l1', dual=True, tol=1e-3, C=C)))
-            results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
-
-            self.logger.info('=' * 80)
-            self.logger.info("LinearSVC.pen=l2, C=%d" % C)
-            # results.append(self.benchmark('LinearSVC.pen=l2.C=%d' % C,
-            #                               LinearSVC(loss='hinge', penalty='l2', dual=True, tol=1e-3, C=C)))
-            results.append(self.benchmark('LinearSVC.pen=l2.C=%d' % C, OneVsRestClassifier(LinearSVC(penalty='l2', tol=1e-3, C=C), n_jobs=-1)))
-
-            self.logger.info('=' * 80)
-            self.logger.info("RBF SVC with C=%f" % C)
-            # results.append(self.benchmark('RBF SVC with C=%f' % C, SVC(C=C, cache_size=200, class_weight=None,
-            #                               degree=3, gamma='auto', kernel='rbf',
-            #                               max_iter=-1, probability=False, random_state=None, shrinking=True,
-            #                               tol=0.001, verbose=False)))
-            results.append(self.benchmark('LinearSVC.pen=l2.C=%d' % C, OneVsRestClassifier(SVC(C=C, cache_size=200, class_weight=None,
-                                          degree=3, gamma='auto', kernel='rbf',
-                                          max_iter=-1, probability=False, random_state=None, shrinking=True,
-                                          tol=0.001, verbose=False), n_jobs=-1)))
+        self.logger.info('=' * 80)
+        self.logger.info("LinearSVC with L1-based feature selection, C=%f" % 1)
+        results.append(self.benchmark('LinearSVC+L1-FeatSel, C=%f' % C, Pipeline([
+            ('feature_selection', SelectFromModel(LinearSVC(penalty="l1", tol=1e-3, dual=False, C=1, max_iter=1000))),
+            ('classification', LinearSVC(penalty="l2"))
+        ])))
 
         '''
         for penalty in ["l2", "l1"]:
@@ -984,10 +981,37 @@ class ShallowExperimenter():
         self.logger.info("LinearSVC with L1-based feature selection")
         # The smaller C, the stronger the regularization.
         # The more regularization, the more sparsity.
+        # The larger C, the more complex the model is
         results.append(self.benchmark('LinearSVC+L1-FeatSel', Pipeline([
-            ('feature_selection', LinearSVC(penalty="l1", dual=False, tol=1e-3)),
-            ('classification', LinearSVC())
+            ('feature_selection', SelectFromModel(LinearSVC(penalty="l1", dual=False, tol=1e-3))),
+            ('classification', LinearSVC(penalty="l2"))
         ])))
+
+        '''
+        '''
+        for C in [0] + [2 ** x for x in [0, 2, 4]]:  # [0]+[2**x for x in [-3, -2, -1, 0]]
+            self.logger.info('=' * 80)
+            self.logger.info("LR.pen=l1.C=%f" % C)
+            results.append(self.benchmark('LR.pen=l1.C=%d' % C,
+                      LogisticRegression(solver="liblinear", multi_class='multinomial', penalty='l1', C=C)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("LinearSVC.pen=l1, C=%d" % C)
+            results.append(self.benchmark('LinearSVC.pen=l1.C=%d' % C,
+                                          LinearSVC(loss='squared_hinge', penalty='l1', dual=True, tol=1e-3, C=C)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("LinearSVC.pen=l2, C=%d" % C)
+            results.append(self.benchmark('LinearSVC.pen=l2.C=%d' % C,
+                                          LinearSVC(loss='hinge', penalty='l2', dual=True, tol=1e-3, C=C)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("RBF SVC with C=%f" % C)
+            results.append(self.benchmark('RBF SVC with C=%f' % C, SVC(C=C, cache_size=200, class_weight=None,
+                                          degree=3, gamma='auto', kernel='rbf',
+                                          max_iter=-1, probability=False, random_state=None, shrinking=True,
+                                          tol=0.001, verbose=False)))
+
         '''
 
 
