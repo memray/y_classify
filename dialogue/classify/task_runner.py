@@ -29,15 +29,12 @@ def range_to_params(ranges_items, params, cache):
         c.append((k,v))
         range_to_params(next_range, params, c)
 
-
-
 def init_task_queue():
     queue            = Queue()
-    parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
-    # parameter_ranges = {'selected_context_id': [0], 'selected_feature_set_id': [2,6], 'similarity_feature': [False], 'exp_mode': ['deep'], 'deep_model': ['cnn']}
+    # parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
+    parameter_ranges = {'deep_model': [False], 'selected_context_id': [0], 'selected_feature_set_id': [2], 'similarity_feature': [False]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
-    # parameter_ranges = {'selected_context_id': list(range(1, 2)), 'selected_feature_set_id': list(range(0, 13)), 'similarity_feature': [True]}
     # print(params)
 
     [queue.put(dict(p)) for p in params]
@@ -89,7 +86,7 @@ def worker(q, data_dict):
             config['feature_names']    = feature_names
             config['label_encoder']    = label_encoder
             config['X_raw']            = X_raw
-            config['X_raw_feature']            = X_raw_feature
+            config['X_raw_feature']    = X_raw_feature
             config['Y']                = Y
             # result = exp.run_single_pass_context_feature(X, Y)
             result = exp.run_cross_validation(X, Y)
@@ -106,8 +103,8 @@ if __name__ == '__main__':
     data_dict   = preload_X_Y()
 
     worker(q, data_dict)
-    q.close()
 
+    #
     # for i in range(n_workers):
     #     p = multiprocessing.Process(target = worker, args = (q, data_dict))
     #     workers.append(p)
@@ -116,4 +113,4 @@ if __name__ == '__main__':
     # # stop workers
     # for i in range(n_workers):
     #     q.put(None)
-    print('Done')
+    # print('Done')

@@ -900,6 +900,36 @@ class ShallowExperimenter():
 
         results = []
 
+        for C in [2**x for x in [-4, -3, -2, -1, 0, 1, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
+            self.logger.info('=' * 80)
+            self.logger.info("LinearSVC.pen=l1, C=%f" % C)
+            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
+
+            # self.logger.info('=' * 80)
+            # self.logger.info("LinearSVC.pen=l2, C=%f" % C)
+            # results.append(self.benchmark('LinearSVC.pen=l2.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l2', tol=1e-3, C=C), n_jobs=-1)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("LR.pen=l1.C=%f" % C)
+            results.append(self.benchmark('LR.pen=l1.C=%f' % C, OneVsRestClassifier(LogisticRegression(solver="liblinear", penalty='l1', C=C), n_jobs=-1)))
+
+            # self.logger.info('=' * 80)
+            # self.logger.info("LR.pen=l2.C=%f" % C)
+            # results.append(self.benchmark('LR.pen=l2.C=%f' % C, LogisticRegression(solver="lbfgs", multi_class='multinomial', penalty='l2', C=C, dual=False)))
+
+        """
+        if self.config.param['data_name'] in ['dstc2', 'dstc3']:
+            C = 2**(-4)
+        else:
+            C = 2**(2)
+        self.logger.info('=' * 80)
+        self.logger.info("LinearSVC.pen=l1, C=%f" % 2**(-4))
+        results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
+
+        """
+
+
+        '''
         for clf, name in [
                 # (RidgeClassifier(tol=1e-2, solver="lsqr"), "Ridge Classifier"),
                 # (Perceptron(n_iter=50), "Perceptron"),
@@ -947,7 +977,6 @@ class ShallowExperimenter():
             ('classification', LinearSVC(penalty="l2"))
         ])))
 
-        '''
         for penalty in ["l2", "l1"]:
             self.logger.info('=' * 80)
             self.logger.info("%s penalty" % penalty.upper())
