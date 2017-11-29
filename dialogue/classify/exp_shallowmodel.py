@@ -903,7 +903,7 @@ class ShallowExperimenter():
         for C in [2**x for x in [-4, -3, -2, -1, 0, 1, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%f" % C)
-            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
+            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
 
             # self.logger.info('=' * 80)
             # self.logger.info("LinearSVC.pen=l2, C=%f" % C)
@@ -911,7 +911,7 @@ class ShallowExperimenter():
 
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
-            results.append(self.benchmark('LR.pen=l1.C=%f' % C, OneVsRestClassifier(LogisticRegression(solver="liblinear", penalty='l1', C=C), n_jobs=-1)))
+            results.append(self.benchmark('LR.pen=l1.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l1', C=C)))
 
             # self.logger.info('=' * 80)
             # self.logger.info("LR.pen=l2.C=%f" % C)
@@ -952,19 +952,23 @@ class ShallowExperimenter():
         for C in [2**x for x in [-4, 0, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%f" % C)
-            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C, max_iter=1000), n_jobs=-1)))
+            # results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C, max_iter=1000), n_jobs=-1)))
+            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C, max_iter=1000)))
 
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l2, C=%f" % C)
-            results.append(self.benchmark('LinearSVC.pen=l2.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l2', tol=1e-3, C=C, max_iter=1000), n_jobs=-1)))
+            results.append(self.benchmark('LinearSVC.pen=l2.C=%f' % C, LinearSVC(penalty='l2', tol=1e-3, C=C, max_iter=1000)))
+            # results.append(self.benchmark('LinearSVC.pen=l2.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l2', tol=1e-3, C=C, max_iter=1000), n_jobs=-1)))
 
             self.logger.info('=' * 80)
             self.logger.info("RBF SVC with gamma=auto, C=%f" % C)
-            results.append(self.benchmark('RBF SVC with C=%f' % C, OneVsRestClassifier(SVC(C=C, cache_size=2000, class_weight=None, degree=3, gamma='auto', kernel='rbf', max_iter=-1, probability=False, random_state=None, shrinking=True, tol=0.001, verbose=False), n_jobs=-1)))
+            results.append(self.benchmark('RBF SVC with C=%f' % C, SVC(C=C, cache_size=2000, class_weight=None, degree=3, gamma='auto', kernel='rbf', max_iter=-1, probability=False, random_state=None, shrinking=True, tol=0.001, verbose=False)))
+            # results.append(self.benchmark('RBF SVC with C=%f' % C, OneVsRestClassifier(SVC(C=C, cache_size=2000, class_weight=None, degree=3, gamma='auto', kernel='rbf', max_iter=-1, probability=False, random_state=None, shrinking=True, tol=0.001, verbose=False), n_jobs=-1)))
 
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
-            results.append(self.benchmark('LR.pen=l1.C=%f' % C, OneVsRestClassifier(LogisticRegression(solver="liblinear", multi_class='ovr', penalty='l1', C=C), n_jobs=-1)))
+            results.append(self.benchmark('LR.pen=l1.C=%f' % C, LogisticRegression(solver="liblinear", multi_class='ovr', penalty='l1', C=C)))
+            # results.append(self.benchmark('LR.pen=l1.C=%f' % C, OneVsRestClassifier(LogisticRegression(solver="liblinear", multi_class='ovr', penalty='l1', C=C), n_jobs=-1)))
 
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l2.C=%f" % C)

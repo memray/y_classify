@@ -340,7 +340,7 @@ def load_batch_config(key_params):
     dataset and experiment settings
     '''
     param['data_name'] = '' # current dataset that the experiment is running about, is set in entry.py line 22
-    param['data_names']  = ['dstc2', 'dstc3', 'family', 'ghome'] # 'dstc2', 'dstc3', 'family', 'ghome'
+    param['data_names']  = ['dstc3', 'family', 'ghome'] # 'dstc2', 'dstc3', 'family', 'ghome'
 
     param['raw_feature_path']       = os.path.join(param['root_path'], 'dataset', 'feature', '%s.raw_feature.pkl')
     param['extracted_feature_path'] = os.path.join(param['root_path'], 'dataset', 'feature', '%s.extracted_feature.pkl')
