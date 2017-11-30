@@ -32,7 +32,8 @@ def range_to_params(ranges_items, params, cache):
 def init_task_queue():
     queue            = Queue()
     # parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
-    parameter_ranges = {'deep_model': [False], 'selected_context_id': [0], 'selected_feature_set_id': [7], 'similarity_feature': [False]}
+    parameter_ranges = {'deep_model': [False], 'selected_context_id': [0], 'selected_feature_set_id': list(range(1,9))
+, 'similarity_feature': [False]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
     # print(params)
@@ -103,15 +104,13 @@ if __name__ == '__main__':
     data_dict   = preload_X_Y()
 
     worker(q, data_dict)
-    q.put(None)
 
-    #
-    # for i in range(n_workers):
-    #     p = multiprocessing.Process(target = worker, args = (q, data_dict))
-    #     workers.append(p)
-    #     p.start()
-    #
-    # # stop workers
-    # for i in range(n_workers):
-    #     q.put(None)
+    for i in range(n_workers):
+        p = multiprocessing.Process(target = worker, args = (q, data_dict))
+        workers.append(p)
+        p.start()
+
+    # stop workers
+    for i in range(n_workers):
+        q.put(None)
     print('Done')

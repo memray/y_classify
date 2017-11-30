@@ -402,8 +402,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            if r_id >= 10:
-                break
+            # if r_id >= 10:
+            #     break
 
             self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
             self.config['test_round'] = r_id
@@ -900,6 +900,15 @@ class ShallowExperimenter():
 
         results = []
 
+        if self.config.param['data_name'] in ['dstc2', 'dstc3']:
+            C = 2**(-4)
+        else:
+            C = 2**(1)
+        self.logger.info('=' * 80)
+        self.logger.info("LinearSVC.pen=l1, C=%f" % 2**(-4))
+        results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
+
+        """
         for C in [2**x for x in [-4, -3, -2, -1, 0, 1, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%f" % C)
@@ -918,16 +927,6 @@ class ShallowExperimenter():
             # results.append(self.benchmark('LR.pen=l2.C=%f' % C, LogisticRegression(solver="lbfgs", multi_class='multinomial', penalty='l2', C=C, dual=False)))
 
         """
-        if self.config.param['data_name'] in ['dstc2', 'dstc3']:
-            C = 2**(-4)
-        else:
-            C = 2**(2)
-        self.logger.info('=' * 80)
-        self.logger.info("LinearSVC.pen=l1, C=%f" % 2**(-4))
-        results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
-
-        """
-
 
         '''
         for clf, name in [
