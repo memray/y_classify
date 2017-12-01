@@ -36,7 +36,7 @@ def init_task_queue():
 , 'similarity_feature': [False]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
-    # print(params)
+    print(params)
 
     [queue.put(dict(p)) for p in params]
 
@@ -103,7 +103,7 @@ if __name__ == '__main__':
 
     data_dict   = preload_X_Y()
 
-    worker(q, data_dict)
+    # worker(q, data_dict)
 
     for i in range(n_workers):
         p = multiprocessing.Process(target = worker, args = (q, data_dict))
