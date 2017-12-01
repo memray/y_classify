@@ -11,5 +11,8 @@
 #module restore
 
 # Run the job
-srun python -m dialogue.classify.task_runner -selected_feature_set_id 1 2 3 4 5 6 7 8 -selected_context_id 3
+END=8
+for ((i=1;i<=END;i++)); do
+    srun python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id 3
+done
 

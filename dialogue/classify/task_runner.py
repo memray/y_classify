@@ -111,7 +111,7 @@ if __name__ == '__main__':
                         help="")
     parser.add_argument('-add_similarity_feature', action='store_true',
                         help="")
-    parser.add_argument('-num_worker', default=2, type=int,
+    parser.add_argument('-num_worker', default=1, type=int,
                         help="")
     opt = parser.parse_args()
 
