@@ -22,6 +22,7 @@ def init_logging(logfile):
     ch.setFormatter(formatter)
     # fh.setLevel(logging.INFO)
     ch.setLevel(logging.INFO)
+    logging.getLogger().handlers = [] # remove the previous handlers
     logging.getLogger().addHandler(ch)
     logging.getLogger().addHandler(fh)
     logging.getLogger().setLevel(logging.INFO)
