@@ -33,14 +33,16 @@ def range_to_params(ranges_items, params, cache):
         range_to_params(next_range, params, c)
 
 def init_task_queue(selected_context_id, selected_feature_set_id, is_deep_model, add_similarity_feature):
-    queue            = Queue()
+    # queue            = Queue()
+    queue = []
     # parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
     parameter_ranges = {'deep_model': [is_deep_model], 'selected_context_id': selected_context_id, 'selected_feature_set_id': selected_feature_set_id
 , 'similarity_feature': [add_similarity_feature]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
 
-    [queue.put(dict(p)) for p in params]
+    # [queue.put(dict(p)) for p in params]
+    [queue.append(dict(p)) for p in params]
 
     print('No. of param settings = %d' % len(params))
     for param in params:
@@ -75,7 +77,7 @@ def preload_X_Y():
 
 def worker(q, data_dict):
     # get a param from queue and
-    for param in iter(q.get, None):
+    for param in q:#iter(q.get, None):
         config  = configuration.load_batch_config(param)
 
         if config['deep_model']:
@@ -116,14 +118,15 @@ if __name__ == '__main__':
                         help="")
     opt = parser.parse_args()
 
-    freeze_support()
+    # freeze_support()
     n_workers   = opt.num_worker
     workers     = []
     q           = init_task_queue(opt.selected_context_id, opt.selected_feature_set_id, opt.is_deep_model, opt.add_similarity_feature)
-
     data_dict   = preload_X_Y()
 
     worker(q, data_dict)
+
+    print('Done')
 
     '''
     for i in range(n_workers):
@@ -137,4 +140,3 @@ if __name__ == '__main__':
         q.put(None)
         workers[i].join()
     '''
-    print('Done')
