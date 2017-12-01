@@ -37,12 +37,12 @@ class CNN(nn.Module):
 
         for i in range(len(self.filters)):
             conv = nn.Conv1d(self.in_channel, self.filter_num[i], self.word_dim * self.filters[i], stride=self.word_dim)
-            setattr(self, f'conv_{i}', conv)
+            setattr(self, 'conv_%d' % i , conv)
 
         self.fc = nn.Linear(sum(self.filter_num), self.class_size)
 
     def get_conv(self, i):
-        return getattr(self, f'conv_{i}')
+        return getattr(self, 'conv_%d' % i)
 
     def forward(self, inp):
         x = self.embedding(inp).view(-1, 1, self.word_dim * self.max_sent_len)
