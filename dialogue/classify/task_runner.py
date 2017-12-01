@@ -1,6 +1,7 @@
 import copy
 import multiprocessing
 import os
+import argparse
 from multiprocessing import Queue
 
 from multiprocessing import freeze_support
@@ -29,18 +30,19 @@ def range_to_params(ranges_items, params, cache):
         c.append((k,v))
         range_to_params(next_range, params, c)
 
-def init_task_queue():
+def init_task_queue(selected_context_id, selected_feature_set_id, is_deep_model, add_similarity_feature):
     queue            = Queue()
     # parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
-    parameter_ranges = {'deep_model': [False], 'selected_context_id': [0], 'selected_feature_set_id': list(range(5,9))
-, 'similarity_feature': [True]}
+    parameter_ranges = {'deep_model': [is_deep_model], 'selected_context_id': selected_context_id, 'selected_feature_set_id': selected_feature_set_id
+, 'similarity_feature': [add_similarity_feature]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
-    print(params)
 
     [queue.put(dict(p)) for p in params]
 
     print('No. of param settings = %d' % len(params))
+    for param in params:
+        print(param)
 
     return queue
 
@@ -96,10 +98,26 @@ def worker(q, data_dict):
         exp.export_averaged_summary(results, os.path.join(config.param['experiment_path'], 'summary.csv'))
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(
+        description='task_runner.py',
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+    parser.add_argument('-selected_context_id', required=True, nargs='+', type=int,
+                        help="")
+    parser.add_argument('-selected_feature_set_id', required=True, nargs='+', type=int,
+                        help="")
+    parser.add_argument('-is_deep_model', action='store_true',
+                        help="")
+    parser.add_argument('-add_similarity_feature', action='store_true',
+                        help="")
+    parser.add_argument('-num_worker', default=2, type=int,
+                        help="")
+    opt = parser.parse_args()
+
     freeze_support()
-    n_workers   = 4
+    n_workers   = opt.num_worker
     workers     = []
-    q           = init_task_queue()
+    q           = init_task_queue(opt.selected_context_id, opt.selected_feature_set_id, opt.is_deep_model, opt.add_similarity_feature)
 
     data_dict   = preload_X_Y()
 

@@ -43,7 +43,7 @@ from dialogue.data import data_loader
 __author__ = "Rui Meng"
 __email__ = "rui.meng@pitt.edu"
 
-
+'''
 op = OptionParser()
 op.add_option("--report",
               action="store_true", dest="print_report", default=True,
@@ -55,9 +55,8 @@ op.add_option("--top10",
               action="store_true", dest="print_top10", default=True,
               help="Print ten most discriminative terms per class"
                    " for every classifier.")
-
 (opts, args) = op.parse_args()
-
+'''
 
 class ShallowExperimenter():
     def __init__(self, config):

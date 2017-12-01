@@ -11,5 +11,5 @@
 #module restore
 
 # Run the job
-srun python -m dialogue.classify.task_runner -selected_feature_set_id 1 2 3 4 5 6 7 8 -selected_context_id 0
+srun python -m dialogue.classify.task_runner -selected_feature_set_id 1 2 3 4 5 6 7 8 -add_similarity_feature -selected_context_id 0
 
