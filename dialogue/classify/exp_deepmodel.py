@@ -1,3 +1,5 @@
+import re
+
 import gensim
 import numpy as np
 import sys
@@ -17,44 +19,40 @@ from dialogue.deep.cnn.model import CNN
 from dialogue.deep.rnn.model import LSTM
 from dialogue.deep.skipthought.skipthoughts import BiSkipClassifier
 
-def tally_parameters(model):
-    n_params = sum([p.nelement() for p in model.parameters()])
-    print('* number of parameters: %d' % n_params)
-    enc = 0
-    dec = 0
-    for name, param in model.named_parameters():
-        if 'encoder' in name:
-            enc += param.nelement()
-        elif 'decoder' or 'generator' in name:
-            dec += param.nelement()
-    print('encoder: ', enc)
-    print('decoder: ', dec)
-
 class DeepExperimenter(ShallowExperimenter):
     def init_model(self, vocab_dict, model_type):
         if model_type == 'cnn':
             params = self.config['cnn_setting']
-            if params["MODEL"] != "rand":
+            if params["model"] != "rand":
                 # load word2vec
                 print("loading word2vec...")
                 word_vectors = gensim.models.KeyedVectors.load_word2vec_format(self.config['w2v_path'], binary=True)
 
                 wv_matrix = []
+
+                found_count = 0
+                not_found_count = 0
+
                 for i in range(len(vocab_dict["vocab"])):
                     word = vocab_dict["idx_to_word"][i]
                     if word in word_vectors.vocab:
+                        found_count += 1
                         wv_matrix.append(word_vectors.word_vec(word))
                     else:
+                        not_found_count += 1
+                        print('%s not found in w2v' % word)
                         wv_matrix.append(np.random.uniform(-0.01, 0.01, 300).astype("float32"))
 
-                # one for UNK and one for zero padding
-                wv_matrix.append(np.random.uniform(-0.01, 0.01, 300).astype("float32"))
-                wv_matrix.append(np.zeros(300).astype("float32"))
-                wv_matrix = np.array(wv_matrix)
-                params["WV_MATRIX"] = wv_matrix
+                self.logger.info('#(words found in w2v)=%d, #(words not found in w2v)=%d' % (found_count, not_found_count))
 
-            params['VOCAB_SIZE'] = len(vocab_dict['vocab'])
-            params['MAX_SENT_LEN'] = vocab_dict['MAX_SENT_LEN']
+                # (deprecated, already included in vocab) one for <unk> and one for zero padding
+                # wv_matrix.append(np.random.uniform(-0.01, 0.01, 300).astype("float32"))
+                # wv_matrix.append(np.zeros(300).astype("float32"))
+                wv_matrix = np.array(wv_matrix)
+                params["wv_matrix"] = wv_matrix
+
+            params['vocab_size'] = len(vocab_dict['vocab'])
+            params['max_sent_len'] = vocab_dict['max_sent_len']
             model = CNN(**params)
             model.parameters_to_normalize = [model.fc]
 
@@ -63,13 +61,14 @@ class DeepExperimenter(ShallowExperimenter):
 
         elif model_type == 'skip-thought':
             params = self.config['skipthought_setting']
+            if self.config['concat_sents']:
+                params['sentence_num'] = 1
             model = BiSkipClassifier(params['skipthought_model_path'], vocab_dict["vocab"], hidden_size=params['hidden_size'],
-                                     output_size=params['CLASS_SIZE'], sentence_num=params['sentence_num'],
-                                     fixed_emb=params['fixed_emb'], dropout=params['DROPOUT_PROB'])
+                                     output_size=params['class_size'], sentence_num=params['sentence_num'],
+                                     fixed_emb=params['fixed_emb'], dropout=params['dropout_prob'])
             '''
             make most of the parameters static except for the fc layer
             '''
-            # optimizer = Adam(params=model.parameters(), lr=1e-4)
             for p in model.parameters():
                 p.requires_grad = False
             for p in model.fc.parameters():
@@ -77,10 +76,38 @@ class DeepExperimenter(ShallowExperimenter):
 
             model.parameters_to_normalize = [model.fc]
 
-        elif model_type == 'lstm':
+        elif model_type == 'lstm' or 'rnn':
             params = self.config['lstm_setting']
-            params['max_length'] = vocab_dict['MAX_SENT_LEN']
-            model = LSTM(len(vocab_dict["vocab"]), params['embedding_size'], params['hidden_size'], output_size=params['CLASS_SIZE'] , batch_size=self.config['batch_size'], dropout=params['DROPOUT_PROB'])
+            if params["model"] != "rand":
+                # load word2vec
+                print("loading word2vec...")
+                word_vectors = gensim.models.KeyedVectors.load_word2vec_format(self.config['w2v_path'], binary=True)
+
+                wv_matrix = []
+                found_count = 0
+                not_found_count = 0
+
+                for i in range(len(vocab_dict["vocab"])):
+                    word = vocab_dict["idx_to_word"][i]
+                    if word in word_vectors.vocab:
+                        found_count += 1
+                        wv_matrix.append(word_vectors.word_vec(word))
+                    else:
+                        not_found_count += 1
+                        print('%s not found in w2v' % word)
+                        wv_matrix.append(np.random.uniform(-0.01, 0.01, 300).astype("float32"))
+
+                self.logger.info('#(words found in w2v)=%d, #(words not found in w2v)=%d' % (found_count, not_found_count))
+
+                wv_matrix = np.array(wv_matrix) # vocab_size (including <pad> and <<unk>>) * embed_dim
+                params["wv_matrix"] = wv_matrix
+                print('shape of wv_matrix = %s' % str(wv_matrix.shape))
+            else:
+                params["wv_matrix"] = None
+
+            params = self.config['lstm_setting']
+            params['max_length'] = vocab_dict['max_sent_len']
+            model = LSTM(model=params['model'], vocab_size=len(vocab_dict["vocab"]), bidirectional=params['bidirectional'], embedding_size=params['embedding_size'], hidden_size=params['hidden_size'], output_size=params['class_size'] , batch_size=self.config['batch_size'], dropout=params['dropout_prob'], pretrained_wv=params["wv_matrix"])
             model.parameters_to_normalize = [model.fc]
         else:
             self.logger.error('No such model: %s' % model_type)
@@ -104,13 +131,12 @@ class DeepExperimenter(ShallowExperimenter):
             return x_new, max_length
 
 
-        def str_to_one_hot(str, word2idx):
-            str = str.strip().lower()
-            word_list = str.split()
+        def str_to_one_hot(word_list, word2idx):
             one_hot = [word2idx[w] for w in word_list if w in word2idx]
 
-            if len(str) == 0 or len(one_hot) == 0:
-                word_list = ['UNK']
+            # deal with problematic inputs, replaced as '<unk>'
+            if len(word_list) == 0 or len(one_hot) == 0:
+                word_list = ['<unk>']
                 one_hot = [word2idx[w] for w in word_list if w in word2idx]
 
             return one_hot
@@ -130,10 +156,43 @@ class DeepExperimenter(ShallowExperimenter):
         X_texts     = ItemSelector(keys=context_range).transform(X_raw_feature)
         X_texts     = list(zip(*X_texts))
 
-        vocab_set = set()
-        self.MAX_SENT_LEN = 0
-        [setattr(self, 'MAX_SENT_LEN', max(self.MAX_SENT_LEN, len([vocab_set.add(w) for w in sent.lower().split()]))) for sent in np.asarray(X_texts).flatten()]
-        vocab_dict['vocab'] = ['<eos>', 'UNK'] + list(vocab_set)
+        vocab_counter = {}
+
+        X_texts_tokenized = []
+        for sents in X_texts:
+            sents_tokenized = []
+            for sent in sents:
+                sent = sent.lower()
+                tokens = self.copyseq_tokenize(sent)
+                for w in tokens:
+                    vocab_counter[w] = vocab_counter.get(w, 0) + 1
+                sents_tokenized.append(tokens)
+            X_texts_tokenized.append(sents_tokenized)
+
+        sorted_words = sorted(vocab_counter.items(), key=lambda x:x[1], reverse=True)
+        # print('*' * 50)
+        # print('#(vocab)=%d' % len(sorted_words))
+        # for w,freq in sorted_words:
+        #     print('%s\t%d' % (w, freq))
+        # print('*' * 50)
+        keep_word = sorted_words[:self.config['num_word_keep'][self.config['data_name']]]
+        vocab_set = set([w for w,freq in keep_word])
+
+        self.max_sent_len = 0
+        X_texts_filtered = []
+        for sents in X_texts_tokenized:
+            sents_filtered = []
+            for sent in sents:
+                sent = [w if w in vocab_set else '<unk>' for w in sent]
+                if len(sent) > self.max_sent_len:
+                    self.max_sent_len = len(sent)
+                sents_filtered.append(sent)
+            X_texts_filtered.append(sents_filtered)
+
+        X_texts = X_texts_filtered
+
+        print('max_sent_len found during preprocessing = %d' % self.max_sent_len)
+        vocab_dict['vocab'] = ['<pad>', '<unk>', '<eos>'] + list(vocab_set)
 
         word_to_idx = {}
         idx_to_word = {}
@@ -144,7 +203,7 @@ class DeepExperimenter(ShallowExperimenter):
         vocab_dict["word_to_idx"] = word_to_idx
         vocab_dict["idx_to_word"] = idx_to_word
 
-        X_onehot, vocab_dict["MAX_SENT_LEN"] = convert_and_pad(X_texts, concat_sents = self.config['concat_sents'])
+        X_onehot, vocab_dict["max_sent_len"] = convert_and_pad(X_texts, concat_sents = self.config['concat_sents'])
 
         X_train_text = [X_texts[i] for i in train_id]
         X_valid_text = [X_texts[i] for i in valid_id]
@@ -190,13 +249,33 @@ class DeepExperimenter(ShallowExperimenter):
 
         return vocab_dict, data_dict
 
+    def copyseq_tokenize(self, text):
+        '''
+        The tokenizer used in Meng et al. ACL 2017
+        parse the feed-in text, filtering and tokenization
+        keep [_<>,\(\)\.\'%], replace digits to <digit>, split by [^a-zA-Z0-9_<>,\(\)\.\'%]
+        :param text:
+        :return: a list of tokens
+        '''
+        # remove line breakers
+        text = re.sub(r'[\r\n\t]', ' ', text)
+        # pad spaces to the left and right of special punctuations
+        text = re.sub(r'[_<>,\(\)\.\'%]', ' \g<0> ', text)
+        # tokenize by non-letters (new-added + # & *, but don't pad spaces, to make them as one whole word)
+        tokens = filter(lambda w: len(w) > 0, re.split(r'[^a-zA-Z0-9_<>,#&\+\*\(\)\.\'%]', text))
+
+        # replace the digit terms with <digit>
+        tokens = [w if not re.match('^\d+$', w) else '<DIGIT>' for w in tokens]
+
+        return tokens
+
     def run_cross_validation(self, X, Y):
         train_ids, valid_ids, test_ids = self.load_cv_index_train8_valid1_test1(Y)
         cv_results = []
 
         for r_id, (train_id, valid_id, test_id) in enumerate(zip(train_ids, valid_ids, test_ids)):
-            # if r_id >= 10:
-            #     break
+            if r_id >= 1:
+                break
 
             self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
             self.config['test_round'] = r_id
@@ -206,21 +285,20 @@ class DeepExperimenter(ShallowExperimenter):
 
             vocab_dict, data_dict = self.get_batch_loader(X_raw_feature, Y, train_id, valid_id, test_id, batch_size=self.config['batch_size'])
 
-            print('size of vocab=%d', len(vocab_dict['vocab']))
-            print('max length=%d', vocab_dict['MAX_SENT_LEN'])
-
+            print('size of vocab = %d' % len(vocab_dict['vocab']))
+            self.logger.info('max length = %d' % vocab_dict['max_sent_len'])
             model, params = self.init_model(vocab_dict, self.config['deep_model_name'])
-            tally_parameters(model)
+            self.tally_parameters(model)
 
-            cv_results.extend(self.run_experiment(model, params, data_dict, exp_name='[%s]%s-fold_%d' % (self.config['data_name'], self.config['deep_model'], r_id)))
+            cv_results.extend(self.run_experiment(model, params, vocab_dict, data_dict, exp_name='[%s]%s-fold_%d' % (self.config['data_name'], self.config['deep_model'], r_id)))
 
         self.export_cv_results(cv_results, test_ids, Y)
 
         return cv_results
 
-    def run_experiment(self, model, model_param, data_dict, exp_name = ''):
-        optimizer = Adam(params=filter(lambda p: p.requires_grad, model.parameters()), lr=model_param['LEARNING_RATE'])
-        # optimizer = Adagrad(params=filter(lambda p: p.requires_grad, model.parameters()), lr=model_param['LEARNING_RATE'])
+    def run_experiment(self, model, model_param, vocab_dict, data_dict, exp_name = ''):
+        optimizer = Adam(params=filter(lambda p: p.requires_grad, model.parameters()), lr=model_param['learning_rate'])
+        # optimizer = Adagrad(params=filter(lambda p: p.requires_grad, model.parameters()), lr=model_param['learning_rate'])
         criterion = torch.nn.CrossEntropyLoss()
 
         train_batch_loader = data_dict['train_batch_loader']
@@ -238,7 +316,7 @@ class DeepExperimenter(ShallowExperimenter):
         valid_f1_score = []
 
         for epoch in range(self.config['max_epoch']):
-            print('*' * 25 + 'Epoch=%d' % epoch + '*' * 25)
+            self.logger.info('*' * 25 + 'Epoch=%d' % epoch + '*' * 25)
             '''
             Training
             '''
@@ -277,38 +355,38 @@ class DeepExperimenter(ShallowExperimenter):
                 train_y_shuffled.extend(y.data.numpy().tolist())
 
                 # constrain l2-norms of the weight vectors
-                if 'NORM_LIMIT' in model_param:
+                if 'norm_limit' in model_param:
                     weight_norm = sum([float(p.weight.norm().data.numpy()) for p in model.parameters_to_normalize])
-                    if weight_norm > model_param["NORM_LIMIT"]:
+                    if weight_norm > model_param["norm_limit"]:
                         for p in model.parameters_to_normalize:
-                            p.weight.data = p.weight.data * model_param["NORM_LIMIT"] / weight_norm
+                            p.weight.data = p.weight.data * model_param["norm_limit"] / weight_norm
 
-                print('Training %d/%d, loss=%.5f, weight_norm=%.5f, grad_norm=%s' % (i, len(train_batch_loader), np.average(loss.data[0]), weight_norm, str(grad_norm) if 'NORM_LIMIT' in model_param else "N/A"))
+                self.logger.info('Training %d/%d, loss=%.5f, weight_norm=%.5f, grad_norm=%s' % (i, len(train_batch_loader), np.average(loss.data[0]), weight_norm, str(grad_norm) if 'norm_limit' in model_param else "N/A"))
 
             all_training_losses.append(training_losses)
             training_loss_mean = np.average(training_losses)
 
-            print('-' * 20 + 'Training Summary' + '-' * 20)
-            print('Training loss=%.5f' % training_loss_mean)
+            self.logger.info('-' * 20 + 'Training Summary' + '-' * 20)
+            self.logger.info('Training loss=%.5f' % training_loss_mean)
 
-            print("Training classification report:")
+            self.logger.info("Training classification report:")
             report = metrics.classification_report(train_y_shuffled, train_pred,
                                                    target_names=np.asarray(self.config['label_encoder'].classes_))
-            print(report)
+            self.logger.info(report)
 
-            print("Training confusion matrix:")
+            self.logger.info("Training confusion matrix:")
             confusion_mat = str(metrics.confusion_matrix(train_y_shuffled, train_pred))
-            print('\n' + confusion_mat)
+            self.logger.info('\n' + confusion_mat)
 
             acc_score = metrics.accuracy_score(train_y_shuffled, train_pred)
             f1_score = metrics.f1_score(train_y_shuffled, train_pred, average='macro')
             # train_accuracy.append([acc_score])
             # train_f1_score.append([f1_score])
 
-            print("Training accuracy:   %0.3f" % acc_score)
-            print("Training f1_score:   %0.3f" % f1_score)
-            print('*' * 100)
-            print('*' * 100)
+            self.logger.info("Training accuracy:   %0.3f" % acc_score)
+            self.logger.info("Training f1_score:   %0.3f" % f1_score)
+            self.logger.info('*' * 100)
+            self.logger.info('*' * 100)
 
             '''
             Validating
@@ -330,44 +408,44 @@ class DeepExperimenter(ShallowExperimenter):
                 else:
                     valid_pred.extend(pred_i.numpy().flatten().tolist())
 
-                print('Validating %d/%d, loss=%.5f' % (i, len(valid_batch_loader), np.average(loss.data[0])))
+                self.logger.info('Validating %d/%d, loss=%.5f' % (i, len(valid_batch_loader), np.average(loss.data[0])))
 
             valid_loss_mean = np.average(valid_losses)
             all_valid_losses.append(valid_losses)
 
-            print('-' * 20 + 'Validation Summary' + '-' * 20)
-            print('Valid loss=%.5f' % valid_loss_mean)
+            self.logger.info('-' * 20 + 'Validation Summary' + '-' * 20)
+            self.logger.info('Valid loss=%.5f' % valid_loss_mean)
 
-            print("Validation Classification Report:")
+            self.logger.info("Validation Classification Report:")
             report = metrics.classification_report(Y_valid, valid_pred,
                                                    target_names=np.asarray(self.config['label_encoder'].classes_))
-            print(report)
+            self.logger.info(report)
 
-            print("Validation Confusion Matrix:")
+            self.logger.info("Validation Confusion Matrix:")
             confusion_mat = str(metrics.confusion_matrix(Y_valid, valid_pred))
-            print('\n' + confusion_mat)
+            self.logger.info('\n' + confusion_mat)
 
             acc_score = metrics.accuracy_score(Y_valid, valid_pred)
             f1_score = metrics.f1_score(Y_valid, valid_pred, average='macro')
             valid_accuracy.append([acc_score])
             valid_f1_score.append([f1_score])
 
-            print("Validation accuracy:   %0.3f" % acc_score)
-            print("Validation f1_score:   %0.3f" % f1_score)
-            print('*' * 100)
-            print('*' * 100)
+            self.logger.info("Validation accuracy:   %0.3f" % acc_score)
+            self.logger.info("Validation f1_score:   %0.3f" % f1_score)
+            self.logger.info('*' * 100)
+            self.logger.info('*' * 100)
 
             is_best_loss = f1_score > best_loss
             rate_of_change = float(f1_score - best_loss)/float(best_loss) if best_loss > 0 else 0
 
             if is_best_loss:
-                print('Update best f1 (%.4f --> %.4f), rate of change (ROC)=%.2f' % (best_loss, f1_score, rate_of_change * 100))
+                self.logger.info('Update best f1 (%.4f --> %.4f), rate of change (ROC)=%.2f' % (best_loss, f1_score, rate_of_change * 100))
             else:
-                print('Best f1 is not updated (%.4f --> %.4f), rate of change (ROC)=%.2f' % (best_loss, f1_score, rate_of_change * 100))
+                self.logger.info('Best f1 is not updated (%.4f --> %.4f), rate of change (ROC)=%.2f' % (best_loss, f1_score, rate_of_change * 100))
 
             best_loss = max(f1_score, best_loss)
 
-            print('*' * 50)
+            self.logger.info('*' * 50)
 
             if rate_of_change < 0.01 and epoch > 0:
                 stop_increasing += 1
@@ -375,7 +453,7 @@ class DeepExperimenter(ShallowExperimenter):
                 stop_increasing = 0
 
             if stop_increasing >= self.config['early_stop_tolerance']:
-                print('Have not increased for %d epoches, stop training' % stop_increasing)
+                self.logger.info('Have not increased for %d epoches, stop training' % stop_increasing)
                 break
 
             plot_learning_curve(all_training_losses, all_valid_losses, 'Error Trend: Training and Validation', curve1_name='Training Error', curve2_name='Validation Error', save_path=self.config['experiment_path']+'/%s-train_valid_curve.png' % exp_name)
@@ -403,34 +481,48 @@ class DeepExperimenter(ShallowExperimenter):
 
             test_losses.append(loss.data[0])
 
-            print('Testing %d/%d, loss=%.5f' % (i, len(test_batch_loader), loss.data[0]))
+            self.logger.info('Testing %d/%d, loss=%.5f' % (i, len(test_batch_loader), loss.data[0]))
 
-        print('-' * 20 + 'Test Summary' + '-' * 20)
+        self.logger.info('-' * 20 + 'Test Summary' + '-' * 20)
         test_loss_mean = np.average(test_losses)
-        print('*' * 50)
-        print('Testing loss=%.5f' % test_loss_mean)
-        print("Testing Classification Report:")
+        self.logger.info('*' * 50)
+        self.logger.info('Testing loss=%.5f' % test_loss_mean)
+        self.logger.info("Testing Classification Report:")
         report = metrics.classification_report(Y_test, test_pred,
                                                target_names=np.asarray(self.config['label_encoder'].classes_))
-        print(report)
+        self.logger.info(report)
 
-        print("Testing Confusion Matrix:")
+        self.logger.info("Testing Confusion Matrix:")
         confusion_mat = str(metrics.confusion_matrix(Y_test, test_pred))
-        print('\n' + confusion_mat)
+        self.logger.info('\n' + confusion_mat)
 
         acc_score = metrics.accuracy_score(Y_test, test_pred)
         f1_score = metrics.f1_score(Y_test, test_pred, average='macro')
 
-        print("Testing accuracy:   %0.3f" % acc_score)
-        print("Testing f1_score:   %0.3f" % f1_score)
+        self.logger.info("Testing accuracy:   %0.3f" % acc_score)
+        self.logger.info("Testing f1_score:   %0.3f" % f1_score)
 
-        print('*' * 100)
-        print('*' * 100)
-        print('*' * 100)
+        self.logger.info('*' * 100)
+        self.logger.info('*' * 100)
+        self.logger.info('*' * 100)
 
         result = self.classification_report(Y_test, test_pred, self.config['deep_model_name'], 'test')
         results = [[result]]
         return results
+
+    def tally_parameters(self, model):
+        n_params = sum([p.nelement() for p in model.parameters()])
+        self.logger.info('number of parameters: %d' % n_params)
+        enc = 0
+        dec = 0
+        for name, param in model.named_parameters():
+            if 'encoder' in name:
+                enc += param.nelement()
+            elif 'decoder' or 'generator' in name:
+                dec += param.nelement()
+        self.logger.info('encoder: %d' % enc)
+        self.logger.info('decoder: %d' % dec)
+
 
 def plot_learning_curve(train_scores, test_scores, title, curve1_name='curve1_name', curve2_name='curve2_name', ylim=None, save_path=None):
     """

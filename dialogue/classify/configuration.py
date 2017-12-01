@@ -155,8 +155,8 @@ def load_config():
 
     # CoreNLP setting
     param['corenlp_jars'] = (
-        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/*",
-        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
+        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*",
+        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
     )
 
     # LDA setting
@@ -168,7 +168,7 @@ def load_config():
     param['gensim_dict_path']           = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.dict' % ('%s'))
 
     # Word2Vec setting
-    param['w2v_path']                   = os.path.join('/Users/rmeng/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
     param['w2v_vector_length']          = 300
 
     # param['4.1-ngram']     = True
@@ -183,8 +183,8 @@ def load_config():
 
 
     # Skip-thought setting
-    param['skipthought_model_path']     = '/Users/rmeng/Data/skip-thought'
-    # param['skipthought_model_path']     = '/Users/rmeng/Data/skip-thought'
+    param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
+    # param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
     param['skipthought_data_path']      = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector')
 
 
@@ -204,7 +204,10 @@ def load_basic_config():
     '''
     metadata and path
     '''
-    param['root_path']  = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
+    # param['root_path']  = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
+    param['root_path']  = os.path.abspath(os.path.join(os.getcwd()))
+    param['root_path']  = param['root_path'][:param['root_path'].find('y_classify') + 11]
+    print('root_path: %s' % param['root_path'])
 
     param['experiment_path'] = os.path.join(param['root_path'], 'output', 'temp')
     param['valid_type'] = set(['F', 'C', 'R', 'A'])  # 'F', 'C', 'R', 'N', 'CC', 'A', 'Chitchat', 'G', 'O'\
@@ -238,8 +241,8 @@ def load_basic_config():
 
     # CoreNLP setting
     param['corenlp_jars'] = (
-        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/*",
-        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
+        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*",
+        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
     )
 
     # LDA setting
@@ -251,7 +254,7 @@ def load_basic_config():
     param['gensim_dict_path']           = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.dict' % ('%s'))
 
     # Word2Vec setting
-    param['w2v_path']                   = os.path.join('/Users/rmeng/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
     param['w2v_vector_length']          = 300
 
     # param['4.1-ngram']     = True
@@ -266,8 +269,8 @@ def load_basic_config():
 
 
     # Skip-thought setting
-    # param['skipthought_model_path']     = '/Users/rmeng/Data/skip-thought'
-    param['skipthought_model_path']     = '/Users/rmeng/Data/skip-thought'
+    # param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
+    param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
     param['skipthought_data_path']      = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector')
 
 
@@ -340,7 +343,7 @@ def load_batch_config(key_params):
     dataset and experiment settings
     '''
     param['data_name'] = '' # current dataset that the experiment is running about, is set in entry.py line 22
-    param['data_names']  = ['dstc3', 'family', 'ghome'] # 'dstc2', 'dstc3', 'family', 'ghome'
+    param['data_names']  = ['dstc2', 'dstc3', 'family', 'ghome'] # 'dstc2', 'dstc3', 'family', 'ghome'
 
     param['raw_feature_path']       = os.path.join(param['root_path'], 'dataset', 'feature', '%s.raw_feature.pkl')
     param['extracted_feature_path'] = os.path.join(param['root_path'], 'dataset', 'feature', '%s.extracted_feature.pkl')
@@ -377,8 +380,8 @@ def load_batch_config(key_params):
 
     # CoreNLP setting
     param['corenlp_jars'] = (
-        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/*",
-        "/Users/rmeng/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
+        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*",
+        "/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar",
     )
 
     # LDA setting
@@ -390,7 +393,7 @@ def load_batch_config(key_params):
     param['gensim_dict_path']           = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.dict' % ('%s'))
 
     # Word2Vec setting
-    param['w2v_path']                   = os.path.join('/Users/rmeng/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
     param['w2v_vector_length']          = 300
 
     # param['4.1-ngram']     = True
@@ -406,6 +409,13 @@ def load_batch_config(key_params):
     '''
     Deep models setting
     '''
+    # words whose freq below the given thresholds will be discarded
+    param['num_word_keep']                 = {'dstc2' : 300, # #(vocab)=668, #(freq>=10)=389
+                                           'dstc3': 300,  # #(vocab)=891, #(freq>=10)=480
+                                           'family': 1000, # #(vocab)=4068, #(freq>=15)=928
+                                           'ghome': 1000   # #(vocab)=5856, #(freq>=10)=897
+                                             }
+
     param['batch_size']                 = 128
     param['max_epoch']                  = 50
     param['early_stop_tolerance']       = 2
@@ -427,28 +437,31 @@ def load_batch_config(key_params):
 
     # Skip-thought setting
     param['skipthought_setting'] = {
-        "skipthought_model_path": '/Users/rmeng/Data/skip-thought',
-        # "skipthought_model_path": '/Users/rmeng/Data/skip-thought',
-        "skipthought_data_path": os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector'),
-        "fixed_emb": True,
-        "sentence_num": len(param['utterance_range']),
-        "hidden_size": 2400 * len(param['utterance_range']),
-        "CLASS_SIZE": len(param['valid_type']),
-        "LEARNING_RATE": 1.0e-4,
-        "NORM_LIMIT": 3,
-        "DROPOUT_PROB": 0.5,
+        # "skipthought_model_path"    : '/home/memray/Data/skip-thought',
+        "skipthought_model_path"  : '/Users/memray/Data/skip-thought',
+        "skipthought_data_path"     : os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector'),
+        "fixed_emb"                 : True,
+
+        "sentence_num"              : len(param['utterance_range']),
+        "hidden_size"               : 2400,
+        "class_size"                : len(param['valid_type']),
+        "learning_rate"             : 1.0e-4,
+        "norm_limit"                : 3,
+        "dropout_prob"              : 0.5,
     }
 
     # LSTM setting
     param['lstm_setting'] = {
+        "model"             : 'non-static', # available models: rand, non-static, static
         'hidden_size'       : 32,
-        'embedding_size'    : 32,
+        'embedding_size'    : 300,
         'num_layers'        : 1,
-        "LEARNING_RATE"     : 1.0e-4,
-        "CLASS_SIZE": len(param['valid_type']),
-        "NORM_LIMIT": 5,
-        'clip_grad_norm': 2,
-        "DROPOUT_PROB": 0.5,
+        'bidirectional'     : False,
+        "learning_rate"     : 1.0e-3,
+        "class_size"        : len(param['valid_type']),
+        "norm_limit"        : 2,
+        'clip_grad_norm'    : 2,
+        "dropout_prob"      : 0.1,
     }
 
     config = Config(param)

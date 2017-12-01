@@ -412,7 +412,7 @@ class BiSkipClassifier(AbstractBiSkip):
         :param save:
         :param dropout:
         :param fixed_emb:
-        :param hidden_size: 2400 * len(sentence_num)
+        :param hidden_size: 2400 * sentence_num
         :param output_size: 4
         :param sentence_num: 1~5, as we concatenate multiple sentences in one instance for classification, this tells the model how many sentences would feed in
         '''
@@ -425,14 +425,14 @@ class BiSkipClassifier(AbstractBiSkip):
         assert output_size != None
         assert sentence_num != None
 
-        self.hidden_size  = hidden_size
+        self.hidden_size  = hidden_size * sentence_num
         self.output_size  = output_size
         self.sentence_num = sentence_num
         self.dropout = dropout
 
-        print('fc size = (%d, %d)' % (hidden_size, output_size))
+        print('fc size = (%d, %d)' % (self.hidden_size, output_size))
 
-        self.fc = nn.Linear(hidden_size, output_size)
+        self.fc = nn.Linear(self.hidden_size, output_size)
         self.softmax = nn.LogSoftmax()
 
     def _load_rnn(self):

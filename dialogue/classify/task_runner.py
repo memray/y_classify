@@ -97,7 +97,7 @@ def worker(q, data_dict):
 
 if __name__ == '__main__':
     freeze_support()
-    n_workers   = 1
+    n_workers   = 4
     workers     = []
     q           = init_task_queue()
 

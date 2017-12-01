@@ -8,19 +8,32 @@ USE_CUDA = torch.cuda.is_available()
 
 
 class LSTM(nn.Module):
-    def __init__(self, input_size, embedding_size, hidden_size, output_size, batch_size=16, n_layers=1, dropout=0.5):
+    def __init__(self, model, vocab_size, embedding_size, bidirectional, hidden_size, output_size, batch_size=16, n_layers=1, dropout=0.5, pretrained_wv=None):
         super(LSTM, self).__init__()
 
-        self.input_size = input_size
+        self.model      = model
+        self.vocab_size = vocab_size
         self.embedding_size = embedding_size
+        self.bidirectional = bidirectional
         self.hidden_size = hidden_size
         self.n_layers = n_layers
         self.batch_size = batch_size
         self.dropout = dropout
 
-        self.embedding = nn.Embedding(input_size, embedding_size)
-        self.lstm = nn.LSTM(embedding_size, hidden_size, n_layers, batch_first=True, bidirectional=True)
-        self.fc     = nn.Linear(hidden_size * 2, output_size)
+        self.pad_id = 0
+
+        # self.embedding = nn.Embedding(vocab_size, embedding_size)
+        self.embedding = nn.Embedding(self.vocab_size, self.embedding_size, padding_idx=self.pad_id)
+        if self.model == "static" or self.model == "non-static":
+            self.embedding.weight.data.copy_(torch.from_numpy(pretrained_wv))
+            if self.model == "static":
+                self.embedding.weight.requires_grad = False
+
+        self.lstm = nn.LSTM(embedding_size, hidden_size, n_layers, batch_first=True, bidirectional=self.bidirectional)
+        if self.bidirectional:
+            self.fc   = nn.Linear(hidden_size * 2, output_size)
+        else:
+            self.fc   = nn.Linear(hidden_size, output_size)
 
         self.init_weights()
 
@@ -37,18 +50,37 @@ class LSTM(nn.Module):
             torch.zeros(self.n_layers * 2, input.size(0), self.hidden_size))
         return (hidden, context)
 
+    def _process_lengths(self, input):
+        max_length = input.size(1)
+        lengths = list(max_length - input.data.eq(0).sum(1).squeeze())
+        return lengths
+
+    def _argsort(self, seq):
+        return sorted(range(len(seq)), key=seq.__getitem__)
+
     def forward(self, input):
-        """
-        input : B,T (LongTensor)
-        input_masking : B,T (PAD 마스킹한 ByteTensor)
+        # convert input to a PackedSequence, in order to ignore the paddings
+        lengths = self._process_lengths(input)
+        sorted_lengths = sorted(lengths, reverse=True)
+        idx = self._argsort(lengths)
+        idx = idx[::-1]
+        inverse_idx = self._argsort(idx)
+        idx = Variable(torch.LongTensor(idx))
+        inverse_idx = Variable(torch.LongTensor(inverse_idx))
+        if input.data.is_cuda:
+            input = input.cuda()
+            idx   = idx.cuda()
+            inverse_idx = inverse_idx.cuda()
 
-        <PAD> 제외한 리얼 Context를 다시 만들어서 아웃풋으로
-        """
+        # reorganize the x in decreasing order, x.data.size() = (batch_size * sentence_num, max_sent_length)
+        x = torch.index_select(input, 0, idx)
 
+        # feed-forward， x.data.size() = (batch_size * sentence_num, max_sent_length, 2 * embedding_dim)
+        x = self.embedding(x)
+        x = nn.utils.rnn.pack_padded_sequence(x, sorted_lengths, batch_first=True) # size = (len(all_sents), 2 * embedding_dim)
         self.hidden = self.init_hidden(input)
 
-        embedded = self.embedding(input)
-        output, self.hidden = self.lstm(embedded, self.hidden)
+        output, self.hidden = self.lstm(x, self.hidden)
 
         # concatenate the bidirectional hidden of time maxlen, [batch_size, 2 * hidden_size]
         hn = torch.cat(self.hidden[0], dim=1)
@@ -82,13 +114,6 @@ class Encoder(nn.Module):
         return (hidden,context)
      
     def forward(self, input,input_masking):
-        """
-        input : B,T (LongTensor)
-        input_masking : B,T (PAD 마스킹한 ByteTensor)
-        
-        <PAD> 제외한 리얼 Context를 다시 만들어서 아웃풋으로
-        """
-        
         self.hidden = self.init_hidden(input)
         
         embedded = self.embedding(input)
@@ -97,7 +122,7 @@ class Encoder(nn.Module):
         real_context=[]
         
         for i,o in enumerate(output): # B,T,D
-            real_length = input_masking[i].data.tolist().count(0) # 실제 길이
+            real_length = input_masking[i].data.tolist().count(0)
             real_context.append(o[real_length-1])
             
         return output, torch.cat(real_context).view(input.size(0),-1).unsqueeze(1)
@@ -136,13 +161,12 @@ class Decoder(nn.Module):
         encoder_outputs : B,T,D
         encoder_maskings : B,T # ByteTensor
         """
-        
-        hidden = hidden.squeeze(0).unsqueeze(2)  # 히든 : (1,배치,차원) -> (배치,차원,1)
+        hidden = hidden.squeeze(0).unsqueeze(2)
         
         batch_size = encoder_outputs.size(0) # B
         max_len = encoder_outputs.size(1) # T
         energies = self.attn(encoder_outputs.contiguous().view(batch_size*max_len,-1)) # B*T,D -> B*T,D
-        energies = energies.view(batch_size,max_len,-1) # B,T,D (배치,타임,차원)
+        energies = energies.view(batch_size,max_len,-1) # B,T,D
         attn_energies = energies.bmm(hidden).transpose(1,2) # B,T,D * B,D,1 --> B,1,T
         attn_energies = attn_energies.squeeze(1).masked_fill(encoder_maskings,-1e12) # PAD masking
         
@@ -168,7 +192,7 @@ class Decoder(nn.Module):
         decode=[]
         aligns = encoder_outputs.transpose(0,1)
         length = encoder_outputs.size(1)
-        for i in range(length): # Input_sequence와 Output_sequence의 길이가 같기 때문..
+        for i in range(length):
             aligned = aligns[i].unsqueeze(1)# B,1,D
             _, hidden = self.lstm(torch.cat((embedded,context,aligned),2), hidden) # input, context, aligned encoder hidden, hidden
             
@@ -186,8 +210,7 @@ class Decoder(nn.Module):
             _,input = torch.max(softmaxed,1)
             embedded = self.embedding(input.unsqueeze(1))
             
-            # 그 다음 Context Vector를 Attention으로 계산
-            context = self.Attention(hidden[0], encoder_outputs,encoder_maskings) 
-        # 요고 주의! time-step을 column-wise concat한 후, reshape!!
+            context = self.Attention(hidden[0], encoder_outputs,encoder_maskings)
+
         slot_scores = torch.cat(decode,1)
         return slot_scores.view(input.size(0)*length,-1), intent_score
