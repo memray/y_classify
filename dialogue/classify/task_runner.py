@@ -2,7 +2,8 @@ import copy
 import multiprocessing
 import os
 import argparse
-from multiprocessing import Queue
+# from multiprocessing import Queue
+from queue import Queue
 import time
 
 from multiprocessing import freeze_support

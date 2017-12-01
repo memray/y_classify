@@ -13,6 +13,7 @@
 # Run the job
 END=8
 for ((i=1;i<=END;i++)); do
+    echo "python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id 3"
     srun python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id 3
 done
 

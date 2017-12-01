@@ -4,12 +4,15 @@
 #SBATCH --job-name=y_classify
 #SBATCH --output=tdr_dag.out
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=4
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 
 # Load modules
 #module restore
 
 # Run the job
-srun python -m dialogue.classify.task_runner -selected_feature_set_id 1 2 3 4 5 6 7 8 -selected_context_id 0
-
+END=8
+for ((i=1;i<=END;i++)); do
+    echo "python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id 0"
+    srun python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id 0
+done
