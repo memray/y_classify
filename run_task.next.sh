@@ -6,7 +6,6 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=2
-#SBATCH --mem=5GB
 
 # Load modules
 #module restore

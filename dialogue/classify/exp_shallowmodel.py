@@ -437,8 +437,8 @@ class ShallowExperimenter():
             C = 2**(1)
         self.logger.info('=' * 80)
         self.logger.info("LinearSVC.pen=l1, C=%f" % 2**(-4))
-        results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
-        # results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
+        # results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
+        results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
 
         """
         for C in [2**x for x in [-4, -3, -2, -1, 0, 1, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
