@@ -43,7 +43,6 @@ from dialogue.data import data_loader
 __author__ = "Rui Meng"
 __email__ = "rui.meng@pitt.edu"
 
-'''
 op = OptionParser()
 op.add_option("--report",
               action="store_true", dest="print_report", default=True,
@@ -55,8 +54,7 @@ op.add_option("--top10",
               action="store_true", dest="print_top10", default=True,
               help="Print ten most discriminative terms per class"
                    " for every classifier.")
-(opts, args) = op.parse_args()
-'''
+(opts, args) = op.parse_args([])
 
 class ShallowExperimenter():
     def __init__(self, config):
@@ -401,8 +399,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            # if r_id >= 10:
-            #     break
+            if r_id >= 1:
+                break
 
             self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
             self.config['test_round'] = r_id
@@ -438,7 +436,6 @@ class ShallowExperimenter():
 
         self.export_single_pass_results(results)
         return
-
 
     def run_single_pass_context_feature(self, X, Y):
         X = np.nan_to_num(X.todense())
@@ -906,6 +903,7 @@ class ShallowExperimenter():
         self.logger.info('=' * 80)
         self.logger.info("LinearSVC.pen=l1, C=%f" % 2**(-4))
         results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
+        # results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
 
         """
         for C in [2**x for x in [-4, -3, -2, -1, 0, 1, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]

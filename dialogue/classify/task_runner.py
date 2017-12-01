@@ -3,6 +3,7 @@ import multiprocessing
 import os
 import argparse
 from multiprocessing import Queue
+import time
 
 from multiprocessing import freeze_support
 from multiprocessing import current_process
@@ -121,9 +122,11 @@ if __name__ == '__main__':
 
     data_dict   = preload_X_Y()
 
-    # worker(q, data_dict)
+    worker(q, data_dict)
 
+    '''
     for i in range(n_workers):
+        time.sleep(5)
         p = multiprocessing.Process(target = worker, args = (q, data_dict))
         workers.append(p)
         p.start()
@@ -131,4 +134,6 @@ if __name__ == '__main__':
     # stop workers
     for i in range(n_workers):
         q.put(None)
+        workers[i].join()
+    '''
     print('Done')
