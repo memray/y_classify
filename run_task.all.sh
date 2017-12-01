@@ -2,10 +2,11 @@
 #SBATCH --cluster=smp
 #SBATCH --partition=smp
 #SBATCH --job-name=y_classify
-#SBATCH --output=tdr_dag.out
+#SBATCH --output=all.run_task_log.out
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=4
-#SBATCH --cpus-per-task=4
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=5GB
 
 # Load modules
 #module restore

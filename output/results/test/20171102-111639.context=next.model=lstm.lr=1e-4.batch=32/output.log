@@ -1,0 +1,804 @@
+11/02/2017 11:16:39 [INFO] configuration: selected_context_id  :   0
+11/02/2017 11:16:39 [INFO] configuration: deep_model  :   True
+11/02/2017 11:16:39 [INFO] configuration: deep_model_name  :   lstm
+11/02/2017 11:16:39 [INFO] configuration: seed  :   154316847
+11/02/2017 11:16:39 [INFO] configuration: root_path  :   /Users/memray/Project/yahoo/y_classify
+11/02/2017 11:16:39 [INFO] configuration: task_name  :   utterance_type
+11/02/2017 11:16:39 [INFO] configuration: timemark  :   20171102-111639
+11/02/2017 11:16:39 [INFO] configuration: context_set  :   next
+11/02/2017 11:16:39 [INFO] configuration: utterance_names  :   ['last_user_utterance', 'last_system_utterance', 'current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+11/02/2017 11:16:39 [INFO] configuration: utterance_range  :   ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+11/02/2017 11:16:39 [INFO] configuration: experiment_name  :   20171102-111639.context=next.model=lstm
+11/02/2017 11:16:39 [INFO] configuration: experiment_path  :   /Users/memray/Project/yahoo/y_classify/output/20171102-111639.context=next.model=lstm
+11/02/2017 11:16:39 [INFO] configuration: log_path  :   /Users/memray/Project/yahoo/y_classify/output/20171102-111639.context=next.model=lstm/output.log
+11/02/2017 11:16:39 [INFO] configuration: valid_type  :   {'F', 'C', 'R', 'A'}
+11/02/2017 11:16:39 [INFO] configuration: data_name  :   
+11/02/2017 11:16:39 [INFO] configuration: data_names  :   ['dstc2', 'dstc3', 'family', 'ghome']
+11/02/2017 11:16:39 [INFO] configuration: raw_feature_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/%s.raw_feature.pkl
+11/02/2017 11:16:39 [INFO] configuration: extracted_feature_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/%s.extracted_feature.pkl
+11/02/2017 11:16:39 [INFO] configuration: pipeline_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/%s.pipeline.pkl
+11/02/2017 11:16:39 [INFO] configuration: metrics  :   ['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+11/02/2017 11:16:39 [INFO] configuration: do_cross_validation  :   True
+11/02/2017 11:16:39 [INFO] configuration: #division  :   5
+11/02/2017 11:16:39 [INFO] configuration: #cross_validation  :   10
+11/02/2017 11:16:39 [INFO] configuration: cv_index_cache_path  :   
+11/02/2017 11:16:39 [INFO] configuration: action_words  :   {'reminders', 'weather', 'post', 'volume', 'shuffl', 'address', 'reminds', 'matter', 'list', 'expensive', 'centr', 'play', 'part', 'number', 'els', 'delet', 'telephon', 'volum', 'song', 'light', 'remov', 'moderate', 'temperature', 'next', 'stop', 'add', 'findcare', 'help', 'remind', 'items', 'moder', 'findcar', 'alarm', 'cheap', 'cast', 'centre', 'skip', 'start', 'remove', 'clear', 'price', 'temperatur', 'show', 'food', 'watch', 'north', 'snooze', 'discard', 'tell', 'area', 'ani', 'snooz', 'member', 'share', 'turn', 'south', 'video', 'timer', 'expens', 'else', 'phone', 'time', 'music', 'delete', 'shuffle', 'any', 'telephone', 'room', 'reminder', 'item'}
+11/02/2017 11:16:39 [INFO] configuration: corenlp_jars  :   ('/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*', '/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar')
+11/02/2017 11:16:39 [INFO] configuration: lda_topic_number  :   50
+11/02/2017 11:16:39 [INFO] configuration: lda_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.topic=50.lda.pkl
+11/02/2017 11:16:39 [INFO] configuration: gensim_corpus_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.corpus.pkl
+11/02/2017 11:16:39 [INFO] configuration: gensim_dict_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.dict
+11/02/2017 11:16:39 [INFO] configuration: w2v_path  :   /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:16:39 [INFO] configuration: w2v_vector_length  :   300
+11/02/2017 11:16:39 [INFO] configuration: d2v_vector_length  :   300
+11/02/2017 11:16:39 [INFO] configuration: d2v_window_size  :   5
+11/02/2017 11:16:39 [INFO] configuration: d2v_min_count  :   2
+11/02/2017 11:16:39 [INFO] configuration: d2v_model_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.model
+11/02/2017 11:16:39 [INFO] configuration: d2v_vector_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.vector
+11/02/2017 11:16:39 [INFO] configuration: batch_size  :   32
+11/02/2017 11:16:39 [INFO] configuration: max_epoch  :   100
+11/02/2017 11:16:39 [INFO] configuration: early_stop_tolerance  :   5
+11/02/2017 11:16:39 [INFO] configuration: concat_sents  :   True
+11/02/2017 11:16:39 [INFO] configuration: cnn_setting  :   {'MODEL': 'static', 'EARLY_STOPPING': True, 'WORD_DIM': 300, 'FILTERS': [3, 4, 5], 'FILTER_NUM': [100, 100, 100], 'CLASS_SIZE': 4, 'BATCH_SIZE': 32, 'LEARNING_RATE': 1e-05, 'NORM_LIMIT': 1, 'DROPOUT_PROB': 0.5}
+11/02/2017 11:16:39 [INFO] configuration: skipthought_setting  :   {'skipthought_model_path': '/home/memray/Data/skip-thought', 'skipthought_data_path': '/Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.skip-thought.biskip.vector', 'fixed_emb': True, 'sentence_num': 3, 'hidden_size': 7200, 'CLASS_SIZE': 4, 'LEARNING_RATE': 0.0001, 'NORM_LIMIT': 3, 'DROPOUT_PROB': 0.5}
+11/02/2017 11:16:39 [INFO] configuration: lstm_setting  :   {'hidden_size': 32, 'embedding_size': 32, 'num_layers': 1, 'LEARNING_RATE': 0.0001, 'CLASS_SIZE': 4, 'NORM_LIMIT': 5, 'clip_grad_norm': 2, 'DROPOUT_PROB': 0.5}
+11/02/2017 11:16:40 [INFO] exp_deepmodel: ******************** dstc2 - Round 0 
+11/02/2017 11:26:44 [INFO] exp_shallowmodel: accuracy:   0.408
+11/02/2017 11:26:44 [INFO] exp_shallowmodel: f1_score:   0.238
+11/02/2017 11:26:44 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:26:44 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.31      0.51      0.39       164
+          F       0.49      0.54      0.52       268
+          R       0.75      0.02      0.05       125
+
+avg / total       0.48      0.41      0.36       571
+
+11/02/2017 11:26:44 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:26:44 [INFO] exp_shallowmodel: 
+[[  0   6   8   0]
+ [  0  84  80   0]
+ [  0 121 146   1]
+ [  0  58  64   3]]
+11/02/2017 11:26:44 [INFO] exp_deepmodel: ******************** dstc2 - Round 1 
+11/02/2017 11:30:24 [INFO] exp_shallowmodel: accuracy:   0.371
+11/02/2017 11:30:24 [INFO] exp_shallowmodel: f1_score:   0.206
+11/02/2017 11:30:24 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:30:24 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.26      0.43      0.33       164
+          F       0.47      0.53      0.50       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.30      0.37      0.33       571
+
+11/02/2017 11:30:24 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:30:24 [INFO] exp_shallowmodel: 
+[[  0   5   9   0]
+ [  0  71  93   0]
+ [  0 127 141   0]
+ [  0  67  58   0]]
+11/02/2017 11:30:24 [INFO] exp_deepmodel: ******************** dstc2 - Round 2 
+11/02/2017 11:42:07 [INFO] exp_shallowmodel: accuracy:   0.356
+11/02/2017 11:42:07 [INFO] exp_shallowmodel: f1_score:   0.207
+11/02/2017 11:42:07 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:42:07 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.27      0.44      0.33       164
+          F       0.45      0.48      0.46       268
+          R       0.12      0.02      0.03       125
+
+avg / total       0.32      0.36      0.32       571
+
+11/02/2017 11:42:07 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:42:07 [INFO] exp_shallowmodel: 
+[[  0   7   7   0]
+ [  0  72  84   8]
+ [  0 133 129   6]
+ [  0  55  68   2]]
+11/02/2017 11:42:07 [INFO] exp_deepmodel: ******************** dstc2 - Round 3 
+11/02/2017 11:50:02 [INFO] exp_shallowmodel: accuracy:   0.368
+11/02/2017 11:50:02 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 11:50:02 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:50:02 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.29      0.55      0.38       164
+          F       0.47      0.45      0.46       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.30      0.37      0.32       571
+
+11/02/2017 11:50:02 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:50:02 [INFO] exp_shallowmodel: 
+[[  0   7   7   0]
+ [  0  90  74   0]
+ [  0 148 120   0]
+ [  0  69  56   0]]
+11/02/2017 11:50:02 [INFO] exp_deepmodel: ******************** dstc2 - Round 4 
+11/02/2017 11:54:18 [INFO] exp_shallowmodel: accuracy:   0.366
+11/02/2017 11:54:18 [INFO] exp_shallowmodel: f1_score:   0.193
+11/02/2017 11:54:18 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:54:18 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.23      0.30      0.26       164
+          F       0.45      0.59      0.51       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.28      0.37      0.32       571
+
+11/02/2017 11:54:18 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:54:18 [INFO] exp_shallowmodel: 
+[[  0   6   8   0]
+ [  0  50 114   0]
+ [  0 109 159   0]
+ [  0  52  73   0]]
+11/02/2017 11:54:18 [INFO] exp_deepmodel: ******************** dstc2 - Round 5 
+11/02/2017 12:04:27 [INFO] exp_shallowmodel: accuracy:   0.371
+11/02/2017 12:04:27 [INFO] exp_shallowmodel: f1_score:   0.224
+11/02/2017 12:04:27 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:04:27 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.29      0.48      0.36       164
+          F       0.44      0.48      0.46       268
+          R       0.38      0.04      0.07       125
+
+avg / total       0.38      0.37      0.34       571
+
+11/02/2017 12:04:27 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:04:27 [INFO] exp_shallowmodel: 
+[[  0   6   8   0]
+ [  0  79  83   2]
+ [  0 134 128   6]
+ [  0  50  70   5]]
+11/02/2017 12:04:27 [INFO] exp_deepmodel: ******************** dstc2 - Round 6 
+11/02/2017 12:08:28 [INFO] exp_shallowmodel: accuracy:   0.410
+11/02/2017 12:08:28 [INFO] exp_shallowmodel: f1_score:   0.222
+11/02/2017 12:08:28 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:08:28 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.30      0.40      0.35       164
+          F       0.48      0.63      0.54       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.31      0.41      0.35       571
+
+11/02/2017 12:08:28 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:08:28 [INFO] exp_shallowmodel: 
+[[  0   7   7   0]
+ [  0  66  98   0]
+ [  0 100 168   0]
+ [  0  45  80   0]]
+11/02/2017 12:08:28 [INFO] exp_deepmodel: ******************** dstc2 - Round 7 
+11/02/2017 12:19:09 [INFO] exp_shallowmodel: accuracy:   0.364
+11/02/2017 12:19:09 [INFO] exp_shallowmodel: f1_score:   0.214
+11/02/2017 12:19:09 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:19:09 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.27      0.46      0.34       164
+          F       0.46      0.48      0.47       268
+          R       0.25      0.02      0.04       125
+
+avg / total       0.35      0.36      0.33       571
+
+11/02/2017 12:19:09 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:19:09 [INFO] exp_shallowmodel: 
+[[  0   7   7   0]
+ [  0  76  86   2]
+ [  0 132 129   7]
+ [  0  65  57   3]]
+11/02/2017 12:19:09 [INFO] exp_deepmodel: ******************** dstc2 - Round 8 
+11/02/2017 12:26:44 [INFO] exp_shallowmodel: accuracy:   0.371
+11/02/2017 12:26:44 [INFO] exp_shallowmodel: f1_score:   0.213
+11/02/2017 12:26:44 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:26:44 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.27      0.43      0.33       164
+          F       0.46      0.52      0.49       268
+          R       0.29      0.02      0.03       125
+
+avg / total       0.36      0.37      0.33       571
+
+11/02/2017 12:26:44 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:26:44 [INFO] exp_shallowmodel: 
+[[  0   4  10   0]
+ [  0  71  90   3]
+ [  0 127 139   2]
+ [  0  61  62   2]]
+11/02/2017 12:26:44 [INFO] exp_deepmodel: ******************** dstc2 - Round 9 
+11/02/2017 12:34:20 [INFO] exp_shallowmodel: accuracy:   0.410
+11/02/2017 12:34:20 [INFO] exp_shallowmodel: f1_score:   0.250
+11/02/2017 12:34:20 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:34:20 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        16
+          C       0.33      0.57      0.42       169
+          F       0.48      0.51      0.50       271
+          R       0.55      0.05      0.09       130
+
+avg / total       0.44      0.41      0.37       586
+
+11/02/2017 12:34:20 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:34:20 [INFO] exp_shallowmodel: 
+[[  0   5  11   0]
+ [  0  96  71   2]
+ [  0 130 138   3]
+ [  0  59  65   6]]
+11/02/2017 12:34:21 [INFO] exp_deepmodel: ******************** dstc3 - Round 0 
+11/02/2017 12:46:31 [INFO] exp_shallowmodel: accuracy:   0.377
+11/02/2017 12:46:31 [INFO] exp_shallowmodel: f1_score:   0.210
+11/02/2017 12:46:31 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:46:31 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.29      0.48      0.36       169
+          F       0.46      0.51      0.48       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.30      0.38      0.33       592
+
+11/02/2017 12:46:31 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:46:31 [INFO] exp_shallowmodel: 
+[[  0   8  12   0]
+ [  0  81  88   0]
+ [  0 139 142   0]
+ [  0  54  68   0]]
+11/02/2017 12:46:31 [INFO] exp_deepmodel: ******************** dstc3 - Round 1 
+11/02/2017 12:56:50 [INFO] exp_shallowmodel: accuracy:   0.397
+11/02/2017 12:56:50 [INFO] exp_shallowmodel: f1_score:   0.221
+11/02/2017 12:56:50 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:56:50 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.30      0.49      0.38       169
+          F       0.48      0.54      0.51       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.31      0.40      0.35       592
+
+11/02/2017 12:56:50 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:56:50 [INFO] exp_shallowmodel: 
+[[  0   8  12   0]
+ [  0  83  86   0]
+ [  0 129 152   0]
+ [  0  53  69   0]]
+11/02/2017 12:56:50 [INFO] exp_deepmodel: ******************** dstc3 - Round 2 
+11/02/2017 13:08:54 [INFO] exp_shallowmodel: accuracy:   0.402
+11/02/2017 13:08:54 [INFO] exp_shallowmodel: f1_score:   0.220
+11/02/2017 13:08:54 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:08:54 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.28      0.44      0.35       169
+          F       0.50      0.58      0.54       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.32      0.40      0.35       592
+
+11/02/2017 13:08:54 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:08:54 [INFO] exp_shallowmodel: 
+[[  0   9  11   0]
+ [  0  75  94   0]
+ [  0 118 163   0]
+ [  0  62  60   0]]
+11/02/2017 13:08:54 [INFO] exp_deepmodel: ******************** dstc3 - Round 3 
+11/02/2017 13:20:44 [INFO] exp_shallowmodel: accuracy:   0.387
+11/02/2017 13:20:44 [INFO] exp_shallowmodel: f1_score:   0.215
+11/02/2017 13:20:44 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:20:44 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.29      0.47      0.36       169
+          F       0.47      0.53      0.50       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.31      0.39      0.34       592
+
+11/02/2017 13:20:44 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:20:44 [INFO] exp_shallowmodel: 
+[[  0  11   9   0]
+ [  0  79  89   1]
+ [  0 130 150   1]
+ [  0  54  68   0]]
+11/02/2017 13:20:44 [INFO] exp_deepmodel: ******************** dstc3 - Round 4 
+11/02/2017 13:29:58 [INFO] exp_shallowmodel: accuracy:   0.422
+11/02/2017 13:29:58 [INFO] exp_shallowmodel: f1_score:   0.233
+11/02/2017 13:29:58 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:29:58 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.31      0.49      0.38       169
+          F       0.52      0.59      0.55       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.33      0.42      0.37       592
+
+11/02/2017 13:29:58 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:29:58 [INFO] exp_shallowmodel: 
+[[  0  13   7   0]
+ [  0  83  86   0]
+ [  0 114 167   0]
+ [  0  58  64   0]]
+11/02/2017 13:29:58 [INFO] exp_deepmodel: ******************** dstc3 - Round 5 
+11/02/2017 13:41:31 [INFO] exp_shallowmodel: accuracy:   0.378
+11/02/2017 13:41:31 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 13:41:31 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:41:31 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.27      0.41      0.32       169
+          F       0.47      0.55      0.51       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.30      0.38      0.33       592
+
+11/02/2017 13:41:31 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:41:31 [INFO] exp_shallowmodel: 
+[[  0   9  11   0]
+ [  0  70  99   0]
+ [  0 125 154   2]
+ [  0  59  63   0]]
+11/02/2017 13:41:31 [INFO] exp_deepmodel: ******************** dstc3 - Round 6 
+11/02/2017 13:55:34 [INFO] exp_shallowmodel: accuracy:   0.383
+11/02/2017 13:55:34 [INFO] exp_shallowmodel: f1_score:   0.213
+11/02/2017 13:55:34 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:55:34 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.26      0.41      0.32       169
+          F       0.48      0.56      0.52       281
+          R       1.00      0.01      0.02       122
+
+avg / total       0.51      0.38      0.34       592
+
+11/02/2017 13:55:34 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:55:34 [INFO] exp_shallowmodel: 
+[[  0  10  10   0]
+ [  0  70  99   0]
+ [  0 125 156   0]
+ [  0  63  58   1]]
+11/02/2017 13:55:34 [INFO] exp_deepmodel: ******************** dstc3 - Round 7 
+11/02/2017 14:05:25 [INFO] exp_shallowmodel: accuracy:   0.383
+11/02/2017 14:05:25 [INFO] exp_shallowmodel: f1_score:   0.213
+11/02/2017 14:05:25 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:05:25 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.29      0.47      0.36       169
+          F       0.47      0.53      0.49       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.30      0.38      0.34       592
+
+11/02/2017 14:05:25 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:05:25 [INFO] exp_shallowmodel: 
+[[  0  12   8   0]
+ [  0  79  90   0]
+ [  0 131 148   2]
+ [  0  51  71   0]]
+11/02/2017 14:05:25 [INFO] exp_deepmodel: ******************** dstc3 - Round 8 
+11/02/2017 14:18:29 [INFO] exp_shallowmodel: accuracy:   0.356
+11/02/2017 14:18:29 [INFO] exp_shallowmodel: f1_score:   0.202
+11/02/2017 14:18:29 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:18:29 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.24      0.39      0.30       169
+          F       0.45      0.51      0.48       281
+          R       0.67      0.02      0.03       122
+
+avg / total       0.42      0.36      0.32       592
+
+11/02/2017 14:18:29 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:18:29 [INFO] exp_shallowmodel: 
+[[  0  13   7   0]
+ [  0  66 103   0]
+ [  0 137 143   1]
+ [  0  54  66   2]]
+11/02/2017 14:18:29 [INFO] exp_deepmodel: ******************** dstc3 - Round 9 
+11/02/2017 14:38:07 [INFO] exp_shallowmodel: accuracy:   0.383
+11/02/2017 14:38:07 [INFO] exp_shallowmodel: f1_score:   0.222
+11/02/2017 14:38:07 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:38:07 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        28
+          C       0.29      0.49      0.36       172
+          F       0.47      0.51      0.49       283
+          R       0.67      0.02      0.03       123
+
+avg / total       0.44      0.38      0.34       606
+
+11/02/2017 14:38:07 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:38:07 [INFO] exp_shallowmodel: 
+[[  0  15  13   0]
+ [  0  85  87   0]
+ [  0 137 145   1]
+ [  0  57  64   2]]
+11/02/2017 14:38:08 [INFO] exp_deepmodel: ******************** family - Round 0 
+11/02/2017 14:46:27 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 14:46:27 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 14:46:27 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:46:27 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 14:46:27 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:46:27 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 14:46:27 [INFO] exp_deepmodel: ******************** family - Round 1 
+11/02/2017 14:54:53 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 14:54:53 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 14:54:53 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:54:53 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 14:54:53 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:54:53 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 14:54:53 [INFO] exp_deepmodel: ******************** family - Round 2 
+11/02/2017 15:03:25 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 15:03:25 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 15:03:25 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:03:25 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 15:03:25 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:03:25 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 15:03:25 [INFO] exp_deepmodel: ******************** family - Round 3 
+11/02/2017 15:10:16 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 15:10:16 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 15:10:16 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:10:16 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 15:10:16 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:10:16 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 15:10:16 [INFO] exp_deepmodel: ******************** family - Round 4 
+11/02/2017 15:16:22 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 15:16:22 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 15:16:22 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:16:22 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 15:16:22 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:16:22 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 15:16:22 [INFO] exp_deepmodel: ******************** family - Round 5 
+11/02/2017 15:22:31 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 15:22:31 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 15:22:31 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:22:31 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 15:22:31 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:22:31 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 15:22:31 [INFO] exp_deepmodel: ******************** family - Round 6 
+11/02/2017 15:28:40 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 15:28:40 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 15:28:40 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:28:40 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 15:28:40 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:28:40 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 15:28:40 [INFO] exp_deepmodel: ******************** family - Round 7 
+11/02/2017 15:34:54 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 15:34:54 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 15:34:54 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:34:54 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 15:34:54 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:34:54 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 15:34:54 [INFO] exp_deepmodel: ******************** family - Round 8 
+11/02/2017 15:40:50 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 15:40:50 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 15:40:50 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:40:50 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 15:40:50 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:40:50 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 15:40:50 [INFO] exp_deepmodel: ******************** family - Round 9 
+11/02/2017 15:49:06 [INFO] exp_shallowmodel: accuracy:   0.693
+11/02/2017 15:49:06 [INFO] exp_shallowmodel: f1_score:   0.205
+11/02/2017 15:49:06 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:49:06 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        25
+          C       0.00      0.00      0.00        27
+          F       0.69      1.00      0.82       251
+          R       0.00      0.00      0.00        59
+
+avg / total       0.48      0.69      0.57       362
+
+11/02/2017 15:49:06 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:49:06 [INFO] exp_shallowmodel: 
+[[  0   0  25   0]
+ [  0   0  27   0]
+ [  0   0 251   0]
+ [  0   0  59   0]]
+11/02/2017 15:49:06 [INFO] exp_deepmodel: ******************** ghome - Round 0 
+11/02/2017 15:55:48 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 15:55:48 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 15:55:48 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:55:48 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 15:55:48 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:55:48 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 15:55:48 [INFO] exp_deepmodel: ******************** ghome - Round 1 
+11/02/2017 16:02:26 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 16:02:26 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 16:02:26 [INFO] exp_shallowmodel: classification report:
+11/02/2017 16:02:26 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 16:02:26 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 16:02:26 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 16:02:26 [INFO] exp_deepmodel: ******************** ghome - Round 2 
+11/02/2017 16:09:10 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 16:09:10 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 16:09:10 [INFO] exp_shallowmodel: classification report:
+11/02/2017 16:09:10 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 16:09:10 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 16:09:10 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 16:09:10 [INFO] exp_deepmodel: ******************** ghome - Round 3 
+11/02/2017 16:38:24 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 16:38:24 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 16:38:24 [INFO] exp_shallowmodel: classification report:
+11/02/2017 16:38:24 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 16:38:24 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 16:38:24 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 16:38:24 [INFO] exp_deepmodel: ******************** ghome - Round 4 
+11/02/2017 16:47:53 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 16:47:53 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 16:47:53 [INFO] exp_shallowmodel: classification report:
+11/02/2017 16:47:53 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 16:47:53 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 16:47:53 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 16:47:53 [INFO] exp_deepmodel: ******************** ghome - Round 5 
+11/02/2017 16:57:36 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 16:57:36 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 16:57:36 [INFO] exp_shallowmodel: classification report:
+11/02/2017 16:57:36 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 16:57:36 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 16:57:36 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 16:57:36 [INFO] exp_deepmodel: ******************** ghome - Round 6 
+11/02/2017 17:07:04 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 17:07:04 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 17:07:04 [INFO] exp_shallowmodel: classification report:
+11/02/2017 17:07:04 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 17:07:04 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 17:07:04 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 17:07:04 [INFO] exp_deepmodel: ******************** ghome - Round 7 
+11/02/2017 17:16:35 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 17:16:35 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 17:16:35 [INFO] exp_shallowmodel: classification report:
+11/02/2017 17:16:35 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 17:16:35 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 17:16:35 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 17:16:35 [INFO] exp_deepmodel: ******************** ghome - Round 8 
+11/02/2017 17:26:17 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 17:26:17 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 17:26:17 [INFO] exp_shallowmodel: classification report:
+11/02/2017 17:26:17 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 17:26:17 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 17:26:17 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 17:26:17 [INFO] exp_deepmodel: ******************** ghome - Round 9 
+11/02/2017 17:36:20 [INFO] exp_shallowmodel: accuracy:   0.740
+11/02/2017 17:36:20 [INFO] exp_shallowmodel: f1_score:   0.213
+11/02/2017 17:36:20 [INFO] exp_shallowmodel: classification report:
+11/02/2017 17:36:20 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        64
+          C       0.00      0.00      0.00        14
+          F       0.74      1.00      0.85       402
+          R       0.00      0.00      0.00        63
+
+avg / total       0.55      0.74      0.63       543
+
+11/02/2017 17:36:20 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 17:36:20 [INFO] exp_shallowmodel: 
+[[  0   0  64   0]
+ [  0   0  14   0]
+ [  0   0 402   0]
+ [  0   0  63   0]]

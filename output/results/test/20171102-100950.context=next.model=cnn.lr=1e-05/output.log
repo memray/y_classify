@@ -1,0 +1,884 @@
+11/02/2017 10:09:50 [INFO] configuration: selected_context_id  :   0
+11/02/2017 10:09:50 [INFO] configuration: deep_model  :   True
+11/02/2017 10:09:50 [INFO] configuration: deep_model_name  :   cnn
+11/02/2017 10:09:50 [INFO] configuration: seed  :   154316847
+11/02/2017 10:09:50 [INFO] configuration: root_path  :   /Users/memray/Project/yahoo/y_classify
+11/02/2017 10:09:50 [INFO] configuration: task_name  :   utterance_type
+11/02/2017 10:09:50 [INFO] configuration: timemark  :   20171102-100950
+11/02/2017 10:09:50 [INFO] configuration: context_set  :   next
+11/02/2017 10:09:50 [INFO] configuration: utterance_names  :   ['last_user_utterance', 'last_system_utterance', 'current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+11/02/2017 10:09:50 [INFO] configuration: utterance_range  :   ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+11/02/2017 10:09:50 [INFO] configuration: experiment_name  :   20171102-100950.context=next.model=cnn
+11/02/2017 10:09:50 [INFO] configuration: experiment_path  :   /Users/memray/Project/yahoo/y_classify/output/20171102-100950.context=next.model=cnn
+11/02/2017 10:09:50 [INFO] configuration: log_path  :   /Users/memray/Project/yahoo/y_classify/output/20171102-100950.context=next.model=cnn/output.log
+11/02/2017 10:09:50 [INFO] configuration: valid_type  :   {'C', 'F', 'A', 'R'}
+11/02/2017 10:09:50 [INFO] configuration: data_name  :   
+11/02/2017 10:09:50 [INFO] configuration: data_names  :   ['dstc2', 'dstc3', 'family', 'ghome']
+11/02/2017 10:09:50 [INFO] configuration: raw_feature_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/%s.raw_feature.pkl
+11/02/2017 10:09:50 [INFO] configuration: extracted_feature_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/%s.extracted_feature.pkl
+11/02/2017 10:09:50 [INFO] configuration: pipeline_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/%s.pipeline.pkl
+11/02/2017 10:09:50 [INFO] configuration: metrics  :   ['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+11/02/2017 10:09:50 [INFO] configuration: do_cross_validation  :   True
+11/02/2017 10:09:50 [INFO] configuration: #division  :   5
+11/02/2017 10:09:50 [INFO] configuration: #cross_validation  :   10
+11/02/2017 10:09:50 [INFO] configuration: cv_index_cache_path  :   
+11/02/2017 10:09:50 [INFO] configuration: action_words  :   {'stop', 'findcare', 'next', 'items', 'music', 'share', 'skip', 'turn', 'cheap', 'shuffle', 'part', 'alarm', 'expensive', 'timer', 'list', 'start', 'play', 'post', 'reminders', 'else', 'member', 'phone', 'telephone', 'centr', 'video', 'matter', 'snooz', 'add', 'number', 'remind', 'reminds', 'clear', 'tell', 'remove', 'remov', 'song', 'help', 'volume', 'delet', 'address', 'expens', 'findcar', 'delete', 'els', 'shuffl', 'item', 'room', 'light', 'volum', 'reminder', 'snooze', 'cast', 'temperature', 'time', 'north', 'moder', 'show', 'ani', 'food', 'price', 'moderate', 'discard', 'any', 'weather', 'area', 'south', 'centre', 'watch', 'telephon', 'temperatur'}
+11/02/2017 10:09:50 [INFO] configuration: corenlp_jars  :   ('/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*', '/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar')
+11/02/2017 10:09:50 [INFO] configuration: lda_topic_number  :   50
+11/02/2017 10:09:50 [INFO] configuration: lda_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.topic=50.lda.pkl
+11/02/2017 10:09:50 [INFO] configuration: gensim_corpus_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.corpus.pkl
+11/02/2017 10:09:50 [INFO] configuration: gensim_dict_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.dict
+11/02/2017 10:09:50 [INFO] configuration: w2v_path  :   /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:09:50 [INFO] configuration: w2v_vector_length  :   300
+11/02/2017 10:09:50 [INFO] configuration: d2v_vector_length  :   300
+11/02/2017 10:09:50 [INFO] configuration: d2v_window_size  :   5
+11/02/2017 10:09:50 [INFO] configuration: d2v_min_count  :   2
+11/02/2017 10:09:50 [INFO] configuration: d2v_model_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.model
+11/02/2017 10:09:50 [INFO] configuration: d2v_vector_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.vector
+11/02/2017 10:09:50 [INFO] configuration: batch_size  :   128
+11/02/2017 10:09:50 [INFO] configuration: max_epoch  :   20
+11/02/2017 10:09:50 [INFO] configuration: early_stop_tolerance  :   5
+11/02/2017 10:09:50 [INFO] configuration: concat_sents  :   True
+11/02/2017 10:09:50 [INFO] configuration: cnn_setting  :   {'MODEL': 'static', 'EARLY_STOPPING': True, 'WORD_DIM': 300, 'FILTERS': [3, 4, 5], 'FILTER_NUM': [100, 100, 100], 'CLASS_SIZE': 4, 'BATCH_SIZE': 128, 'LEARNING_RATE': 1e-05, 'NORM_LIMIT': 1, 'DROPOUT_PROB': 0.5}
+11/02/2017 10:09:50 [INFO] configuration: skipthought_setting  :   {'skipthought_model_path': '/home/memray/Data/skip-thought', 'skipthought_data_path': '/Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.skip-thought.biskip.vector', 'fixed_emb': True, 'sentence_num': 3, 'hidden_size': 7200, 'CLASS_SIZE': 4, 'LEARNING_RATE': 0.0001, 'NORM_LIMIT': 3, 'DROPOUT_PROB': 0.5}
+11/02/2017 10:09:50 [INFO] configuration: lstm_setting  :   {'hidden_size': 64, 'embedding_size': 64, 'num_layers': 1, 'LEARNING_RATE': 1e-05, 'CLASS_SIZE': 4, 'NORM_LIMIT': 1, 'clip_grad_norm': 1, 'DROPOUT_PROB': 0.5}
+11/02/2017 10:09:50 [INFO] exp_deepmodel: ******************** dstc2 - Round 0 
+11/02/2017 10:09:50 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:11:34 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:14:28 [INFO] exp_shallowmodel: accuracy:   0.399
+11/02/2017 10:14:28 [INFO] exp_shallowmodel: f1_score:   0.210
+11/02/2017 10:14:28 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:14:28 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.27      0.33      0.30       164
+          F       0.47      0.65      0.54       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.30      0.40      0.34       571
+
+11/02/2017 10:14:28 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:14:28 [INFO] exp_shallowmodel: 
+[[  0   2  12   0]
+ [  0  54 110   0]
+ [  0  94 174   0]
+ [  0  48  77   0]]
+11/02/2017 10:14:28 [INFO] exp_deepmodel: ******************** dstc2 - Round 1 
+11/02/2017 10:14:29 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:15:57 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:19:06 [INFO] exp_shallowmodel: accuracy:   0.403
+11/02/2017 10:19:06 [INFO] exp_shallowmodel: f1_score:   0.211
+11/02/2017 10:19:06 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:19:06 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.26      0.32      0.28       164
+          F       0.48      0.66      0.56       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.30      0.40      0.34       571
+
+11/02/2017 10:19:06 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:19:06 [INFO] exp_shallowmodel: 
+[[  0   5   9   0]
+ [  0  52 112   0]
+ [  0  90 178   0]
+ [  0  55  70   0]]
+11/02/2017 10:19:06 [INFO] exp_deepmodel: ******************** dstc2 - Round 2 
+11/02/2017 10:19:07 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:20:02 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:22:36 [INFO] exp_shallowmodel: accuracy:   0.426
+11/02/2017 10:22:36 [INFO] exp_shallowmodel: f1_score:   0.230
+11/02/2017 10:22:36 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:22:36 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.33      0.41      0.36       164
+          F       0.48      0.65      0.56       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.32      0.43      0.37       571
+
+11/02/2017 10:22:36 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:22:36 [INFO] exp_shallowmodel: 
+[[  0   8   6   0]
+ [  0  68  96   0]
+ [  0  93 175   0]
+ [  0  40  85   0]]
+11/02/2017 10:22:36 [INFO] exp_deepmodel: ******************** dstc2 - Round 3 
+11/02/2017 10:22:36 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:23:38 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:26:31 [INFO] exp_shallowmodel: accuracy:   0.408
+11/02/2017 10:26:31 [INFO] exp_shallowmodel: f1_score:   0.220
+11/02/2017 10:26:31 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:26:31 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.31      0.40      0.34       164
+          F       0.47      0.63      0.54       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.31      0.41      0.35       571
+
+11/02/2017 10:26:31 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:26:31 [INFO] exp_shallowmodel: 
+[[  0   7   7   0]
+ [  0  65  99   0]
+ [  0 100 168   0]
+ [  0  41  84   0]]
+11/02/2017 10:26:31 [INFO] exp_deepmodel: ******************** dstc2 - Round 4 
+11/02/2017 10:26:31 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:28:03 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:31:06 [INFO] exp_shallowmodel: accuracy:   0.427
+11/02/2017 10:31:06 [INFO] exp_shallowmodel: f1_score:   0.229
+11/02/2017 10:31:06 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:31:06 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.32      0.40      0.35       164
+          F       0.49      0.67      0.56       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.32      0.43      0.37       571
+
+11/02/2017 10:31:06 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:31:06 [INFO] exp_shallowmodel: 
+[[  0   6   8   0]
+ [  0  65  99   0]
+ [  0  89 179   0]
+ [  0  44  81   0]]
+11/02/2017 10:31:06 [INFO] exp_deepmodel: ******************** dstc2 - Round 5 
+11/02/2017 10:31:06 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:32:30 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:35:37 [INFO] exp_shallowmodel: accuracy:   0.399
+11/02/2017 10:35:37 [INFO] exp_shallowmodel: f1_score:   0.217
+11/02/2017 10:35:37 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:35:37 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.31      0.41      0.35       164
+          F       0.45      0.60      0.52       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.30      0.40      0.34       571
+
+11/02/2017 10:35:37 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:35:37 [INFO] exp_shallowmodel: 
+[[  0   4  10   0]
+ [  0  67  97   0]
+ [  0 107 161   0]
+ [  0  38  87   0]]
+11/02/2017 10:35:37 [INFO] exp_deepmodel: ******************** dstc2 - Round 6 
+11/02/2017 10:35:37 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:36:55 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:40:08 [INFO] exp_shallowmodel: accuracy:   0.384
+11/02/2017 10:40:08 [INFO] exp_shallowmodel: f1_score:   0.205
+11/02/2017 10:40:08 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:40:08 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.27      0.35      0.30       164
+          F       0.46      0.60      0.52       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.29      0.38      0.33       571
+
+11/02/2017 10:40:08 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:40:08 [INFO] exp_shallowmodel: 
+[[  0   5   9   0]
+ [  0  57 107   0]
+ [  0 106 162   0]
+ [  0  47  78   0]]
+11/02/2017 10:40:08 [INFO] exp_deepmodel: ******************** dstc2 - Round 7 
+11/02/2017 10:40:08 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:41:24 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:44:20 [INFO] exp_shallowmodel: accuracy:   0.387
+11/02/2017 10:44:20 [INFO] exp_shallowmodel: f1_score:   0.205
+11/02/2017 10:44:20 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:44:20 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.27      0.34      0.30       164
+          F       0.46      0.62      0.53       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.29      0.39      0.33       571
+
+11/02/2017 10:44:20 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:44:20 [INFO] exp_shallowmodel: 
+[[  0   3  11   0]
+ [  0  55 109   0]
+ [  0 102 166   0]
+ [  0  47  78   0]]
+11/02/2017 10:44:20 [INFO] exp_deepmodel: ******************** dstc2 - Round 8 
+11/02/2017 10:44:20 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:45:41 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:46:56 [INFO] exp_shallowmodel: accuracy:   0.459
+11/02/2017 10:46:56 [INFO] exp_shallowmodel: f1_score:   0.212
+11/02/2017 10:46:56 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:46:56 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.35      0.17      0.23       164
+          F       0.48      0.87      0.62       268
+          R       0.00      0.00      0.00       125
+
+avg / total       0.32      0.46      0.36       571
+
+11/02/2017 10:46:56 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:46:56 [INFO] exp_shallowmodel: 
+[[  0   2  12   0]
+ [  0  28 136   0]
+ [  0  34 234   0]
+ [  0  16 109   0]]
+11/02/2017 10:46:56 [INFO] exp_deepmodel: ******************** dstc2 - Round 9 
+11/02/2017 10:46:56 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:48:15 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:51:22 [INFO] exp_shallowmodel: accuracy:   0.410
+11/02/2017 10:51:22 [INFO] exp_shallowmodel: f1_score:   0.224
+11/02/2017 10:51:22 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:51:22 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        16
+          C       0.32      0.43      0.37       169
+          F       0.46      0.62      0.53       271
+          R       0.00      0.00      0.00       130
+
+avg / total       0.31      0.41      0.35       586
+
+11/02/2017 10:51:22 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:51:22 [INFO] exp_shallowmodel: 
+[[  0   5  11   0]
+ [  0  72  97   0]
+ [  0 103 168   0]
+ [  0  44  86   0]]
+11/02/2017 10:51:22 [INFO] exp_deepmodel: ******************** dstc3 - Round 0 
+11/02/2017 10:51:23 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:52:52 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:57:51 [INFO] exp_shallowmodel: accuracy:   0.417
+11/02/2017 10:57:51 [INFO] exp_shallowmodel: f1_score:   0.220
+11/02/2017 10:57:51 [INFO] exp_shallowmodel: classification report:
+11/02/2017 10:57:51 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.28      0.35      0.31       169
+          F       0.49      0.67      0.57       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.31      0.42      0.36       592
+
+11/02/2017 10:57:51 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 10:57:51 [INFO] exp_shallowmodel: 
+[[  0   6  14   0]
+ [  0  59 110   0]
+ [  0  93 188   0]
+ [  0  51  71   0]]
+11/02/2017 10:57:51 [INFO] exp_deepmodel: ******************** dstc3 - Round 1 
+11/02/2017 10:57:51 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 10:59:52 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:04:27 [INFO] exp_shallowmodel: accuracy:   0.402
+11/02/2017 11:04:27 [INFO] exp_shallowmodel: f1_score:   0.213
+11/02/2017 11:04:27 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:04:27 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.27      0.35      0.31       169
+          F       0.48      0.64      0.54       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.30      0.40      0.35       592
+
+11/02/2017 11:04:27 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:04:27 [INFO] exp_shallowmodel: 
+[[  0  12   8   0]
+ [  0  59 110   0]
+ [  0 102 179   0]
+ [  0  43  79   0]]
+11/02/2017 11:04:27 [INFO] exp_deepmodel: ******************** dstc3 - Round 2 
+11/02/2017 11:04:28 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:05:53 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:10:34 [INFO] exp_shallowmodel: accuracy:   0.402
+11/02/2017 11:10:34 [INFO] exp_shallowmodel: f1_score:   0.212
+11/02/2017 11:10:34 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:10:34 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.29      0.34      0.31       169
+          F       0.46      0.64      0.54       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.30      0.40      0.34       592
+
+11/02/2017 11:10:34 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:10:34 [INFO] exp_shallowmodel: 
+[[  0   5  15   0]
+ [  0  57 112   0]
+ [  0 100 181   0]
+ [  0  37  85   0]]
+11/02/2017 11:10:34 [INFO] exp_deepmodel: ******************** dstc3 - Round 3 
+11/02/2017 11:10:35 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:12:02 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:17:14 [INFO] exp_shallowmodel: accuracy:   0.426
+11/02/2017 11:17:14 [INFO] exp_shallowmodel: f1_score:   0.226
+11/02/2017 11:17:14 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:17:14 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.30      0.38      0.34       169
+          F       0.50      0.67      0.57       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.32      0.43      0.37       592
+
+11/02/2017 11:17:14 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:17:14 [INFO] exp_shallowmodel: 
+[[  0   7  13   0]
+ [  0  64 105   0]
+ [  0  93 188   0]
+ [  0  49  73   0]]
+11/02/2017 11:17:14 [INFO] exp_deepmodel: ******************** dstc3 - Round 4 
+11/02/2017 11:17:15 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:18:59 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:24:35 [INFO] exp_shallowmodel: accuracy:   0.390
+11/02/2017 11:24:35 [INFO] exp_shallowmodel: f1_score:   0.210
+11/02/2017 11:24:35 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:24:35 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.28      0.38      0.32       169
+          F       0.46      0.59      0.52       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.30      0.39      0.34       592
+
+11/02/2017 11:24:35 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:24:35 [INFO] exp_shallowmodel: 
+[[  0   9  11   0]
+ [  0  64 105   0]
+ [  0 114 167   0]
+ [  0  42  80   0]]
+11/02/2017 11:24:35 [INFO] exp_deepmodel: ******************** dstc3 - Round 5 
+11/02/2017 11:24:36 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:27:02 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:32:16 [INFO] exp_shallowmodel: accuracy:   0.395
+11/02/2017 11:32:16 [INFO] exp_shallowmodel: f1_score:   0.209
+11/02/2017 11:32:16 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:32:16 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.27      0.34      0.30       169
+          F       0.46      0.63      0.53       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.30      0.40      0.34       592
+
+11/02/2017 11:32:16 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:32:16 [INFO] exp_shallowmodel: 
+[[  0   7  13   0]
+ [  0  57 112   0]
+ [  0 104 177   0]
+ [  0  42  80   0]]
+11/02/2017 11:32:16 [INFO] exp_deepmodel: ******************** dstc3 - Round 6 
+11/02/2017 11:32:16 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:33:45 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:39:16 [INFO] exp_shallowmodel: accuracy:   0.392
+11/02/2017 11:39:16 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 11:39:16 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:39:16 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.27      0.35      0.30       169
+          F       0.47      0.62      0.53       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.30      0.39      0.34       592
+
+11/02/2017 11:39:16 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:39:16 [INFO] exp_shallowmodel: 
+[[  0   6  14   0]
+ [  0  59 110   0]
+ [  0 108 173   0]
+ [  0  49  73   0]]
+11/02/2017 11:39:16 [INFO] exp_deepmodel: ******************** dstc3 - Round 7 
+11/02/2017 11:39:17 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:40:54 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:46:40 [INFO] exp_shallowmodel: accuracy:   0.414
+11/02/2017 11:46:40 [INFO] exp_shallowmodel: f1_score:   0.220
+11/02/2017 11:46:40 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:46:40 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.30      0.37      0.33       169
+          F       0.48      0.65      0.55       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.31      0.41      0.36       592
+
+11/02/2017 11:46:40 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:46:40 [INFO] exp_shallowmodel: 
+[[  0  12   8   0]
+ [  0  63 106   0]
+ [  0  99 182   0]
+ [  0  35  87   0]]
+11/02/2017 11:46:40 [INFO] exp_deepmodel: ******************** dstc3 - Round 8 
+11/02/2017 11:46:40 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:48:09 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:54:02 [INFO] exp_shallowmodel: accuracy:   0.385
+11/02/2017 11:54:02 [INFO] exp_shallowmodel: f1_score:   0.203
+11/02/2017 11:54:02 [INFO] exp_shallowmodel: classification report:
+11/02/2017 11:54:02 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.25      0.33      0.29       169
+          F       0.46      0.62      0.53       281
+          R       0.00      0.00      0.00       122
+
+avg / total       0.29      0.39      0.33       592
+
+11/02/2017 11:54:02 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 11:54:02 [INFO] exp_shallowmodel: 
+[[  0   9  11   0]
+ [  0  55 114   0]
+ [  0 108 173   0]
+ [  0  44  78   0]]
+11/02/2017 11:54:02 [INFO] exp_deepmodel: ******************** dstc3 - Round 9 
+11/02/2017 11:54:03 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 11:55:30 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:01:09 [INFO] exp_shallowmodel: accuracy:   0.376
+11/02/2017 12:01:09 [INFO] exp_shallowmodel: f1_score:   0.203
+11/02/2017 12:01:09 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:01:09 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        28
+          C       0.27      0.35      0.30       172
+          F       0.44      0.59      0.51       283
+          R       0.00      0.00      0.00       123
+
+avg / total       0.28      0.38      0.32       606
+
+11/02/2017 12:01:09 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:01:09 [INFO] exp_shallowmodel: 
+[[  0   8  20   0]
+ [  0  61 111   0]
+ [  0 116 167   0]
+ [  0  45  78   0]]
+11/02/2017 12:01:09 [INFO] exp_deepmodel: ******************** family - Round 0 
+11/02/2017 12:01:10 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:02:51 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:10:51 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 12:10:51 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 12:10:51 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:10:51 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 12:10:51 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:10:51 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 12:10:51 [INFO] exp_deepmodel: ******************** family - Round 1 
+11/02/2017 12:10:52 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:12:27 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:20:05 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 12:20:05 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 12:20:05 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:20:05 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 12:20:05 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:20:05 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 12:20:05 [INFO] exp_deepmodel: ******************** family - Round 2 
+11/02/2017 12:20:06 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:21:44 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:28:33 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 12:28:33 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 12:28:33 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:28:33 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 12:28:33 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:28:33 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 12:28:33 [INFO] exp_deepmodel: ******************** family - Round 3 
+11/02/2017 12:28:34 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:30:07 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:37:07 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 12:37:07 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 12:37:07 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:37:07 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 12:37:07 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:37:07 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 12:37:07 [INFO] exp_deepmodel: ******************** family - Round 4 
+11/02/2017 12:37:08 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:38:34 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:45:12 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 12:45:12 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 12:45:12 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:45:12 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 12:45:12 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:45:12 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 12:45:12 [INFO] exp_deepmodel: ******************** family - Round 5 
+11/02/2017 12:45:13 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:46:35 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:53:40 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 12:53:40 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 12:53:40 [INFO] exp_shallowmodel: classification report:
+11/02/2017 12:53:40 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 12:53:40 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 12:53:40 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 12:53:40 [INFO] exp_deepmodel: ******************** family - Round 6 
+11/02/2017 12:53:40 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 12:55:05 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:02:25 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 13:02:25 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 13:02:25 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:02:25 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 13:02:25 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:02:25 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 13:02:25 [INFO] exp_deepmodel: ******************** family - Round 7 
+11/02/2017 13:02:26 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:04:02 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:11:17 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 13:11:17 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 13:11:17 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:11:17 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 13:11:17 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:11:17 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 13:11:17 [INFO] exp_deepmodel: ******************** family - Round 8 
+11/02/2017 13:11:18 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:12:56 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:19:57 [INFO] exp_shallowmodel: accuracy:   0.710
+11/02/2017 13:19:57 [INFO] exp_shallowmodel: f1_score:   0.208
+11/02/2017 13:19:57 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:19:57 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        23
+          C       0.00      0.00      0.00        27
+          F       0.71      1.00      0.83       250
+          R       0.00      0.00      0.00        52
+
+avg / total       0.50      0.71      0.59       352
+
+11/02/2017 13:19:57 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:19:57 [INFO] exp_shallowmodel: 
+[[  0   0  23   0]
+ [  0   0  27   0]
+ [  0   0 250   0]
+ [  0   0  52   0]]
+11/02/2017 13:19:57 [INFO] exp_deepmodel: ******************** family - Round 9 
+11/02/2017 13:19:59 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:21:35 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:28:22 [INFO] exp_shallowmodel: accuracy:   0.693
+11/02/2017 13:28:22 [INFO] exp_shallowmodel: f1_score:   0.205
+11/02/2017 13:28:22 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:28:22 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        25
+          C       0.00      0.00      0.00        27
+          F       0.69      1.00      0.82       251
+          R       0.00      0.00      0.00        59
+
+avg / total       0.48      0.69      0.57       362
+
+11/02/2017 13:28:22 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:28:22 [INFO] exp_shallowmodel: 
+[[  0   0  25   0]
+ [  0   0  27   0]
+ [  0   0 251   0]
+ [  0   0  59   0]]
+11/02/2017 13:28:23 [INFO] exp_deepmodel: ******************** ghome - Round 0 
+11/02/2017 13:28:24 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:30:09 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:37:21 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 13:37:21 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 13:37:21 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:37:21 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 13:37:21 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:37:21 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 13:37:21 [INFO] exp_deepmodel: ******************** ghome - Round 1 
+11/02/2017 13:37:21 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:38:51 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:46:10 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 13:46:10 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 13:46:10 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:46:10 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 13:46:10 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:46:10 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 13:46:10 [INFO] exp_deepmodel: ******************** ghome - Round 2 
+11/02/2017 13:46:10 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:47:34 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:55:13 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 13:55:13 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 13:55:13 [INFO] exp_shallowmodel: classification report:
+11/02/2017 13:55:13 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 13:55:13 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 13:55:13 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 13:55:13 [INFO] exp_deepmodel: ******************** ghome - Round 3 
+11/02/2017 13:55:15 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 13:56:51 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:04:08 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 14:04:08 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 14:04:08 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:04:08 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 14:04:08 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:04:08 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 14:04:08 [INFO] exp_deepmodel: ******************** ghome - Round 4 
+11/02/2017 14:04:09 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:06:08 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:13:20 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 14:13:20 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 14:13:20 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:13:20 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 14:13:20 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:13:20 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 14:13:20 [INFO] exp_deepmodel: ******************** ghome - Round 5 
+11/02/2017 14:13:21 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:14:57 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:22:37 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 14:22:37 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 14:22:37 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:22:37 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 14:22:37 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:22:37 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 14:22:37 [INFO] exp_deepmodel: ******************** ghome - Round 6 
+11/02/2017 14:22:37 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:24:26 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:33:03 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 14:33:03 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 14:33:03 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:33:03 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 14:33:03 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:33:03 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 14:33:03 [INFO] exp_deepmodel: ******************** ghome - Round 7 
+11/02/2017 14:33:04 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:37:11 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:45:25 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 14:45:25 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 14:45:25 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:45:25 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 14:45:25 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:45:25 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 14:45:25 [INFO] exp_deepmodel: ******************** ghome - Round 8 
+11/02/2017 14:45:27 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:47:13 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:55:19 [INFO] exp_shallowmodel: accuracy:   0.759
+11/02/2017 14:55:19 [INFO] exp_shallowmodel: f1_score:   0.216
+11/02/2017 14:55:19 [INFO] exp_shallowmodel: classification report:
+11/02/2017 14:55:19 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        59
+          C       0.00      0.00      0.00        12
+          F       0.76      1.00      0.86       396
+          R       0.00      0.00      0.00        55
+
+avg / total       0.58      0.76      0.65       522
+
+11/02/2017 14:55:19 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 14:55:19 [INFO] exp_shallowmodel: 
+[[  0   0  59   0]
+ [  0   0  12   0]
+ [  0   0 396   0]
+ [  0   0  55   0]]
+11/02/2017 14:55:19 [INFO] exp_deepmodel: ******************** ghome - Round 9 
+11/02/2017 14:55:20 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 14:57:09 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+11/02/2017 15:05:15 [INFO] exp_shallowmodel: accuracy:   0.740
+11/02/2017 15:05:15 [INFO] exp_shallowmodel: f1_score:   0.213
+11/02/2017 15:05:15 [INFO] exp_shallowmodel: classification report:
+11/02/2017 15:05:15 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        64
+          C       0.00      0.00      0.00        14
+          F       0.74      1.00      0.85       402
+          R       0.00      0.00      0.00        63
+
+avg / total       0.55      0.74      0.63       543
+
+11/02/2017 15:05:15 [INFO] exp_shallowmodel: confusion matrix:
+11/02/2017 15:05:15 [INFO] exp_shallowmodel: 
+[[  0   0  64   0]
+ [  0   0  14   0]
+ [  0   0 402   0]
+ [  0   0  63   0]]
