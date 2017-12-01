@@ -4,8 +4,8 @@
 #SBATCH --job-name=y_classify
 #SBATCH --output=next.run_task_log.out
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=2
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=4
 
 # Load modules
 #module restore
