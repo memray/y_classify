@@ -288,7 +288,7 @@ def load_batch_config(key_params):
     '''
     metadata and path
     '''
-    param['root_path']  = os.path.abspath(os.path.join(os.getcwd(), os.pardir+os.sep+os.pardir))
+    param['root_path']  = os.path.abspath(os.path.join(os.getcwd()))
     param['root_path']  = param['root_path'][:param['root_path'].find('y_classify') + 11]
 
     param['task_name']       = 'utterance_type'
