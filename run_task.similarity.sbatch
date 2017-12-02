@@ -10,4 +10,4 @@
 
 # Run the job
 echo "python -m dialogue.classify.task_runner -selected_feature_set_id $i -add_similarity_feature -selected_context_id $CONTEXT"
-srun python -m dialogue.classify.task_runner -selected_feature_set_id $i -add_similarity_feature -selected_context_id $CONTEXT
+srun /ihome/pbrusilosky/rum20/.conda/envs/py35/bin/python -m dialogue.classify.task_runner -selected_feature_set_id $i -add_similarity_feature -selected_context_id $CONTEXT
