@@ -1,3 +1,6 @@
+export CONTEXT=0
+export i=1
+
 #!/usr/bin/env bash
 #SBATCH --cluster=smp
 #SBATCH --partition=smp
@@ -10,9 +13,6 @@
 
 # Load modules
 #module restore
-
-export CONTEXT=0
-export i=1
 
 # Run the job
 echo "python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id $CONTEXT"

@@ -3,7 +3,7 @@
 START=1
 END=1
 
-for ((CONTEXT=1;CONTEXT<=3;CONTEXT++));
+for ((CONTEXT=0;CONTEXT<=3;CONTEXT++));
 do
     export CONTEXT
     for ((i=START;i<=END;i++)); do
