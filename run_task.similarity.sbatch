@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #SBATCH --cluster=smp
 #SBATCH --partition=smp
-#SBATCH --job-name=y_classify
-#SBATCH --output=slurm_log/context=$CONTEXT.feature=$i.with_similarity.run_task_log.out
+#SBATCH --job-name=context=$CONTEXT.feature=$i.similarity.run
+#SBATCH --output=slurm_log/context=$CONTEXT.feature=$i.similarity.run_task_log.out
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
