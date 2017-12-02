@@ -10,4 +10,5 @@
 
 # Run the job
 echo "python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id $CONTEXT"
+which python
 srun python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id $CONTEXT
