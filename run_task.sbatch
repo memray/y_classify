@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH --cluster=smp
 #SBATCH --partition=smp
-#SBATCH --job-name=context=$CONTEXT.feature=$i.run
-#SBATCH --output=slurm_log/context=$CONTEXT.feature=$i.run_task_log.out
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
