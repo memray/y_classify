@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 START=1
-END=8
+END=1
 
 for ((CONTEXT=1;CONTEXT<=3;CONTEXT++));
 do

@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-
-export CONTEXT=0
-export i=1
-
 #SBATCH --cluster=smp
 #SBATCH --partition=smp
 #SBATCH --job-name=y_classify
@@ -10,9 +6,13 @@ export i=1
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
+#SBATCH --mem=16GB
 
 # Load modules
 #module restore
+
+export CONTEXT=0
+export i=1
 
 # Run the job
 echo "python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id $CONTEXT"
