@@ -1,7 +1,8 @@
+#!/usr/bin/env bash
+
 export CONTEXT=0
 export i=1
 
-#!/usr/bin/env bash
 #SBATCH --cluster=smp
 #SBATCH --partition=smp
 #SBATCH --job-name=context=$CONTEXT.feature=$i.run
