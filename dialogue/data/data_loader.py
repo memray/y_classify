@@ -115,8 +115,8 @@ class DataLoader(object):
             self.session_id = session_id
 
         def load_from_file(self, log_path, label_path, dialogue_number):
-            log_json = json.load(open(log_path, 'r'))
-            label_json = json.load(open(label_path, 'r'))
+            log_json = json.load(open(log_path, 'r', encoding='utf-8'))
+            label_json = json.load(open(label_path, 'r', encoding='utf-8'))
 
             self.path = log_path
             self.session_id = log_json['session-id']
@@ -172,7 +172,7 @@ class DataLoader(object):
             raise Exception('annotated file does not exist: %s' % self.annotated_data_path)
 
         dialogue_dict = {}
-        with open(self.annotated_data_path, 'r') as annotated_csv:
+        with open(self.annotated_data_path, 'r', encoding='utf-8') as annotated_csv:
             csv_file = csv.reader(annotated_csv)
             for row_num, csv_row in enumerate(csv_file):
                 if row_num == 0:
@@ -486,8 +486,8 @@ class GHOME(DataLoader):
 
         if self.need_sort:
             turns_dict = {}
-            in_csv = open(self.raw_data_path, 'r')
-            out_csv = open(self.data_path, 'w')
+            in_csv = open(self.raw_data_path, 'r', encoding='utf-8')
+            out_csv = open(self.data_path, 'w', encoding='utf-8')
 
             current_user = None
             current_time = None
@@ -524,7 +524,7 @@ class GHOME(DataLoader):
     def load_(self):
         session_dict = {}
         count = 0
-        with open(self.data_path, 'r') as f_:
+        with open(self.data_path, 'r', encoding='utf-8') as f_:
             data_csv = csv.reader(f_)
 
             for row_num, row_csv in enumerate(data_csv):
@@ -580,7 +580,7 @@ class Maluuba(DataLoader):
         super(Maluuba, self).__init__(**kwargs)
         self.data_path = self.root_dir + '/dataset/Maluuba/frames.json'
     def load_(self):
-        with open(self.data_path, 'r') as f_:
+        with open(self.data_path, 'r', encoding='utf-8') as f_:
             data = json.load(f_)
             for session_dict in data:
                 session = []
@@ -624,18 +624,18 @@ class MATCH(DataLoader):
             dialogue = self.Dialogue(dialogue_id)
             dialogue_list.append(dialogue)
 
-            with open(os.path.join(turn_dir, turn_file), 'r') as fp:
+            with open(os.path.join(turn_dir, turn_file), 'r', encoding='utf-8') as fp:
                 turn_soup = BeautifulSoup(fp)
 
             # load words, starts from index=1
             words = {}
-            with open(os.path.join(transcript_path, dialogue_id + '.P.words.xml'), 'r') as fp:
+            with open(os.path.join(transcript_path, dialogue_id + '.P.words.xml'), 'r', encoding='utf-8') as fp:
                 word_P_soup = BeautifulSoup(fp)
                 for w in word_P_soup.find_all('w'):
                     w_id = w['nite:id']
                     words[w_id] = w.text
 
-            with open(os.path.join(transcript_path, dialogue_id + '.W.words.xml'), 'r') as fp:
+            with open(os.path.join(transcript_path, dialogue_id + '.W.words.xml'), 'r', encoding='utf-8') as fp:
                 word_W_soup = BeautifulSoup(fp)
                 for w in word_W_soup.find_all('w'):
                     w_id = w['nite:id']
@@ -643,7 +643,7 @@ class MATCH(DataLoader):
 
             # load segments
             segments = {}
-            with open(os.path.join(transcript_path, dialogue_id + '.P.segments.xml'), 'r') as fp:
+            with open(os.path.join(transcript_path, dialogue_id + '.P.segments.xml'), 'r', encoding='utf-8') as fp:
                 segment_P_soup = BeautifulSoup(fp)
                 for s in segment_P_soup.find_all('segment'):
                     segment_id = s['nite:id']
@@ -663,7 +663,7 @@ class MATCH(DataLoader):
 
                     # self.logger.info('%s - %s' % (segment_id, P_segments[segment_id]))
 
-            with open(os.path.join(transcript_path, dialogue_id + '.W.segments.xml'), 'r') as fp:
+            with open(os.path.join(transcript_path, dialogue_id + '.W.segments.xml'), 'r', encoding='utf-8') as fp:
                 segment_W_soup = BeautifulSoup(fp)
                 for s in segment_W_soup.find_all('segment'):
                     segment_id = s['nite:id']

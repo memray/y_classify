@@ -8,9 +8,7 @@
 # Load modules
 #module restore
 
-export PYTHONPATH="/ihome/pbrusilosky/rum20/.conda/envs/py35/bin/python"
-
 # Run the job
 COMMAND="/ihome/pbrusilosky/rum20/.conda/envs/py35/bin/python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id $CONTEXT"
-echo COMMAND
-srun COMMAND
+echo $COMMAND
+srun $COMMAND
