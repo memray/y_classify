@@ -1,0 +1,5 @@
+dataset,context_set,feature_set,model,accuracy,precision,recall,f1_score
+ghome,current,8-skipthought,LinearSVC.pen=l1.C=2.000000,0.646821828496,0.26368032752,0.258708769303,0.256930263188
+dstc3,current,8-skipthought,LinearSVC.pen=l1.C=0.062500,0.379048367675,0.248661498474,0.253854820756,0.249398095221
+family,current,8-skipthought,LinearSVC.pen=l1.C=2.000000,0.657559329483,0.264903034864,0.255147145339,0.240493865906
+dstc2,current,8-skipthought,LinearSVC.pen=l1.C=0.062500,0.366416860427,0.248472716358,0.249579731827,0.246885825573
