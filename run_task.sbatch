@@ -11,6 +11,6 @@
 export PYTHONPATH="/ihome/pbrusilosky/rum20/.conda/envs/py35/bin/python"
 
 # Run the job
-echo "python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id $CONTEXT"
-which python
-srun python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id $CONTEXT
+COMMAND="/ihome/pbrusilosky/rum20/.conda/envs/py35/bin/python -m dialogue.classify.task_runner -selected_feature_set_id $i -selected_context_id $CONTEXT"
+echo COMMAND
+srun COMMAND

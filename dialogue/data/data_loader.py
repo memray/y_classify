@@ -273,7 +273,7 @@ class DataLoader(object):
         session_list = []
         session_count = 0
 
-        with open(self.data_path, 'r') as f_:
+        with open(self.data_path, 'r', encoding="utf-8") as f_:
             for session_line in f_.readlines():
                 delimeter_idx = session_line.find('\t')
                 user_id = session_line[:delimeter_idx]
