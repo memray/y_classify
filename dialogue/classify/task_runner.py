@@ -126,7 +126,7 @@ if __name__ == '__main__':
 
     worker(q, data_dict)
 
-    print('Done')
+    print('Done: %s' % (time.strftime('%Y%m%d-%H%M%S', time.localtime(time.time()))))
 
     '''
     for i in range(n_workers):
