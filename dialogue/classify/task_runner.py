@@ -10,7 +10,7 @@ import numpy as np
 from multiprocessing import freeze_support
 from multiprocessing import current_process
 
-from dialogue.classify import exp_deepmodel
+# from dialogue.classify import exp_deepmodel
 from dialogue.classify import exp_shallowmodel
 from dialogue.classify import configuration
 from dialogue.classify.feature_extractor import Feature_Extractor
@@ -131,7 +131,8 @@ def worker(q, data_dict):
         config  = configuration.load_batch_config(param)
 
         if config['deep_model']:
-           exp = exp_deepmodel.DeepExperimenter(config)
+            pass
+           # exp = exp_deepmodel.DeepExperimenter(config)
         else:
            exp = exp_shallowmodel.ShallowExperimenter(config)
 
