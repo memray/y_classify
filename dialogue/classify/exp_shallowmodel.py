@@ -392,23 +392,24 @@ class ShallowExperimenter():
         return results
 
     def run_cross_validation(self, X, Y):
-        X = np.nan_to_num(X.todense())
-
         train_ids, valid_ids, test_ids = self.load_cv_index_train8_valid1_test1(Y)
         cv_results = []
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            # if r_id >= 1:
-            #     break
+            if r_id >= 10:
+                break
 
-            self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
             self.config['test_round'] = r_id
 
             X_train = np.nan_to_num(preprocessing.scale(X[train_id]))
             Y_train = Y[train_id]
             X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
             Y_test = Y[test_id]
+
+            self.logger.info('*' * 20 + ' %s - Round %d ' % (self.config['data_name'], r_id))
+            self.logger.info('#(data) = %s' % str(len(X_train)))
+            self.logger.info('#(feature) = %s' % str(X_train.shape[1]))
 
             cv_results.extend(self.run_experiment())
 
@@ -431,6 +432,7 @@ class ShallowExperimenter():
 
         results = []
 
+        """
         if self.config.param['data_name'] in ['dstc2', 'dstc3']:
             C = 2**(-4)
         else:
@@ -439,7 +441,7 @@ class ShallowExperimenter():
         self.logger.info("LinearSVC.pen=l1, C=%f" % 2**(-4))
         # results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, OneVsRestClassifier(LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C), n_jobs=-1)))
         results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
-
+        """
         """
         for C in [2**x for x in [-4, -3, -2, -1, 0, 1, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
             self.logger.info('=' * 80)
@@ -457,10 +459,8 @@ class ShallowExperimenter():
             # self.logger.info('=' * 80)
             # self.logger.info("LR.pen=l2.C=%f" % C)
             # results.append(self.benchmark('LR.pen=l2.C=%f' % C, LogisticRegression(solver="lbfgs", multi_class='multinomial', penalty='l2', C=C, dual=False)))
-
         """
 
-        '''
         for clf, name in [
                 # (RidgeClassifier(tol=1e-2, solver="lsqr"), "Ridge Classifier"),
                 # (Perceptron(n_iter=50), "Perceptron"),
@@ -480,6 +480,7 @@ class ShallowExperimenter():
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
 
+        '''
         for C in [2**x for x in [-4, 0, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%f" % C)
@@ -550,8 +551,9 @@ class ShallowExperimenter():
             ('feature_selection', SelectFromModel(LinearSVC(penalty="l1", dual=False, tol=1e-3))),
             ('classification', LinearSVC(penalty="l2"))
         ])))
-
         '''
+
+
         '''
         for C in [0] + [2 ** x for x in [0, 2, 4]]:  # [0]+[2**x for x in [-3, -2, -1, 0]]
             self.logger.info('=' * 80)

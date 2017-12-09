@@ -5,6 +5,7 @@ import argparse
 # from multiprocessing import Queue
 from queue import Queue
 import time
+import numpy as np
 
 from multiprocessing import freeze_support
 from multiprocessing import current_process
@@ -74,6 +75,55 @@ def preload_X_Y():
 
     return data_dict
 
+def filter_X_by_contexts_features(X, config):
+    X = np.nan_to_num(X.todense())
+
+    if config.param['context_set'] == 'current':
+        excluded_context_keywords = ['next', 'last']
+    if config.param['context_set'] == 'next':
+        excluded_context_keywords = ['last']
+    if config.param['context_set'] == 'last':
+        excluded_context_keywords = ['next']
+    if config.param['context_set'] == 'all':
+        excluded_context_keywords = []
+
+    retained_feature_indices = []
+    retained_feature_names = []
+
+    # get the features
+    for f_id,f_name in enumerate(config['feature_names']):
+        f_start_number = f_name[0:f_name.find('-')]
+        if f_start_number.find('.') > 0:
+            f_start_number = f_name[0:f_start_number.find('.')]
+
+        if f_start_number not in config.param['feature_set_number']:
+            continue
+
+        if not config.param['similarity_feature'] and (f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
+            continue
+
+        within_context = True
+        for context_keyword in excluded_context_keywords:
+            if f_name.find(context_keyword) > 0:
+                within_context = False
+        if not within_context:
+            continue
+
+        retained_feature_indices.append(f_id)
+        retained_feature_names.append(f_name)
+
+    X_new = copy.deepcopy(X)[:, retained_feature_indices]
+    config.logger.info('%' * 50)
+    # config.logger.info('retained features: [%s]' % (','.join(retained_feature_names)))
+    config.logger.info('context=%s, feature=%s' % (
+        config.param['context_set'], config.param['feature_set']))
+    config.logger.info(
+        'retained feature numbers=[%s]' % ', '.join(list(set([f[0:f.find('-')] for f in retained_feature_names]))))
+    config.logger.info('#(data)=%d' % X_new.shape[0])
+    config.logger.info('#(feature)=%d' % X_new.shape[1])
+    config.logger.info('%' * 50)
+
+    return X_new
 
 def worker(q, data_dict):
     # get a param from queue and
@@ -95,8 +145,10 @@ def worker(q, data_dict):
             config['X_raw']            = X_raw
             config['X_raw_feature']    = X_raw_feature
             config['Y']                = Y
-            # result = exp.run_single_pass_context_feature(X, Y)
-            result = exp.run_cross_validation(X, Y)
+
+            X_new = filter_X_by_contexts_features(X, config)
+
+            result = exp.run_cross_validation(X_new, Y)
             results.extend(result)
 
         exp.export_averaged_summary(results, os.path.join(config.param['experiment_path'], 'summary.csv'))
