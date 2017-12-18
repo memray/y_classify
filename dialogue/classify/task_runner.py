@@ -113,19 +113,10 @@ def filter_X_by_contexts_features(X, config):
         retained_feature_names.append(f_name)
 
     X_new = copy.deepcopy(X)[:, retained_feature_indices]
-    config.logger.info('%' * 50)
-    # config.logger.info('retained features: [%s]' % (','.join(retained_feature_names)))
-    config.logger.info('context=%s, feature=%s' % (
-        config.param['context_set'], config.param['feature_set']))
-    config.logger.info(
-        'retained feature numbers=[%s]' % ', '.join(list(set([f[0:f.find('-')] for f in retained_feature_names]))))
-    config.logger.info('#(data)=%d' % X_new.shape[0])
-    config.logger.info('#(feature)=%d' % X_new.shape[1])
-    config.logger.info('%' * 50)
 
-    return X_new
+    return X_new, retained_feature_indices, retained_feature_names
 
-def worker(q, data_dict):
+def worker(q, data_dict, opt):
     # get a param from queue and
     for param in q:#iter(q.get, None):
         config  = configuration.load_batch_config(param)
@@ -146,9 +137,31 @@ def worker(q, data_dict):
             config['X_raw_feature']    = X_raw_feature
             config['Y']                = Y
 
-            X_new = filter_X_by_contexts_features(X, config)
+            X_new, retained_feature_indices, retained_feature_names  = filter_X_by_contexts_features(X, config)
 
-            result = exp.run_cross_validation(X_new, Y)
+
+            config.logger.info('%' * 50)
+            # config.logger.info('retained features: [%s]' % (','.join(retained_feature_names)))
+            config.logger.info('context=%s, feature=%s, similarity=%s' % (
+                config.param['context_set'], config.param['feature_set'], opt.add_similarity_feature))
+
+            config.logger.info('Before filtering, #(feature)=%d' % X.shape[1])
+            exp.feature_statistics(config['feature_names'])
+
+            config.logger.info('After filtering, #(feature)=%d' % X_new.shape[1])
+            config.logger.info(
+                'retained feature id=[%s]' % ', '.join(
+                    sorted(list(set([f[0:f.find('-')] for f in retained_feature_names])), key=lambda x: int(x[0][:x[0].find('.')]) if x[0].find('.') > 0 else int(x[0]))))
+            config.logger.info('#(data)=%d' % X_new.shape[0])
+            config.logger.info('#(feature)=%d/%d' % (X_new.shape[1], X.shape[1]))
+            exp.feature_statistics(retained_feature_names)
+            config.logger.info('%' * 50)
+
+            if not opt.feature_selection :
+                result = exp.run_cross_validation(X_new, Y)
+            else:
+                result = exp.run_cross_validation_with_feature_selection(X_new, Y, retained_feature_indices, retained_feature_names)
+
             results.extend(result)
 
         exp.export_averaged_summary(results, os.path.join(config.param['experiment_path'], 'summary.csv'))
@@ -168,6 +181,8 @@ if __name__ == '__main__':
                         help="")
     parser.add_argument('-num_worker', default=1, type=int,
                         help="")
+    parser.add_argument('-feature_selection', action='store_true',
+                        help="do feature selection rather than cross validation")
     opt = parser.parse_args()
 
     # freeze_support()
@@ -176,7 +191,7 @@ if __name__ == '__main__':
     q           = init_task_queue(opt.selected_context_id, opt.selected_feature_set_id, opt.is_deep_model, opt.add_similarity_feature)
     data_dict   = preload_X_Y()
 
-    worker(q, data_dict)
+    worker(q, data_dict, opt)
 
     print('Done: %s' % (time.strftime('%Y%m%d-%H%M%S', time.localtime(time.time()))))
 

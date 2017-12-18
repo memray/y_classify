@@ -37,6 +37,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.extmath import density
 from sklearn import metrics, preprocessing
 
+from classify import feature_extractor
 from dialogue.classify.feature_extractor import ItemSelector
 from dialogue.data import data_loader
 
@@ -60,6 +61,27 @@ class ShallowExperimenter():
     def __init__(self, config):
         self.config = config
         self.logger = self.config.logger
+
+    def feature_statistics(self, feature_names):
+        counter = dict()
+
+        for f_id, f_name in enumerate(feature_names):
+            f_start_number = f_name[0:f_name.find('-')]
+            counter[f_start_number] = counter.get(f_start_number, 0) + 1
+
+            if f_start_number.find('.') > 0:
+                f_start_number = f_name[0:f_start_number.find('.')]
+                counter[f_start_number] = counter.get(f_start_number, 0) + 1
+
+        count_tuples = sorted(counter.items(), key=lambda x: int(x[0][:x[0].find('.')]) if x[0].find('.') > 0 else int(x[0]))
+
+        for f_id, f_count in count_tuples:
+            if f_id.find('.') > 0:
+                self.logger.info('\t\t%s : %d' % (f_id, f_count))
+            else:
+                self.logger.info('%s : %d' % (f_id, f_count))
+
+        return count_tuples
 
     def load_single_run_index(self, X, Y):
         '''
@@ -846,7 +868,7 @@ class ShallowExperimenter():
 
         return avg_results
 
-    def run_cross_validation_with_feature_selection(self, X, Y):
+    def run_cross_validation_with_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names):
         X = np.nan_to_num(X.todense())
 
         train_ids, test_ids = self.load_cv_index(X, Y)
@@ -928,6 +950,8 @@ class ShallowExperimenter():
                 Y_test = Y[test_id]
                 self.logger.info(' ' * 10 + 'X_train.shape=%s' % str(X_train.shape))
                 self.logger.info(' ' * 10 + 'X_test.shape=%s' % str(X_test.shape))
+
+                count_tuples = feature_extractor.feature_statistics(retained_feature_names)
 
                 cv_results.append(self.run_experiment())
 
