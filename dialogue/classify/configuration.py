@@ -314,11 +314,27 @@ def load_batch_config(key_params):
     if not param['deep_model']:
         param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
 
-        # selected_feature_set_id: 0-12
+        '''
+        ID of merged feature sets [0-13]
+        '''
         param['feature_set'] = \
                 ['0-all', '1-basic', '2-lexical', '3-phrasal', '4-syntactic', '5-lda', '6-w2v', '7-d2v', '8-skipthought',
-                 '9-[1.2.3]', '10-[1.3.4]', '11-[1.3.5]', '12-[1.3.6]', '13-[1.3.7]'][param['selected_feature_set_id']]
+                 '9-[2+1.3.4]', '10-[5+1.3.4]', '11-[6+1.3.4]', '12-[7+1.3.4]', '13-[8+1.3.4]'][param['selected_feature_set_id']]
 
+        '''
+        Feature Set
+        1. basic - utterance length
+        2. user action
+        3. time feature
+        4. n-gram
+        5. noun phrase
+        6. entity
+        7. syntactic
+        8. lda
+        9. w2v
+        10. d2v
+        11. skip-thought
+        '''
         param['feature_set_number'] = \
                 [['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], ['1', '2', '3'], ['4'], ['5', '6'], ['7'], ['8'], ['9'],
                  ['10'], ['11'], ['1', '2', '3', '5', '6', '7', '4'], ['1', '2', '3', '5', '6', '7', '8'],
