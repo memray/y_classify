@@ -37,7 +37,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.extmath import density
 from sklearn import metrics, preprocessing
 
-from classify import feature_extractor
 from dialogue.classify.feature_extractor import ItemSelector
 from dialogue.data import data_loader
 
@@ -951,7 +950,7 @@ class ShallowExperimenter():
                 self.logger.info(' ' * 10 + 'X_train.shape=%s' % str(X_train.shape))
                 self.logger.info(' ' * 10 + 'X_test.shape=%s' % str(X_test.shape))
 
-                count_tuples = feature_extractor.feature_statistics(retained_feature_names)
+                count_tuples = self.feature_statistics(retained_feature_names)
 
                 cv_results.append(self.run_experiment())
 
