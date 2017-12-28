@@ -874,18 +874,20 @@ class ShallowExperimenter():
         cv_results = []
         global X_train, Y_train, X_test, Y_test
 
-        percentiles = (0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 100)
+        # percentiles = (0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 100)
         # percentiles = (1, 5, 10, 20, 40, 60, 80, 100)
         # percentiles = (1, 5, 10, 20, 50, 100)
+        num_feature_to_keep = 2**[4,5,6,7,8,9,10,11,12,13]
 
         avg_result_dict = {}
 
+        # keep discrete features for selection only (1, 2, 3, 4, 5), note that LDA is discrete as well
         w2v_feature_indices = [fid for fid, fname in enumerate(self.config['feature_names']) if fname.startswith('8.3')]
         X_w2v           =   copy.deepcopy(X)[:,w2v_feature_indices]
         X_not_w2v       =   np.delete(copy.deepcopy(X), w2v_feature_indices, axis=1)
-        negative_index  =   np.where(X_not_w2v < 0)
-        for x,y in zip(negative_index[0], negative_index[1]):
-            X_not_w2v[x, y] = 0.0
+        # negative_index  =   np.where(X_not_w2v < 0)
+        # for x,y in zip(negative_index[0], negative_index[1]):
+        #     X_not_w2v[x, y] = 0.0
 
         if self.config['experiment_mode'] == 'print_important_features':
             feature_names = self.config['feature_names']
