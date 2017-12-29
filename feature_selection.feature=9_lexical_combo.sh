@@ -11,5 +11,5 @@ for NUMBER_TO_KEEP in "${power[@]}"
 do
     export NUMBER_TO_KEEP;
     echo "Feature Selection, Feature Number=$NUMBER_TO_KEEP, Context=$CONTEXT, Feature=$FEATURE_ID, with similarity";
-    sbatch --export=CONTEXT=$CONTEXT,FEATURE_ID=$FEATURE_ID,NUMBER_TO_KEEP=$NUMBER_TO_KEEP,EXP_MODE='feature_selection' --job-name=context-$CONTEXT.feature-$FEATURE_ID.similarity.run --output=slurm_log/feature_selection.feature_num-$NUMBER_TO_KEEP.context-$CONTEXT.feature-$FEATURE_ID.similarity.out run_task.similarity.sbatch;
+    sbatch --export=CONTEXT=$CONTEXT,FEATURE_ID=$FEATURE_ID,NUMBER_TO_KEEP=$NUMBER_TO_KEEP,EXP_MODE='feature_selection' --job-name=feature_selection.feature_num-$NUMBER_TO_KEEP.context-$CONTEXT.feature-$FEATURE_ID.similarity.run --output=slurm_log/feature_selection.feature_num-$NUMBER_TO_KEEP.context-$CONTEXT.feature-$FEATURE_ID.similarity.out run_task.similarity.sbatch;
 done

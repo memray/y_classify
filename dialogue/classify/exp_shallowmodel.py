@@ -901,7 +901,7 @@ class ShallowExperimenter():
             csv_writer.write('id,name,prefix,chi2,pval\n')
             for f_id, (f_name, chi2_stat, pval) in enumerate(zip(np.asarray(feature_names)[sorted_idx], chi2_stats[sorted_idx], pvals[sorted_idx])):
                 # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
-                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, f_name, f_name[:f_name.find('-')], chi2_stat, pval))
+                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, f_name.encode('utf-8'), f_name[:f_name.find('-')].encode('utf-8'), chi2_stat, pval))
 
         feature_prefixes  = sorted(list(set([f[:f.find('-')] for f in feature_names])))
         feature_set_names = {'1'   :'1-utterance length',
