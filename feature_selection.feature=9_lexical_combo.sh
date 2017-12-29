@@ -7,9 +7,9 @@ export FEATURE_ID=9
 export CONTEXT=0
 declare -a power=(4 5 6 7 8 9 10 11 12)
 
-for feature_number in "${arr[@]}"
+for NUMBER_TO_KEEP in "${power[@]}"
 do
-    export feature_number;
-    echo "Feature Selection, Feature Number=$feature_number, Context=$CONTEXT, Feature=$FEATURE_ID, with similarity";
-    sbatch --export=CONTEXT=$CONTEXT,FEATURE_ID=$FEATURE_ID,FEATURE_NUMBER=$feature_number,EXP_MODE='feature_selection' --job-name=context-$CONTEXT.feature-$FEATURE_ID.similarity.run --output=slurm_log/context-$CONTEXT.feature-$FEATURE_ID.similarity.run_task_log.out run_task.similarity.sbatch;
+    export NUMBER_TO_KEEP;
+    echo "Feature Selection, Feature Number=$NUMBER_TO_KEEP, Context=$CONTEXT, Feature=$FEATURE_ID, with similarity";
+    sbatch --export=CONTEXT=$CONTEXT,FEATURE_ID=$FEATURE_ID,FEATURE_NUMBER=$NUMBER_TO_KEEP,EXP_MODE='feature_selection' --job-name=context-$CONTEXT.feature-$FEATURE_ID.similarity.run --output=slurm_log/feature_selection.feature_num-$NUMBER_TO_KEEP.context-$CONTEXT.feature-$FEATURE_ID.similarity.out run_task.similarity.sbatch;
 done
