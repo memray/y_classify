@@ -779,7 +779,7 @@ def normalize(word_vec):
 
 class CosineSimilarity(BaseEstimator, TransformerMixin):
     '''
-    8.2 & 8.4 Cosine Similarity after LDA/W2V vectorization
+    8.2 Cosine Similarity of LDA
     '''
     def __init__(self, config, vectorizer):
         self.config     = config

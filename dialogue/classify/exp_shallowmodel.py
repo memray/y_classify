@@ -418,7 +418,7 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            # if r_id >= 10:
+            # if r_id >= 1:
             #     break
 
             self.config['test_round'] = r_id
@@ -867,115 +867,101 @@ class ShallowExperimenter():
 
         return avg_results
 
-    def run_cross_validation_with_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names):
-        X = np.nan_to_num(X.todense())
-
-        train_ids, test_ids = self.load_cv_index(X, Y)
-        cv_results = []
-        global X_train, Y_train, X_test, Y_test
-
-        # percentiles = (0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 100)
-        # percentiles = (1, 5, 10, 20, 40, 60, 80, 100)
-        # percentiles = (1, 5, 10, 20, 50, 100)
-        num_feature_to_keep = 2**[4,5,6,7,8,9,10,11,12,13]
-
-        avg_result_dict = {}
-
-        # keep discrete features for selection only (1, 2, 3, 4, 5), note that LDA is discrete as well
-        w2v_feature_indices = [fid for fid, fname in enumerate(self.config['feature_names']) if fname.startswith('8.3')]
-        X_w2v           =   copy.deepcopy(X)[:,w2v_feature_indices]
-        X_not_w2v       =   np.delete(copy.deepcopy(X), w2v_feature_indices, axis=1)
-        # negative_index  =   np.where(X_not_w2v < 0)
-        # for x,y in zip(negative_index[0], negative_index[1]):
-        #     X_not_w2v[x, y] = 0.0
-
-        if self.config['experiment_mode'] == 'print_important_features':
-            feature_names = self.config['feature_names']
-            chi2_stats, pvals = chi2(X_not_w2v, Y)
-            chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
-
-            sorted_idx = np.argsort(chi2_stats)[::-1]
-
-            with open(os.path.join(self.config['experiment_path'], '%s.top_features.csv' % self.config['data_name']), 'w') as csv_writer:
-                csv_writer.write('id\tname\tprefix\tchi2\tpval\n')
-                for f_id, (f_name, chi2_stat, pval) in enumerate(zip(np.asarray(feature_names)[sorted_idx], chi2_stats[sorted_idx], pvals[sorted_idx])):
-                    # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
-                    csv_writer.write('%d\t%s\t%s\t%.4f\t%.4f\n' % (f_id, f_name, f_name[:f_name.find('-')], chi2_stat, pval))
-
-            if os.path.exists(os.path.join(self.config['experiment_path'], '%s.feature_stats.csv' % self.config['data_name'])):
-                print_header = False
+    def run_cross_validation_with_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
+        ''''''
+        '''
+        keep discrete features for selection only (1-7), note that LDA is discrete as well but we don't select it
+        '''
+        selectable_feature_indices = []
+        selectable_feature_names = []
+        not_selectable_feature_names = []
+        for f_id, f_name in enumerate(retained_feature_names):
+            f_series = f_name[: f_name.find('-')]
+            if f_series.find('.') > 0:
+                f_series = f_series[: f_series.find('.')]
+            if f_series in ['1', '2', '3', '4', '5', '6', '7'] and not (f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
+                selectable_feature_indices.append(f_id)
+                selectable_feature_names.append(f_name)
             else:
-                print_header = True
+                not_selectable_feature_names.append(f_name)
 
-            feature_prefixes  = sorted(list(set([f[:f.find('-')] for f in feature_names])))
-            feature_set_names = {'1':'1. utterance length', '2.1':'2.1 user action words', '2.2': '2.2 number of user action words', '2.3':'2.3 jaccard_similarity of user action words',
-                                 '3':'3. time features', '4.1':'4.1 n_gram', '4.2':'4.2 edit distance', '4.3':'4.3 jaccard_similarity',
-                                 '5':'5. noun phrase', '6':'6. entity', '7':'7. syntactic features',
-                                 '8.1':'8.1 LDA_features', '8.2':'8.2 LDA_cosine', '8.3':'8.3 w2v_features', '8.4':'8.4 w2v_cosine', '8.5':'8.5 wmv_distance'
-                                 }
-            with open(os.path.join(self.config['experiment_path'], 'feature_stats.csv'), 'a') as csv_writer:
-                if print_header:
-                    csv_writer.write(',%s\n' % (','.join(feature_prefixes)))
-                    csv_writer.write(',%s\n' % (','.join([feature_set_names[p_] for p_ in feature_prefixes])))
-                num_feature = []
-                for prefix, feature_set_name in zip(feature_prefixes, feature_set_names):
-                    self.logger.info('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
-                    # csv_writer.write('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
-                    num_feature.append(len([f for f in feature_names if f.startswith(prefix)]))
-                csv_writer.write('%s,%s\n' % (self.config['data_name'], ','.join([str(n) for n in num_feature])))
+        X_selectable        =   copy.deepcopy(X)[:,selectable_feature_indices]
+        X_not_selectable    =   np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
 
-            return
+        '''
+        print_important_features
+        '''
+        feature_names       = retained_feature_names
+        chi2_stats, pvals   = chi2(X_selectable, Y)
+        chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
 
-        # iterate the percentile of features to retain
-        for percentile in percentiles:
-            X_to_select     =   copy.deepcopy(X_not_w2v)
-            X_new           = SelectPercentile(chi2, percentile=percentile).fit_transform(X_to_select, Y)
-            # X_new           = np.concatenate((X_new, X_w2v), axis=1)
-            X_new           = np.nan_to_num(X_new)
-            X               = X_new
+        sorted_idx = np.argsort(chi2_stats)[::-1]
 
-            self.logger.info('%' * 50)
-            self.logger.info(' '*10 + 'Percentile=%d' % percentile)
-            self.logger.info(' '*10 + 'X_new.shape=%s' % str(X_new.shape))
-            self.logger.info('%' * 50)
+        with open(os.path.join(self.config['experiment_path'], '%s.top_features.csv' % self.config['data_name']), 'w') as csv_writer:
+            csv_writer.write('id,name,prefix,chi2,pval\n')
+            for f_id, (f_name, chi2_stat, pval) in enumerate(zip(np.asarray(feature_names)[sorted_idx], chi2_stats[sorted_idx], pvals[sorted_idx])):
+                # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
+                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, f_name, f_name[:f_name.find('-')], chi2_stat, pval))
 
-            self.config['percentile'] = percentile
-            self.config['#features'] = X_new.shape[1]
+        feature_prefixes  = sorted(list(set([f[:f.find('-')] for f in feature_names])))
+        feature_set_names = {'1'   :'1-utterance length',
+                             '2.1' :'2.1-user action words', '2.2': '2.2-number of user action words', '2.3.1':'2.3.1-action_jaccard_similarity.next_user_utterance_pairs', '2.3.2':'2.3.2-action_jaccard_similarity.last_user_utterance_pairs',
+                             '3'   :'3-time features',
+                             '4.1' :'4.1-n_gram', '4.2.1':'4.2.1-edit_distance.next_user_utterance_pairs', '4.2.2':'4.2.2-edit_distance.last_user_utterance_pairs',
+                             '4.3.1' :'4.3.1-jaccard_similarity.next_user_utterance_pairs', '4.3.2' :'4.3.2-jaccard_similarity.last_user_utterance_pairs',
+                             '5'   :'5-noun phrase', '6':'6-entity', '7':'7-syntactic features',
+                             '8.1' :'8.1-LDA_features', '8.2.1':'8.2.1-lda_similarity.next_user_utterance_pairs', '8.2.2':'8.2.2-lda_similarity.last_user_utterance_pairs',
+                             '9.1' :'9.1-w2v_features', '9.2.1':'9.2.1-w2v_similarity.next_user_utterance_pairs','9.2.2':'9.2.2-w2v_similarity.last_user_utterance_pairs', '9.3.1':'9.3.1-wmd_similarity.next_user_utterance_pairs','9.3.2':'9.3.2-wmd_similarity.last_user_utterance_pairs',
+                             '10.1': '10.1-d2v_features', '10.2.1': '10.2.1-d2v_similarity.next_user_utterance_pairs','10.2.2': '10.2.2 d2v_similarity.last_user_utterance_pairs',
+                             '11.1': '11.1-skipthought_features', '11.2.1': '11.2.1-skipthought_similarity.next_user_utterance_pairs', '11.2.2': '11.2.2-skipthought_similarity.last_user_utterance_pairs'
+                             }
 
-            # iterate folds for cross validation and get the average score
-            for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-                self.logger.info('*' * 20 + ' %s - Percentile=%d, #(Feature)=%d, Round %d ' % (self.config['data_name'], percentile, X_new.shape[1], r_id) + '*' * 20)
-                X_train = np.nan_to_num(preprocessing.scale(X[train_id]))
-                Y_train = Y[train_id]
-                X_test = np.nan_to_num(preprocessing.scale(X[test_id]))
-                Y_test = Y[test_id]
-                self.logger.info(' ' * 10 + 'X_train.shape=%s' % str(X_train.shape))
-                self.logger.info(' ' * 10 + 'X_test.shape=%s' % str(X_test.shape))
+        if os.path.exists(os.path.join(self.config['experiment_path'], 'feature_stats.csv')):
+            print_header = False
+        else:
+            print_header = True
 
-                count_tuples = self.feature_statistics(retained_feature_names)
+        with open(os.path.join(self.config['experiment_path'], 'feature_stats.csv'), 'a') as csv_writer:
+            if print_header:
+                csv_writer.write(',%s\n' % (','.join(feature_prefixes)))
+                csv_writer.write(',%s\n' % (','.join([feature_set_names[p_] for p_ in feature_prefixes])))
+            num_feature = []
+            for prefix, feature_set_name in zip(feature_prefixes, feature_set_names):
+                self.logger.info('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
+                # csv_writer.write('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
+                num_feature.append(len([f for f in feature_names if f.startswith(prefix)]))
+            csv_writer.write('%s,%s\n' % (self.config['data_name'], ','.join([str(n) for n in num_feature])))
 
-                cv_results.append(self.run_experiment())
+        '''
+        run experiment with selected features
+        '''
+        X_to_select     = copy.deepcopy(X_selectable)
 
-            # get the average score of cross-validation
-            avg_result_models = self.average_results(cv_results)
-            for avg_result_model in avg_result_models:
-                avg_results_of_model = avg_result_dict.get(avg_result_model['model'], [])
-                avg_results_of_model.append(avg_result_model)
-                avg_result_dict[avg_result_model['model']] = avg_results_of_model
+        # if num_feature_to_keep is -1, we don't select anything and keep all the features
+        if k_feature_to_keep != -1:
+            num_feature = 2 ** k_feature_to_keep
+            X_selected      = SelectKBest(chi2, k=num_feature).fit_transform(X_to_select, Y)
+        else:
+            num_feature = X_to_select.shape[1]
+            X_selected      = X_to_select
 
-        for model_name, model_result in avg_result_dict.items():
-            # plot the result of each model
-            fig, ax = plt.subplots()
-            ax.errorbar(percentiles, [r['f1_score'] for r in model_result], [r['f1_score_std'] for r in model_result])
+        X_selected      = np.nan_to_num(X_selected)
+        if X_not_selectable.shape[1] == 0:
+            X           = X_selected
+        else:
+            X           = np.concatenate([X_selected, X_not_selectable], axis=1)
 
-            ax.set_title('Performance of the %s - feature selected by Chi2' % model_name)
-            ax.set_xlabel('Percentile')
-            ax.set_ylabel('Prediction rate')
+        self.logger.info('%' * 50)
+        self.logger.info(' ' * 10 + 'dataset=%s' % str(self.config['data_name']))
+        self.logger.info(' ' * 10 + 'k_feature_to_keep=%s' % str(k_feature_to_keep))
+        self.logger.info(' ' * 10 + 'X_new.shape=%s' % str(X.shape))
+        self.logger.info(' ' * 10 + '#(X_selected)=%d' % num_feature)
+        self.logger.info(' ' * 10 + '#(X_not_selectable)=%d' % X_not_selectable.shape[1])
+        self.logger.info('%' * 50)
 
-            ax.axis('tight')
-            # plt.show()
-            fig.savefig(os.path.join(self.config.param['experiment_path'], '%s.model=%s.feature_selection.plot.jpg' % (self.config.param['data_name'], model_name)))
+        cv_results = self.run_cross_validation(X, Y)
 
+        return cv_results
 
     def run_cross_validation_with_leave_one_out(self, X, Y):
         X = np.nan_to_num(X.todense())

@@ -58,7 +58,7 @@ def load_config():
     param['task_name']       = 'utterance_type'
     param['timemark']        = time.strftime('%Y%m%d-%H%M%S', time.localtime(time.time()))
 
-    param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
+    # param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
 
     # two key feature settings
     param['context_set']     = ['next', 'current', 'last', 'all'][0]
@@ -312,7 +312,8 @@ def load_batch_config(key_params):
 
 
     if not param['deep_model']:
-        param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
+        # deprecated
+        # param['experiment_mode'] = ['single_run', 'single_run_context_feature', 'normal_cv', 'feature_selection', 'leave_one_out', 'keep_one_only', 'reformulation_detection', 'task_boundary_detection', 'bad_case', 'print_important_features'][1]
 
         '''
         ID of merged feature sets [0-13]
@@ -344,7 +345,7 @@ def load_batch_config(key_params):
         param['similarity_feature']  = param['similarity_feature']
 
         # param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
-        param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
+        param['experiment_name'] = '.'.join([param['timemark'], key_params['experiment_mode'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
     else:
         param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'model=%s' % param['deep_model_name']])
 

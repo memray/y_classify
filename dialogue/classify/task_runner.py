@@ -33,11 +33,17 @@ def range_to_params(ranges_items, params, cache):
         c.append((k,v))
         range_to_params(next_range, params, c)
 
-def init_task_queue(selected_context_id, selected_feature_set_id, is_deep_model, add_similarity_feature):
+def init_task_queue(opt):
+    experiment_mode         = opt.experiment_mode
+    selected_context_id     = opt.selected_context_id
+    selected_feature_set_id = opt.selected_feature_set_id
+    is_deep_model           = opt.is_deep_model
+    add_similarity_feature  = opt.add_similarity_feature
+
     # queue            = Queue()
     queue = []
     # parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
-    parameter_ranges = {'deep_model': [is_deep_model], 'selected_context_id': selected_context_id, 'selected_feature_set_id': selected_feature_set_id
+    parameter_ranges = {'experiment_mode': [experiment_mode], 'deep_model': [is_deep_model], 'selected_context_id': selected_context_id, 'selected_feature_set_id': selected_feature_set_id
 , 'similarity_feature': [add_similarity_feature]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
@@ -78,6 +84,7 @@ def preload_X_Y():
 def filter_X_by_contexts_features(X, config):
     X = np.nan_to_num(X.todense())
 
+    # determine the context range
     if config.param['context_set'] == 'current':
         excluded_context_keywords = ['next', 'last']
     if config.param['context_set'] == 'next':
@@ -90,7 +97,7 @@ def filter_X_by_contexts_features(X, config):
     retained_feature_indices = []
     retained_feature_names = []
 
-    # get the features
+    # filter features based on their names
     for f_id,f_name in enumerate(config['feature_names']):
         f_start_number = f_name[0:f_name.find('-')]
         if f_start_number.find('.') > 0:
@@ -116,6 +123,26 @@ def filter_X_by_contexts_features(X, config):
 
     return X_new, retained_feature_indices, retained_feature_names
 
+
+def print_feature_stats(X, X_new, retained_feature_indices, retained_feature_names, exp, config):
+    config.logger.info('%' * 50)
+    # config.logger.info('retained features: [%s]' % (','.join(retained_feature_names)))
+    config.logger.info('context=%s, feature=%s, similarity=%s' % (
+        config.param['context_set'], config.param['feature_set'], opt.add_similarity_feature))
+
+    config.logger.info('Before filtering, #(feature)=%d' % X.shape[1])
+    exp.feature_statistics(config['feature_names'])
+
+    config.logger.info('After filtering, #(feature)=%d' % X_new.shape[1])
+    config.logger.info(
+        'retained feature id=[%s]' % ', '.join(
+            sorted(list(set([f[0:f.find('-')] for f in retained_feature_names])),
+                   key=lambda x: int(x[0][:x[0].find('.')]) if x[0].find('.') > 0 else int(x[0]))))
+    config.logger.info('#(data)=%d' % X_new.shape[0])
+    config.logger.info('#(feature)=%d/%d' % (X_new.shape[1], X.shape[1]))
+    exp.feature_statistics(retained_feature_names)
+    config.logger.info('%' * 50)
+
 def worker(q, data_dict, opt):
     # get a param from queue and
     for param in q:#iter(q.get, None):
@@ -138,29 +165,14 @@ def worker(q, data_dict, opt):
             config['Y']                = Y
 
             X_new, retained_feature_indices, retained_feature_names  = filter_X_by_contexts_features(X, config)
+            # print_feature_stats(X, X_new, retained_feature_indices, retained_feature_names, exp, config)
 
-
-            config.logger.info('%' * 50)
-            # config.logger.info('retained features: [%s]' % (','.join(retained_feature_names)))
-            config.logger.info('context=%s, feature=%s, similarity=%s' % (
-                config.param['context_set'], config.param['feature_set'], opt.add_similarity_feature))
-
-            config.logger.info('Before filtering, #(feature)=%d' % X.shape[1])
-            exp.feature_statistics(config['feature_names'])
-
-            config.logger.info('After filtering, #(feature)=%d' % X_new.shape[1])
-            config.logger.info(
-                'retained feature id=[%s]' % ', '.join(
-                    sorted(list(set([f[0:f.find('-')] for f in retained_feature_names])), key=lambda x: int(x[0][:x[0].find('.')]) if x[0].find('.') > 0 else int(x[0]))))
-            config.logger.info('#(data)=%d' % X_new.shape[0])
-            config.logger.info('#(feature)=%d/%d' % (X_new.shape[1], X.shape[1]))
-            exp.feature_statistics(retained_feature_names)
-            config.logger.info('%' * 50)
-
-            if not opt.feature_selection :
+            if opt.experiment_mode == 'cross_validation' or opt.experiment_mode == 'keep_one_only' or opt.experiment_mode == 'leave_one_out':
                 result = exp.run_cross_validation(X_new, Y)
+            elif opt.experiment_mode == 'feature_selection':
+                result = exp.run_cross_validation_with_feature_selection(X_new, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep)
             else:
-                result = exp.run_cross_validation_with_feature_selection(X_new, Y, retained_feature_indices, retained_feature_names)
+                assert "experiment type invalid"
 
             results.extend(result)
 
@@ -181,14 +193,16 @@ if __name__ == '__main__':
                         help="")
     parser.add_argument('-num_worker', default=1, type=int,
                         help="")
-    parser.add_argument('-feature_selection', action='store_true',
-                        help="do feature selection rather than cross validation")
+    parser.add_argument('-experiment_mode', default='cross_validation',
+                        help="cross_validation, keep_one_only, leave_one_out or feature_selection")
+    parser.add_argument('-k_feature_to_keep', default=-1, type=int,
+                        help="number of features to keep in feature selection is 2**(k_feature_to_keep), specify the exponent")
     opt = parser.parse_args()
 
     # freeze_support()
     n_workers   = opt.num_worker
     workers     = []
-    q           = init_task_queue(opt.selected_context_id, opt.selected_feature_set_id, opt.is_deep_model, opt.add_similarity_feature)
+    q           = init_task_queue(opt)
     data_dict   = preload_X_Y()
 
     worker(q, data_dict, opt)
