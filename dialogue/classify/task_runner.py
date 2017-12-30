@@ -34,17 +34,11 @@ def range_to_params(ranges_items, params, cache):
         range_to_params(next_range, params, c)
 
 def init_task_queue(opt):
-    experiment_mode         = opt.experiment_mode
-    selected_context_id     = opt.selected_context_id
-    selected_feature_set_id = opt.selected_feature_set_id
-    is_deep_model           = opt.is_deep_model
-    add_similarity_feature  = opt.add_similarity_feature
 
     # queue            = Queue()
     queue = []
     # parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
-    parameter_ranges = {'experiment_mode': [experiment_mode], 'deep_model': [is_deep_model], 'selected_context_id': selected_context_id, 'selected_feature_set_id': selected_feature_set_id
-, 'similarity_feature': [add_similarity_feature]}
+    parameter_ranges = {'experiment_mode': [opt.experiment_mode], 'deep_model': [opt.is_deep_model], 'selected_context_id': opt.selected_context_id, 'selected_feature_set_id': opt.selected_feature_set_id, 'similarity_feature': [opt.add_similarity_feature], 'k_feature_to_keep': [opt.k_feature_to_keep]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
 

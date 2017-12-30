@@ -345,7 +345,10 @@ def load_batch_config(key_params):
         param['similarity_feature']  = param['similarity_feature']
 
         # param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
-        param['experiment_name'] = '.'.join([param['timemark'], key_params['experiment_mode'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
+        if key_params['experiment_mode'] == 'feature_selection':
+            param['experiment_name'] = '.'.join([param['timemark'], key_params['experiment_mode'], 'feature_number=%s' % key_params['k_feature_to_keep'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
+        else:
+            param['experiment_name'] = '.'.join([param['timemark'], key_params['experiment_mode'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
     else:
         param['experiment_name'] = '.'.join([param['timemark'], 'context=%s' % param['context_set'], 'model=%s' % param['deep_model_name']])
 
