@@ -283,7 +283,7 @@ class ShallowExperimenter():
 
         return train_ids, test_ids
 
-    def benchmark(self, mobenchmardel_name, clf):
+    def benchmark(self, model_name, clf):
         global X_train, Y_train, X_test, Y_test
         results = []
 
