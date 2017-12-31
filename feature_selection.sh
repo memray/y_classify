@@ -5,7 +5,7 @@
 
 export CONTEXT=0
 declare -a FEATURE_IDs=(9 10 11 12 13)
-declare -a power=(4 5 6 7 8 9 10 11 12)
+declare -a power=(-1) #(4 5 6 7 8 9 10 11 12)
 
 for FEATURE_ID in "${FEATURE_IDs[@]}"
 do

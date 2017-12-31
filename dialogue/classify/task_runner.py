@@ -37,8 +37,11 @@ def init_task_queue(opt):
 
     # queue            = Queue()
     queue = []
-    # parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
-    parameter_ranges = {'experiment_mode': [opt.experiment_mode], 'deep_model': [opt.is_deep_model], 'selected_context_id': opt.selected_context_id, 'selected_feature_set_id': opt.selected_feature_set_id, 'similarity_feature': [opt.add_similarity_feature], 'k_feature_to_keep': [opt.k_feature_to_keep]}
+
+    if opt.is_deep_model:
+        parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
+    else:
+        parameter_ranges = {'experiment_mode': [opt.experiment_mode], 'deep_model': [False], 'selected_context_id': opt.selected_context_id, 'selected_feature_set_id': opt.selected_feature_set_id, 'similarity_feature': [opt.add_similarity_feature], 'k_feature_to_keep': [opt.k_feature_to_keep]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
 
@@ -151,20 +154,23 @@ def worker(q, data_dict, opt):
 
         for data_name in config['data_names']:
             config.param['data_name']  = data_name
-            X_raw, X_raw_feature, feature_names, label_encoder, X, Y = data_dict[data_name]
+            X_raw, X_raw_feature, feature_names, label_encoder, X_all, Y = data_dict[data_name]
             config['feature_names']    = feature_names
             config['label_encoder']    = label_encoder
             config['X_raw']            = X_raw
             config['X_raw_feature']    = X_raw_feature
             config['Y']                = Y
 
-            X_new, retained_feature_indices, retained_feature_names  = filter_X_by_contexts_features(X, config)
-            # print_feature_stats(X, X_new, retained_feature_indices, retained_feature_names, exp, config)
+            if not opt.is_deep_model:
+                X, retained_feature_indices, retained_feature_names  = filter_X_by_contexts_features(X_all, config)
+                # print_feature_stats(X, X_new, retained_feature_indices, retained_feature_names, exp, config)
+            else:
+                X = X_all
 
             if opt.experiment_mode == 'cross_validation' or opt.experiment_mode == 'keep_one_only' or opt.experiment_mode == 'leave_one_out':
-                result = exp.run_cross_validation(X_new, Y)
+                result = exp.run_cross_validation(X, Y)
             elif opt.experiment_mode == 'feature_selection':
-                result = exp.run_cross_validation_with_feature_selection(X_new, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep)
+                result = exp.run_cross_validation_with_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep)
             else:
                 assert "experiment type invalid"
 
@@ -177,9 +183,9 @@ if __name__ == '__main__':
         description='task_runner.py',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('-selected_context_id', required=True, nargs='+', type=int,
+    parser.add_argument('-selected_context_id', nargs='+', type=int,
                         help="")
-    parser.add_argument('-selected_feature_set_id', required=True, nargs='+', type=int,
+    parser.add_argument('-selected_feature_set_id', nargs='+', type=int,
                         help="")
     parser.add_argument('-is_deep_model', action='store_true',
                         help="")

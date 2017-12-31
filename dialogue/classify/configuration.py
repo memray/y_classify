@@ -441,20 +441,22 @@ def load_batch_config(key_params):
     param['batch_size']                 = 128
     param['max_epoch']                  = 50
     param['early_stop_tolerance']       = 2
-    param['concat_sents']               = True
+    param['concat_sents']               = False
 
     # CNN setting
     param['cnn_setting'] = {
-        "MODEL": 'multichannel', # available models: rand, static, non-static, multichannel
-        "EARLY_STOPPING": True,
-        "WORD_DIM": 300,
-        "FILTERS": [3, 4, 5],
-        "FILTER_NUM": [100, 100, 100],
-        'CLASS_SIZE': len(param['valid_type']),
-        'BATCH_SIZE': param['batch_size'],
-        "LEARNING_RATE": 1.0e-3,
-        "NORM_LIMIT": 10,
-        "DROPOUT_PROB": 0.5,
+        "model"             : 'rand', # available models: rand, static, non-static, multichannel
+        "early_stopping"    : True,
+        "word_dim"          : 300,
+        "filters"           : [3, 4, 5],
+        "filter_num"        : [100, 100, 100],
+        'class_size'        : len(param['valid_type']),
+        'batch_size'        : param['batch_size'],
+        "learning_rate"     : 1.0e-3,
+        "norm_limit"        : 10,
+        "dropout_prob"      : 0.5,
+
+        "sentence_num"      : len(param['utterance_range']),
     }
 
     # Skip-thought setting

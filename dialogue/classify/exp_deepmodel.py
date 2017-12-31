@@ -23,6 +23,8 @@ class DeepExperimenter(ShallowExperimenter):
     def init_model(self, vocab_dict, model_type):
         if model_type == 'cnn':
             params = self.config['cnn_setting']
+            if self.config['concat_sents']:
+                params['sentence_num'] = 1
             if params["model"] != "rand":
                 # load word2vec
                 print("loading word2vec...")
@@ -51,8 +53,8 @@ class DeepExperimenter(ShallowExperimenter):
                 wv_matrix = np.array(wv_matrix)
                 params["wv_matrix"] = wv_matrix
 
-            params['vocab_size'] = len(vocab_dict['vocab'])
-            params['max_sent_len'] = vocab_dict['max_sent_len']
+            params['vocab_size']    = len(vocab_dict['vocab'])
+            params['max_sent_len']  = vocab_dict['max_sent_len']
             model = CNN(**params)
             model.parameters_to_normalize = [model.fc]
 
@@ -325,8 +327,9 @@ class DeepExperimenter(ShallowExperimenter):
             train_pred   = []
             train_y_shuffled   = []
             for i, (x,y) in enumerate(train_batch_loader):
+                # if self.config['concat_sents']: x.size=[batch_size, max_len] else: x.size=[batch_size, num_sent, max_len]
                 x = Variable(x)
-                y = Variable(y)
+                y = Variable(y) # y.size=[batch_size]
 
                 optimizer.zero_grad()
 
@@ -452,12 +455,12 @@ class DeepExperimenter(ShallowExperimenter):
             else:
                 stop_increasing = 0
 
+            plot_learning_curve(all_training_losses, all_valid_losses, 'Error Trend: Training and Validation', curve1_name='Training Error', curve2_name='Validation Error', save_path=self.config['experiment_path']+'/%s-train_valid_curve.png' % exp_name)
+            plot_learning_curve(valid_accuracy, valid_f1_score, 'Accuracy and F1-score on Validation', curve1_name='Accuracy', curve2_name='F1-score', save_path=self.config['experiment_path']+'/%s-train_f1_curve.png' % exp_name)
+
             if stop_increasing >= self.config['early_stop_tolerance']:
                 self.logger.info('Have not increased for %d epoches, stop training' % stop_increasing)
                 break
-
-            plot_learning_curve(all_training_losses, all_valid_losses, 'Error Trend: Training and Validation', curve1_name='Training Error', curve2_name='Validation Error', save_path=self.config['experiment_path']+'/%s-train_valid_curve.png' % exp_name)
-            plot_learning_curve(valid_accuracy, valid_f1_score, 'Accuracy and F1-score on Validation', curve1_name='Accuracy', curve2_name='F1-score', save_path=self.config['experiment_path']+'/%s-train_f1_curve.png' % exp_name)
 
         '''
         Testing
