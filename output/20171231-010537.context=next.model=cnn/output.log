@@ -45671,3 +45671,765 @@ avg / total       0.80      0.80      0.79       592
 12/31/2017 16:41:24 [INFO] exp_deepmodel: Training 21/38, loss=0.36686, weight_norm=1.92708, grad_norm=0.0
 12/31/2017 16:41:29 [INFO] exp_deepmodel: Training 22/38, loss=0.48166, weight_norm=1.92866, grad_norm=0.0
 12/31/2017 16:41:37 [INFO] exp_deepmodel: Training 23/38, loss=0.44798, weight_norm=1.93022, grad_norm=0.0
+12/31/2017 16:41:45 [INFO] exp_deepmodel: Training 24/38, loss=0.49268, weight_norm=1.93181, grad_norm=0.0
+12/31/2017 16:41:52 [INFO] exp_deepmodel: Training 25/38, loss=0.57751, weight_norm=1.93332, grad_norm=0.0
+12/31/2017 16:41:59 [INFO] exp_deepmodel: Training 26/38, loss=0.39768, weight_norm=1.93505, grad_norm=0.0
+12/31/2017 16:42:06 [INFO] exp_deepmodel: Training 27/38, loss=0.38077, weight_norm=1.93691, grad_norm=0.0
+12/31/2017 16:42:12 [INFO] exp_deepmodel: Training 28/38, loss=0.51916, weight_norm=1.93848, grad_norm=0.0
+12/31/2017 16:42:18 [INFO] exp_deepmodel: Training 29/38, loss=0.42098, weight_norm=1.94007, grad_norm=0.0
+12/31/2017 16:42:24 [INFO] exp_deepmodel: Training 30/38, loss=0.55406, weight_norm=1.94171, grad_norm=0.0
+12/31/2017 16:42:31 [INFO] exp_deepmodel: Training 31/38, loss=0.42884, weight_norm=1.94330, grad_norm=0.0
+12/31/2017 16:42:37 [INFO] exp_deepmodel: Training 32/38, loss=0.37602, weight_norm=1.94494, grad_norm=0.0
+12/31/2017 16:42:44 [INFO] exp_deepmodel: Training 33/38, loss=0.31680, weight_norm=1.94667, grad_norm=0.0
+12/31/2017 16:42:50 [INFO] exp_deepmodel: Training 34/38, loss=0.44271, weight_norm=1.94853, grad_norm=0.0
+12/31/2017 16:42:56 [INFO] exp_deepmodel: Training 35/38, loss=0.45798, weight_norm=1.95047, grad_norm=0.0
+12/31/2017 16:43:01 [INFO] exp_deepmodel: Training 36/38, loss=0.39844, weight_norm=1.95258, grad_norm=0.0
+12/31/2017 16:43:02 [INFO] exp_deepmodel: Training 37/38, loss=0.30350, weight_norm=1.95493, grad_norm=0.0
+12/31/2017 16:43:02 [INFO] exp_deepmodel: --------------------Training Summary--------------------
+12/31/2017 16:43:02 [INFO] exp_deepmodel: Training loss=0.43529
+12/31/2017 16:43:02 [INFO] exp_deepmodel: Training classification report:
+12/31/2017 16:43:02 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.87      0.44      0.58       168
+          C       0.77      0.81      0.79      1355
+          F       0.90      0.96      0.93      2250
+          R       0.68      0.58      0.62       977
+
+avg / total       0.82      0.82      0.81      4750
+
+12/31/2017 16:43:02 [INFO] exp_deepmodel: Training confusion matrix:
+12/31/2017 16:43:02 [INFO] exp_deepmodel: 
+[[  74   21   44   29]
+ [   2 1098   68  187]
+ [   4   33 2162   51]
+ [   5  276  131  565]]
+12/31/2017 16:43:02 [INFO] exp_deepmodel: Training accuracy:   0.821
+12/31/2017 16:43:02 [INFO] exp_deepmodel: Training f1_score:   0.732
+12/31/2017 16:43:02 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:43:02 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:43:04 [INFO] exp_deepmodel: Validating 0/5, loss=1.02428
+12/31/2017 16:43:06 [INFO] exp_deepmodel: Validating 1/5, loss=0.11117
+12/31/2017 16:43:08 [INFO] exp_deepmodel: Validating 2/5, loss=0.15437
+12/31/2017 16:43:10 [INFO] exp_deepmodel: Validating 3/5, loss=0.46541
+12/31/2017 16:43:12 [INFO] exp_deepmodel: Validating 4/5, loss=0.64457
+12/31/2017 16:43:12 [INFO] exp_deepmodel: --------------------Validation Summary--------------------
+12/31/2017 16:43:12 [INFO] exp_deepmodel: Valid loss=0.47996
+12/31/2017 16:43:12 [INFO] exp_deepmodel: Validation Classification Report:
+12/31/2017 16:43:12 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.86      0.60      0.71        20
+          C       0.72      0.80      0.76       169
+          F       0.89      0.96      0.92       281
+          R       0.68      0.48      0.56       122
+
+avg / total       0.80      0.81      0.80       592
+
+12/31/2017 16:43:12 [INFO] exp_deepmodel: Validation Confusion Matrix:
+12/31/2017 16:43:12 [INFO] exp_deepmodel: 
+[[ 12   3   3   2]
+ [  1 136  12  20]
+ [  1   4 271   5]
+ [  0  45  19  58]]
+12/31/2017 16:43:12 [INFO] exp_deepmodel: Validation accuracy:   0.806
+12/31/2017 16:43:12 [INFO] exp_deepmodel: Validation f1_score:   0.738
+12/31/2017 16:43:12 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:43:12 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:43:12 [INFO] exp_deepmodel: Best f1 is not updated (0.7392 --> 0.7383), rate of change (ROC)=-0.12
+12/31/2017 16:43:12 [INFO] exp_deepmodel: **************************************************
+12/31/2017 16:43:12 [INFO] exp_deepmodel: Have not increased for 2 epoches, stop training
+12/31/2017 16:43:14 [INFO] exp_deepmodel: Testing 0/5, loss=1.21995
+12/31/2017 16:43:17 [INFO] exp_deepmodel: Testing 1/5, loss=0.11874
+12/31/2017 16:43:19 [INFO] exp_deepmodel: Testing 2/5, loss=0.12939
+12/31/2017 16:43:21 [INFO] exp_deepmodel: Testing 3/5, loss=0.47903
+12/31/2017 16:43:22 [INFO] exp_deepmodel: Testing 4/5, loss=0.80987
+12/31/2017 16:43:22 [INFO] exp_deepmodel: --------------------Test Summary--------------------
+12/31/2017 16:43:22 [INFO] exp_deepmodel: **************************************************
+12/31/2017 16:43:22 [INFO] exp_deepmodel: Testing loss=0.55140
+12/31/2017 16:43:22 [INFO] exp_deepmodel: Testing Classification Report:
+12/31/2017 16:43:22 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.57      0.20      0.30        20
+          C       0.77      0.79      0.78       169
+          F       0.86      0.97      0.91       281
+          R       0.62      0.48      0.54       122
+
+avg / total       0.78      0.79      0.78       592
+
+12/31/2017 16:43:22 [INFO] exp_deepmodel: Testing Confusion Matrix:
+12/31/2017 16:43:22 [INFO] exp_deepmodel: 
+[[  4   4   8   4]
+ [  0 134   8  27]
+ [  1   2 273   5]
+ [  2  35  27  58]]
+12/31/2017 16:43:22 [INFO] exp_deepmodel: Testing accuracy:   0.792
+12/31/2017 16:43:22 [INFO] exp_deepmodel: Testing f1_score:   0.632
+12/31/2017 16:43:22 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:43:22 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:43:22 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:43:22 [INFO] exp_shallowmodel: accuracy:   0.792
+12/31/2017 16:43:22 [INFO] exp_shallowmodel: f1_score:   0.632
+12/31/2017 16:43:22 [INFO] exp_shallowmodel: classification report:
+12/31/2017 16:43:22 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.57      0.20      0.30        20
+          C       0.77      0.79      0.78       169
+          F       0.86      0.97      0.91       281
+          R       0.62      0.48      0.54       122
+
+avg / total       0.78      0.79      0.78       592
+
+12/31/2017 16:43:22 [INFO] exp_shallowmodel: confusion matrix:
+12/31/2017 16:43:22 [INFO] exp_shallowmodel: 
+[[  4   4   8   4]
+ [  0 134   8  27]
+ [  1   2 273   5]
+ [  2  35  27  58]]
+12/31/2017 16:43:22 [INFO] exp_deepmodel: ******************** dstc3 - Round 27 
+12/31/2017 16:43:44 [INFO] exp_deepmodel: max length = 58
+12/31/2017 16:43:44 [INFO] keyedvectors: loading projection weights from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+12/31/2017 16:45:57 [INFO] keyedvectors: loaded (3000000, 300) matrix from /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+12/31/2017 16:45:57 [INFO] exp_deepmodel: #(words found in w2v)=267, #(words not found in w2v)=36
+12/31/2017 16:46:02 [INFO] exp_deepmodel: number of parameters: 905704
+12/31/2017 16:46:02 [INFO] exp_deepmodel: encoder: 0
+12/31/2017 16:46:02 [INFO] exp_deepmodel: decoder: 905704
+12/31/2017 16:46:02 [INFO] exp_deepmodel: *************************Epoch=0*************************
+12/31/2017 16:46:07 [INFO] exp_deepmodel: Training 0/38, loss=1.38801, weight_norm=1.16269, grad_norm=0.0
+12/31/2017 16:46:14 [INFO] exp_deepmodel: Training 1/38, loss=1.23570, weight_norm=1.16703, grad_norm=0.0
+12/31/2017 16:46:21 [INFO] exp_deepmodel: Training 2/38, loss=1.06272, weight_norm=1.17423, grad_norm=0.0
+12/31/2017 16:46:27 [INFO] exp_deepmodel: Training 3/38, loss=1.01114, weight_norm=1.18365, grad_norm=0.0
+12/31/2017 16:46:33 [INFO] exp_deepmodel: Training 4/38, loss=0.94231, weight_norm=1.19390, grad_norm=0.0
+12/31/2017 16:46:38 [INFO] exp_deepmodel: Training 5/38, loss=0.76757, weight_norm=1.20511, grad_norm=0.0
+12/31/2017 16:46:44 [INFO] exp_deepmodel: Training 6/38, loss=0.93578, weight_norm=1.21478, grad_norm=0.0
+12/31/2017 16:46:50 [INFO] exp_deepmodel: Training 7/38, loss=0.91689, weight_norm=1.22258, grad_norm=0.0
+12/31/2017 16:46:56 [INFO] exp_deepmodel: Training 8/38, loss=0.76056, weight_norm=1.23049, grad_norm=0.0
+12/31/2017 16:47:02 [INFO] exp_deepmodel: Training 9/38, loss=0.72110, weight_norm=1.23872, grad_norm=0.0
+12/31/2017 16:47:07 [INFO] exp_deepmodel: Training 10/38, loss=0.64861, weight_norm=1.24732, grad_norm=0.0
+12/31/2017 16:47:13 [INFO] exp_deepmodel: Training 11/38, loss=0.80771, weight_norm=1.25514, grad_norm=0.0
+12/31/2017 16:47:18 [INFO] exp_deepmodel: Training 12/38, loss=0.85734, weight_norm=1.26164, grad_norm=0.0
+12/31/2017 16:47:24 [INFO] exp_deepmodel: Training 13/38, loss=0.76474, weight_norm=1.26762, grad_norm=0.0
+12/31/2017 16:47:29 [INFO] exp_deepmodel: Training 14/38, loss=0.69006, weight_norm=1.27333, grad_norm=0.0
+12/31/2017 16:47:35 [INFO] exp_deepmodel: Training 15/38, loss=0.70693, weight_norm=1.27861, grad_norm=0.0
+12/31/2017 16:47:40 [INFO] exp_deepmodel: Training 16/38, loss=0.73336, weight_norm=1.28353, grad_norm=0.0
+12/31/2017 16:47:46 [INFO] exp_deepmodel: Training 17/38, loss=0.72488, weight_norm=1.28806, grad_norm=0.0
+12/31/2017 16:47:51 [INFO] exp_deepmodel: Training 18/38, loss=0.74652, weight_norm=1.29212, grad_norm=0.0
+12/31/2017 16:47:57 [INFO] exp_deepmodel: Training 19/38, loss=0.77063, weight_norm=1.29519, grad_norm=0.0
+12/31/2017 16:48:03 [INFO] exp_deepmodel: Training 20/38, loss=0.60933, weight_norm=1.29861, grad_norm=0.0
+12/31/2017 16:48:08 [INFO] exp_deepmodel: Training 21/38, loss=0.54384, weight_norm=1.30260, grad_norm=0.0
+12/31/2017 16:48:13 [INFO] exp_deepmodel: Training 22/38, loss=0.59173, weight_norm=1.30679, grad_norm=0.0
+12/31/2017 16:48:19 [INFO] exp_deepmodel: Training 23/38, loss=0.63836, weight_norm=1.31110, grad_norm=0.0
+12/31/2017 16:48:25 [INFO] exp_deepmodel: Training 24/38, loss=0.68809, weight_norm=1.31541, grad_norm=0.0
+12/31/2017 16:48:30 [INFO] exp_deepmodel: Training 25/38, loss=0.63318, weight_norm=1.31956, grad_norm=0.0
+12/31/2017 16:48:36 [INFO] exp_deepmodel: Training 26/38, loss=0.55968, weight_norm=1.32410, grad_norm=0.0
+12/31/2017 16:48:42 [INFO] exp_deepmodel: Training 27/38, loss=0.58962, weight_norm=1.32855, grad_norm=0.0
+12/31/2017 16:48:47 [INFO] exp_deepmodel: Training 28/38, loss=0.60494, weight_norm=1.33291, grad_norm=0.0
+12/31/2017 16:48:53 [INFO] exp_deepmodel: Training 29/38, loss=0.52443, weight_norm=1.33748, grad_norm=0.0
+12/31/2017 16:48:58 [INFO] exp_deepmodel: Training 30/38, loss=0.51934, weight_norm=1.34233, grad_norm=0.0
+12/31/2017 16:49:04 [INFO] exp_deepmodel: Training 31/38, loss=0.58361, weight_norm=1.34735, grad_norm=0.0
+12/31/2017 16:49:09 [INFO] exp_deepmodel: Training 32/38, loss=0.66334, weight_norm=1.35138, grad_norm=0.0
+12/31/2017 16:49:16 [INFO] exp_deepmodel: Training 33/38, loss=0.72637, weight_norm=1.35457, grad_norm=0.0
+12/31/2017 16:49:22 [INFO] exp_deepmodel: Training 34/38, loss=0.65104, weight_norm=1.35749, grad_norm=0.0
+12/31/2017 16:49:27 [INFO] exp_deepmodel: Training 35/38, loss=0.66820, weight_norm=1.35999, grad_norm=0.0
+12/31/2017 16:49:33 [INFO] exp_deepmodel: Training 36/38, loss=0.57726, weight_norm=1.36252, grad_norm=0.0
+12/31/2017 16:49:34 [INFO] exp_deepmodel: Training 37/38, loss=0.53735, weight_norm=1.36567, grad_norm=0.0
+12/31/2017 16:49:34 [INFO] exp_deepmodel: --------------------Training Summary--------------------
+12/31/2017 16:49:34 [INFO] exp_deepmodel: Training loss=0.73953
+12/31/2017 16:49:34 [INFO] exp_deepmodel: Training classification report:
+12/31/2017 16:49:34 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.13      0.06      0.08       168
+          C       0.66      0.73      0.69      1355
+          F       0.77      0.96      0.85      2250
+          R       0.47      0.18      0.26       977
+
+avg / total       0.65      0.70      0.66      4750
+
+12/31/2017 16:49:34 [INFO] exp_deepmodel: Training confusion matrix:
+12/31/2017 16:49:34 [INFO] exp_deepmodel: 
+[[  10   37  106   15]
+ [  18  990  207  140]
+ [  32   26 2153   39]
+ [  19  453  332  173]]
+12/31/2017 16:49:34 [INFO] exp_deepmodel: Training accuracy:   0.700
+12/31/2017 16:49:34 [INFO] exp_deepmodel: Training f1_score:   0.471
+12/31/2017 16:49:34 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:49:34 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:49:37 [INFO] exp_deepmodel: Validating 0/5, loss=1.19998
+12/31/2017 16:49:39 [INFO] exp_deepmodel: Validating 1/5, loss=0.19963
+12/31/2017 16:49:41 [INFO] exp_deepmodel: Validating 2/5, loss=0.19623
+12/31/2017 16:49:43 [INFO] exp_deepmodel: Validating 3/5, loss=0.39380
+12/31/2017 16:49:45 [INFO] exp_deepmodel: Validating 4/5, loss=1.06507
+12/31/2017 16:49:45 [INFO] exp_deepmodel: --------------------Validation Summary--------------------
+12/31/2017 16:49:45 [INFO] exp_deepmodel: Valid loss=0.61094
+12/31/2017 16:49:45 [INFO] exp_deepmodel: Validation Classification Report:
+12/31/2017 16:49:45 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        20
+          C       0.68      0.85      0.75       169
+          F       0.87      0.97      0.92       281
+          R       0.60      0.31      0.41       122
+
+avg / total       0.73      0.77      0.73       592
+
+12/31/2017 16:49:45 [INFO] exp_deepmodel: Validation Confusion Matrix:
+12/31/2017 16:49:45 [INFO] exp_deepmodel: 
+[[  0   4  14   2]
+ [  1 144   4  20]
+ [  0   5 273   3]
+ [  0  60  24  38]]
+12/31/2017 16:49:45 [INFO] exp_deepmodel: Validation accuracy:   0.769
+12/31/2017 16:49:45 [INFO] exp_deepmodel: Validation f1_score:   0.520
+12/31/2017 16:49:45 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:49:45 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:49:45 [INFO] exp_deepmodel: Update best f1 (0.0000 --> 0.5202), rate of change (ROC)=0.00
+12/31/2017 16:49:45 [INFO] exp_deepmodel: **************************************************
+12/31/2017 16:49:46 [INFO] exp_deepmodel: *************************Epoch=1*************************
+12/31/2017 16:49:51 [INFO] exp_deepmodel: Training 0/38, loss=0.55187, weight_norm=1.36900, grad_norm=0.0
+12/31/2017 16:49:58 [INFO] exp_deepmodel: Training 1/38, loss=0.57949, weight_norm=1.37224, grad_norm=0.0
+12/31/2017 16:50:04 [INFO] exp_deepmodel: Training 2/38, loss=0.55218, weight_norm=1.37557, grad_norm=0.0
+12/31/2017 16:50:10 [INFO] exp_deepmodel: Training 3/38, loss=0.55498, weight_norm=1.37890, grad_norm=0.0
+12/31/2017 16:50:15 [INFO] exp_deepmodel: Training 4/38, loss=0.49017, weight_norm=1.38254, grad_norm=0.0
+12/31/2017 16:50:21 [INFO] exp_deepmodel: Training 5/38, loss=0.65744, weight_norm=1.38578, grad_norm=0.0
+12/31/2017 16:50:26 [INFO] exp_deepmodel: Training 6/38, loss=0.55074, weight_norm=1.38899, grad_norm=0.0
+12/31/2017 16:50:32 [INFO] exp_deepmodel: Training 7/38, loss=0.48587, weight_norm=1.39242, grad_norm=0.0
+12/31/2017 16:50:37 [INFO] exp_deepmodel: Training 8/38, loss=0.60122, weight_norm=1.39558, grad_norm=0.0
+12/31/2017 16:50:43 [INFO] exp_deepmodel: Training 9/38, loss=0.67261, weight_norm=1.39832, grad_norm=0.0
+12/31/2017 16:50:48 [INFO] exp_deepmodel: Training 10/38, loss=0.49081, weight_norm=1.40150, grad_norm=0.0
+12/31/2017 16:50:54 [INFO] exp_deepmodel: Training 11/38, loss=0.77209, weight_norm=1.40351, grad_norm=0.0
+12/31/2017 16:50:59 [INFO] exp_deepmodel: Training 12/38, loss=0.64573, weight_norm=1.40545, grad_norm=0.0
+12/31/2017 16:51:05 [INFO] exp_deepmodel: Training 13/38, loss=0.56294, weight_norm=1.40768, grad_norm=0.0
+12/31/2017 16:51:10 [INFO] exp_deepmodel: Training 14/38, loss=0.51989, weight_norm=1.41006, grad_norm=0.0
+12/31/2017 16:51:15 [INFO] exp_deepmodel: Training 15/38, loss=0.53873, weight_norm=1.41238, grad_norm=0.0
+12/31/2017 16:51:21 [INFO] exp_deepmodel: Training 16/38, loss=0.49227, weight_norm=1.41481, grad_norm=0.0
+12/31/2017 16:51:27 [INFO] exp_deepmodel: Training 17/38, loss=0.63616, weight_norm=1.41710, grad_norm=0.0
+12/31/2017 16:51:33 [INFO] exp_deepmodel: Training 18/38, loss=0.58052, weight_norm=1.41931, grad_norm=0.0
+12/31/2017 16:51:38 [INFO] exp_deepmodel: Training 19/38, loss=0.62126, weight_norm=1.42136, grad_norm=0.0
+12/31/2017 16:51:44 [INFO] exp_deepmodel: Training 20/38, loss=0.41530, weight_norm=1.42400, grad_norm=0.0
+12/31/2017 16:51:49 [INFO] exp_deepmodel: Training 21/38, loss=0.56438, weight_norm=1.42661, grad_norm=0.0
+12/31/2017 16:51:55 [INFO] exp_deepmodel: Training 22/38, loss=0.57386, weight_norm=1.42901, grad_norm=0.0
+12/31/2017 16:52:01 [INFO] exp_deepmodel: Training 23/38, loss=0.59837, weight_norm=1.43121, grad_norm=0.0
+12/31/2017 16:52:06 [INFO] exp_deepmodel: Training 24/38, loss=0.51943, weight_norm=1.43369, grad_norm=0.0
+12/31/2017 16:52:11 [INFO] exp_deepmodel: Training 25/38, loss=0.60813, weight_norm=1.43603, grad_norm=0.0
+12/31/2017 16:52:17 [INFO] exp_deepmodel: Training 26/38, loss=0.52438, weight_norm=1.43864, grad_norm=0.0
+12/31/2017 16:52:23 [INFO] exp_deepmodel: Training 27/38, loss=0.56556, weight_norm=1.44129, grad_norm=0.0
+12/31/2017 16:52:29 [INFO] exp_deepmodel: Training 28/38, loss=0.63625, weight_norm=1.44375, grad_norm=0.0
+12/31/2017 16:52:34 [INFO] exp_deepmodel: Training 29/38, loss=0.55384, weight_norm=1.44595, grad_norm=0.0
+12/31/2017 16:52:40 [INFO] exp_deepmodel: Training 30/38, loss=0.57437, weight_norm=1.44827, grad_norm=0.0
+12/31/2017 16:52:46 [INFO] exp_deepmodel: Training 31/38, loss=0.62311, weight_norm=1.45051, grad_norm=0.0
+12/31/2017 16:52:51 [INFO] exp_deepmodel: Training 32/38, loss=0.52001, weight_norm=1.45313, grad_norm=0.0
+12/31/2017 16:52:57 [INFO] exp_deepmodel: Training 33/38, loss=0.59110, weight_norm=1.45567, grad_norm=0.0
+12/31/2017 16:53:03 [INFO] exp_deepmodel: Training 34/38, loss=0.61650, weight_norm=1.45800, grad_norm=0.0
+12/31/2017 16:53:08 [INFO] exp_deepmodel: Training 35/38, loss=0.64469, weight_norm=1.45992, grad_norm=0.0
+12/31/2017 16:53:14 [INFO] exp_deepmodel: Training 36/38, loss=0.51739, weight_norm=1.46203, grad_norm=0.0
+12/31/2017 16:53:15 [INFO] exp_deepmodel: Training 37/38, loss=0.65371, weight_norm=1.46312, grad_norm=0.0
+12/31/2017 16:53:15 [INFO] exp_deepmodel: --------------------Training Summary--------------------
+12/31/2017 16:53:15 [INFO] exp_deepmodel: Training loss=0.57519
+12/31/2017 16:53:15 [INFO] exp_deepmodel: Training classification report:
+12/31/2017 16:53:15 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.96      0.26      0.40       168
+          C       0.70      0.79      0.74      1355
+          F       0.86      0.97      0.91      2250
+          R       0.59      0.38      0.46       977
+
+avg / total       0.76      0.77      0.75      4750
+
+12/31/2017 16:53:15 [INFO] exp_deepmodel: Training confusion matrix:
+12/31/2017 16:53:15 [INFO] exp_deepmodel: 
+[[  43   28   75   22]
+ [   1 1074   83  197]
+ [   1   38 2173   38]
+ [   0  400  205  372]]
+12/31/2017 16:53:15 [INFO] exp_deepmodel: Training accuracy:   0.771
+12/31/2017 16:53:15 [INFO] exp_deepmodel: Training f1_score:   0.629
+12/31/2017 16:53:15 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:53:15 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:53:17 [INFO] exp_deepmodel: Validating 0/5, loss=1.12069
+12/31/2017 16:53:19 [INFO] exp_deepmodel: Validating 1/5, loss=0.21873
+12/31/2017 16:53:21 [INFO] exp_deepmodel: Validating 2/5, loss=0.21888
+12/31/2017 16:53:24 [INFO] exp_deepmodel: Validating 3/5, loss=0.39125
+12/31/2017 16:53:25 [INFO] exp_deepmodel: Validating 4/5, loss=0.96933
+12/31/2017 16:53:25 [INFO] exp_deepmodel: --------------------Validation Summary--------------------
+12/31/2017 16:53:25 [INFO] exp_deepmodel: Valid loss=0.58377
+12/31/2017 16:53:25 [INFO] exp_deepmodel: Validation Classification Report:
+12/31/2017 16:53:25 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.75      0.15      0.25        20
+          C       0.68      0.86      0.76       169
+          F       0.89      0.97      0.93       281
+          R       0.65      0.36      0.46       122
+
+avg / total       0.77      0.78      0.76       592
+
+12/31/2017 16:53:25 [INFO] exp_deepmodel: Validation Confusion Matrix:
+12/31/2017 16:53:25 [INFO] exp_deepmodel: 
+[[  3   4  11   2]
+ [  1 145   3  20]
+ [  0   7 272   2]
+ [  0  57  21  44]]
+12/31/2017 16:53:25 [INFO] exp_deepmodel: Validation accuracy:   0.784
+12/31/2017 16:53:25 [INFO] exp_deepmodel: Validation f1_score:   0.599
+12/31/2017 16:53:25 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:53:25 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:53:25 [INFO] exp_deepmodel: Update best f1 (0.5202 --> 0.5994), rate of change (ROC)=15.22
+12/31/2017 16:53:25 [INFO] exp_deepmodel: **************************************************
+12/31/2017 16:53:26 [INFO] exp_deepmodel: *************************Epoch=2*************************
+12/31/2017 16:53:31 [INFO] exp_deepmodel: Training 0/38, loss=0.50009, weight_norm=1.46490, grad_norm=0.0
+12/31/2017 16:53:37 [INFO] exp_deepmodel: Training 1/38, loss=0.57233, weight_norm=1.46667, grad_norm=0.0
+12/31/2017 16:53:43 [INFO] exp_deepmodel: Training 2/38, loss=0.50118, weight_norm=1.46865, grad_norm=0.0
+12/31/2017 16:53:48 [INFO] exp_deepmodel: Training 3/38, loss=0.52310, weight_norm=1.47108, grad_norm=0.0
+12/31/2017 16:53:55 [INFO] exp_deepmodel: Training 4/38, loss=0.58619, weight_norm=1.47370, grad_norm=0.0
+12/31/2017 16:54:00 [INFO] exp_deepmodel: Training 5/38, loss=0.50184, weight_norm=1.47664, grad_norm=0.0
+12/31/2017 16:54:06 [INFO] exp_deepmodel: Training 6/38, loss=0.54303, weight_norm=1.47971, grad_norm=0.0
+12/31/2017 16:54:12 [INFO] exp_deepmodel: Training 7/38, loss=0.47836, weight_norm=1.48310, grad_norm=0.0
+12/31/2017 16:54:18 [INFO] exp_deepmodel: Training 8/38, loss=0.50928, weight_norm=1.48674, grad_norm=0.0
+12/31/2017 16:54:24 [INFO] exp_deepmodel: Training 9/38, loss=0.50202, weight_norm=1.49037, grad_norm=0.0
+12/31/2017 16:54:29 [INFO] exp_deepmodel: Training 10/38, loss=0.39608, weight_norm=1.49435, grad_norm=0.0
+12/31/2017 16:54:35 [INFO] exp_deepmodel: Training 11/38, loss=0.45989, weight_norm=1.49845, grad_norm=0.0
+12/31/2017 16:54:41 [INFO] exp_deepmodel: Training 12/38, loss=0.51108, weight_norm=1.50261, grad_norm=0.0
+12/31/2017 16:54:46 [INFO] exp_deepmodel: Training 13/38, loss=0.59117, weight_norm=1.50625, grad_norm=0.0
+12/31/2017 16:54:51 [INFO] exp_deepmodel: Training 14/38, loss=0.41912, weight_norm=1.50997, grad_norm=0.0
+12/31/2017 16:54:57 [INFO] exp_deepmodel: Training 15/38, loss=0.55875, weight_norm=1.51327, grad_norm=0.0
+12/31/2017 16:55:02 [INFO] exp_deepmodel: Training 16/38, loss=0.54935, weight_norm=1.51643, grad_norm=0.0
+12/31/2017 16:55:08 [INFO] exp_deepmodel: Training 17/38, loss=0.53219, weight_norm=1.51919, grad_norm=0.0
+12/31/2017 16:55:13 [INFO] exp_deepmodel: Training 18/38, loss=0.59365, weight_norm=1.52151, grad_norm=0.0
+12/31/2017 16:55:18 [INFO] exp_deepmodel: Training 19/38, loss=0.65933, weight_norm=1.52342, grad_norm=0.0
+12/31/2017 16:55:24 [INFO] exp_deepmodel: Training 20/38, loss=0.58512, weight_norm=1.52523, grad_norm=0.0
+12/31/2017 16:55:29 [INFO] exp_deepmodel: Training 21/38, loss=0.58556, weight_norm=1.52705, grad_norm=0.0
+12/31/2017 16:55:34 [INFO] exp_deepmodel: Training 22/38, loss=0.41575, weight_norm=1.52943, grad_norm=0.0
+12/31/2017 16:55:39 [INFO] exp_deepmodel: Training 23/38, loss=0.61345, weight_norm=1.53161, grad_norm=0.0
+12/31/2017 16:55:44 [INFO] exp_deepmodel: Training 24/38, loss=0.40296, weight_norm=1.53429, grad_norm=0.0
+12/31/2017 16:55:50 [INFO] exp_deepmodel: Training 25/38, loss=0.56594, weight_norm=1.53695, grad_norm=0.0
+12/31/2017 16:55:55 [INFO] exp_deepmodel: Training 26/38, loss=0.49605, weight_norm=1.53973, grad_norm=0.0
+12/31/2017 16:56:00 [INFO] exp_deepmodel: Training 27/38, loss=0.59911, weight_norm=1.54218, grad_norm=0.0
+12/31/2017 16:56:05 [INFO] exp_deepmodel: Training 28/38, loss=0.66309, weight_norm=1.54420, grad_norm=0.0
+12/31/2017 16:56:10 [INFO] exp_deepmodel: Training 29/38, loss=0.69025, weight_norm=1.54579, grad_norm=0.0
+12/31/2017 16:56:15 [INFO] exp_deepmodel: Training 30/38, loss=0.52303, weight_norm=1.54713, grad_norm=0.0
+12/31/2017 16:56:20 [INFO] exp_deepmodel: Training 31/38, loss=0.63200, weight_norm=1.54801, grad_norm=0.0
+12/31/2017 16:56:25 [INFO] exp_deepmodel: Training 32/38, loss=0.54911, weight_norm=1.54877, grad_norm=0.0
+12/31/2017 16:56:31 [INFO] exp_deepmodel: Training 33/38, loss=0.51400, weight_norm=1.54972, grad_norm=0.0
+12/31/2017 16:56:36 [INFO] exp_deepmodel: Training 34/38, loss=0.48289, weight_norm=1.55083, grad_norm=0.0
+12/31/2017 16:56:41 [INFO] exp_deepmodel: Training 35/38, loss=0.63265, weight_norm=1.55169, grad_norm=0.0
+12/31/2017 16:56:46 [INFO] exp_deepmodel: Training 36/38, loss=0.52805, weight_norm=1.55292, grad_norm=0.0
+12/31/2017 16:56:47 [INFO] exp_deepmodel: Training 37/38, loss=0.40966, weight_norm=1.55430, grad_norm=0.0
+12/31/2017 16:56:47 [INFO] exp_deepmodel: --------------------Training Summary--------------------
+12/31/2017 16:56:47 [INFO] exp_deepmodel: Training loss=0.53623
+12/31/2017 16:56:47 [INFO] exp_deepmodel: Training classification report:
+12/31/2017 16:56:47 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.89      0.29      0.44       168
+          C       0.72      0.79      0.75      1355
+          F       0.87      0.96      0.91      2250
+          R       0.60      0.45      0.51       977
+
+avg / total       0.77      0.78      0.77      4750
+
+12/31/2017 16:56:47 [INFO] exp_deepmodel: Training confusion matrix:
+12/31/2017 16:56:47 [INFO] exp_deepmodel: 
+[[  49   23   67   29]
+ [   1 1067   79  208]
+ [   4   39 2155   52]
+ [   1  357  180  439]]
+12/31/2017 16:56:47 [INFO] exp_deepmodel: Training accuracy:   0.781
+12/31/2017 16:56:47 [INFO] exp_deepmodel: Training f1_score:   0.654
+12/31/2017 16:56:47 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:56:47 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:56:49 [INFO] exp_deepmodel: Validating 0/5, loss=1.20346
+12/31/2017 16:56:51 [INFO] exp_deepmodel: Validating 1/5, loss=0.24412
+12/31/2017 16:56:53 [INFO] exp_deepmodel: Validating 2/5, loss=0.25023
+12/31/2017 16:56:55 [INFO] exp_deepmodel: Validating 3/5, loss=0.34497
+12/31/2017 16:56:56 [INFO] exp_deepmodel: Validating 4/5, loss=0.89719
+12/31/2017 16:56:56 [INFO] exp_deepmodel: --------------------Validation Summary--------------------
+12/31/2017 16:56:56 [INFO] exp_deepmodel: Valid loss=0.58799
+12/31/2017 16:56:56 [INFO] exp_deepmodel: Validation Classification Report:
+12/31/2017 16:56:56 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.67      0.20      0.31        20
+          C       0.64      0.86      0.74       169
+          F       0.90      0.96      0.93       281
+          R       0.58      0.28      0.38       122
+
+avg / total       0.75      0.77      0.74       592
+
+12/31/2017 16:56:56 [INFO] exp_deepmodel: Validation Confusion Matrix:
+12/31/2017 16:56:56 [INFO] exp_deepmodel: 
+[[  4   5   8   3]
+ [  1 146   3  19]
+ [  1   8 269   3]
+ [  0  69  19  34]]
+12/31/2017 16:56:56 [INFO] exp_deepmodel: Validation accuracy:   0.765
+12/31/2017 16:56:56 [INFO] exp_deepmodel: Validation f1_score:   0.587
+12/31/2017 16:56:56 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:56:56 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 16:56:56 [INFO] exp_deepmodel: Best f1 is not updated (0.5994 --> 0.5866), rate of change (ROC)=-2.13
+12/31/2017 16:56:56 [INFO] exp_deepmodel: **************************************************
+12/31/2017 16:56:57 [INFO] exp_deepmodel: *************************Epoch=3*************************
+12/31/2017 16:57:02 [INFO] exp_deepmodel: Training 0/38, loss=0.50195, weight_norm=1.55601, grad_norm=0.0
+12/31/2017 16:57:07 [INFO] exp_deepmodel: Training 1/38, loss=0.59292, weight_norm=1.55794, grad_norm=0.0
+12/31/2017 16:57:12 [INFO] exp_deepmodel: Training 2/38, loss=0.42348, weight_norm=1.56045, grad_norm=0.0
+12/31/2017 16:57:17 [INFO] exp_deepmodel: Training 3/38, loss=0.41783, weight_norm=1.56342, grad_norm=0.0
+12/31/2017 16:57:22 [INFO] exp_deepmodel: Training 4/38, loss=0.53137, weight_norm=1.56639, grad_norm=0.0
+12/31/2017 16:57:27 [INFO] exp_deepmodel: Training 5/38, loss=0.54508, weight_norm=1.56943, grad_norm=0.0
+12/31/2017 16:57:33 [INFO] exp_deepmodel: Training 6/38, loss=0.58140, weight_norm=1.57238, grad_norm=0.0
+12/31/2017 16:57:38 [INFO] exp_deepmodel: Training 7/38, loss=0.40210, weight_norm=1.57558, grad_norm=0.0
+12/31/2017 16:57:43 [INFO] exp_deepmodel: Training 8/38, loss=0.61826, weight_norm=1.57835, grad_norm=0.0
+12/31/2017 16:57:49 [INFO] exp_deepmodel: Training 9/38, loss=0.61216, weight_norm=1.58083, grad_norm=0.0
+12/31/2017 16:57:54 [INFO] exp_deepmodel: Training 10/38, loss=0.46735, weight_norm=1.58327, grad_norm=0.0
+12/31/2017 16:57:59 [INFO] exp_deepmodel: Training 11/38, loss=0.43948, weight_norm=1.58566, grad_norm=0.0
+12/31/2017 16:58:04 [INFO] exp_deepmodel: Training 12/38, loss=0.48802, weight_norm=1.58825, grad_norm=0.0
+12/31/2017 16:58:09 [INFO] exp_deepmodel: Training 13/38, loss=0.50260, weight_norm=1.59097, grad_norm=0.0
+12/31/2017 16:58:14 [INFO] exp_deepmodel: Training 14/38, loss=0.56515, weight_norm=1.59362, grad_norm=0.0
+12/31/2017 16:58:20 [INFO] exp_deepmodel: Training 15/38, loss=0.49861, weight_norm=1.59615, grad_norm=0.0
+12/31/2017 16:58:25 [INFO] exp_deepmodel: Training 16/38, loss=0.53647, weight_norm=1.59880, grad_norm=0.0
+12/31/2017 16:58:30 [INFO] exp_deepmodel: Training 17/38, loss=0.61801, weight_norm=1.60121, grad_norm=0.0
+12/31/2017 16:58:35 [INFO] exp_deepmodel: Training 18/38, loss=0.47679, weight_norm=1.60363, grad_norm=0.0
+12/31/2017 16:58:40 [INFO] exp_deepmodel: Training 19/38, loss=0.49886, weight_norm=1.60610, grad_norm=0.0
+12/31/2017 16:58:45 [INFO] exp_deepmodel: Training 20/38, loss=0.34906, weight_norm=1.60913, grad_norm=0.0
+12/31/2017 16:58:50 [INFO] exp_deepmodel: Training 21/38, loss=0.50121, weight_norm=1.61196, grad_norm=0.0
+12/31/2017 16:58:55 [INFO] exp_deepmodel: Training 22/38, loss=0.59113, weight_norm=1.61462, grad_norm=0.0
+12/31/2017 16:59:00 [INFO] exp_deepmodel: Training 23/38, loss=0.46819, weight_norm=1.61742, grad_norm=0.0
+12/31/2017 16:59:05 [INFO] exp_deepmodel: Training 24/38, loss=0.49997, weight_norm=1.62032, grad_norm=0.0
+12/31/2017 16:59:10 [INFO] exp_deepmodel: Training 25/38, loss=0.60952, weight_norm=1.62279, grad_norm=0.0
+12/31/2017 16:59:15 [INFO] exp_deepmodel: Training 26/38, loss=0.49310, weight_norm=1.62491, grad_norm=0.0
+12/31/2017 16:59:20 [INFO] exp_deepmodel: Training 27/38, loss=0.52975, weight_norm=1.62703, grad_norm=0.0
+12/31/2017 16:59:25 [INFO] exp_deepmodel: Training 28/38, loss=0.46310, weight_norm=1.62927, grad_norm=0.0
+12/31/2017 16:59:31 [INFO] exp_deepmodel: Training 29/38, loss=0.55148, weight_norm=1.63163, grad_norm=0.0
+12/31/2017 16:59:37 [INFO] exp_deepmodel: Training 30/38, loss=0.55128, weight_norm=1.63355, grad_norm=0.0
+12/31/2017 16:59:43 [INFO] exp_deepmodel: Training 31/38, loss=0.58644, weight_norm=1.63539, grad_norm=0.0
+12/31/2017 16:59:48 [INFO] exp_deepmodel: Training 32/38, loss=0.51115, weight_norm=1.63741, grad_norm=0.0
+12/31/2017 16:59:54 [INFO] exp_deepmodel: Training 33/38, loss=0.51411, weight_norm=1.63923, grad_norm=0.0
+12/31/2017 16:59:59 [INFO] exp_deepmodel: Training 34/38, loss=0.45752, weight_norm=1.64134, grad_norm=0.0
+12/31/2017 17:00:05 [INFO] exp_deepmodel: Training 35/38, loss=0.47226, weight_norm=1.64363, grad_norm=0.0
+12/31/2017 17:00:10 [INFO] exp_deepmodel: Training 36/38, loss=0.41337, weight_norm=1.64622, grad_norm=0.0
+12/31/2017 17:00:11 [INFO] exp_deepmodel: Training 37/38, loss=0.30258, weight_norm=1.64953, grad_norm=0.0
+12/31/2017 17:00:11 [INFO] exp_deepmodel: --------------------Training Summary--------------------
+12/31/2017 17:00:11 [INFO] exp_deepmodel: Training loss=0.50482
+12/31/2017 17:00:11 [INFO] exp_deepmodel: Training classification report:
+12/31/2017 17:00:11 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.93      0.33      0.49       168
+          C       0.73      0.82      0.77      1355
+          F       0.87      0.96      0.92      2250
+          R       0.64      0.45      0.53       977
+
+avg / total       0.79      0.79      0.78      4750
+
+12/31/2017 17:00:11 [INFO] exp_deepmodel: Training confusion matrix:
+12/31/2017 17:00:11 [INFO] exp_deepmodel: 
+[[  56   21   60   31]
+ [   1 1113   78  163]
+ [   2   34 2164   50]
+ [   1  358  177  441]]
+12/31/2017 17:00:11 [INFO] exp_deepmodel: Training accuracy:   0.795
+12/31/2017 17:00:11 [INFO] exp_deepmodel: Training f1_score:   0.677
+12/31/2017 17:00:11 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:00:11 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:00:13 [INFO] exp_deepmodel: Validating 0/5, loss=1.07984
+12/31/2017 17:00:15 [INFO] exp_deepmodel: Validating 1/5, loss=0.22624
+12/31/2017 17:00:17 [INFO] exp_deepmodel: Validating 2/5, loss=0.22723
+12/31/2017 17:00:18 [INFO] exp_deepmodel: Validating 3/5, loss=0.36144
+12/31/2017 17:00:20 [INFO] exp_deepmodel: Validating 4/5, loss=0.97302
+12/31/2017 17:00:20 [INFO] exp_deepmodel: --------------------Validation Summary--------------------
+12/31/2017 17:00:20 [INFO] exp_deepmodel: Valid loss=0.57355
+12/31/2017 17:00:20 [INFO] exp_deepmodel: Validation Classification Report:
+12/31/2017 17:00:20 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.75      0.15      0.25        20
+          C       0.70      0.85      0.76       169
+          F       0.89      0.94      0.91       281
+          R       0.61      0.43      0.50       122
+
+avg / total       0.77      0.78      0.76       592
+
+12/31/2017 17:00:20 [INFO] exp_deepmodel: Validation Confusion Matrix:
+12/31/2017 17:00:20 [INFO] exp_deepmodel: 
+[[  3   2  10   5]
+ [  1 143   5  20]
+ [  0   9 264   8]
+ [  0  51  19  52]]
+12/31/2017 17:00:20 [INFO] exp_deepmodel: Validation accuracy:   0.780
+12/31/2017 17:00:20 [INFO] exp_deepmodel: Validation f1_score:   0.607
+12/31/2017 17:00:20 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:00:20 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:00:20 [INFO] exp_deepmodel: Update best f1 (0.5994 --> 0.6073), rate of change (ROC)=1.32
+12/31/2017 17:00:20 [INFO] exp_deepmodel: **************************************************
+12/31/2017 17:00:21 [INFO] exp_deepmodel: *************************Epoch=4*************************
+12/31/2017 17:00:26 [INFO] exp_deepmodel: Training 0/38, loss=0.47725, weight_norm=1.65279, grad_norm=0.0
+12/31/2017 17:00:32 [INFO] exp_deepmodel: Training 1/38, loss=0.45369, weight_norm=1.65627, grad_norm=0.0
+12/31/2017 17:00:38 [INFO] exp_deepmodel: Training 2/38, loss=0.34087, weight_norm=1.65991, grad_norm=0.0
+12/31/2017 17:00:44 [INFO] exp_deepmodel: Training 3/38, loss=0.40137, weight_norm=1.66374, grad_norm=0.0
+12/31/2017 17:00:50 [INFO] exp_deepmodel: Training 4/38, loss=0.38117, weight_norm=1.66753, grad_norm=0.0
+12/31/2017 17:00:56 [INFO] exp_deepmodel: Training 5/38, loss=0.41943, weight_norm=1.67103, grad_norm=0.0
+12/31/2017 17:01:01 [INFO] exp_deepmodel: Training 6/38, loss=0.45435, weight_norm=1.67454, grad_norm=0.0
+12/31/2017 17:01:06 [INFO] exp_deepmodel: Training 7/38, loss=0.69846, weight_norm=1.67707, grad_norm=0.0
+12/31/2017 17:01:12 [INFO] exp_deepmodel: Training 8/38, loss=0.49776, weight_norm=1.67926, grad_norm=0.0
+12/31/2017 17:01:18 [INFO] exp_deepmodel: Training 9/38, loss=0.50618, weight_norm=1.68149, grad_norm=0.0
+12/31/2017 17:01:24 [INFO] exp_deepmodel: Training 10/38, loss=0.41997, weight_norm=1.68372, grad_norm=0.0
+12/31/2017 17:01:29 [INFO] exp_deepmodel: Training 11/38, loss=0.52202, weight_norm=1.68606, grad_norm=0.0
+12/31/2017 17:01:35 [INFO] exp_deepmodel: Training 12/38, loss=0.50897, weight_norm=1.68801, grad_norm=0.0
+12/31/2017 17:01:40 [INFO] exp_deepmodel: Training 13/38, loss=0.51405, weight_norm=1.68986, grad_norm=0.0
+12/31/2017 17:01:46 [INFO] exp_deepmodel: Training 14/38, loss=0.51510, weight_norm=1.69195, grad_norm=0.0
+12/31/2017 17:01:52 [INFO] exp_deepmodel: Training 15/38, loss=0.53958, weight_norm=1.69384, grad_norm=0.0
+12/31/2017 17:01:58 [INFO] exp_deepmodel: Training 16/38, loss=0.47801, weight_norm=1.69598, grad_norm=0.0
+12/31/2017 17:02:03 [INFO] exp_deepmodel: Training 17/38, loss=0.47021, weight_norm=1.69844, grad_norm=0.0
+12/31/2017 17:02:09 [INFO] exp_deepmodel: Training 18/38, loss=0.59537, weight_norm=1.70045, grad_norm=0.0
+12/31/2017 17:02:15 [INFO] exp_deepmodel: Training 19/38, loss=0.51898, weight_norm=1.70239, grad_norm=0.0
+12/31/2017 17:02:20 [INFO] exp_deepmodel: Training 20/38, loss=0.44946, weight_norm=1.70434, grad_norm=0.0
+12/31/2017 17:02:26 [INFO] exp_deepmodel: Training 21/38, loss=0.39581, weight_norm=1.70656, grad_norm=0.0
+12/31/2017 17:02:32 [INFO] exp_deepmodel: Training 22/38, loss=0.60293, weight_norm=1.70827, grad_norm=0.0
+12/31/2017 17:02:37 [INFO] exp_deepmodel: Training 23/38, loss=0.41918, weight_norm=1.71027, grad_norm=0.0
+12/31/2017 17:02:43 [INFO] exp_deepmodel: Training 24/38, loss=0.44800, weight_norm=1.71239, grad_norm=0.0
+12/31/2017 17:02:48 [INFO] exp_deepmodel: Training 25/38, loss=0.37876, weight_norm=1.71495, grad_norm=0.0
+12/31/2017 17:02:53 [INFO] exp_deepmodel: Training 26/38, loss=0.38813, weight_norm=1.71767, grad_norm=0.0
+12/31/2017 17:02:59 [INFO] exp_deepmodel: Training 27/38, loss=0.48954, weight_norm=1.72024, grad_norm=0.0
+12/31/2017 17:03:05 [INFO] exp_deepmodel: Training 28/38, loss=0.44797, weight_norm=1.72306, grad_norm=0.0
+12/31/2017 17:03:10 [INFO] exp_deepmodel: Training 29/38, loss=0.43838, weight_norm=1.72610, grad_norm=0.0
+12/31/2017 17:03:16 [INFO] exp_deepmodel: Training 30/38, loss=0.49882, weight_norm=1.72914, grad_norm=0.0
+12/31/2017 17:03:21 [INFO] exp_deepmodel: Training 31/38, loss=0.51459, weight_norm=1.73194, grad_norm=0.0
+12/31/2017 17:03:26 [INFO] exp_deepmodel: Training 32/38, loss=0.58843, weight_norm=1.73438, grad_norm=0.0
+12/31/2017 17:03:31 [INFO] exp_deepmodel: Training 33/38, loss=0.49396, weight_norm=1.73641, grad_norm=0.0
+12/31/2017 17:03:36 [INFO] exp_deepmodel: Training 34/38, loss=0.44938, weight_norm=1.73851, grad_norm=0.0
+12/31/2017 17:03:42 [INFO] exp_deepmodel: Training 35/38, loss=0.62210, weight_norm=1.73992, grad_norm=0.0
+12/31/2017 17:03:48 [INFO] exp_deepmodel: Training 36/38, loss=0.44033, weight_norm=1.74141, grad_norm=0.0
+12/31/2017 17:03:49 [INFO] exp_deepmodel: Training 37/38, loss=0.44331, weight_norm=1.74299, grad_norm=0.0
+12/31/2017 17:03:49 [INFO] exp_deepmodel: --------------------Training Summary--------------------
+12/31/2017 17:03:49 [INFO] exp_deepmodel: Training loss=0.47952
+12/31/2017 17:03:49 [INFO] exp_deepmodel: Training classification report:
+12/31/2017 17:03:49 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.85      0.38      0.52       168
+          C       0.75      0.81      0.78      1355
+          F       0.88      0.96      0.92      2250
+          R       0.66      0.51      0.58       977
+
+avg / total       0.80      0.81      0.80      4750
+
+12/31/2017 17:03:49 [INFO] exp_deepmodel: Training confusion matrix:
+12/31/2017 17:03:49 [INFO] exp_deepmodel: 
+[[  63   18   51   36]
+ [   2 1098   77  178]
+ [   4   40 2166   40]
+ [   5  315  157  500]]
+12/31/2017 17:03:49 [INFO] exp_deepmodel: Training accuracy:   0.806
+12/31/2017 17:03:49 [INFO] exp_deepmodel: Training f1_score:   0.699
+12/31/2017 17:03:49 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:03:49 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:03:51 [INFO] exp_deepmodel: Validating 0/5, loss=0.91724
+12/31/2017 17:03:53 [INFO] exp_deepmodel: Validating 1/5, loss=0.19809
+12/31/2017 17:03:55 [INFO] exp_deepmodel: Validating 2/5, loss=0.18970
+12/31/2017 17:03:58 [INFO] exp_deepmodel: Validating 3/5, loss=0.47437
+12/31/2017 17:03:59 [INFO] exp_deepmodel: Validating 4/5, loss=1.18284
+12/31/2017 17:03:59 [INFO] exp_deepmodel: --------------------Validation Summary--------------------
+12/31/2017 17:03:59 [INFO] exp_deepmodel: Valid loss=0.59245
+12/31/2017 17:03:59 [INFO] exp_deepmodel: Validation Classification Report:
+12/31/2017 17:03:59 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.67      0.10      0.17        20
+          C       0.75      0.75      0.75       169
+          F       0.88      0.95      0.92       281
+          R       0.56      0.54      0.55       122
+
+avg / total       0.77      0.78      0.77       592
+
+12/31/2017 17:03:59 [INFO] exp_deepmodel: Validation Confusion Matrix:
+12/31/2017 17:03:59 [INFO] exp_deepmodel: 
+[[  2   2  11   5]
+ [  1 126   5  37]
+ [  0   4 268   9]
+ [  0  36  20  66]]
+12/31/2017 17:03:59 [INFO] exp_deepmodel: Validation accuracy:   0.780
+12/31/2017 17:03:59 [INFO] exp_deepmodel: Validation f1_score:   0.598
+12/31/2017 17:03:59 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:03:59 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:03:59 [INFO] exp_deepmodel: Best f1 is not updated (0.6073 --> 0.5976), rate of change (ROC)=-1.60
+12/31/2017 17:03:59 [INFO] exp_deepmodel: **************************************************
+12/31/2017 17:04:00 [INFO] exp_deepmodel: *************************Epoch=5*************************
+12/31/2017 17:04:06 [INFO] exp_deepmodel: Training 0/38, loss=0.43375, weight_norm=1.74465, grad_norm=0.0
+12/31/2017 17:04:12 [INFO] exp_deepmodel: Training 1/38, loss=0.39976, weight_norm=1.74669, grad_norm=0.0
+12/31/2017 17:04:18 [INFO] exp_deepmodel: Training 2/38, loss=0.57178, weight_norm=1.74860, grad_norm=0.0
+12/31/2017 17:04:24 [INFO] exp_deepmodel: Training 3/38, loss=0.49491, weight_norm=1.75057, grad_norm=0.0
+12/31/2017 17:04:30 [INFO] exp_deepmodel: Training 4/38, loss=0.50475, weight_norm=1.75288, grad_norm=0.0
+12/31/2017 17:04:36 [INFO] exp_deepmodel: Training 5/38, loss=0.47851, weight_norm=1.75547, grad_norm=0.0
+12/31/2017 17:04:42 [INFO] exp_deepmodel: Training 6/38, loss=0.43564, weight_norm=1.75846, grad_norm=0.0
+12/31/2017 17:04:48 [INFO] exp_deepmodel: Training 7/38, loss=0.49569, weight_norm=1.76127, grad_norm=0.0
+12/31/2017 17:04:53 [INFO] exp_deepmodel: Training 8/38, loss=0.54939, weight_norm=1.76399, grad_norm=0.0
+12/31/2017 17:04:59 [INFO] exp_deepmodel: Training 9/38, loss=0.41038, weight_norm=1.76697, grad_norm=0.0
+12/31/2017 17:05:05 [INFO] exp_deepmodel: Training 10/38, loss=0.45054, weight_norm=1.77003, grad_norm=0.0
+12/31/2017 17:05:10 [INFO] exp_deepmodel: Training 11/38, loss=0.47525, weight_norm=1.77327, grad_norm=0.0
+12/31/2017 17:05:16 [INFO] exp_deepmodel: Training 12/38, loss=0.50135, weight_norm=1.77621, grad_norm=0.0
+12/31/2017 17:05:22 [INFO] exp_deepmodel: Training 13/38, loss=0.49043, weight_norm=1.77899, grad_norm=0.0
+12/31/2017 17:05:29 [INFO] exp_deepmodel: Training 14/38, loss=0.43766, weight_norm=1.78179, grad_norm=0.0
+12/31/2017 17:05:36 [INFO] exp_deepmodel: Training 15/38, loss=0.41091, weight_norm=1.78471, grad_norm=0.0
+12/31/2017 17:05:43 [INFO] exp_deepmodel: Training 16/38, loss=0.47922, weight_norm=1.78738, grad_norm=0.0
+12/31/2017 17:05:50 [INFO] exp_deepmodel: Training 17/38, loss=0.34946, weight_norm=1.79042, grad_norm=0.0
+12/31/2017 17:05:57 [INFO] exp_deepmodel: Training 18/38, loss=0.44548, weight_norm=1.79338, grad_norm=0.0
+12/31/2017 17:06:04 [INFO] exp_deepmodel: Training 19/38, loss=0.47896, weight_norm=1.79617, grad_norm=0.0
+12/31/2017 17:06:11 [INFO] exp_deepmodel: Training 20/38, loss=0.42668, weight_norm=1.79900, grad_norm=0.0
+12/31/2017 17:06:18 [INFO] exp_deepmodel: Training 21/38, loss=0.44354, weight_norm=1.80141, grad_norm=0.0
+12/31/2017 17:06:25 [INFO] exp_deepmodel: Training 22/38, loss=0.44343, weight_norm=1.80396, grad_norm=0.0
+12/31/2017 17:06:31 [INFO] exp_deepmodel: Training 23/38, loss=0.48085, weight_norm=1.80632, grad_norm=0.0
+12/31/2017 17:06:37 [INFO] exp_deepmodel: Training 24/38, loss=0.43828, weight_norm=1.80840, grad_norm=0.0
+12/31/2017 17:06:44 [INFO] exp_deepmodel: Training 25/38, loss=0.45381, weight_norm=1.81054, grad_norm=0.0
+12/31/2017 17:06:50 [INFO] exp_deepmodel: Training 26/38, loss=0.51843, weight_norm=1.81241, grad_norm=0.0
+12/31/2017 17:06:57 [INFO] exp_deepmodel: Training 27/38, loss=0.42075, weight_norm=1.81466, grad_norm=0.0
+12/31/2017 17:07:04 [INFO] exp_deepmodel: Training 28/38, loss=0.50518, weight_norm=1.81697, grad_norm=0.0
+12/31/2017 17:07:12 [INFO] exp_deepmodel: Training 29/38, loss=0.37029, weight_norm=1.81951, grad_norm=0.0
+12/31/2017 17:07:20 [INFO] exp_deepmodel: Training 30/38, loss=0.45046, weight_norm=1.82202, grad_norm=0.0
+12/31/2017 17:07:29 [INFO] exp_deepmodel: Training 31/38, loss=0.54966, weight_norm=1.82419, grad_norm=0.0
+12/31/2017 17:07:37 [INFO] exp_deepmodel: Training 32/38, loss=0.45089, weight_norm=1.82627, grad_norm=0.0
+12/31/2017 17:07:44 [INFO] exp_deepmodel: Training 33/38, loss=0.46407, weight_norm=1.82810, grad_norm=0.0
+12/31/2017 17:07:51 [INFO] exp_deepmodel: Training 34/38, loss=0.40644, weight_norm=1.83003, grad_norm=0.0
+12/31/2017 17:07:58 [INFO] exp_deepmodel: Training 35/38, loss=0.40812, weight_norm=1.83192, grad_norm=0.0
+12/31/2017 17:08:04 [INFO] exp_deepmodel: Training 36/38, loss=0.56348, weight_norm=1.83359, grad_norm=0.0
+12/31/2017 17:08:05 [INFO] exp_deepmodel: Training 37/38, loss=0.69666, weight_norm=1.83501, grad_norm=0.0
+12/31/2017 17:08:05 [INFO] exp_deepmodel: --------------------Training Summary--------------------
+12/31/2017 17:08:05 [INFO] exp_deepmodel: Training loss=0.46802
+12/31/2017 17:08:05 [INFO] exp_deepmodel: Training classification report:
+12/31/2017 17:08:05 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.87      0.39      0.54       168
+          C       0.76      0.82      0.79      1355
+          F       0.89      0.97      0.92      2250
+          R       0.67      0.53      0.59       977
+
+avg / total       0.81      0.81      0.80      4750
+
+12/31/2017 17:08:05 [INFO] exp_deepmodel: Training confusion matrix:
+12/31/2017 17:08:05 [INFO] exp_deepmodel: 
+[[  66   18   49   35]
+ [   3 1106   74  172]
+ [   2   28 2172   48]
+ [   5  301  153  518]]
+12/31/2017 17:08:05 [INFO] exp_deepmodel: Training accuracy:   0.813
+12/31/2017 17:08:05 [INFO] exp_deepmodel: Training f1_score:   0.711
+12/31/2017 17:08:05 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:08:05 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:08:08 [INFO] exp_deepmodel: Validating 0/5, loss=1.02609
+12/31/2017 17:08:10 [INFO] exp_deepmodel: Validating 1/5, loss=0.23854
+12/31/2017 17:08:12 [INFO] exp_deepmodel: Validating 2/5, loss=0.23269
+12/31/2017 17:08:15 [INFO] exp_deepmodel: Validating 3/5, loss=0.36653
+12/31/2017 17:08:16 [INFO] exp_deepmodel: Validating 4/5, loss=1.02060
+12/31/2017 17:08:16 [INFO] exp_deepmodel: --------------------Validation Summary--------------------
+12/31/2017 17:08:16 [INFO] exp_deepmodel: Valid loss=0.57689
+12/31/2017 17:08:16 [INFO] exp_deepmodel: Validation Classification Report:
+12/31/2017 17:08:16 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.67      0.20      0.31        20
+          C       0.71      0.82      0.76       169
+          F       0.90      0.93      0.91       281
+          R       0.57      0.48      0.52       122
+
+avg / total       0.77      0.78      0.77       592
+
+12/31/2017 17:08:16 [INFO] exp_deepmodel: Validation Confusion Matrix:
+12/31/2017 17:08:16 [INFO] exp_deepmodel: 
+[[  4   3   8   5]
+ [  1 138   3  27]
+ [  0   9 261  11]
+ [  1  44  19  58]]
+12/31/2017 17:08:16 [INFO] exp_deepmodel: Validation accuracy:   0.779
+12/31/2017 17:08:16 [INFO] exp_deepmodel: Validation f1_score:   0.625
+12/31/2017 17:08:16 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:08:16 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:08:16 [INFO] exp_deepmodel: Update best f1 (0.6073 --> 0.6252), rate of change (ROC)=2.95
+12/31/2017 17:08:16 [INFO] exp_deepmodel: **************************************************
+12/31/2017 17:08:18 [INFO] exp_deepmodel: *************************Epoch=6*************************
+12/31/2017 17:08:23 [INFO] exp_deepmodel: Training 0/38, loss=0.40472, weight_norm=1.83650, grad_norm=0.0
+12/31/2017 17:08:29 [INFO] exp_deepmodel: Training 1/38, loss=0.41382, weight_norm=1.83827, grad_norm=0.0
+12/31/2017 17:08:35 [INFO] exp_deepmodel: Training 2/38, loss=0.43486, weight_norm=1.84030, grad_norm=0.0
+12/31/2017 17:08:41 [INFO] exp_deepmodel: Training 3/38, loss=0.43691, weight_norm=1.84238, grad_norm=0.0
+12/31/2017 17:08:48 [INFO] exp_deepmodel: Training 4/38, loss=0.39527, weight_norm=1.84457, grad_norm=0.0
+12/31/2017 17:08:56 [INFO] exp_deepmodel: Training 5/38, loss=0.47340, weight_norm=1.84670, grad_norm=0.0
+12/31/2017 17:09:05 [INFO] exp_deepmodel: Training 6/38, loss=0.41245, weight_norm=1.84875, grad_norm=0.0
+12/31/2017 17:09:13 [INFO] exp_deepmodel: Training 7/38, loss=0.53397, weight_norm=1.85069, grad_norm=0.0
+12/31/2017 17:09:19 [INFO] exp_deepmodel: Training 8/38, loss=0.44310, weight_norm=1.85264, grad_norm=0.0
+12/31/2017 17:09:26 [INFO] exp_deepmodel: Training 9/38, loss=0.41898, weight_norm=1.85477, grad_norm=0.0
+12/31/2017 17:09:32 [INFO] exp_deepmodel: Training 10/38, loss=0.49773, weight_norm=1.85647, grad_norm=0.0
+12/31/2017 17:09:39 [INFO] exp_deepmodel: Training 11/38, loss=0.39191, weight_norm=1.85826, grad_norm=0.0
+12/31/2017 17:09:45 [INFO] exp_deepmodel: Training 12/38, loss=0.46679, weight_norm=1.85984, grad_norm=0.0
+12/31/2017 17:09:50 [INFO] exp_deepmodel: Training 13/38, loss=0.40003, weight_norm=1.86147, grad_norm=0.0
+12/31/2017 17:09:56 [INFO] exp_deepmodel: Training 14/38, loss=0.36020, weight_norm=1.86329, grad_norm=0.0
+12/31/2017 17:10:02 [INFO] exp_deepmodel: Training 15/38, loss=0.44806, weight_norm=1.86506, grad_norm=0.0
+12/31/2017 17:10:08 [INFO] exp_deepmodel: Training 16/38, loss=0.43384, weight_norm=1.86691, grad_norm=0.0
+12/31/2017 17:10:14 [INFO] exp_deepmodel: Training 17/38, loss=0.41937, weight_norm=1.86908, grad_norm=0.0
+12/31/2017 17:10:19 [INFO] exp_deepmodel: Training 18/38, loss=0.53538, weight_norm=1.87134, grad_norm=0.0
+12/31/2017 17:10:26 [INFO] exp_deepmodel: Training 19/38, loss=0.54246, weight_norm=1.87346, grad_norm=0.0
+12/31/2017 17:10:32 [INFO] exp_deepmodel: Training 20/38, loss=0.50540, weight_norm=1.87514, grad_norm=0.0
+12/31/2017 17:10:38 [INFO] exp_deepmodel: Training 21/38, loss=0.42025, weight_norm=1.87686, grad_norm=0.0
+12/31/2017 17:10:44 [INFO] exp_deepmodel: Training 22/38, loss=0.48055, weight_norm=1.87835, grad_norm=0.0
+12/31/2017 17:10:50 [INFO] exp_deepmodel: Training 23/38, loss=0.45394, weight_norm=1.88005, grad_norm=0.0
+12/31/2017 17:10:56 [INFO] exp_deepmodel: Training 24/38, loss=0.52746, weight_norm=1.88181, grad_norm=0.0
+12/31/2017 17:11:02 [INFO] exp_deepmodel: Training 25/38, loss=0.40968, weight_norm=1.88386, grad_norm=0.0
+12/31/2017 17:11:09 [INFO] exp_deepmodel: Training 26/38, loss=0.45955, weight_norm=1.88579, grad_norm=0.0
+12/31/2017 17:11:15 [INFO] exp_deepmodel: Training 27/38, loss=0.41644, weight_norm=1.88788, grad_norm=0.0
+12/31/2017 17:11:22 [INFO] exp_deepmodel: Training 28/38, loss=0.41820, weight_norm=1.89012, grad_norm=0.0
+12/31/2017 17:11:29 [INFO] exp_deepmodel: Training 29/38, loss=0.46608, weight_norm=1.89223, grad_norm=0.0
+12/31/2017 17:11:35 [INFO] exp_deepmodel: Training 30/38, loss=0.53645, weight_norm=1.89432, grad_norm=0.0
+12/31/2017 17:11:41 [INFO] exp_deepmodel: Training 31/38, loss=0.42627, weight_norm=1.89641, grad_norm=0.0
+12/31/2017 17:11:47 [INFO] exp_deepmodel: Training 32/38, loss=0.48863, weight_norm=1.89836, grad_norm=0.0
+12/31/2017 17:11:53 [INFO] exp_deepmodel: Training 33/38, loss=0.51929, weight_norm=1.90013, grad_norm=0.0
+12/31/2017 17:11:59 [INFO] exp_deepmodel: Training 34/38, loss=0.41661, weight_norm=1.90192, grad_norm=0.0
+12/31/2017 17:12:07 [INFO] exp_deepmodel: Training 35/38, loss=0.49837, weight_norm=1.90350, grad_norm=0.0
+12/31/2017 17:12:13 [INFO] exp_deepmodel: Training 36/38, loss=0.36362, weight_norm=1.90545, grad_norm=0.0
+12/31/2017 17:12:14 [INFO] exp_deepmodel: Training 37/38, loss=0.32560, weight_norm=1.90728, grad_norm=0.0
+12/31/2017 17:12:14 [INFO] exp_deepmodel: --------------------Training Summary--------------------
+12/31/2017 17:12:14 [INFO] exp_deepmodel: Training loss=0.44725
+12/31/2017 17:12:14 [INFO] exp_deepmodel: Training classification report:
+12/31/2017 17:12:14 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.81      0.42      0.55       168
+          C       0.76      0.83      0.79      1355
+          F       0.90      0.96      0.93      2250
+          R       0.68      0.55      0.61       977
+
+avg / total       0.81      0.82      0.81      4750
+
+12/31/2017 17:12:14 [INFO] exp_deepmodel: Training confusion matrix:
+12/31/2017 17:12:14 [INFO] exp_deepmodel: 
+[[  71   19   49   29]
+ [   3 1122   56  174]
+ [   7   45 2151   47]
+ [   7  292  137  541]]
+12/31/2017 17:12:14 [INFO] exp_deepmodel: Training accuracy:   0.818
+12/31/2017 17:12:14 [INFO] exp_deepmodel: Training f1_score:   0.721
+12/31/2017 17:12:14 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:12:14 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:12:17 [INFO] exp_deepmodel: Validating 0/5, loss=1.01963
+12/31/2017 17:12:20 [INFO] exp_deepmodel: Validating 1/5, loss=0.22939
+12/31/2017 17:12:22 [INFO] exp_deepmodel: Validating 2/5, loss=0.19675
+12/31/2017 17:12:25 [INFO] exp_deepmodel: Validating 3/5, loss=0.38505
+12/31/2017 17:12:26 [INFO] exp_deepmodel: Validating 4/5, loss=1.11688
+12/31/2017 17:12:26 [INFO] exp_deepmodel: --------------------Validation Summary--------------------
+12/31/2017 17:12:26 [INFO] exp_deepmodel: Valid loss=0.58954
+12/31/2017 17:12:26 [INFO] exp_deepmodel: Validation Classification Report:
+12/31/2017 17:12:26 [INFO] exp_deepmodel:              precision    recall  f1-score   support
+
+          A       0.75      0.15      0.25        20
+          C       0.70      0.80      0.75       169
+          F       0.89      0.94      0.91       281
+          R       0.59      0.48      0.53       122
+
+avg / total       0.77      0.78      0.77       592
+
+12/31/2017 17:12:26 [INFO] exp_deepmodel: Validation Confusion Matrix:
+12/31/2017 17:12:26 [INFO] exp_deepmodel: 
+[[  3   2  10   5]
+ [  1 136   5  27]
+ [  0   9 264   8]
+ [  0  46  18  58]]
+12/31/2017 17:12:26 [INFO] exp_deepmodel: Validation accuracy:   0.779
+12/31/2017 17:12:26 [INFO] exp_deepmodel: Validation f1_score:   0.611
+12/31/2017 17:12:26 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:12:26 [INFO] exp_deepmodel: ****************************************************************************************************
+12/31/2017 17:12:26 [INFO] exp_deepmodel: Best f1 is not updated (0.6252 --> 0.6105), rate of change (ROC)=-2.34
+12/31/2017 17:12:26 [INFO] exp_deepmodel: **************************************************
+12/31/2017 17:12:28 [INFO] exp_deepmodel: *************************Epoch=7*************************
+12/31/2017 17:12:33 [INFO] exp_deepmodel: Training 0/38, loss=0.50409, weight_norm=1.90906, grad_norm=0.0
+12/31/2017 17:12:39 [INFO] exp_deepmodel: Training 1/38, loss=0.51613, weight_norm=1.91076, grad_norm=0.0
+12/31/2017 17:12:45 [INFO] exp_deepmodel: Training 2/38, loss=0.53372, weight_norm=1.91253, grad_norm=0.0
+12/31/2017 17:12:52 [INFO] exp_deepmodel: Training 3/38, loss=0.52578, weight_norm=1.91435, grad_norm=0.0
+12/31/2017 17:12:59 [INFO] exp_deepmodel: Training 4/38, loss=0.45212, weight_norm=1.91628, grad_norm=0.0
+12/31/2017 17:13:05 [INFO] exp_deepmodel: Training 5/38, loss=0.39702, weight_norm=1.91842, grad_norm=0.0
+12/31/2017 17:13:11 [INFO] exp_deepmodel: Training 6/38, loss=0.43355, weight_norm=1.92075, grad_norm=0.0
+12/31/2017 17:13:17 [INFO] exp_deepmodel: Training 7/38, loss=0.40610, weight_norm=1.92317, grad_norm=0.0
+12/31/2017 17:13:24 [INFO] exp_deepmodel: Training 8/38, loss=0.40995, weight_norm=1.92560, grad_norm=0.0
+12/31/2017 17:13:32 [INFO] exp_deepmodel: Training 9/38, loss=0.37619, weight_norm=1.92816, grad_norm=0.0

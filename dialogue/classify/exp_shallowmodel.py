@@ -283,7 +283,7 @@ class ShallowExperimenter():
 
         return train_ids, test_ids
 
-    def benchmark(self, model_name, clf):
+    def benchmark(self, mobenchmardel_name, clf):
         global X_train, Y_train, X_test, Y_test
         results = []
 
@@ -453,12 +453,20 @@ class ShallowExperimenter():
 
         results = []
 
+        # a special one with large C to disable the regularization
+        self.logger.info('=' * 80)
+        C = 1e20
+        self.logger.info("LR.pen=l2.C=%f" % C)
+        results.append(self.benchmark('LR.pen=l2.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l2', C=C)))
+
+        '''
         for C in [2**x for x in [1]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
             results.append(self.benchmark('LR.pen=l1.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l1', C=C)))
+        '''
 
-            '''
+        '''
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%f" % C)
             results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
@@ -481,7 +489,7 @@ class ShallowExperimenter():
                                           degree=3, gamma='auto', kernel='rbf',
                                           max_iter=-1, probability=False, random_state=None, shrinking=True,
                                           tol=0.001, verbose=False)))
-            '''
+        '''
 
         """
         if self.config.param['data_name'] in ['dstc2', 'dstc3']:
@@ -1077,7 +1085,7 @@ class ShallowExperimenter():
         self.logger.info('=' * 80)
         self.logger.info("LR.pen=l1.C=%f" % C)
         # Train Logistic Regression model
-        return self.benchmark('LR.pen=l1.C=%d' % C,
+        return self.k('LR.pen=l1.C=%d' % C,
                                       LogisticRegression(solver="liblinear", penalty='l1', C=C), return_y_pred = True)
 
     def export_single_pass_results(self, results):
