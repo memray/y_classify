@@ -17,7 +17,7 @@
 
 # Run the job
 if [ "$EXP_MODE" = "cross_validation" ]; then
-    COMMAND="/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode $EXP_MODE -selected_feature_set_id $FEATURE_ID  -selected_context_id $CONTEXT
+    COMMAND="/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode $EXP_MODE -selected_feature_set_id $FEATURE_ID  -selected_context_id $CONTEXT"
 else
     COMMAND="/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode $EXP_MODE -selected_feature_set_id $FEATURE_ID  -selected_context_id $CONTEXT -k_feature_to_keep $NUMBER_TO_KEEP"
 fi

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-EXP_MODE='cross_validation'
+export EXP_MODE='cross_validation'
+
 # 0.all, [1-8] each feature set, [9-13] combined features, [14] is [1,3,4]
 START=0
 END=14

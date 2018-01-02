@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-EXP_MODE='continuous_feature_selection'
+export EXP_MODE='continuous_feature_selection'
 # 0.all, [1-8] each feature set, [9-13] combined features
 # do feature selection on 9 and 11
 
