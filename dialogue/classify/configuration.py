@@ -320,27 +320,28 @@ def load_batch_config(key_params):
         '''
         param['feature_set'] = \
                 ['0-all', '1-basic', '2-lexical', '3-phrasal', '4-syntactic', '5-lda', '6-w2v', '7-d2v', '8-skipthought',
-                 '9-[2+1.3.4]', '10-[5+1.3.4]', '11-[6+1.3.4]', '12-[7+1.3.4]', '13-[8+1.3.4]'][param['selected_feature_set_id']]
+                 '9-[2+1.3.4]', '10-[5+1.3.4]', '11-[6+1.3.4]', '12-[7+1.3.4]', '13-[8+1.3.4]', '14-[1.3.4]'][param['selected_feature_set_id']]
 
         '''
-        Feature Set
-        1. basic - utterance length
-        2. user action
-        3. time feature
-        4. n-gram
-        5. noun phrase
-        6. entity
-        7. syntactic
-        8. lda
-        9. w2v
-        10. d2v
-        11. skip-thought
+        Combo feature setting
+        Each id corresponds to the following feature set:
+            1. basic - utterance length
+            2. user action
+            3. time feature
+            4. n-gram
+            5. noun phrase
+            6. entity
+            7. syntactic
+            8. lda
+            9. w2v
+            10. d2v
+            11. skip-thought
         '''
         param['feature_set_number'] = \
                 [['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'], ['1', '2', '3'], ['4'], ['5', '6'], ['7'], ['8'], ['9'],
                  ['10'], ['11'], ['1', '2', '3', '5', '6', '7', '4'], ['1', '2', '3', '5', '6', '7', '8'],
                  ['1', '2', '3', '5', '6', '7', '9'], ['1', '2', '3', '5', '6', '7', '10'],
-                 ['1', '2', '3', '5', '6', '7', '11']][param['selected_feature_set_id']]
+                 ['1', '2', '3', '5', '6', '7', '11'], ['1', '2', '3', '5', '6', '7']][param['selected_feature_set_id']]
 
         param['similarity_feature']  = param['similarity_feature']
 

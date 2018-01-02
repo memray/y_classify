@@ -4,7 +4,7 @@
 # do feature selection on 9 and 11
 
 export CONTEXT=0
-declare -a FEATURE_IDs=(0 9 10 11 12 13)
+declare -a FEATURE_IDs=(14) #(0 9 10 11 12 13)
 declare -a power=(4 5 6 7 8 9 10 11 12 -1)
 
 for FEATURE_ID in "${FEATURE_IDs[@]}"
