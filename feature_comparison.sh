@@ -2,10 +2,10 @@
 
 EXP_MODE='cross_validation'
 # 0.all, [1-8] each feature set, [9-13] combined features
-START=14
+START=0
 END=14
 
-for ((CONTEXT=0;CONTEXT<=4;CONTEXT++));
+for ((CONTEXT=0;CONTEXT<=3;CONTEXT++));
 do
     export CONTEXT
     for ((FEATURE_ID=START;FEATURE_ID<=END;FEATURE_ID++)); do

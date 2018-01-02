@@ -453,18 +453,11 @@ class ShallowExperimenter():
 
         results = []
 
-        # a special one with large C to disable the regularization
-        self.logger.info('=' * 80)
-        C = 1e20
-        self.logger.info("LR.pen=l2.C=%f" % C)
-        results.append(self.benchmark('LR.pen=l2.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l2', C=C)))
-
-        '''
-        for C in [2**x for x in [1]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
+        for C in [2**x for x in [0]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
             results.append(self.benchmark('LR.pen=l1.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l1', C=C)))
-        '''
+
 
         '''
             self.logger.info('=' * 80)
@@ -489,6 +482,15 @@ class ShallowExperimenter():
                                           degree=3, gamma='auto', kernel='rbf',
                                           max_iter=-1, probability=False, random_state=None, shrinking=True,
                                           tol=0.001, verbose=False)))
+        '''
+
+        '''
+        # a special one with large C to disable the regularization
+        self.logger.info('=' * 80)
+        C = 1e20
+        self.logger.info("LR.pen=l2.C=%f" % C)
+        results.append(self.benchmark('LR.pen=l2.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l2', C=C)))
+
         '''
 
         """
