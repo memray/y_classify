@@ -1405,3 +1405,70 @@ avg / total       0.77      0.76      0.77       571
           intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
           penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
           verbose=0, warm_start=False)
+01/01/2018 22:44:22 [INFO] exp_shallowmodel: train time: 3519.659s
+01/01/2018 22:44:22 [INFO] exp_shallowmodel: test time:  0.009s
+01/01/2018 22:44:22 [INFO] exp_shallowmodel: accuracy:   0.701
+01/01/2018 22:44:22 [INFO] exp_shallowmodel: f1_score:   0.600
+01/01/2018 22:44:22 [INFO] exp_shallowmodel: classification report:
+01/01/2018 22:44:22 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.27      0.50      0.35        14
+          C       0.65      0.59      0.62       164
+          F       0.89      0.79      0.84       268
+          R       0.53      0.66      0.59       125
+
+avg / total       0.73      0.70      0.71       571
+
+01/01/2018 22:44:22 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 22:44:22 [INFO] exp_shallowmodel: 
+[[  7   2   4   1]
+ [ 10  97  16  41]
+ [  4  20 213  31]
+ [  5  30   7  83]]
+01/01/2018 22:44:24 [INFO] exp_shallowmodel: ******************** dstc2 - Round 37 
+01/01/2018 22:44:24 [INFO] exp_shallowmodel: #(data) = 4583
+01/01/2018 22:44:24 [INFO] exp_shallowmodel: #(feature) = 9679
+01/01/2018 22:44:24 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 22:44:24 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 22:44:24 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 22:44:24 [INFO] exp_shallowmodel: Training: 
+01/01/2018 22:44:24 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/01/2018 23:31:50 [INFO] exp_shallowmodel: train time: 2845.817s
+01/01/2018 23:31:50 [INFO] exp_shallowmodel: test time:  0.009s
+01/01/2018 23:31:50 [INFO] exp_shallowmodel: accuracy:   0.720
+01/01/2018 23:31:50 [INFO] exp_shallowmodel: f1_score:   0.592
+01/01/2018 23:31:50 [INFO] exp_shallowmodel: classification report:
+01/01/2018 23:31:50 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.21      0.29      0.24        14
+          C       0.65      0.66      0.65       164
+          F       0.90      0.79      0.84       268
+          R       0.58      0.69      0.63       125
+
+avg / total       0.74      0.72      0.73       571
+
+01/01/2018 23:31:50 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 23:31:50 [INFO] exp_shallowmodel: 
+[[  4   3   4   3]
+ [ 10 108  11  35]
+ [  2  29 213  24]
+ [  3  27   9  86]]
+01/01/2018 23:31:52 [INFO] exp_shallowmodel: ******************** dstc2 - Round 38 
+01/01/2018 23:31:52 [INFO] exp_shallowmodel: #(data) = 4583
+01/01/2018 23:31:52 [INFO] exp_shallowmodel: #(feature) = 9679
+01/01/2018 23:31:52 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 23:31:52 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 23:31:52 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 23:31:52 [INFO] exp_shallowmodel: Training: 
+01/01/2018 23:31:52 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+slurmstepd: error: *** JOB 960129 ON smp-n4 CANCELLED AT 2018-01-01T23:40:10 ***
+srun: got SIGCONT
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 960129.0 ON smp-n4 CANCELLED AT 2018-01-01T23:40:10 ***

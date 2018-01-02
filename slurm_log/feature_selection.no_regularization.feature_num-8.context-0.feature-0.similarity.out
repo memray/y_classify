@@ -1467,3 +1467,130 @@ avg / total       0.74      0.72      0.73       571
           intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
           penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
           verbose=0, warm_start=False)
+01/01/2018 22:21:12 [INFO] exp_shallowmodel: train time: 2588.136s
+01/01/2018 22:21:12 [INFO] exp_shallowmodel: test time:  0.008s
+01/01/2018 22:21:12 [INFO] exp_shallowmodel: accuracy:   0.746
+01/01/2018 22:21:12 [INFO] exp_shallowmodel: f1_score:   0.638
+01/01/2018 22:21:12 [INFO] exp_shallowmodel: classification report:
+01/01/2018 22:21:12 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.29      0.50      0.37        14
+          C       0.70      0.66      0.68       164
+          F       0.90      0.85      0.87       268
+          R       0.60      0.66      0.63       125
+
+avg / total       0.76      0.75      0.75       571
+
+01/01/2018 22:21:12 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 22:21:12 [INFO] exp_shallowmodel: 
+[[  7   2   3   2]
+ [ 11 108  14  31]
+ [  4  14 228  22]
+ [  2  31   9  83]]
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+01/01/2018 22:21:14 [INFO] exp_shallowmodel: ******************** dstc2 - Round 39 
+01/01/2018 22:21:14 [INFO] exp_shallowmodel: #(data) = 4568
+01/01/2018 22:21:14 [INFO] exp_shallowmodel: #(feature) = 9423
+01/01/2018 22:21:14 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 22:21:14 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 22:21:14 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 22:21:14 [INFO] exp_shallowmodel: Training: 
+01/01/2018 22:21:14 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/01/2018 23:12:45 [INFO] exp_shallowmodel: train time: 3090.745s
+01/01/2018 23:12:45 [INFO] exp_shallowmodel: test time:  0.008s
+01/01/2018 23:12:45 [INFO] exp_shallowmodel: accuracy:   0.739
+01/01/2018 23:12:45 [INFO] exp_shallowmodel: f1_score:   0.608
+01/01/2018 23:12:45 [INFO] exp_shallowmodel: classification report:
+01/01/2018 23:12:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.25      0.31      0.28        16
+          C       0.69      0.66      0.67       169
+          F       0.88      0.87      0.88       271
+          R       0.59      0.62      0.60       130
+
+avg / total       0.74      0.74      0.74       586
+
+01/01/2018 23:12:45 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 23:12:45 [INFO] exp_shallowmodel: 
+[[  5   2   6   3]
+ [  4 112  14  39]
+ [  5  16 236  14]
+ [  6  33  11  80]]
+01/01/2018 23:12:47 [INFO] exp_shallowmodel: ******************** dstc2 - Round 40 
+01/01/2018 23:12:47 [INFO] exp_shallowmodel: #(data) = 4583
+01/01/2018 23:12:47 [INFO] exp_shallowmodel: #(feature) = 9423
+01/01/2018 23:12:47 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 23:12:47 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 23:12:47 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 23:12:47 [INFO] exp_shallowmodel: Training: 
+01/01/2018 23:12:47 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+slurmstepd: error: *** JOB 960128 ON smp-n3 CANCELLED AT 2018-01-01T23:40:10 ***
+srun: got SIGCONT
+srun: forcing job termination
+slurmstepd: error: *** STEP 960128.0 ON smp-n3 CANCELLED AT 2018-01-01T23:40:10 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

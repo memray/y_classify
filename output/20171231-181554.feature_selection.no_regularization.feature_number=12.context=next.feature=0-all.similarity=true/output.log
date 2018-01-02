@@ -974,3 +974,34 @@ avg / total       0.79      0.78      0.78       571
           intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
           penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
           verbose=0, warm_start=False)
+01/01/2018 22:41:09 [INFO] exp_shallowmodel: train time: 3709.824s
+01/01/2018 22:41:09 [INFO] exp_shallowmodel: test time:  0.012s
+01/01/2018 22:41:09 [INFO] exp_shallowmodel: accuracy:   0.729
+01/01/2018 22:41:09 [INFO] exp_shallowmodel: f1_score:   0.607
+01/01/2018 22:41:09 [INFO] exp_shallowmodel: classification report:
+01/01/2018 22:41:09 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.31      0.29      0.30        14
+          C       0.66      0.67      0.67       164
+          F       0.89      0.82      0.85       268
+          R       0.56      0.66      0.61       125
+
+avg / total       0.74      0.73      0.73       571
+
+01/01/2018 22:41:09 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 22:41:09 [INFO] exp_shallowmodel: 
+[[  4   2   5   3]
+ [  4 110  15  35]
+ [  3  20 219  26]
+ [  2  34   6  83]]
+01/01/2018 22:41:12 [INFO] exp_shallowmodel: ******************** dstc2 - Round 29 
+01/01/2018 22:41:12 [INFO] exp_shallowmodel: #(data) = 4568
+01/01/2018 22:41:12 [INFO] exp_shallowmodel: #(feature) = 13263
+01/01/2018 22:41:12 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 22:41:12 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 22:41:12 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 22:41:12 [INFO] exp_shallowmodel: Training: 
+01/01/2018 22:41:12 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)

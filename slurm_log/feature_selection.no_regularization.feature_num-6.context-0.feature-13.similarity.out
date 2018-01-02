@@ -2441,3 +2441,68 @@ avg / total       0.72      0.72      0.72       592
           intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
           penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
           verbose=0, warm_start=False)
+01/01/2018 22:10:28 [INFO] exp_shallowmodel: train time: 1728.373s
+01/01/2018 22:10:28 [INFO] exp_shallowmodel: test time:  0.006s
+01/01/2018 22:10:28 [INFO] exp_shallowmodel: accuracy:   0.726
+01/01/2018 22:10:28 [INFO] exp_shallowmodel: f1_score:   0.602
+01/01/2018 22:10:28 [INFO] exp_shallowmodel: classification report:
+01/01/2018 22:10:28 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.30      0.35      0.33        20
+          C       0.67      0.66      0.67       169
+          F       0.88      0.87      0.87       281
+          R       0.53      0.55      0.54       122
+
+avg / total       0.73      0.73      0.73       592
+
+01/01/2018 22:10:28 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 22:10:28 [INFO] exp_shallowmodel: 
+[[  7   2   6   5]
+ [  6 112  13  38]
+ [  7  14 244  16]
+ [  3  38  14  67]]
+01/01/2018 22:10:29 [INFO] exp_shallowmodel: ******************** dstc3 - Round 26 
+01/01/2018 22:10:29 [INFO] exp_shallowmodel: #(data) = 4750
+01/01/2018 22:10:29 [INFO] exp_shallowmodel: #(feature) = 7275
+01/01/2018 22:10:29 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 22:10:29 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 22:10:29 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 22:10:29 [INFO] exp_shallowmodel: Training: 
+01/01/2018 22:10:29 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/01/2018 23:09:42 [INFO] exp_shallowmodel: train time: 3552.659s
+01/01/2018 23:09:42 [INFO] exp_shallowmodel: test time:  0.006s
+01/01/2018 23:09:42 [INFO] exp_shallowmodel: accuracy:   0.704
+01/01/2018 23:09:42 [INFO] exp_shallowmodel: f1_score:   0.581
+01/01/2018 23:09:42 [INFO] exp_shallowmodel: classification report:
+01/01/2018 23:09:42 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.28      0.35      0.31        20
+          C       0.67      0.67      0.67       169
+          F       0.87      0.84      0.85       281
+          R       0.48      0.49      0.48       122
+
+avg / total       0.71      0.70      0.71       592
+
+01/01/2018 23:09:42 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 23:09:42 [INFO] exp_shallowmodel: 
+[[  7   4   6   3]
+ [  4 114   9  42]
+ [  8  16 236  21]
+ [  6  35  21  60]]
+01/01/2018 23:09:43 [INFO] exp_shallowmodel: ******************** dstc3 - Round 27 
+01/01/2018 23:09:43 [INFO] exp_shallowmodel: #(data) = 4750
+01/01/2018 23:09:43 [INFO] exp_shallowmodel: #(feature) = 7275
+01/01/2018 23:09:43 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 23:09:43 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 23:09:43 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 23:09:43 [INFO] exp_shallowmodel: Training: 
+01/01/2018 23:09:43 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+slurmstepd: error: *** JOB 960176 ON smp-n8 CANCELLED AT 2018-01-01T23:40:10 ***
+srun: forcing job termination
+slurmstepd: error: *** STEP 960176.0 ON smp-n8 CANCELLED AT 2018-01-01T23:40:10 ***

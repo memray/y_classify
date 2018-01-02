@@ -2472,3 +2472,130 @@ avg / total       0.72      0.71      0.72       592
           intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
           penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
           verbose=0, warm_start=False)
+01/01/2018 22:20:01 [INFO] exp_shallowmodel: train time: 2887.615s
+01/01/2018 22:20:01 [INFO] exp_shallowmodel: test time:  0.006s
+01/01/2018 22:20:01 [INFO] exp_shallowmodel: accuracy:   0.694
+01/01/2018 22:20:01 [INFO] exp_shallowmodel: f1_score:   0.568
+01/01/2018 22:20:01 [INFO] exp_shallowmodel: classification report:
+01/01/2018 22:20:01 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.27      0.35      0.30        20
+          C       0.67      0.64      0.66       169
+          F       0.86      0.85      0.85       281
+          R       0.45      0.47      0.46       122
+
+avg / total       0.70      0.69      0.70       592
+
+01/01/2018 22:20:01 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 22:20:01 [INFO] exp_shallowmodel: 
+[[  7   5   5   3]
+ [  6 109   8  46]
+ [  8  14 238  21]
+ [  5  35  25  57]]
+01/01/2018 22:20:03 [INFO] exp_shallowmodel: ******************** dstc3 - Round 27 
+01/01/2018 22:20:03 [INFO] exp_shallowmodel: #(data) = 4750
+01/01/2018 22:20:03 [INFO] exp_shallowmodel: #(feature) = 7339
+01/01/2018 22:20:03 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 22:20:03 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 22:20:03 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 22:20:03 [INFO] exp_shallowmodel: Training: 
+01/01/2018 22:20:03 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/01/2018 22:48:23 [INFO] exp_shallowmodel: train time: 1700.708s
+01/01/2018 22:48:23 [INFO] exp_shallowmodel: test time:  0.007s
+01/01/2018 22:48:23 [INFO] exp_shallowmodel: accuracy:   0.711
+01/01/2018 22:48:23 [INFO] exp_shallowmodel: f1_score:   0.621
+01/01/2018 22:48:23 [INFO] exp_shallowmodel: classification report:
+01/01/2018 22:48:23 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.39      0.60      0.47        20
+          C       0.65      0.62      0.64       169
+          F       0.91      0.85      0.88       281
+          R       0.47      0.52      0.50       122
+
+avg / total       0.73      0.71      0.72       592
+
+01/01/2018 22:48:23 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 22:48:23 [INFO] exp_shallowmodel: 
+[[ 12   2   3   3]
+ [  4 105  13  47]
+ [  9  11 240  21]
+ [  6  43   9  64]]
+01/01/2018 22:48:25 [INFO] exp_shallowmodel: ******************** dstc3 - Round 28 
+01/01/2018 22:48:25 [INFO] exp_shallowmodel: #(data) = 4750
+01/01/2018 22:48:25 [INFO] exp_shallowmodel: #(feature) = 7339
+01/01/2018 22:48:25 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 22:48:25 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 22:48:25 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 22:48:25 [INFO] exp_shallowmodel: Training: 
+01/01/2018 22:48:25 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/01/2018 23:14:29 [INFO] exp_shallowmodel: train time: 1564.581s
+01/01/2018 23:14:29 [INFO] exp_shallowmodel: test time:  0.006s
+01/01/2018 23:14:29 [INFO] exp_shallowmodel: accuracy:   0.709
+01/01/2018 23:14:29 [INFO] exp_shallowmodel: f1_score:   0.601
+01/01/2018 23:14:29 [INFO] exp_shallowmodel: classification report:
+01/01/2018 23:14:29 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.36      0.45      0.40        20
+          C       0.63      0.66      0.65       169
+          F       0.89      0.85      0.87       281
+          R       0.49      0.48      0.49       122
+
+avg / total       0.72      0.71      0.71       592
+
+01/01/2018 23:14:29 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 23:14:29 [INFO] exp_shallowmodel: 
+[[  9   3   6   2]
+ [  8 112   7  42]
+ [  2  22 240  17]
+ [  6  41  16  59]]
+01/01/2018 23:14:31 [INFO] exp_shallowmodel: ******************** dstc3 - Round 29 
+01/01/2018 23:14:31 [INFO] exp_shallowmodel: #(data) = 4736
+01/01/2018 23:14:31 [INFO] exp_shallowmodel: #(feature) = 7339
+01/01/2018 23:14:31 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 23:14:31 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 23:14:31 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 23:14:31 [INFO] exp_shallowmodel: Training: 
+01/01/2018 23:14:31 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/01/2018 23:34:29 [INFO] exp_shallowmodel: train time: 1198.019s
+01/01/2018 23:34:29 [INFO] exp_shallowmodel: test time:  0.007s
+01/01/2018 23:34:29 [INFO] exp_shallowmodel: accuracy:   0.724
+01/01/2018 23:34:29 [INFO] exp_shallowmodel: f1_score:   0.637
+01/01/2018 23:34:29 [INFO] exp_shallowmodel: classification report:
+01/01/2018 23:34:29 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.48      0.46      0.47        28
+          C       0.65      0.65      0.65       172
+          F       0.89      0.86      0.87       283
+          R       0.54      0.58      0.56       123
+
+avg / total       0.73      0.72      0.73       606
+
+01/01/2018 23:34:29 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 23:34:29 [INFO] exp_shallowmodel: 
+[[ 13  10   4   1]
+ [  8 111  10  43]
+ [  6  16 244  17]
+ [  0  35  17  71]]
+01/01/2018 23:34:30 [INFO] exp_shallowmodel: ******************** dstc3 - Round 30 
+01/01/2018 23:34:30 [INFO] exp_shallowmodel: #(data) = 4750
+01/01/2018 23:34:30 [INFO] exp_shallowmodel: #(feature) = 7339
+01/01/2018 23:34:30 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 23:34:30 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 23:34:30 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 23:34:30 [INFO] exp_shallowmodel: Training: 
+01/01/2018 23:34:30 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+slurmstepd: error: *** JOB 960177 ON smp-n8 CANCELLED AT 2018-01-01T23:40:10 ***
+srun: forcing job termination
+slurmstepd: error: *** STEP 960177.0 ON smp-n8 CANCELLED AT 2018-01-01T23:40:10 ***

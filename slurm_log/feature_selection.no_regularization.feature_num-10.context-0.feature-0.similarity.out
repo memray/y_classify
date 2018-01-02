@@ -1312,3 +1312,69 @@ avg / total       0.77      0.76      0.76       571
           intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
           penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
           verbose=0, warm_start=False)
+01/01/2018 22:28:00 [INFO] exp_shallowmodel: train time: 2657.242s
+01/01/2018 22:28:00 [INFO] exp_shallowmodel: test time:  0.009s
+01/01/2018 22:28:00 [INFO] exp_shallowmodel: accuracy:   0.757
+01/01/2018 22:28:00 [INFO] exp_shallowmodel: f1_score:   0.594
+01/01/2018 22:28:00 [INFO] exp_shallowmodel: classification report:
+01/01/2018 22:28:00 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.17      0.14      0.15        14
+          C       0.68      0.65      0.66       164
+          F       0.92      0.86      0.89       268
+          R       0.61      0.74      0.67       125
+
+avg / total       0.77      0.76      0.76       571
+
+01/01/2018 22:28:00 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 22:28:00 [INFO] exp_shallowmodel: 
+[[  2   7   3   2]
+ [  5 106   9  44]
+ [  4  20 231  13]
+ [  1  24   7  93]]
+01/01/2018 22:28:02 [INFO] exp_shallowmodel: ******************** dstc2 - Round 34 
+01/01/2018 22:28:02 [INFO] exp_shallowmodel: #(data) = 4583
+01/01/2018 22:28:02 [INFO] exp_shallowmodel: #(feature) = 10191
+01/01/2018 22:28:02 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 22:28:02 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 22:28:02 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 22:28:02 [INFO] exp_shallowmodel: Training: 
+01/01/2018 22:28:02 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/01/2018 23:03:29 [INFO] exp_shallowmodel: train time: 2126.715s
+01/01/2018 23:03:29 [INFO] exp_shallowmodel: test time:  0.009s
+01/01/2018 23:03:29 [INFO] exp_shallowmodel: accuracy:   0.769
+01/01/2018 23:03:29 [INFO] exp_shallowmodel: f1_score:   0.644
+01/01/2018 23:03:29 [INFO] exp_shallowmodel: classification report:
+01/01/2018 23:03:29 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.31      0.36      0.33        14
+          C       0.75      0.70      0.72       164
+          F       0.91      0.88      0.89       268
+          R       0.58      0.68      0.63       125
+
+avg / total       0.78      0.77      0.77       571
+
+01/01/2018 23:03:29 [INFO] exp_shallowmodel: confusion matrix:
+01/01/2018 23:03:29 [INFO] exp_shallowmodel: 
+[[  5   2   3   4]
+ [  2 114  11  37]
+ [  4   9 235  20]
+ [  5  26   9  85]]
+01/01/2018 23:03:31 [INFO] exp_shallowmodel: ******************** dstc2 - Round 35 
+01/01/2018 23:03:31 [INFO] exp_shallowmodel: #(data) = 4583
+01/01/2018 23:03:31 [INFO] exp_shallowmodel: #(feature) = 10191
+01/01/2018 23:03:31 [INFO] exp_shallowmodel: ================================================================================
+01/01/2018 23:03:31 [INFO] exp_shallowmodel: LR.pen=l2.C=100000000000000000000.000000
+01/01/2018 23:03:31 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/01/2018 23:03:31 [INFO] exp_shallowmodel: Training: 
+01/01/2018 23:03:31 [INFO] exp_shallowmodel: LogisticRegression(C=1e+20, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+slurmstepd: error: *** JOB 960130 ON smp-n4 CANCELLED AT 2018-01-01T23:40:10 ***
+srun: forcing job termination
+slurmstepd: error: *** STEP 960130.0 ON smp-n4 CANCELLED AT 2018-01-01T23:40:10 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
