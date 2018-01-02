@@ -5,7 +5,7 @@ EXP_MODE='cross_validation'
 START=14
 END=14
 
-for ((CONTEXT=0;CONTEXT<=0;CONTEXT++));
+for ((CONTEXT=0;CONTEXT<=4;CONTEXT++));
 do
     export CONTEXT
     for ((FEATURE_ID=START;FEATURE_ID<=END;FEATURE_ID++)); do
