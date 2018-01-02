@@ -1017,7 +1017,7 @@ class ShallowExperimenter():
     def run_cross_validation_with_continuous_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
         ''''''
         '''
-        keep discrete features for selection only (1-7), note that LDA is discrete as well but we don't select it
+        keep continuous features for selection only including: 8.LDA 9. w2v 10. d2v 11. skip-thought
         '''
         selectable_feature_indices = []
         selectable_feature_names = []
@@ -1026,7 +1026,7 @@ class ShallowExperimenter():
             f_series = f_name[: f_name.find('-')]
             if f_series.find('.') > 0:
                 f_series = f_series[: f_series.find('.')]
-            if f_series in ['1', '2', '3', '4', '5', '6', '7'] and not (f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
+            if f_series in ['8', '9', '10', '11'] and not (f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
                 selectable_feature_indices.append(f_id)
                 selectable_feature_names.append(f_name)
             else:
@@ -1036,58 +1036,15 @@ class ShallowExperimenter():
         X_not_selectable    =   np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
 
         '''
-        print_important_features
-        '''
-        feature_names       = retained_feature_names
-        chi2_stats, pvals   = chi2(X_selectable, Y)
-        chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
-
-        sorted_idx = np.argsort(chi2_stats)[::-1]
-
-        with open(os.path.join(self.config['experiment_path'], '%s.top_features.csv' % self.config['data_name']), 'w') as csv_writer:
-            csv_writer.write('id,name,prefix,chi2,pval\n')
-            for f_id, (f_name, chi2_stat, pval) in enumerate(zip(np.asarray(feature_names)[sorted_idx], chi2_stats[sorted_idx], pvals[sorted_idx])):
-                # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
-                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, f_name.encode('utf-8'), f_name[:f_name.find('-')].encode('utf-8'), chi2_stat, pval))
-
-        feature_prefixes  = sorted(list(set([f[:f.find('-')] for f in feature_names])))
-        feature_set_names = {'1'   :'1-utterance length',
-                             '2.1' :'2.1-user action words', '2.2': '2.2-number of user action words', '2.3.1':'2.3.1-action_jaccard_similarity.next_user_utterance_pairs', '2.3.2':'2.3.2-action_jaccard_similarity.last_user_utterance_pairs',
-                             '3'   :'3-time features',
-                             '4.1' :'4.1-n_gram', '4.2.1':'4.2.1-edit_distance.next_user_utterance_pairs', '4.2.2':'4.2.2-edit_distance.last_user_utterance_pairs',
-                             '4.3.1' :'4.3.1-jaccard_similarity.next_user_utterance_pairs', '4.3.2' :'4.3.2-jaccard_similarity.last_user_utterance_pairs',
-                             '5'   :'5-noun phrase', '6':'6-entity', '7':'7-syntactic features',
-                             '8.1' :'8.1-LDA_features', '8.2.1':'8.2.1-lda_similarity.next_user_utterance_pairs', '8.2.2':'8.2.2-lda_similarity.last_user_utterance_pairs',
-                             '9.1' :'9.1-w2v_features', '9.2.1':'9.2.1-w2v_similarity.next_user_utterance_pairs','9.2.2':'9.2.2-w2v_similarity.last_user_utterance_pairs', '9.3.1':'9.3.1-wmd_similarity.next_user_utterance_pairs','9.3.2':'9.3.2-wmd_similarity.last_user_utterance_pairs',
-                             '10.1': '10.1-d2v_features', '10.2.1': '10.2.1-d2v_similarity.next_user_utterance_pairs','10.2.2': '10.2.2 d2v_similarity.last_user_utterance_pairs',
-                             '11.1': '11.1-skipthought_features', '11.2.1': '11.2.1-skipthought_similarity.next_user_utterance_pairs', '11.2.2': '11.2.2-skipthought_similarity.last_user_utterance_pairs'
-                             }
-
-        if os.path.exists(os.path.join(self.config['experiment_path'], 'feature_stats.csv')):
-            print_header = False
-        else:
-            print_header = True
-
-        with open(os.path.join(self.config['experiment_path'], 'feature_stats.csv'), 'a') as csv_writer:
-            if print_header:
-                csv_writer.write(',%s\n' % (','.join(feature_prefixes)))
-                csv_writer.write(',%s\n' % (','.join([feature_set_names[p_] for p_ in feature_prefixes])))
-            num_feature = []
-            for prefix, feature_set_name in zip(feature_prefixes, feature_set_names):
-                self.logger.info('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
-                # csv_writer.write('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
-                num_feature.append(len([f for f in feature_names if f.startswith(prefix)]))
-            csv_writer.write('%s,%s\n' % (self.config['data_name'], ','.join([str(n) for n in num_feature])))
-
-        '''
-        run experiment with selected features
+        run experiment with PCA feature reduction
         '''
         X_to_select     = copy.deepcopy(X_selectable)
 
         # if num_feature_to_keep is -1, we don't select anything and keep all the features
         if k_feature_to_keep != -1:
             num_feature = 2 ** k_feature_to_keep
-            X_selected      = SelectKBest(chi2, k=num_feature).fit_transform(X_to_select, Y)
+            # X_selected      = SelectKBest(chi2, k=num_feature).fit_transform(X_to_select, Y)
+            X_selected = PCA(n_components=2, svd_solver='full')
         else:
             num_feature = X_to_select.shape[1]
             X_selected      = X_to_select
