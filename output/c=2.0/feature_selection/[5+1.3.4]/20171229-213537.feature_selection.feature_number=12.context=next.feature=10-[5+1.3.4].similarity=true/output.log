@@ -1,0 +1,70 @@
+12/29/2017 21:35:37 [INFO] configuration: experiment_mode  :   feature_selection
+12/29/2017 21:35:37 [INFO] configuration: deep_model  :   False
+12/29/2017 21:35:37 [INFO] configuration: selected_context_id  :   0
+12/29/2017 21:35:37 [INFO] configuration: selected_feature_set_id  :   10
+12/29/2017 21:35:37 [INFO] configuration: similarity_feature  :   True
+12/29/2017 21:35:37 [INFO] configuration: k_feature_to_keep  :   12
+12/29/2017 21:35:37 [INFO] configuration: seed  :   154316847
+12/29/2017 21:35:37 [INFO] configuration: root_path  :   /ihome/pbrusilosky/rum20/y_classify
+12/29/2017 21:35:37 [INFO] configuration: task_name  :   utterance_type
+12/29/2017 21:35:37 [INFO] configuration: timemark  :   20171229-213537
+12/29/2017 21:35:37 [INFO] configuration: context_set  :   next
+12/29/2017 21:35:37 [INFO] configuration: utterance_names  :   ['last_user_utterance', 'last_system_utterance', 'current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+12/29/2017 21:35:37 [INFO] configuration: utterance_range  :   ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+12/29/2017 21:35:37 [INFO] configuration: feature_set  :   10-[5+1.3.4]
+12/29/2017 21:35:37 [INFO] configuration: feature_set_number  :   ['1', '2', '3', '5', '6', '7', '8']
+12/29/2017 21:35:37 [INFO] configuration: experiment_name  :   20171229-213537.feature_selection.feature_number=12.context=next.feature=10-[5+1.3.4].similarity=true
+12/29/2017 21:35:37 [INFO] configuration: experiment_path  :   /ihome/pbrusilosky/rum20/y_classify/output/20171229-213537.feature_selection.feature_number=12.context=next.feature=10-[5+1.3.4].similarity=true
+12/29/2017 21:35:37 [INFO] configuration: log_path  :   /ihome/pbrusilosky/rum20/y_classify/output/20171229-213537.feature_selection.feature_number=12.context=next.feature=10-[5+1.3.4].similarity=true/output.log
+12/29/2017 21:35:37 [INFO] configuration: valid_type  :   {'R', 'F', 'A', 'C'}
+12/29/2017 21:35:37 [INFO] configuration: data_name  :   
+12/29/2017 21:35:37 [INFO] configuration: data_names  :   ['dstc2', 'dstc3', 'family', 'ghome']
+12/29/2017 21:35:37 [INFO] configuration: raw_feature_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.raw_feature.pkl
+12/29/2017 21:35:37 [INFO] configuration: extracted_feature_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.extracted_feature.pkl
+12/29/2017 21:35:37 [INFO] configuration: pipeline_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.pipeline.pkl
+12/29/2017 21:35:37 [INFO] configuration: metrics  :   ['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+12/29/2017 21:35:37 [INFO] configuration: do_cross_validation  :   True
+12/29/2017 21:35:37 [INFO] configuration: #division  :   5
+12/29/2017 21:35:37 [INFO] configuration: #cross_validation  :   10
+12/29/2017 21:35:37 [INFO] configuration: cv_index_cache_path  :   
+12/29/2017 21:35:37 [INFO] configuration: action_words  :   {'moder', 'play', 'volum', 'telephon', 'discard', 'member', 'delet', 'moderate', 'temperature', 'help', 'part', 'add', 'room', 'north', 'phone', 'tell', 'volume', 'show', 'area', 'list', 'items', 'remind', 'weather', 'time', 'address', 'centr', 'skip', 'video', 'clear', 'cheap', 'south', 'turn', 'song', 'ani', 'els', 'watch', 'price', 'temperatur', 'expens', 'shuffle', 'shuffl', 'telephone', 'music', 'post', 'remov', 'findcar', 'food', 'else', 'start', 'alarm', 'reminder', 'remove', 'next', 'findcare', 'number', 'snooz', 'delete', 'reminds', 'centre', 'share', 'expensive', 'cast', 'snooze', 'reminders', 'light', 'stop', 'matter', 'any', 'timer', 'item'}
+12/29/2017 21:35:37 [INFO] configuration: corenlp_jars  :   ('/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*', '/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar')
+12/29/2017 21:35:37 [INFO] configuration: lda_topic_number  :   50
+12/29/2017 21:35:37 [INFO] configuration: lda_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.topic=50.lda.pkl
+12/29/2017 21:35:37 [INFO] configuration: gensim_corpus_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.corpus.pkl
+12/29/2017 21:35:37 [INFO] configuration: gensim_dict_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.dict
+12/29/2017 21:35:37 [INFO] configuration: w2v_path  :   /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+12/29/2017 21:35:37 [INFO] configuration: w2v_vector_length  :   300
+12/29/2017 21:35:37 [INFO] configuration: d2v_vector_length  :   300
+12/29/2017 21:35:37 [INFO] configuration: d2v_window_size  :   5
+12/29/2017 21:35:37 [INFO] configuration: d2v_min_count  :   2
+12/29/2017 21:35:37 [INFO] configuration: d2v_model_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.model
+12/29/2017 21:35:37 [INFO] configuration: d2v_vector_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.vector
+12/29/2017 21:35:37 [INFO] configuration: num_word_keep  :   {'dstc2': 300, 'dstc3': 300, 'family': 1000, 'ghome': 1000}
+12/29/2017 21:35:37 [INFO] configuration: batch_size  :   128
+12/29/2017 21:35:37 [INFO] configuration: max_epoch  :   50
+12/29/2017 21:35:37 [INFO] configuration: early_stop_tolerance  :   2
+12/29/2017 21:35:37 [INFO] configuration: concat_sents  :   True
+12/29/2017 21:35:37 [INFO] configuration: cnn_setting  :   {'MODEL': 'multichannel', 'EARLY_STOPPING': True, 'WORD_DIM': 300, 'FILTERS': [3, 4, 5], 'FILTER_NUM': [100, 100, 100], 'CLASS_SIZE': 4, 'BATCH_SIZE': 128, 'LEARNING_RATE': 0.001, 'NORM_LIMIT': 10, 'DROPOUT_PROB': 0.5}
+12/29/2017 21:35:37 [INFO] configuration: skipthought_setting  :   {'skipthought_model_path': '/Users/memray/Data/skip-thought', 'skipthought_data_path': '/ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.skip-thought.biskip.vector', 'fixed_emb': True, 'sentence_num': 3, 'hidden_size': 2400, 'class_size': 4, 'learning_rate': 0.0001, 'norm_limit': 3, 'dropout_prob': 0.5}
+12/29/2017 21:35:37 [INFO] configuration: lstm_setting  :   {'model': 'non-static', 'hidden_size': 32, 'embedding_size': 300, 'num_layers': 1, 'bidirectional': False, 'learning_rate': 0.001, 'class_size': 4, 'norm_limit': 2, 'clip_grad_norm': 2, 'dropout_prob': 0.1}
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 1	3
+
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 2.1	50
+
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 2.2	2
+
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 2.3.1	1
+
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 3	5
+
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 5	2184
+
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 6	245
+
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 7	910
+
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 8.1	150
+
+12/29/2017 21:35:43 [INFO] exp_shallowmodel: 8.2.1	1
+
