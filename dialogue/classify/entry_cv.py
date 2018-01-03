@@ -50,7 +50,7 @@ if __name__ == '__main__':
         # print("np.max=", np.max(abs(X)))
 
         if config['experiment_mode'] == 'feature_selection' or config['experiment_mode'] == 'print_important_features':
-            result                  = exp.run_cross_validation_with_feature_selection(X, Y)
+            result                  = exp.run_cross_validation_with_discrete_feature_selection(X, Y)
         elif config['experiment_mode'] == 'leave_one_out' or config['experiment_mode'] == 'keep_one_only':
             result                  = exp.run_cross_validation_with_leave_one_out(X, Y)
         elif config['experiment_mode'] == 'reformulation_detection' or config['experiment_mode'] == 'task_boundary_detection':

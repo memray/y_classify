@@ -1,23 +1,25 @@
 #!/usr/bin/env bash
 
-# 0.all, [1-8] each feature set, [9-13] combined features
-START=13
-END=13
+export EXP_MODE='cross_validation'
 
-for ((CONTEXT=0;CONTEXT<=0;CONTEXT++));
-do
-    export CONTEXT
-    for ((i=START;i<=END;i++)); do
-        export i;
-        echo "Context=$CONTEXT, Feature=$i";
-        sbatch --export=CONTEXT=$CONTEXT,i=$i --job-name=context-$CONTEXT.feature-$i.run --output=slurm_log/context-$CONTEXT.feature-$i.run_task_log.out run_task.sbatch;
-    done
-done
+# 0.all, [1-8] each feature set, [9-13] combined features, [14] is [1,3,4]
+START=0
+END=14
+
+#for ((CONTEXT=0;CONTEXT<=3;CONTEXT++));
+#do
+#    export CONTEXT
+#    for ((FEATURE_ID=START;FEATURE_ID<=END;FEATURE_ID++)); do
+#        export FEATURE_ID;
+#        echo "$EXP_MODE, Context=$CONTEXT, Feature=$FEATURE_ID";
+#        sbatch --export=CONTEXT=$CONTEXT,FEATURE_ID=$FEATURE_ID,EXP_MODE=$EXP_MODE --job-name=$EXP_MODE.context-$CONTEXT.feature-$FEATURE_ID.run --output=slurm_log/$EXP_MODE.context-$CONTEXT.feature-$FEATURE_ID.run_task_log.out run_task.sbatch;
+#    done
+#done
 
 export CONTEXT=0
-for ((i=START;i<=END;i++));
+for ((FEATURE_ID=START;FEATURE_ID<=END;FEATURE_ID++));
 do
-    export i;
-    echo "Context=$CONTEXT, Feature=$i, with similarity";
-    sbatch --export=CONTEXT=$CONTEXT,i=$i --job-name=context-$CONTEXT.feature-$i.similarity.run --output=slurm_log/context-$CONTEXT.feature-$i.similarity.run_task_log.out run_task.similarity.sbatch;
+    export FEATURE_ID;
+    echo "$EXP_MODE, Context=$CONTEXT, Feature=$FEATURE_ID, with similarity";
+    sbatch --export=CONTEXT=$CONTEXT,FEATURE_ID=$FEATURE_ID,EXP_MODE=$EXP_MODE --job-name=$EXP_MODE.context-$CONTEXT.feature-$FEATURE_ID.similarity.run --output=slurm_log/$EXP_MODE.context-$CONTEXT.feature-$FEATURE_ID.similarity.run_task_log.out run_task.similarity.sbatch;
 done

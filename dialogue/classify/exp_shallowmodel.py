@@ -453,18 +453,11 @@ class ShallowExperimenter():
 
         results = []
 
-        # a special one with large C to disable the regularization
-        self.logger.info('=' * 80)
-        C = 1e20
-        self.logger.info("LR.pen=l2.C=%f" % C)
-        results.append(self.benchmark('LR.pen=l2.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l2', C=C)))
-
-        '''
-        for C in [2**x for x in [1]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
+        for C in [2**x for x in [0]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
             results.append(self.benchmark('LR.pen=l1.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l1', C=C)))
-        '''
+
 
         '''
             self.logger.info('=' * 80)
@@ -489,6 +482,15 @@ class ShallowExperimenter():
                                           degree=3, gamma='auto', kernel='rbf',
                                           max_iter=-1, probability=False, random_state=None, shrinking=True,
                                           tol=0.001, verbose=False)))
+        '''
+
+        '''
+        # a special one with large C to disable the regularization
+        self.logger.info('=' * 80)
+        C = 1e20
+        self.logger.info("LR.pen=l2.C=%f" % C)
+        results.append(self.benchmark('LR.pen=l2.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l2', C=C)))
+
         '''
 
         """
@@ -875,7 +877,7 @@ class ShallowExperimenter():
 
         return avg_results
 
-    def run_cross_validation_with_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
+    def run_feature_selection_report(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
         ''''''
         '''
         keep discrete features for selection only (1-7), note that LDA is discrete as well but we don't select it
@@ -941,6 +943,47 @@ class ShallowExperimenter():
             csv_writer.write('%s,%s\n' % (self.config['data_name'], ','.join([str(n) for n in num_feature])))
 
         '''
+        do ANAVA f-test for similarity features
+        '''
+        selectable_feature_indices = []
+        selectable_feature_names = []
+        not_selectable_feature_names = []
+        for f_id, f_name in enumerate(retained_feature_names):
+            f_series = f_name[: f_name.find('-')]
+            if f_series.find('.') > 0:
+                f_series = f_series[: f_series.find('.')]
+            if f_series in ['1', '2', '3', '4', '5', '6', '7'] and not (
+                        f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
+                selectable_feature_indices.append(f_id)
+                selectable_feature_names.append(f_name)
+            else:
+                not_selectable_feature_names.append(f_name)
+
+        X_selectable = copy.deepcopy(X)[:, selectable_feature_indices]
+        X_not_selectable = np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
+
+    def run_cross_validation_with_discrete_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
+        ''''''
+        '''
+        keep discrete features for selection only (1-7), note that LDA is discrete as well but we don't select it
+        '''
+        selectable_feature_indices = []
+        selectable_feature_names = []
+        not_selectable_feature_names = []
+        for f_id, f_name in enumerate(retained_feature_names):
+            f_series = f_name[: f_name.find('-')]
+            if f_series.find('.') > 0:
+                f_series = f_series[: f_series.find('.')]
+            if f_series in ['1', '2', '3', '4', '5', '6', '7'] and not (f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
+                selectable_feature_indices.append(f_id)
+                selectable_feature_names.append(f_name)
+            else:
+                not_selectable_feature_names.append(f_name)
+
+        X_selectable        =   copy.deepcopy(X)[:,selectable_feature_indices]
+        X_not_selectable    =   np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
+
+        '''
         run experiment with selected features
         '''
         X_to_select     = copy.deepcopy(X_selectable)
@@ -949,6 +992,59 @@ class ShallowExperimenter():
         if k_feature_to_keep != -1:
             num_feature = 2 ** k_feature_to_keep
             X_selected      = SelectKBest(chi2, k=num_feature).fit_transform(X_to_select, Y)
+        else:
+            num_feature = X_to_select.shape[1]
+            X_selected      = X_to_select
+
+        X_selected      = np.nan_to_num(X_selected)
+        if X_not_selectable.shape[1] == 0:
+            X           = X_selected
+        else:
+            X           = np.concatenate([X_selected, X_not_selectable], axis=1)
+
+        self.logger.info('%' * 50)
+        self.logger.info(' ' * 10 + 'dataset=%s' % str(self.config['data_name']))
+        self.logger.info(' ' * 10 + 'k_feature_to_keep=%s' % str(k_feature_to_keep))
+        self.logger.info(' ' * 10 + 'X_new.shape=%s' % str(X.shape))
+        self.logger.info(' ' * 10 + '#(X_selected)=%d' % num_feature)
+        self.logger.info(' ' * 10 + '#(X_not_selectable)=%d' % X_not_selectable.shape[1])
+        self.logger.info('%' * 50)
+
+        cv_results = self.run_cross_validation(X, Y)
+
+        return cv_results
+
+    def run_cross_validation_with_continuous_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
+        ''''''
+        '''
+        keep continuous features for selection only including: 8.LDA 9. w2v 10. d2v 11. skip-thought
+        '''
+        selectable_feature_indices = []
+        selectable_feature_names = []
+        not_selectable_feature_names = []
+        for f_id, f_name in enumerate(retained_feature_names):
+            f_series = f_name[: f_name.find('-')]
+            if f_series.find('.') > 0:
+                f_series = f_series[: f_series.find('.')]
+            if f_series in ['8', '9', '10', '11'] and not (f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
+                selectable_feature_indices.append(f_id)
+                selectable_feature_names.append(f_name)
+            else:
+                not_selectable_feature_names.append(f_name)
+
+        X_selectable        =   copy.deepcopy(X)[:,selectable_feature_indices]
+        X_not_selectable    =   np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
+
+        '''
+        run experiment with PCA feature reduction
+        '''
+        X_to_select     = copy.deepcopy(X_selectable)
+
+        # if num_feature_to_keep is -1, we don't select anything and keep all the features
+        if k_feature_to_keep != -1:
+            num_feature = 2 ** k_feature_to_keep
+            # X_selected      = SelectKBest(chi2, k=num_feature).fit_transform(X_to_select, Y)
+            X_selected = PCA(n_components=2, svd_solver='full')
         else:
             num_feature = X_to_select.shape[1]
             X_selected      = X_to_select
