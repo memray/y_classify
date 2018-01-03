@@ -415,7 +415,8 @@ def load_batch_config(key_params):
     param['gensim_dict_path']           = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.dict' % ('%s'))
 
     # Word2Vec setting
-    param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    # param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    param['w2v_path']                   = os.path.join('/home/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
     param['w2v_vector_length']          = 300
 
     # param['4.1-ngram']     = True
@@ -445,7 +446,7 @@ def load_batch_config(key_params):
 
     # CNN setting
     param['cnn_setting'] = {
-        "model"             : 'rand', # available models: rand, static, non-static, multichannel
+        "model"             : 'multichannel', # available models: rand, static, non-static, multichannel
         "early_stopping"    : True,
         "word_dim"          : 300,
         "filters"           : [3, 4, 5],
@@ -454,7 +455,7 @@ def load_batch_config(key_params):
         'batch_size'        : param['batch_size'],
         "learning_rate"     : 1.0e-3,
         "norm_limit"        : 10,
-        "dropout_prob"      : 0.5,
+        "dropout_prob"      : 0.0,
 
         "sentence_num"      : len(param['utterance_range']),
     }

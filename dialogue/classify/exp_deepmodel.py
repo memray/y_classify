@@ -331,6 +331,10 @@ class DeepExperimenter(ShallowExperimenter):
                 x = Variable(x)
                 y = Variable(y) # y.size=[batch_size]
 
+                if torch.cuda.is_available():
+                    x = x.cuda()
+                    y = y.cuda()
+
                 optimizer.zero_grad()
 
                 output = model.forward(x)
@@ -355,11 +359,15 @@ class DeepExperimenter(ShallowExperimenter):
 
                 optimizer.step()
                 training_losses.append(loss.data[0])
-                train_y_shuffled.extend(y.data.numpy().tolist())
+
+                if torch.cuda.is_available():
+                    train_y_shuffled.extend(y.data.cpu().numpy().tolist())
+                else:
+                    train_y_shuffled.extend(y.data.numpy().tolist())
 
                 # constrain l2-norms of the weight vectors
                 if 'norm_limit' in model_param:
-                    weight_norm = sum([float(p.weight.norm().data.numpy()) for p in model.parameters_to_normalize])
+                    weight_norm = sum([p.weight.norm() for p in model.parameters_to_normalize])
                     if weight_norm > model_param["norm_limit"]:
                         for p in model.parameters_to_normalize:
                             p.weight.data = p.weight.data * model_param["norm_limit"] / weight_norm
@@ -400,6 +408,10 @@ class DeepExperimenter(ShallowExperimenter):
             for i, (x, y) in enumerate(valid_batch_loader):
                 x = Variable(x)
                 y = Variable(y)
+
+                if torch.cuda.is_available():
+                    x = x.cuda()
+                    y = y.cuda()
 
                 output = model.forward(x)
                 loss = criterion.forward(output, y)
@@ -471,6 +483,10 @@ class DeepExperimenter(ShallowExperimenter):
         for i, (x, y) in enumerate(test_batch_loader):
             x = Variable(x)
             y = Variable(y)
+
+            if torch.cuda.is_available():
+                x = x.cuda()
+                y = y.cuda()
 
             output = model.forward(x)
             loss = criterion.forward(output, y)
