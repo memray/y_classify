@@ -12,6 +12,8 @@ from optparse import OptionParser
 import sys, os
 from time import time
 import matplotlib.pyplot as plt
+plt.switch_backend('agg')
+
 from collections import Counter
 
 from gensim.models import Doc2Vec
@@ -419,8 +421,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            # if r_id > 1:
-            #     break
+            if r_id > 1:
+                break
 
             self.config['test_round'] = r_id
 
@@ -878,7 +880,7 @@ class ShallowExperimenter():
 
         return avg_results
 
-    def run_feature_selection_report(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
+    def report_feature_importance(self, X, Y, feature_names):
         '''
         Run chi-square for discrete features and ANOVA f-test for similarity features
         :param X:
@@ -894,7 +896,7 @@ class ShallowExperimenter():
         selectable_feature_indices = []
         selectable_feature_names = []
         not_selectable_feature_names = []
-        for f_id, f_name in enumerate(retained_feature_names):
+        for f_id, f_name in enumerate(feature_names):
             f_series = f_name[: f_name.find('-')]
             if f_series.find('.') > 0:
                 f_series = f_series[: f_series.find('.')]
@@ -910,7 +912,6 @@ class ShallowExperimenter():
         '''
         print_important_features
         '''
-        feature_names       = retained_feature_names
         chi2_stats, pvals   = chi2(X_selectable, Y)
         chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
 
@@ -957,7 +958,7 @@ class ShallowExperimenter():
         selectable_feature_indices = []
         selectable_feature_names = []
         not_selectable_feature_names = []
-        for f_id, f_name in enumerate(retained_feature_names):
+        for f_id, f_name in enumerate(feature_names):
             f_series = f_name[: f_name.find('-')]
             if f_series.find('.') > 0:
                 f_series = f_series[: f_series.find('.')]

@@ -169,6 +169,8 @@ def worker(q, data_dict, opt):
 
             if opt.experiment_mode == 'cross_validation' or opt.experiment_mode == 'keep_one_only' or opt.experiment_mode == 'leave_one_out':
                 result = exp.run_cross_validation(X, Y)
+            elif opt.experiment_mode == 'report_feature_importance':
+                result = exp.report_feature_importance(X_all, Y, feature_names)
             elif opt.experiment_mode == 'discrete_feature_selection':
                 result = exp.run_cross_validation_with_discrete_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep)
             elif opt.experiment_mode == 'continuous_feature_selection':
