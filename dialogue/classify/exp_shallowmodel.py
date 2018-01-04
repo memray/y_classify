@@ -17,6 +17,7 @@ from collections import Counter
 from gensim.models import Doc2Vec
 from gensim.models.doc2vec import LabeledSentence, TaggedDocument
 from sklearn.datasets import fetch_20newsgroups
+from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
 from sklearn.feature_selection import SelectFromModel
@@ -314,7 +315,7 @@ class ShallowExperimenter():
             pred = clf.predict(X)
             test_time = time() - t0
             self.logger.info("test time:  %0.3fs" % test_time)
-            result = self.classification_report(Y, pred, model_name, valid_or_test)
+            result = self.classification_report(Y, pred, model_name, valid_or_test, clf)
 
             results.append(result)
 
@@ -418,8 +419,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            # if r_id >= 1:
-            #     break
+            if r_id > 1:
+                break
 
             self.config['test_round'] = r_id
 
@@ -962,13 +963,14 @@ class ShallowExperimenter():
         X_selectable = copy.deepcopy(X)[:, selectable_feature_indices]
         X_not_selectable = np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
 
-    def run_cross_validation_with_discrete_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
+    def run_cross_validation_with_discrete_feature_selection(self, X_original, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
         ''''''
         '''
         keep discrete features for selection only (1-7), note that LDA is discrete as well but we don't select it
         '''
         selectable_feature_indices = []
         selectable_feature_names = []
+        not_selectable_feature_indices = []
         not_selectable_feature_names = []
         for f_id, f_name in enumerate(retained_feature_names):
             f_series = f_name[: f_name.find('-')]
@@ -978,10 +980,11 @@ class ShallowExperimenter():
                 selectable_feature_indices.append(f_id)
                 selectable_feature_names.append(f_name)
             else:
+                not_selectable_feature_indices.append(f_id)
                 not_selectable_feature_names.append(f_name)
 
-        X_selectable        =   copy.deepcopy(X)[:,selectable_feature_indices]
-        X_not_selectable    =   np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
+        X_selectable        =   copy.deepcopy(X_original)[:,selectable_feature_indices]
+        X_not_selectable    =   np.delete(copy.deepcopy(X_original), selectable_feature_indices, axis=1)
 
         '''
         run experiment with selected features
@@ -990,10 +993,10 @@ class ShallowExperimenter():
 
         # if num_feature_to_keep is -1, we don't select anything and keep all the features
         if k_feature_to_keep != -1:
-            num_feature = 2 ** k_feature_to_keep
+            num_feature     = 2 ** k_feature_to_keep
             X_selected      = SelectKBest(chi2, k=num_feature).fit_transform(X_to_select, Y)
         else:
-            num_feature = X_to_select.shape[1]
+            num_feature     = X_to_select.shape[1]
             X_selected      = X_to_select
 
         X_selected      = np.nan_to_num(X_selected)
@@ -1012,7 +1015,79 @@ class ShallowExperimenter():
 
         cv_results = self.run_cross_validation(X, Y)
 
+        '''
+        print_important_features
+        '''
+        chi2_stats, pvals   = chi2(X_selectable, Y)
+        chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
+        sorted_selectable_idx    = np.argsort(chi2_stats)[::-1]
+        selected_idx             = sorted(sorted_selectable_idx[:num_feature])
+        selected_chi2_stats      = chi2_stats[selected_idx]
+        selected_pvals           = pvals[selected_idx]
+
+        selectable_feature_indices      = np.asarray(selectable_feature_indices)
+        selectable_feature_names        = np.asarray(selectable_feature_names)
+        not_selectable_feature_indices  = np.asarray(not_selectable_feature_indices)
+        not_selectable_feature_names    = np.asarray(not_selectable_feature_names)
+
+        # these indices correspond to the original feature order (all features)
+        selected_feature_indices = selectable_feature_indices[selected_idx]
+        selected_feature_names   = selectable_feature_names[selected_idx]
+
+        self.export_feature_report(cv_results, selected_chi2_stats, selected_pvals, selected_feature_indices, selected_feature_names, not_selectable_feature_indices, not_selectable_feature_names)
+
         return cv_results
+
+    def export_feature_report(self, results, chi2_stats, pvals, selected_feature_indices, selected_feature_names, not_selectable_feature_indices, not_selectable_feature_names):
+
+        clf_weights = np.asarray([result[0]['coef'] for result in results])
+        clf_weights = np.concatenate(clf_weights, axis=0) # concatenate them
+        clf_weights = (clf_weights ** 2).sum(axis=0)
+        clf_weights /= clf_weights.max()
+        clf_weights_ranks = np.argsort(np.argsort(clf_weights)[::-1])
+
+        feature_indices = np.concatenate([selected_feature_indices, not_selectable_feature_indices])
+        feature_names   = np.concatenate([selected_feature_names, not_selectable_feature_names])
+        chi2_stats      = np.concatenate([chi2_stats, np.zeros(not_selectable_feature_names.shape)])
+        chi2_stats_ranks = np.argsort(np.argsort(chi2_stats)[::-1])
+
+        '''
+        with open(os.path.join(self.config['experiment_path'], '%s.feature_importance_after_classification.csv' % self.config['data_name']), 'w') as csv_writer:
+            csv_writer.write('id,prefix,name,chi2,chi2_rank,clf_weight,clf_weight_rank\n')
+            for f_id, f_name, chi2_stat, chi2_stats_rank, clf_weight, clf_weights_rank in zip(feature_indices, feature_names, chi2_stats, chi2_stats_ranks, clf_weights,clf_weights_ranks):
+                # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
+                csv_writer.write('%d,%s,%s,%.4f,%d,%.4f,%d\n' % (f_id, f_name.encode('utf-8'), f_name[:f_name.find('-')].encode('utf-8'), chi2_stat, chi2_stats_rank, clf_weight, clf_weights_rank))
+        '''
+
+        with open(os.path.join(self.config['experiment_path'], '%s.feature_importance_after_classification.csv' % self.config['data_name']), 'w') as csv_writer:
+            csv_writer.write('id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank\n')
+            for f_id, f_name, chi2_stat, chi2_stats_rank, clf_weight, clf_weights_rank in zip(feature_indices, feature_names, chi2_stats, chi2_stats_ranks, clf_weights, clf_weights_ranks):
+                # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
+                prefix = f_name[: f_name.find('-')]
+                csv_writer.write('%d,%s,%s,%.4f,%d,%.4f,%d\n' % (f_id, prefix, f_name.encode('utf-8'), chi2_stat, chi2_stats_rank, clf_weight, clf_weights_rank))
+
+        top_K = 100
+        X_indices = np.arange(top_K)
+
+        chi2_stats /= chi2_stats.max()
+        chi2_stats  = chi2_stats[np.argsort(clf_weights)[::-1][:top_K]]
+        clf_weights = clf_weights[np.argsort(clf_weights)[::-1][:top_K]]
+
+        plt.figure(num=1, dpi=200)
+        plt.clf()
+
+        plt.bar(X_indices - .45, chi2_stats, width=.2, label='chi2', color='darkorange')
+        plt.bar(X_indices - .25, clf_weights, width=.2, label='LR weight', color='navy')
+
+        self.logger.info("Feature selection of top %d, ranked by LR weights (selectable:non-selectable=%d:%d)" % (top_K, sum(chi2_stats > 0), top_K-sum(chi2_stats > 0)))
+
+        plt.title("Feature selection, ranked by LR weights (selectable:non-selectable=%d:%d)" % (sum(chi2_stats > 0), top_K-sum(chi2_stats > 0)))
+        plt.xlabel('Features')
+        plt.yticks(())
+        plt.axis('tight')
+        plt.legend(loc='upper right')
+        # plt.show()
+        plt.savefig(os.path.join(self.config['experiment_path'], '%s.feature_importance_after_classification.png' % self.config['data_name']))
 
     def run_cross_validation_with_continuous_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
         ''''''
@@ -1044,7 +1119,7 @@ class ShallowExperimenter():
         if k_feature_to_keep != -1:
             num_feature = 2 ** k_feature_to_keep
             # X_selected      = SelectKBest(chi2, k=num_feature).fit_transform(X_to_select, Y)
-            X_selected = PCA(n_components=2, svd_solver='full')
+            X_selected  = PCA(n_components=num_feature, svd_solver='full')
         else:
             num_feature = X_to_select.shape[1]
             X_selected      = X_to_select
@@ -1428,7 +1503,7 @@ class ShallowExperimenter():
 
         return avg_results
 
-    def classification_report(self, Y, pred, model_name, valid_or_test):
+    def classification_report(self, Y, pred, model_name, valid_or_test, classifier=None):
         acc_score = metrics.accuracy_score(Y, pred)
         precision_score = metrics.precision_score(Y, pred, average='macro')
         recall_score = metrics.recall_score(Y, pred, average='macro')
@@ -1470,5 +1545,8 @@ class ShallowExperimenter():
         result['confusion_matrix'] = confusion_mat
         result['y_test'] = list([int(y) for y in Y])
         result['y_pred'] = list([int(y) for y in pred])
+
+        if classifier:
+            result['coef'] = classifier.coef_.tolist()
 
         return result
