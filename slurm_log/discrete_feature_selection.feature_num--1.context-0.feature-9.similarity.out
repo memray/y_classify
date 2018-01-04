@@ -1,0 +1,334 @@
+/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode discrete_feature_selection -selected_feature_set_id 9 -add_similarity_feature -selected_context_id 0 -k_feature_to_keep -1
+No. of param settings = 1
+[('experiment_mode', 'discrete_feature_selection'), ('deep_model', False), ('selected_context_id', 0), ('selected_feature_set_id', 9), ('similarity_feature', True), ('k_feature_to_keep', -1)]
+01/04/2018 17:31:26 [INFO] configuration: experiment_mode  :   discrete_feature_selection
+01/04/2018 17:31:26 [INFO] configuration: deep_model  :   False
+01/04/2018 17:31:26 [INFO] configuration: selected_context_id  :   0
+01/04/2018 17:31:26 [INFO] configuration: selected_feature_set_id  :   9
+01/04/2018 17:31:26 [INFO] configuration: similarity_feature  :   True
+01/04/2018 17:31:26 [INFO] configuration: k_feature_to_keep  :   -1
+01/04/2018 17:31:26 [INFO] configuration: seed  :   154316847
+01/04/2018 17:31:26 [INFO] configuration: root_path  :   /ihome/pbrusilosky/rum20/y_classify
+01/04/2018 17:31:26 [INFO] configuration: task_name  :   utterance_type
+01/04/2018 17:31:26 [INFO] configuration: timemark  :   20180104-173126
+01/04/2018 17:31:26 [INFO] configuration: context_set  :   next
+01/04/2018 17:31:26 [INFO] configuration: utterance_names  :   ['last_user_utterance', 'last_system_utterance', 'current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+01/04/2018 17:31:26 [INFO] configuration: utterance_range  :   ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+01/04/2018 17:31:26 [INFO] configuration: feature_set  :   9-[2+1.3.4]
+01/04/2018 17:31:26 [INFO] configuration: feature_set_number  :   ['1', '2', '3', '5', '6', '7', '4']
+01/04/2018 17:31:26 [INFO] configuration: experiment_name  :   20180104-173126.discrete_feature_selection.feature_number=-1.context=next.feature=9-[2+1.3.4].similarity=true
+01/04/2018 17:31:26 [INFO] configuration: experiment_path  :   /ihome/pbrusilosky/rum20/y_classify/output/20180104-173126.discrete_feature_selection.feature_number=-1.context=next.feature=9-[2+1.3.4].similarity=true
+01/04/2018 17:31:26 [INFO] configuration: log_path  :   /ihome/pbrusilosky/rum20/y_classify/output/20180104-173126.discrete_feature_selection.feature_number=-1.context=next.feature=9-[2+1.3.4].similarity=true/output.log
+01/04/2018 17:31:26 [INFO] configuration: valid_type  :   {'F', 'C', 'A', 'R'}
+01/04/2018 17:31:26 [INFO] configuration: data_name  :   
+01/04/2018 17:31:26 [INFO] configuration: data_names  :   ['dstc2', 'dstc3', 'family', 'ghome']
+01/04/2018 17:31:26 [INFO] configuration: raw_feature_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.raw_feature.pkl
+01/04/2018 17:31:26 [INFO] configuration: extracted_feature_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.extracted_feature.pkl
+01/04/2018 17:31:26 [INFO] configuration: pipeline_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.pipeline.pkl
+01/04/2018 17:31:26 [INFO] configuration: metrics  :   ['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+01/04/2018 17:31:26 [INFO] configuration: do_cross_validation  :   True
+01/04/2018 17:31:26 [INFO] configuration: #division  :   5
+01/04/2018 17:31:26 [INFO] configuration: #cross_validation  :   10
+01/04/2018 17:31:26 [INFO] configuration: cv_index_cache_path  :   
+01/04/2018 17:31:26 [INFO] configuration: action_words  :   {'post', 'findcar', 'area', 'music', 'findcare', 'list', 'part', 'remov', 'show', 'north', 'telephon', 'room', 'light', 'remind', 'telephone', 'start', 'delet', 'cheap', 'tell', 'food', 'clear', 'timer', 'items', 'snooz', 'item', 'snooze', 'reminders', 'skip', 'video', 'else', 'expensive', 'discard', 'centre', 'volume', 'add', 'temperature', 'alarm', 'ani', 'temperatur', 'play', 'time', 'matter', 'cast', 'shuffl', 'song', 'phone', 'delete', 'member', 'moder', 'expens', 'remove', 'centr', 'number', 'share', 'weather', 'next', 'shuffle', 'any', 'price', 'watch', 'moderate', 'help', 'reminder', 'reminds', 'volum', 'stop', 'turn', 'south', 'els', 'address'}
+01/04/2018 17:31:26 [INFO] configuration: corenlp_jars  :   ('/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*', '/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar')
+01/04/2018 17:31:26 [INFO] configuration: lda_topic_number  :   50
+01/04/2018 17:31:26 [INFO] configuration: lda_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.topic=50.lda.pkl
+01/04/2018 17:31:26 [INFO] configuration: gensim_corpus_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.corpus.pkl
+01/04/2018 17:31:26 [INFO] configuration: gensim_dict_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.dict
+01/04/2018 17:31:26 [INFO] configuration: w2v_path  :   /home/memray/Data/glove/GoogleNews-vectors-negative300.bin
+01/04/2018 17:31:26 [INFO] configuration: w2v_vector_length  :   300
+01/04/2018 17:31:26 [INFO] configuration: d2v_vector_length  :   300
+01/04/2018 17:31:26 [INFO] configuration: d2v_window_size  :   5
+01/04/2018 17:31:26 [INFO] configuration: d2v_min_count  :   2
+01/04/2018 17:31:26 [INFO] configuration: d2v_model_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.model
+01/04/2018 17:31:26 [INFO] configuration: d2v_vector_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.vector
+01/04/2018 17:31:26 [INFO] configuration: num_word_keep  :   {'dstc2': 300, 'dstc3': 300, 'family': 1000, 'ghome': 1000}
+01/04/2018 17:31:26 [INFO] configuration: batch_size  :   128
+01/04/2018 17:31:26 [INFO] configuration: max_epoch  :   50
+01/04/2018 17:31:26 [INFO] configuration: early_stop_tolerance  :   2
+01/04/2018 17:31:26 [INFO] configuration: concat_sents  :   False
+01/04/2018 17:31:26 [INFO] configuration: cnn_setting  :   {'model': 'multichannel', 'early_stopping': True, 'word_dim': 300, 'filters': [3, 4, 5], 'filter_num': [100, 100, 100], 'class_size': 4, 'batch_size': 128, 'learning_rate': 0.001, 'norm_limit': 10, 'dropout_prob': 0.0, 'sentence_num': 3}
+01/04/2018 17:31:26 [INFO] configuration: skipthought_setting  :   {'skipthought_model_path': '/Users/memray/Data/skip-thought', 'skipthought_data_path': '/ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.skip-thought.biskip.vector', 'fixed_emb': True, 'sentence_num': 3, 'hidden_size': 2400, 'class_size': 4, 'learning_rate': 0.0001, 'norm_limit': 3, 'dropout_prob': 0.5}
+01/04/2018 17:31:26 [INFO] configuration: lstm_setting  :   {'model': 'non-static', 'hidden_size': 32, 'embedding_size': 300, 'num_layers': 1, 'bidirectional': False, 'learning_rate': 0.001, 'class_size': 4, 'norm_limit': 2, 'clip_grad_norm': 2, 'dropout_prob': 0.1}
+01/04/2018 17:31:31 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/04/2018 17:31:31 [INFO] exp_shallowmodel:           dataset=dstc2
+01/04/2018 17:31:31 [INFO] exp_shallowmodel:           k_feature_to_keep=-1
+01/04/2018 17:31:31 [INFO] exp_shallowmodel:           X_new.shape=(5725, 8576)
+01/04/2018 17:31:31 [INFO] exp_shallowmodel:           #(X_selected)=8564
+01/04/2018 17:31:31 [INFO] exp_shallowmodel:           #(X_not_selectable)=12
+01/04/2018 17:31:31 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/04/2018 17:31:32 [INFO] exp_shallowmodel: ******************** dstc2 - Round 0 
+01/04/2018 17:31:32 [INFO] exp_shallowmodel: #(data) = 4583
+01/04/2018 17:31:32 [INFO] exp_shallowmodel: #(feature) = 8576
+01/04/2018 17:31:32 [INFO] exp_shallowmodel: ================================================================================
+01/04/2018 17:31:32 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/04/2018 17:31:32 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/04/2018 17:31:32 [INFO] exp_shallowmodel: Training: 
+01/04/2018 17:31:32 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/04/2018 17:32:14 [INFO] exp_shallowmodel: train time: 42.156s
+01/04/2018 17:32:14 [INFO] exp_shallowmodel: test time:  0.007s
+01/04/2018 17:32:14 [INFO] exp_shallowmodel: accuracy:   0.874
+01/04/2018 17:32:14 [INFO] exp_shallowmodel: f1_score:   0.770
+01/04/2018 17:32:14 [INFO] exp_shallowmodel: classification report:
+01/04/2018 17:32:14 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.83      0.36      0.50        14
+          C       0.83      0.85      0.84       164
+          F       0.93      0.95      0.94       268
+          R       0.80      0.79      0.80       125
+
+avg / total       0.87      0.87      0.87       571
+
+01/04/2018 17:32:14 [INFO] exp_shallowmodel: confusion matrix:
+01/04/2018 17:32:14 [INFO] exp_shallowmodel: 
+[[  5   2   6   1]
+ [  0 140   6  18]
+ [  1   7 255   5]
+ [  0  20   6  99]]
+01/04/2018 17:32:16 [INFO] exp_shallowmodel: ******************** dstc2 - Round 1 
+01/04/2018 17:32:16 [INFO] exp_shallowmodel: #(data) = 4583
+01/04/2018 17:32:16 [INFO] exp_shallowmodel: #(feature) = 8576
+01/04/2018 17:32:16 [INFO] exp_shallowmodel: ================================================================================
+01/04/2018 17:32:16 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/04/2018 17:32:16 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/04/2018 17:32:16 [INFO] exp_shallowmodel: Training: 
+01/04/2018 17:32:16 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/04/2018 17:32:57 [INFO] exp_shallowmodel: train time: 40.803s
+01/04/2018 17:32:57 [INFO] exp_shallowmodel: test time:  0.007s
+01/04/2018 17:32:57 [INFO] exp_shallowmodel: accuracy:   0.827
+01/04/2018 17:32:57 [INFO] exp_shallowmodel: f1_score:   0.696
+01/04/2018 17:32:57 [INFO] exp_shallowmodel: classification report:
+01/04/2018 17:32:57 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.50      0.29      0.36        14
+          C       0.75      0.80      0.78       164
+          F       0.91      0.94      0.92       268
+          R       0.77      0.68      0.72       125
+
+avg / total       0.82      0.83      0.82       571
+
+01/04/2018 17:32:57 [INFO] exp_shallowmodel: confusion matrix:
+01/04/2018 17:32:57 [INFO] exp_shallowmodel: 
+[[  4   2   5   3]
+ [  1 132  15  16]
+ [  1   9 251   7]
+ [  2  33   5  85]]
+01/04/2018 17:32:57 [INFO] exp_shallowmodel: Feature selection of top 100, ranked by LR weights (selectable:non-selectable=94:6)
+01/04/2018 17:33:03 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/04/2018 17:33:03 [INFO] exp_shallowmodel:           dataset=dstc3
+01/04/2018 17:33:03 [INFO] exp_shallowmodel:           k_feature_to_keep=-1
+01/04/2018 17:33:03 [INFO] exp_shallowmodel:           X_new.shape=(5934, 12152)
+01/04/2018 17:33:03 [INFO] exp_shallowmodel:           #(X_selected)=12140
+01/04/2018 17:33:03 [INFO] exp_shallowmodel:           #(X_not_selectable)=12
+01/04/2018 17:33:03 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/04/2018 17:33:05 [INFO] exp_shallowmodel: ******************** dstc3 - Round 0 
+01/04/2018 17:33:05 [INFO] exp_shallowmodel: #(data) = 4750
+01/04/2018 17:33:05 [INFO] exp_shallowmodel: #(feature) = 12152
+01/04/2018 17:33:05 [INFO] exp_shallowmodel: ================================================================================
+01/04/2018 17:33:05 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/04/2018 17:33:05 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/04/2018 17:33:05 [INFO] exp_shallowmodel: Training: 
+01/04/2018 17:33:05 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/04/2018 17:33:47 [INFO] exp_shallowmodel: train time: 41.732s
+01/04/2018 17:33:47 [INFO] exp_shallowmodel: test time:  0.010s
+01/04/2018 17:33:47 [INFO] exp_shallowmodel: accuracy:   0.789
+01/04/2018 17:33:47 [INFO] exp_shallowmodel: f1_score:   0.717
+01/04/2018 17:33:47 [INFO] exp_shallowmodel: classification report:
+01/04/2018 17:33:47 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.83      0.50      0.62        20
+          C       0.73      0.79      0.76       169
+          F       0.87      0.91      0.89       281
+          R       0.64      0.54      0.59       122
+
+avg / total       0.78      0.79      0.78       592
+
+01/04/2018 17:33:47 [INFO] exp_shallowmodel: confusion matrix:
+01/04/2018 17:33:47 [INFO] exp_shallowmodel: 
+[[ 10   0   9   1]
+ [  0 134  13  22]
+ [  2   8 257  14]
+ [  0  41  15  66]]
+01/04/2018 17:33:49 [INFO] exp_shallowmodel: ******************** dstc3 - Round 1 
+01/04/2018 17:33:49 [INFO] exp_shallowmodel: #(data) = 4750
+01/04/2018 17:33:49 [INFO] exp_shallowmodel: #(feature) = 12152
+01/04/2018 17:33:49 [INFO] exp_shallowmodel: ================================================================================
+01/04/2018 17:33:49 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/04/2018 17:33:49 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/04/2018 17:33:49 [INFO] exp_shallowmodel: Training: 
+01/04/2018 17:33:49 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/04/2018 17:34:29 [INFO] exp_shallowmodel: train time: 39.813s
+01/04/2018 17:34:29 [INFO] exp_shallowmodel: test time:  0.010s
+01/04/2018 17:34:29 [INFO] exp_shallowmodel: accuracy:   0.802
+01/04/2018 17:34:29 [INFO] exp_shallowmodel: f1_score:   0.682
+01/04/2018 17:34:29 [INFO] exp_shallowmodel: classification report:
+01/04/2018 17:34:29 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.67      0.30      0.41        20
+          C       0.75      0.79      0.77       169
+          F       0.88      0.93      0.91       281
+          R       0.68      0.60      0.64       122
+
+avg / total       0.80      0.80      0.80       592
+
+01/04/2018 17:34:29 [INFO] exp_shallowmodel: confusion matrix:
+01/04/2018 17:34:29 [INFO] exp_shallowmodel: 
+[[  6   5   8   1]
+ [  1 134  13  21]
+ [  2   5 262  12]
+ [  0  34  15  73]]
+01/04/2018 17:34:29 [INFO] exp_shallowmodel: Feature selection of top 100, ranked by LR weights (selectable:non-selectable=95:5)
+01/04/2018 17:34:38 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/04/2018 17:34:38 [INFO] exp_shallowmodel:           dataset=family
+01/04/2018 17:34:38 [INFO] exp_shallowmodel:           k_feature_to_keep=-1
+01/04/2018 17:34:38 [INFO] exp_shallowmodel:           X_new.shape=(3530, 47024)
+01/04/2018 17:34:38 [INFO] exp_shallowmodel:           #(X_selected)=47004
+01/04/2018 17:34:38 [INFO] exp_shallowmodel:           #(X_not_selectable)=20
+01/04/2018 17:34:38 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/04/2018 17:34:43 [INFO] exp_shallowmodel: ******************** family - Round 0 
+01/04/2018 17:34:43 [INFO] exp_shallowmodel: #(data) = 2826
+01/04/2018 17:34:43 [INFO] exp_shallowmodel: #(feature) = 47024
+01/04/2018 17:34:43 [INFO] exp_shallowmodel: ================================================================================
+01/04/2018 17:34:43 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/04/2018 17:34:43 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/04/2018 17:34:43 [INFO] exp_shallowmodel: Training: 
+01/04/2018 17:34:43 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/04/2018 17:35:36 [INFO] exp_shallowmodel: train time: 52.456s
+01/04/2018 17:35:36 [INFO] exp_shallowmodel: test time:  0.021s
+01/04/2018 17:35:36 [INFO] exp_shallowmodel: accuracy:   0.869
+01/04/2018 17:35:36 [INFO] exp_shallowmodel: f1_score:   0.652
+01/04/2018 17:35:36 [INFO] exp_shallowmodel: classification report:
+01/04/2018 17:35:36 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.45      0.22      0.29        23
+          C       0.63      0.70      0.67        27
+          F       0.94      0.99      0.97       250
+          R       0.71      0.65      0.68        52
+
+avg / total       0.85      0.87      0.86       352
+
+01/04/2018 17:35:36 [INFO] exp_shallowmodel: confusion matrix:
+01/04/2018 17:35:36 [INFO] exp_shallowmodel: 
+[[  5   4   7   7]
+ [  3  19   0   5]
+ [  0   0 248   2]
+ [  3   7   8  34]]
+01/04/2018 17:35:41 [INFO] exp_shallowmodel: ******************** family - Round 1 
+01/04/2018 17:35:41 [INFO] exp_shallowmodel: #(data) = 2826
+01/04/2018 17:35:41 [INFO] exp_shallowmodel: #(feature) = 47024
+01/04/2018 17:35:41 [INFO] exp_shallowmodel: ================================================================================
+01/04/2018 17:35:41 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/04/2018 17:35:41 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/04/2018 17:35:41 [INFO] exp_shallowmodel: Training: 
+01/04/2018 17:35:41 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/04/2018 17:36:21 [INFO] exp_shallowmodel: train time: 40.714s
+01/04/2018 17:36:21 [INFO] exp_shallowmodel: test time:  0.020s
+01/04/2018 17:36:21 [INFO] exp_shallowmodel: accuracy:   0.889
+01/04/2018 17:36:21 [INFO] exp_shallowmodel: f1_score:   0.717
+01/04/2018 17:36:21 [INFO] exp_shallowmodel: classification report:
+01/04/2018 17:36:21 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.83      0.22      0.34        23
+          C       0.75      1.00      0.86        27
+          F       0.92      0.99      0.96       250
+          R       0.80      0.63      0.71        52
+
+avg / total       0.89      0.89      0.87       352
+
+01/04/2018 17:36:21 [INFO] exp_shallowmodel: confusion matrix:
+01/04/2018 17:36:21 [INFO] exp_shallowmodel: 
+[[  5   3   8   7]
+ [  0  27   0   0]
+ [  1   0 248   1]
+ [  0   6  13  33]]
+01/04/2018 17:36:23 [INFO] exp_shallowmodel: Feature selection of top 100, ranked by LR weights (selectable:non-selectable=95:5)
+01/04/2018 17:36:33 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/04/2018 17:36:33 [INFO] exp_shallowmodel:           dataset=ghome
+01/04/2018 17:36:33 [INFO] exp_shallowmodel:           k_feature_to_keep=-1
+01/04/2018 17:36:33 [INFO] exp_shallowmodel:           X_new.shape=(5241, 34977)
+01/04/2018 17:36:33 [INFO] exp_shallowmodel:           #(X_selected)=34964
+01/04/2018 17:36:33 [INFO] exp_shallowmodel:           #(X_not_selectable)=13
+01/04/2018 17:36:33 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/04/2018 17:36:38 [INFO] exp_shallowmodel: ******************** ghome - Round 0 
+01/04/2018 17:36:38 [INFO] exp_shallowmodel: #(data) = 4197
+01/04/2018 17:36:38 [INFO] exp_shallowmodel: #(feature) = 34977
+01/04/2018 17:36:38 [INFO] exp_shallowmodel: ================================================================================
+01/04/2018 17:36:38 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/04/2018 17:36:38 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/04/2018 17:36:38 [INFO] exp_shallowmodel: Training: 
+01/04/2018 17:36:38 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/04/2018 17:37:26 [INFO] exp_shallowmodel: train time: 48.395s
+01/04/2018 17:37:26 [INFO] exp_shallowmodel: test time:  0.022s
+01/04/2018 17:37:26 [INFO] exp_shallowmodel: accuracy:   0.881
+01/04/2018 17:37:26 [INFO] exp_shallowmodel: f1_score:   0.590
+01/04/2018 17:37:26 [INFO] exp_shallowmodel: classification report:
+01/04/2018 17:37:26 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.67      0.53      0.59        59
+          C       0.33      0.08      0.13        12
+          F       0.92      0.99      0.96       396
+          R       0.73      0.64      0.68        55
+
+avg / total       0.86      0.88      0.87       522
+
+01/04/2018 17:37:26 [INFO] exp_shallowmodel: confusion matrix:
+01/04/2018 17:37:26 [INFO] exp_shallowmodel: 
+[[ 31   0  16  12]
+ [  2   1   8   1]
+ [  2   1 393   0]
+ [ 11   1   8  35]]
+01/04/2018 17:37:32 [INFO] exp_shallowmodel: ******************** ghome - Round 1 
+01/04/2018 17:37:32 [INFO] exp_shallowmodel: #(data) = 4197
+01/04/2018 17:37:32 [INFO] exp_shallowmodel: #(feature) = 34977
+01/04/2018 17:37:32 [INFO] exp_shallowmodel: ================================================================================
+01/04/2018 17:37:32 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/04/2018 17:37:32 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/04/2018 17:37:32 [INFO] exp_shallowmodel: Training: 
+01/04/2018 17:37:32 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/04/2018 17:38:22 [INFO] exp_shallowmodel: train time: 50.148s
+01/04/2018 17:38:22 [INFO] exp_shallowmodel: test time:  0.022s
+01/04/2018 17:38:22 [INFO] exp_shallowmodel: accuracy:   0.887
+01/04/2018 17:38:22 [INFO] exp_shallowmodel: f1_score:   0.606
+01/04/2018 17:38:22 [INFO] exp_shallowmodel: classification report:
+01/04/2018 17:38:22 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.72      0.61      0.66        59
+          C       0.50      0.08      0.14        12
+          F       0.93      0.99      0.96       396
+          R       0.69      0.64      0.66        55
+
+avg / total       0.87      0.89      0.88       522
+
+01/04/2018 17:38:22 [INFO] exp_shallowmodel: confusion matrix:
+01/04/2018 17:38:22 [INFO] exp_shallowmodel: 
+[[ 36   0  11  12]
+ [  5   1   4   2]
+ [  3   0 391   2]
+ [  6   1  13  35]]
+01/04/2018 17:38:23 [INFO] exp_shallowmodel: Feature selection of top 100, ranked by LR weights (selectable:non-selectable=96:4)
+Done: 20180104-173823

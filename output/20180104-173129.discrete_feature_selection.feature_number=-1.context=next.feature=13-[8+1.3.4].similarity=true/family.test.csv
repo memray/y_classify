@@ -1,0 +1,3 @@
+dataset,context_set,feature_set,model,test_round,accuracy,precision,recall,f1_score
+family,next,13-[8+1.3.4] w/ similarity,LR.pen=l1.C=1.000000,0,0.869318181818,0.697529644269,0.647797163384,0.661993435506
+family,next,13-[8+1.3.4] w/ similarity,LR.pen=l1.C=1.000000,1,0.880681818182,0.801974538266,0.69915533259,0.720935207256

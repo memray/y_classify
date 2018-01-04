@@ -1,0 +1,3 @@
+dataset,context_set,feature_set,model,test_round,accuracy,precision,recall,f1_score
+ghome,next,12-[7+1.3.4] w/ similarity,LR.pen=l1.C=1.000000,0,0.862068965517,0.633150534336,0.565446841294,0.586805932847
+ghome,next,12-[7+1.3.4] w/ similarity,LR.pen=l1.C=1.000000,1,0.867816091954,0.677164036346,0.631244649889,0.652172811972

@@ -1,0 +1,277 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+0,1,b'1-utterance_length.current_user_utterance__utterance_length',223.7570,53,0.0590,32
+7,2.1,b'2.1-user_action_words.current_user_utterance__item',117.9209,109,0.0351,53
+17,2.1,b'2.1-user_action_words.current_user_utterance__remind',70.4358,185,0.0030,173
+30,3,b'3-time_feature__end_of_session',272.2220,36,0.7708,1
+31,3,b'3-time_feature__start_of_session',94.2762,132,0.0134,111
+33,3,b'3-time_feature__turns_from_start',229.2487,51,0.0138,108
+34,3,b'3-time_feature__turns_to_end',671.9179,10,0.0119,121
+777,4.1,b'4.1-ngram.current_user_utterance__clear',82.0707,150,0.0135,110
+778,4.1,b'4.1-ngram.current_user_utterance__clear list',66.7468,200,0.0023,181
+2006,4.1,b'4.1-ngram.current_user_utterance__remind',80.0008,155,0.0080,141
+2161,4.1,b'4.1-ngram.current_user_utterance__reminder',61.4610,217,0.0142,103
+2792,1,b'1-utterance_length.next_system_utterance__utterance_length',897.9034,8,0.0125,118
+3502,4.1,b'4.1-ngram.next_system_utterance__add',67.8749,189,0.0055,149
+3514,4.1,b'4.1-ngram.next_system_utterance__add items',59.7357,221,0.0120,120
+6319,4.1,b'4.1-ngram.next_system_utterance__clarify',72.9151,177,0.0136,109
+6369,4.1,b'4.1-ngram.next_system_utterance__clear',63.0246,210,0.0014,197
+6370,4.1,b'4.1-ngram.next_system_utterance__clear list',64.9391,203,0.0004,215
+6371,4.1,b'4.1-ngram.next_system_utterance__clear list yes',67.8482,193,0.0000,240
+6681,4.1,b'4.1-ngram.next_system_utterance__couldn',50.9553,253,0.0277,70
+7241,4.1,b'4.1-ngram.next_system_utterance__did',73.3346,175,0.0019,187
+7244,4.1,b'4.1-ngram.next_system_utterance__did really',67.8482,191,0.0000,256
+7245,4.1,b'4.1-ngram.next_system_utterance__did really mean',67.8482,194,0.0000,267
+7246,4.1,b'4.1-ngram.next_system_utterance__didn',80.2682,153,0.1396,13
+7333,4.1,b'4.1-ngram.next_system_utterance__discard',222.9657,54,0.0324,58
+7334,4.1,b'4.1-ngram.next_system_utterance__discard request',241.7519,49,0.0132,112
+7424,4.1,b'4.1-ngram.next_system_utterance__don task',57.2768,227,0.0049,154
+7425,4.1,b'4.1-ngram.next_system_utterance__don task discard',57.2768,228,0.0030,172
+7806,4.1,b'4.1-ngram.next_system_utterance__example',148.1015,97,0.0000,270
+7832,4.1,b'4.1-ngram.next_system_utterance__example title',146.2958,98,0.0021,185
+7833,4.1,b'4.1-ngram.next_system_utterance__example title halloween',69.4395,187,0.0298,66
+7834,4.1,b'4.1-ngram.next_system_utterance__example title lunch',100.5301,125,0.0083,139
+8297,4.1,b'4.1-ngram.next_system_utterance__friday',72.6222,179,0.0500,36
+8302,4.1,b'4.1-ngram.next_system_utterance__friday nyou',61.6700,215,0.0031,168
+8303,4.1,b'4.1-ngram.next_system_utterance__friday nyou discard',61.6700,216,0.0026,177
+8939,4.1,b'4.1-ngram.next_system_utterance__halloween',84.2551,146,0.0000,263
+8940,4.1,b'4.1-ngram.next_system_utterance__halloween party',84.2551,147,0.0000,262
+8942,4.1,b'4.1-ngram.next_system_utterance__halloween party nyou',76.3495,163,0.0000,261
+8984,4.1,b'4.1-ngram.next_system_utterance__handle',64.3458,207,0.0004,213
+10260,4.1,b'4.1-ngram.next_system_utterance__learning',72.9151,176,0.0023,182
+10261,4.1,b'4.1-ngram.next_system_utterance__learning clarify',72.9151,178,0.0008,205
+10342,4.1,b'4.1-ngram.next_system_utterance__leslie',101.6853,117,0.0001,221
+10343,4.1,b'4.1-ngram.next_system_utterance__leslie nyou',101.6853,119,0.0004,216
+10344,4.1,b'4.1-ngram.next_system_utterance__leslie nyou discard',101.6853,120,0.0000,231
+10761,4.1,b'4.1-ngram.next_system_utterance__list yes',67.8482,197,0.0000,271
+11002,4.1,b'4.1-ngram.next_system_utterance__lunch leslie',101.6853,122,0.0004,214
+11003,4.1,b'4.1-ngram.next_system_utterance__lunch leslie nyou',101.6853,118,0.0001,226
+11384,4.1,b'4.1-ngram.next_system_utterance__mean',74.4236,172,0.0015,194
+11385,4.1,b'4.1-ngram.next_system_utterance__mean clear',67.8482,190,0.0000,242
+11386,4.1,b'4.1-ngram.next_system_utterance__mean clear list',67.8482,192,0.0000,273
+16645,4.1,b'4.1-ngram.next_system_utterance__nfor',184.8938,82,0.0691,26
+16646,4.1,b'4.1-ngram.next_system_utterance__nfor example',184.8938,81,0.0591,31
+16657,4.1,b'4.1-ngram.next_system_utterance__nfor example title',146.2958,99,0.0015,195
+16923,4.1,b'4.1-ngram.next_system_utterance__nyou',213.1769,71,0.1104,16
+16926,4.1,b'4.1-ngram.next_system_utterance__nyou discard',246.7700,44,0.0159,99
+16927,4.1,b'4.1-ngram.next_system_utterance__nyou discard request',246.7700,45,0.0131,114
+17456,4.1,b'4.1-ngram.next_system_utterance__party',67.8451,198,0.0141,105
+17463,4.1,b'4.1-ngram.next_system_utterance__party nyou',76.3495,166,0.0000,255
+17464,4.1,b'4.1-ngram.next_system_utterance__party nyou discard',76.3495,165,0.0000,246
+18427,4.1,b'4.1-ngram.next_system_utterance__really',70.6172,183,0.0148,102
+18428,4.1,b'4.1-ngram.next_system_utterance__really mean',67.8482,195,0.0000,257
+18429,4.1,b'4.1-ngram.next_system_utterance__really mean clear',67.8482,196,0.0000,238
+18804,4.1,b'4.1-ngram.next_system_utterance__reminder nfor',165.8424,91,0.0035,163
+18805,4.1,b'4.1-ngram.next_system_utterance__reminder nfor example',165.8424,90,0.0020,186
+18809,4.1,b'4.1-ngram.next_system_utterance__reminder ntry',62.8033,212,0.0439,41
+19116,4.1,b'4.1-ngram.next_system_utterance__rephrase',52.4997,250,0.0108,125
+19132,4.1,b'4.1-ngram.next_system_utterance__request',236.6989,50,0.0091,135
+20277,4.1,b'4.1-ngram.next_system_utterance__sorry',85.8791,144,0.0354,52
+20872,4.1,b'4.1-ngram.next_system_utterance__task discard',57.2768,226,0.0103,128
+21083,4.1,b'4.1-ngram.next_system_utterance__time set',50.2532,255,0.0037,161
+21133,4.1,b'4.1-ngram.next_system_utterance__title halloween',76.3495,167,0.0000,268
+21134,4.1,b'4.1-ngram.next_system_utterance__title halloween party',76.3495,164,0.0000,269
+21136,4.1,b'4.1-ngram.next_system_utterance__title lunch leslie',101.6853,121,0.0001,224
+21237,4.1,b'4.1-ngram.next_system_utterance__tomorrow 30',52.6603,249,0.0001,227
+21802,4.1,b'4.1-ngram.next_system_utterance__understand',55.2939,235,0.0700,25
+22620,4.1,b'4.1-ngram.next_system_utterance__yes',79.9252,156,0.0058,147
+22747,1,b'1-utterance_length.next_user_utterance__utterance_length',285.2474,33,0.0218,86
+23360,4.1,b'4.1-ngram.next_user_utterance__discard',134.5622,102,0.0217,87
+24327,4.1,b'4.1-ngram.next_user_utterance__title',79.3643,160,0.0008,206
+24330,4.1,b'4.1-ngram.next_user_utterance__today',58.2791,223,0.0191,92
+24480,4.1,b'4.1-ngram.next_user_utterance__yes',315.2330,24,0.0184,93
+25333,5,b'5-phrase_feature__noun_phrases__current_user_utterance__clear_list',98.9407,128,0.0022,184
+26305,5,b'5-phrase_feature__noun_phrases__current_user_utterance__item',81.6071,152,0.0182,95
+27841,5,b'5-phrase_feature__noun_phrases__current_user_utterance__reminder',139.6321,101,0.0099,130
+28807,5,b'5-phrase_feature__noun_phrases__next_system_utterance__10pm',151.3943,95,0.0084,136
+28816,5,b'5-phrase_feature__noun_phrases__next_system_utterance__2pm',79.7603,159,0.0025,179
+28841,5,b'5-phrase_feature__noun_phrases__next_system_utterance__<name>',62.9198,211,0.0100,129
+28887,5,b"5-phrase_feature__noun_phrases__next_system_utterance__\\_n'add_item",88.4664,136,0.0002,218
+28898,5,b"5-phrase_feature__noun_phrases__next_system_utterance__\\_n'remove",54.4645,239,0.0174,96
+28906,5,b"5-phrase_feature__noun_phrases__next_system_utterance__\\_n'title",55.0302,237,0.0001,222
+28940,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_n_\\',54.0862,244,0.0040,160
+28947,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_nfor',1040.3301,3,0.0363,51
+28948,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_nfor_example',1040.3301,5,0.0317,60
+28949,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_nhere',259.5465,42,0.0258,76
+28953,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_nor',214.5455,62,0.0000,241
+28954,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_nor_type',214.5455,60,0.0000,230
+28962,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_ntry',365.0066,13,0.0323,59
+28963,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_ntry_searching',214.5455,58,0.0000,247
+28967,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_nyou',935.3846,7,0.0015,192
+29097,5,b'5-phrase_feature__noun_phrases__next_system_utterance__alright',169.3287,87,0.3417,4
+29155,5,b'5-phrase_feature__noun_phrases__next_system_utterance__anything',200.0801,77,0.0026,176
+29486,5,b'5-phrase_feature__noun_phrases__next_system_utterance__birthday_party',55.3678,234,0.0000,234
+29632,5,b'5-phrase_feature__noun_phrases__next_system_utterance__bread',57.3742,225,0.0030,171
+30021,5,b'5-phrase_feature__noun_phrases__next_system_utterance__cheese',50.3793,254,0.0240,82
+30962,5,b'5-phrase_feature__noun_phrases__next_system_utterance__example',743.7167,9,0.7299,2
+31213,5,b'5-phrase_feature__noun_phrases__next_system_utterance__friday',219.2357,55,0.0054,150
+31442,5,b'5-phrase_feature__noun_phrases__next_system_utterance__great',279.4974,34,0.4070,3
+31497,5,b'5-phrase_feature__noun_phrases__next_system_utterance__group_members',71.7207,180,0.0314,61
+31559,5,b'5-phrase_feature__noun_phrases__next_system_utterance__halloween_party',351.7964,16,0.0035,162
+31782,5,b'5-phrase_feature__noun_phrases__next_system_utterance__hours',56.8834,229,0.0006,209
+32033,5,b'5-phrase_feature__noun_phrases__next_system_utterance__item_<name>',88.4664,140,0.0008,207
+32034,5,b'5-phrase_feature__noun_phrases__next_system_utterance__item_<number>',88.4664,139,0.0000,235
+32038,5,b'5-phrase_feature__noun_phrases__next_system_utterance__items',178.0366,84,0.1437,12
+32039,5,b'5-phrase_feature__noun_phrases__next_system_utterance__items_milk',70.4734,184,0.0155,101
+32326,5,b'5-phrase_feature__noun_phrases__next_system_utterance__laura',74.2916,173,0.0010,202
+32339,5,b'5-phrase_feature__noun_phrases__next_system_utterance__learning',214.5064,70,0.0164,98
+32366,5,b'5-phrase_feature__noun_phrases__next_system_utterance__leslie',388.6406,12,0.0049,153
+32474,5,b'5-phrase_feature__noun_phrases__next_system_utterance__list',169.7379,86,0.0275,71
+32671,5,b'5-phrase_feature__noun_phrases__next_system_utterance__matching_reminder',62.6983,213,0.0012,200
+32767,5,b'5-phrase_feature__noun_phrases__next_system_utterance__members',53.4504,247,0.0091,134
+32977,5,b"5-phrase_feature__noun_phrases__next_system_utterance__n'add_item",88.4664,135,0.0000,236
+32978,5,b"5-phrase_feature__noun_phrases__next_system_utterance__n'add_item_<name>",88.4664,134,0.0001,223
+33029,5,b"5-phrase_feature__noun_phrases__next_system_utterance__n'remove",54.4645,241,0.0131,113
+33030,5,b"5-phrase_feature__noun_phrases__next_system_utterance__n'remove_item",88.4664,141,0.0001,228
+33031,5,b"5-phrase_feature__noun_phrases__next_system_utterance__n'remove_item_<name>",88.4664,138,0.0002,217
+33032,5,b"5-phrase_feature__noun_phrases__next_system_utterance__n'remove_item_<number>",88.4664,133,0.0000,232
+33037,5,b"5-phrase_feature__noun_phrases__next_system_utterance__n'show",54.4645,240,0.0182,94
+33038,5,b"5-phrase_feature__noun_phrases__next_system_utterance__n'show_list",88.4664,137,0.0000,237
+33047,5,b"5-phrase_feature__noun_phrases__next_system_utterance__n'title",55.0302,238,0.0002,219
+33052,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n1',295.9841,30,0.0791,21
+33053,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n10',81.7769,151,0.0033,164
+33054,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n11',69.6182,186,0.0197,90
+33055,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n12',66.2984,201,0.0438,42
+33056,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n13',56.4024,230,0.0469,38
+33063,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n2',260.7042,40,0.0025,178
+33074,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n3',241.9232,48,0.0526,35
+33085,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n4',207.3310,75,0.1678,8
+33097,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n5',185.8872,80,0.0325,57
+33103,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n6',154.0066,93,0.0027,174
+33104,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n7',129.8713,105,0.0390,47
+33105,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n8',120.1275,108,0.0122,119
+33106,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n9',99.1617,127,0.0043,158
+33107,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n_\\',53.7989,246,0.0014,196
+33119,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n_\\_nfor',100.3516,126,0.0072,145
+33120,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n_\\_nhere',251.1650,43,1.0000,0
+33123,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n_\\_nor',214.5455,67,0.0000,275
+33125,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n_\\_ntry',214.5455,66,0.0000,272
+33126,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n_\\_ntype',56.1006,233,0.0491,37
+33129,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n_\\_nyou',935.3846,6,0.0013,198
+33196,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nfor',1040.3301,4,0.0378,48
+33197,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nfor_example',1040.3301,2,0.0299,65
+33203,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nhere',260.2771,41,0.0343,54
+33241,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nor',214.5455,63,0.0000,258
+33242,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nor_type',214.5455,61,0.0000,265
+33281,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ntry',365.0066,14,0.0251,77
+33282,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ntry_searching',214.5455,59,0.0000,264
+33283,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ntry_searching_reminders',214.5455,69,0.0000,260
+33309,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nyou',1238.2639,1,0.1572,11
+33357,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ok',162.9005,92,0.0665,28
+33607,5,b'5-phrase_feature__noun_phrases__next_system_utterance__party',299.1515,27,0.0012,201
+33732,5,b'5-phrase_feature__noun_phrases__next_system_utterance__person',64.3151,208,0.0928,19
+34138,5,b'5-phrase_feature__noun_phrases__next_system_utterance__reminder',105.2941,116,0.0592,30
+34148,5,b'5-phrase_feature__noun_phrases__next_system_utterance__reminders',52.2013,252,0.0109,124
+34550,5,b'5-phrase_feature__noun_phrases__next_system_utterance__request',1501.9779,0,0.0286,69
+34823,5,b'5-phrase_feature__noun_phrases__next_system_utterance__searching',214.5455,65,0.0000,259
+34824,5,b'5-phrase_feature__noun_phrases__next_system_utterance__searching_reminders',214.5455,68,0.0000,233
+34930,5,b'5-phrase_feature__noun_phrases__next_system_utterance__shopping',76.1704,168,0.0328,56
+34931,5,b'5-phrase_feature__noun_phrases__next_system_utterance__shopping_list',75.2549,170,0.0335,55
+35120,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sorry',355.6549,15,0.0074,143
+35475,5,b'5-phrase_feature__noun_phrases__next_system_utterance__task',87.7669,142,0.1160,15
+35566,5,b'5-phrase_feature__noun_phrases__next_system_utterance__time',246.1264,46,0.0647,29
+35619,5,b'5-phrase_feature__noun_phrases__next_system_utterance__tomorrow',108.0575,114,0.0082,140
+36155,5,b'5-phrase_feature__noun_phrases__next_system_utterance__yes/no',351.6712,18,0.1640,9
+39133,5,b'5-phrase_feature__noun_phrases__next_user_utterance__title',115.6314,110,0.0097,131
+39137,5,b'5-phrase_feature__noun_phrases__next_user_utterance__today',76.4376,162,0.0436,44
+39364,5,b'5-phrase_feature__noun_phrases__next_user_utterance__y',54.1825,243,0.0024,180
+40469,6,b'6-entity_feature__entity__next_system_utterance__10 pm_TIME',71.4116,181,0.0006,210
+40477,6,b'6-entity_feature__entity__next_system_utterance__10pm_TIME',80.2369,154,0.0000,229
+40494,6,b'6-entity_feature__entity__next_system_utterance__1st_ORDINAL',64.4575,205,0.0004,212
+40501,6,b'6-entity_feature__entity__next_system_utterance__2 pm_TIME',79.7603,158,0.0030,170
+40529,6,b'6-entity_feature__entity__next_system_utterance__3.30_NUMBER',217.1542,56,0.0017,191
+40547,6,b'6-entity_feature__entity__next_system_utterance__4pm on_TIME',61.0316,219,0.0001,225
+40582,6,b'6-entity_feature__entity__next_system_utterance__7_NUMBER',211.4428,72,0.0113,122
+40583,6,b'6-entity_feature__entity__next_system_utterance__7pm_TIME',53.9694,245,0.0218,85
+40605,6,b'6-entity_feature__entity__next_system_utterance__\\_NUMBER',197.4073,78,0.0250,78
+40607,6,b'6-entity_feature__entity__next_system_utterance__\\ntry, `_MISC',96.5926,131,0.0110,123
+40704,6,b'6-entity_feature__entity__next_system_utterance__at 10pm_SET',75.4720,169,0.0033,165
+40736,6,b'6-entity_feature__entity__next_system_utterance__at 2pm_TIME',79.7603,157,0.0040,159
+40954,6,b'6-entity_feature__entity__next_system_utterance__every 6 hours_SET',65.1581,202,0.0009,204
+40980,6,b'6-entity_feature__entity__next_system_utterance__friday_DATE',224.7304,52,0.0070,146
+41007,6,b'6-entity_feature__entity__next_system_utterance__halloween_DATE',351.7964,17,0.0027,175
+41179,6,b'6-entity_feature__entity__next_system_utterance__laura_PERSON',74.9901,171,0.0076,142
+41213,6,b'6-entity_feature__entity__next_system_utterance__mar 19_DATE',82.6971,149,0.0022,183
+41532,6,b'6-entity_feature__entity__next_system_utterance__tomorrow_DATE',87.5435,143,0.0104,127
+42459,7,b'7-syntactic_feature__obj_word__current_user_utterance__all',74.2002,174,0.0046,155
+42817,7,b'7-syntactic_feature__obj_word__current_user_utterance__me',96.9086,130,0.0128,115
+43150,7,b'7-syntactic_feature__obj_word__next_system_utterance__anyth',214.5455,64,0.0000,266
+43418,7,b'7-syntactic_feature__obj_word__next_system_utterance__item',270.4851,37,0.0365,50
+43501,7,b'7-syntactic_feature__obj_word__next_system_utterance__n',61.9416,214,0.0096,133
+43515,7,b'7-syntactic_feature__obj_word__next_system_utterance__n2',82.8846,148,0.0012,199
+43526,7,b'7-syntactic_feature__obj_word__next_system_utterance__n3',64.4240,206,0.0083,138
+43543,7,b'7-syntactic_feature__obj_word__next_system_utterance__n5',59.7503,220,0.0735,23
+43549,7,b'7-syntactic_feature__obj_word__next_system_utterance__n9',53.2927,248,0.0466,39
+43627,7,b'7-syntactic_feature__obj_word__next_system_utterance__remind',297.2295,29,0.0303,63
+43632,7,b'7-syntactic_feature__obj_word__next_system_utterance__request',314.5180,25,0.0193,91
+43707,7,b'7-syntactic_feature__obj_word__next_system_utterance__task',121.8116,106,0.0045,157
+43714,7,b'7-syntactic_feature__obj_word__next_system_utterance__that',285.7022,32,0.2090,7
+43764,7,b'7-syntactic_feature__obj_word__next_system_utterance__you',70.8665,182,0.0582,33
+44426,7,b'7-syntactic_feature__root_word__current_user_utterance__add',106.3339,115,0.1263,14
+44471,7,b'7-syntactic_feature__root_word__current_user_utterance__clear',113.0240,112,0.0097,132
+44492,7,b'7-syntactic_feature__root_word__current_user_utterance__discard',64.9271,204,0.0445,40
+44639,7,b'7-syntactic_feature__root_word__current_user_utterance__remind',209.8761,74,0.0674,27
+44739,7,b"7-syntactic_feature__root_word__next_system_utterance__''",339.6939,21,0.0157,100
+44740,7,b"7-syntactic_feature__root_word__next_system_utterance__'s",193.1827,79,0.0141,106
+44760,7,b'7-syntactic_feature__root_word__next_system_utterance__\\',149.3719,96,0.0018,189
+44765,7,b'7-syntactic_feature__root_word__next_system_utterance__abl',61.2881,218,0.0032,167
+44768,7,b'7-syntactic_feature__root_word__next_system_utterance__ad',267.7295,38,0.3039,6
+44785,7,b'7-syntactic_feature__root_word__next_system_utterance__alright',168.0968,89,0.3129,5
+44931,7,b'7-syntactic_feature__root_word__next_system_utterance__call',349.5698,19,0.0261,73
+44934,7,b'7-syntactic_feature__root_word__next_system_utterance__can',111.5352,113,0.0054,151
+44990,7,b'7-syntactic_feature__root_word__next_system_utterance__clarifi',113.4673,111,0.0242,81
+45034,7,b'7-syntactic_feature__root_word__next_system_utterance__creat',66.8683,199,0.0126,117
+45074,7,b'7-syntactic_feature__root_word__next_system_utterance__did',297.2825,28,0.0019,188
+45080,7,b'7-syntactic_feature__root_word__next_system_utterance__discard',175.6339,85,0.0045,156
+45135,7,b'7-syntactic_feature__root_word__next_system_utterance__find',344.4768,20,0.0784,22
+45180,7,b'7-syntactic_feature__root_word__next_system_utterance__get',151.5956,94,0.0266,72
+45201,7,b'7-syntactic_feature__root_word__next_system_utterance__great',279.0882,35,0.1635,10
+45217,7,b'7-syntactic_feature__root_word__next_system_utterance__handl',63.8190,209,0.0015,193
+45316,7,b'7-syntactic_feature__root_word__next_system_utterance__learn',179.8454,83,0.0000,274
+45349,7,b'7-syntactic_feature__root_word__next_system_utterance__lunch',327.9754,22,0.0172,97
+45392,7,b'7-syntactic_feature__root_word__next_system_utterance__milk',69.2227,188,0.0919,20
+45423,7,b'7-syntactic_feature__root_word__next_system_utterance__n',101.1766,124,0.0127,116
+45479,7,b'7-syntactic_feature__root_word__next_system_utterance__ntri',242.0051,47,0.0214,88
+45492,7,b'7-syntactic_feature__root_word__next_system_utterance__ok',56.2694,232,0.0293,68
+45576,7,b'7-syntactic_feature__root_word__next_system_utterance__pleas',85.1059,145,0.0377,49
+45636,7,b'7-syntactic_feature__root_word__next_system_utterance__remind',52.4635,251,0.0410,46
+45637,7,b'7-syntactic_feature__root_word__next_system_utterance__remov',121.4450,107,0.0206,89
+45639,7,b'7-syntactic_feature__root_word__next_system_utterance__rephras',101.5515,123,0.0293,67
+45693,7,b'7-syntactic_feature__root_word__next_system_utterance__see',77.6087,161,0.0030,169
+45697,7,b'7-syntactic_feature__root_word__next_system_utterance__send',133.5681,103,0.0017,190
+45701,7,b'7-syntactic_feature__root_word__next_system_utterance__set',210.9131,73,0.0141,104
+45819,7,b'7-syntactic_feature__root_word__next_system_utterance__think',58.4329,222,0.0247,80
+45868,7,b'7-syntactic_feature__root_word__next_system_utterance__understand',201.7096,76,0.0258,75
+45909,7,b'7-syntactic_feature__root_word__next_system_utterance__what',303.6067,26,0.0220,84
+45985,7,b'7-syntactic_feature__root_word__next_user_utterance__add',57.8600,224,0.0107,126
+46046,7,b'7-syntactic_feature__root_word__next_user_utterance__discard',130.3317,104,0.0302,64
+46219,7,b'7-syntactic_feature__root_word__next_user_utterance__today',141.4652,100,0.0073,144
+46222,7,b'7-syntactic_feature__root_word__next_user_utterance__tomorrow',56.3955,231,0.0053,152
+46249,7,b'7-syntactic_feature__root_word__next_user_utterance__y',54.1825,242,0.0006,208
+46250,7,b'7-syntactic_feature__root_word__next_user_utterance__ye',315.2330,23,0.0141,107
+46373,7,b'7-syntactic_feature__subj_word__next_system_utterance__-lsb-',217.1369,57,0.0221,83
+46678,7,b"7-syntactic_feature__subj_word__next_system_utterance__n'titl",55.0302,236,0.0001,220
+46709,7,b'7-syntactic_feature__subj_word__next_system_utterance__nyou',267.0933,39,0.0544,34
+46778,7,b'7-syntactic_feature__subj_word__next_system_utterance__remind',293.9305,31,0.0033,166
+46872,7,b'7-syntactic_feature__subj_word__next_system_utterance__titl',506.3669,11,0.0303,62
+46922,7,b'7-syntactic_feature__subj_word__next_system_utterance__you',168.8379,88,0.0057,148
+47010,7,b'7-syntactic_feature__subj_word__next_user_utterance__titl',98.8646,129,0.0010,203
+29,2.3.1,b'2.3.1-action_jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,273,0.0083,137
+2790,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,260,0.0259,74
+2791,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,272,0.1055,18
+7374,4.1,b'4.1-ngram.next_system_utterance__distance',0.0000,271,0.0000,243
+7375,4.1,b'4.1-ngram.next_system_utterance__distance glasses',0.0000,270,0.0000,244
+7376,4.1,b'4.1-ngram.next_system_utterance__distance glasses tree',0.0000,269,0.0000,239
+14279,4.1,b'4.1-ngram.next_system_utterance__n3 distance',0.0000,268,0.0000,245
+14280,4.1,b'4.1-ngram.next_system_utterance__n3 distance glasses',0.0000,267,0.0000,248
+18417,4.1,b'4.1-ngram.next_system_utterance__reading n3 distance',0.0000,266,0.0000,249
+24484,5,b'5-phrase_feature__next_noun_phrases__#overlap',0.0000,265,0.0249,79
+24485,5,b'5-phrase_feature__next_noun_phrases__have_overlap',0.0000,264,0.0437,43
+24486,5,b'5-phrase_feature__next_noun_phrases__jaccard_similarity',0.0000,263,0.0715,24
+30725,5,b'5-phrase_feature__noun_phrases__next_system_utterance__distance',0.0000,262,0.0000,250
+30726,5,b'5-phrase_feature__noun_phrases__next_system_utterance__distance_glasses',0.0000,261,0.0000,251
+42362,6,b'6-entity_feature__next_entity__#overlap',0.0000,259,0.0000,252
+42363,6,b'6-entity_feature__next_entity__have_overlap',0.0000,256,0.0000,253
+42364,6,b'6-entity_feature__next_entity__jaccard_similarity',0.0000,258,0.0000,254
+42365,7,b'7-syntactic_feature__next_obj_words_overlap',0.0000,257,0.0435,45
+42366,7,b'7-syntactic_feature__next_root_words_overlap',0.0000,274,0.1082,17
+42367,7,b'7-syntactic_feature__next_subj_words_overlap',0.0000,275,0.0004,211
