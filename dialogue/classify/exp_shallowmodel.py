@@ -421,8 +421,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            if r_id > 1:
-                break
+            # if r_id > 1:
+            #     break
 
             self.config['test_round'] = r_id
 
@@ -917,11 +917,11 @@ class ShallowExperimenter():
 
         sorted_idx = np.argsort(chi2_stats)[::-1]
 
-        with open(os.path.join(self.config['experiment_path'], '%s.top_features.csv' % self.config['data_name']), 'w') as csv_writer:
+        with open(os.path.join(self.config['experiment_path'], '%s.chi2_top_features.csv' % self.config['data_name']), 'w') as csv_writer:
             csv_writer.write('id,name,prefix,chi2,pval\n')
             for f_id, (f_name, chi2_stat, pval) in enumerate(zip(np.asarray(feature_names)[sorted_idx], chi2_stats[sorted_idx], pvals[sorted_idx])):
                 # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
-                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, f_name.encode('utf-8'), f_name[:f_name.find('-')].encode('utf-8'), chi2_stat, pval))
+                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, str(f_name.encode('utf-8')), str(f_name[:f_name.find('-')].encode('utf-8')), chi2_stat, pval))
 
         feature_prefixes  = sorted(list(set([f[:f.find('-')] for f in feature_names])))
         feature_set_names = {'1'   :'1-utterance length',
@@ -949,7 +949,7 @@ class ShallowExperimenter():
             for prefix, feature_set_name in zip(feature_prefixes, feature_set_names):
                 self.logger.info('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
                 # csv_writer.write('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
-                num_feature.append(len([f for f in feature_names if f.startswith(prefix)]))
+                num_feature.append(len([f for f in feature_names if f[:f.find('-')] == prefix]))
             csv_writer.write('%s,%s\n' % (self.config['data_name'], ','.join([str(n) for n in num_feature])))
 
         '''
@@ -971,6 +971,8 @@ class ShallowExperimenter():
 
         X_selectable = copy.deepcopy(X)[:, selectable_feature_indices]
         X_not_selectable = np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
+
+        return []
 
     def run_cross_validation_with_discrete_feature_selection(self, X_original, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
         ''''''
@@ -1054,28 +1056,24 @@ class ShallowExperimenter():
         clf_weights = (clf_weights ** 2).sum(axis=0)
         clf_weights /= clf_weights.max()
         clf_weights_ranks = np.argsort(np.argsort(clf_weights)[::-1])
+        clf_weights_argsort = np.argsort(clf_weights)[::-1]
 
         feature_indices = np.concatenate([selected_feature_indices, not_selectable_feature_indices])
         feature_names   = np.concatenate([selected_feature_names, not_selectable_feature_names])
         chi2_stats      = np.concatenate([chi2_stats, np.zeros(not_selectable_feature_names.shape)])
         chi2_stats_ranks = np.argsort(np.argsort(chi2_stats)[::-1])
 
-        '''
-        with open(os.path.join(self.config['experiment_path'], '%s.feature_importance_after_classification.csv' % self.config['data_name']), 'w') as csv_writer:
-            csv_writer.write('id,prefix,name,chi2,chi2_rank,clf_weight,clf_weight_rank\n')
-            for f_id, f_name, chi2_stat, chi2_stats_rank, clf_weight, clf_weights_rank in zip(feature_indices, feature_names, chi2_stats, chi2_stats_ranks, clf_weights,clf_weights_ranks):
-                # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
-                csv_writer.write('%d,%s,%s,%.4f,%d,%.4f,%d\n' % (f_id, f_name.encode('utf-8'), f_name[:f_name.find('-')].encode('utf-8'), chi2_stat, chi2_stats_rank, clf_weight, clf_weights_rank))
-        '''
-
         with open(os.path.join(self.config['experiment_path'], '%s.feature_importance_after_classification.csv' % self.config['data_name']), 'w') as csv_writer:
             csv_writer.write('id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank\n')
-            for f_id, f_name, chi2_stat, chi2_stats_rank, clf_weight, clf_weights_rank in zip(feature_indices, feature_names, chi2_stats, chi2_stats_ranks, clf_weights, clf_weights_ranks):
+            for f_id, f_name, chi2_stat, chi2_stats_rank, clf_weight, clf_weights_rank in zip(feature_indices[clf_weights_argsort], feature_names[clf_weights_argsort], chi2_stats[clf_weights_argsort], chi2_stats_ranks[clf_weights_argsort], clf_weights[clf_weights_argsort], clf_weights_ranks[clf_weights_argsort]):
                 # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
                 prefix = f_name[: f_name.find('-')]
                 csv_writer.write('%d,%s,%s,%.4f,%d,%.4f,%d\n' % (f_id, prefix, f_name.encode('utf-8'), chi2_stat, chi2_stats_rank, clf_weight, clf_weights_rank))
 
         top_K = 100
+        if top_K > len(chi2_stats):
+            top_K = len(chi2_stats)
+
         X_indices = np.arange(top_K)
 
         chi2_stats /= chi2_stats.max()
@@ -1088,15 +1086,19 @@ class ShallowExperimenter():
         plt.bar(X_indices - .45, chi2_stats, width=.2, label='chi2', color='darkorange')
         plt.bar(X_indices - .25, clf_weights, width=.2, label='LR weight', color='navy')
 
-        self.logger.info("Feature selection of top %d, ranked by LR weights (selectable:non-selectable=%d:%d)" % (top_K, sum(chi2_stats > 0), top_K-sum(chi2_stats > 0)))
+        self.logger.info("Feature selection of top %d, selectable:non-selectable=%d:%d" % (top_K, sum(chi2_stats > 0), top_K-sum(chi2_stats > 0)))
 
-        plt.title("Feature selection, ranked by LR weights (selectable:non-selectable=%d:%d)" % (sum(chi2_stats > 0), top_K-sum(chi2_stats > 0)))
+        plt.title("Feature selection of top %d, selectable:non-selectable=%d:%d" % (top_K, sum(chi2_stats > 0), top_K-sum(chi2_stats > 0)))
         plt.xlabel('Features')
         plt.yticks(())
         plt.axis('tight')
         plt.legend(loc='upper right')
         # plt.show()
         plt.savefig(os.path.join(self.config['experiment_path'], '%s.feature_importance_after_classification.png' % self.config['data_name']))
+
+        with open(os.path.join(self.config['experiment_path'], 'top_important_feature_stats.csv'), 'a') as csv_writer:
+            csv_writer.write('%s,%d,%d,%d,%.4f,%.4f\n' % (self.config['data_name'], top_K, sum(chi2_stats > 0), top_K-sum(chi2_stats > 0), sum(chi2_stats > 0)/float(top_K) * 100.0, (top_K-sum(chi2_stats > 0))/float(top_K) * 100.0))
+
 
     def run_cross_validation_with_continuous_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
         ''''''

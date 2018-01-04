@@ -170,7 +170,7 @@ def worker(q, data_dict, opt):
             if opt.experiment_mode == 'cross_validation' or opt.experiment_mode == 'keep_one_only' or opt.experiment_mode == 'leave_one_out':
                 result = exp.run_cross_validation(X, Y)
             elif opt.experiment_mode == 'report_feature_importance':
-                result = exp.report_feature_importance(X_all, Y, feature_names)
+                result = exp.report_feature_importance(X, Y, feature_names)
             elif opt.experiment_mode == 'discrete_feature_selection':
                 result = exp.run_cross_validation_with_discrete_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep)
             elif opt.experiment_mode == 'continuous_feature_selection':
@@ -187,10 +187,8 @@ if __name__ == '__main__':
         description='task_runner.py',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('-selected_context_id', nargs='+', type=int,
-                        help="")
-    parser.add_argument('-selected_feature_set_id', nargs='+', type=int,
-                        help="")
+    parser.add_argument('-selected_context_id', nargs='+', type=int, default=[0], help="")
+    parser.add_argument('-selected_feature_set_id', nargs='+', type=int, default=[0], help="")
     parser.add_argument('-is_deep_model', action='store_true',
                         help="")
     parser.add_argument('-add_similarity_feature', action='store_true',
