@@ -419,8 +419,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            if r_id > 1:
-                break
+            # if r_id > 1:
+            #     break
 
             self.config['test_round'] = r_id
 
@@ -879,7 +879,15 @@ class ShallowExperimenter():
         return avg_results
 
     def run_feature_selection_report(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
-        ''''''
+        '''
+        Run chi-square for discrete features and ANOVA f-test for similarity features
+        :param X:
+        :param Y:
+        :param retained_feature_indices:
+        :param retained_feature_names:
+        :param k_feature_to_keep:
+        :return:
+        '''
         '''
         keep discrete features for selection only (1-7), note that LDA is discrete as well but we don't select it
         '''
@@ -1034,11 +1042,11 @@ class ShallowExperimenter():
         selected_feature_indices = selectable_feature_indices[selected_idx]
         selected_feature_names   = selectable_feature_names[selected_idx]
 
-        self.export_feature_report(cv_results, selected_chi2_stats, selected_pvals, selected_feature_indices, selected_feature_names, not_selectable_feature_indices, not_selectable_feature_names)
+        self.print_feature_importance_report(cv_results, selected_chi2_stats, selected_pvals, selected_feature_indices, selected_feature_names, not_selectable_feature_indices, not_selectable_feature_names)
 
         return cv_results
 
-    def export_feature_report(self, results, chi2_stats, pvals, selected_feature_indices, selected_feature_names, not_selectable_feature_indices, not_selectable_feature_names):
+    def print_feature_importance_report(self, results, chi2_stats, pvals, selected_feature_indices, selected_feature_names, not_selectable_feature_indices, not_selectable_feature_names):
 
         clf_weights = np.asarray([result[0]['coef'] for result in results])
         clf_weights = np.concatenate(clf_weights, axis=0) # concatenate them
