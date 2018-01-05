@@ -1,0 +1,72 @@
+/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode discrete_feature_selection -selected_feature_set_id 14 -add_similarity_feature -selected_context_id 0 -k_feature_to_keep 12
+No. of param settings = 1
+[('experiment_mode', 'discrete_feature_selection'), ('deep_model', False), ('selected_context_id', 0), ('selected_feature_set_id', 14), ('similarity_feature', True), ('k_feature_to_keep', 12)]
+01/04/2018 19:24:19 [INFO] configuration: experiment_mode  :   discrete_feature_selection
+01/04/2018 19:24:19 [INFO] configuration: deep_model  :   False
+01/04/2018 19:24:19 [INFO] configuration: selected_context_id  :   0
+01/04/2018 19:24:19 [INFO] configuration: selected_feature_set_id  :   14
+01/04/2018 19:24:19 [INFO] configuration: similarity_feature  :   True
+01/04/2018 19:24:19 [INFO] configuration: k_feature_to_keep  :   12
+01/04/2018 19:24:19 [INFO] configuration: seed  :   154316847
+01/04/2018 19:24:19 [INFO] configuration: root_path  :   /ihome/pbrusilosky/rum20/y_classify
+01/04/2018 19:24:19 [INFO] configuration: task_name  :   utterance_type
+01/04/2018 19:24:19 [INFO] configuration: timemark  :   20180104-192419
+01/04/2018 19:24:19 [INFO] configuration: context_set  :   next
+01/04/2018 19:24:19 [INFO] configuration: utterance_names  :   ['last_user_utterance', 'last_system_utterance', 'current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+01/04/2018 19:24:19 [INFO] configuration: utterance_range  :   ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+01/04/2018 19:24:19 [INFO] configuration: feature_set  :   14-[1.3.4]
+01/04/2018 19:24:19 [INFO] configuration: feature_set_number  :   ['1', '2', '3', '5', '6', '7']
+01/04/2018 19:24:19 [INFO] configuration: experiment_name  :   20180104-192419.discrete_feature_selection.feature_number=12.context=next.feature=14-[1.3.4].similarity=true
+01/04/2018 19:24:19 [INFO] configuration: experiment_path  :   /ihome/pbrusilosky/rum20/y_classify/output/20180104-192419.discrete_feature_selection.feature_number=12.context=next.feature=14-[1.3.4].similarity=true
+01/04/2018 19:24:19 [INFO] configuration: log_path  :   /ihome/pbrusilosky/rum20/y_classify/output/20180104-192419.discrete_feature_selection.feature_number=12.context=next.feature=14-[1.3.4].similarity=true/output.log
+01/04/2018 19:24:19 [INFO] configuration: valid_type  :   {'F', 'C', 'R', 'A'}
+01/04/2018 19:24:19 [INFO] configuration: data_name  :   
+01/04/2018 19:24:19 [INFO] configuration: data_names  :   ['dstc2', 'dstc3', 'family', 'ghome']
+01/04/2018 19:24:19 [INFO] configuration: raw_feature_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.raw_feature.pkl
+01/04/2018 19:24:19 [INFO] configuration: extracted_feature_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.extracted_feature.pkl
+01/04/2018 19:24:19 [INFO] configuration: pipeline_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.pipeline.pkl
+01/04/2018 19:24:19 [INFO] configuration: metrics  :   ['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+01/04/2018 19:24:19 [INFO] configuration: do_cross_validation  :   True
+01/04/2018 19:24:19 [INFO] configuration: #division  :   5
+01/04/2018 19:24:19 [INFO] configuration: #cross_validation  :   10
+01/04/2018 19:24:19 [INFO] configuration: cv_index_cache_path  :   
+01/04/2018 19:24:19 [INFO] configuration: action_words  :   {'reminders', 'stop', 'weather', 'next', 'part', 'south', 'snooz', 'reminds', 'music', 'snooze', 'list', 'share', 'any', 'add', 'area', 'time', 'discard', 'moderate', 'volum', 'matter', 'cast', 'telephon', 'else', 'moder', 'cheap', 'item', 'remind', 'els', 'light', 'number', 'delet', 'north', 'clear', 'help', 'shuffle', 'watch', 'phone', 'expens', 'song', 'start', 'video', 'price', 'alarm', 'centre', 'centr', 'reminder', 'volume', 'turn', 'temperature', 'expensive', 'tell', 'address', 'post', 'remov', 'ani', 'show', 'shuffl', 'temperatur', 'member', 'telephone', 'room', 'skip', 'timer', 'play', 'findcare', 'findcar', 'delete', 'items', 'remove', 'food'}
+01/04/2018 19:24:19 [INFO] configuration: corenlp_jars  :   ('/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*', '/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar')
+01/04/2018 19:24:19 [INFO] configuration: lda_topic_number  :   50
+01/04/2018 19:24:19 [INFO] configuration: lda_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.topic=50.lda.pkl
+01/04/2018 19:24:19 [INFO] configuration: gensim_corpus_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.corpus.pkl
+01/04/2018 19:24:19 [INFO] configuration: gensim_dict_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.dict
+01/04/2018 19:24:19 [INFO] configuration: w2v_path  :   /home/memray/Data/glove/GoogleNews-vectors-negative300.bin
+01/04/2018 19:24:19 [INFO] configuration: w2v_vector_length  :   300
+01/04/2018 19:24:19 [INFO] configuration: d2v_vector_length  :   300
+01/04/2018 19:24:19 [INFO] configuration: d2v_window_size  :   5
+01/04/2018 19:24:19 [INFO] configuration: d2v_min_count  :   2
+01/04/2018 19:24:19 [INFO] configuration: d2v_model_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.model
+01/04/2018 19:24:19 [INFO] configuration: d2v_vector_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.vector
+01/04/2018 19:24:19 [INFO] configuration: num_word_keep  :   {'dstc2': 300, 'dstc3': 300, 'family': 1000, 'ghome': 1000}
+01/04/2018 19:24:19 [INFO] configuration: batch_size  :   128
+01/04/2018 19:24:19 [INFO] configuration: max_epoch  :   50
+01/04/2018 19:24:19 [INFO] configuration: early_stop_tolerance  :   2
+01/04/2018 19:24:19 [INFO] configuration: concat_sents  :   False
+01/04/2018 19:24:19 [INFO] configuration: cnn_setting  :   {'model': 'multichannel', 'early_stopping': True, 'word_dim': 300, 'filters': [3, 4, 5], 'filter_num': [100, 100, 100], 'class_size': 4, 'batch_size': 128, 'learning_rate': 0.001, 'norm_limit': 10, 'dropout_prob': 0.0, 'sentence_num': 3}
+01/04/2018 19:24:19 [INFO] configuration: skipthought_setting  :   {'skipthought_model_path': '/Users/memray/Data/skip-thought', 'skipthought_data_path': '/ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.skip-thought.biskip.vector', 'fixed_emb': True, 'sentence_num': 3, 'hidden_size': 2400, 'class_size': 4, 'learning_rate': 0.0001, 'norm_limit': 3, 'dropout_prob': 0.5}
+01/04/2018 19:24:19 [INFO] configuration: lstm_setting  :   {'model': 'non-static', 'hidden_size': 32, 'embedding_size': 300, 'num_layers': 1, 'bidirectional': False, 'learning_rate': 0.001, 'class_size': 4, 'norm_limit': 2, 'clip_grad_norm': 2, 'dropout_prob': 0.1}
+Traceback (most recent call last):
+  File "/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/ihome/pbrusilosky/rum20/y_classify/dialogue/classify/task_runner.py", line 210, in <module>
+    worker(q, data_dict, opt)
+  File "/ihome/pbrusilosky/rum20/y_classify/dialogue/classify/task_runner.py", line 175, in worker
+    result = exp.run_cross_validation_with_discrete_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep)
+  File "/ihome/pbrusilosky/rum20/y_classify/dialogue/classify/exp_shallowmodel.py", line 1020, in run_cross_validation_with_discrete_feature_selection
+    X_selected      = SelectKBest(chi2, k=num_feature).fit_transform(X_to_select, Y)
+  File "/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/base.py", line 520, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+  File "/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/feature_selection/univariate_selection.py", line 348, in fit
+    self._check_params(X, y)
+  File "/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/feature_selection/univariate_selection.py", line 493, in _check_params
+    % self.k)
+ValueError: k should be >=0, <= n_features; got 4096.Use k='all' to return all features.
+srun: error: smp-n19: task 0: Exited with exit code 1
