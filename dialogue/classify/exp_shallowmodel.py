@@ -423,8 +423,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            if r_id > 2:
-                break
+            # if r_id > 2:
+            #     break
 
             self.config['test_round'] = r_id
 
@@ -1195,8 +1195,8 @@ class ShallowExperimenter():
         print_important_features
         '''
 
-        X_discrete               =   copy.deepcopy(X_original)[:,discrete_feature_indices]
-        chi2_stats, pvals        = chi2(copy.deepcopy(X)[:,X_discrete], Y)
+        X_discrete               = copy.deepcopy(X_original)[:,discrete_feature_indices]
+        chi2_stats, pvals        = chi2(X_discrete, Y)
         chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
         sorted_selectable_idx    = np.argsort(chi2_stats)[::-1]
         selected_idx             = sorted(sorted_selectable_idx[:num_discrete_feature])
