@@ -41,7 +41,7 @@ def init_task_queue(opt):
     if opt.is_deep_model:
         parameter_ranges = {'selected_context_id': [0], 'deep_model': [True], 'deep_model_name': ['cnn']}
     else:
-        parameter_ranges = {'experiment_mode': [opt.experiment_mode], 'deep_model': [False], 'selected_context_id': opt.selected_context_id, 'selected_feature_set_id': opt.selected_feature_set_id, 'similarity_feature': [opt.add_similarity_feature], 'k_feature_to_keep': [opt.k_feature_to_keep]}
+        parameter_ranges = {'experiment_mode': [opt.experiment_mode], 'deep_model': [False], 'selected_context_id': opt.selected_context_id, 'selected_feature_set_id': opt.selected_feature_set_id, 'similarity_feature': [opt.add_similarity_feature], 'k_feature_to_keep': [opt.k_feature_to_keep], 'k_component_for_pca': [opt.k_component_for_pca]}
     params           = []
     range_to_params(list(parameter_ranges.items()), params, [])
 
