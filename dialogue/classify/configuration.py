@@ -224,7 +224,9 @@ def load_basic_config():
     '''
     feature setting
     '''
-    # param['utterance_range'] = ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+    param['utterance_range'] = ['last_user_utterance', 'last_system_utterance', 'current_user_utterance',
+                                'next_system_utterance', 'next_user_utterance']
+
     # action words dictionary
     action_list = set([# Family Assistant
                                     'add', 'remove', 'delete', 'clear', 'show', 'share', 'snooze', 'list', 'item', 'items', 'member', 'remind', 'reminds', 'reminder', 'reminders', 'help', 'discard', 'start', 'stop',

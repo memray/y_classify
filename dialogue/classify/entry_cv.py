@@ -6,7 +6,7 @@ from sklearn import preprocessing
 from dialogue.data.data_loader import data_loader, DataLoader, Utterance
 from dialogue.classify import configuration
 from dialogue.classify.feature_extractor import Feature_Extractor
-from dialogue.classify.exp_shallowmodel import Experimenter
+from dialogue.classify.exp_shallowmodel import ShallowExperimenter
 import numpy as np
 import os
 
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     # initialize
     config = configuration.load_config()
     extractor = Feature_Extractor(config)
-    exp = Experimenter(config)
+    exp = ShallowExperimenter(config)
 
     best_results = {}
     # iterate each dataset
@@ -36,7 +36,7 @@ if __name__ == '__main__':
         loader.stats()
 
         # train and test
-        X_raw, Y                = extractor.split_to_instances(annotated_sessions)
+        X_raw, Y, _                = extractor.split_to_instances(annotated_sessions)
         X                       = extractor.extract()
 
         '''

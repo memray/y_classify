@@ -74,12 +74,13 @@ def preload_X_Y():
         X, feature_names        = extractor.extract()
         X_raw_feature           = extractor.extract_raw_feature()
 
+
         data_dict[data_name]    = (X_raw, X_raw_feature, feature_names, label_encoder, X, Y)
 
     return data_dict
 
 def filter_X_by_contexts_features(X, config):
-    X = np.nan_to_num(X.todense())
+    X = np.nan_to_num(X)
 
     # determine the context range
     if config.param['context_set'] == 'current':
@@ -170,11 +171,11 @@ def worker(q, data_dict, opt):
             if opt.experiment_mode == 'cross_validation' or opt.experiment_mode == 'keep_one_only' or opt.experiment_mode == 'leave_one_out':
                 result = exp.run_cross_validation(X, Y)
             elif opt.experiment_mode == 'report_feature_importance':
-                result = exp.report_feature_importance(X_all, Y, feature_names)
+                result = exp.report_feature_importance(X, Y, retained_feature_names)
             elif opt.experiment_mode == 'discrete_feature_selection':
                 result = exp.run_cross_validation_with_discrete_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep)
             elif opt.experiment_mode == 'continuous_feature_selection':
-                result = exp.run_cross_validation_with_continuous_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep)
+                result = exp.run_cross_validation_with_continuous_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep, opt.k_component_for_pca)
             else:
                 assert "experiment type invalid"
 
@@ -199,6 +200,8 @@ if __name__ == '__main__':
                         help="cross_validation, keep_one_only, leave_one_out or feature_selection")
     parser.add_argument('-k_feature_to_keep', default=-1, type=int,
                         help="number of features to keep in feature selection is 2**(k_feature_to_keep), specify the exponent")
+    parser.add_argument('-k_component_for_pca', default=-1, type=int,
+                        help="number of dimensions to keep for PCA")
     opt = parser.parse_args()
 
     # freeze_support()

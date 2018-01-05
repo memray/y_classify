@@ -423,8 +423,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            # if r_id > 5:
-            #     break
+            if r_id > 2:
+                break
 
             self.config['test_round'] = r_id
 
@@ -923,7 +923,7 @@ class ShallowExperimenter():
             csv_writer.write('id,prefix,name,chi2,pval\n')
             for f_id, f_name, chi2_stat, pval in zip(np.asarray(selectable_feature_indices)[sorted_idx], np.asarray(selectable_feature_names)[sorted_idx], chi2_stats[sorted_idx], pvals[sorted_idx]):
                 # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
-                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, str(f_name.encode('utf-8')), str(f_name[:f_name.find('-')].encode('utf-8')), chi2_stat, pval))
+                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, str(f_name.encode('utf-8')), str(f_name[:f_name.find('-')]), chi2_stat, pval))
 
         feature_prefixes  = sorted(list(set([f[:f.find('-')] for f in feature_names])))
         feature_set_names = {'1'   :'1-utterance length',
@@ -950,6 +950,7 @@ class ShallowExperimenter():
             num_feature = []
             for prefix, feature_set_name in zip(feature_prefixes, feature_set_names):
                 self.logger.info('%s\t%d\n' % (prefix, len([f for f in feature_names if f[:f.find('-')] == prefix])))
+                # [print(f) for f in feature_names if f[:f.find('-')] == prefix]
                 # csv_writer.write('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
                 num_feature.append(len([f for f in feature_names if f[:f.find('-')] == prefix]))
             csv_writer.write('%s,%s\n' % (self.config['data_name'], ','.join([str(n) for n in num_feature])))
@@ -970,7 +971,8 @@ class ShallowExperimenter():
             else:
                 not_selectable_feature_names.append(f_name)
 
-        X_selectable = copy.deepcopy(X)[:, selectable_feature_indices]
+        X_selectable     = copy.deepcopy(X)[:, selectable_feature_indices]
+        X_selectable     = np.asarray(X_selectable, dtype='float32')
         X_not_selectable = np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
 
         X_selectable[np.where(np.isnan(X_selectable))] = 0.0
@@ -980,9 +982,9 @@ class ShallowExperimenter():
         sorted_idx = np.argsort(f_stats)[::-1]
 
         with open(os.path.join(self.config['experiment_path'], '%s.ftest_top_features.csv' % self.config['data_name']), 'w') as csv_writer:
-            csv_writer.write('id,prefix,name,chi2,pval\n')
+            csv_writer.write('id,prefix,name,f-test,pval\n')
             for f_id, f_name, f_stat, pval in zip(np.asarray(selectable_feature_indices)[sorted_idx], np.asarray(selectable_feature_names)[sorted_idx], f_stats[sorted_idx], pvals[sorted_idx]):
-                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, str(f_name.encode('utf-8')), str(f_name[:f_name.find('-')].encode('utf-8')), f_stat, pval))
+                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, str(f_name), str(f_name[:f_name.find('-')]), f_stat, pval))
 
         return []
 
@@ -1041,7 +1043,7 @@ class ShallowExperimenter():
         '''
         print_important_features
         '''
-        chi2_stats, pvals   = chi2(X_selectable, Y)
+        chi2_stats, pvals        = chi2(X_selectable, Y)
         chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
         sorted_selectable_idx    = np.argsort(chi2_stats)[::-1]
         selected_idx             = sorted(sorted_selectable_idx[:num_feature])
@@ -1121,56 +1123,97 @@ class ShallowExperimenter():
                 csv_writer.write('%s,%s,%d,%d,%d,%.4f,%.4f\n' % (self.config['data_name'] + str(top_K), self.config['data_name'], top_K, num_chi2_stats_topk, top_K-num_chi2_stats_topk, num_chi2_stats_topk/float(top_K) * 100.0, (top_K-num_chi2_stats_topk)/float(top_K) * 100.0))
 
 
-    def run_cross_validation_with_continuous_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
+    def run_cross_validation_with_continuous_feature_selection(self, X_original, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep, k_component_for_pca):
         ''''''
         '''
         keep continuous features for selection only including: 8.LDA 9. w2v 10. d2v 11. skip-thought
         '''
-        selectable_feature_indices = []
-        selectable_feature_names = []
-        not_selectable_feature_names = []
+        discrete_feature_indices = []
+        discrete_feature_names = []
+        continuous_feature_indices = []
+        continuous_feature_names = []
+        similarity_feature_indices = []
+        similarity_feature_names = []
         for f_id, f_name in enumerate(retained_feature_names):
             f_series = f_name[: f_name.find('-')]
             if f_series.find('.') > 0:
                 f_series = f_series[: f_series.find('.')]
-            if f_series in ['8', '9', '10', '11'] and not (f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
-                selectable_feature_indices.append(f_id)
-                selectable_feature_names.append(f_name)
-            else:
-                not_selectable_feature_names.append(f_name)
 
-        X_selectable        =   copy.deepcopy(X)[:,selectable_feature_indices]
-        X_not_selectable    =   np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
+            if f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0:
+                similarity_feature_indices.append(f_id)
+                similarity_feature_names.append(f_name)
+            elif f_series in ['1', '2', '3', '4', '5', '6', '7']:
+                discrete_feature_indices.append(f_id)
+                discrete_feature_names.append(f_name)
+            elif f_series in ['8', '9', '10', '11']:
+                continuous_feature_indices.append(f_id)
+                continuous_feature_names.append(f_name)
+            else:
+                assert False, "feature bug: %s - %s" % (f_id, f_name)
+
+        X_discrete        =   copy.deepcopy(X_original)[:,discrete_feature_indices]
+        X_continuous      =   copy.deepcopy(X_original)[:,continuous_feature_indices]
+        X_similarity      =   copy.deepcopy(X_original)[:,similarity_feature_indices]
+
+        '''
+        run experiment with selected features
+        '''
+        # if num_feature_to_keep is -1, we don't select anything and keep all the features
+        if k_feature_to_keep != -1:
+            num_discrete_feature     = 2 ** k_feature_to_keep
+            X_discrete      = SelectKBest(chi2, k=num_discrete_feature).fit_transform(X_discrete, Y)
+        else:
+            num_discrete_feature     = X_discrete.shape[1]
+            X_discrete      = X_discrete
+        X_discrete      = np.nan_to_num(X_discrete)
 
         '''
         run experiment with PCA feature reduction
         '''
-        X_to_select     = copy.deepcopy(X_selectable)
-
         # if num_feature_to_keep is -1, we don't select anything and keep all the features
         if k_feature_to_keep != -1:
-            num_feature = 2 ** k_feature_to_keep
-            # X_selected      = SelectKBest(chi2, k=num_feature).fit_transform(X_to_select, Y)
-            X_selected  = PCA(n_components=num_feature, svd_solver='full')
+            num_continuous_feature = 2 ** k_feature_to_keep
+            pca           = PCA(n_components=num_continuous_feature, svd_solver='full')
+            X_continuous  = pca.fit_transform(X_continuous)
         else:
-            num_feature = X_to_select.shape[1]
-            X_selected      = X_to_select
-
-        X_selected      = np.nan_to_num(X_selected)
-        if X_not_selectable.shape[1] == 0:
-            X           = X_selected
-        else:
-            X           = np.concatenate([X_selected, X_not_selectable], axis=1)
+            num_continuous_feature  = X_continuous.shape[1]
+            X_continuous            = X_continuous
+        X_continuous      = np.nan_to_num(X_continuous)
+        X           = np.concatenate([X_discrete, X_continuous, X_similarity], axis=1)
 
         self.logger.info('%' * 50)
         self.logger.info(' ' * 10 + 'dataset=%s' % str(self.config['data_name']))
-        self.logger.info(' ' * 10 + 'k_feature_to_keep=%s' % str(k_feature_to_keep))
         self.logger.info(' ' * 10 + 'X_new.shape=%s' % str(X.shape))
-        self.logger.info(' ' * 10 + '#(X_selected)=%d' % num_feature)
-        self.logger.info(' ' * 10 + '#(X_not_selectable)=%d' % X_not_selectable.shape[1])
+        self.logger.info(' ' * 10 + '#(discrete_feature)=%d' % num_discrete_feature)
+        self.logger.info(' ' * 10 + '#(continuous_feature)=%d' % num_continuous_feature)
+        self.logger.info(' ' * 10 + '#(similarity_feature)=%d' % X_similarity.shape[1])
         self.logger.info('%' * 50)
 
         cv_results = self.run_cross_validation(X, Y)
+
+        '''
+        print_important_features
+        '''
+
+        X_discrete               =   copy.deepcopy(X_original)[:,discrete_feature_indices]
+        chi2_stats, pvals        = chi2(copy.deepcopy(X)[:,X_discrete], Y)
+        chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
+        sorted_selectable_idx    = np.argsort(chi2_stats)[::-1]
+        selected_idx             = sorted(sorted_selectable_idx[:num_discrete_feature])
+        selected_chi2_stats      = chi2_stats[selected_idx]
+        selected_pvals           = pvals[selected_idx]
+
+        selectable_feature_indices      = np.asarray(discrete_feature_indices)
+        selectable_feature_names        = np.asarray(discrete_feature_names)
+
+        not_selectable_feature_indices  = np.concatenate([continuous_feature_indices, similarity_feature_indices])
+        not_selectable_feature_names    = np.concatenate([continuous_feature_names, similarity_feature_names])
+
+        # these indices correspond to the original feature order (all features)
+        selected_feature_indices = selectable_feature_indices[selected_idx]
+        selected_feature_names   = selectable_feature_names[selected_idx]
+
+        self.print_feature_importance_report(cv_results, selected_chi2_stats, selected_pvals, selected_feature_indices, selected_feature_names, not_selectable_feature_indices, not_selectable_feature_names)
 
         return cv_results
 

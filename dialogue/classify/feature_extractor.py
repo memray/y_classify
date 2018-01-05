@@ -504,8 +504,13 @@ class EntityFeature(BaseEstimator, TransformerMixin):
                 # iterate each word and NER tag
                 if len(parse_record[i]) > 0:
                     for ner in np.concatenate([r['entitymentions'] for r in parse_record[i]]):
+                        ner['text'] = ner['text'].strip().lower()
+                        if ner['text'].lower() == '\\' or len(ner['text']) == 1 or ner['ner'] == 'NUMBER':
+                            continue
+                        # print(ner['ner'] + ' : ' + ner['text'])
                         entity_dict[
                             'entity__%s__%s_%s' % (self.config['utterance_range'][i], ner['text'].lower(), ner['ner'])] = True
+                        entity_list.append(ner['text'].lower())
 
                     '''
                     # Changed to pycorenlp
@@ -530,8 +535,23 @@ class EntityFeature(BaseEstimator, TransformerMixin):
             current_entity_set  = set([e for e in entity_lists[current_index_in_dict]])
             next_entity_set     = set([e for e in entity_lists[next_index_in_dict]])
 
+            '''
+            if sum([len(l) for l in entity_lists]) > 0 or len(last_entity_set) > 0 or len(current_entity_set) > 0 or len(next_entity_set) > 0:
+                print('#(entity)=%d' % (sum([len(l) for l in entity_lists])))
+                print(last_entity_set)
+                print(current_entity_set)
+                print(next_entity_set)
+                print("")
+            '''
+
             last_inter_entity        = set.intersection(current_entity_set, last_entity_set)
             next_inter_entity        = set.intersection(current_entity_set, next_entity_set)
+
+            '''
+            if len(last_inter_entity) > 0 or len(next_inter_entity) > 0:
+                print(entity_lists)
+                print()
+            '''
 
             # 6.2 entity_overlap:  True, if there is any entity overlap between two user utterances
             if len(last_inter_entity) > 0:
@@ -1212,7 +1232,6 @@ class Feature_Extractor():
                 ('vectorize', DictVectorizer()),
             ]))
         )
-
         # 6. Entity Feature
         transformer_list.append(
             ('6-entity_feature', Pipeline([
@@ -1221,7 +1240,6 @@ class Feature_Extractor():
                 ('vectorize', DictVectorizer()),
             ]))
         )
-
         # 7. Syntactic Feature
         transformer_list.append(
             ('7-syntactic_feature', Pipeline([
@@ -1230,6 +1248,7 @@ class Feature_Extractor():
                 ('vectorize', DictVectorizer()),
             ]))
         )
+
         # 8. Semantic/Topic Feature
         # 8.1 LDA Feature
         lda_feature_extractor = LDAFeature(self.config)
@@ -1355,6 +1374,7 @@ class Feature_Extractor():
                 ('vectorize', DictVectorizer()),
             ]))
         )
+
         '''
         Run the extracting pipeline
         '''
@@ -1391,11 +1411,38 @@ class Feature_Extractor():
 
         return X, feature_names
 
+    def repair_entity_similarity(self, X, feature_names):
+        entity_pipeline = Pipeline([
+            ('raw_feature_extractor', RawFeatureExtractor(self.config)),
+            ('selector', ItemSelector(keys=['parsed_results__%s' % type for type in self.config['utterance_range']])),
+            ('entity_feature', EntityFeature(self.config)),
+        ])
+
+        entity_X = entity_pipeline.fit_transform(self.config['X_raw'])
+
+        sim_dict = {}
+        sim_dict['6-entity_feature__last_entity__#overlap']             = np.asarray([e['last_entity__#overlap'] for e in entity_X], dtype='int32')
+        sim_dict['6-entity_feature__last_entity__have_overlap']         = np.asarray([e['last_entity__have_overlap'] for e in entity_X], dtype='int32')
+        sim_dict['6-entity_feature__next_entity__#overlap']             = np.asarray([e['next_entity__#overlap'] for e in entity_X], dtype='int32')
+        sim_dict['6-entity_feature__next_entity__have_overlap']         = np.asarray([e['next_entity__have_overlap'] for e in entity_X], dtype='int32')
+        sim_dict['6-entity_feature__last_entity__jaccard_similarity']   = np.asarray([e['last_entity__jaccard_similarity'] for e in entity_X], dtype='float32')
+        sim_dict['6-entity_feature__next_entity__jaccard_similarity']   = np.asarray([e['next_entity__jaccard_similarity'] for e in entity_X], dtype='float32')
+
+        for k,v in sim_dict.items():
+            idx = feature_names.index(k)
+            X[:, idx] = v.reshape(len(v), 1)
+
+        return X
+
     def extract(self):
         if os.path.exists(self.config['extracted_feature_path'] % self.config['data_name']):
             X, feature_names = data_loader.deserialize_from_file(self.config['extracted_feature_path'] % self.config['data_name'])
             # transformer_list = joblib.load(self.config['pipeline_path'] % self.config['data_name'])
             # pipeline, union_features, transformer_list = data_loader.deserialize_from_file_by_dill(self.config['pipeline_path'] % self.config['data_name'])
+
+            # shame, the feature is problematic due to some reasons
+            X = X.todense()
+            # X = self.repair_entity_similarity(X, feature_names)
         else:
             X, feature_names   = self.do_extract()
 
