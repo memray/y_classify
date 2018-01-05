@@ -423,8 +423,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            if r_id > 5:
-                break
+            # if r_id > 5:
+            #     break
 
             self.config['test_round'] = r_id
 
