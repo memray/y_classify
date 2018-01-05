@@ -12,6 +12,8 @@ from optparse import OptionParser
 import sys, os
 from time import time
 import matplotlib.pyplot as plt
+from sklearn.feature_selection import f_classif
+
 plt.switch_backend('agg')
 
 from collections import Counter
@@ -421,8 +423,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            # if r_id > 1:
-            #     break
+            if r_id > 5:
+                break
 
             self.config['test_round'] = r_id
 
@@ -918,8 +920,8 @@ class ShallowExperimenter():
         sorted_idx = np.argsort(chi2_stats)[::-1]
 
         with open(os.path.join(self.config['experiment_path'], '%s.chi2_top_features.csv' % self.config['data_name']), 'w') as csv_writer:
-            csv_writer.write('id,name,prefix,chi2,pval\n')
-            for f_id, (f_name, chi2_stat, pval) in enumerate(zip(np.asarray(feature_names)[sorted_idx], chi2_stats[sorted_idx], pvals[sorted_idx])):
+            csv_writer.write('id,prefix,name,chi2,pval\n')
+            for f_id, f_name, chi2_stat, pval in zip(np.asarray(selectable_feature_indices)[sorted_idx], np.asarray(selectable_feature_names)[sorted_idx], chi2_stats[sorted_idx], pvals[sorted_idx]):
                 # self.logger.info('%d\t%s\t%.4f\t%.4f\n' % (f_id, f_name, chi2_stat, pval))
                 csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, str(f_name.encode('utf-8')), str(f_name[:f_name.find('-')].encode('utf-8')), chi2_stat, pval))
 
@@ -947,7 +949,7 @@ class ShallowExperimenter():
                 csv_writer.write(',%s\n' % (','.join([feature_set_names[p_] for p_ in feature_prefixes])))
             num_feature = []
             for prefix, feature_set_name in zip(feature_prefixes, feature_set_names):
-                self.logger.info('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
+                self.logger.info('%s\t%d\n' % (prefix, len([f for f in feature_names if f[:f.find('-')] == prefix])))
                 # csv_writer.write('%s\t%d\n' % (prefix, len([f for f in feature_names if f.startswith(prefix)])))
                 num_feature.append(len([f for f in feature_names if f[:f.find('-')] == prefix]))
             csv_writer.write('%s,%s\n' % (self.config['data_name'], ','.join([str(n) for n in num_feature])))
@@ -962,8 +964,7 @@ class ShallowExperimenter():
             f_series = f_name[: f_name.find('-')]
             if f_series.find('.') > 0:
                 f_series = f_series[: f_series.find('.')]
-            if f_series in ['1', '2', '3', '4', '5', '6', '7'] and not (
-                        f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0):
+            if f_name.find('similarity') > 0 or f_name.find('overlap') > 0 or f_name.find('distance') > 0:
                 selectable_feature_indices.append(f_id)
                 selectable_feature_names.append(f_name)
             else:
@@ -971,6 +972,17 @@ class ShallowExperimenter():
 
         X_selectable = copy.deepcopy(X)[:, selectable_feature_indices]
         X_not_selectable = np.delete(copy.deepcopy(X), selectable_feature_indices, axis=1)
+
+        X_selectable[np.where(np.isnan(X_selectable))] = 0.0
+        X_selectable[np.where(np.isinf(X_selectable))] = 0.0
+
+        f_stats, pvals   = f_classif(X_selectable, Y)
+        sorted_idx = np.argsort(f_stats)[::-1]
+
+        with open(os.path.join(self.config['experiment_path'], '%s.ftest_top_features.csv' % self.config['data_name']), 'w') as csv_writer:
+            csv_writer.write('id,prefix,name,chi2,pval\n')
+            for f_id, f_name, f_stat, pval in zip(np.asarray(selectable_feature_indices)[sorted_idx], np.asarray(selectable_feature_names)[sorted_idx], f_stats[sorted_idx], pvals[sorted_idx]):
+                csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, str(f_name.encode('utf-8')), str(f_name[:f_name.find('-')].encode('utf-8')), f_stat, pval))
 
         return []
 
@@ -1076,19 +1088,20 @@ class ShallowExperimenter():
 
         X_indices = np.arange(top_K)
 
-        chi2_stats /= chi2_stats.max()
-        chi2_stats  = chi2_stats[np.argsort(clf_weights)[::-1][:top_K]]
-        clf_weights = clf_weights[np.argsort(clf_weights)[::-1][:top_K]]
+        chi2_stats       = chi2_stats / chi2_stats.max()
+        chi2_stats_topk  = chi2_stats[clf_weights_argsort[:top_K]]
+        clf_weights_topk = clf_weights[clf_weights_argsort[:top_K]]
+        num_chi2_stats_topk = sum(chi2_stats_topk > 0)
 
         plt.figure(num=1, dpi=200)
         plt.clf()
 
-        plt.bar(X_indices - .45, chi2_stats, width=.2, label='chi2', color='darkorange')
-        plt.bar(X_indices - .25, clf_weights, width=.2, label='LR weight', color='navy')
+        plt.bar(X_indices - .45, chi2_stats_topk, width=.2, label='chi2', color='darkorange')
+        plt.bar(X_indices - .25, clf_weights_topk, width=.2, label='LR weight', color='navy')
 
-        self.logger.info("Feature selection of top %d, selectable:non-selectable=%d:%d" % (top_K, sum(chi2_stats > 0), top_K-sum(chi2_stats > 0)))
+        self.logger.info("Feature selection of top %d, selectable:non-selectable=%d:%d" % (top_K, num_chi2_stats_topk, top_K-num_chi2_stats_topk))
 
-        plt.title("Feature selection of top %d, selectable:non-selectable=%d:%d" % (top_K, sum(chi2_stats > 0), top_K-sum(chi2_stats > 0)))
+        plt.title("Feature selection of top %d, selectable:non-selectable=%d:%d" % (top_K, num_chi2_stats_topk, top_K-num_chi2_stats_topk))
         plt.xlabel('Features')
         plt.yticks(())
         plt.axis('tight')
@@ -1097,7 +1110,15 @@ class ShallowExperimenter():
         plt.savefig(os.path.join(self.config['experiment_path'], '%s.feature_importance_after_classification.png' % self.config['data_name']))
 
         with open(os.path.join(self.config['experiment_path'], 'top_important_feature_stats.csv'), 'a') as csv_writer:
-            csv_writer.write('%s,%d,%d,%d,%.4f,%.4f\n' % (self.config['data_name'], top_K, sum(chi2_stats > 0), top_K-sum(chi2_stats > 0), sum(chi2_stats > 0)/float(top_K) * 100.0, (top_K-sum(chi2_stats > 0))/float(top_K) * 100.0))
+            k_range = [100, 200, 300, 500, 600, 700, 800, 900, 1000, 1500, 2000, 3000, 4000, 5000]
+            if len(chi2_stats) < k_range[0]:
+                k_range = [len(chi2_stats)] + k_range
+            for top_K in k_range:
+                if top_K > len(chi2_stats):
+                    break
+                chi2_stats_topk  = chi2_stats[np.argsort(clf_weights)[::-1][:top_K]]
+                num_chi2_stats_topk = sum(chi2_stats_topk > 0)
+                csv_writer.write('%s,%s,%d,%d,%d,%.4f,%.4f\n' % (self.config['data_name'] + str(top_K), self.config['data_name'], top_K, num_chi2_stats_topk, top_K-num_chi2_stats_topk, num_chi2_stats_topk/float(top_K) * 100.0, (top_K-num_chi2_stats_topk)/float(top_K) * 100.0))
 
 
     def run_cross_validation_with_continuous_feature_selection(self, X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep):
