@@ -1,0 +1,2062 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+8559,4.1,b'4.1-ngram.next_system_utterance__sorry',663.5020,4,1.0000,0
+2948,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,2055,0.8236,1
+34419,7,b'7-syntactic_feature__subj_word__next_system_utterance__hmm',31.2336,857,0.5196,2
+33247,7,b'7-syntactic_feature__root_word__next_system_utterance__stem',41.9590,617,0.3006,3
+5833,4.1,b'4.1-ngram.next_system_utterance__help',575.0181,5,0.2795,4
+5042,4.1,b'4.1-ngram.next_system_utterance__don understand',211.4860,28,0.2586,5
+22046,5,b'5-phrase_feature__noun_phrases__next_system_utterance__room_light',27.9690,904,0.2570,6
+23261,5,b'5-phrase_feature__noun_phrases__next_system_utterance__tour',20.1402,1341,0.2522,7
+44,3,b'3-time_feature__end_of_session',110.1752,60,0.2268,8
+5024,4.1,b'4.1-ngram.next_system_utterance__don',368.4234,11,0.1859,9
+20100,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ligabue',20.1402,1355,0.1783,10
+33021,7,b'7-syntactic_feature__root_word__next_system_utterance__mix',74.6007,120,0.1484,11
+2949,1,b'1-utterance_length.next_system_utterance__utterance_length',392.8140,6,0.1449,12
+20815,5,b'5-phrase_feature__noun_phrases__next_system_utterance__network_agent',15.6168,1810,0.1437,13
+31924,7,b'7-syntactic_feature__obj_word__next_user_utterance__station',14.8910,1878,0.1418,14
+7403,4.1,b'4.1-ngram.next_system_utterance__okay',15.7713,1736,0.1327,15
+31078,7,b'7-syntactic_feature__obj_word__current_user_utterance__stopwatch',23.8837,1090,0.1259,16
+3661,4.1,b'4.1-ngram.next_system_utterance__alright',19.9666,1412,0.1218,17
+20421,5,b'5-phrase_feature__noun_phrases__next_system_utterance__me.what',41.9590,430,0.1157,18
+34643,7,b'7-syntactic_feature__subj_word__next_system_utterance__washington',14.8910,1872,0.1136,19
+22162,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sandwich.should',41.9590,433,0.0926,20
+12166,5,b'5-phrase_feature__next_noun_phrases__have_overlap',0.0000,2057,0.0873,21
+4687,4.1,b'4.1-ngram.next_system_utterance__control',23.7119,1109,0.0800,22
+2823,4.1,b'4.1-ngram.current_user_utterance__watch',24.5983,1038,0.0768,23
+20481,5,b'5-phrase_feature__noun_phrases__next_system_utterance__merry',20.1402,1369,0.0729,24
+32857,7,b'7-syntactic_feature__root_word__next_system_utterance__go',20.4085,1264,0.0723,25
+14222,5,b'5-phrase_feature__noun_phrases__current_user_utterance__metal',15.6168,1754,0.0719,26
+6468,4.1,b'4.1-ngram.next_system_utterance__light',18.2257,1477,0.0715,27
+32420,7,b'7-syntactic_feature__root_word__current_user_utterance__video',16.7849,1581,0.0703,28
+32429,7,b'7-syntactic_feature__root_word__current_user_utterance__way',41.9590,604,0.0686,29
+34572,7,b'7-syntactic_feature__subj_word__next_system_utterance__sorri',66.5301,142,0.0674,30
+6187,4.1,b'4.1-ngram.next_system_utterance__isn',19.6963,1420,0.0667,31
+13987,5,b'5-phrase_feature__noun_phrases__current_user_utterance__ligabue',20.1402,1318,0.0666,32
+32826,7,b'7-syntactic_feature__root_word__next_system_utterance__find',92.2110,79,0.0650,33
+7371,4.1,b'4.1-ngram.next_system_utterance__ok turning',20.3383,1265,0.0637,34
+32436,7,b'7-syntactic_feature__root_word__current_user_utterance__what',34.1003,799,0.0635,35
+22161,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sandwich',41.9590,432,0.0608,36
+12167,5,b'5-phrase_feature__next_noun_phrases__jaccard_similarity',0.0000,2051,0.0577,37
+45,3,b'3-time_feature__start_of_session',14.5997,1906,0.0552,38
+22101,5,b'5-phrase_feature__noun_phrases__next_system_utterance__rye',20.1402,1294,0.0551,39
+12781,5,b'5-phrase_feature__noun_phrases__current_user_utterance__chromecast',47.8848,228,0.0550,40
+33245,7,b'7-syntactic_feature__root_word__next_system_utterance__station',22.9104,1145,0.0535,41
+22571,5,b'5-phrase_feature__noun_phrases__next_system_utterance__soundtrack_justin_timberlake',41.9590,486,0.0505,42
+14324,5,b'5-phrase_feature__noun_phrases__current_user_utterance__movies',14.1449,1937,0.0499,43
+16281,5,b'5-phrase_feature__noun_phrases__next_system_utterance__alright',111.9174,58,0.0496,44
+19851,5,b'5-phrase_feature__noun_phrases__next_system_utterance__karma_police',41.9590,437,0.0492,45
+3903,4.1,b'4.1-ngram.next_system_utterance__available',14.7287,1894,0.0491,46
+28100,6,b'6-entity_feature__entity__next_system_utterance__100%_PERCENT',23.8837,1088,0.0482,47
+33312,7,b'7-syntactic_feature__root_word__next_system_utterance__turn',68.4163,139,0.0477,48
+21575,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pm_eastern',31.7459,837,0.0452,49
+26847,5,b'5-phrase_feature__noun_phrases__next_user_utterance__tv',50.3040,209,0.0445,50
+8987,4.1,b'4.1-ngram.next_system_utterance__tell',55.9059,175,0.0444,51
+32999,7,b'7-syntactic_feature__root_word__next_system_utterance__love',41.9590,614,0.0440,52
+2514,4.1,b'4.1-ngram.current_user_utterance__timer',25.1261,1020,0.0440,53
+34243,7,b'7-syntactic_feature__subj_word__current_user_utterance__you',16.2033,1697,0.0434,54
+17,2.1,b'2.1-user_action_words.current_user_utterance__play',20.9308,1243,0.0409,55
+0,1,b'1-utterance_length.current_user_utterance__utterance_length',50.3879,208,0.0409,56
+2464,4.1,b'4.1-ngram.current_user_utterance__temperature',16.9323,1563,0.0408,57
+30642,7,b'7-syntactic_feature__next_obj_words_overlap',0.0000,2049,0.0401,58
+24733,5,b'5-phrase_feature__noun_phrases__next_user_utterance__daughter_carrie_fisher',41.9590,479,0.0397,59
+34436,7,b'7-syntactic_feature__subj_word__next_system_utterance__ingredi',41.9590,582,0.0394,60
+9451,4.1,b'4.1-ngram.next_system_utterance__understand',210.3998,29,0.0388,61
+6188,4.1,b'4.1-ngram.next_system_utterance__isn available',21.4621,1197,0.0382,62
+32152,7,b'7-syntactic_feature__root_word__current_user_utterance__game',20.1402,1285,0.0364,63
+16207,5,b'5-phrase_feature__noun_phrases__next_system_utterance__aioli',41.9590,311,0.0362,64
+33688,7,b'7-syntactic_feature__root_word__next_user_utterance__play',105.8380,66,0.0347,65
+485,4.1,b'4.1-ngram.current_user_utterance__chromecast',13.5414,1992,0.0346,66
+9952,2.1,b'2.1-user_action_words.next_user_utterance__watch',80.9961,112,0.0345,67
+7342,4.1,b'4.1-ngram.next_system_utterance__ok',28.4045,896,0.0345,68
+8817,4.1,b'4.1-ngram.next_system_utterance__sure',27.1703,920,0.0342,69
+29377,6,b'6-entity_feature__entity__next_system_utterance__matthew how_PERSON',41.9590,656,0.0341,70
+17820,5,b'5-phrase_feature__noun_phrases__next_system_utterance__default',20.1402,1317,0.0335,71
+31066,7,b'7-syntactic_feature__obj_word__current_user_utterance__south',23.4252,1132,0.0335,72
+36,2.1,b'2.1-user_action_words.current_user_utterance__timer',88.1845,83,0.0333,73
+18221,5,b'5-phrase_feature__noun_phrases__next_system_utterance__email',31.7459,834,0.0328,74
+28314,6,b'6-entity_feature__entity__next_system_utterance__28,169_NUMBER',25.3202,985,0.0318,75
+32967,7,b'7-syntactic_feature__root_word__next_system_utterance__know',726.7511,3,0.0318,76
+9325,4.1,b'4.1-ngram.next_system_utterance__try',48.8943,219,0.0315,77
+13994,5,b'5-phrase_feature__noun_phrases__current_user_utterance__light_orange',25.1774,1004,0.0313,78
+5199,4.1,b'4.1-ngram.next_system_utterance__episode',14.1278,1939,0.0306,79
+15520,5,b'5-phrase_feature__noun_phrases__current_user_utterance__time',22.1082,1181,0.0306,80
+9929,2.1,b'2.1-user_action_words.next_user_utterance__play',109.6144,63,0.0305,81
+32376,7,b'7-syntactic_feature__root_word__current_user_utterance__surpris',41.9590,602,0.0304,82
+33308,7,b'7-syntactic_feature__root_word__next_system_utterance__tri',150.5583,39,0.0300,83
+30845,7,b'7-syntactic_feature__obj_word__current_user_utterance__hallway',14.7173,1895,0.0295,84
+22771,5,b'5-phrase_feature__noun_phrases__next_system_utterance__stopwatch',23.8837,1094,0.0295,85
+20621,5,b'5-phrase_feature__noun_phrases__next_system_utterance__more_picks',23.7507,1107,0.0293,86
+33185,7,b'7-syntactic_feature__root_word__next_system_utterance__sandwich.should',41.9590,615,0.0287,87
+32310,7,b'7-syntactic_feature__root_word__current_user_utterance__recommend',23.4252,1115,0.0286,88
+12165,5,b'5-phrase_feature__next_noun_phrases__#overlap',0.0000,2056,0.0284,89
+21373,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pictures',30.7844,864,0.0279,90
+28854,6,b'6-entity_feature__entity__next_system_utterance__bobby flay_PERSON',15.8785,1729,0.0278,91
+31276,7,b'7-syntactic_feature__obj_word__next_system_utterance__event',37.8615,757,0.0272,92
+16662,5,b'5-phrase_feature__noun_phrases__next_system_utterance__beatnuts',15.6168,1825,0.0271,93
+8567,4.1,b'4.1-ngram.next_system_utterance__sorry don understand',129.3792,44,0.0267,94
+21108,5,b'5-phrase_feature__noun_phrases__next_system_utterance__original_motion_picture',13.0816,2034,0.0260,95
+6518,4.1,b'4.1-ngram.next_system_utterance__like',31.5764,842,0.0258,96
+12681,5,b'5-phrase_feature__noun_phrases__current_user_utterance__cavs_game',21.9373,1185,0.0257,97
+8568,4.1,b'4.1-ngram.next_system_utterance__sorry help',178.4302,32,0.0254,98
+8903,4.1,b'4.1-ngram.next_system_utterance__sure turning',22.1361,1178,0.0252,99
+32801,7,b'7-syntactic_feature__root_word__next_system_utterance__episod',41.9590,611,0.0251,100
+31305,7,b'7-syntactic_feature__obj_word__next_system_utterance__glass',41.9590,508,0.0250,101
+22858,5,b'5-phrase_feature__noun_phrases__next_system_utterance__summer_counting',41.9590,292,0.0250,102
+33832,7,b'7-syntactic_feature__root_word__next_user_utterance__volum',21.4269,1200,0.0247,103
+29514,6,b'6-entity_feature__entity__next_system_utterance__one hundred one_NUMBER',15.6168,1779,0.0246,104
+7192,4.1,b'4.1-ngram.next_system_utterance__need',31.7620,833,0.0243,105
+9348,4.1,b'4.1-ngram.next_system_utterance__turn',15.6454,1739,0.0242,106
+13,2.1,b'2.1-user_action_words.current_user_utterance__next',23.9017,1067,0.0238,107
+34030,7,b'7-syntactic_feature__subj_word__current_user_utterance__home',23.4252,1138,0.0236,108
+9352,4.1,b'4.1-ngram.next_system_utterance__turning',51.4677,200,0.0235,109
+8564,4.1,b'4.1-ngram.next_system_utterance__sorry don',323.0077,12,0.0234,110
+32262,7,b'7-syntactic_feature__root_word__current_user_utterance__on',15.6168,1787,0.0232,111
+17179,5,b'5-phrase_feature__noun_phrases__next_system_utterance__central',54.7192,183,0.0229,112
+34266,7,b'7-syntactic_feature__subj_word__next_system_utterance__agent',15.6168,1827,0.0226,113
+26453,5,b'5-phrase_feature__noun_phrases__next_user_utterance__shares',41.9590,355,0.0226,114
+32851,7,b'7-syntactic_feature__root_word__next_system_utterance__garnish',41.9590,612,0.0222,115
+25476,5,b'5-phrase_feature__noun_phrases__next_user_utterance__lamp_orange',57.2148,172,0.0219,116
+5670,4.1,b'4.1-ngram.next_system_utterance__got turning',22.0642,1184,0.0217,117
+18502,5,b'5-phrase_feature__noun_phrases__next_system_utterance__finding',31.2336,854,0.0217,118
+20659,5,b'5-phrase_feature__noun_phrases__next_system_utterance__mountains',16.1676,1703,0.0216,119
+10,2.1,b'2.1-user_action_words.current_user_utterance__light',18.7604,1463,0.0213,120
+34376,7,b'7-syntactic_feature__subj_word__next_system_utterance__eliza',19.3352,1445,0.0213,121
+33813,7,b'7-syntactic_feature__root_word__next_user_utterance__tomorrow',20.1402,1382,0.0213,122
+14255,5,b'5-phrase_feature__noun_phrases__current_user_utterance__minix',13.5350,1993,0.0213,123
+21087,5,b'5-phrase_feature__noun_phrases__next_system_utterance__orange_juice',41.9590,411,0.0212,124
+31341,7,b'7-syntactic_feature__obj_word__next_system_utterance__it',107.4299,65,0.0212,125
+21785,5,b'5-phrase_feature__noun_phrases__next_system_utterance__radio_mix',25.3971,977,0.0211,126
+33638,7,b'7-syntactic_feature__root_word__next_user_utterance__minut',16.4224,1685,0.0209,127
+10268,4.1,b'4.1-ngram.next_user_utterance__chromecast',24.9600,1023,0.0208,128
+1725,4.1,b'4.1-ngram.current_user_utterance__play game',14.0992,1940,0.0206,129
+9923,2.1,b'2.1-user_action_words.next_user_utterance__light',20.1132,1400,0.0205,130
+26071,5,b'5-phrase_feature__noun_phrases__next_user_utterance__pi',15.6168,1784,0.0199,131
+32959,7,b'7-syntactic_feature__root_word__next_system_utterance__juic',41.9590,613,0.0197,132
+25515,5,b'5-phrase_feature__noun_phrases__next_user_utterance__lego',25.8831,969,0.0194,133
+32315,7,b'7-syntactic_feature__root_word__current_user_utterance__remind',25.4900,975,0.0193,134
+23549,5,b'5-phrase_feature__noun_phrases__next_system_utterance__victory',41.9590,336,0.0192,135
+13491,5,b'5-phrase_feature__noun_phrases__current_user_utterance__google',36.9118,765,0.0190,136
+33043,7,b'7-syntactic_feature__root_word__next_system_utterance__now',18.0110,1500,0.0189,137
+20814,5,b'5-phrase_feature__noun_phrases__next_system_utterance__network',23.1965,1141,0.0187,138
+7968,4.1,b'4.1-ngram.next_system_utterance__read',16.7662,1667,0.0187,139
+552,4.1,b'4.1-ngram.current_user_utterance__crown',14.3780,1919,0.0187,140
+33243,7,b'7-syntactic_feature__root_word__next_system_utterance__start',66.5469,141,0.0187,141
+33286,7,b'7-syntactic_feature__root_word__next_system_utterance__think',18.7102,1465,0.0186,142
+15910,5,b'5-phrase_feature__noun_phrases__current_user_utterance__x',23.8837,1081,0.0185,143
+31,2.1,b'2.1-user_action_words.current_user_utterance__stop',25.5875,974,0.0184,144
+34073,7,b'7-syntactic_feature__subj_word__current_user_utterance__mountain',13.4279,2004,0.0183,145
+32577,7,b'7-syntactic_feature__root_word__next_system_utterance__ad',18.0032,1501,0.0183,146
+17945,5,b'5-phrase_feature__noun_phrases__next_system_utterance__dining_room_light',25.7186,973,0.0182,147
+3570,4.1,b'4.1-ngram.next_system_utterance__add',33.4669,809,0.0179,148
+2718,4.1,b'4.1-ngram.current_user_utterance__turn tv',13.4618,2000,0.0178,149
+32339,7,b'7-syntactic_feature__root_word__current_user_utterance__set',53.4387,191,0.0178,150
+33420,7,b'7-syntactic_feature__root_word__next_user_utterance__audio',16.7849,1593,0.0176,151
+14728,5,b'5-phrase_feature__noun_phrases__current_user_utterance__play_work',41.9590,658,0.0174,152
+22675,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sriracha_aioli',41.9590,458,0.0173,153
+33458,7,b'7-syntactic_feature__root_word__next_user_utterance__cast',31.6998,838,0.0173,154
+20109,5,b'5-phrase_feature__noun_phrases__next_system_utterance__light_traffic',41.9590,398,0.0173,155
+33820,7,b'7-syntactic_feature__root_word__next_user_utterance__turn',17.7496,1511,0.0171,156
+33058,7,b'7-syntactic_feature__root_word__next_system_utterance__or',15.6168,1744,0.0170,157
+19165,5,b'5-phrase_feature__noun_phrases__next_system_utterance__hmm',31.2336,855,0.0167,158
+6132,4.1,b'4.1-ngram.next_system_utterance__include',38.1814,755,0.0163,159
+24207,5,b'5-phrase_feature__noun_phrases__next_user_utterance__baby',23.9875,1059,0.0162,160
+5788,4.1,b'4.1-ngram.next_system_utterance__haven',14.9094,1867,0.0161,161
+29065,6,b'6-entity_feature__entity__next_system_utterance__every day_SET',26.2143,948,0.0161,162
+41,2.1,b'2.1-user_action_words.current_user_utterance__weather',27.4735,912,0.0160,163
+42,2.2,b'2.2-#user_action_words.current_user_utterance__utterance_length',37.5981,760,0.0160,164
+28956,6,b'6-entity_feature__entity__next_system_utterance__currently_DATE',16.5278,1677,0.0160,165
+24160,5,b'5-phrase_feature__noun_phrases__next_user_utterance__apple_pie',20.1402,1336,0.0160,166
+11702,4.1,b'4.1-ngram.next_user_utterance__stop',35.7739,775,0.0159,167
+15621,5,b'5-phrase_feature__noun_phrases__current_user_utterance__turn_paul',27.8649,906,0.0158,168
+30453,6,b'6-entity_feature__entity__next_user_utterance__netflix_ORGANIZATION',50.0096,210,0.0155,169
+2690,4.1,b'4.1-ngram.current_user_utterance__turn music',20.0859,1401,0.0154,170
+6697,4.1,b'4.1-ngram.next_system_utterance__looks like haven',17.4154,1544,0.0149,171
+8247,4.1,b'4.1-ngram.next_system_utterance__screen',69.2170,136,0.0144,172
+25421,5,b'5-phrase_feature__noun_phrases__next_user_utterance__katy',41.9590,412,0.0144,173
+33342,7,b'7-syntactic_feature__root_word__next_system_utterance__want',96.1046,73,0.0144,174
+32280,7,b'7-syntactic_feature__root_word__current_user_utterance__play',22.8531,1148,0.0143,175
+31109,7,b'7-syntactic_feature__obj_word__current_user_utterance__timer',76.8242,117,0.0140,176
+9421,4.1,b'4.1-ngram.next_system_utterance__turning tv',15.5052,1839,0.0140,177
+34,2.1,b'2.1-user_action_words.current_user_utterance__temperatur',20.2873,1267,0.0138,178
+14307,5,b'5-phrase_feature__noun_phrases__current_user_utterance__mountain',19.4395,1426,0.0138,179
+33764,7,b'7-syntactic_feature__root_word__next_user_utterance__so',41.9590,571,0.0136,180
+15461,5,b'5-phrase_feature__noun_phrases__current_user_utterance__task',15.6168,1782,0.0135,181
+14607,5,b'5-phrase_feature__noun_phrases__current_user_utterance__patrol',18.1670,1483,0.0135,182
+13993,5,b'5-phrase_feature__noun_phrases__current_user_utterance__light_number',15.6168,1740,0.0135,183
+33274,7,b'7-syntactic_feature__root_word__next_system_utterance__tell',293.9360,14,0.0134,184
+14587,5,b'5-phrase_feature__noun_phrases__current_user_utterance__papa_john',13.9324,1952,0.0134,185
+15357,5,b'5-phrase_feature__noun_phrases__current_user_utterance__steroids',41.9590,630,0.0134,186
+15803,5,b'5-phrase_feature__noun_phrases__current_user_utterance__wblx',83.9180,85,0.0133,187
+31149,7,b'7-syntactic_feature__obj_word__current_user_utterance__wblx',41.9590,532,0.0128,188
+6525,4.1,b'4.1-ngram.next_system_utterance__like haven',17.4154,1543,0.0127,189
+17260,5,b'5-phrase_feature__noun_phrases__next_system_utterance__chicken_sandwich.should',41.9590,308,0.0126,190
+8590,4.1,b'4.1-ngram.next_system_utterance__sorry sure',369.8694,10,0.0125,191
+32986,7,b'7-syntactic_feature__root_word__next_system_utterance__like',88.2918,82,0.0125,192
+30853,7,b'7-syntactic_feature__obj_word__current_user_utterance__hero',20.1402,1275,0.0125,193
+31953,7,b'7-syntactic_feature__obj_word__next_user_utterance__timer',19.3911,1429,0.0121,194
+5028,4.1,b'4.1-ngram.next_system_utterance__don know',240.5310,21,0.0121,195
+12705,5,b'5-phrase_feature__noun_phrases__current_user_utterance__championship',24.9189,1032,0.0116,196
+6880,4.1,b'4.1-ngram.next_system_utterance__mean',18.0870,1495,0.0115,197
+31744,7,b'7-syntactic_feature__obj_word__next_user_utterance__handclap',41.9590,523,0.0115,198
+2642,4.1,b'4.1-ngram.current_user_utterance__turn espn',16.0599,1722,0.0113,199
+37,2.1,b'2.1-user_action_words.current_user_utterance__turn',36.9148,764,0.0113,200
+33057,7,b'7-syntactic_feature__root_word__next_system_utterance__open',109.3916,64,0.0110,201
+15770,5,b'5-phrase_feature__noun_phrases__current_user_utterance__washington_dc',41.9590,330,0.0109,202
+8858,4.1,b'4.1-ngram.next_system_utterance__sure help',370.7657,9,0.0107,203
+9912,1,b'1-utterance_length.next_user_utterance__utterance_length',386.2874,7,0.0106,204
+30439,6,b'6-entity_feature__entity__next_user_utterance__minix_PERSON',49.7911,212,0.0105,205
+34641,7,b'7-syntactic_feature__subj_word__next_system_utterance__warrior',15.6168,1832,0.0103,206
+9948,2.1,b'2.1-user_action_words.next_user_utterance__timer',28.4570,894,0.0103,207
+16048,5,b'5-phrase_feature__noun_phrases__next_system_utterance__abc',41.9590,363,0.0103,208
+5640,4.1,b'4.1-ngram.next_system_utterance__got',33.4028,811,0.0103,209
+29794,6,b'6-entity_feature__entity__next_system_utterance__tomorrow_DATE',24.7542,1033,0.0102,210
+15721,5,b'5-phrase_feature__noun_phrases__current_user_utterance__victory_music',41.9590,334,0.0102,211
+8248,4.1,b'4.1-ngram.next_system_utterance__screen like',47.8197,229,0.0101,212
+14046,5,b'5-phrase_feature__noun_phrases__current_user_utterance__living_room_light',21.3204,1205,0.0100,213
+34373,7,b'7-syntactic_feature__subj_word__next_system_utterance__eastern',41.9590,581,0.0100,214
+25456,5,b'5-phrase_feature__noun_phrases__next_user_utterance__knoxville',14.8910,1869,0.0098,215
+8592,4.1,b'4.1-ngram.next_system_utterance__sorry sure help',370.7657,8,0.0098,216
+16064,5,b'5-phrase_feature__noun_phrases__next_system_utterance__according',15.5100,1838,0.0097,217
+29274,6,b'6-entity_feature__entity__next_system_utterance__jun 16_DATE',15.6168,1756,0.0097,218
+4712,4.1,b'4.1-ngram.next_system_utterance__couldn',32.1503,829,0.0096,219
+28336,6,b'6-entity_feature__entity__next_system_utterance__2_NUMBER',39.2714,741,0.0095,220
+34570,7,b'7-syntactic_feature__subj_word__next_system_utterance__someth',48.4269,227,0.0094,221
+23418,5,b'5-phrase_feature__noun_phrases__next_system_utterance__unbelievable_movie_recs',41.9590,344,0.0094,222
+19849,5,b'5-phrase_feature__noun_phrases__next_system_utterance__karma',20.1402,1327,0.0094,223
+32789,7,b'7-syntactic_feature__root_word__next_system_utterance__eastern',41.9590,609,0.0094,224
+30860,7,b'7-syntactic_feature__obj_word__current_user_utterance__hour',16.7849,1648,0.0094,225
+2392,4.1,b'4.1-ngram.current_user_utterance__stream',16.8877,1564,0.0094,226
+32876,7,b'7-syntactic_feature__root_word__next_system_utterance__heard',15.2534,1847,0.0094,227
+24431,5,b'5-phrase_feature__noun_phrases__next_user_utterance__call_devon',41.9590,297,0.0094,228
+34357,7,b'7-syntactic_feature__subj_word__next_system_utterance__devic',41.9590,579,0.0093,229
+25015,5,b'5-phrase_feature__noun_phrases__next_user_utterance__football',19.9276,1414,0.0093,230
+22286,5,b'5-phrase_feature__noun_phrases__next_system_utterance__settings',51.2739,201,0.0092,231
+8518,4.1,b'4.1-ngram.next_system_utterance__song',16.5996,1674,0.0092,232
+27092,5,b'5-phrase_feature__noun_phrases__next_user_utterance__yogurt',41.9590,349,0.0090,233
+32144,7,b'7-syntactic_feature__root_word__current_user_utterance__flay',41.9590,580,0.0088,234
+1789,4.1,b'4.1-ngram.current_user_utterance__play love',52.0772,195,0.0086,235
+9611,4.1,b'4.1-ngram.next_system_utterance__wanted turn',18.6457,1470,0.0085,236
+31519,7,b'7-syntactic_feature__obj_word__next_system_utterance__that',20.8011,1248,0.0085,237
+30670,7,b'7-syntactic_feature__obj_word__current_user_utterance__appoint',23.4252,1135,0.0085,238
+29531,6,b'6-entity_feature__entity__next_system_utterance__pandora_PERSON',16.3956,1686,0.0085,239
+17823,5,b'5-phrase_feature__noun_phrases__next_system_utterance__default_music_provider',41.9590,283,0.0083,240
+31108,7,b'7-syntactic_feature__obj_word__current_user_utterance__time',21.2691,1216,0.0083,241
+2025,4.1,b'4.1-ngram.current_user_utterance__remind',18.9361,1457,0.0083,242
+6266,4.1,b'4.1-ngram.next_system_utterance__just ask',45.1315,244,0.0082,243
+31802,7,b'7-syntactic_feature__obj_word__next_user_utterance__metal',15.6168,1833,0.0082,244
+30891,7,b'7-syntactic_feature__obj_word__current_user_utterance__lamp',17.4561,1540,0.0082,245
+32070,7,b'7-syntactic_feature__root_word__current_user_utterance__cast',29.1620,888,0.0080,246
+6349,4.1,b'4.1-ngram.next_system_utterance__know wanted turn',18.6457,1471,0.0080,247
+34182,7,b'7-syntactic_feature__subj_word__current_user_utterance__temperatur',18.0117,1499,0.0079,248
+31366,7,b'7-syntactic_feature__obj_word__next_system_utterance__ligabu',41.9590,509,0.0079,249
+33279,7,b'7-syntactic_feature__root_word__next_system_utterance__that',23.8837,1074,0.0079,250
+7429,4.1,b'4.1-ngram.next_system_utterance__okay long',60.8810,155,0.0079,251
+22852,5,b'5-phrase_feature__noun_phrases__next_system_utterance__suicide_kings!do',41.9590,290,0.0078,252
+14455,5,b'5-phrase_feature__noun_phrases__current_user_utterance__nexus',39.7446,737,0.0077,253
+9945,2.1,b'2.1-user_action_words.next_user_utterance__tell',15.0464,1857,0.0077,254
+403,4.1,b'4.1-ngram.current_user_utterance__calendar today',23.8227,1103,0.0076,255
+12087,4.1,b'4.1-ngram.next_user_utterance__watch minix',13.5104,1995,0.0075,256
+26077,5,b'5-phrase_feature__noun_phrases__next_user_utterance__pie',32.1861,826,0.0075,257
+13212,5,b'5-phrase_feature__noun_phrases__current_user_utterance__entryway',25.8831,970,0.0075,258
+7195,4.1,b'4.1-ngram.next_system_utterance__need know',36.2568,773,0.0075,259
+43,2.3.1,b'2.3.1-action_jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,2053,0.0074,260
+30643,7,b'7-syntactic_feature__next_root_words_overlap',0.0000,2058,0.0073,261
+28321,6,b'6-entity_feature__entity__next_system_utterance__29,029_NUMBER',19.9276,1416,0.0072,262
+34939,7,b'7-syntactic_feature__subj_word__next_user_utterance__tonight',41.9590,592,0.0072,263
+9934,2.1,b'2.1-user_action_words.next_user_utterance__room',16.3022,1691,0.0072,264
+26304,5,b'5-phrase_feature__noun_phrases__next_user_utterance__roar',41.9590,456,0.0071,265
+9600,4.1,b'4.1-ngram.next_system_utterance__want',49.8661,211,0.0070,266
+24425,5,b'5-phrase_feature__noun_phrases__next_user_utterance__calendar_event',41.9590,282,0.0070,267
+4689,4.1,b'4.1-ngram.next_system_utterance__control add device',16.8120,1570,0.0070,268
+12622,5,b'5-phrase_feature__noun_phrases__current_user_utterance__calendar',55.9770,174,0.0069,269
+13391,5,b'5-phrase_feature__noun_phrases__current_user_utterance__fuller_house',18.1670,1485,0.0067,270
+33051,7,b'7-syntactic_feature__root_word__next_system_utterance__okay',22.1226,1179,0.0067,271
+27884,6,b'6-entity_feature__entity__current_user_utterance__samsung_ORGANIZATION',25.1774,995,0.0067,272
+8326,4.1,b'4.1-ngram.next_system_utterance__setting',16.8639,1566,0.0067,273
+2947,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,2054,0.0066,274
+30644,7,b'7-syntactic_feature__next_subj_words_overlap',0.0000,2060,0.0066,275
+695,4.1,b'4.1-ngram.current_user_utterance__door open',13.6898,1986,0.0064,276
+6675,4.1,b'4.1-ngram.next_system_utterance__long',34.2235,798,0.0064,277
+22421,5,b'5-phrase_feature__noun_phrases__next_system_utterance__slaw',41.9590,400,0.0064,278
+27828,6,b'6-entity_feature__entity__current_user_utterance__orange is the new black on netflix_ORGANIZATION',23.0642,1144,0.0064,279
+30518,6,b'6-entity_feature__entity__next_user_utterance__roberts_PERSON',41.9590,710,0.0064,280
+32248,7,b'7-syntactic_feature__root_word__current_user_utterance__netflix',23.9458,1060,0.0064,281
+3571,4.1,b'4.1-ngram.next_system_utterance__add device',16.8120,1571,0.0063,282
+22281,5,b'5-phrase_feature__noun_phrases__next_system_utterance__setting',98.0135,72,0.0062,283
+24973,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fine',41.9590,434,0.0061,284
+11328,4.1,b'4.1-ngram.next_user_utterance__play watch',18.7270,1464,0.0061,285
+21573,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pm',22.1618,1177,0.0061,286
+32150,7,b'7-syntactic_feature__root_word__current_user_utterance__frozen',41.9590,598,0.0060,287
+25700,5,b'5-phrase_feature__noun_phrases__next_user_utterance__meghan',20.1402,1333,0.0060,288
+21371,5,b'5-phrase_feature__noun_phrases__next_system_utterance__picture_soundtrack_justin',41.9590,415,0.0060,289
+2209,4.1,b'4.1-ngram.current_user_utterance__set timer',19.5698,1422,0.0059,290
+33396,7,b'7-syntactic_feature__root_word__next_user_utterance__abl',41.9590,622,0.0059,291
+10988,4.1,b'4.1-ngram.next_user_utterance__movie',16.7309,1669,0.0058,292
+32188,7,b'7-syntactic_feature__root_word__current_user_utterance__is',31.8311,831,0.0058,293
+33578,7,b'7-syntactic_feature__root_word__next_user_utterance__hour',24.1757,1049,0.0058,294
+28895,6,b'6-entity_feature__entity__next_system_utterance__cavaliers_ORGANIZATION',15.6168,1760,0.0058,295
+14043,5,b'5-phrase_feature__noun_phrases__current_user_utterance__living_room_chromecast',16.7849,1609,0.0057,296
+15155,5,b'5-phrase_feature__noun_phrases__current_user_utterance__sheeran',41.9590,669,0.0057,297
+2499,4.1,b'4.1-ngram.current_user_utterance__time',25.2361,992,0.0057,298
+15143,5,b'5-phrase_feature__noun_phrases__current_user_utterance__set_timer',22.2560,1175,0.0057,299
+21176,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pacific',40.2805,733,0.0056,300
+16289,5,b'5-phrase_feature__noun_phrases__next_system_utterance__am',21.8853,1188,0.0056,301
+2036,4.1,b'4.1-ngram.current_user_utterance__resume',15.3289,1844,0.0055,302
+3872,4.1,b'4.1-ngram.next_system_utterance__ask',82.7572,111,0.0054,303
+26961,5,b'5-phrase_feature__noun_phrases__next_user_utterance__watch_indians',16.7849,1623,0.0053,304
+32274,7,b'7-syntactic_feature__root_word__current_user_utterance__phone',15.6168,1785,0.0053,305
+27237,6,b'6-entity_feature__entity__current_user_utterance__4 p.m._TIME',23.8837,1091,0.0053,306
+32079,7,b'7-syntactic_feature__root_word__current_user_utterance__christma',17.4634,1538,0.0053,307
+31381,7,b'7-syntactic_feature__obj_word__next_system_utterance__me',309.9814,13,0.0053,308
+1999,4.1,b'4.1-ngram.current_user_utterance__random',13.4367,2001,0.0052,309
+28487,6,b'6-entity_feature__entity__next_system_utterance__50 percent_PERCENT',16.0741,1721,0.0052,310
+8816,4.1,b'4.1-ngram.next_system_utterance__supported',26.4795,941,0.0051,311
+32443,7,b'7-syntactic_feature__root_word__current_user_utterance__work',13.0816,2043,0.0051,312
+30792,7,b'7-syntactic_feature__obj_word__current_user_utterance__episod',15.6168,1793,0.0051,313
+402,4.1,b'4.1-ngram.current_user_utterance__calendar',30.9193,863,0.0051,314
+33616,7,b'7-syntactic_feature__root_word__next_user_utterance__long',41.9590,568,0.0051,315
+33821,7,b'7-syntactic_feature__root_word__next_user_utterance__tv',41.9624,260,0.0050,316
+33780,7,b'7-syntactic_feature__root_word__next_user_utterance__stop',34.8319,791,0.0050,317
+16466,5,b'5-phrase_feature__noun_phrases__next_system_utterance__asian_slaw',41.9590,347,0.0050,318
+18955,5,b'5-phrase_feature__noun_phrases__next_system_utterance__grenadine',41.9590,494,0.0050,319
+86,4.1,b'4.1-ngram.current_user_utterance__1984',23.8215,1104,0.0049,320
+7685,4.1,b'4.1-ngram.next_system_utterance__played',44.3748,251,0.0049,321
+13677,5,b'5-phrase_feature__noun_phrases__current_user_utterance__home_play_karma',41.9590,682,0.0049,322
+14981,5,b'5-phrase_feature__noun_phrases__current_user_utterance__rogan_experience_kevin',13.9324,1950,0.0049,323
+33987,7,b'7-syntactic_feature__subj_word__current_user_utterance__email',41.9590,577,0.0049,324
+15603,5,b'5-phrase_feature__noun_phrases__current_user_utterance__tunein',51.5776,197,0.0048,325
+26789,5,b'5-phrase_feature__noun_phrases__next_user_utterance__top_songs',16.7849,1653,0.0048,326
+26764,5,b'5-phrase_feature__noun_phrases__next_user_utterance__time_difference',20.1402,1384,0.0048,327
+32955,7,b'7-syntactic_feature__root_word__next_system_utterance__it',31.2336,856,0.0047,328
+14064,5,b'5-phrase_feature__noun_phrases__current_user_utterance__lomo',41.9590,697,0.0047,329
+33368,7,b'7-syntactic_feature__root_word__next_system_utterance__written',41.9590,618,0.0047,330
+27392,6,b'6-entity_feature__entity__current_user_utterance__baby einstein_PERSON',20.1402,1362,0.0047,331
+26346,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rye_country_day',41.9590,464,0.0047,332
+30110,6,b'6-entity_feature__entity__next_user_utterance__93_NUMBER',41.9590,635,0.0047,333
+9954,2.2,b'2.2-#user_action_words.next_user_utterance__utterance_length',34.3773,797,0.0046,334
+3718,4.1,b'4.1-ngram.next_system_utterance__alright long',35.3815,782,0.0046,335
+13788,5,b'5-phrase_feature__noun_phrases__current_user_utterance__jeopardy_music',16.7849,1617,0.0046,336
+17717,5,b'5-phrase_feature__noun_phrases__next_system_utterance__current_time',83.9180,105,0.0045,337
+24194,5,b'5-phrase_feature__noun_phrases__next_user_utterance__attitude',41.9590,354,0.0045,338
+5989,4.1,b'4.1-ngram.next_system_utterance__home',20.6364,1257,0.0045,339
+5039,4.1,b'4.1-ngram.next_system_utterance__don think',13.3530,2010,0.0045,340
+10769,4.1,b'4.1-ngram.next_user_utterance__lamps 100',13.9306,1965,0.0045,341
+6526,4.1,b'4.1-ngram.next_system_utterance__like haven connected',16.0812,1718,0.0045,342
+14456,5,b'5-phrase_feature__noun_phrases__current_user_utterance__nexus_player',33.3994,812,0.0045,343
+22,2.1,b'2.1-user_action_words.current_user_utterance__room',14.6018,1904,0.0045,344
+11067,4.1,b'4.1-ngram.next_user_utterance__npr',15.3302,1843,0.0045,345
+30385,6,b'6-entity_feature__entity__next_user_utterance__knoxville tennessee_LOCATION',24.1757,1051,0.0045,346
+22720,5,b'5-phrase_feature__noun_phrases__next_system_utterance__starting',64.9395,145,0.0044,347
+1463,4.1,b'4.1-ngram.current_user_utterance__netflix shield',25.8298,972,0.0044,348
+22674,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sriracha',20.1402,1389,0.0044,349
+9395,4.1,b'4.1-ngram.next_system_utterance__turning lights',25.0311,1022,0.0044,350
+18222,5,b'5-phrase_feature__noun_phrases__next_system_utterance__email_address',54.7192,182,0.0044,351
+8222,4.1,b'4.1-ngram.next_system_utterance__saying',50.5268,206,0.0044,352
+25815,5,b'5-phrase_feature__noun_phrases__next_user_utterance__mushrooms',41.9590,396,0.0044,353
+17671,5,b'5-phrase_feature__noun_phrases__next_system_utterance__crystal_ball',20.1402,1281,0.0044,354
+33264,7,b'7-syntactic_feature__root_word__next_system_utterance__sure',50.8077,204,0.0043,355
+32333,7,b'7-syntactic_feature__root_word__current_user_utterance__score',15.6168,1834,0.0043,356
+13332,5,b'5-phrase_feature__noun_phrases__current_user_utterance__flay',41.9590,708,0.0043,357
+24460,5,b'5-phrase_feature__noun_phrases__next_user_utterance__cast_joe_rogan',31.2609,850,0.0043,358
+550,4.1,b'4.1-ngram.current_user_utterance__create',39.7581,736,0.0043,359
+15894,5,b'5-phrase_feature__noun_phrases__current_user_utterance__work',54.7192,185,0.0043,360
+27962,6,b'6-entity_feature__entity__current_user_utterance__tonight_DATE',16.9673,1562,0.0043,361
+25422,5,b'5-phrase_feature__noun_phrases__next_user_utterance__katy_perry',41.9590,410,0.0042,362
+33841,7,b'7-syntactic_feature__root_word__next_user_utterance__watch',72.6963,126,0.0042,363
+34138,7,b'7-syntactic_feature__subj_word__current_user_utterance__rule',21.3013,1207,0.0042,364
+6985,4.1,b'4.1-ngram.next_system_utterance__minutes',25.0631,1021,0.0042,365
+5789,4.1,b'4.1-ngram.next_system_utterance__haven connected',16.0812,1717,0.0042,366
+15925,5,b'5-phrase_feature__noun_phrases__current_user_utterance__year',35.4043,779,0.0041,367
+2027,4.1,b'4.1-ngram.current_user_utterance__reminder',24.6898,1034,0.0041,368
+10028,4.1,b'4.1-ngram.next_user_utterance__able',18.6876,1468,0.0040,369
+26808,5,b'5-phrase_feature__noun_phrases__next_user_utterance__trainor',20.1402,1366,0.0040,370
+14988,5,b'5-phrase_feature__noun_phrases__current_user_utterance__room',14.6018,1905,0.0040,371
+21972,5,b'5-phrase_feature__noun_phrases__next_system_utterance__rim',41.9590,424,0.0040,372
+29861,6,b'6-entity_feature__entity__next_system_utterance__washington_LOCATION',14.8910,1876,0.0040,373
+27069,5,b'5-phrase_feature__noun_phrases__next_user_utterance__wrestling',13.9324,1948,0.0039,374
+14001,5,b'5-phrase_feature__noun_phrases__current_user_utterance__lights',25.2069,994,0.0039,375
+25457,5,b'5-phrase_feature__noun_phrases__next_user_utterance__knoxville_tennessee',24.1757,1042,0.0039,376
+31883,7,b'7-syntactic_feature__obj_word__next_user_utterance__roar',41.9590,527,0.0039,377
+9943,2.1,b'2.1-user_action_words.next_user_utterance__stop',35.0396,783,0.0038,378
+32231,7,b'7-syntactic_feature__root_word__current_user_utterance__minix',16.7849,1578,0.0038,379
+11041,4.1,b'4.1-ngram.next_user_utterance__netflix crown',14.2736,1925,0.0038,380
+26726,5,b'5-phrase_feature__noun_phrases__next_user_utterance__temperature_today',20.1402,1277,0.0038,381
+24674,5,b'5-phrase_feature__noun_phrases__next_user_utterance__crows',20.1402,1323,0.0038,382
+39,2.1,b'2.1-user_action_words.current_user_utterance__volum',39.1637,743,0.0038,383
+2933,4.1,b'4.1-ngram.current_user_utterance__youtube',14.0146,1941,0.0037,384
+24111,5,b'5-phrase_feature__noun_phrases__next_user_utterance__aidens',25.1774,1016,0.0037,385
+1571,4.1,b'4.1-ngram.current_user_utterance__pause',25.2078,993,0.0037,386
+33033,7,b'7-syntactic_feature__root_word__next_system_utterance__name',31.7459,836,0.0036,387
+23736,5,b'5-phrase_feature__noun_phrases__next_system_utterance__whaddya',31.2336,852,0.0036,388
+33818,7,b'7-syntactic_feature__root_word__next_user_utterance__translat',15.6168,1745,0.0035,389
+3816,4.1,b'4.1-ngram.next_system_utterance__apologies don understand',114.4431,56,0.0035,390
+32349,7,b'7-syntactic_feature__root_word__current_user_utterance__skip',17.8963,1505,0.0035,391
+32586,7,b'7-syntactic_feature__root_word__next_system_utterance__alarm',41.9590,605,0.0035,392
+48,3,b'3-time_feature__turns_to_end',1142.1987,2,0.0035,393
+17040,5,b'5-phrase_feature__noun_phrases__next_system_utterance__calendar',54.6200,188,0.0035,394
+31472,7,b'7-syntactic_feature__obj_word__next_system_utterance__screen',21.3254,1202,0.0035,395
+8569,4.1,b'4.1-ngram.next_system_utterance__sorry help learning',14.2677,1926,0.0035,396
+8565,4.1,b'4.1-ngram.next_system_utterance__sorry don know',240.0449,22,0.0035,397
+34225,7,b'7-syntactic_feature__subj_word__current_user_utterance__weather',19.3668,1435,0.0035,398
+33426,7,b'7-syntactic_feature__root_word__next_user_utterance__bathroom',15.6168,1781,0.0035,399
+16482,5,b'5-phrase_feature__noun_phrases__next_system_utterance__assistant',38.6734,746,0.0035,400
+2266,4.1,b'4.1-ngram.current_user_utterance__skip',18.5859,1472,0.0034,401
+15740,5,b'5-phrase_feature__noun_phrases__current_user_utterance__vita',41.9590,332,0.0034,402
+34681,7,b'7-syntactic_feature__subj_word__next_user_utterance__a',20.1402,1308,0.0034,403
+2808,4.1,b'4.1-ngram.current_user_utterance__volume',30.6948,870,0.0034,404
+23778,5,b'5-phrase_feature__noun_phrases__next_system_utterance__wikipedia',13.7904,1976,0.0034,405
+26759,5,b'5-phrase_feature__noun_phrases__next_user_utterance__thunderstorms',16.7849,1665,0.0033,406
+12963,5,b'5-phrase_feature__noun_phrases__current_user_utterance__curve',14.4540,1914,0.0033,407
+19186,5,b'5-phrase_feature__noun_phrases__next_system_utterance__home',58.7082,162,0.0033,408
+30788,7,b'7-syntactic_feature__obj_word__current_user_utterance__einstein',20.1402,1320,0.0033,409
+25449,5,b'5-phrase_feature__noun_phrases__next_user_utterance__kitchen_tv',15.6168,1801,0.0033,410
+9474,4.1,b'4.1-ngram.next_system_utterance__use',20.4107,1263,0.0033,411
+15607,5,b'5-phrase_feature__noun_phrases__current_user_utterance__tunein_station_wblx',41.9590,501,0.0033,412
+15771,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch',41.8367,716,0.0033,413
+25064,5,b'5-phrase_feature__noun_phrases__next_user_utterance__game',15.2381,1848,0.0033,414
+34017,7,b'7-syntactic_feature__subj_word__current_user_utterance__girl',15.6168,1751,0.0033,415
+26454,5,b'5-phrase_feature__noun_phrases__next_user_utterance__shares_message',41.9590,375,0.0032,416
+13631,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hey_google_hey',16.7849,1643,0.0032,417
+32856,7,b'7-syntactic_feature__root_word__next_system_utterance__give',34.6527,792,0.0032,418
+35,2.1,b'2.1-user_action_words.current_user_utterance__time',23.5232,1112,0.0032,419
+23280,5,b'5-phrase_feature__noun_phrases__next_system_utterance__traffic',14.5397,1910,0.0032,420
+32428,7,b'7-syntactic_feature__root_word__current_user_utterance__watch',37.2146,762,0.0032,421
+24498,5,b'5-phrase_feature__noun_phrases__next_user_utterance__character',41.9590,284,0.0032,422
+9601,4.1,b'4.1-ngram.next_system_utterance__want add',60.9383,154,0.0031,423
+24913,5,b'5-phrase_feature__noun_phrases__next_user_utterance__event',20.1402,1316,0.0031,424
+8859,4.1,b'4.1-ngram.next_system_utterance__sure help learning',37.3135,761,0.0030,425
+25168,5,b'5-phrase_feature__noun_phrases__next_user_utterance__google_timer_remaining',41.9590,420,0.0030,426
+18789,5,b'5-phrase_feature__noun_phrases__next_system_utterance__genius_scholar',41.9590,445,0.0030,427
+6421,4.1,b'4.1-ngram.next_system_utterance__learn',18.0467,1498,0.0030,428
+14664,5,b'5-phrase_feature__noun_phrases__current_user_utterance__pi',15.6168,1775,0.0030,429
+5839,4.1,b'4.1-ngram.next_system_utterance__help sorry',14.5120,1912,0.0030,430
+12949,5,b'5-phrase_feature__noun_phrases__current_user_utterance__curb_weight',16.7849,1608,0.0030,431
+7144,4.1,b'4.1-ngram.next_system_utterance__music isn available',35.6440,777,0.0030,432
+4662,4.1,b'4.1-ngram.next_system_utterance__connected',18.0996,1494,0.0029,433
+32409,7,b'7-syntactic_feature__root_word__current_user_utterance__turn',41.8437,715,0.0029,434
+26962,5,b'5-phrase_feature__noun_phrases__next_user_utterance__watch_living',25.1774,998,0.0029,435
+32011,7,b"7-syntactic_feature__root_word__current_user_utterance__'s",26.1235,954,0.0029,436
+33196,7,b'7-syntactic_feature__root_word__next_system_utterance__send',29.8257,877,0.0029,437
+12657,5,b'5-phrase_feature__noun_phrases__current_user_utterance__cast',34.5228,796,0.0029,438
+31202,7,b'7-syntactic_feature__obj_word__next_system_utterance__app',146.2038,41,0.0029,439
+5031,4.1,b'4.1-ngram.next_system_utterance__don know play',30.1161,873,0.0029,440
+23027,5,b'5-phrase_feature__noun_phrases__next_system_utterance__text',24.1757,1050,0.0028,441
+12053,4.1,b'4.1-ngram.next_user_utterance__volume',16.2110,1696,0.0028,442
+34194,7,b'7-syntactic_feature__subj_word__current_user_utterance__time',13.2495,2018,0.0028,443
+5814,4.1,b'4.1-ngram.next_system_utterance__hear',14.3857,1918,0.0028,444
+14442,5,b'5-phrase_feature__noun_phrases__current_user_utterance__next_gilmore_girls',16.7849,1637,0.0028,445
+19166,5,b'5-phrase_feature__noun_phrases__next_system_utterance__hmmm',16.7849,1619,0.0028,446
+16403,5,b'5-phrase_feature__noun_phrases__next_system_utterance__anything',38.4891,753,0.0028,447
+38,2.1,b'2.1-user_action_words.current_user_utterance__video',22.7218,1153,0.0028,448
+24864,5,b'5-phrase_feature__noun_phrases__next_user_utterance__einstein',41.9590,391,0.0028,449
+34470,7,b'7-syntactic_feature__subj_word__next_system_utterance__manag',94.8599,76,0.0027,450
+29570,6,b'6-entity_feature__entity__next_system_utterance__radiohead_PERSON',20.1402,1289,0.0027,451
+7573,4.1,b'4.1-ngram.next_system_utterance__percent',13.7328,1983,0.0027,452
+26814,5,b'5-phrase_feature__noun_phrases__next_user_utterance__trending',41.9624,256,0.0027,453
+6487,4.1,b'4.1-ngram.next_system_utterance__lights',26.5839,935,0.0027,454
+27318,6,b'6-entity_feature__entity__current_user_utterance__80_NUMBER',15.6168,1836,0.0027,455
+25542,5,b'5-phrase_feature__noun_phrases__next_user_utterance__lights',13.3753,2008,0.0027,456
+27490,6,b'6-entity_feature__entity__current_user_utterance__costco_ORGANIZATION',41.9590,372,0.0027,457
+5030,4.1,b'4.1-ngram.next_system_utterance__don know help',217.5272,26,0.0027,458
+30645,7,b'7-syntactic_feature__obj_word__current_user_utterance__%',41.9590,698,0.0027,459
+15512,5,b'5-phrase_feature__noun_phrases__current_user_utterance__thunderstorms',17.4634,1525,0.0027,460
+23339,5,b'5-phrase_feature__noun_phrases__next_system_utterance__try',48.4269,225,0.0026,461
+13209,5,b'5-phrase_feature__noun_phrases__current_user_utterance__entire_expedition_ship',41.9590,536,0.0026,462
+34496,7,b'7-syntactic_feature__subj_word__next_system_utterance__network',41.9590,585,0.0026,463
+30402,6,b'6-entity_feature__entity__next_user_utterance__lisa_PERSON',21.4420,1198,0.0026,464
+4715,4.1,b'4.1-ngram.next_system_utterance__couldn song',24.4778,1040,0.0026,465
+30510,6,b'6-entity_feature__entity__next_user_utterance__ranalli_PERSON',41.9590,685,0.0026,466
+30278,6,b'6-entity_feature__entity__next_user_utterance__esther_PERSON',14.8910,1874,0.0026,467
+26714,5,b'5-phrase_feature__noun_phrases__next_user_utterance__tech',17.6415,1517,0.0026,468
+24132,5,b'5-phrase_feature__noun_phrases__next_user_utterance__amazon',15.6168,1817,0.0026,469
+7674,4.1,b'4.1-ngram.next_system_utterance__play music isn',35.6440,776,0.0026,470
+22212,5,b'5-phrase_feature__noun_phrases__next_system_utterance__screen',20.8011,1249,0.0026,471
+26716,5,b'5-phrase_feature__noun_phrases__next_user_utterance__tech_usa',16.1295,1715,0.0026,472
+32226,7,b'7-syntactic_feature__root_word__current_user_utterance__medic',41.9590,600,0.0025,473
+6346,4.1,b'4.1-ngram.next_system_utterance__know play',30.1161,872,0.0025,474
+30723,7,b'7-syntactic_feature__obj_word__current_user_utterance__cello',16.7849,1638,0.0025,475
+1041,4.1,b'4.1-ngram.current_user_utterance__husband',13.9595,1947,0.0025,476
+3814,4.1,b'4.1-ngram.next_system_utterance__apologies',114.4431,55,0.0025,477
+18956,5,b'5-phrase_feature__noun_phrases__next_system_utterance__grenadine_syrup',41.9590,493,0.0025,478
+975,4.1,b'4.1-ngram.current_user_utterance__hello',29.4835,883,0.0025,479
+25120,5,b'5-phrase_feature__noun_phrases__next_user_utterance__girls',17.4634,1526,0.0024,480
+6340,4.1,b'4.1-ngram.next_system_utterance__know help',217.5272,27,0.0024,481
+27732,6,b'6-entity_feature__entity__current_user_utterance__luciano ligabue_PERSON',41.9590,324,0.0024,482
+13112,5,b'5-phrase_feature__noun_phrases__current_user_utterance__downstairs',14.6963,1900,0.0024,483
+34407,7,b'7-syntactic_feature__subj_word__next_system_utterance__great!now',13.0816,2039,0.0024,484
+32384,7,b'7-syntactic_feature__root_word__current_user_utterance__tell',24.4852,1039,0.0024,485
+34187,7,b'7-syntactic_feature__subj_word__current_user_utterance__the',41.9590,578,0.0024,486
+25396,5,b'5-phrase_feature__noun_phrases__next_user_utterance__joe',31.2609,847,0.0024,487
+7143,4.1,b'4.1-ngram.next_system_utterance__music isn',35.6440,778,0.0024,488
+18164,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ed',20.1402,1313,0.0024,489
+20644,5,b'5-phrase_feature__noun_phrases__next_system_utterance__motion_picture_soundtrack',13.0816,2038,0.0024,490
+23369,5,b'5-phrase_feature__noun_phrases__next_system_utterance__tvs',14.1812,1934,0.0024,491
+9951,2.1,b'2.1-user_action_words.next_user_utterance__volum',18.2576,1475,0.0023,492
+27819,6,b'6-entity_feature__entity__current_user_utterance__nsync_ORGANIZATION',41.9590,329,0.0023,493
+26829,5,b'5-phrase_feature__noun_phrases__next_user_utterance__tunein_station',83.9180,86,0.0023,494
+12075,4.1,b'4.1-ngram.next_user_utterance__watch',28.3359,898,0.0023,495
+2481,4.1,b'4.1-ngram.current_user_utterance__text',23.5088,1113,0.0023,496
+19122,5,b'5-phrase_feature__noun_phrases__next_system_utterance__henry',41.9590,491,0.0023,497
+30637,6,b'6-entity_feature__entity__next_user_utterance__zach_PERSON',13.0816,2045,0.0022,498
+7756,4.1,b'4.1-ngram.next_system_utterance__playing right',14.5187,1911,0.0022,499
+23219,5,b'5-phrase_feature__noun_phrases__next_system_utterance__top_genius',41.9590,276,0.0022,500
+18503,5,b'5-phrase_feature__noun_phrases__next_system_utterance__finding_picks',31.2336,853,0.0022,501
+25827,5,b'5-phrase_feature__noun_phrases__next_user_utterance__national_championship',16.7849,1604,0.0022,502
+30372,6,b'6-entity_feature__entity__next_user_utterance__joe rogan_PERSON',41.9624,257,0.0022,503
+9950,2.1,b'2.1-user_action_words.next_user_utterance__video',27.7802,907,0.0022,504
+29974,6,b'6-entity_feature__entity__next_user_utterance__18_NUMBER',41.9590,652,0.0022,505
+32597,7,b'7-syntactic_feature__root_word__next_system_utterance__alright',68.7046,138,0.0022,506
+31544,7,b'7-syntactic_feature__obj_word__next_system_utterance__tv',16.8148,1569,0.0022,507
+13668,5,b'5-phrase_feature__noun_phrases__current_user_utterance__holidays',41.9590,687,0.0022,508
+5,2.1,b'2.1-user_action_words.current_user_utterance__cast',32.1630,828,0.0022,509
+32271,7,b'7-syntactic_feature__root_word__current_user_utterance__paus',19.8599,1417,0.0021,510
+30920,7,b'7-syntactic_feature__obj_word__current_user_utterance__messag',23.4252,1133,0.0021,511
+15225,5,b'5-phrase_feature__noun_phrases__current_user_utterance__smith',25.9209,963,0.0021,512
+10888,4.1,b'4.1-ngram.next_user_utterance__love',21.7417,1193,0.0021,513
+9604,4.1,b'4.1-ngram.next_system_utterance__want reminded',53.3556,193,0.0021,514
+15273,5,b'5-phrase_feature__noun_phrases__current_user_utterance__south',16.1493,1709,0.0021,515
+40,2.1,b'2.1-user_action_words.current_user_utterance__watch',59.7330,158,0.0021,516
+15896,5,b'5-phrase_feature__noun_phrases__current_user_utterance__world',34.9269,789,0.0021,517
+29905,6,b'6-entity_feature__entity__next_system_utterance__yesterday at 02:30 pm_DATE',41.9590,653,0.0021,518
+32402,7,b'7-syntactic_feature__root_word__current_user_utterance__track',23.4252,1124,0.0021,519
+8223,4.1,b'4.1-ngram.next_system_utterance__saying include',48.4468,222,0.0021,520
+2791,4.1,b'4.1-ngram.current_user_utterance__video',21.4419,1199,0.0021,521
+17826,5,b'5-phrase_feature__noun_phrases__next_system_utterance__degrees',40.5068,732,0.0020,522
+12909,5,b'5-phrase_feature__noun_phrases__current_user_utterance__counters',16.7849,1611,0.0020,523
+15887,5,b'5-phrase_feature__noun_phrases__current_user_utterance__wizard',17.3866,1550,0.0020,524
+32578,7,b'7-syntactic_feature__root_word__next_system_utterance__add',39.7813,735,0.0020,525
+33612,7,b'7-syntactic_feature__root_word__next_user_utterance__list',41.9590,567,0.0020,526
+1165,4.1,b'4.1-ngram.current_user_utterance__left lamp',17.6949,1512,0.0020,527
+33029,7,b'7-syntactic_feature__root_word__next_system_utterance__music',20.8398,1246,0.0020,528
+3815,4.1,b'4.1-ngram.next_system_utterance__apologies don',114.4431,57,0.0020,529
+13034,5,b'5-phrase_feature__noun_phrases__current_user_utterance__devices',16.1493,1707,0.0019,530
+5981,4.1,b'4.1-ngram.next_system_utterance__hmm',17.7683,1510,0.0019,531
+32996,7,b'7-syntactic_feature__root_word__next_system_utterance__look',172.2649,34,0.0019,532
+32632,7,b'7-syntactic_feature__root_word__next_system_utterance__bartend',41.9590,606,0.0019,533
+27774,6,b'6-entity_feature__entity__current_user_utterance__mobil_ORGANIZATION',41.9590,327,0.0019,534
+23464,5,b'5-phrase_feature__noun_phrases__next_system_utterance__use_assistant_settings',125.8770,50,0.0019,535
+12248,5,b'5-phrase_feature__noun_phrases__current_user_utterance__alternative',25.1774,1010,0.0019,536
+32213,7,b'7-syntactic_feature__root_word__current_user_utterance__look',15.6168,1803,0.0019,537
+8930,4.1,b'4.1-ngram.next_system_utterance__sure want quit',16.0191,1724,0.0019,538
+32607,7,b'7-syntactic_feature__root_word__next_system_utterance__apolog',254.6443,18,0.0019,539
+30301,6,b'6-entity_feature__entity__next_user_utterance__fox_PERSON',14.8910,1873,0.0019,540
+13126,5,b'5-phrase_feature__noun_phrases__current_user_utterance__drinks',24.1757,1045,0.0019,541
+30306,6,b'6-entity_feature__entity__next_user_utterance__fuller_PERSON',57.4095,166,0.0019,542
+13525,5,b'5-phrase_feature__noun_phrases__current_user_utterance__great_south',23.4252,1123,0.0019,543
+25863,5,b'5-phrase_feature__noun_phrases__next_user_utterance__netflix',82.7969,110,0.0019,544
+13163,5,b'5-phrase_feature__noun_phrases__current_user_utterance__ed_sheeran',41.9590,540,0.0019,545
+8693,4.1,b'4.1-ngram.next_system_utterance__starting',18.1531,1491,0.0019,546
+13560,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hair_metal',15.6168,1835,0.0018,547
+30635,6,b'6-entity_feature__entity__next_user_utterance__youtube_ORGANIZATION',49.4460,218,0.0018,548
+10865,4.1,b'4.1-ngram.next_user_utterance__living room tv',17.8434,1506,0.0018,549
+25864,5,b'5-phrase_feature__noun_phrases__next_user_utterance__netflix_crown',16.7849,1661,0.0018,550
+12489,5,b'5-phrase_feature__noun_phrases__current_user_utterance__blu-ray_player',16.7849,1649,0.0018,551
+984,4.1,b'4.1-ngram.current_user_utterance__hey google',13.5606,1991,0.0018,552
+15505,5,b'5-phrase_feature__noun_phrases__current_user_utterance__things',41.4915,721,0.0018,553
+20575,5,b'5-phrase_feature__noun_phrases__next_system_utterance__mobas',41.9590,428,0.0018,554
+30424,6,b'6-entity_feature__entity__next_user_utterance__meghan trainor_PERSON',20.1402,1271,0.0018,555
+15454,5,b'5-phrase_feature__noun_phrases__current_user_utterance__tallest_mountain',13.4279,2003,0.0018,556
+24473,5,b'5-phrase_feature__noun_phrases__next_user_utterance__cavs',19.3904,1432,0.0017,557
+7905,4.1,b'4.1-ngram.next_system_utterance__quit',14.4255,1916,0.0017,558
+21623,5,b'5-phrase_feature__noun_phrases__next_system_utterance__popular_movie',31.2336,860,0.0017,559
+9603,4.1,b'4.1-ngram.next_system_utterance__want quit',16.0191,1725,0.0017,560
+16066,5,b'5-phrase_feature__noun_phrases__next_system_utterance__account',28.4132,895,0.0017,561
+31790,7,b'7-syntactic_feature__obj_word__next_user_utterance__love',116.1446,54,0.0017,562
+32065,7,b'7-syntactic_feature__root_word__current_user_utterance__can',18.6894,1467,0.0017,563
+8044,4.1,b'4.1-ngram.next_system_utterance__reminded',53.3556,192,0.0017,564
+29971,6,b'6-entity_feature__entity__next_user_utterance__176_NUMBER',16.7849,1641,0.0017,565
+14423,5,b'5-phrase_feature__noun_phrases__current_user_utterance__new_list',41.9590,631,0.0017,566
+6265,4.1,b'4.1-ngram.next_system_utterance__just',21.2549,1218,0.0017,567
+32369,7,b'7-syntactic_feature__root_word__current_user_utterance__stop',14.6740,1902,0.0016,568
+2921,4.1,b'4.1-ngram.current_user_utterance__year',14.7010,1896,0.0016,569
+30445,6,b'6-entity_feature__entity__next_user_utterance__monday_DATE',16.7849,1654,0.0016,570
+24016,5,b'5-phrase_feature__noun_phrases__next_system_utterance__youtube.com/red',41.9590,323,0.0016,571
+30930,7,b'7-syntactic_feature__obj_word__current_user_utterance__moba',41.9590,549,0.0016,572
+20159,5,b'5-phrase_feature__noun_phrases__next_system_utterance__living',16.5401,1675,0.0016,573
+34952,7,b'7-syntactic_feature__subj_word__next_user_utterance__veloc',16.7849,1603,0.0016,574
+15345,5,b'5-phrase_feature__noun_phrases__current_user_utterance__stats',14.2009,1932,0.0016,575
+20669,5,b'5-phrase_feature__noun_phrases__next_system_utterance__movie_recs',13.0816,2037,0.0016,576
+7043,4.1,b'4.1-ngram.next_system_utterance__minutes starting',16.6717,1671,0.0016,577
+14757,5,b'5-phrase_feature__noun_phrases__current_user_utterance__police',41.9590,657,0.0016,578
+27565,6,b'6-entity_feature__entity__current_user_utterance__expedition_MISC',41.9590,345,0.0016,579
+2929,4.1,b'4.1-ngram.current_user_utterance__yes',50.4583,207,0.0016,580
+1896,4.1,b'4.1-ngram.current_user_utterance__play video',21.3048,1206,0.0016,581
+13175,5,b'5-phrase_feature__noun_phrases__current_user_utterance__einstein',20.1402,1274,0.0015,582
+7,2.1,b'2.1-user_action_words.current_user_utterance__els',23.8837,1082,0.0015,583
+21757,5,b'5-phrase_feature__noun_phrases__next_system_utterance__quest',41.9590,423,0.0015,584
+23320,5,b'5-phrase_feature__noun_phrases__next_system_utterance__tribe',14.6963,1898,0.0015,585
+10301,4.1,b'4.1-ngram.next_user_utterance__computer',70.0403,134,0.0015,586
+15611,5,b'5-phrase_feature__noun_phrases__current_user_utterance__turn',19.0498,1452,0.0015,587
+15120,5,b'5-phrase_feature__noun_phrases__current_user_utterance__set_hallway_light',16.7849,1624,0.0015,588
+15888,5,b'5-phrase_feature__noun_phrases__current_user_utterance__wmms',15.6168,1823,0.0015,589
+2229,4.1,b'4.1-ngram.current_user_utterance__set volume',18.9300,1458,0.0015,590
+17100,5,b'5-phrase_feature__noun_phrases__next_system_utterance__car',19.4262,1427,0.0015,591
+26967,5,b'5-phrase_feature__noun_phrases__next_user_utterance__watch_stranger_things',20.1402,1348,0.0015,592
+8929,4.1,b'4.1-ngram.next_system_utterance__sure want',16.0191,1723,0.0015,593
+9336,4.1,b'4.1-ngram.next_system_utterance__try saying',51.8316,196,0.0015,594
+24922,5,b'5-phrase_feature__noun_phrases__next_user_utterance__extinguisher',16.7849,1586,0.0015,595
+27241,6,b'6-entity_feature__entity__current_user_utterance__400%_PERCENT',41.9590,356,0.0015,596
+11257,4.1,b'4.1-ngram.next_user_utterance__play love',55.6039,176,0.0015,597
+26966,5,b'5-phrase_feature__noun_phrases__next_user_utterance__watch_stranger',20.1402,1353,0.0015,598
+15343,5,b'5-phrase_feature__noun_phrases__current_user_utterance__station_wblx',41.9590,629,0.0015,599
+27829,6,b'6-entity_feature__entity__current_user_utterance__orange is the new black on nexus_ORGANIZATION',16.7849,1629,0.0015,600
+30993,7,b'7-syntactic_feature__obj_word__current_user_utterance__pop',17.3866,1548,0.0014,601
+31047,7,b'7-syntactic_feature__obj_word__current_user_utterance__shimmer',23.8837,1070,0.0014,602
+30073,6,b'6-entity_feature__entity__next_user_utterance__7 minutes_DURATION',20.1402,1298,0.0014,603
+34554,7,b'7-syntactic_feature__subj_word__next_system_utterance__school',20.1402,1304,0.0014,604
+6562,4.1,b'4.1-ngram.next_system_utterance__like watch',65.3965,144,0.0014,605
+15566,5,b'5-phrase_feature__noun_phrases__current_user_utterance__tour',41.9590,689,0.0014,606
+24,2.1,b'2.1-user_action_words.current_user_utterance__show',26.8577,924,0.0014,607
+29102,6,b'6-entity_feature__entity__next_system_utterance__food network_ORGANIZATION',15.8785,1732,0.0014,608
+47,3,b'3-time_feature__turns_from_start',1855.8406,1,0.0014,609
+29880,6,b'6-entity_feature__entity__next_system_utterance__wikipedia_ORGANIZATION',13.7904,1977,0.0014,610
+10319,4.1,b'4.1-ngram.next_user_utterance__create',27.5256,910,0.0014,611
+22539,5,b'5-phrase_feature__noun_phrases__next_system_utterance__song_merry_christmas',41.9590,473,0.0014,612
+23935,5,b'5-phrase_feature__noun_phrases__next_system_utterance__wreath',41.9590,328,0.0014,613
+26727,5,b'5-phrase_feature__noun_phrases__next_user_utterance__tennessee',14.8910,1875,0.0014,614
+12163,4.1,b'4.1-ngram.next_user_utterance__zydeco',14.4328,1915,0.0013,615
+32042,7,b'7-syntactic_feature__root_word__current_user_utterance__bartend',41.9590,562,0.0013,616
+31019,7,b'7-syntactic_feature__obj_word__current_user_utterance__review',16.7849,1610,0.0013,617
+9979,4.1,b'4.1-ngram.next_user_utterance__1984',17.0705,1557,0.0013,618
+17064,5,b'5-phrase_feature__noun_phrases__next_system_utterance__called_quest',41.9590,277,0.0013,619
+30570,6,b'6-entity_feature__entity__next_user_utterance__the next few hours_DURATION',41.9590,692,0.0013,620
+32259,7,b'7-syntactic_feature__root_word__current_user_utterance__ohio',16.7849,1587,0.0013,621
+26791,5,b'5-phrase_feature__noun_phrases__next_user_utterance__top_terminal_velocity',16.7849,1657,0.0013,622
+9949,2.1,b'2.1-user_action_words.next_user_utterance__turn',18.7687,1462,0.0013,623
+30457,6,b"6-entity_feature__entity__next_user_utterance__new year's_DATE",33.3556,813,0.0013,624
+31748,7,b'7-syntactic_feature__obj_word__next_user_utterance__heathen',41.9590,524,0.0013,625
+26342,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rule',17.4634,1537,0.0013,626
+13964,5,b'5-phrase_feature__noun_phrases__current_user_utterance__left_lamp_orange',41.9590,686,0.0012,627
+219,4.1,b'4.1-ngram.current_user_utterance__alexa',14.5495,1909,0.0012,628
+12491,5,b'5-phrase_feature__noun_phrases__current_user_utterance__blu-ray_region',25.1774,1009,0.0012,629
+24971,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fights',41.9590,435,0.0012,630
+31693,7,b'7-syntactic_feature__obj_word__next_user_utterance__einstein',41.9590,521,0.0012,631
+28950,6,b'6-entity_feature__entity__next_system_utterance__crystal ball_LOCATION',41.9590,633,0.0012,632
+31805,7,b'7-syntactic_feature__obj_word__next_user_utterance__minix',29.4541,885,0.0012,633
+19965,5,b'5-phrase_feature__noun_phrases__next_system_utterance__lamp_brightness',18.6460,1469,0.0012,634
+33036,7,b'7-syntactic_feature__root_word__next_system_utterance__need',165.1823,35,0.0012,635
+13058,5,b'5-phrase_feature__noun_phrases__current_user_utterance__dining',13.6331,1988,0.0012,636
+20114,5,b'5-phrase_feature__noun_phrases__next_system_utterance__lights_brightness',27.9690,903,0.0012,637
+31103,7,b'7-syntactic_feature__obj_word__current_user_utterance__thing',20.1402,1324,0.0012,638
+30340,6,b'6-entity_feature__entity__next_user_utterance__hour_DURATION',16.7849,1631,0.0012,639
+27387,6,b'6-entity_feature__entity__current_user_utterance__athena_ORGANIZATION',41.9590,367,0.0012,640
+12112,4.1,b'4.1-ngram.next_user_utterance__weeks',16.8647,1565,0.0012,641
+18078,5,b'5-phrase_feature__noun_phrases__next_system_utterance__drink_recipes',41.9590,377,0.0012,642
+13852,5,b'5-phrase_feature__noun_phrases__current_user_utterance__katy_perry_roar',41.9590,691,0.0012,643
+26493,5,b'5-phrase_feature__noun_phrases__next_user_utterance__skateboard',41.9590,285,0.0012,644
+15124,5,b'5-phrase_feature__noun_phrases__current_user_utterance__set_left_lamp',25.1774,1002,0.0012,645
+23029,5,b'5-phrase_feature__noun_phrases__next_system_utterance__text_messages',41.9590,301,0.0012,646
+6331,4.1,b'4.1-ngram.next_system_utterance__know',226.4448,25,0.0012,647
+33482,7,b'7-syntactic_feature__root_word__next_user_utterance__creat',41.6375,718,0.0012,648
+7683,4.1,b'4.1-ngram.next_system_utterance__play videos',14.8397,1890,0.0012,649
+6459,4.1,b'4.1-ngram.next_system_utterance__library similar mix',24.9502,1024,0.0012,650
+31949,7,b'7-syntactic_feature__obj_word__next_user_utterance__thing',41.9590,528,0.0011,651
+33011,7,b'7-syntactic_feature__root_word__next_system_utterance__mean',13.9324,1958,0.0011,652
+24989,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fisher',41.9590,431,0.0011,653
+8562,4.1,b'4.1-ngram.next_system_utterance__sorry couldn',19.4791,1424,0.0011,654
+24080,5,b'5-phrase_feature__noun_phrases__next_user_utterance__a',20.1402,1359,0.0011,655
+31608,7,b'7-syntactic_feature__obj_word__next_user_utterance__baymax',41.9590,516,0.0011,656
+25776,5,b'5-phrase_feature__noun_phrases__next_user_utterance__more_days',16.7849,1577,0.0011,657
+27107,5,b'5-phrase_feature__noun_phrases__next_user_utterance__zucchini',41.9590,350,0.0011,658
+7146,4.1,b'4.1-ngram.next_system_utterance__music library similar',24.9502,1026,0.0011,659
+15035,5,b'5-phrase_feature__noun_phrases__current_user_utterance__samsung_tv',16.7849,1618,0.0011,660
+31579,7,b'7-syntactic_feature__obj_word__next_system_utterance__zone',23.0642,1143,0.0011,661
+20137,5,b'5-phrase_feature__noun_phrases__next_system_utterance__liquids',41.9590,397,0.0011,662
+19839,5,b'5-phrase_feature__noun_phrases__next_system_utterance__kangchenjunga',25.3202,990,0.0011,663
+12680,5,b'5-phrase_feature__noun_phrases__current_user_utterance__cavs',15.9359,1726,0.0011,664
+23220,5,b'5-phrase_feature__noun_phrases__next_system_utterance__top_genius_scholar',41.9590,279,0.0011,665
+31951,7,b'7-syntactic_feature__obj_word__next_user_utterance__thunderstorm',16.7849,1599,0.0011,666
+8433,4.1,b'4.1-ngram.next_system_utterance__similar mix',24.9502,1027,0.0011,667
+15772,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_baby',24.1757,1043,0.0010,668
+2026,4.1,b'4.1-ngram.current_user_utterance__remind 30',18.0500,1497,0.0010,669
+15373,5,b'5-phrase_feature__noun_phrases__current_user_utterance__stranger_things',41.4915,720,0.0010,670
+9337,4.1,b'4.1-ngram.next_system_utterance__try saying include',48.4468,223,0.0010,671
+12341,5,b'5-phrase_feature__noun_phrases__current_user_utterance__baby',17.0306,1561,0.0010,672
+31367,7,b'7-syntactic_feature__obj_word__next_system_utterance__light',32.0872,830,0.0010,673
+34661,7,b'7-syntactic_feature__subj_word__next_system_utterance__you',105.0528,69,0.0010,674
+25599,5,b'5-phrase_feature__noun_phrases__next_user_utterance__love',120.6679,52,0.0010,675
+31436,7,b'7-syntactic_feature__obj_word__next_system_utterance__player',18.9532,1456,0.0010,676
+24732,5,b'5-phrase_feature__noun_phrases__next_user_utterance__daughter_carrie',41.9590,481,0.0010,677
+12292,5,b'5-phrase_feature__noun_phrases__current_user_utterance__apps',16.7849,1652,0.0010,678
+29494,6,b'6-entity_feature__entity__next_system_utterance__now_DATE',70.7557,133,0.0010,679
+33532,7,b'7-syntactic_feature__root_word__next_user_utterance__fine',41.9590,595,0.0010,680
+25017,5,b'5-phrase_feature__noun_phrases__next_user_utterance__football_playoff',25.1774,1017,0.0010,681
+24731,5,b'5-phrase_feature__noun_phrases__next_user_utterance__daughter',20.1402,1283,0.0010,682
+18148,5,b'5-phrase_feature__noun_phrases__next_system_utterance__eastern',57.3724,170,0.0010,683
+29969,6,b'6-entity_feature__entity__next_user_utterance__15%_PERCENT',20.1402,1310,0.0010,684
+32823,7,b'7-syntactic_feature__root_word__next_system_utterance__fill',20.1402,1272,0.0010,685
+30246,6,b'6-entity_feature__entity__next_user_utterance__december_DATE',41.9590,647,0.0010,686
+2603,4.1,b'4.1-ngram.current_user_utterance__tunein',17.2631,1556,0.0010,687
+33138,7,b'7-syntactic_feature__root_word__next_system_utterance__recal',15.6168,1768,0.0010,688
+151,4.1,b'4.1-ngram.current_user_utterance__abc',17.9397,1503,0.0010,689
+24476,5,b'5-phrase_feature__noun_phrases__next_user_utterance__celebration',33.5699,806,0.0009,690
+32700,7,b'7-syntactic_feature__root_word__next_system_utterance__check',23.7897,1106,0.0009,691
+34648,7,b'7-syntactic_feature__subj_word__next_system_utterance__we',18.8011,1461,0.0009,692
+33840,7,b'7-syntactic_feature__root_word__next_user_utterance__want',41.9590,573,0.0009,693
+31699,7,b'7-syntactic_feature__obj_word__next_user_utterance__event',41.9590,522,0.0009,694
+24474,5,b'5-phrase_feature__noun_phrases__next_user_utterance__cavs_game',27.2997,917,0.0009,695
+27079,5,b'5-phrase_feature__noun_phrases__next_user_utterance__year',39.6993,738,0.0009,696
+16406,5,b'5-phrase_feature__noun_phrases__next_system_utterance__apologies',254.6443,19,0.0009,697
+32080,7,b'7-syntactic_feature__root_word__current_user_utterance__chromecast',16.7849,1595,0.0009,698
+12947,5,b'5-phrase_feature__noun_phrases__current_user_utterance__curb',18.9532,1455,0.0009,699
+32115,7,b'7-syntactic_feature__root_word__current_user_utterance__direct',83.9180,109,0.0009,700
+26980,5,b'5-phrase_feature__noun_phrases__next_user_utterance__wblx',41.9590,312,0.0009,701
+16657,5,b'5-phrase_feature__noun_phrases__next_system_utterance__beat_bobby_flay',20.1402,1363,0.0009,702
+31116,7,b'7-syntactic_feature__obj_word__current_user_utterance__tour',41.9590,560,0.0009,703
+26815,5,b'5-phrase_feature__noun_phrases__next_user_utterance__tribe',16.4626,1682,0.0009,704
+647,4.1,b'4.1-ngram.current_user_utterance__directions',36.4249,771,0.0009,705
+17891,5,b'5-phrase_feature__noun_phrases__next_system_utterance__device_name',28.4018,897,0.0009,706
+13694,5,b'5-phrase_feature__noun_phrases__current_user_utterance__house',21.9067,1187,0.0008,707
+20655,5,b'5-phrase_feature__noun_phrases__next_system_utterance__mountain',22.2676,1174,0.0008,708
+6458,4.1,b'4.1-ngram.next_system_utterance__library similar',24.9502,1029,0.0008,709
+14410,5,b'5-phrase_feature__noun_phrases__current_user_utterance__netflix',59.2185,161,0.0008,710
+15773,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_baby_shows',41.9590,319,0.0008,711
+1283,4.1,b'4.1-ngram.current_user_utterance__love',19.9884,1411,0.0008,712
+9917,2.1,b'2.1-user_action_words.next_user_utterance__cast',25.8681,971,0.0008,713
+16656,5,b'5-phrase_feature__noun_phrases__next_system_utterance__beat_bobby',20.1402,1361,0.0008,714
+14518,5,b'5-phrase_feature__noun_phrases__current_user_utterance__okay_google',13.2690,2017,0.0008,715
+7145,4.1,b'4.1-ngram.next_system_utterance__music library',24.9502,1025,0.0008,716
+12936,5,b'5-phrase_feature__noun_phrases__current_user_utterance__crying_panda_video',41.9590,547,0.0008,717
+16674,5,b'5-phrase_feature__noun_phrases__next_system_utterance__bedroom_light',20.6537,1256,0.0008,718
+11146,4.1,b'4.1-ngram.next_user_utterance__pie',18.8915,1459,0.0008,719
+30263,6,b'6-entity_feature__entity__next_user_utterance__eastern_MISC',83.9180,97,0.0008,720
+21429,5,b'5-phrase_feature__noun_phrases__next_system_utterance__playing',73.0405,125,0.0008,721
+14857,5,b'5-phrase_feature__noun_phrases__current_user_utterance__question',15.6168,1764,0.0008,722
+4922,4.1,b'4.1-ngram.next_system_utterance__device',95.2261,74,0.0008,723
+23350,5,b'5-phrase_feature__noun_phrases__next_system_utterance__turning',240.5849,20,0.0008,724
+9702,4.1,b'4.1-ngram.next_system_utterance__went wrong',14.8498,1882,0.0008,725
+32962,7,b'7-syntactic_feature__root_word__next_system_utterance__keep',125.8770,45,0.0008,726
+24131,5,b'5-phrase_feature__noun_phrases__next_user_utterance__amaretto',41.9590,365,0.0008,727
+14451,5,b'5-phrase_feature__noun_phrases__current_user_utterance__next_song',18.1670,1482,0.0008,728
+19922,5,b'5-phrase_feature__noun_phrases__next_system_utterance__knoxville',27.6473,909,0.0008,729
+26452,5,b'5-phrase_feature__noun_phrases__next_user_utterance__shake',17.4634,1533,0.0008,730
+1596,4.1,b'4.1-ngram.current_user_utterance__pictures',15.7558,1737,0.0008,731
+34441,7,b'7-syntactic_feature__subj_word__next_system_utterance__it',29.4659,884,0.0008,732
+15745,5,b'5-phrase_feature__noun_phrases__current_user_utterance__volume',39.1637,744,0.0008,733
+13988,5,b'5-phrase_feature__noun_phrases__current_user_utterance__light',14.4238,1917,0.0007,734
+34210,7,b'7-syntactic_feature__subj_word__current_user_utterance__usa',25.1774,1015,0.0007,735
+9639,4.1,b'4.1-ngram.next_system_utterance__watch',75.3387,118,0.0007,736
+12155,4.1,b'4.1-ngram.next_user_utterance__yes',64.0071,146,0.0007,737
+17889,5,b'5-phrase_feature__noun_phrases__next_system_utterance__device',289.4626,15,0.0007,738
+21368,5,b'5-phrase_feature__noun_phrases__next_system_utterance__picks',16.1944,1699,0.0007,739
+8434,4.1,b'4.1-ngram.next_system_utterance__similar mix google',24.9502,1028,0.0007,740
+18765,5,b'5-phrase_feature__noun_phrases__next_system_utterance__gary_lamp',18.9675,1453,0.0007,741
+14765,5,b'5-phrase_feature__noun_phrases__current_user_utterance__pop',13.2265,2020,0.0007,742
+26344,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rye',41.9590,462,0.0007,743
+15782,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_man_x',41.9590,315,0.0007,744
+251,4.1,b'4.1-ngram.current_user_utterance__ask',32.7583,817,0.0007,745
+20806,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nest',15.1097,1852,0.0007,746
+11808,4.1,b'4.1-ngram.next_user_utterance__things',17.5160,1518,0.0007,747
+30787,7,b'7-syntactic_feature__obj_word__current_user_utterance__egg',26.1870,949,0.0007,748
+20,2.1,b'2.1-user_action_words.current_user_utterance__remind',63.9066,147,0.0007,749
+11046,4.1,b'4.1-ngram.next_user_utterance__netflix shield',26.6149,930,0.0007,750
+25516,5,b'5-phrase_feature__noun_phrases__next_user_utterance__lego_batman',27.2997,915,0.0007,751
+1527,4.1,b'4.1-ngram.current_user_utterance__open netflix shield',59.4949,159,0.0007,752
+1642,4.1,b'4.1-ngram.current_user_utterance__play batman tv',13.1503,2025,0.0007,753
+13543,5,b'5-phrase_feature__noun_phrases__current_user_utterance__group',15.6168,1831,0.0007,754
+20723,5,b'5-phrase_feature__noun_phrases__next_system_utterance__name',201.1263,30,0.0007,755
+11077,4.1,b'4.1-ngram.next_user_utterance__ok',14.3344,1923,0.0007,756
+31016,7,b'7-syntactic_feature__obj_word__current_user_utterance__remind',54.5186,190,0.0007,757
+26932,5,b'5-phrase_feature__noun_phrases__next_user_utterance__volume',18.2576,1476,0.0006,758
+13002,5,b'5-phrase_feature__noun_phrases__current_user_utterance__dc',41.9590,545,0.0006,759
+15806,5,b'5-phrase_feature__noun_phrases__current_user_utterance__weather',27.4735,913,0.0006,760
+31450,7,b'7-syntactic_feature__obj_word__next_system_utterance__provid',41.9590,512,0.0006,761
+34309,7,b'7-syntactic_feature__subj_word__next_system_utterance__but',134.3473,43,0.0006,762
+32456,7,b"7-syntactic_feature__root_word__next_system_utterance__'s",19.9945,1404,0.0006,763
+25112,5,b'5-phrase_feature__noun_phrases__next_user_utterance__gilmore',17.4634,1530,0.0006,764
+15781,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_man',41.9590,317,0.0006,765
+1526,4.1,b'4.1-ngram.current_user_utterance__open netflix',59.4949,160,0.0006,766
+26345,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rye_country',41.9590,463,0.0006,767
+10954,4.1,b'4.1-ngram.next_user_utterance__minix',33.4624,810,0.0006,768
+1630,4.1,b'4.1-ngram.current_user_utterance__play album',23.8005,1105,0.0006,769
+32146,7,b'7-syntactic_feature__root_word__current_user_utterance__forget',15.6168,1783,0.0006,770
+13121,5,b'5-phrase_feature__noun_phrases__current_user_utterance__dreaming',41.9590,543,0.0006,771
+18788,5,b'5-phrase_feature__noun_phrases__next_system_utterance__genius',20.1402,1286,0.0006,772
+1454,4.1,b'4.1-ngram.current_user_utterance__netflix',13.6714,1987,0.0006,773
+19904,5,b'5-phrase_feature__noun_phrases__next_system_utterance__kitchen',17.0386,1560,0.0006,774
+31384,7,b'7-syntactic_feature__obj_word__next_system_utterance__messag',29.5924,880,0.0006,775
+6347,4.1,b'4.1-ngram.next_system_utterance__know wanted',24.0759,1054,0.0006,776
+14141,5,b'5-phrase_feature__noun_phrases__current_user_utterance__many_hours',15.6168,1741,0.0006,777
+27910,6,b'6-entity_feature__entity__current_user_utterance__sonos_MISC',25.3202,987,0.0006,778
+31611,7,b'7-syntactic_feature__obj_word__next_user_utterance__bedroom',14.1507,1935,0.0006,779
+14479,5,b'5-phrase_feature__noun_phrases__current_user_utterance__nsync',41.9590,628,0.0006,780
+30507,6,b'6-entity_feature__entity__next_user_utterance__radiohead_PERSON',41.9590,681,0.0006,781
+24765,5,b'5-phrase_feature__noun_phrases__next_user_utterance__devon',41.9590,402,0.0006,782
+15159,5,b'5-phrase_feature__noun_phrases__current_user_utterance__shield',31.5771,841,0.0006,783
+14647,5,b'5-phrase_feature__noun_phrases__current_user_utterance__perry_roar',41.9590,674,0.0006,784
+12149,4.1,b'4.1-ngram.next_user_utterance__year',16.1636,1706,0.0006,785
+22112,5,b'5-phrase_feature__noun_phrases__next_system_utterance__s_attitude',13.0816,2036,0.0006,786
+4576,4.1,b'4.1-ngram.next_system_utterance__cocktail',21.3467,1201,0.0006,787
+31613,7,b'7-syntactic_feature__obj_word__next_user_utterance__beetl',16.7849,1579,0.0006,788
+26289,5,b'5-phrase_feature__noun_phrases__next_user_utterance__right_lamp',54.7192,178,0.0006,789
+10365,4.1,b'4.1-ngram.next_user_utterance__december',38.0852,756,0.0006,790
+25517,5,b'5-phrase_feature__noun_phrases__next_user_utterance__lego_batman_movie',27.2997,916,0.0006,791
+31786,7,b'7-syntactic_feature__obj_word__next_user_utterance__light',16.2027,1698,0.0006,792
+17995,5,b'5-phrase_feature__noun_phrases__next_system_utterance__do',23.4252,1120,0.0006,793
+31136,7,b'7-syntactic_feature__obj_word__current_user_utterance__video',14.3694,1920,0.0006,794
+9609,4.1,b'4.1-ngram.next_system_utterance__wanted',24.0759,1053,0.0006,795
+30379,6,b'6-entity_feature__entity__next_user_utterance__katy perry roar_PERSON',41.9590,690,0.0006,796
+4193,4.1,b'4.1-ngram.next_system_utterance__calendar',19.1375,1451,0.0006,797
+13008,5,b'5-phrase_feature__noun_phrases__current_user_utterance__death',23.4252,1125,0.0006,798
+17892,5,b'5-phrase_feature__noun_phrases__next_system_utterance__devices',16.6392,1672,0.0006,799
+163,4.1,b'4.1-ngram.current_user_utterance__actually',41.3818,729,0.0006,800
+13355,5,b'5-phrase_feature__noun_phrases__current_user_utterance__football_playoff',17.4634,1528,0.0006,801
+8595,4.1,b'4.1-ngram.next_system_utterance__sorry went wrong',14.8498,1887,0.0006,802
+15780,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_living_room',25.1774,997,0.0006,803
+32036,7,b'7-syntactic_feature__root_word__current_user_utterance__ask',20.1402,1322,0.0005,804
+12054,4.1,b'4.1-ngram.next_user_utterance__volume 100',14.9012,1868,0.0005,805
+33530,7,b'7-syntactic_feature__root_word__next_user_utterance__fight',41.9590,596,0.0005,806
+31496,7,b'7-syntactic_feature__obj_word__next_system_utterance__sport',41.9590,514,0.0005,807
+33,2.1,b'2.1-user_action_words.current_user_utterance__tell',23.8287,1102,0.0005,808
+33317,7,b'7-syntactic_feature__root_word__next_system_utterance__unabl',15.6168,1776,0.0005,809
+15627,5,b'5-phrase_feature__noun_phrases__current_user_utterance__tv',13.9044,1966,0.0005,810
+27073,5,b'5-phrase_feature__noun_phrases__next_user_utterance__xbox',20.7626,1250,0.0005,811
+32167,7,b'7-syntactic_feature__root_word__current_user_utterance__habitat',41.9590,599,0.0005,812
+26222,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rae',16.7849,1606,0.0005,813
+10767,4.1,b'4.1-ngram.next_user_utterance__lamp orange',14.6137,1903,0.0005,814
+292,4.1,b'4.1-ngram.current_user_utterance__batman tv',13.1503,2024,0.0005,815
+5069,4.1,b'4.1-ngram.next_system_utterance__drink',22.0920,1183,0.0005,816
+30820,7,b'7-syntactic_feature__obj_word__current_user_utterance__foyer',15.6168,1799,0.0005,817
+6682,4.1,b'4.1-ngram.next_system_utterance__looked',49.5286,214,0.0005,818
+24492,5,b'5-phrase_feature__noun_phrases__next_user_utterance__championship_game',16.7849,1576,0.0005,819
+3905,4.1,b'4.1-ngram.next_system_utterance__available played right',49.5286,213,0.0005,820
+9703,4.1,b'4.1-ngram.next_system_utterance__went wrong ready',14.8498,1884,0.0005,821
+6189,4.1,b'4.1-ngram.next_system_utterance__isn available played',49.5286,217,0.0005,822
+32796,7,b'7-syntactic_feature__root_word__next_system_utterance__email',41.9590,610,0.0005,823
+33318,7,b'7-syntactic_feature__root_word__next_system_utterance__understand',263.0493,16,0.0005,824
+18270,5,b'5-phrase_feature__noun_phrases__next_system_utterance__error',15.6168,1820,0.0005,825
+26636,5,b'5-phrase_feature__noun_phrases__next_user_utterance__stranger_things',54.7192,181,0.0005,826
+29916,6,b'6-entity_feature__entity__next_system_utterance__youtube red_MISC',41.9590,500,0.0005,827
+5996,4.1,b'4.1-ngram.next_system_utterance__home control add',23.9222,1064,0.0005,828
+19570,5,b'5-phrase_feature__noun_phrases__next_system_utterance__iheartradio',23.4252,1128,0.0005,829
+30750,7,b'7-syntactic_feature__obj_word__current_user_utterance__comput',15.6168,1791,0.0005,830
+25951,5,b'5-phrase_feature__noun_phrases__next_user_utterance__ok_computer',41.9590,472,0.0005,831
+8277,4.1,b'4.1-ngram.next_system_utterance__send messages',13.3053,2014,0.0005,832
+20552,5,b'5-phrase_feature__noun_phrases__next_system_utterance__minutes',103.8777,70,0.0005,833
+34737,7,b'7-syntactic_feature__subj_word__next_user_utterance__color',41.9590,588,0.0005,834
+33142,7,b'7-syntactic_feature__root_word__next_system_utterance__recommend',16.7849,1584,0.0005,835
+5032,4.1,b'4.1-ngram.next_system_utterance__don know wanted',24.0759,1055,0.0005,836
+8585,4.1,b'4.1-ngram.next_system_utterance__sorry send messages',13.3053,2016,0.0005,837
+7972,4.1,b'4.1-ngram.next_system_utterance__ready try',14.8498,1886,0.0005,838
+26097,5,b'5-phrase_feature__noun_phrases__next_user_utterance__plata_o',20.1402,1376,0.0005,839
+31806,7,b'7-syntactic_feature__obj_word__next_user_utterance__minut',20.1402,1339,0.0005,840
+13712,5,b'5-phrase_feature__noun_phrases__current_user_utterance__husband',15.6168,1819,0.0005,841
+26221,5,b'5-phrase_feature__noun_phrases__next_user_utterance__radiohead',41.9590,444,0.0005,842
+25423,5,b'5-phrase_feature__noun_phrases__next_user_utterance__katy_perry_roar',41.9590,455,0.0005,843
+34539,7,b'7-syntactic_feature__subj_word__next_system_utterance__remind',41.9590,586,0.0005,844
+25941,5,b'5-phrase_feature__noun_phrases__next_user_utterance__o_plomo',20.1402,1334,0.0005,845
+12404,5,b'5-phrase_feature__noun_phrases__current_user_utterance__beatnuts',23.4252,1127,0.0005,846
+26687,5,b'5-phrase_feature__noun_phrases__next_user_utterance__sync',20.1402,1314,0.0005,847
+11964,4.1,b'4.1-ngram.next_user_utterance__turn minix',21.2602,1217,0.0005,848
+30198,6,b'6-entity_feature__entity__next_user_utterance__carrie fisher_PERSON',41.9590,645,0.0005,849
+29281,6,b'6-entity_feature__entity__next_system_utterance__kangchenjunga_LOCATION',25.3202,984,0.0005,850
+24459,5,b'5-phrase_feature__noun_phrases__next_user_utterance__cast_joe',31.2609,849,0.0005,851
+8594,4.1,b'4.1-ngram.next_system_utterance__sorry went',14.8498,1885,0.0005,852
+18676,5,b'5-phrase_feature__noun_phrases__next_system_utterance__fried_chicken',41.9590,451,0.0005,853
+30898,7,b'7-syntactic_feature__obj_word__current_user_utterance__light',30.0191,874,0.0005,854
+27399,6,b'6-entity_feature__entity__current_user_utterance__baymax_PERSON',41.9590,369,0.0005,855
+13226,5,b'5-phrase_feature__noun_phrases__current_user_utterance__esther',17.4634,1539,0.0005,856
+16808,5,b'5-phrase_feature__noun_phrases__next_system_utterance__blx',41.9590,268,0.0005,857
+30971,7,b'7-syntactic_feature__obj_word__current_user_utterance__parti',16.1493,1711,0.0004,858
+12875,5,b'5-phrase_feature__noun_phrases__current_user_utterance__congressman',41.9590,557,0.0004,859
+615,4.1,b'4.1-ngram.current_user_utterance__death',15.0158,1860,0.0004,860
+10612,4.1,b'4.1-ngram.next_user_utterance__greek',21.5930,1194,0.0004,861
+94,4.1,b'4.1-ngram.current_user_utterance__2017',14.2745,1924,0.0004,862
+22041,5,b'5-phrase_feature__noun_phrases__next_system_utterance__room',46.5150,239,0.0004,863
+9815,4.1,b'4.1-ngram.next_system_utterance__wrong ready try',14.8498,1889,0.0004,864
+14579,5,b'5-phrase_feature__noun_phrases__current_user_utterance__panda',41.9590,655,0.0004,865
+26410,5,b'5-phrase_feature__noun_phrases__next_user_utterance__set_bedroom_light',20.1402,1270,0.0004,866
+26532,5,b'5-phrase_feature__noun_phrases__next_user_utterance__solar_powered_skateboard',41.9590,286,0.0004,867
+9701,4.1,b'4.1-ngram.next_system_utterance__went',14.8498,1888,0.0004,868
+11879,4.1,b'4.1-ngram.next_user_utterance__trending',17.3067,1554,0.0004,869
+26205,5,b'5-phrase_feature__noun_phrases__next_user_utterance__quest',41.9590,443,0.0004,870
+23212,5,b'5-phrase_feature__noun_phrases__next_system_utterance__tomorrow',29.5764,881,0.0004,871
+12964,5,b'5-phrase_feature__noun_phrases__current_user_utterance__curve_lamp',14.4540,1913,0.0004,872
+1284,4.1,b'4.1-ngram.current_user_utterance__love actually',41.3818,730,0.0004,873
+14199,5,b'5-phrase_feature__noun_phrases__current_user_utterance__medics',41.9590,679,0.0004,874
+26639,5,b'5-phrase_feature__noun_phrases__next_user_utterance__stream',19.3904,1430,0.0004,875
+8249,4.1,b'4.1-ngram.next_system_utterance__screen like watch',47.7975,235,0.0004,876
+8991,4.1,b'4.1-ngram.next_system_utterance__tell screen like',47.7975,230,0.0004,877
+8584,4.1,b'4.1-ngram.next_system_utterance__sorry send',13.3053,2015,0.0004,878
+27335,6,b'6-entity_feature__entity__current_user_utterance__92.9_NUMBER',41.9590,358,0.0004,879
+25148,5,b'5-phrase_feature__noun_phrases__next_user_utterance__google',13.5168,1994,0.0004,880
+13145,5,b'5-phrase_feature__noun_phrases__current_user_utterance__ea_subscription_ship',41.9590,542,0.0004,881
+30344,6,b'6-entity_feature__entity__next_user_utterance__house of cards_ORGANIZATION',41.9590,703,0.0004,882
+6457,4.1,b'4.1-ngram.next_system_utterance__library',23.6473,1110,0.0004,883
+1790,4.1,b'4.1-ngram.current_user_utterance__play love actually',41.3818,731,0.0004,884
+12623,5,b'5-phrase_feature__noun_phrases__current_user_utterance__calendar_event',41.9590,559,0.0004,885
+24617,5,b'5-phrase_feature__noun_phrases__next_user_utterance__comedian',41.9590,448,0.0004,886
+12223,5,b'5-phrase_feature__noun_phrases__current_user_utterance__aiden',13.9324,1949,0.0004,887
+1304,4.1,b'4.1-ngram.current_user_utterance__make left lamp',33.6285,802,0.0004,888
+11437,4.1,b'4.1-ngram.next_user_utterance__right lamp orange',32.2010,825,0.0004,889
+13674,5,b'5-phrase_feature__noun_phrases__current_user_utterance__home',18.0511,1496,0.0004,890
+3904,4.1,b'4.1-ngram.next_system_utterance__available played',49.5286,215,0.0004,891
+14111,5,b'5-phrase_feature__noun_phrases__current_user_utterance__majestic_victory_music',41.9590,701,0.0004,892
+25271,5,b'5-phrase_feature__noun_phrases__next_user_utterance__highest_mountain',16.7849,1582,0.0004,893
+16,2.1,b'2.1-user_action_words.current_user_utterance__phone',15.7877,1734,0.0004,894
+16820,5,b'5-phrase_feature__noun_phrases__next_system_utterance__bobby_flay',15.8785,1730,0.0004,895
+31543,7,b'7-syntactic_feature__obj_word__next_system_utterance__tribe',41.9590,502,0.0004,896
+14047,5,b'5-phrase_feature__noun_phrases__current_user_utterance__living_room_lights',14.5617,1908,0.0004,897
+33386,7,b'7-syntactic_feature__root_word__next_user_utterance__10',41.9590,621,0.0004,898
+20272,5,b'5-phrase_feature__noun_phrases__next_system_utterance__maggiano_luciano_ligabue',41.9590,385,0.0004,899
+24244,5,b'5-phrase_feature__noun_phrases__next_user_utterance__batman',29.5182,882,0.0004,900
+30480,6,b'6-entity_feature__entity__next_user_utterance__orange is the new black on nexus_ORGANIZATION',23.8837,1083,0.0004,901
+30672,7,b'7-syntactic_feature__obj_word__current_user_utterance__athena',41.9590,707,0.0004,902
+14543,5,b'5-phrase_feature__noun_phrases__current_user_utterance__orange',24.6381,1036,0.0004,903
+32101,7,b'7-syntactic_feature__root_word__current_user_utterance__creat',65.8762,143,0.0004,904
+5995,4.1,b'4.1-ngram.next_system_utterance__home control',23.9222,1066,0.0004,905
+20284,5,b'5-phrase_feature__noun_phrases__next_system_utterance__majestic',41.9590,384,0.0004,906
+8992,4.1,b'4.1-ngram.next_system_utterance__tell screen want',36.5935,769,0.0004,907
+10910,4.1,b'4.1-ngram.next_user_utterance__make right',32.2010,823,0.0004,908
+30765,7,b'7-syntactic_feature__obj_word__current_user_utterance__devic',15.6168,1792,0.0004,909
+32027,7,b'7-syntactic_feature__root_word__current_user_utterance__alarm',20.1402,1387,0.0004,910
+12755,5,b'5-phrase_feature__noun_phrases__current_user_utterance__chirp',41.9590,558,0.0004,911
+26635,5,b'5-phrase_feature__noun_phrases__next_user_utterance__stranger',54.7192,179,0.0004,912
+6563,4.1,b'4.1-ngram.next_system_utterance__like watch example',47.7975,233,0.0004,913
+9546,4.1,b'4.1-ngram.next_system_utterance__video',54.7078,187,0.0004,914
+14547,5,b'5-phrase_feature__noun_phrases__current_user_utterance__order',15.6168,1771,0.0004,915
+1236,4.1,b'4.1-ngram.current_user_utterance__lisa light',13.8015,1975,0.0004,916
+1890,4.1,b'4.1-ngram.current_user_utterance__play tunein station',51.4699,198,0.0004,917
+17608,5,b'5-phrase_feature__noun_phrases__next_system_utterance__country_day',20.1402,1388,0.0004,918
+26430,5,b'5-phrase_feature__noun_phrases__next_user_utterance__set_left_light',16.7849,1614,0.0004,919
+27976,6,b'6-entity_feature__entity__current_user_utterance__uk_LOCATION',14.2009,1929,0.0004,920
+33351,7,b'7-syntactic_feature__root_word__next_system_utterance__what',26.1633,951,0.0004,921
+6341,4.1,b'4.1-ngram.next_system_utterance__know help learning',26.1829,950,0.0004,922
+9814,4.1,b'4.1-ngram.next_system_utterance__wrong ready',14.8498,1883,0.0004,923
+8046,4.1,b'4.1-ngram.next_system_utterance__reminders',22.3936,1173,0.0004,924
+33958,7,b'7-syntactic_feature__subj_word__current_user_utterance__congressman',41.9590,576,0.0004,925
+14903,5,b'5-phrase_feature__noun_phrases__current_user_utterance__reboot',15.6168,1763,0.0004,926
+26541,5,b'5-phrase_feature__noun_phrases__next_user_utterance__songs',15.4717,1840,0.0004,927
+3823,4.1,b'4.1-ngram.next_system_utterance__app home control',23.9222,1061,0.0004,928
+14989,5,b'5-phrase_feature__noun_phrases__current_user_utterance__room_chromecast',16.7849,1616,0.0004,929
+26889,5,b'5-phrase_feature__noun_phrases__next_user_utterance__vanocast',21.8347,1191,0.0004,930
+32862,7,b'7-syntactic_feature__root_word__next_system_utterance__got',142.9711,42,0.0004,931
+11880,4.1,b'4.1-ngram.next_user_utterance__trending youtube',17.3067,1555,0.0004,932
+1303,4.1,b'4.1-ngram.current_user_utterance__make left',33.6285,803,0.0004,933
+1897,4.1,b'4.1-ngram.current_user_utterance__play watch',19.1811,1449,0.0004,934
+25124,5,b'5-phrase_feature__noun_phrases__next_user_utterance__glee',20.1402,1367,0.0004,935
+7686,4.1,b'4.1-ngram.next_system_utterance__played right',49.5286,216,0.0003,936
+24553,5,b'5-phrase_feature__noun_phrases__next_user_utterance__chromecast_audio',25.3202,983,0.0003,937
+30668,7,b'7-syntactic_feature__obj_word__current_user_utterance__app',15.6168,1813,0.0003,938
+10911,4.1,b'4.1-ngram.next_user_utterance__make right lamp',32.2010,824,0.0003,939
+14596,5,b'5-phrase_feature__noun_phrases__current_user_utterance__party',17.7851,1508,0.0003,940
+26963,5,b'5-phrase_feature__noun_phrases__next_user_utterance__watch_living_room',25.1774,999,0.0003,941
+12935,5,b'5-phrase_feature__noun_phrases__current_user_utterance__crying_panda',41.9590,548,0.0003,942
+33867,7,b'7-syntactic_feature__root_word__next_user_utterance__zach',41.9590,574,0.0003,943
+1257,4.1,b'4.1-ngram.current_user_utterance__living room tv',14.9548,1863,0.0003,944
+24776,5,b'5-phrase_feature__noun_phrases__next_user_utterance__dim_curve',16.7849,1592,0.0003,945
+28821,6,b'6-entity_feature__entity__next_system_utterance__barefoot contessa_PERSON',15.6168,1761,0.0003,946
+9346,4.1,b'4.1-ngram.next_system_utterance__tunein isn',22.7527,1150,0.0003,947
+4688,4.1,b'4.1-ngram.next_system_utterance__control add',23.9222,1062,0.0003,948
+12187,5,b'5-phrase_feature__noun_phrases__current_user_utterance__abc',24.1757,1046,0.0003,949
+17602,5,b'5-phrase_feature__noun_phrases__next_system_utterance__counting_crows',20.1402,1373,0.0003,950
+12929,5,b'5-phrase_feature__noun_phrases__current_user_utterance__crows',20.1402,1379,0.0003,951
+27548,6,b'6-entity_feature__entity__current_user_utterance__elvis presley_PERSON',15.6168,1743,0.0003,952
+3822,4.1,b'4.1-ngram.next_system_utterance__app home',23.9222,1065,0.0003,953
+24126,5,b'5-phrase_feature__noun_phrases__next_user_utterance__alex',41.9590,366,0.0003,954
+32685,7,b'7-syntactic_feature__root_word__next_system_utterance__car',41.9590,607,0.0003,955
+18598,5,b'5-phrase_feature__noun_phrases__next_system_utterance__food_network',46.2198,241,0.0003,956
+17533,5,b'5-phrase_feature__noun_phrases__next_system_utterance__congressman',20.1402,1386,0.0003,957
+28652,6,b'6-entity_feature__entity__next_system_utterance__850_NUMBER',20.1402,1395,0.0003,958
+24711,5,b'5-phrase_feature__noun_phrases__next_user_utterance__dad',41.9590,485,0.0003,959
+12934,5,b'5-phrase_feature__noun_phrases__current_user_utterance__crying',41.9590,551,0.0003,960
+33797,7,b'7-syntactic_feature__root_word__next_user_utterance__tell',17.5011,1520,0.0003,961
+27361,6,b'6-entity_feature__entity__current_user_utterance__aiden_PERSON',13.9324,1961,0.0003,962
+2604,4.1,b'4.1-ngram.current_user_utterance__tunein station',51.4699,199,0.0003,963
+14393,5,b'5-phrase_feature__noun_phrases__current_user_utterance__nba_championship',15.6168,1770,0.0003,964
+15785,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_minutes',16.7849,1666,0.0003,965
+8250,4.1,b'4.1-ngram.next_system_utterance__screen want',36.5935,767,0.0003,966
+5992,4.1,b'4.1-ngram.next_system_utterance__home app home',23.9222,1063,0.0003,967
+32261,7,b'7-syntactic_feature__root_word__current_user_utterance__okay',17.7851,1509,0.0003,968
+11047,4.1,b'4.1-ngram.next_user_utterance__netflix tv',15.1042,1855,0.0003,969
+23475,5,b'5-phrase_feature__noun_phrases__next_system_utterance__using_chromecast',16.7849,1632,0.0003,970
+31646,7,b'7-syntactic_feature__obj_word__next_user_utterance__championship',16.7849,1574,0.0003,971
+4934,4.1,b'4.1-ngram.next_system_utterance__device use',28.2459,900,0.0003,972
+21104,5,b'5-phrase_feature__noun_phrases__next_system_utterance__original',20.1402,1273,0.0003,973
+31961,7,b'7-syntactic_feature__obj_word__next_user_utterance__trainor',41.9590,529,0.0003,974
+33861,7,b'7-syntactic_feature__root_word__next_user_utterance__ye',70.0213,135,0.0003,975
+15590,5,b'5-phrase_feature__noun_phrases__current_user_utterance__trending',34.6034,795,0.0003,976
+19064,5,b'5-phrase_feature__noun_phrases__next_system_utterance__hardware',15.6168,1804,0.0003,977
+33648,7,b'7-syntactic_feature__root_word__next_user_utterance__mushroom',41.9590,569,0.0003,978
+14123,5,b'5-phrase_feature__noun_phrases__current_user_utterance__man_x',41.9590,654,0.0003,979
+26005,5,b'5-phrase_feature__noun_phrases__next_user_utterance__papa',25.1774,1012,0.0003,980
+31541,7,b'7-syntactic_feature__obj_word__next_system_utterance__tri',48.4269,224,0.0003,981
+15786,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_stranger',23.8837,1071,0.0003,982
+9347,4.1,b'4.1-ngram.next_system_utterance__tunein isn available',22.7527,1151,0.0003,983
+4117,4.1,b'4.1-ngram.next_system_utterance__brightness',13.4645,1999,0.0003,984
+29918,6,b'6-entity_feature__entity__next_system_utterance__youtube_ORGANIZATION',44.6931,249,0.0003,985
+13404,5,b'5-phrase_feature__noun_phrases__current_user_utterance__game',14.7479,1893,0.0003,986
+21168,5,b'5-phrase_feature__noun_phrases__next_system_utterance__oz_orange',41.9590,413,0.0003,987
+5226,4.1,b'4.1-ngram.next_system_utterance__example tv',47.7975,234,0.0003,988
+24269,5,b'5-phrase_feature__noun_phrases__next_user_utterance__bedroom_tv',20.7166,1255,0.0003,989
+31664,7,b'7-syntactic_feature__obj_word__next_user_utterance__comput',41.9590,519,0.0003,990
+13627,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hey_google',22.5675,1159,0.0003,991
+31846,7,b'7-syntactic_feature__obj_word__next_user_utterance__pizza',23.8837,1079,0.0003,992
+9640,4.1,b'4.1-ngram.next_system_utterance__watch example',47.7975,231,0.0003,993
+25429,5,b'5-phrase_feature__noun_phrases__next_user_utterance__kevin',26.0454,957,0.0003,994
+32127,7,b'7-syntactic_feature__root_word__current_user_utterance__eastern',83.9180,99,0.0003,995
+25554,5,b'5-phrase_feature__noun_phrases__next_user_utterance__lisa',19.5243,1423,0.0003,996
+7194,4.1,b'4.1-ngram.next_system_utterance__need email address',22.5262,1161,0.0003,997
+9641,4.1,b'4.1-ngram.next_system_utterance__watch example tv',47.7975,232,0.0003,998
+33354,7,b'7-syntactic_feature__root_word__next_system_utterance__wikihow',15.6168,1780,0.0003,999
+30108,6,b'6-entity_feature__entity__next_user_utterance__92.9_NUMBER',41.9590,632,0.0003,1000
+26273,5,b'5-phrase_feature__noun_phrases__next_user_utterance__review',16.1295,1716,0.0003,1001
+14617,5,b'5-phrase_feature__noun_phrases__current_user_utterance__pause',26.0643,955,0.0003,1002
+24249,5,b'5-phrase_feature__noun_phrases__next_user_utterance__baymax',41.9590,303,0.0003,1003
+34886,7,b'7-syntactic_feature__subj_word__next_user_utterance__rule',17.4634,1535,0.0003,1004
+24743,5,b'5-phrase_feature__noun_phrases__next_user_utterance__debbie_reynolds_shares',41.9590,403,0.0003,1005
+13863,5,b'5-phrase_feature__noun_phrases__current_user_utterance__kevin_smith',25.9209,967,0.0003,1006
+13363,5,b'5-phrase_feature__noun_phrases__current_user_utterance__foyer',15.6168,1812,0.0003,1007
+24038,5,b'5-phrase_feature__noun_phrases__next_system_utterance__zone',17.6785,1513,0.0003,1008
+12140,4.1,b'4.1-ngram.next_user_utterance__work tunein',15.8822,1728,0.0003,1009
+1594,4.1,b'4.1-ngram.current_user_utterance__pi',15.6168,1773,0.0003,1010
+5162,4.1,b'4.1-ngram.next_system_utterance__email address google',22.5262,1164,0.0003,1011
+25224,5,b'5-phrase_feature__noun_phrases__next_user_utterance__handclap',83.9180,106,0.0003,1012
+14621,5,b'5-phrase_feature__noun_phrases__current_user_utterance__paw',18.1670,1481,0.0003,1013
+27276,6,b'6-entity_feature__entity__current_user_utterance__60_NUMBER',16.1676,1702,0.0003,1014
+24786,5,b'5-phrase_feature__noun_phrases__next_user_utterance__directions',23.8837,1085,0.0003,1015
+13390,5,b'5-phrase_feature__noun_phrases__current_user_utterance__fuller',18.1670,1486,0.0002,1016
+21029,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ok',118.6848,53,0.0002,1017
+26188,5,b'5-phrase_feature__noun_phrases__next_user_utterance__progress_wrestling',17.4634,1534,0.0002,1018
+2010,4.1,b'4.1-ngram.current_user_utterance__reboot',13.8764,1968,0.0002,1019
+22316,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sheeran',20.1402,1288,0.0002,1020
+24112,5,b'5-phrase_feature__noun_phrases__next_user_utterance__aidens_bedroom',25.1774,1018,0.0002,1021
+30523,6,b'6-entity_feature__entity__next_user_utterance__samsung_ORGANIZATION',25.1774,1005,0.0002,1022
+20113,5,b'5-phrase_feature__noun_phrases__next_system_utterance__lights',91.3558,80,0.0002,1023
+720,4.1,b'4.1-ngram.current_user_utterance__eastern',73.6705,124,0.0002,1024
+15945,5,b'5-phrase_feature__noun_phrases__current_user_utterance__youtube_video',23.8430,1099,0.0002,1025
+8593,4.1,b'4.1-ngram.next_system_utterance__sorry time',20.0110,1403,0.0002,1026
+25208,5,b'5-phrase_feature__noun_phrases__next_user_utterance__hair_metal',15.6168,1818,0.0002,1027
+15492,5,b'5-phrase_feature__noun_phrases__current_user_utterance__text',26.5587,936,0.0002,1028
+27394,6,b'6-entity_feature__entity__current_user_utterance__baltimore_LOCATION',41.9590,368,0.0002,1029
+14658,5,b'5-phrase_feature__noun_phrases__current_user_utterance__phone',15.7877,1735,0.0002,1030
+21107,5,b'5-phrase_feature__noun_phrases__next_system_utterance__original_motion',13.0816,2035,0.0002,1031
+2030,4.1,b'4.1-ngram.current_user_utterance__remove',31.1530,862,0.0002,1032
+30132,6,b'6-entity_feature__entity__next_user_utterance__alex_PERSON',41.9590,637,0.0002,1033
+26291,5,b'5-phrase_feature__noun_phrases__next_user_utterance__right_lamp_orange',83.9180,104,0.0002,1034
+21091,5,b'5-phrase_feature__noun_phrases__next_system_utterance__orange_vodka',41.9590,281,0.0002,1035
+31453,7,b'7-syntactic_feature__obj_word__next_system_utterance__question',57.4095,165,0.0002,1036
+23161,5,b'5-phrase_feature__noun_phrases__next_system_utterance__time',16.4505,1684,0.0002,1037
+18888,5,b'5-phrase_feature__noun_phrases__next_system_utterance__google_play_music',26.4560,942,0.0002,1038
+2836,4.1,b'4.1-ngram.current_user_utterance__watch minutes',13.3450,2011,0.0002,1039
+3596,4.1,b'4.1-ngram.next_system_utterance__address google',22.5262,1166,0.0002,1040
+12902,5,b'5-phrase_feature__noun_phrases__current_user_utterance__costco',41.9590,556,0.0002,1041
+5837,4.1,b'4.1-ngram.next_system_utterance__help learning',62.5098,151,0.0002,1042
+12903,5,b'5-phrase_feature__noun_phrases__current_user_utterance__costco_chicken',41.9590,555,0.0002,1043
+33091,7,b'7-syntactic_feature__root_word__next_system_utterance__pm',15.1097,1854,0.0002,1044
+25637,5,b'5-phrase_feature__noun_phrases__next_user_utterance__many_carbs',19.9276,1415,0.0002,1045
+24450,5,b'5-phrase_feature__noun_phrases__next_user_utterance__cards',16.4626,1681,0.0002,1046
+25055,5,b'5-phrase_feature__noun_phrases__next_user_utterance__funk',20.1402,1290,0.0002,1047
+23332,5,b'5-phrase_feature__noun_phrases__next_system_utterance__trolls_original',41.9590,273,0.0002,1048
+32141,7,b'7-syntactic_feature__root_word__current_user_utterance__fight',41.9590,563,0.0002,1049
+23333,5,b'5-phrase_feature__noun_phrases__next_system_utterance__trolls_original_motion',41.9590,313,0.0002,1050
+32137,7,b'7-syntactic_feature__root_word__current_user_utterance__fedex',41.9590,517,0.0002,1051
+8045,4.1,b'4.1-ngram.next_system_utterance__reminder',27.2742,918,0.0002,1052
+28851,6,b'6-entity_feature__entity__next_system_utterance__blx_ORGANIZATION',41.9590,638,0.0002,1053
+12392,5,b'5-phrase_feature__noun_phrases__current_user_utterance__baymax',41.9590,505,0.0002,1054
+20160,5,b'5-phrase_feature__noun_phrases__next_system_utterance__living_room',16.5401,1676,0.0002,1055
+9608,4.1,b'4.1-ngram.next_system_utterance__want watch',36.5935,768,0.0002,1056
+24015,5,b'5-phrase_feature__noun_phrases__next_system_utterance__youtube',50.9928,203,0.0002,1057
+14219,5,b'5-phrase_feature__noun_phrases__current_user_utterance__message',23.4252,1119,0.0002,1058
+24340,5,b'5-phrase_feature__noun_phrases__next_user_utterance__blx',41.9590,274,0.0002,1059
+6919,4.1,b'4.1-ngram.next_system_utterance__messages',13.7574,1981,0.0002,1060
+8251,4.1,b'4.1-ngram.next_system_utterance__screen want watch',36.5935,766,0.0002,1061
+24603,5,b'5-phrase_feature__noun_phrases__next_user_utterance__college_football',33.5699,805,0.0002,1062
+26404,5,b'5-phrase_feature__noun_phrases__next_user_utterance__service',23.8837,1087,0.0002,1063
+18217,5,b'5-phrase_feature__noun_phrases__next_system_utterance__elyria',13.1808,2022,0.0002,1064
+25397,5,b'5-phrase_feature__noun_phrases__next_user_utterance__joe_rogan',31.2609,848,0.0002,1065
+20183,5,b'5-phrase_feature__noun_phrases__next_system_utterance__lomo',41.9590,394,0.0002,1066
+27050,5,b'5-phrase_feature__noun_phrases__next_user_utterance__wink',20.1402,1349,0.0002,1067
+31404,7,b'7-syntactic_feature__obj_word__next_system_utterance__name',147.9556,40,0.0002,1068
+31141,7,b'7-syntactic_feature__obj_word__current_user_utterance__volum',47.4452,238,0.0002,1069
+15376,5,b'5-phrase_feature__noun_phrases__current_user_utterance__stream',27.1811,919,0.0002,1070
+14135,5,b'5-phrase_feature__noun_phrases__current_user_utterance__many_carbs',19.3904,1433,0.0002,1071
+26223,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rae_sremmurd',16.7849,1644,0.0002,1072
+30661,7,b'7-syntactic_feature__obj_word__current_user_utterance__album',26.1633,952,0.0002,1073
+6272,4.1,b'4.1-ngram.next_system_utterance__just need email',22.5262,1168,0.0002,1074
+27536,6,b'6-entity_feature__entity__current_user_utterance__ed sheeran_PERSON',41.9590,374,0.0002,1075
+8226,4.1,b'4.1-ngram.next_system_utterance__saying include program',41.4791,726,0.0002,1076
+31460,7,b'7-syntactic_feature__obj_word__next_system_utterance__remind',46.0358,242,0.0002,1077
+15783,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_medics',41.9590,314,0.0002,1078
+14700,5,b'5-phrase_feature__noun_phrases__current_user_utterance__plate',23.8837,1073,0.0002,1079
+22637,5,b'5-phrase_feature__noun_phrases__next_system_utterance__spiral_effect',41.9590,496,0.0002,1080
+27343,6,b'6-entity_feature__entity__current_user_utterance__99.9_NUMBER',15.6168,1789,0.0002,1081
+26167,5,b'5-phrase_feature__noun_phrases__next_user_utterance__powered_skateboard',41.9590,471,0.0002,1082
+9029,4.1,b'4.1-ngram.next_system_utterance__text',22.1215,1180,0.0002,1083
+23197,5,b'5-phrase_feature__noun_phrases__next_system_utterance__today',36.3410,772,0.0002,1084
+33263,7,b'7-syntactic_feature__root_word__next_system_utterance__support',88.1407,84,0.0002,1085
+34415,7,b'7-syntactic_feature__subj_word__next_system_utterance__here',15.5385,1837,0.0002,1086
+24243,5,b'5-phrase_feature__noun_phrases__next_user_utterance__bathrooms',41.9590,351,0.0002,1087
+21169,5,b'5-phrase_feature__noun_phrases__next_system_utterance__oz_orange_juice',41.9590,414,0.0002,1088
+25565,5,b'5-phrase_feature__noun_phrases__next_user_utterance__living',15.3078,1846,0.0002,1089
+25432,5,b'5-phrase_feature__noun_phrases__next_user_utterance__kevin_smith',31.2609,851,0.0002,1090
+24658,5,b'5-phrase_feature__noun_phrases__next_user_utterance__couple',15.6168,1752,0.0002,1091
+744,4.1,b'4.1-ngram.current_user_utterance__elvis',15.3130,1845,0.0002,1092
+22733,5,b'5-phrase_feature__noun_phrases__next_system_utterance__station',27.9639,905,0.0002,1093
+15377,5,b'5-phrase_feature__noun_phrases__current_user_utterance__stream_christmas',17.4634,1522,0.0002,1094
+25715,5,b'5-phrase_feature__noun_phrases__next_user_utterance__message',23.8837,1077,0.0002,1095
+25869,5,b'5-phrase_feature__noun_phrases__next_user_utterance__new',20.7426,1253,0.0002,1096
+26187,5,b'5-phrase_feature__noun_phrases__next_user_utterance__progress',17.4634,1532,0.0002,1097
+2366,4.1,b'4.1-ngram.current_user_utterance__start stopwatch',14.8558,1879,0.0002,1098
+12218,5,b'5-phrase_feature__noun_phrases__current_user_utterance__adele',14.8910,1871,0.0002,1099
+34762,7,b'7-syntactic_feature__subj_word__next_user_utterance__esther',41.9590,589,0.0002,1100
+9548,4.1,b'4.1-ngram.next_system_utterance__video tell',71.4934,131,0.0002,1101
+13750,5,b'5-phrase_feature__noun_phrases__current_user_utterance__isley',20.1402,1292,0.0002,1102
+31556,7,b'7-syntactic_feature__obj_word__next_system_utterance__volum',23.8837,1076,0.0002,1103
+27064,5,b'5-phrase_feature__noun_phrases__next_user_utterance__world',33.3556,814,0.0002,1104
+26547,5,b'5-phrase_feature__noun_phrases__next_user_utterance__soundtrack',15.1120,1850,0.0002,1105
+30158,6,b'6-entity_feature__entity__next_user_utterance__batman_PERSON',41.9590,641,0.0002,1106
+26104,5,b'5-phrase_feature__noun_phrases__next_user_utterance__play_a',20.1402,1399,0.0002,1107
+20651,5,b'5-phrase_feature__noun_phrases__next_system_utterance__mount_everest',16.1676,1705,0.0002,1108
+31853,7,b'7-syntactic_feature__obj_word__next_user_utterance__plomo',20.1402,1392,0.0002,1109
+10491,4.1,b'4.1-ngram.next_user_utterance__favorite color',13.3682,2009,0.0002,1110
+26,2.1,b'2.1-user_action_words.current_user_utterance__skip',21.3254,1203,0.0002,1111
+25051,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fuller_house',57.4095,168,0.0002,1112
+24656,5,b'5-phrase_feature__noun_phrases__next_user_utterance__country_day_school',41.9590,498,0.0002,1113
+3597,4.1,b'4.1-ngram.next_system_utterance__address google ok',22.5262,1167,0.0002,1114
+5637,4.1,b'4.1-ngram.next_system_utterance__google ok',22.5262,1169,0.0002,1115
+22179,5,b'5-phrase_feature__noun_phrases__next_system_utterance__saying',230.8416,24,0.0002,1116
+20699,5,b'5-phrase_feature__noun_phrases__next_system_utterance__music',39.5722,739,0.0002,1117
+8432,4.1,b'4.1-ngram.next_system_utterance__similar',22.0946,1182,0.0002,1118
+5218,4.1,b'4.1-ngram.next_system_utterance__events',13.8634,1971,0.0002,1119
+14670,5,b'5-phrase_feature__noun_phrases__current_user_utterance__pictures',23.4252,1137,0.0002,1120
+31674,7,b'7-syntactic_feature__obj_word__next_user_utterance__decemb',41.9590,520,0.0002,1121
+24604,5,b'5-phrase_feature__noun_phrases__next_user_utterance__college_football_playoff',25.1774,1019,0.0002,1122
+11234,4.1,b'4.1-ngram.next_user_utterance__play handclap',48.8581,221,0.0002,1123
+24888,5,b'5-phrase_feature__noun_phrases__next_user_utterance__england',41.9590,386,0.0002,1124
+33505,7,b'7-syntactic_feature__root_word__next_user_utterance__do',16.1753,1700,0.0002,1125
+12321,5,b'5-phrase_feature__noun_phrases__current_user_utterance__athena',41.9590,510,0.0002,1126
+19134,5,b'5-phrase_feature__noun_phrases__next_system_utterance__high',21.8608,1189,0.0002,1127
+24919,5,b'5-phrase_feature__noun_phrases__next_user_utterance__experience',41.9624,263,0.0002,1128
+26880,5,b'5-phrase_feature__noun_phrases__next_user_utterance__uptown_funk',20.1402,1337,0.0002,1129
+24920,5,b'5-phrase_feature__noun_phrases__next_user_utterance__experience_kevin',41.9624,264,0.0002,1130
+30862,7,b'7-syntactic_feature__obj_word__current_user_utterance__hulu',41.9590,544,0.0002,1131
+26457,5,b'5-phrase_feature__noun_phrases__next_user_utterance__shield',28.2703,899,0.0002,1132
+26612,5,b'5-phrase_feature__noun_phrases__next_user_utterance__station',24.6142,1037,0.0002,1133
+7643,4.1,b'4.1-ngram.next_system_utterance__pizza near just',30.7586,865,0.0002,1134
+22636,5,b'5-phrase_feature__noun_phrases__next_system_utterance__spiral',41.9590,488,0.0002,1135
+23581,5,b'5-phrase_feature__noun_phrases__next_system_utterance__vodka',41.9590,341,0.0002,1136
+15657,5,b'5-phrase_feature__noun_phrases__current_user_utterance__una_vita',41.9590,342,0.0002,1137
+33375,7,b'7-syntactic_feature__root_word__next_system_utterance__yep',41.9590,620,0.0002,1138
+28315,6,b'6-entity_feature__entity__next_system_utterance__28,251_NUMBER',25.3202,991,0.0002,1139
+13704,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hulu',23.8837,1089,0.0002,1140
+25050,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fuller',57.4095,169,0.0001,1141
+11315,4.1,b'4.1-ngram.next_user_utterance__play sync',13.7584,1980,0.0001,1142
+15666,5,b'5-phrase_feature__noun_phrases__current_user_utterance__unread_text',41.9590,340,0.0001,1143
+13162,5,b'5-phrase_feature__noun_phrases__current_user_utterance__ed',41.9590,541,0.0001,1144
+6620,4.1,b'4.1-ngram.next_system_utterance__ll just',22.5262,1165,0.0001,1145
+13918,5,b'5-phrase_feature__noun_phrases__current_user_utterance__lamp_blue',16.1295,1712,0.0001,1146
+25454,5,b'5-phrase_feature__noun_phrases__next_user_utterance__knight',16.7849,1590,0.0001,1147
+23576,5,b'5-phrase_feature__noun_phrases__next_system_utterance__vita',41.9590,626,0.0001,1148
+31036,7,b'7-syntactic_feature__obj_word__current_user_utterance__season',15.6168,1806,0.0001,1149
+33089,7,b'7-syntactic_feature__root_word__next_system_utterance__pleas',62.3054,152,0.0001,1150
+6271,4.1,b'4.1-ngram.next_system_utterance__just need',22.5262,1170,0.0001,1151
+33419,7,b'7-syntactic_feature__root_word__next_user_utterance__attitud',41.9590,623,0.0001,1152
+25591,5,b'5-phrase_feature__noun_phrases__next_user_utterance__long_december',41.9590,380,0.0001,1153
+7189,4.1,b'4.1-ngram.next_system_utterance__near just',30.7586,868,0.0001,1154
+19177,5,b'5-phrase_feature__noun_phrases__next_system_utterance__holidays',41.9590,490,0.0001,1155
+33611,7,b'7-syntactic_feature__root_word__next_user_utterance__lisa',25.3202,979,0.0001,1156
+12472,5,b'5-phrase_feature__noun_phrases__current_user_utterance__black_beetle',16.7849,1651,0.0001,1157
+13066,5,b'5-phrase_feature__noun_phrases__current_user_utterance__directions',47.7674,236,0.0001,1158
+14912,5,b'5-phrase_feature__noun_phrases__current_user_utterance__red_light',83.9180,92,0.0001,1159
+25716,5,b'5-phrase_feature__noun_phrases__next_user_utterance__metal',15.6168,1826,0.0001,1160
+30363,6,b'6-entity_feature__entity__next_user_utterance__japanese_MISC',15.6168,1742,0.0001,1161
+25251,5,b'5-phrase_feature__noun_phrases__next_user_utterance__hero',13.0816,2033,0.0001,1162
+30478,6,b'6-entity_feature__entity__next_user_utterance__one_NUMBER',14.8089,1892,0.0001,1163
+11743,4.1,b'4.1-ngram.next_user_utterance__sync',13.7584,1979,0.0001,1164
+14622,5,b'5-phrase_feature__noun_phrases__current_user_utterance__paw_patrol',18.1670,1490,0.0001,1165
+32410,7,b'7-syntactic_feature__root_word__current_user_utterance__tv',34.6034,793,0.0001,1166
+15366,5,b'5-phrase_feature__noun_phrases__current_user_utterance__stop',20.8596,1245,0.0001,1167
+26278,5,b'5-phrase_feature__noun_phrases__next_user_utterance__reynolds_shares',41.9590,454,0.0001,1168
+17773,5,b'5-phrase_feature__noun_phrases__next_system_utterance__david',40.2805,734,0.0001,1169
+15426,5,b'5-phrase_feature__noun_phrases__current_user_utterance__surprise',41.9590,639,0.0001,1170
+26118,5,b'5-phrase_feature__noun_phrases__next_user_utterance__player',53.1873,194,0.0001,1171
+22325,5,b'5-phrase_feature__noun_phrases__next_system_utterance__shimmer',23.8837,1069,0.0001,1172
+16584,5,b'5-phrase_feature__noun_phrases__next_system_utterance__baltimore',41.9590,310,0.0001,1173
+8561,4.1,b'4.1-ngram.next_system_utterance__sorry add events',13.8634,1974,0.0001,1174
+26955,5,b'5-phrase_feature__noun_phrases__next_user_utterance__watch_baby',20.1402,1330,0.0001,1175
+31057,7,b'7-syntactic_feature__obj_word__current_user_utterance__snow',16.7849,1613,0.0001,1176
+14678,5,b'5-phrase_feature__noun_phrases__current_user_utterance__pinball',17.3866,1547,0.0001,1177
+24840,5,b'5-phrase_feature__noun_phrases__next_user_utterance__ea',41.9590,399,0.0001,1178
+6621,4.1,b'4.1-ngram.next_system_utterance__ll just need',22.5262,1163,0.0001,1179
+30345,6,b'6-entity_feature__entity__next_user_utterance__hulu_LOCATION',20.1402,1300,0.0001,1180
+8560,4.1,b'4.1-ngram.next_system_utterance__sorry add',13.8634,1973,0.0001,1181
+16612,5,b'5-phrase_feature__noun_phrases__next_system_utterance__barefoot_contessa',15.6168,1786,0.0001,1182
+25167,5,b'5-phrase_feature__noun_phrases__next_user_utterance__google_timer',41.9590,421,0.0001,1183
+22337,5,b'5-phrase_feature__noun_phrases__next_system_utterance__shopping_list',20.7529,1252,0.0001,1184
+2386,4.1,b'4.1-ngram.current_user_utterance__stopwatch',14.8558,1880,0.0001,1185
+12427,5,b'5-phrase_feature__noun_phrases__current_user_utterance__beetle',16.7849,1659,0.0001,1186
+8586,4.1,b'4.1-ngram.next_system_utterance__sorry set',21.2959,1213,0.0001,1187
+17291,5,b'5-phrase_feature__noun_phrases__next_system_utterance__chopped',41.9590,307,0.0001,1188
+3574,4.1,b'4.1-ngram.next_system_utterance__add events',13.8634,1970,0.0001,1189
+6822,4.1,b'4.1-ngram.next_system_utterance__manage list use',20.9345,1240,0.0001,1190
+17554,5,b'5-phrase_feature__noun_phrases__next_system_utterance__contessa',15.6168,1759,0.0001,1191
+26954,5,b'5-phrase_feature__noun_phrases__next_user_utterance__watch',68.8235,137,0.0001,1192
+25701,5,b'5-phrase_feature__noun_phrases__next_user_utterance__meghan_trainor',20.1402,1331,0.0001,1193
+16167,5,b'5-phrase_feature__noun_phrases__next_system_utterance__address_jack_johnson',41.9590,357,0.0001,1194
+23165,5,b'5-phrase_feature__noun_phrases__next_system_utterance__time_zone',29.3926,886,0.0001,1195
+22851,5,b'5-phrase_feature__noun_phrases__next_system_utterance__suicide',20.1402,1380,0.0001,1196
+13157,5,b'5-phrase_feature__noun_phrases__current_user_utterance__eastern',83.9180,100,0.0001,1197
+12687,5,b'5-phrase_feature__noun_phrases__current_user_utterance__celebration',17.4634,1523,0.0001,1198
+32005,7,b'7-syntactic_feature__obj_word__next_user_utterance__yogurt',41.9590,530,0.0001,1199
+26279,5,b'5-phrase_feature__noun_phrases__next_user_utterance__reynolds_shares_message',41.9590,376,0.0001,1200
+15145,5,b'5-phrase_feature__noun_phrases__current_user_utterance__set_volume',15.6168,1755,0.0001,1201
+17134,5,b'5-phrase_feature__noun_phrases__next_system_utterance__cast-enabled_tvs',14.1812,1933,0.0001,1202
+13573,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hallways',13.1808,2023,0.0001,1203
+15166,5,b'5-phrase_feature__noun_phrases__current_user_utterance__ship_work',41.9590,678,0.0001,1204
+7193,4.1,b'4.1-ngram.next_system_utterance__need email',22.5262,1162,0.0001,1205
+30154,6,b'6-entity_feature__entity__next_user_utterance__baby einstein_PERSON',41.9590,640,0.0001,1206
+22343,5,b'5-phrase_feature__noun_phrases__next_system_utterance__shorty!there',41.9590,382,0.0001,1207
+12915,5,b'5-phrase_feature__noun_phrases__current_user_utterance__country_day_school',41.9590,552,0.0001,1208
+10636,4.1,b'4.1-ngram.next_user_utterance__handclap',48.8581,220,0.0001,1209
+32978,7,b'7-syntactic_feature__root_word__next_system_utterance__learn',195.9882,31,0.0001,1210
+22525,5,b'5-phrase_feature__noun_phrases__next_system_utterance__something',22.8679,1147,0.0001,1211
+24452,5,b'5-phrase_feature__noun_phrases__next_user_utterance__carrie',41.9590,299,0.0001,1212
+19837,5,b'5-phrase_feature__noun_phrases__next_system_utterance__k2',25.3202,982,0.0001,1213
+31433,7,b'7-syntactic_feature__obj_word__next_system_utterance__pizza',83.9180,96,0.0001,1214
+25953,5,b'5-phrase_feature__noun_phrases__next_user_utterance__ok_google_play',41.9590,474,0.0001,1215
+25398,5,b'5-phrase_feature__noun_phrases__next_user_utterance__joe_rogan_experience',41.9624,258,0.0001,1216
+34493,7,b'7-syntactic_feature__subj_word__next_system_utterance__my',35.3946,780,0.0001,1217
+6422,4.1,b'4.1-ngram.next_system_utterance__learning',60.9885,153,0.0001,1218
+18223,5,b'5-phrase_feature__noun_phrases__next_system_utterance__emails',41.9590,461,0.0001,1219
+24907,5,b'5-phrase_feature__noun_phrases__next_user_utterance__esther',16.4626,1683,0.0001,1220
+14713,5,b'5-phrase_feature__noun_phrases__current_user_utterance__play_karma',41.9590,661,0.0001,1221
+32316,7,b'7-syntactic_feature__root_word__current_user_utterance__remov',125.8770,49,0.0001,1222
+28542,6,b'6-entity_feature__entity__next_system_utterance__5_NUMBER',25.4425,976,0.0001,1223
+4982,4.1,b'4.1-ngram.next_system_utterance__directly google',20.9345,1234,0.0001,1224
+13963,5,b'5-phrase_feature__noun_phrases__current_user_utterance__left_lamp_blue',23.8430,1100,0.0001,1225
+24841,5,b'5-phrase_feature__noun_phrases__next_user_utterance__ea_subscription',41.9590,392,0.0001,1226
+23924,5,b'5-phrase_feature__noun_phrases__next_system_utterance__work',20.1402,1358,0.0001,1227
+13144,5,b'5-phrase_feature__noun_phrases__current_user_utterance__ea_subscription',20.1402,1279,0.0001,1228
+21243,5,b'5-phrase_feature__noun_phrases__next_system_utterance__patrol',18.1670,1488,0.0001,1229
+21728,5,b'5-phrase_feature__noun_phrases__next_system_utterance__provider',41.9590,422,0.0001,1230
+6583,4.1,b'4.1-ngram.next_system_utterance__list manage',20.9345,1224,0.0001,1231
+10551,4.1,b'4.1-ngram.next_user_utterance__fuller house netflix',26.5366,939,0.0001,1232
+34438,7,b'7-syntactic_feature__subj_word__next_system_utterance__instruct',41.9590,583,0.0001,1233
+13244,5,b'5-phrase_feature__noun_phrases__current_user_utterance__experience_kevin_smith',13.9324,1959,0.0001,1234
+23417,5,b'5-phrase_feature__noun_phrases__next_system_utterance__unbelievable_movie',41.9590,361,0.0001,1235
+31413,7,b'7-syntactic_feature__obj_word__next_system_utterance__one',20.1402,1356,0.0001,1236
+20285,5,b'5-phrase_feature__noun_phrases__next_system_utterance__majestic_victory',41.9590,383,0.0001,1237
+22640,5,b'5-phrase_feature__noun_phrases__next_system_utterance__splash_sprite',41.9590,440,0.0001,1238
+13978,5,b'5-phrase_feature__noun_phrases__current_user_utterance__level',13.9324,1956,0.0001,1239
+21251,5,b'5-phrase_feature__noun_phrases__next_system_utterance__paw',18.1670,1487,0.0001,1240
+25113,5,b'5-phrase_feature__noun_phrases__next_user_utterance__gilmore_girls',17.4634,1529,0.0001,1241
+27095,5,b'5-phrase_feature__noun_phrases__next_user_utterance__youtube',39.4344,740,0.0001,1242
+30903,7,b'7-syntactic_feature__obj_word__current_user_utterance__love',110.0904,61,0.0001,1243
+14258,5,b'5-phrase_feature__noun_phrases__current_user_utterance__minutes',46.4813,240,0.0001,1244
+19725,5,b'5-phrase_feature__noun_phrases__next_system_utterance__janie',41.9590,438,0.0001,1245
+23550,5,b'5-phrase_feature__noun_phrases__next_system_utterance__video',259.9380,17,0.0001,1246
+20709,5,b'5-phrase_feature__noun_phrases__next_system_utterance__music_station',23.8557,1095,0.0001,1247
+30371,6,b'6-entity_feature__entity__next_user_utterance__joe rogan kevin smith_PERSON',23.4252,1122,0.0001,1248
+33087,7,b'7-syntactic_feature__root_word__next_system_utterance__play',60.3412,157,0.0001,1249
+15526,5,b'5-phrase_feature__noun_phrases__current_user_utterance__timer',89.1305,81,0.0001,1250
+3818,4.1,b'4.1-ngram.next_system_utterance__app directly',20.9345,1220,0.0001,1251
+21204,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pandora',20.8964,1244,0.0001,1252
+20103,5,b'5-phrase_feature__noun_phrases__next_system_utterance__light_brightness',18.9675,1454,0.0001,1253
+7642,4.1,b'4.1-ngram.next_system_utterance__pizza near',30.7586,867,0.0001,1254
+12147,4.1,b'4.1-ngram.next_user_utterance__xbox',16.3501,1688,0.0001,1255
+27618,6,b'6-entity_feature__entity__current_user_utterance__great south_LOCATION',23.4252,1130,0.0001,1256
+10681,4.1,b'4.1-ngram.next_user_utterance__house netflix shield',26.5366,938,0.0001,1257
+34602,7,b'7-syntactic_feature__subj_word__next_system_utterance__temperatur',15.0248,1859,0.0001,1258
+22641,5,b'5-phrase_feature__noun_phrases__next_system_utterance__splash_sprite_soda',41.9590,468,0.0001,1259
+32598,7,b'7-syntactic_feature__root_word__next_system_utterance__am',13.5023,1997,0.0001,1260
+17785,5,b'5-phrase_feature__noun_phrases__next_system_utterance__day_school',20.1402,1306,0.0001,1261
+8587,4.1,b'4.1-ngram.next_system_utterance__sorry set reminders',21.2959,1215,0.0001,1262
+33371,7,b'7-syntactic_feature__root_word__next_system_utterance__yeah',41.9590,619,0.0001,1263
+24744,5,b'5-phrase_feature__noun_phrases__next_user_utterance__december',83.9180,95,0.0001,1264
+25976,5,b'5-phrase_feature__noun_phrases__next_user_utterance__orange',32.2480,821,0.0001,1265
+23181,5,b'5-phrase_feature__noun_phrases__next_system_utterance__titled_divide',41.9590,302,0.0001,1266
+16201,5,b'5-phrase_feature__noun_phrases__next_system_utterance__agent',15.6168,1809,0.0001,1267
+30983,7,b'7-syntactic_feature__obj_word__current_user_utterance__pizza',54.7192,186,0.0001,1268
+16617,5,b'5-phrase_feature__noun_phrases__next_system_utterance__bartender',41.9590,270,0.0001,1269
+7190,4.1,b'4.1-ngram.next_system_utterance__near just ask',30.7586,866,0.0001,1270
+11469,4.1,b'4.1-ngram.next_user_utterance__room tv',15.0037,1861,0.0001,1271
+24885,5,b'5-phrase_feature__noun_phrases__next_user_utterance__emails',41.9590,389,0.0001,1272
+27646,6,b'6-entity_feature__entity__current_user_utterance__hulu_LOCATION',23.8837,1093,0.0001,1273
+21419,5,b'5-phrase_feature__noun_phrases__next_system_utterance__play_music',26.4560,943,0.0001,1274
+19143,5,b'5-phrase_feature__noun_phrases__next_system_utterance__highest_mountains',25.3202,988,0.0001,1275
+15829,5,b'5-phrase_feature__noun_phrases__current_user_utterance__weight',16.7849,1627,0.0001,1276
+13805,5,b'5-phrase_feature__noun_phrases__current_user_utterance__joe_rogan_experience',13.9324,1960,0.0001,1277
+29118,6,b'6-entity_feature__entity__next_system_utterance__fried chicken sandwich_ORGANIZATION',41.9590,677,0.0001,1278
+12347,5,b'5-phrase_feature__noun_phrases__current_user_utterance__baby_shows',20.1402,1329,0.0001,1279
+14457,5,b'5-phrase_feature__noun_phrases__current_user_utterance__night',19.9276,1413,0.0001,1280
+16918,5,b'5-phrase_feature__noun_phrases__next_system_utterance__brightness',74.5551,121,0.0001,1281
+18297,5,b'5-phrase_feature__noun_phrases__next_system_utterance__events',37.8615,758,0.0001,1282
+14738,5,b'5-phrase_feature__noun_phrases__current_user_utterance__playoff',17.4634,1536,0.0001,1283
+31392,7,b'7-syntactic_feature__obj_word__next_system_utterance__mix',22.5038,1171,0.0001,1284
+32879,7,b'7-syntactic_feature__root_word__next_system_utterance__help',237.1259,23,0.0001,1285
+3575,4.1,b'4.1-ngram.next_system_utterance__add events calendar',13.8634,1969,0.0001,1286
+11705,4.1,b'4.1-ngram.next_user_utterance__stop party',14.9474,1866,0.0001,1287
+17311,5,b'5-phrase_feature__noun_phrases__next_system_utterance__christmas',13.7463,1982,0.0001,1288
+14679,5,b'5-phrase_feature__noun_phrases__current_user_utterance__pinball_wizard',17.3866,1549,0.0001,1289
+24453,5,b'5-phrase_feature__noun_phrases__next_user_utterance__carrie_fisher',41.9590,298,0.0001,1290
+32285,7,b'7-syntactic_feature__root_word__current_user_utterance__polic',41.9590,601,0.0001,1291
+31153,7,b'7-syntactic_feature__obj_word__current_user_utterance__weight',16.7849,1628,0.0001,1292
+27740,6,b'6-entity_feature__entity__current_user_utterance__maggiano_PERSON',41.9590,325,0.0001,1293
+22349,5,b'5-phrase_feature__noun_phrases__next_system_utterance__show_times',15.6168,1777,0.0001,1294
+30508,6,b'6-entity_feature__entity__next_user_utterance__rae sremmurd_PERSON',16.7849,1615,0.0001,1295
+17944,5,b'5-phrase_feature__noun_phrases__next_system_utterance__dining_room',26.3616,947,0.0001,1296
+13642,5,b'5-phrase_feature__noun_phrases__current_user_utterance__highest_mountain',16.7849,1645,0.0001,1297
+31758,7,b'7-syntactic_feature__obj_word__next_user_utterance__hous',32.1861,827,0.0001,1298
+15695,5,b'5-phrase_feature__noun_phrases__current_user_utterance__vegetarian_sandwich',16.7849,1612,0.0001,1299
+15478,5,b'5-phrase_feature__noun_phrases__current_user_utterance__temperature',20.2873,1266,0.0001,1300
+22529,5,b'5-phrase_feature__noun_phrases__next_system_utterance__song',79.3537,114,0.0001,1301
+16671,5,b'5-phrase_feature__noun_phrases__next_system_utterance__bedroom',31.4209,843,0.0001,1302
+15787,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_stranger_things',23.8837,1072,0.0001,1303
+11140,4.1,b'4.1-ngram.next_user_utterance__pi',15.6168,1815,0.0001,1304
+10889,4.1,b'4.1-ngram.next_user_utterance__love actually',44.8331,247,0.0001,1305
+26124,5,b'5-phrase_feature__noun_phrases__next_user_utterance__playoff',25.1774,1007,0.0001,1306
+15902,5,b'5-phrase_feature__noun_phrases__current_user_utterance__wrestling',21.3013,1208,0.0001,1307
+30351,6,b'6-entity_feature__entity__next_user_utterance__indians_MISC',16.7849,1633,0.0001,1308
+10034,4.1,b'4.1-ngram.next_user_utterance__actually chromecast',13.3266,2013,0.0001,1309
+6587,4.1,b'4.1-ngram.next_system_utterance__list use',20.9345,1230,0.0001,1310
+12483,5,b'5-phrase_feature__noun_phrases__current_user_utterance__block',41.9590,503,0.0001,1311
+23462,5,b'5-phrase_feature__noun_phrases__next_system_utterance__use',38.6085,752,0.0001,1312
+13197,5,b'5-phrase_feature__noun_phrases__current_user_utterance__elvis_presley',15.6168,1796,0.0001,1313
+32266,7,b'7-syntactic_feature__root_word__current_user_utterance__order',57.2148,171,0.0001,1314
+25828,5,b'5-phrase_feature__noun_phrases__next_user_utterance__national_championship_game',16.7849,1656,0.0001,1315
+27427,6,b'6-entity_feature__entity__current_user_utterance__bobby flay_PERSON',41.9590,370,0.0001,1316
+34457,7,b'7-syntactic_feature__subj_word__next_system_utterance__kings!do',41.9590,584,0.0001,1317
+5630,4.1,b'4.1-ngram.next_system_utterance__google cast',20.9345,1235,0.0001,1318
+8372,4.1,b'4.1-ngram.next_system_utterance__settings google cast',20.9345,1228,0.0001,1319
+21421,5,b'5-phrase_feature__noun_phrases__next_system_utterance__play_music_station',23.8557,1096,0.0001,1320
+31501,7,b'7-syntactic_feature__obj_word__next_system_utterance__stori',41.9590,515,0.0001,1321
+6584,4.1,b'4.1-ngram.next_system_utterance__list manage list',20.9345,1238,0.0001,1322
+24987,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fish',20.1402,1297,0.0001,1323
+4273,4.1,b'4.1-ngram.next_system_utterance__cast app directly',20.9345,1233,0.0001,1324
+20270,5,b'5-phrase_feature__noun_phrases__next_system_utterance__maggiano',41.9590,388,0.0001,1325
+17195,5,b'5-phrase_feature__noun_phrases__next_system_utterance__champagne',41.9590,271,0.0001,1326
+17631,5,b'5-phrase_feature__noun_phrases__next_system_utterance__craig_david',83.9180,107,0.0001,1327
+20101,5,b'5-phrase_feature__noun_phrases__next_system_utterance__light',80.3700,113,0.0001,1328
+29857,6,b'6-entity_feature__entity__next_system_utterance__warriors_ORGANIZATION',15.6168,1774,0.0001,1329
+5219,4.1,b'4.1-ngram.next_system_utterance__events calendar',13.8634,1972,0.0001,1330
+28817,6,b'6-entity_feature__entity__next_system_utterance__baltimore_LOCATION',41.9590,642,0.0001,1331
+16605,5,b'5-phrase_feature__noun_phrases__next_system_utterance__barbecue',15.6168,1821,0.0001,1332
+13846,5,b'5-phrase_feature__noun_phrases__current_user_utterance__karma',41.9590,695,0.0001,1333
+12373,5,b'5-phrase_feature__noun_phrases__current_user_utterance__bartender',41.9590,506,0.0001,1334
+25206,5,b'5-phrase_feature__noun_phrases__next_user_utterance__habitat',41.9590,418,0.0001,1335
+25965,5,b'5-phrase_feature__noun_phrases__next_user_utterance__open_fuller',24.1757,1047,0.0001,1336
+30795,7,b'7-syntactic_feature__obj_word__current_user_utterance__event',41.9590,539,0.0001,1337
+10133,4.1,b'4.1-ngram.next_user_utterance__beauty',14.3487,1922,0.0001,1338
+17875,5,b'5-phrase_feature__noun_phrases__next_system_utterance__description',41.9590,294,0.0001,1339
+31221,7,b'7-syntactic_feature__obj_word__next_system_utterance__bright',23.1467,1142,0.0001,1340
+30331,6,b'6-entity_feature__entity__next_user_utterance__grinch_PERSON',16.7849,1630,0.0001,1341
+26700,5,b'5-phrase_feature__noun_phrases__next_user_utterance__tallest_mountain',13.4279,2006,0.0001,1342
+16655,5,b'5-phrase_feature__noun_phrases__next_system_utterance__beat',20.1402,1360,0.0001,1343
+33620,7,b'7-syntactic_feature__root_word__next_user_utterance__lower',15.6168,1753,0.0001,1344
+23416,5,b'5-phrase_feature__noun_phrases__next_system_utterance__una_vita',41.9590,373,0.0001,1345
+3562,4.1,b'4.1-ngram.next_system_utterance__actually remove',20.9345,1221,0.0001,1346
+24777,5,b'5-phrase_feature__noun_phrases__next_user_utterance__dim_curve_lamp',16.7849,1589,0.0001,1347
+26677,5,b'5-phrase_feature__noun_phrases__next_user_utterance__surprise',20.1402,1311,0.0001,1348
+25536,5,b'5-phrase_feature__noun_phrases__next_user_utterance__light_orange',16.7849,1598,0.0001,1349
+27691,6,b'6-entity_feature__entity__current_user_utterance__karma police_ORGANIZATION',41.9590,320,0.0001,1350
+14856,5,b'5-phrase_feature__noun_phrases__current_user_utterance__quest',20.1402,1278,0.0001,1351
+30059,6,b'6-entity_feature__entity__next_user_utterance__60_NUMBER',20.7349,1254,0.0001,1352
+15017,5,b'5-phrase_feature__noun_phrases__current_user_utterance__rule',21.3013,1209,0.0001,1353
+22377,5,b'5-phrase_feature__noun_phrases__next_system_utterance__similar_mix',105.0964,67,0.0001,1354
+29039,6,b'6-entity_feature__entity__next_system_utterance__eastern_MISC',125.8770,47,0.0001,1355
+8815,4.1,b'4.1-ngram.next_system_utterance__support directions',24.0234,1056,0.0001,1356
+31260,7,b'7-syntactic_feature__obj_word__next_system_utterance__direct',54.7192,180,0.0001,1357
+17200,5,b'5-phrase_feature__noun_phrases__next_system_utterance__changing',17.0386,1559,0.0001,1358
+5223,4.1,b'4.1-ngram.next_system_utterance__example',43.2409,254,0.0001,1359
+12484,5,b'5-phrase_feature__noun_phrases__current_user_utterance__block_tour',41.9590,531,0.0001,1360
+33514,7,b'7-syntactic_feature__root_word__next_user_utterance__eastern',83.9180,90,0.0001,1361
+22194,5,b'5-phrase_feature__noun_phrases__next_system_utterance__scholar',41.9590,407,0.0001,1362
+11258,4.1,b'4.1-ngram.next_user_utterance__play love actually',44.8331,246,0.0001,1363
+8050,4.1,b'4.1-ngram.next_system_utterance__remove items',20.9345,1223,0.0001,1364
+785,4.1,b'4.1-ngram.current_user_utterance__fedex',18.6924,1466,0.0001,1365
+23340,5,b'5-phrase_feature__noun_phrases__next_system_utterance__trying',31.2609,845,0.0001,1366
+28070,6,b'6-entity_feature__entity__next_system_utterance__0_NUMBER',15.8785,1731,0.0001,1367
+24023,5,b'5-phrase_feature__noun_phrases__next_system_utterance__youtube_red',41.9590,316,0.0001,1368
+17942,5,b'5-phrase_feature__noun_phrases__next_system_utterance__dining',28.9334,890,0.0001,1369
+24245,5,b'5-phrase_feature__noun_phrases__next_user_utterance__batman_movie',27.2997,914,0.0001,1370
+34238,7,b'7-syntactic_feature__subj_word__current_user_utterance__work',20.1402,1346,0.0001,1371
+24456,5,b'5-phrase_feature__noun_phrases__next_user_utterance__cast',26.0454,956,0.0001,1372
+17895,5,b'5-phrase_feature__noun_phrases__next_system_utterance__devices_using',16.7849,1635,0.0001,1373
+15165,5,b'5-phrase_feature__noun_phrases__current_user_utterance__ship',41.9590,675,0.0001,1374
+8402,4.1,b'4.1-ngram.next_system_utterance__shopping list manage',20.9345,1231,0.0001,1375
+31343,7,b'7-syntactic_feature__obj_word__next_system_utterance__item',92.9882,78,0.0001,1376
+11133,4.1,b'4.1-ngram.next_user_utterance__perry',18.1692,1478,0.0001,1377
+3655,4.1,b'4.1-ngram.next_system_utterance__alert',25.9426,960,0.0001,1378
+31494,7,b'7-syntactic_feature__obj_word__next_system_utterance__speaker',41.9590,513,0.0001,1379
+14689,5,b'5-phrase_feature__noun_phrases__current_user_utterance__pizza',15.0533,1856,0.0001,1380
+13983,5,b'5-phrase_feature__noun_phrases__current_user_utterance__license',20.1402,1276,0.0001,1381
+25907,5,b'5-phrase_feature__noun_phrases__next_user_utterance__nexus',44.1053,252,0.0001,1382
+18433,5,b'5-phrase_feature__noun_phrases__next_system_utterance__favorite_shows',15.6168,1824,0.0001,1383
+21784,5,b'5-phrase_feature__noun_phrases__next_system_utterance__radio',23.8493,1097,0.0001,1384
+27678,6,b'6-entity_feature__entity__current_user_utterance__joe rogan_PERSON',13.9324,1962,0.0001,1385
+14050,5,b'5-phrase_feature__noun_phrases__current_user_utterance__living_room_tv',26.8176,929,0.0001,1386
+18923,5,b'5-phrase_feature__noun_phrases__next_system_utterance__great!you',16.7849,1650,0.0001,1387
+29170,6,b'6-entity_feature__entity__next_system_utterance__happy holidays_ORGANIZATION',41.9590,672,0.0001,1388
+26575,5,b'5-phrase_feature__noun_phrases__next_user_utterance__spotify',16.6881,1670,0.0001,1389
+19189,5,b'5-phrase_feature__noun_phrases__next_system_utterance__home_app',62.9619,149,0.0001,1390
+1534,4.1,b'4.1-ngram.current_user_utterance__order',23.6200,1111,0.0001,1391
+20863,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nexus',21.5924,1196,0.0001,1392
+23346,5,b'5-phrase_feature__noun_phrases__next_system_utterance__tunein',38.6085,751,0.0001,1393
+242,4.1,b'4.1-ngram.current_user_utterance__appointment',14.8127,1891,0.0001,1394
+25399,5,b'5-phrase_feature__noun_phrases__next_user_utterance__joe_rogan_kevin',23.4252,1121,0.0001,1395
+33746,7,b'7-syntactic_feature__root_word__next_user_utterance__set',16.0812,1719,0.0001,1396
+14109,5,b'5-phrase_feature__noun_phrases__current_user_utterance__majestic',41.9590,705,0.0001,1397
+14102,5,b'5-phrase_feature__noun_phrases__current_user_utterance__maggiano',41.9590,714,0.0001,1398
+21392,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pizza',19.4262,1428,0.0001,1399
+34276,7,b'7-syntactic_feature__subj_word__next_system_utterance__answer',16.3956,1687,0.0001,1400
+4847,4.1,b'4.1-ngram.next_system_utterance__david answer questions',19.3358,1442,0.0001,1401
+24740,5,b'5-phrase_feature__noun_phrases__next_user_utterance__death',20.1402,1284,0.0001,1402
+9481,4.1,b'4.1-ngram.next_system_utterance__use try saying',26.6089,932,0.0001,1403
+6821,4.1,b'4.1-ngram.next_system_utterance__manage list',20.9345,1226,0.0001,1404
+31428,7,b'7-syntactic_feature__obj_word__next_system_utterance__pick',31.7787,832,0.0001,1405
+30403,6,b'6-entity_feature__entity__next_user_utterance__london england_LOCATION',41.9590,683,0.0001,1406
+13618,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hellraiser',15.6168,1814,0.0001,1407
+15403,5,b'5-phrase_feature__noun_phrases__current_user_utterance__subscription_ship',41.9590,634,0.0001,1408
+24979,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fire_extinguisher',16.7849,1583,0.0001,1409
+23901,5,b'5-phrase_feature__noun_phrases__next_system_utterance__wizard',17.3866,1551,0.0001,1410
+16727,5,b'5-phrase_feature__noun_phrases__next_system_utterance__big_hero',20.1402,1344,0.0001,1411
+33888,7,b'7-syntactic_feature__subj_word__current_user_utterance__6',41.9590,575,0.0001,1412
+13198,5,b'5-phrase_feature__noun_phrases__current_user_utterance__email',41.9590,538,0.0001,1413
+20703,5,b'5-phrase_feature__noun_phrases__next_system_utterance__music_library',105.0964,68,0.0001,1414
+1889,4.1,b'4.1-ngram.current_user_utterance__play tunein',32.5394,820,0.0001,1415
+26334,5,b'5-phrase_feature__noun_phrases__next_user_utterance__room_tv',26.4267,945,0.0001,1416
+32943,7,b'7-syntactic_feature__root_word__next_system_utterance__includ',32.2207,822,0.0001,1417
+13675,5,b'5-phrase_feature__noun_phrases__current_user_utterance__home_play',23.8430,1098,0.0001,1418
+14712,5,b'5-phrase_feature__noun_phrases__current_user_utterance__play_game',41.9590,666,0.0001,1419
+31845,7,b'7-syntactic_feature__obj_word__next_user_utterance__pie',41.4915,723,0.0001,1420
+25341,5,b'5-phrase_feature__noun_phrases__next_user_utterance__indians',16.7849,1585,0.0001,1421
+18073,5,b'5-phrase_feature__noun_phrases__next_system_utterance__dreaming',41.9590,288,0.0001,1422
+12452,5,b'5-phrase_feature__noun_phrases__current_user_utterance__big_hero',20.1402,1335,0.0001,1423
+16611,5,b'5-phrase_feature__noun_phrases__next_system_utterance__barefoot',15.6168,1788,0.0001,1424
+27997,6,b'6-entity_feature__entity__current_user_utterance__washington dc_LOCATION',41.9590,338,0.0001,1425
+31521,7,b'7-syntactic_feature__obj_word__next_system_utterance__them',20.1402,1352,0.0001,1426
+19698,5,b'5-phrase_feature__noun_phrases__next_system_utterance__items',60.4207,156,0.0001,1427
+25818,5,b'5-phrase_feature__noun_phrases__next_user_utterance__n',20.1402,1350,0.0001,1428
+29429,6,b'6-entity_feature__entity__next_system_utterance__mount everest_LOCATION',16.1676,1701,0.0001,1429
+14418,5,b'5-phrase_feature__noun_phrases__current_user_utterance__new_black',18.1525,1492,0.0001,1430
+8051,4.1,b'4.1-ngram.next_system_utterance__remove items shopping',20.9345,1222,0.0001,1431
+31092,7,b'7-syntactic_feature__obj_word__current_user_utterance__task',15.6168,1794,0.0001,1432
+18560,5,b'5-phrase_feature__noun_phrases__next_system_utterance__flay',15.8785,1733,0.0001,1433
+12290,5,b'5-phrase_feature__noun_phrases__current_user_utterance__appointment',23.4252,1129,0.0001,1434
+26915,5,b'5-phrase_feature__noun_phrases__next_user_utterance__video',22.6655,1154,0.0001,1435
+3874,4.1,b'4.1-ngram.next_system_utterance__ask video tell',71.4934,129,0.0001,1436
+5038,4.1,b'4.1-ngram.next_system_utterance__don support directions',24.0234,1057,0.0001,1437
+10549,4.1,b'4.1-ngram.next_user_utterance__fuller',16.2830,1695,0.0001,1438
+33579,7,b'7-syntactic_feature__root_word__next_user_utterance__hous',24.1757,1052,0.0001,1439
+24851,5,b'5-phrase_feature__noun_phrases__next_user_utterance__eastern',83.9180,88,0.0001,1440
+20228,5,b'5-phrase_feature__noun_phrases__next_system_utterance__luciano_ligabue',20.1402,1347,0.0001,1441
+29481,6,b'6-entity_feature__entity__next_system_utterance__ninety-seven_NUMBER',15.6168,1747,0.0001,1442
+13558,5,b'5-phrase_feature__noun_phrases__current_user_utterance__habitat',41.9590,700,0.0001,1443
+19121,5,b'5-phrase_feature__noun_phrases__next_system_utterance__helping',35.3946,781,0.0001,1444
+31838,7,b'7-syntactic_feature__obj_word__next_user_utterance__parti',14.6963,1901,0.0001,1445
+11321,4.1,b'4.1-ngram.next_user_utterance__play tunein station',34.9431,785,0.0001,1446
+30922,7,b'7-syntactic_feature__obj_word__current_user_utterance__metal',15.6168,1808,0.0001,1447
+5037,4.1,b'4.1-ngram.next_system_utterance__don support',24.0234,1058,0.0001,1448
+31937,7,b'7-syntactic_feature__obj_word__next_user_utterance__sync',20.1402,1374,0.0001,1449
+15654,5,b'5-phrase_feature__noun_phrases__current_user_utterance__uk',14.2009,1931,0.0001,1450
+20483,5,b'5-phrase_feature__noun_phrases__next_system_utterance__merry_christmas',41.9590,429,0.0001,1451
+27583,6,b'6-entity_feature__entity__current_user_utterance__food network_ORGANIZATION',23.8837,1068,0.0001,1452
+25880,5,b'5-phrase_feature__noun_phrases__next_user_utterance__new_year',29.2981,887,0.0001,1453
+22335,5,b'5-phrase_feature__noun_phrases__next_system_utterance__shopping',16.7346,1668,0.0001,1454
+33551,7,b'7-syntactic_feature__root_word__next_user_utterance__glee',41.9590,594,0.0001,1455
+32299,7,b'7-syntactic_feature__root_word__current_user_utterance__put',13.7610,1978,0.0001,1456
+14928,5,b'5-phrase_feature__noun_phrases__current_user_utterance__reminder',54.5186,189,0.0001,1457
+9480,4.1,b'4.1-ngram.next_system_utterance__use try',26.6089,931,0.0001,1458
+19833,5,b'5-phrase_feature__noun_phrases__next_system_utterance__justin_timberlake',13.0816,2031,0.0001,1459
+15372,5,b'5-phrase_feature__noun_phrases__current_user_utterance__stranger',41.4915,722,0.0001,1460
+10646,4.1,b'4.1-ngram.next_user_utterance__heathens',13.7154,1985,0.0001,1461
+15160,5,b'5-phrase_feature__noun_phrases__current_user_utterance__shimmer',23.8837,1086,0.0001,1462
+25315,5,b'5-phrase_feature__noun_phrases__next_user_utterance__house',30.7507,869,0.0001,1463
+8990,4.1,b'4.1-ngram.next_system_utterance__tell screen',71.4934,128,0.0001,1464
+13851,5,b'5-phrase_feature__noun_phrases__current_user_utterance__katy_perry',20.1402,1309,0.0001,1465
+14766,5,b'5-phrase_feature__noun_phrases__current_user_utterance__pop_hits',16.7849,1647,0.0001,1466
+20360,5,b'5-phrase_feature__noun_phrases__next_system_utterance__marshall',41.9590,406,0.0001,1467
+6335,4.1,b'4.1-ngram.next_system_utterance__know device use',26.6089,934,0.0001,1468
+32423,7,b'7-syntactic_feature__root_word__current_user_utterance__volum',25.9891,959,0.0001,1469
+29686,6,b'6-entity_feature__entity__next_system_utterance__spanish_MISC',41.9590,664,0.0001,1470
+10550,4.1,b'4.1-ngram.next_user_utterance__fuller house',16.2830,1693,0.0001,1471
+14918,5,b'5-phrase_feature__noun_phrases__current_user_utterance__region_b',16.7849,1607,0.0001,1472
+16606,5,b'5-phrase_feature__noun_phrases__next_system_utterance__barbecue_chicken',15.6168,1822,0.0001,1473
+24778,5,b'5-phrase_feature__noun_phrases__next_user_utterance__dining',13.2433,2019,0.0001,1474
+13626,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hey',22.5675,1160,0.0001,1475
+14085,5,b'5-phrase_feature__noun_phrases__current_user_utterance__luciano_ligabue',41.9590,709,0.0001,1476
+16607,5,b'5-phrase_feature__noun_phrases__next_system_utterance__barbecue_chicken_recipes',15.6168,1795,0.0001,1477
+26275,5,b'5-phrase_feature__noun_phrases__next_user_utterance__review_tech_usa',16.1295,1713,0.0001,1478
+2587,4.1,b'4.1-ngram.current_user_utterance__trending',17.6690,1514,0.0001,1479
+14268,5,b'5-phrase_feature__noun_phrases__current_user_utterance__mobas',41.9590,646,0.0001,1480
+10680,4.1,b'4.1-ngram.next_user_utterance__house netflix',26.5366,940,0.0001,1481
+29482,6,b'6-entity_feature__entity__next_system_utterance__ninety-three_NUMBER',15.6168,1746,0.0001,1482
+32447,7,b'7-syntactic_feature__root_word__current_user_utterance__ye',57.6923,164,0.0001,1483
+14714,5,b'5-phrase_feature__noun_phrases__current_user_utterance__play_karma_police',41.9590,659,0.0001,1484
+24742,5,b'5-phrase_feature__noun_phrases__next_user_utterance__debbie_reynolds',20.1402,1282,0.0001,1485
+18678,5,b'5-phrase_feature__noun_phrases__next_system_utterance__fried_chicken_sandwich.should',41.9590,446,0.0001,1486
+16579,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ball',13.0816,2040,0.0001,1487
+5631,4.1,b'4.1-ngram.next_system_utterance__google cast app',20.9345,1236,0.0001,1488
+7188,4.1,b'4.1-ngram.next_system_utterance__near',20.5101,1262,0.0000,1489
+13507,5,b'5-phrase_feature__noun_phrases__current_user_utterance__google_stop',14.2009,1930,0.0000,1490
+10033,4.1,b'4.1-ngram.next_user_utterance__actually',44.8331,245,0.0000,1491
+9549,4.1,b'4.1-ngram.next_system_utterance__video tell screen',71.4934,127,0.0000,1492
+22639,5,b'5-phrase_feature__noun_phrases__next_system_utterance__splash',20.1402,1342,0.0000,1493
+6140,4.1,b'4.1-ngram.next_system_utterance__include program',41.4791,727,0.0000,1494
+13233,5,b'5-phrase_feature__noun_phrases__current_user_utterance__event',41.9590,535,0.0000,1495
+26089,5,b'5-phrase_feature__noun_phrases__next_user_utterance__pizza',28.6154,893,0.0000,1496
+12706,5,b'5-phrase_feature__noun_phrases__current_user_utterance__championship_game',25.1774,1008,0.0000,1497
+14995,5,b'5-phrase_feature__noun_phrases__current_user_utterance__room_lights',19.5850,1421,0.0000,1498
+23330,5,b'5-phrase_feature__noun_phrases__next_system_utterance__trivia_sports',41.9590,278,0.0000,1499
+17636,5,b'5-phrase_feature__noun_phrases__next_system_utterance__crazy_janie',41.9590,300,0.0000,1500
+21252,5,b'5-phrase_feature__noun_phrases__next_system_utterance__paw_patrol',18.1670,1484,0.0000,1501
+27953,6,b'6-entity_feature__entity__current_user_utterance__three_NUMBER',13.9324,1953,0.0000,1502
+27337,6,b'6-entity_feature__entity__current_user_utterance__93_NUMBER',41.9590,359,0.0000,1503
+25928,5,b'5-phrase_feature__noun_phrases__next_user_utterance__npr',23.4252,1126,0.0000,1504
+26307,5,b'5-phrase_feature__noun_phrases__next_user_utterance__roberts',41.9590,457,0.0000,1505
+17133,5,b'5-phrase_feature__noun_phrases__next_system_utterance__cast',16.6392,1673,0.0000,1506
+6141,4.1,b'4.1-ngram.next_system_utterance__include program like',41.4791,725,0.0000,1507
+26253,5,b'5-phrase_feature__noun_phrases__next_user_utterance__region',13.9324,1955,0.0000,1508
+13559,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hair',15.6168,1829,0.0000,1509
+2388,4.1,b'4.1-ngram.current_user_utterance__stranger things',16.5219,1679,0.0000,1510
+32583,7,b'7-syntactic_feature__root_word__next_system_utterance__ah',31.2336,861,0.0000,1511
+25967,5,b'5-phrase_feature__noun_phrases__next_user_utterance__open_glee',41.9590,480,0.0000,1512
+8319,4.1,b'4.1-ngram.next_system_utterance__set reminders',21.2959,1214,0.0000,1513
+9476,4.1,b'4.1-ngram.next_system_utterance__use assistant settings',20.9345,1237,0.0000,1514
+21381,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pinball_wizard',17.3866,1546,0.0000,1515
+20030,5,b'5-phrase_feature__noun_phrases__next_system_utterance__learning',157.3596,36,0.0000,1516
+25318,5,b'5-phrase_feature__noun_phrases__next_user_utterance__hulu',20.1402,1302,0.0000,1517
+2387,4.1,b'4.1-ngram.current_user_utterance__stranger',16.5219,1678,0.0000,1518
+12041,4.1,b'4.1-ngram.next_user_utterance__video heathens',13.7154,1984,0.0000,1519
+32391,7,b'7-syntactic_feature__root_word__current_user_utterance__thirsti',41.9590,603,0.0000,1520
+2490,4.1,b'4.1-ngram.current_user_utterance__things',16.5219,1680,0.0000,1521
+9475,4.1,b'4.1-ngram.next_system_utterance__use assistant',20.9345,1239,0.0000,1522
+27455,6,b'6-entity_feature__entity__current_user_utterance__cavs_ORGANIZATION',15.9359,1727,0.0000,1523
+18311,5,b'5-phrase_feature__noun_phrases__next_system_utterance__example',178.1834,33,0.0000,1524
+10035,4.1,b'4.1-ngram.next_user_utterance__actually netflix',14.9522,1864,0.0000,1525
+24978,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fire',20.7626,1251,0.0000,1526
+20142,5,b'5-phrase_feature__noun_phrases__next_system_utterance__list',25.9161,968,0.0000,1527
+26752,5,b'5-phrase_feature__noun_phrases__next_user_utterance__things',41.6375,717,0.0000,1528
+15720,5,b'5-phrase_feature__noun_phrases__current_user_utterance__victory',41.9590,335,0.0000,1529
+12161,4.1,b'4.1-ngram.next_user_utterance__zach',13.9033,1967,0.0000,1530
+20231,5,b'5-phrase_feature__noun_phrases__next_system_utterance__lucky_trivia',20.1402,1365,0.0000,1531
+16464,5,b'5-phrase_feature__noun_phrases__next_system_utterance__asian',41.9590,348,0.0000,1532
+14110,5,b'5-phrase_feature__noun_phrases__current_user_utterance__majestic_victory',41.9590,702,0.0000,1533
+25893,5,b'5-phrase_feature__noun_phrases__next_user_utterance__next_few_hours',41.9590,408,0.0000,1534
+34835,7,b'7-syntactic_feature__subj_word__next_user_utterance__mountain',22.8381,1149,0.0000,1535
+27794,6,b'6-entity_feature__entity__current_user_utterance__netflix_ORGANIZATION',55.4496,177,0.0000,1536
+5161,4.1,b'4.1-ngram.next_system_utterance__email address',14.1334,1938,0.0000,1537
+6274,4.1,b'4.1-ngram.next_system_utterance__just open google',22.6487,1158,0.0000,1538
+27474,6,b'6-entity_feature__entity__current_user_utterance__chromecast_PERSON',21.3204,1204,0.0000,1539
+11090,4.1,b'4.1-ngram.next_user_utterance__open fuller house',16.2830,1692,0.0000,1540
+30598,6,b'6-entity_feature__entity__next_user_utterance__tuesday_DATE',16.7849,1646,0.0000,1541
+15402,5,b'5-phrase_feature__noun_phrases__current_user_utterance__subscription',20.1402,1377,0.0000,1542
+14220,5,b'5-phrase_feature__noun_phrases__current_user_utterance__messages',41.9590,649,0.0000,1543
+15940,5,b'5-phrase_feature__noun_phrases__current_user_utterance__youtube',37.6507,759,0.0000,1544
+33050,7,b'7-syntactic_feature__root_word__next_system_utterance__ok',31.6110,840,0.0000,1545
+26767,5,b'5-phrase_feature__noun_phrases__next_user_utterance__timer',27.1386,921,0.0000,1546
+24736,5,b'5-phrase_feature__noun_phrases__next_user_utterance__day_school',41.9590,478,0.0000,1547
+1036,4.1,b'4.1-ngram.current_user_utterance__hulu',19.2290,1446,0.0000,1548
+10890,4.1,b'4.1-ngram.next_user_utterance__love actually chromecast',13.3266,2012,0.0000,1549
+10891,4.1,b'4.1-ngram.next_user_utterance__love actually netflix',14.9522,1865,0.0000,1550
+12194,5,b'5-phrase_feature__noun_phrases__current_user_utterance__account',41.9590,511,0.0000,1551
+18477,5,b'5-phrase_feature__noun_phrases__next_system_utterance__few_drops',41.9590,459,0.0000,1552
+34906,7,b'7-syntactic_feature__subj_word__next_user_utterance__soundtrack',41.9590,590,0.0000,1553
+11089,4.1,b'4.1-ngram.next_user_utterance__open fuller',16.2830,1694,0.0000,1554
+3888,4.1,b'4.1-ngram.next_system_utterance__assistant settings google',20.9345,1229,0.0000,1555
+20232,5,b'5-phrase_feature__noun_phrases__next_system_utterance__lucky_trivia_sports',41.9590,393,0.0000,1556
+27535,6,b'6-entity_feature__entity__current_user_utterance__eastern_MISC',83.9180,87,0.0000,1557
+29369,6,b'6-entity_feature__entity__next_system_utterance__marshall_PERSON',41.9590,660,0.0000,1558
+30946,7,b'7-syntactic_feature__obj_word__current_user_utterance__network',41.9590,550,0.0000,1559
+28020,6,b'6-entity_feature__entity__current_user_utterance__youtube_ORGANIZATION',34.8320,790,0.0000,1560
+24626,5,b'5-phrase_feature__noun_phrases__next_user_utterance__computer',83.9180,108,0.0000,1561
+22542,5,b'5-phrase_feature__noun_phrases__next_system_utterance__song_pinball',17.3866,1552,0.0000,1562
+30499,6,b'6-entity_feature__entity__next_user_utterance__plata_ORGANIZATION',20.1402,1301,0.0000,1563
+16780,5,b'5-phrase_feature__noun_phrases__next_system_utterance__block_tour',41.9590,269,0.0000,1564
+26274,5,b'5-phrase_feature__noun_phrases__next_user_utterance__review_tech',16.1295,1714,0.0000,1565
+746,4.1,b'4.1-ngram.current_user_utterance__email',27.5032,911,0.0000,1566
+7879,4.1,b'4.1-ngram.next_system_utterance__program like watch',41.4791,724,0.0000,1567
+23331,5,b'5-phrase_feature__noun_phrases__next_system_utterance__trolls',41.9590,275,0.0000,1568
+3563,4.1,b'4.1-ngram.next_system_utterance__actually remove items',20.9345,1219,0.0000,1569
+29152,6,b'6-entity_feature__entity__next_system_utterance__google_ORGANIZATION',34.0992,800,0.0000,1570
+20087,5,b'5-phrase_feature__noun_phrases__next_system_utterance__library',100.3802,71,0.0000,1571
+17430,5,b'5-phrase_feature__noun_phrases__next_system_utterance__cocktail_recipes',41.9590,306,0.0000,1572
+20395,5,b'5-phrase_feature__noun_phrases__next_system_utterance__matthew',41.9590,499,0.0000,1573
+4846,4.1,b'4.1-ngram.next_system_utterance__david answer',19.3358,1444,0.0000,1574
+32358,7,b'7-syntactic_feature__root_word__current_user_utterance__song',18.3701,1473,0.0000,1575
+28692,6,b'6-entity_feature__entity__next_system_utterance__93_NUMBER',20.1402,1390,0.0000,1576
+27698,6,b'6-entity_feature__entity__current_user_utterance__kevin smith_PERSON',13.9324,1963,0.0000,1577
+11320,4.1,b'4.1-ngram.next_user_utterance__play tunein',34.9431,787,0.0000,1578
+31696,7,b'7-syntactic_feature__obj_word__next_user_utterance__episod',16.7849,1572,0.0000,1579
+15076,5,b'5-phrase_feature__noun_phrases__current_user_utterance__season',16.1493,1708,0.0000,1580
+20265,5,b'5-phrase_feature__noun_phrases__next_system_utterance__madlibs',41.9590,390,0.0000,1581
+12405,5,b'5-phrase_feature__noun_phrases__current_user_utterance__beatnuts_hellraiser',15.6168,1811,0.0000,1582
+14084,5,b'5-phrase_feature__noun_phrases__current_user_utterance__luciano',41.9590,699,0.0000,1583
+27359,6,b'6-entity_feature__entity__current_user_utterance__adele_PERSON',24.1757,1048,0.0000,1584
+4660,4.1,b'4.1-ngram.next_system_utterance__congressman',23.8424,1101,0.0000,1585
+27694,6,b'6-entity_feature__entity__current_user_utterance__katy perry roar_PERSON',41.9590,321,0.0000,1586
+13240,5,b'5-phrase_feature__noun_phrases__current_user_utterance__expedition',41.9590,625,0.0000,1587
+31022,7,b'7-syntactic_feature__obj_word__current_user_utterance__roar',41.9590,554,0.0000,1588
+24963,5,b'5-phrase_feature__noun_phrases__next_user_utterance__few_hours',41.9590,409,0.0000,1589
+26191,5,b'5-phrase_feature__noun_phrases__next_user_utterance__pulp',41.9590,441,0.0000,1590
+34433,7,b'7-syntactic_feature__subj_word__next_system_utterance__i',1931.1082,0,0.0000,1591
+21,2.1,b'2.1-user_action_words.current_user_utterance__remov',92.9882,77,0.0000,1592
+10508,4.1,b'4.1-ngram.next_user_utterance__fish',18.8049,1460,0.0000,1593
+30901,7,b'7-syntactic_feature__obj_word__current_user_utterance__list',18.3343,1474,0.0000,1594
+30656,7,b'7-syntactic_feature__obj_word__current_user_utterance__address',41.9590,713,0.0000,1595
+19684,5,b'5-phrase_feature__noun_phrases__next_system_utterance__isley',41.9590,475,0.0000,1596
+24263,5,b'5-phrase_feature__noun_phrases__next_user_utterance__bedroom',14.3617,1921,0.0000,1597
+15177,5,b'5-phrase_feature__noun_phrases__current_user_utterance__shows',20.1402,1368,0.0000,1598
+24921,5,b'5-phrase_feature__noun_phrases__next_user_utterance__experience_kevin_smith',41.9624,266,0.0000,1599
+29177,6,b'6-entity_feature__entity__next_system_utterance__henry_PERSON',41.9590,671,0.0000,1600
+11713,4.1,b'4.1-ngram.next_user_utterance__stranger things',24.9495,1031,0.0000,1601
+15536,5,b'5-phrase_feature__noun_phrases__current_user_utterance__titled_divide',41.9590,694,0.0000,1602
+6820,4.1,b'4.1-ngram.next_system_utterance__manage',20.9345,1242,0.0000,1603
+15404,5,b'5-phrase_feature__noun_phrases__current_user_utterance__subscription_ship_work',41.9590,636,0.0000,1604
+25473,5,b'5-phrase_feature__noun_phrases__next_user_utterance__lamp',15.1119,1851,0.0000,1605
+20864,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nexus_player',21.5924,1195,0.0000,1606
+14269,5,b'5-phrase_feature__noun_phrases__current_user_utterance__mobil',41.9590,627,0.0000,1607
+7878,4.1,b'4.1-ngram.next_system_utterance__program like',41.4791,728,0.0000,1608
+23357,5,b'5-phrase_feature__noun_phrases__next_system_utterance__tv',17.8042,1507,0.0000,1609
+31974,7,b'7-syntactic_feature__obj_word__next_user_utterance__video',25.3403,978,0.0000,1610
+8371,4.1,b'4.1-ngram.next_system_utterance__settings google',20.9345,1225,0.0000,1611
+7458,4.1,b'4.1-ngram.next_system_utterance__open google',22.6487,1157,0.0000,1612
+30734,7,b'7-syntactic_feature__obj_word__current_user_utterance__chirp',41.9590,564,0.0000,1613
+26515,5,b'5-phrase_feature__noun_phrases__next_user_utterance__smith',31.2609,844,0.0000,1614
+13587,5,b'5-phrase_feature__noun_phrases__current_user_utterance__happy_holidays',41.9590,711,0.0000,1615
+13208,5,b'5-phrase_feature__noun_phrases__current_user_utterance__entire_expedition',41.9590,537,0.0000,1616
+21896,5,b'5-phrase_feature__noun_phrases__next_system_utterance__reminders',51.2313,202,0.0000,1617
+8563,4.1,b'4.1-ngram.next_system_utterance__sorry couldn relevant',14.0027,1946,0.0000,1618
+31701,7,b'7-syntactic_feature__obj_word__next_user_utterance__extinguish',16.7849,1573,0.0000,1619
+34270,7,b'7-syntactic_feature__subj_word__next_system_utterance__alright',44.0578,253,0.0000,1620
+13113,5,b'5-phrase_feature__noun_phrases__current_user_utterance__downstairs_bathroom',23.8837,1075,0.0000,1621
+7459,4.1,b'4.1-ngram.next_system_utterance__open google home',22.6487,1156,0.0000,1622
+20820,5,b'5-phrase_feature__noun_phrases__next_system_utterance__network_time_zone',83.9180,89,0.0000,1623
+13196,5,b'5-phrase_feature__noun_phrases__current_user_utterance__elvis',23.4252,1134,0.0000,1624
+31875,7,b'7-syntactic_feature__obj_word__next_user_utterance__region',16.7849,1600,0.0000,1625
+13522,5,b'5-phrase_feature__noun_phrases__current_user_utterance__great',23.4252,1136,0.0000,1626
+11891,4.1,b'4.1-ngram.next_user_utterance__tunein station',34.9431,786,0.0000,1627
+2016,4.1,b'4.1-ngram.current_user_utterance__red light',56.9956,173,0.0000,1628
+9659,4.1,b'4.1-ngram.next_system_utterance__wblx tunein',26.8266,928,0.0000,1629
+14335,5,b'5-phrase_feature__noun_phrases__current_user_utterance__much_time',20.1455,1269,0.0000,1630
+24947,5,b'5-phrase_feature__noun_phrases__next_user_utterance__favorite_color',20.1402,1321,0.0000,1631
+32252,7,b'7-syntactic_feature__root_word__current_user_utterance__next',23.4252,1118,0.0000,1632
+30245,6,b'6-entity_feature__entity__next_user_utterance__debbie reynolds_PERSON',20.1402,1291,0.0000,1633
+29273,6,b'6-entity_feature__entity__next_system_utterance__jun 13_DATE',15.6168,1757,0.0000,1634
+15370,5,b'5-phrase_feature__noun_phrases__current_user_utterance__stopwatch',23.8837,1084,0.0000,1635
+16165,5,b'5-phrase_feature__noun_phrases__next_system_utterance__address',39.2449,742,0.0000,1636
+29151,6,b'6-entity_feature__entity__next_system_utterance__google home_ORGANIZATION',71.3923,132,0.0000,1637
+33499,7,b'7-syntactic_feature__root_word__next_user_utterance__direct',41.9590,624,0.0000,1638
+15019,5,b'5-phrase_feature__noun_phrases__current_user_utterance__rye',41.9590,663,0.0000,1639
+20819,5,b'5-phrase_feature__noun_phrases__next_system_utterance__network_time',83.9180,103,0.0000,1640
+14370,5,b'5-phrase_feature__noun_phrases__current_user_utterance__national_championship_game',25.1774,1000,0.0000,1641
+6273,4.1,b'4.1-ngram.next_system_utterance__just open',22.6487,1155,0.0000,1642
+4936,4.1,b'4.1-ngram.next_system_utterance__device use try',26.6089,933,0.0000,1643
+15736,5,b'5-phrase_feature__noun_phrases__current_user_utterance__violent_fights',41.9590,333,0.0000,1644
+14077,5,b'5-phrase_feature__noun_phrases__current_user_utterance__love',110.0250,62,0.0000,1645
+29589,6,b'6-entity_feature__entity__next_system_utterance__right now_DATE',44.4310,250,0.0000,1646
+1037,4.1,b'4.1-ngram.current_user_utterance__hulu tv',19.2290,1447,0.0000,1647
+18911,5,b'5-phrase_feature__noun_phrases__next_system_utterance__grapefruit_juice',41.9590,495,0.0000,1648
+21895,5,b'5-phrase_feature__noun_phrases__next_system_utterance__reminder',23.8837,1092,0.0000,1649
+30381,6,b'6-entity_feature__entity__next_user_utterance__kevin smith_PERSON',41.9624,259,0.0000,1650
+25560,5,b'5-phrase_feature__noun_phrases__next_user_utterance__little_esther',14.8910,1877,0.0000,1651
+4732,4.1,b'4.1-ngram.next_system_utterance__craig david',19.3358,1441,0.0000,1652
+34613,7,b'7-syntactic_feature__subj_word__next_system_utterance__time',26.4095,946,0.0000,1653
+31809,7,b'7-syntactic_feature__obj_word__next_user_utterance__mojito',41.9590,525,0.0000,1654
+17670,5,b'5-phrase_feature__noun_phrases__next_system_utterance__crystal',20.1402,1305,0.0000,1655
+30663,7,b'7-syntactic_feature__obj_word__current_user_utterance__altern',25.1774,1013,0.0000,1656
+28790,6,b'6-entity_feature__entity__next_system_utterance__asian slaw_MISC',41.9590,644,0.0000,1657
+24741,5,b'5-phrase_feature__noun_phrases__next_user_utterance__debbie',20.1402,1287,0.0000,1658
+3873,4.1,b'4.1-ngram.next_system_utterance__ask video',71.4934,130,0.0000,1659
+9976,4.1,b'4.1-ngram.next_user_utterance__18',16.8422,1567,0.0000,1660
+31274,7,b'7-syntactic_feature__obj_word__next_system_utterance__email',41.9590,504,0.0000,1661
+24256,5,b'5-phrase_feature__noun_phrases__next_user_utterance__beatnuts',15.6168,1769,0.0000,1662
+27616,6,b'6-entity_feature__entity__current_user_utterance__google_ORGANIZATION',36.5159,770,0.0000,1663
+17718,5,b'5-phrase_feature__noun_phrases__next_system_utterance__current_time_zone',83.9180,102,0.0000,1664
+12247,5,b'5-phrase_feature__noun_phrases__current_user_utterance__alexa',23.4252,1131,0.0000,1665
+29778,6,b'6-entity_feature__entity__next_system_utterance__today_DATE',34.9378,788,0.0000,1666
+2084,4.1,b'4.1-ngram.current_user_utterance__room tv',17.4191,1542,0.0000,1667
+14369,5,b'5-phrase_feature__noun_phrases__current_user_utterance__national_championship',25.1774,1003,0.0000,1668
+30134,6,b'6-entity_feature__entity__next_user_utterance__amazon_ORGANIZATION',15.6168,1767,0.0000,1669
+32807,7,b'7-syntactic_feature__root_word__next_system_utterance__expect',15.0248,1858,0.0000,1670
+14427,5,b'5-phrase_feature__noun_phrases__current_user_utterance__new_year',19.8473,1418,0.0000,1671
+15656,5,b'5-phrase_feature__noun_phrases__current_user_utterance__una',41.9590,378,0.0000,1672
+27725,6,b'6-entity_feature__entity__current_user_utterance__lomo_PERSON',41.9590,322,0.0000,1673
+6588,4.1,b'4.1-ngram.next_system_utterance__list use assistant',20.9345,1241,0.0000,1674
+14441,5,b'5-phrase_feature__noun_phrases__current_user_utterance__next_gilmore',16.7849,1636,0.0000,1675
+17992,5,b'5-phrase_feature__noun_phrases__next_system_utterance__divide',41.9590,289,0.0000,1676
+11712,4.1,b'4.1-ngram.next_user_utterance__stranger',24.9495,1030,0.0000,1677
+18165,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ed_sheeran',20.1402,1303,0.0000,1678
+29352,6,b'6-entity_feature__entity__next_system_utterance__maggiano luciano_ORGANIZATION',41.9590,662,0.0000,1679
+12343,5,b'5-phrase_feature__noun_phrases__current_user_utterance__baby_einstein',20.1402,1328,0.0000,1680
+26229,5,b'5-phrase_feature__noun_phrases__next_user_utterance__ranalli',41.9590,447,0.0000,1681
+2121,4.1,b'4.1-ngram.current_user_utterance__scored',13.4988,1998,0.0000,1682
+12492,5,b'5-phrase_feature__noun_phrases__current_user_utterance__blu-ray_region_b',16.7849,1625,0.0000,1683
+11436,4.1,b'4.1-ngram.next_user_utterance__right lamp',17.5093,1519,0.0000,1684
+15412,5,b'5-phrase_feature__noun_phrases__current_user_utterance__summer',20.1402,1381,0.0000,1685
+15497,5,b'5-phrase_feature__noun_phrases__current_user_utterance__text_messages',41.9590,651,0.0000,1686
+18887,5,b'5-phrase_feature__noun_phrases__next_system_utterance__google_play',26.4560,944,0.0000,1687
+25523,5,b'5-phrase_feature__noun_phrases__next_user_utterance__level',16.1676,1704,0.0000,1688
+32734,7,b'7-syntactic_feature__root_word__next_system_utterance__continu',41.9590,608,0.0000,1689
+28688,6,b'6-entity_feature__entity__next_system_utterance__90_NUMBER',13.1318,2027,0.0000,1690
+31286,7,b'7-syntactic_feature__obj_word__next_system_utterance__fifteen',15.6168,1828,0.0000,1691
+23372,5,b'5-phrase_feature__noun_phrases__next_system_utterance__twists',13.0816,2032,0.0000,1692
+17656,5,b'5-phrase_feature__noun_phrases__next_system_utterance__crows',20.1402,1398,0.0000,1693
+26593,5,b'5-phrase_feature__noun_phrases__next_user_utterance__sremmurd',16.7849,1642,0.0000,1694
+4272,4.1,b'4.1-ngram.next_system_utterance__cast app',20.9345,1232,0.0000,1695
+23415,5,b'5-phrase_feature__noun_phrases__next_system_utterance__una',41.9590,364,0.0000,1696
+34855,7,b'7-syntactic_feature__subj_word__next_user_utterance__orang',41.4915,719,0.0000,1697
+18074,5,b'5-phrase_feature__noun_phrases__next_system_utterance__dreaming_isley',41.9590,287,0.0000,1698
+19626,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ingredients',20.1402,1338,0.0000,1699
+12984,5,b'5-phrase_feature__noun_phrases__current_user_utterance__dark_knight',16.7849,1626,0.0000,1700
+11890,4.1,b'4.1-ngram.next_user_utterance__tunein',29.9095,875,0.0000,1701
+17951,5,b'5-phrase_feature__noun_phrases__next_system_utterance__directions',31.7459,835,0.0000,1702
+10445,4.1,b'4.1-ngram.next_user_utterance__eastern',83.9180,91,0.0000,1703
+12914,5,b'5-phrase_feature__noun_phrases__current_user_utterance__country_day',41.9590,553,0.0000,1704
+4733,4.1,b'4.1-ngram.next_system_utterance__craig david answer',19.3358,1443,0.0000,1705
+34420,7,b'7-syntactic_feature__subj_word__next_system_utterance__hmmm',16.7849,1575,0.0000,1706
+13847,5,b'5-phrase_feature__noun_phrases__current_user_utterance__karma_police',41.9590,693,0.0000,1707
+2031,4.1,b'4.1-ngram.current_user_utterance__remove eggs',33.0394,816,0.0000,1708
+32342,7,b'7-syntactic_feature__root_word__current_user_utterance__show',16.8389,1568,0.0000,1709
+30252,6,b'6-entity_feature__entity__next_user_utterance__devon_PERSON',41.9590,648,0.0000,1710
+27593,6,b'6-entity_feature__entity__current_user_utterance__frozen_PERSON',41.9590,343,0.0000,1711
+15020,5,b'5-phrase_feature__noun_phrases__current_user_utterance__rye_country',41.9590,665,0.0000,1712
+28098,6,b'6-entity_feature__entity__next_system_utterance__100 percent_PERCENT',28.9657,889,0.0000,1713
+29041,6,b'6-entity_feature__entity__next_system_utterance__ed sheeran_PERSON',20.1402,1372,0.0000,1714
+18599,5,b'5-phrase_feature__noun_phrases__next_system_utterance__food_network_agent',15.6168,1830,0.0000,1715
+22530,5,b'5-phrase_feature__noun_phrases__next_system_utterance__song_abc',41.9590,401,0.0000,1716
+28690,6,b'6-entity_feature__entity__next_system_utterance__92.9_NUMBER',41.9590,712,0.0000,1717
+19190,5,b'5-phrase_feature__noun_phrases__next_system_utterance__home_control',151.7848,37,0.0000,1718
+18910,5,b'5-phrase_feature__noun_phrases__next_system_utterance__grapefruit',41.9590,497,0.0000,1719
+18602,5,b'5-phrase_feature__noun_phrases__next_system_utterance__food_network_time',83.9180,98,0.0000,1720
+31142,7,b'7-syntactic_feature__obj_word__current_user_utterance__vr',15.6168,1790,0.0000,1721
+2588,4.1,b'4.1-ngram.current_user_utterance__trending youtube',17.6690,1515,0.0000,1722
+24651,5,b'5-phrase_feature__noun_phrases__next_user_utterance__counting',20.1402,1394,0.0000,1723
+12913,5,b'5-phrase_feature__noun_phrases__current_user_utterance__country',13.0816,2044,0.0000,1724
+33770,7,b'7-syntactic_feature__root_word__next_user_utterance__sour',41.9590,572,0.0000,1725
+24195,5,b'5-phrase_feature__noun_phrases__next_user_utterance__audio',25.3202,980,0.0000,1726
+27344,6,b'6-entity_feature__entity__current_user_utterance__9:05 a.m._TIME',41.9590,360,0.0000,1727
+17720,5,b'5-phrase_feature__noun_phrases__next_system_utterance__curve_lamp',20.5749,1261,0.0000,1728
+18086,5,b'5-phrase_feature__noun_phrases__next_system_utterance__drops',41.9590,467,0.0000,1729
+14580,5,b'5-phrase_feature__noun_phrases__current_user_utterance__panda_video',41.9590,676,0.0000,1730
+25589,5,b'5-phrase_feature__noun_phrases__next_user_utterance__london_england',41.9590,379,0.0000,1731
+25910,5,b'5-phrase_feature__noun_phrases__next_user_utterance__nexus_player',44.7194,248,0.0000,1732
+19659,5,b'5-phrase_feature__noun_phrases__next_system_utterance__internet',23.5039,1114,0.0000,1733
+22570,5,b'5-phrase_feature__noun_phrases__next_system_utterance__soundtrack_justin',41.9590,483,0.0000,1734
+31275,7,b'7-syntactic_feature__obj_word__next_system_utterance__espn',16.7849,1664,0.0000,1735
+28587,6,b'6-entity_feature__entity__next_system_utterance__6_NUMBER',13.1168,2028,0.0000,1736
+30473,6,b'6-entity_feature__entity__next_user_utterance__npr_ORGANIZATION',23.4252,1117,0.0000,1737
+22971,5,b'5-phrase_feature__noun_phrases__next_system_utterance__team',28.8601,891,0.0000,1738
+19823,5,b'5-phrase_feature__noun_phrases__next_system_utterance__jun',15.6168,1798,0.0000,1739
+29,2.1,b'2.1-user_action_words.current_user_utterance__south',16.1493,1710,0.0000,1740
+22546,5,b'5-phrase_feature__noun_phrases__next_system_utterance__song_roar',41.9590,476,0.0000,1741
+29828,6,b'6-entity_feature__entity__next_system_utterance__una vita_ORGANIZATION',41.9590,673,0.0000,1742
+22551,5,b'5-phrase_feature__noun_phrases__next_system_utterance__song_work',41.9590,482,0.0000,1743
+16485,5,b'5-phrase_feature__noun_phrases__next_system_utterance__assistant_settings',95.0059,75,0.0000,1744
+12630,5,b'5-phrase_feature__noun_phrases__current_user_utterance__called_quest',20.1402,1397,0.0000,1745
+22543,5,b'5-phrase_feature__noun_phrases__next_system_utterance__song_pinball_wizard',17.3866,1553,0.0000,1746
+12928,5,b'5-phrase_feature__noun_phrases__current_user_utterance__crown',22.7424,1152,0.0000,1747
+31750,7,b'7-syntactic_feature__obj_word__next_user_utterance__hero',20.1402,1364,0.0000,1748
+33236,7,b'7-syntactic_feature__root_word__next_system_utterance__spin',41.9590,616,0.0000,1749
+13895,5,b'5-phrase_feature__noun_phrases__current_user_utterance__knight',16.7849,1605,0.0000,1750
+2032,4.1,b'4.1-ngram.current_user_utterance__remove eggs shopping',33.0394,815,0.0000,1751
+25879,5,b'5-phrase_feature__noun_phrases__next_user_utterance__new_star',41.9590,405,0.0000,1752
+3819,4.1,b'4.1-ngram.next_system_utterance__app directly google',20.9345,1227,0.0000,1753
+21418,5,b'5-phrase_feature__noun_phrases__next_system_utterance__play',26.9901,922,0.0000,1754
+20928,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nothing',14.8552,1881,0.0000,1755
+33154,7,b'7-syntactic_feature__root_word__next_system_utterance__remov',74.4690,122,0.0000,1756
+18077,5,b'5-phrase_feature__noun_phrases__next_system_utterance__drink',54.7192,184,0.0000,1757
+4731,4.1,b'4.1-ngram.next_system_utterance__craig',19.3358,1439,0.0000,1758
+15004,5,b'5-phrase_feature__noun_phrases__current_user_utterance__room_tv',34.6034,794,0.0000,1759
+24673,5,b'5-phrase_feature__noun_phrases__next_user_utterance__crown',19.3904,1431,0.0000,1760
+29516,6,b'6-entity_feature__entity__next_system_utterance__one hundred twelve_NUMBER',15.6168,1778,0.0000,1761
+22774,5,b'5-phrase_feature__noun_phrases__next_system_utterance__stories',20.1402,1393,0.0000,1762
+26006,5,b'5-phrase_feature__noun_phrases__next_user_utterance__papa_john',25.1774,1011,0.0000,1763
+34345,7,b'7-syntactic_feature__subj_word__next_system_utterance__contessa',15.6168,1816,0.0000,1764
+13850,5,b'5-phrase_feature__noun_phrases__current_user_utterance__katy',20.1402,1307,0.0000,1765
+12966,5,b'5-phrase_feature__noun_phrases__current_user_utterance__curved_light',25.1774,1006,0.0000,1766
+26251,5,b'5-phrase_feature__noun_phrases__next_user_utterance__red_light',20.1402,1319,0.0000,1767
+13129,5,b'5-phrase_feature__noun_phrases__current_user_utterance__drug',15.6168,1805,0.0000,1768
+26311,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rogan_experience',41.9624,262,0.0000,1769
+21291,5,b'5-phrase_feature__noun_phrases__next_system_utterance__percent',77.1256,116,0.0000,1770
+6532,4.1,b'4.1-ngram.next_system_utterance__like know',19.3358,1438,0.0000,1771
+30684,7,b'7-syntactic_feature__obj_word__current_user_utterance__baymax',41.9590,704,0.0000,1772
+34039,7,b'7-syntactic_feature__subj_word__current_user_utterance__it',13.0955,2029,0.0000,1773
+17135,5,b'5-phrase_feature__noun_phrases__next_system_utterance__cast_device',21.3013,1210,0.0000,1774
+2848,4.1,b'4.1-ngram.current_user_utterance__wblx',35.0142,784,0.0000,1775
+9660,4.1,b'4.1-ngram.next_system_utterance__wblx tunein isn',26.8266,927,0.0000,1776
+22999,5,b'5-phrase_feature__noun_phrases__next_system_utterance__temperature',16.3136,1689,0.0000,1777
+24491,5,b'5-phrase_feature__noun_phrases__next_user_utterance__championship',33.5699,804,0.0000,1778
+17258,5,b'5-phrase_feature__noun_phrases__next_system_utterance__chicken_recipes',15.6168,1749,0.0000,1779
+33141,7,b'7-syntactic_feature__root_word__next_system_utterance__recogn',28.1303,901,0.0000,1780
+26096,5,b'5-phrase_feature__noun_phrases__next_user_utterance__plata',20.1402,1383,0.0000,1781
+3805,4.1,b'4.1-ngram.next_system_utterance__answer questions things',19.3358,1437,0.0000,1782
+9658,4.1,b'4.1-ngram.next_system_utterance__wblx',26.8266,926,0.0000,1783
+25789,5,b'5-phrase_feature__noun_phrases__next_user_utterance__movie',36.1701,774,0.0000,1784
+13166,5,b'5-phrase_feature__noun_phrases__current_user_utterance__eggs',15.1251,1849,0.0000,1785
+26355,5,b'5-phrase_feature__noun_phrases__next_user_utterance__samsung_tv',16.7849,1622,0.0000,1786
+18884,5,b'5-phrase_feature__noun_phrases__next_system_utterance__google_home_app',62.9619,150,0.0000,1787
+14586,5,b'5-phrase_feature__noun_phrases__current_user_utterance__papa',13.9324,1954,0.0000,1788
+16205,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ah',31.2336,859,0.0000,1789
+13299,5,b'5-phrase_feature__noun_phrases__current_user_utterance__fights',41.9590,706,0.0000,1790
+13962,5,b'5-phrase_feature__noun_phrases__current_user_utterance__left_lamp',47.6859,237,0.0000,1791
+16166,5,b'5-phrase_feature__noun_phrases__next_system_utterance__address_jack',41.9590,346,0.0000,1792
+18874,5,b'5-phrase_feature__noun_phrases__next_system_utterance__google',29.7552,878,0.0000,1793
+30200,6,b'6-entity_feature__entity__next_user_utterance__cavs_ORGANIZATION',19.3904,1434,0.0000,1794
+32123,7,b'7-syntactic_feature__root_word__current_user_utterance__door',18.1670,1479,0.0000,1795
+26354,5,b'5-phrase_feature__noun_phrases__next_user_utterance__samsung',41.9624,267,0.0000,1796
+1044,4.1,b'4.1-ngram.current_user_utterance__iheartradio',17.4287,1541,0.0000,1797
+18621,5,b'5-phrase_feature__noun_phrases__next_system_utterance__forecasted_high',21.8608,1190,0.0000,1798
+21759,5,b'5-phrase_feature__noun_phrases__next_system_utterance__questions',37.1455,763,0.0000,1799
+32605,7,b'7-syntactic_feature__root_word__next_system_utterance__answer',57.4095,167,0.0000,1800
+20484,5,b'5-phrase_feature__noun_phrases__next_system_utterance__messages',29.5924,879,0.0000,1801
+33635,7,b'7-syntactic_feature__root_word__next_user_utterance__mile',16.7849,1597,0.0000,1802
+30916,7,b'7-syntactic_feature__obj_word__current_user_utterance__me',26.8299,925,0.0000,1803
+16407,5,b'5-phrase_feature__noun_phrases__next_system_utterance__app',79.1270,115,0.0000,1804
+8033,4.1,b'4.1-ngram.next_system_utterance__relevant',14.0027,1944,0.0000,1805
+27661,6,b'6-entity_feature__entity__current_user_utterance__isley_PERSON',20.1402,1332,0.0000,1806
+24538,5,b'5-phrase_feature__noun_phrases__next_user_utterance__chore_list',41.9590,460,0.0000,1807
+17719,5,b'5-phrase_feature__noun_phrases__next_system_utterance__curve',20.5749,1260,0.0000,1808
+33561,7,b'7-syntactic_feature__root_word__next_user_utterance__habitat',41.9590,566,0.0000,1809
+20705,5,b'5-phrase_feature__noun_phrases__next_system_utterance__music_provider',41.9590,425,0.0000,1810
+14917,5,b'5-phrase_feature__noun_phrases__current_user_utterance__region',25.3202,981,0.0000,1811
+18675,5,b'5-phrase_feature__noun_phrases__next_system_utterance__fried',41.9590,452,0.0000,1812
+22664,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sprite_soda',41.9590,453,0.0000,1813
+9935,2.1,b'2.1-user_action_words.next_user_utterance__share',41.9590,526,0.0000,1814
+17234,5,b'5-phrase_feature__noun_phrases__next_system_utterance__chefs',15.6168,1748,0.0000,1815
+22103,5,b'5-phrase_feature__noun_phrases__next_system_utterance__rye_country_day',20.1402,1296,0.0000,1816
+13282,5,b'5-phrase_feature__noun_phrases__current_user_utterance__fedex',20.1402,1312,0.0000,1817
+13889,5,b'5-phrase_feature__noun_phrases__current_user_utterance__kitchen_tv',15.6168,1807,0.0000,1818
+32884,7,b'7-syntactic_feature__root_word__next_system_utterance__hi',13.0816,2042,0.0000,1819
+14979,5,b'5-phrase_feature__noun_phrases__current_user_utterance__rogan',25.9209,962,0.0000,1820
+25966,5,b'5-phrase_feature__noun_phrases__next_user_utterance__open_fuller_house',24.1757,1044,0.0000,1821
+15722,5,b'5-phrase_feature__noun_phrases__current_user_utterance__video',30.3348,871,0.0000,1822
+18084,5,b'5-phrase_feature__noun_phrases__next_system_utterance__drizzle',41.9590,439,0.0000,1823
+33597,7,b'7-syntactic_feature__root_word__next_user_utterance__know',13.0816,2041,0.0000,1824
+27001,5,b'5-phrase_feature__noun_phrases__next_user_utterance__weeks',31.2336,858,0.0000,1825
+21990,5,b'5-phrase_feature__noun_phrases__next_system_utterance__roar',41.9590,426,0.0000,1826
+4929,4.1,b'4.1-ngram.next_system_utterance__device play',19.1668,1450,0.0000,1827
+30823,7,b'7-syntactic_feature__obj_word__current_user_utterance__furnac',15.6168,1802,0.0000,1828
+26103,5,b'5-phrase_feature__noun_phrases__next_user_utterance__play',22.4638,1172,0.0000,1829
+27180,6,b'6-entity_feature__entity__current_user_utterance__1984_DATE',25.1774,1014,0.0000,1830
+18763,5,b'5-phrase_feature__noun_phrases__next_system_utterance__gary',20.2534,1268,0.0000,1831
+31731,7,b'7-syntactic_feature__obj_word__next_user_utterance__girl',17.4634,1524,0.0000,1832
+24433,5,b'5-phrase_feature__noun_phrases__next_user_utterance__called_quest',41.9590,305,0.0000,1833
+24258,5,b'5-phrase_feature__noun_phrases__next_user_utterance__beauty',15.6168,1772,0.0000,1834
+18596,5,b'5-phrase_feature__noun_phrases__next_system_utterance__food',19.8121,1419,0.0000,1835
+27352,6,b'6-entity_feature__entity__current_user_utterance__abc_ORGANIZATION',41.9590,362,0.0000,1836
+19964,5,b'5-phrase_feature__noun_phrases__next_system_utterance__lamp',58.0313,163,0.0000,1837
+26766,5,b'5-phrase_feature__noun_phrases__next_user_utterance__time_zone',16.7849,1655,0.0000,1838
+14829,5,b'5-phrase_feature__noun_phrases__current_user_utterance__progress_wrestling',21.3013,1211,0.0000,1839
+11038,4.1,b'4.1-ngram.next_user_utterance__netflix',17.6498,1516,0.0000,1840
+13243,5,b'5-phrase_feature__noun_phrases__current_user_utterance__experience_kevin',13.9324,1964,0.0000,1841
+33710,7,b'7-syntactic_feature__root_word__next_user_utterance__ranal',41.9590,570,0.0000,1842
+15747,5,b'5-phrase_feature__noun_phrases__current_user_utterance__vr',15.6168,1766,0.0000,1843
+18677,5,b'5-phrase_feature__noun_phrases__next_system_utterance__fried_chicken_sandwich',41.9590,449,0.0000,1844
+20271,5,b'5-phrase_feature__noun_phrases__next_system_utterance__maggiano_luciano',41.9590,387,0.0000,1845
+26660,5,b'5-phrase_feature__noun_phrases__next_user_utterance__subscription',41.9590,295,0.0000,1846
+27367,6,b'6-entity_feature__entity__current_user_utterance__alexa_PERSON',23.4252,1116,0.0000,1847
+18883,5,b'5-phrase_feature__noun_phrases__next_system_utterance__google_home',63.8048,148,0.0000,1848
+18298,5,b'5-phrase_feature__noun_phrases__next_system_utterance__everest',13.4279,2007,0.0000,1849
+7904,4.1,b'4.1-ngram.next_system_utterance__questions things like',19.3358,1440,0.0000,1850
+34491,7,b'7-syntactic_feature__subj_word__next_system_utterance__mountain',25.3202,986,0.0000,1851
+22663,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sprite',41.9590,450,0.0000,1852
+29278,6,b'6-entity_feature__entity__next_system_utterance__justin timberlake_PERSON',13.0816,2046,0.0000,1853
+22237,5,b'5-phrase_feature__noun_phrases__next_system_utterance__seconds',45.3290,243,0.0000,1854
+14828,5,b'5-phrase_feature__noun_phrases__current_user_utterance__progress',21.3013,1212,0.0000,1855
+22538,5,b'5-phrase_feature__noun_phrases__next_system_utterance__song_merry',41.9590,470,0.0000,1856
+24655,5,b'5-phrase_feature__noun_phrases__next_user_utterance__country_day',41.9590,469,0.0000,1857
+21890,5,b'5-phrase_feature__noun_phrases__next_system_utterance__remaining',13.5023,1996,0.0000,1858
+13804,5,b'5-phrase_feature__noun_phrases__current_user_utterance__joe_rogan',25.9209,966,0.0000,1859
+29275,6,b'6-entity_feature__entity__next_system_utterance__jun 19_DATE',15.6168,1750,0.0000,1860
+16385,5,b'5-phrase_feature__noun_phrases__next_system_utterance__answers',16.7849,1660,0.0000,1861
+25871,5,b'5-phrase_feature__noun_phrases__next_user_utterance__new_black',18.1525,1493,0.0000,1862
+25569,5,b'5-phrase_feature__noun_phrases__next_user_utterance__living_room',17.0487,1558,0.0000,1863
+24602,5,b'5-phrase_feature__noun_phrases__next_user_utterance__college',33.5699,807,0.0000,1864
+26057,5,b'5-phrase_feature__noun_phrases__next_user_utterance__perry_roar',41.9590,489,0.0000,1865
+4713,4.1,b'4.1-ngram.next_system_utterance__couldn relevant',14.0027,1942,0.0000,1866
+24724,5,b'5-phrase_feature__noun_phrases__next_user_utterance__dark_knight',16.7849,1596,0.0000,1867
+27174,6,b'6-entity_feature__entity__current_user_utterance__18_NUMBER',41.9590,353,0.0000,1868
+34208,7,b'7-syntactic_feature__subj_word__current_user_utterance__uk',16.7849,1591,0.0000,1869
+13984,5,b'5-phrase_feature__noun_phrases__current_user_utterance__license_plate',41.9590,684,0.0000,1870
+17630,5,b'5-phrase_feature__noun_phrases__next_system_utterance__craig',83.9180,101,0.0000,1871
+12357,5,b'5-phrase_feature__noun_phrases__current_user_utterance__baltimore',41.9590,507,0.0000,1872
+28949,6,b'6-entity_feature__entity__next_system_utterance__craig david_PERSON',83.9180,93,0.0000,1873
+25649,5,b'5-phrase_feature__noun_phrases__next_user_utterance__many_more_days',16.7849,1602,0.0000,1874
+27960,6,b'6-entity_feature__entity__current_user_utterance__tomorrow at_DATE',26.5587,937,0.0000,1875
+14536,5,b'5-phrase_feature__noun_phrases__current_user_utterance__open_netflix',125.8770,48,0.0000,1876
+34037,7,b'7-syntactic_feature__subj_word__current_user_utterance__i',22.1805,1176,0.0000,1877
+33349,7,b'7-syntactic_feature__root_word__next_system_utterance__went',48.4269,226,0.0000,1878
+1537,4.1,b'4.1-ngram.current_user_utterance__order pizza',38.3313,754,0.0000,1879
+13143,5,b'5-phrase_feature__noun_phrases__current_user_utterance__ea',20.1402,1280,0.0000,1880
+17609,5,b'5-phrase_feature__noun_phrases__next_system_utterance__country_day_school',20.1402,1391,0.0000,1881
+26916,5,b'5-phrase_feature__noun_phrases__next_user_utterance__video_heathens',41.9590,272,0.0000,1882
+31277,7,b'7-syntactic_feature__obj_word__next_system_utterance__everest',25.3202,989,0.0000,1883
+14980,5,b'5-phrase_feature__noun_phrases__current_user_utterance__rogan_experience',13.9324,1951,0.0000,1884
+26127,5,b'5-phrase_feature__noun_phrases__next_user_utterance__plomo',20.1402,1370,0.0000,1885
+26056,5,b'5-phrase_feature__noun_phrases__next_user_utterance__perry',20.1402,1340,0.0000,1886
+7877,4.1,b'4.1-ngram.next_system_utterance__program',32.6656,818,0.0000,1887
+12510,5,b'5-phrase_feature__noun_phrases__current_user_utterance__bobby_flay',41.9590,561,0.0000,1888
+13719,5,b'5-phrase_feature__noun_phrases__current_user_utterance__iheartradio',39.0420,745,0.0000,1889
+13241,5,b'5-phrase_feature__noun_phrases__current_user_utterance__expedition_ship',41.9590,668,0.0000,1890
+15901,5,b'5-phrase_feature__noun_phrases__current_user_utterance__wreath',41.9590,371,0.0000,1891
+12999,5,b'5-phrase_feature__noun_phrases__current_user_utterance__day_school',41.9590,546,0.0000,1892
+24896,5,b'5-phrase_feature__noun_phrases__next_user_utterance__entryway',25.9273,961,0.0000,1893
+32174,7,b'7-syntactic_feature__root_word__current_user_utterance__hey',33.5307,808,0.0000,1894
+27230,6,b'6-entity_feature__entity__current_user_utterance__3:30_TIME',14.6963,1897,0.0000,1895
+12910,5,b'5-phrase_feature__noun_phrases__current_user_utterance__counting',20.1402,1371,0.0000,1896
+26098,5,b'5-phrase_feature__noun_phrases__next_user_utterance__plata_o_plomo',20.1402,1375,0.0000,1897
+25849,5,b'5-phrase_feature__noun_phrases__next_user_utterance__nba_championship',16.7849,1658,0.0000,1898
+33510,7,b'7-syntactic_feature__root_word__next_user_utterance__door',18.1670,1480,0.0000,1899
+15769,5,b'5-phrase_feature__noun_phrases__current_user_utterance__washington',41.9590,331,0.0000,1900
+22859,5,b'5-phrase_feature__noun_phrases__next_system_utterance__summer_counting_crows',41.9590,293,0.0000,1901
+7903,4.1,b'4.1-ngram.next_system_utterance__questions things',19.3358,1436,0.0000,1902
+26924,5,b'5-phrase_feature__noun_phrases__next_user_utterance__violent_fights',41.9590,280,0.0000,1903
+4714,4.1,b'4.1-ngram.next_system_utterance__couldn relevant calendar',14.0027,1943,0.0000,1904
+34696,7,b'7-syntactic_feature__subj_word__next_user_utterance__babi',41.9590,587,0.0000,1905
+29241,6,b'6-entity_feature__entity__next_system_utterance__janie_PERSON',41.9590,670,0.0000,1906
+28408,6,b'6-entity_feature__entity__next_system_utterance__3_NUMBER',26.9641,923,0.0000,1907
+11413,4.1,b'4.1-ngram.next_user_utterance__red light',15.4673,1841,0.0000,1908
+165,4.1,b'4.1-ngram.current_user_utterance__actually netflix',20.5920,1258,0.0000,1909
+11737,4.1,b'4.1-ngram.next_user_utterance__surprise',20.1402,1354,0.0000,1910
+20143,5,b'5-phrase_feature__noun_phrases__next_system_utterance__list_stories',41.9590,395,0.0000,1911
+31622,7,b'7-syntactic_feature__obj_word__next_user_utterance__blue',29.8914,876,0.0000,1912
+31801,7,b'7-syntactic_feature__obj_word__next_user_utterance__messag',23.8837,1078,0.0000,1913
+24547,5,b'5-phrase_feature__noun_phrases__next_user_utterance__christmas_music',14.5986,1907,0.0000,1914
+15378,5,b'5-phrase_feature__noun_phrases__current_user_utterance__stream_christmas_music',17.4634,1521,0.0000,1915
+13242,5,b'5-phrase_feature__noun_phrases__current_user_utterance__experience',13.9324,1957,0.0000,1916
+26050,5,b'5-phrase_feature__noun_phrases__next_user_utterance__pentatonix_christmas',41.9590,487,0.0000,1917
+15265,5,b'5-phrase_feature__noun_phrases__current_user_utterance__sonos_alternative',25.1774,1001,0.0000,1918
+13695,5,b'5-phrase_feature__noun_phrases__current_user_utterance__house_speakers',41.9590,696,0.0000,1919
+12509,5,b'5-phrase_feature__noun_phrases__current_user_utterance__bobby',41.9590,534,0.0000,1920
+32119,7,b'7-syntactic_feature__root_word__current_user_utterance__do',17.9329,1504,0.0000,1921
+33789,7,b'7-syntactic_feature__root_word__next_user_utterance__surpris',20.1402,1378,0.0000,1922
+17556,5,b'5-phrase_feature__noun_phrases__next_system_utterance__continuing',41.9590,304,0.0000,1923
+23463,5,b'5-phrase_feature__noun_phrases__next_system_utterance__use_assistant',125.8770,51,0.0000,1924
+34223,7,b'7-syntactic_feature__subj_word__current_user_utterance__wblx',41.9590,565,0.0000,1925
+27108,5,b'5-phrase_feature__noun_phrases__next_user_utterance__zydeco',27.9917,902,0.0000,1926
+30458,6,b'6-entity_feature__entity__next_user_utterance__new year_DATE',14.8910,1870,0.0000,1927
+26959,5,b'5-phrase_feature__noun_phrases__next_user_utterance__watch_house',16.7849,1662,0.0000,1928
+34505,7,b'7-syntactic_feature__subj_word__next_system_utterance__ok',74.8827,119,0.0000,1929
+29512,6,b'6-entity_feature__entity__next_system_utterance__one hundred fifteen_NUMBER',15.6168,1762,0.0000,1930
+12911,5,b'5-phrase_feature__noun_phrases__current_user_utterance__counting_crows',20.1402,1385,0.0000,1931
+25193,5,b'5-phrase_feature__noun_phrases__next_user_utterance__grinch',16.7849,1580,0.0000,1932
+14814,5,b'5-phrase_feature__noun_phrases__current_user_utterance__presley',15.6168,1765,0.0000,1933
+11154,4.1,b'4.1-ngram.next_user_utterance__pizza',22.8901,1146,0.0000,1934
+8034,4.1,b'4.1-ngram.next_system_utterance__relevant calendar',14.0027,1945,0.0000,1935
+24652,5,b'5-phrase_feature__noun_phrases__next_user_utterance__counting_crows',20.1402,1396,0.0000,1936
+12650,5,b'5-phrase_feature__noun_phrases__current_user_utterance__cards',13.1318,2026,0.0000,1937
+12663,5,b'5-phrase_feature__noun_phrases__current_user_utterance__cast_joe_rogan',25.9209,964,0.0000,1938
+26826,5,b'5-phrase_feature__noun_phrases__next_user_utterance__tunein',74.4690,123,0.0000,1939
+30159,6,b'6-entity_feature__entity__next_user_utterance__baymax_PERSON',41.9590,643,0.0000,1940
+17601,5,b'5-phrase_feature__noun_phrases__next_system_utterance__counting',13.0816,2047,0.0000,1941
+24537,5,b'5-phrase_feature__noun_phrases__next_user_utterance__chore',41.9590,465,0.0000,1942
+15223,5,b'5-phrase_feature__noun_phrases__current_user_utterance__smartthings',15.6168,1758,0.0000,1943
+1057,4.1,b'4.1-ngram.current_user_utterance__isley',20.0288,1402,0.0000,1944
+21835,5,b'5-phrase_feature__noun_phrases__next_system_utterance__recipes',31.6762,839,0.0000,1945
+24500,5,b'5-phrase_feature__noun_phrases__next_user_utterance__chariots',41.9590,466,0.0000,1946
+6333,4.1,b'4.1-ngram.next_system_utterance__know device',38.6710,747,0.0000,1947
+33449,7,b'7-syntactic_feature__root_word__next_user_utterance__buy',16.7849,1594,0.0000,1948
+1286,4.1,b'4.1-ngram.current_user_utterance__love actually netflix',20.5920,1259,0.0000,1949
+25819,5,b'5-phrase_feature__noun_phrases__next_user_utterance__n_sync',20.1402,1351,0.0000,1950
+25577,5,b'5-phrase_feature__noun_phrases__next_user_utterance__living_room_tv',33.6477,801,0.0000,1951
+25184,5,b'5-phrase_feature__noun_phrases__next_user_utterance__greek_music',41.9590,419,0.0000,1952
+26310,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rogan',31.2609,846,0.0000,1953
+7681,4.1,b'4.1-ngram.next_system_utterance__play try',19.9888,1406,0.0000,1954
+13860,5,b'5-phrase_feature__noun_phrases__current_user_utterance__kevin',32.6316,819,0.0000,1955
+17822,5,b'5-phrase_feature__noun_phrases__next_system_utterance__default_music',41.9590,296,0.0000,1956
+31662,7,b'7-syntactic_feature__obj_word__next_user_utterance__comedian',41.9590,518,0.0000,1957
+7196,4.1,b'4.1-ngram.next_system_utterance__need know device',38.6710,748,0.0000,1958
+30327,6,b'6-entity_feature__entity__next_user_utterance__greek_MISC',20.1402,1295,0.0000,1959
+23972,5,b'5-phrase_feature__noun_phrases__next_system_utterance__yep',41.9590,326,0.0000,1960
+24552,5,b'5-phrase_feature__noun_phrases__next_user_utterance__chromecast',67.5825,140,0.0000,1961
+32760,7,b'7-syntactic_feature__root_word__next_system_utterance__degre',15.7526,1738,0.0000,1962
+1189,4.1,b'4.1-ngram.current_user_utterance__ligabue',19.1964,1448,0.0000,1963
+26617,5,b'5-phrase_feature__noun_phrases__next_user_utterance__staying',41.9590,291,0.0000,1964
+28616,6,b'6-entity_feature__entity__next_system_utterance__7:00pm_TIME',41.9590,688,0.0000,1965
+25758,5,b'5-phrase_feature__noun_phrases__next_user_utterance__mojito',20.1402,1345,0.0000,1966
+26192,5,b'5-phrase_feature__noun_phrases__next_user_utterance__pulp_fiction',41.9590,442,0.0000,1967
+30673,7,b'7-syntactic_feature__obj_word__current_user_utterance__b',16.7849,1634,0.0000,1968
+22563,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sorry',25.9891,958,0.0000,1969
+27595,6,b'6-entity_feature__entity__current_user_utterance__fuller_PERSON',18.1670,1489,0.0000,1970
+26312,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rogan_experience_kevin',41.9624,255,0.0000,1971
+19053,5,b'5-phrase_feature__noun_phrases__next_system_utterance__happy_holidays',41.9590,492,0.0000,1972
+26049,5,b'5-phrase_feature__noun_phrases__next_user_utterance__pentatonix',41.9590,484,0.0000,1973
+31819,7,b'7-syntactic_feature__obj_word__next_user_utterance__netflix',16.7849,1601,0.0000,1974
+26964,5,b'5-phrase_feature__noun_phrases__next_user_utterance__watch_minix',20.8028,1247,0.0000,1975
+26313,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rogan_kevin',23.4252,1139,0.0000,1976
+29980,6,b'6-entity_feature__entity__next_user_utterance__1984_DATE',16.7849,1640,0.0000,1977
+20562,5,b'5-phrase_feature__noun_phrases__next_system_utterance__mix',14.2220,1927,0.0000,1978
+20579,5,b'5-phrase_feature__noun_phrases__next_system_utterance__moderate_traffic',41.9590,427,0.0000,1979
+24965,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fiction',41.9590,436,0.0000,1980
+26076,5,b'5-phrase_feature__noun_phrases__next_user_utterance__pictures',15.6168,1800,0.0000,1981
+2,2.1,b'2.1-user_action_words.current_user_utterance__address',20.1402,1326,0.0000,1982
+29129,6,b'6-entity_feature__entity__next_system_utterance__gary lamp_PERSON',15.1097,1853,0.0000,1983
+25742,5,b'5-phrase_feature__noun_phrases__next_user_utterance__minix',50.7815,205,0.0000,1984
+13571,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hallway_light',13.4279,2002,0.0000,1985
+21599,5,b'5-phrase_feature__noun_phrases__next_system_utterance__police',41.9590,417,0.0000,1986
+28719,6,b'6-entity_feature__entity__next_system_utterance__abc_ORGANIZATION',41.9590,650,0.0000,1987
+12662,5,b'5-phrase_feature__noun_phrases__current_user_utterance__cast_joe',25.9209,965,0.0000,1988
+33529,7,b'7-syntactic_feature__root_word__next_user_utterance__fiction',41.9590,597,0.0000,1989
+29300,6,b'6-entity_feature__entity__next_system_utterance__knoxville_LOCATION',27.6473,908,0.0000,1990
+25785,5,b'5-phrase_feature__noun_phrases__next_user_utterance__mountain',19.4395,1425,0.0000,1991
+4930,4.1,b'4.1-ngram.next_system_utterance__device play try',19.9888,1407,0.0000,1992
+14969,5,b'5-phrase_feature__noun_phrases__current_user_utterance__roar',41.9590,680,0.0000,1993
+17259,5,b'5-phrase_feature__noun_phrases__next_system_utterance__chicken_sandwich',41.9590,309,0.0000,1994
+17558,5,b'5-phrase_feature__noun_phrases__next_system_utterance__control',151.7848,38,0.0000,1995
+32161,7,b'7-syntactic_feature__root_word__current_user_utterance__googl',24.6467,1035,0.0000,1996
+24448,5,b'5-phrase_feature__noun_phrases__next_user_utterance__carbs',13.4279,2005,0.0000,1997
+23682,5,b'5-phrase_feature__noun_phrases__next_system_utterance__wblx',83.9180,94,0.0000,1998
+21843,5,b'5-phrase_feature__noun_phrases__next_system_utterance__recs',13.0816,2030,0.0000,1999
+12504,5,b'5-phrase_feature__noun_phrases__current_user_utterance__blx',41.9590,533,0.0000,2000
+34958,7,b'7-syntactic_feature__subj_word__next_user_utterance__wblx',41.9590,593,0.0000,2001
+8574,4.1,b'4.1-ngram.next_system_utterance__sorry need',19.9888,1410,0.0000,2002
+12217,5,b'5-phrase_feature__noun_phrases__current_user_utterance__address',20.1402,1357,0.0000,2003
+31123,7,b'7-syntactic_feature__obj_word__current_user_utterance__turn',14.2009,1928,0.0000,2004
+13801,5,b'5-phrase_feature__noun_phrases__current_user_utterance__joe',21.9373,1186,0.0000,2005
+7682,4.1,b'4.1-ngram.next_system_utterance__play try saying',19.9888,1405,0.0000,2006
+15775,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_fedex',41.9590,318,0.0000,2007
+15667,5,b'5-phrase_feature__noun_phrases__current_user_utterance__unread_text_messages',41.9590,339,0.0000,2008
+32717,7,b'7-syntactic_feature__root_word__next_system_utterance__cloudi',16.0741,1720,0.0000,2009
+14729,5,b'5-phrase_feature__noun_phrases__current_user_utterance__player',28.6183,892,0.0000,2010
+6334,4.1,b'4.1-ngram.next_system_utterance__know device play',19.9888,1408,0.0000,2011
+15119,5,b'5-phrase_feature__noun_phrases__current_user_utterance__set_hallway',16.7849,1621,0.0000,2012
+18263,5,b'5-phrase_feature__noun_phrases__next_system_utterance__episode',21.8269,1192,0.0000,2013
+16778,5,b'5-phrase_feature__noun_phrases__next_system_utterance__block',20.1402,1325,0.0000,2014
+24208,5,b'5-phrase_feature__noun_phrases__next_user_utterance__baby_einstein',41.9590,352,0.0000,2015
+26277,5,b'5-phrase_feature__noun_phrases__next_user_utterance__reynolds',20.1402,1299,0.0000,2016
+29993,6,b'6-entity_feature__entity__next_user_utterance__2016_DATE',16.7849,1639,0.0000,2017
+8575,4.1,b'4.1-ngram.next_system_utterance__sorry need know',19.9888,1409,0.0000,2018
+25225,5,b'5-phrase_feature__noun_phrases__next_user_utterance__handclap_video',41.9590,416,0.0000,2019
+22102,5,b'5-phrase_feature__noun_phrases__next_system_utterance__rye_country',20.1402,1293,0.0000,2020
+24333,5,b'5-phrase_feature__noun_phrases__next_user_utterance__blue',15.4615,1842,0.0000,2021
+26423,5,b'5-phrase_feature__noun_phrases__next_user_utterance__set_gary',17.4634,1531,0.0000,2022
+8224,4.1,b'4.1-ngram.next_system_utterance__saying include device',38.6710,750,0.0000,2023
+27798,6,b"6-entity_feature__entity__current_user_utterance__new year's_DATE",41.9624,265,0.0000,2024
+6133,4.1,b'4.1-ngram.next_system_utterance__include device',38.6710,749,0.0000,2025
+25392,5,b'5-phrase_feature__noun_phrases__next_user_utterance__jimmy',15.6168,1797,0.0000,2026
+15606,5,b'5-phrase_feature__noun_phrases__current_user_utterance__tunein_station',125.8770,46,0.0000,2027
+15342,5,b'5-phrase_feature__noun_phrases__current_user_utterance__station',26.1366,953,0.0000,2028
+25246,5,b'5-phrase_feature__noun_phrases__next_user_utterance__heathens',24.1757,1041,0.0000,2029
+24294,5,b'5-phrase_feature__noun_phrases__next_user_utterance__big_hero',20.1402,1343,0.0000,2030
+12848,5,b'5-phrase_feature__noun_phrases__current_user_utterance__college_football_playoff',17.4634,1527,0.0000,2031
+13347,5,b'5-phrase_feature__noun_phrases__current_user_utterance__food_network',14.6963,1899,0.0000,2032
+27977,6,b'6-entity_feature__entity__current_user_utterance__una vita_ORGANIZATION',41.9590,337,0.0000,2033
+15112,5,b'5-phrase_feature__noun_phrases__current_user_utterance__set_curved_light',16.7849,1620,0.0000,2034
+15779,5,b'5-phrase_feature__noun_phrases__current_user_utterance__watch_living',25.1774,996,0.0000,2035
+25383,5,b'5-phrase_feature__noun_phrases__next_user_utterance__jeopardy',16.7849,1588,0.0000,2036
+30640,6,b'6-entity_feature__next_entity__have_overlap',0.0000,2048,0.0000,2037
+17987,5,b'5-phrase_feature__noun_phrases__next_system_utterance__distance',0.0000,2052,0.0000,2038
+30639,6,b'6-entity_feature__next_entity__#overlap',0.0000,2059,0.0000,2039
+30641,6,b'6-entity_feature__next_entity__jaccard_similarity',0.0000,2050,0.0000,2040
+10972,4.1,b'4.1-ngram.next_user_utterance__mojito',14.9744,1862,0.0000,2041
+1285,4.1,b'4.1-ngram.current_user_utterance__love actually chromecast',13.5815,1990,0.0000,2042
+34917,7,b'7-syntactic_feature__subj_word__next_user_utterance__subscript',41.9590,591,0.0000,2043
+25620,5,b'5-phrase_feature__noun_phrases__next_user_utterance__main_character',41.9590,381,0.0000,2044
+26319,5,b'5-phrase_feature__noun_phrases__next_user_utterance__room',16.3022,1690,0.0000,2045
+17931,5,b'5-phrase_feature__noun_phrases__next_system_utterance__different_movie',23.7507,1108,0.0000,2046
+17896,5,b'5-phrase_feature__noun_phrases__next_system_utterance__devices_using_chromecast',16.7849,1663,0.0000,2047
+19639,5,b'5-phrase_feature__noun_phrases__next_system_utterance__instructions',41.9590,477,0.0000,2048
+19900,5,b'5-phrase_feature__noun_phrases__next_system_utterance__kings!do',41.9590,404,0.0000,2049
+15136,5,b'5-phrase_feature__noun_phrases__current_user_utterance__set_paul',23.8837,1080,0.0000,2050
+15034,5,b'5-phrase_feature__noun_phrases__current_user_utterance__samsung',41.9624,261,0.0000,2051
+21380,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pinball',17.3866,1545,0.0000,2052
+15021,5,b'5-phrase_feature__noun_phrases__current_user_utterance__rye_country_day',41.9590,667,0.0000,2053
+21719,5,b'5-phrase_feature__noun_phrases__next_system_utterance__program',110.3430,59,0.0000,2054
+14416,5,b'5-phrase_feature__noun_phrases__current_user_utterance__new',17.9515,1502,0.0000,2055
+167,4.1,b'4.1-ngram.current_user_utterance__actually netflix tv',14.1468,1936,0.0000,2056
+164,4.1,b'4.1-ngram.current_user_utterance__actually chromecast',13.5815,1989,0.0000,2057
+26314,5,b'5-phrase_feature__noun_phrases__next_user_utterance__rogan_kevin_smith',23.4252,1140,0.0000,2058
+29050,6,b'6-entity_feature__entity__next_system_utterance__elyria_LOCATION',13.1808,2021,0.0000,2059
+21786,5,b'5-phrase_feature__noun_phrases__next_system_utterance__radiohead',20.1402,1315,0.0000,2060
