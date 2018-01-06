@@ -1170,8 +1170,8 @@ class ShallowExperimenter():
         '''
         run experiment with PCA feature reduction
         '''
-        # if num_feature_to_keep is -1, we don't select anything and keep all the features
-        if k_feature_to_keep != -1:
+        # if k_component_for_pca is -1, we don't select anything and keep all the features
+        if k_component_for_pca != -1:
             num_continuous_feature = 2 ** k_component_for_pca
             pca           = PCA(n_components=num_continuous_feature, svd_solver='full')
             X_continuous  = pca.fit_transform(X_continuous)
