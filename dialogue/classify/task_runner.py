@@ -74,7 +74,6 @@ def preload_X_Y():
         X, feature_names        = extractor.extract()
         X_raw_feature           = extractor.extract_raw_feature()
 
-
         data_dict[data_name]    = (X_raw, X_raw_feature, feature_names, label_encoder, X, Y)
 
     return data_dict
