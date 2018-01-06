@@ -423,8 +423,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            # if r_id > 2:
-            #     break
+            if r_id > 1:
+                break
 
             self.config['test_round'] = r_id
 
@@ -1175,6 +1175,7 @@ class ShallowExperimenter():
             num_continuous_feature = 2 ** k_component_for_pca
             pca           = PCA(n_components=num_continuous_feature, svd_solver='full')
             X_continuous  = pca.fit_transform(X_continuous)
+            continuous_feature_names = continuous_feature_names[: num_continuous_feature]
         else:
             num_continuous_feature  = X_continuous.shape[1]
             X_continuous            = X_continuous
