@@ -1,0 +1,37 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+33309,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nyou',1238.2639,1,1.0000,0
+30962,5,b'5-phrase_feature__noun_phrases__next_system_utterance__example',743.7167,9,0.6174,1
+35120,5,b'5-phrase_feature__noun_phrases__next_system_utterance__sorry',355.6549,15,0.3120,2
+2791,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,19,0.2425,3
+2792,1,b'1-utterance_length.next_system_utterance__utterance_length',897.9034,8,0.2236,4
+29,2.3.1,b'2.3.1-action_jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,17,0.1943,5
+33197,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nfor_example',1040.3301,5,0.1333,6
+28947,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_nfor',1040.3301,3,0.1305,7
+28962,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_ntry',365.0066,14,0.1203,8
+33196,5,b'5-phrase_feature__noun_phrases__next_system_utterance__nfor',1040.3301,2,0.1167,9
+33281,5,b'5-phrase_feature__noun_phrases__next_system_utterance__ntry',365.0066,13,0.1109,10
+28948,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_nfor_example',1040.3301,4,0.1070,11
+24486,5,b'5-phrase_feature__next_noun_phrases__jaccard_similarity',0.0000,20,0.0893,12
+46872,7,b'7-syntactic_feature__subj_word__next_system_utterance__titl',506.3669,11,0.0781,13
+34550,5,b'5-phrase_feature__noun_phrases__next_system_utterance__request',1501.9779,0,0.0772,14
+34,3,b'3-time_feature__turns_to_end',671.9179,10,0.0767,15
+24485,5,b'5-phrase_feature__next_noun_phrases__have_overlap',0.0000,27,0.0730,16
+2790,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,35,0.0669,17
+24484,5,b'5-phrase_feature__next_noun_phrases__#overlap',0.0000,29,0.0613,18
+42366,7,b'7-syntactic_feature__next_root_words_overlap',0.0000,16,0.0606,19
+42365,7,b'7-syntactic_feature__next_obj_words_overlap',0.0000,21,0.0461,20
+33129,5,b'5-phrase_feature__noun_phrases__next_system_utterance__n_\\_nyou',935.3846,6,0.0114,21
+28967,5,b'5-phrase_feature__noun_phrases__next_system_utterance__\\_nyou',935.3846,7,0.0112,22
+32366,5,b'5-phrase_feature__noun_phrases__next_system_utterance__leslie',388.6406,12,0.0062,23
+42367,7,b'7-syntactic_feature__next_subj_words_overlap',0.0000,18,0.0017,24
+30725,5,b'5-phrase_feature__noun_phrases__next_system_utterance__distance',0.0000,26,0.0001,25
+7375,4.1,b'4.1-ngram.next_system_utterance__distance glasses',0.0000,34,0.0001,26
+7376,4.1,b'4.1-ngram.next_system_utterance__distance glasses tree',0.0000,33,0.0001,27
+30726,5,b'5-phrase_feature__noun_phrases__next_system_utterance__distance_glasses',0.0000,25,0.0001,28
+14280,4.1,b'4.1-ngram.next_system_utterance__n3 distance glasses',0.0000,31,0.0001,29
+14279,4.1,b'4.1-ngram.next_system_utterance__n3 distance',0.0000,32,0.0001,30
+18417,4.1,b'4.1-ngram.next_system_utterance__reading n3 distance',0.0000,30,0.0001,31
+7374,4.1,b'4.1-ngram.next_system_utterance__distance',0.0000,28,0.0000,32
+42362,6,b'6-entity_feature__next_entity__#overlap',0.0000,24,0.0000,33
+42363,6,b'6-entity_feature__next_entity__have_overlap',0.0000,23,0.0000,34
+42364,6,b'6-entity_feature__next_entity__jaccard_similarity',0.0000,22,0.0000,35
