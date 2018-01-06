@@ -349,7 +349,7 @@ def load_batch_config(key_params):
 
         # param['experiment_name'] = '.'.join([param['task_name'], param['experiment_mode'], param['timemark']])
         if key_params['experiment_mode'].endswith('discrete_feature_selection'):
-            param['experiment_name'] = '.'.join([param['timemark'], key_params['experiment_mode'], 'C=4', 'feature_number=%s' % key_params['k_feature_to_keep'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
+            param['experiment_name'] = '.'.join([param['timemark'], key_params['experiment_mode'], 'C=8', 'feature_number=%s' % key_params['k_feature_to_keep'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
         elif key_params['experiment_mode'].endswith('continuous_feature_selection'):
             param['experiment_name'] = '.'.join([param['timemark'], key_params['experiment_mode'], 'pca_component=%s' % key_params['k_component_for_pca'], 'feature_number=%s' % key_params['k_feature_to_keep'], 'context=%s' % param['context_set'], 'feature=%s' % param['feature_set'], 'similarity=true' if param['similarity_feature'] else 'similarity=false'])
         else:
