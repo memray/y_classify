@@ -458,7 +458,7 @@ class ShallowExperimenter():
 
         results = []
 
-        for C in [2**x for x in [3]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
+        for C in [2**x for x in [4]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
             results.append(self.benchmark('LR.pen=l1.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l1', C=C)))
