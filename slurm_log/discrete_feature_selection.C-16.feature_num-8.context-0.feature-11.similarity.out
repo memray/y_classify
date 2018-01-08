@@ -3377,3 +3377,849 @@ avg / total       0.77      0.77      0.77       592
           intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
           penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
           verbose=0, warm_start=False)
+01/07/2018 12:35:56 [INFO] exp_shallowmodel: train time: 1257.698s
+01/07/2018 12:35:56 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 12:35:56 [INFO] exp_shallowmodel: accuracy:   0.743
+01/07/2018 12:35:56 [INFO] exp_shallowmodel: f1_score:   0.650
+01/07/2018 12:35:56 [INFO] exp_shallowmodel: classification report:
+01/07/2018 12:35:56 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.61      0.39      0.48        28
+          C       0.72      0.66      0.69       172
+          F       0.84      0.90      0.87       283
+          R       0.55      0.58      0.57       123
+
+avg / total       0.74      0.74      0.74       606
+
+01/07/2018 12:35:56 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 12:35:56 [INFO] exp_shallowmodel: 
+[[ 11   5   8   4]
+ [  3 113  23  33]
+ [  3   5 255  20]
+ [  1  33  18  71]]
+01/07/2018 12:35:57 [INFO] exp_shallowmodel: ******************** dstc3 - Round 40 
+01/07/2018 12:35:57 [INFO] exp_shallowmodel: #(data) = 4750
+01/07/2018 12:35:57 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 12:35:57 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 12:35:57 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 12:35:57 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 12:35:57 [INFO] exp_shallowmodel: Training: 
+01/07/2018 12:35:57 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 12:57:16 [INFO] exp_shallowmodel: train time: 1279.583s
+01/07/2018 12:57:16 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 12:57:16 [INFO] exp_shallowmodel: accuracy:   0.777
+01/07/2018 12:57:16 [INFO] exp_shallowmodel: f1_score:   0.664
+01/07/2018 12:57:16 [INFO] exp_shallowmodel: classification report:
+01/07/2018 12:57:16 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.38      0.40      0.39        20
+          C       0.78      0.73      0.75       169
+          F       0.90      0.88      0.89       281
+          R       0.58      0.66      0.62       122
+
+avg / total       0.78      0.78      0.78       592
+
+01/07/2018 12:57:16 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 12:57:16 [INFO] exp_shallowmodel: 
+[[  8   3   7   2]
+ [  3 123   7  36]
+ [  6   7 248  20]
+ [  4  24  13  81]]
+01/07/2018 12:57:17 [INFO] exp_shallowmodel: ******************** dstc3 - Round 41 
+01/07/2018 12:57:17 [INFO] exp_shallowmodel: #(data) = 4750
+01/07/2018 12:57:17 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 12:57:17 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 12:57:17 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 12:57:17 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 12:57:17 [INFO] exp_shallowmodel: Training: 
+01/07/2018 12:57:17 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: train time: 1293.308s
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: accuracy:   0.736
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: f1_score:   0.626
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: classification report:
+01/07/2018 13:18:50 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.36      0.40      0.38        20
+          C       0.70      0.71      0.71       169
+          F       0.86      0.86      0.86       281
+          R       0.56      0.55      0.56       122
+
+avg / total       0.74      0.74      0.74       592
+
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: 
+[[  8   2   5   5]
+ [  2 120  12  35]
+ [  9  19 241  12]
+ [  3  30  22  67]]
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: ******************** dstc3 - Round 42 
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: #(data) = 4750
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: Training: 
+01/07/2018 13:18:50 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: train time: 1274.721s
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: accuracy:   0.757
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: f1_score:   0.651
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: classification report:
+01/07/2018 13:40:05 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.42      0.40      0.41        20
+          C       0.75      0.71      0.73       169
+          F       0.86      0.88      0.87       281
+          R       0.58      0.61      0.59       122
+
+avg / total       0.76      0.76      0.76       592
+
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: 
+[[  8   3   7   2]
+ [  2 120  15  32]
+ [  8   8 246  19]
+ [  1  28  19  74]]
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: ******************** dstc3 - Round 43 
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: #(data) = 4750
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: Training: 
+01/07/2018 13:40:05 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: train time: 1214.057s
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: accuracy:   0.760
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: f1_score:   0.654
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: classification report:
+01/07/2018 14:00:19 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.47      0.45      0.46        20
+          C       0.70      0.73      0.72       169
+          F       0.90      0.90      0.90       281
+          R       0.55      0.52      0.53       122
+
+avg / total       0.76      0.76      0.76       592
+
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: 
+[[  9   3   6   2]
+ [  3 124   9  33]
+ [  5   6 254  16]
+ [  2  43  14  63]]
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: ******************** dstc3 - Round 44 
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: #(data) = 4750
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: Training: 
+01/07/2018 14:00:19 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: train time: 1311.842s
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: accuracy:   0.757
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: f1_score:   0.664
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: classification report:
+01/07/2018 14:22:11 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.48      0.50      0.49        20
+          C       0.71      0.69      0.70       169
+          F       0.88      0.89      0.89       281
+          R       0.57      0.58      0.58       122
+
+avg / total       0.76      0.76      0.76       592
+
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: 
+[[ 10   4   4   2]
+ [  3 117  11  38]
+ [  7  11 250  13]
+ [  1  32  18  71]]
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: ******************** dstc3 - Round 45 
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: #(data) = 4750
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: Training: 
+01/07/2018 14:22:11 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: train time: 1241.421s
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: accuracy:   0.762
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: f1_score:   0.641
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: classification report:
+01/07/2018 14:42:53 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.37      0.35      0.36        20
+          C       0.75      0.69      0.72       169
+          F       0.90      0.89      0.89       281
+          R       0.56      0.64      0.60       122
+
+avg / total       0.77      0.76      0.76       592
+
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: 
+[[  7   4   8   1]
+ [  3 116   9  41]
+ [  4   7 250  20]
+ [  5  28  11  78]]
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: ******************** dstc3 - Round 46 
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: #(data) = 4750
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: Training: 
+01/07/2018 14:42:53 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 15:03:33 [INFO] exp_shallowmodel: train time: 1240.230s
+01/07/2018 15:03:33 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 15:03:33 [INFO] exp_shallowmodel: accuracy:   0.753
+01/07/2018 15:03:33 [INFO] exp_shallowmodel: f1_score:   0.656
+01/07/2018 15:03:33 [INFO] exp_shallowmodel: classification report:
+01/07/2018 15:03:33 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.43      0.50      0.47        20
+          C       0.73      0.64      0.68       169
+          F       0.88      0.90      0.89       281
+          R       0.55      0.62      0.59       122
+
+avg / total       0.76      0.75      0.75       592
+
+01/07/2018 15:03:33 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 15:03:33 [INFO] exp_shallowmodel: 
+[[ 10   2   7   1]
+ [  7 108  12  42]
+ [  3   8 252  18]
+ [  3  29  14  76]]
+01/07/2018 15:03:34 [INFO] exp_shallowmodel: ******************** dstc3 - Round 47 
+01/07/2018 15:03:34 [INFO] exp_shallowmodel: #(data) = 4750
+01/07/2018 15:03:34 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 15:03:34 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 15:03:34 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 15:03:34 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 15:03:34 [INFO] exp_shallowmodel: Training: 
+01/07/2018 15:03:34 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: train time: 1178.606s
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: accuracy:   0.753
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: f1_score:   0.653
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: classification report:
+01/07/2018 15:23:12 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.41      0.45      0.43        20
+          C       0.73      0.70      0.72       169
+          F       0.85      0.87      0.86       281
+          R       0.60      0.60      0.60       122
+
+avg / total       0.75      0.75      0.75       592
+
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: 
+[[  9   2   8   1]
+ [  5 119  18  27]
+ [  6  10 245  20]
+ [  2  31  16  73]]
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: ******************** dstc3 - Round 48 
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: #(data) = 4750
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: Training: 
+01/07/2018 15:23:12 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: train time: 1224.769s
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: accuracy:   0.743
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: f1_score:   0.624
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: classification report:
+01/07/2018 15:43:37 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.37      0.35      0.36        20
+          C       0.69      0.69      0.69       169
+          F       0.89      0.88      0.88       281
+          R       0.55      0.57      0.56       122
+
+avg / total       0.75      0.74      0.74       592
+
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: 
+[[  7   6   5   2]
+ [  5 117  10  37]
+ [  4  13 246  18]
+ [  3  34  15  70]]
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: ******************** dstc3 - Round 49 
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: #(data) = 4736
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: #(feature) = 1168
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: Training: 
+01/07/2018 15:43:37 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 16:03:29 [INFO] exp_shallowmodel: train time: 1191.892s
+01/07/2018 16:03:29 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 16:03:29 [INFO] exp_shallowmodel: accuracy:   0.759
+01/07/2018 16:03:29 [INFO] exp_shallowmodel: f1_score:   0.665
+01/07/2018 16:03:29 [INFO] exp_shallowmodel: classification report:
+01/07/2018 16:03:29 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.65      0.39      0.49        28
+          C       0.69      0.76      0.72       172
+          F       0.87      0.89      0.88       283
+          R       0.61      0.54      0.57       123
+
+avg / total       0.75      0.76      0.75       606
+
+01/07/2018 16:03:29 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 16:03:29 [INFO] exp_shallowmodel: 
+[[ 11   6  10   1]
+ [  4 130  14  24]
+ [  1  12 253  17]
+ [  1  41  15  66]]
+01/07/2018 16:03:31 [INFO] exp_shallowmodel: Feature selection of top 100, selectable:non-selectable=12:88
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/07/2018 16:03:37 [INFO] exp_shallowmodel:           dataset=family
+01/07/2018 16:03:37 [INFO] exp_shallowmodel:           k_feature_to_keep=8
+01/07/2018 16:03:37 [INFO] exp_shallowmodel:           X_new.shape=(3530, 1170)
+01/07/2018 16:03:37 [INFO] exp_shallowmodel:           #(X_selected)=256
+01/07/2018 16:03:37 [INFO] exp_shallowmodel:           #(X_not_selectable)=914
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: ******************** family - Round 0 
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: Training: 
+01/07/2018 16:03:37 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 16:12:08 [INFO] exp_shallowmodel: train time: 511.340s
+01/07/2018 16:12:08 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 16:12:08 [INFO] exp_shallowmodel: accuracy:   0.827
+01/07/2018 16:12:08 [INFO] exp_shallowmodel: f1_score:   0.636
+01/07/2018 16:12:08 [INFO] exp_shallowmodel: classification report:
+01/07/2018 16:12:08 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.37      0.48      0.42        23
+          C       0.67      0.52      0.58        27
+          F       0.95      0.94      0.94       250
+          R       0.59      0.62      0.60        52
+
+avg / total       0.84      0.83      0.83       352
+
+01/07/2018 16:12:08 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 16:12:08 [INFO] exp_shallowmodel: 
+[[ 11   1   5   6]
+ [  7  14   1   5]
+ [  4   1 234  11]
+ [  8   5   7  32]]
+01/07/2018 16:12:09 [INFO] exp_shallowmodel: ******************** family - Round 1 
+01/07/2018 16:12:09 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 16:12:09 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 16:12:09 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 16:12:09 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 16:12:09 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 16:12:09 [INFO] exp_shallowmodel: Training: 
+01/07/2018 16:12:09 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: train time: 528.377s
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: accuracy:   0.849
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: f1_score:   0.674
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: classification report:
+01/07/2018 16:20:57 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.47      0.35      0.40        23
+          C       0.76      0.59      0.67        27
+          F       0.93      0.95      0.94       250
+          R       0.66      0.73      0.69        52
+
+avg / total       0.84      0.85      0.84       352
+
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: 
+[[  8   1   7   7]
+ [  2  16   3   6]
+ [  5   1 237   7]
+ [  2   3   9  38]]
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: ******************** family - Round 2 
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: Training: 
+01/07/2018 16:20:57 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: train time: 525.147s
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: accuracy:   0.852
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: f1_score:   0.694
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: classification report:
+01/07/2018 16:29:42 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.58      0.48      0.52        23
+          C       0.58      0.67      0.62        27
+          F       0.93      0.94      0.94       250
+          R       0.71      0.67      0.69        52
+
+avg / total       0.85      0.85      0.85       352
+
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: 
+[[ 11   1   6   5]
+ [  1  18   4   4]
+ [  4   5 236   5]
+ [  3   7   7  35]]
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: ******************** family - Round 3 
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: Training: 
+01/07/2018 16:29:42 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: train time: 516.365s
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: accuracy:   0.832
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: f1_score:   0.630
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: classification report:
+01/07/2018 16:38:19 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.39      0.39      0.39        23
+          C       0.59      0.63      0.61        27
+          F       0.94      0.96      0.95       250
+          R       0.61      0.54      0.57        52
+
+avg / total       0.83      0.83      0.83       352
+
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: 
+[[  9   3   6   5]
+ [  2  17   2   6]
+ [  3   1 239   7]
+ [  9   8   7  28]]
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: ******************** family - Round 4 
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: Training: 
+01/07/2018 16:38:19 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: train time: 510.407s
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: accuracy:   0.824
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: f1_score:   0.639
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: classification report:
+01/07/2018 16:46:49 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.38      0.43      0.41        23
+          C       0.61      0.63      0.62        27
+          F       0.92      0.94      0.93       250
+          R       0.64      0.56      0.60        52
+
+avg / total       0.82      0.82      0.82       352
+
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: 
+[[ 10   3   6   4]
+ [  2  17   2   6]
+ [ 10   0 234   6]
+ [  4   8  11  29]]
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: ******************** family - Round 5 
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: Training: 
+01/07/2018 16:46:49 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: train time: 508.165s
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: accuracy:   0.824
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: f1_score:   0.632
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: classification report:
+01/07/2018 16:55:18 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.35      0.39      0.37        23
+          C       0.57      0.59      0.58        27
+          F       0.95      0.92      0.94       250
+          R       0.61      0.67      0.64        52
+
+avg / total       0.83      0.82      0.83       352
+
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: 
+[[  9   2   6   6]
+ [  3  16   1   7]
+ [  9   2 230   9]
+ [  5   8   4  35]]
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: ******************** family - Round 6 
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: Training: 
+01/07/2018 16:55:18 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: train time: 995.203s
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: accuracy:   0.844
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: f1_score:   0.688
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: classification report:
+01/07/2018 17:11:53 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.45      0.61      0.52        23
+          C       0.68      0.63      0.65        27
+          F       0.94      0.94      0.94       250
+          R       0.67      0.62      0.64        52
+
+avg / total       0.85      0.84      0.85       352
+
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: 
+[[ 14   2   2   5]
+ [  2  17   3   5]
+ [  6   4 234   6]
+ [  9   2   9  32]]
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: ******************** family - Round 7 
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: Training: 
+01/07/2018 17:11:53 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: train time: 519.023s
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: accuracy:   0.847
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: f1_score:   0.679
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: classification report:
+01/07/2018 17:20:32 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.50      0.65      0.57        23
+          C       0.65      0.48      0.55        27
+          F       0.94      0.94      0.94       250
+          R       0.65      0.65      0.65        52
+
+avg / total       0.85      0.85      0.85       352
+
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: 
+[[ 15   1   5   2]
+ [  3  13   1  10]
+ [  6   2 236   6]
+ [  6   4   8  34]]
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: ******************** family - Round 8 
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: Training: 
+01/07/2018 17:20:32 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: train time: 515.569s
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: accuracy:   0.801
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: f1_score:   0.589
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: classification report:
+01/07/2018 17:29:08 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.31      0.43      0.36        23
+          C       0.57      0.48      0.52        27
+          F       0.94      0.92      0.93       250
+          R       0.54      0.54      0.54        52
+
+avg / total       0.81      0.80      0.81       352
+
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: 
+[[ 10   3   5   5]
+ [  3  13   2   9]
+ [  8   1 231  10]
+ [ 11   6   7  28]]
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: ******************** family - Round 9 
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: #(data) = 2816
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: Training: 
+01/07/2018 17:29:08 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: train time: 990.106s
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: accuracy:   0.859
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: f1_score:   0.735
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: classification report:
+01/07/2018 17:45:38 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.57      0.68      0.62        25
+          C       0.70      0.70      0.70        27
+          F       0.93      0.95      0.94       251
+          R       0.74      0.63      0.68        59
+
+avg / total       0.86      0.86      0.86       362
+
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: 
+[[ 17   0   5   3]
+ [  1  19   1   6]
+ [  6   3 238   4]
+ [  6   5  11  37]]
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: ******************** family - Round 10 
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: Training: 
+01/07/2018 17:45:38 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: train time: 502.864s
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: accuracy:   0.801
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: f1_score:   0.586
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: classification report:
+01/07/2018 17:54:01 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.34      0.43      0.38        23
+          C       0.47      0.56      0.51        27
+          F       0.94      0.93      0.94       250
+          R       0.56      0.48      0.52        52
+
+avg / total       0.81      0.80      0.80       352
+
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: 
+[[ 10   4   4   5]
+ [  3  15   4   5]
+ [  5   3 232  10]
+ [ 11  10   6  25]]
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: ******************** family - Round 11 
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: Training: 
+01/07/2018 17:54:01 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: train time: 518.433s
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: test time:  0.001s
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: accuracy:   0.798
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: f1_score:   0.587
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: classification report:
+01/07/2018 18:02:40 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.31      0.39      0.35        23
+          C       0.52      0.59      0.55        27
+          F       0.93      0.92      0.93       250
+          R       0.57      0.48      0.52        52
+
+avg / total       0.81      0.80      0.80       352
+
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: confusion matrix:
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: 
+[[  9   2   7   5]
+ [  5  16   1   5]
+ [  6   4 231   9]
+ [  9   9   9  25]]
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: ******************** family - Round 12 
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: #(data) = 2826
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: #(feature) = 1170
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: ================================================================================
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: LR.pen=l1.C=16.000000
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: Training: 
+01/07/2018 18:02:40 [INFO] exp_shallowmodel: LogisticRegression(C=16, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+slurmstepd: error: *** JOB 964582 ON smp-n2 CANCELLED AT 2018-01-07T18:14:32 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 964582.0 ON smp-n2 CANCELLED AT 2018-01-07T18:14:32 DUE TO TIME LIMIT ***
+srun: forcing job termination
+srun: got SIGCONT
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
