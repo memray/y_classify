@@ -490,6 +490,7 @@ class EntityFeature(BaseEstimator, TransformerMixin):
 
     def transform(self, parse_records):
         return_list = []
+        number_valid_similarity = 0
 
         # iterate each data sample, contains five parts (last_user, last_system, currrent_user, current_system, next_user)
         for k, parse_record in enumerate(zip(*parse_records)):
@@ -535,23 +536,32 @@ class EntityFeature(BaseEstimator, TransformerMixin):
             current_entity_set  = set([e for e in entity_lists[current_index_in_dict]])
             next_entity_set     = set([e for e in entity_lists[next_index_in_dict]])
 
-            '''
+            """
             if sum([len(l) for l in entity_lists]) > 0 or len(last_entity_set) > 0 or len(current_entity_set) > 0 or len(next_entity_set) > 0:
                 print('#(entity)=%d' % (sum([len(l) for l in entity_lists])))
                 print(last_entity_set)
                 print(current_entity_set)
                 print(next_entity_set)
                 print("")
-            '''
+            """
 
             last_inter_entity        = set.intersection(current_entity_set, last_entity_set)
             next_inter_entity        = set.intersection(current_entity_set, next_entity_set)
 
-            '''
-            if len(last_inter_entity) > 0 or len(next_inter_entity) > 0:
-                print(entity_lists)
+            if len(last_inter_entity) > 0:
+                print('#%d, Find same entities with previous utterance' % k)
+                print('current: %s' % current_entity_set)
+                print('previous: %s' % last_entity_set)
                 print()
-            '''
+
+            if len(next_inter_entity) > 0:
+                print('#%d, Find same entities with next utterance' % k)
+                print('current: %s' % current_entity_set)
+                print('next: %s' % next_entity_set)
+                print()
+
+            if len(last_inter_entity) + len(next_inter_entity) > 0:
+                number_valid_similarity += 1
 
             # 6.2 entity_overlap:  True, if there is any entity overlap between two user utterances
             if len(last_inter_entity) > 0:
@@ -573,6 +583,9 @@ class EntityFeature(BaseEstimator, TransformerMixin):
             entity_dict['next_entity__jaccard_similarity'] = jaccard_similarity(current_entity_set, next_entity_set)
 
             return_list.append(entity_dict)
+
+        print('Find %d valid similarity pairs' % number_valid_similarity)
+
         return return_list
 
 class SyntacticFeature(BaseEstimator, TransformerMixin):
@@ -1434,16 +1447,19 @@ class Feature_Extractor():
 
         return X
 
-    def extract(self):
+    def extract(self, reload_entity_similarity=False):
         if os.path.exists(self.config['extracted_feature_path'] % self.config['data_name']):
+            print('Loading extracted features of %s' % self.config['data_name'])
             X, feature_names = data_loader.deserialize_from_file(self.config['extracted_feature_path'] % self.config['data_name'])
             # transformer_list = joblib.load(self.config['pipeline_path'] % self.config['data_name'])
             # pipeline, union_features, transformer_list = data_loader.deserialize_from_file_by_dill(self.config['pipeline_path'] % self.config['data_name'])
 
             # shame, the feature is problematic due to some reasons
             X = X.todense()
-            # X = self.repair_entity_similarity(X, feature_names)
+            if reload_entity_similarity:
+                X = self.repair_entity_similarity(X, feature_names)
         else:
+            print('Extracting features of %s' % self.config['data_name'])
             X, feature_names   = self.do_extract()
 
         self.config['X']                    = X

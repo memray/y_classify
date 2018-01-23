@@ -1,6 +1,8 @@
 # add by Rui Meng
 *.DS_Store
 
+/output/20180122-213235.cross_validation.context=all.feature=9-\[2+1.3.4\].similarity=true/family.test.pkl
+
 # make the cross_validation fold gitable
 dataset/editorial_annotations/
 dataset/feature/

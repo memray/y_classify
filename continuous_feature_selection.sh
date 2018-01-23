@@ -3,10 +3,11 @@
 export EXP_MODE='continuous_feature_selection'
 # 0.all, [1-8] each feature set, [9-13] combined features
 # do feature selection on 9 and 11
+# 20180123, do feature selection on 15-18: [1,2,3,4] + one of [5,6,7,8]
 
 export CONTEXT=0
-declare -a FEATURE_IDs=(0 9 10 11 12 13)
-declare -a power=(-1) # (2 3 4 5 6 7 8 9 10 -1)
+declare -a FEATURE_IDs=(15 16 17 18)
+declare -a power=(2 3 4 5 6 7 8 9 10 -1)
 
 export NUMBER_TO_KEEP=8
 for FEATURE_ID in "${FEATURE_IDs[@]}"

@@ -12,6 +12,7 @@ from optparse import OptionParser
 import sys, os
 from time import time
 import matplotlib.pyplot as plt
+from scipy.stats import f_oneway
 from sklearn.feature_selection import f_classif
 
 plt.switch_backend('agg')
@@ -978,13 +979,30 @@ class ShallowExperimenter():
         X_selectable[np.where(np.isnan(X_selectable))] = 0.0
         X_selectable[np.where(np.isinf(X_selectable))] = 0.0
 
+        # ANOVA F-value for the four classes
         f_stats, pvals   = f_classif(X_selectable, Y)
         sorted_idx = np.argsort(f_stats)[::-1]
 
         with open(os.path.join(self.config['experiment_path'], '%s.ftest_top_features.csv' % self.config['data_name']), 'w') as csv_writer:
-            csv_writer.write('id,prefix,name,f-test,pval\n')
+            csv_writer.write('id,name,prefix,f-test,pval\n')
             for f_id, f_name, f_stat, pval in zip(np.asarray(selectable_feature_indices)[sorted_idx], np.asarray(selectable_feature_names)[sorted_idx], f_stats[sorted_idx], pvals[sorted_idx]):
                 csv_writer.write('%d,%s,%s,%.4f,%.4f\n' % (f_id, str(f_name), str(f_name[:f_name.find('-')]), f_stat, pval))
+
+        # f_oneway on each class
+        for k in np.unique(Y):
+            label = self.config['label_encoder'].classes_[k]
+            arg_x = [X_selectable[Y == k], X_selectable[Y != k]]
+            f_stats, pvals = f_oneway(*arg_x)
+            sorted_idx = np.argsort(f_stats)[::-1]
+
+            with open(os.path.join(self.config['experiment_path'],
+                                   '%s.class=%s.ftest_top_features.csv' % (self.config['data_name'], label)), 'w') as csv_writer:
+                csv_writer.write('id,name,prefix,f-test,pval\n')
+                for f_id, f_name, f_stat, pval in zip(np.asarray(selectable_feature_indices)[sorted_idx],
+                                                      np.asarray(selectable_feature_names)[sorted_idx],
+                                                      f_stats[sorted_idx], pvals[sorted_idx]):
+                    csv_writer.write(
+                        '%d,%s,%s,%.4f,%.4f\n' % (f_id, str(f_name), str(f_name[:f_name.find('-')]), f_stat, pval))
 
         return []
 

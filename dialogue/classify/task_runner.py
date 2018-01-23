@@ -54,7 +54,7 @@ def init_task_queue(opt):
 
     return queue
 
-def preload_X_Y():
+def preload_X_Y(opt):
     # initialize a very basic config, don't create folder
     config = configuration.load_basic_config()
     extractor = Feature_Extractor(config)
@@ -71,7 +71,12 @@ def preload_X_Y():
         session_ids, annotated_sessions = loader.load_annotated_data()
         # train and test
         X_raw, Y, label_encoder = extractor.split_to_instances(annotated_sessions)
-        X, feature_names        = extractor.extract()
+        if opt.experiment_mode == 'report_feature_importance':
+            reload_entity_similarity = True
+        else:
+            reload_entity_similarity = False
+
+        X, feature_names        = extractor.extract(reload_entity_similarity=reload_entity_similarity)
         X_raw_feature           = extractor.extract_raw_feature()
 
         data_dict[data_name]    = (X_raw, X_raw_feature, feature_names, label_encoder, X, Y)
@@ -207,7 +212,7 @@ if __name__ == '__main__':
     n_workers   = opt.num_worker
     workers     = []
     q           = init_task_queue(opt)
-    data_dict   = preload_X_Y()
+    data_dict   = preload_X_Y(opt)
 
     worker(q, data_dict, opt)
 

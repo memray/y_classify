@@ -1,0 +1,26 @@
+id,name,prefix,f-test,pval
+42366,7-syntactic_feature__next_root_words_overlap,7,52.3281,0.0000
+2791,4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity,4.3.1,43.6581,0.0000
+48075,9.2.1-w2v_similarity.next_user_utterance_pairs__cosine,9.2.1,33.9801,0.0000
+47174,8.2.1-lda_similarity.next_user_utterance_pairs__cosine,8.2.1,30.1003,0.0000
+48977,10.2.1-d2v_similarity.next_user_utterance_pairs__cosine,10.2.1,21.6965,0.0000
+42365,7-syntactic_feature__next_obj_words_overlap,7,17.3495,0.0000
+29,2.3.1-action_jaccard_similarity.next_user_utterance_pairs__jaccard_similarity,2.3.1,16.3083,0.0001
+24485,5-phrase_feature__next_noun_phrases__have_overlap,5,15.7708,0.0001
+24486,5-phrase_feature__next_noun_phrases__jaccard_similarity,5,12.9671,0.0003
+56178,11.2.1-skipthought_similarity.next_user_utterance_pairs__cosine,11.2.1,12.7203,0.0004
+24484,5-phrase_feature__next_noun_phrases__#overlap,5,12.4696,0.0004
+42364,6-entity_feature__next_entity__jaccard_similarity,6,5.1836,0.0229
+48076,9.3.1-wmd_similarity.next_user_utterance_pairs__wmd_distance,9.3.1,5.0628,0.0245
+42363,6-entity_feature__next_entity__have_overlap,6,4.7958,0.0286
+42362,6-entity_feature__next_entity__#overlap,6,3.7138,0.0540
+2790,4.2.1-edit_distance.next_user_utterance_pairs__edit_distance,4.2.1,2.8713,0.0903
+30726,5-phrase_feature__noun_phrases__next_system_utterance__distance_glasses,5,0.5638,0.4528
+30725,5-phrase_feature__noun_phrases__next_system_utterance__distance,5,0.5638,0.4528
+42367,7-syntactic_feature__next_subj_words_overlap,7,0.4932,0.4826
+18417,4.1-ngram.next_system_utterance__reading n3 distance,4.1,0.4585,0.4984
+14280,4.1-ngram.next_system_utterance__n3 distance glasses,4.1,0.4585,0.4984
+14279,4.1-ngram.next_system_utterance__n3 distance,4.1,0.4585,0.4984
+7376,4.1-ngram.next_system_utterance__distance glasses tree,4.1,0.4585,0.4984
+7375,4.1-ngram.next_system_utterance__distance glasses,4.1,0.4585,0.4984
+7374,4.1-ngram.next_system_utterance__distance,4.1,0.4585,0.4984

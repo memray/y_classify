@@ -62,6 +62,10 @@ if __name__ == '__main__':
     for xlsx_name in os.listdir(xlsx_folder_path):
         if xlsx_name.strip() == base_xlsx_name.strip():
             continue
+
+        if not xlsx_name.endswith('.xlsx'):
+            continue
+
         # print(os.path.join(xlsx_folder_path, xlsx_name))
         print('%s vs %s' % (base_xlsx_name, xlsx_name))
 
@@ -79,7 +83,8 @@ if __name__ == '__main__':
             fscore1 = sheet1.iloc[:,8].as_matrix()
             fscore2 = sheet2.iloc[:,8].as_matrix()
 
-            t, p_value = scipy.stats.wilcoxon(fscore1, fscore2)
+            # t, p_value = scipy.stats.wilcoxon(fscore1, fscore2)
+            t, p_value = scipy.stats.ttest_ind(fscore1, fscore2)
 
             print('\tsheet %s, \t t=%f, \t p_value=%f' % (sheet_name, t, p_value))
             pass
