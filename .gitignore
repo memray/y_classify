@@ -1,6 +1,7 @@
 # add by Rui Meng
 *.DS_Store
 
+/output/20180122-213235.cross_validation.context=all.feature=9-\[2+1.3.4\].similarity=true/
 /output/20180122-213235.cross_validation.context=all.feature=9-\[2+1.3.4\].similarity=true/family.test.pkl
 
 # make the cross_validation fold gitable
@@ -123,3 +124,6 @@ dialogue/.DS_Store
 output/.DS_Store
 /dataset/bad_case_index/
 !/dataset/cross_validation/
+/output/feature_comparison/context=all.similarity=true/20180122-213235.cross_validation.context=all.feature=9-\[2+1.3.4\].similarity=true/family.test.pkl
+output/bad(c=2.0)/feature_selection/no_regularization/[8+1.3.4]/
+output/feature_comparison/context=all.similarity=true/20180122-213235.cross_validation.context=all.feature=9-[2+1.3.4].similarity=true/family.test.pkl

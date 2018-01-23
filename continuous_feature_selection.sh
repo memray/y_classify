@@ -17,6 +17,7 @@ do
     do
         export PCA_COMPONENT;
         echo "$EXP_MODE, PCA_COMPONENT=$PCA_COMPONENT, Feature_Number_TO_KEEP=$NUMBER_TO_KEEP, Context=$CONTEXT, Feature_ID=$FEATURE_ID, with similarity";
+        echo "sbatch --export=EXP_MODE=$EXP_MODE,CONTEXT=$CONTEXT,FEATURE_ID=$FEATURE_ID,NUMBER_TO_KEEP=$NUMBER_TO_KEEP,PCA_COMPONENT=$PCA_COMPONENT --job-name=$EXP_MODE.pca_component-$PCA_COMPONENT.feature_num-$NUMBER_TO_KEEP.context-$CONTEXT.feature-$FEATURE_ID.similarity.run --output=slurm_log/$EXP_MODE.pca_component-$PCA_COMPONENT.feature_num-$NUMBER_TO_KEEP.context-$CONTEXT.feature-$FEATURE_ID.similarity.out run_task.similarity.sbatch;"
         sbatch --export=EXP_MODE=$EXP_MODE,CONTEXT=$CONTEXT,FEATURE_ID=$FEATURE_ID,NUMBER_TO_KEEP=$NUMBER_TO_KEEP,PCA_COMPONENT=$PCA_COMPONENT --job-name=$EXP_MODE.pca_component-$PCA_COMPONENT.feature_num-$NUMBER_TO_KEEP.context-$CONTEXT.feature-$FEATURE_ID.similarity.run --output=slurm_log/$EXP_MODE.pca_component-$PCA_COMPONENT.feature_num-$NUMBER_TO_KEEP.context-$CONTEXT.feature-$FEATURE_ID.similarity.out run_task.similarity.sbatch;
     done
 done
