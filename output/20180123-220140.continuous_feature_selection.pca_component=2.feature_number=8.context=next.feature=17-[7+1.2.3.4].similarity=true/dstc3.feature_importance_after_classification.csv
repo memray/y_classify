@@ -1,0 +1,274 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+12077,7,b'7-syntactic_feature__subj_word__next_system_utterance__you',2188.7270,2,1.0000,0
+5623,4.1,b'4.1-ngram.next_system_utterance__pounds',78.9269,182,0.2333,1
+1325,1,b'1-utterance_length.next_system_utterance__utterance_length',301.5740,57,0.2263,2
+12044,7,b'7-syntactic_feature__subj_word__next_system_utterance__price',310.9899,56,0.2156,3
+12160,5,b'5-phrase_feature__next_noun_phrases__have_overlap',0.0000,256,0.1916,4
+7756,4.1,b'4.1-ngram.next_user_utterance__thank',333.4715,49,0.1475,5
+12166,7,b'7-syntactic_feature__next_root_words_overlap',0.0000,261,0.1346,6
+28,3,b'3-time_feature__time_ratio',170.5127,93,0.1288,7
+40,4.1,b'4.1-ngram.current_user_utterance__address',344.7469,47,0.1173,8
+12158,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,263,0.0947,9
+9550,5,b'5-phrase_feature__noun_phrases__next_system_utterance__restaurant',182.7536,87,0.0810,10
+7253,4.1,b'4.1-ngram.next_user_utterance__good',221.3249,72,0.0799,11
+11581,7,b'7-syntactic_feature__root_word__next_system_utterance__like',617.6721,10,0.0770,12
+7181,4.1,b'4.1-ngram.next_user_utterance__dont care',234.8901,66,0.0690,13
+792,4.1,b'4.1-ngram.current_user_utterance__number',182.4017,88,0.0665,14
+9172,5,b'5-phrase_feature__noun_phrases__next_system_utterance__example',1813.1816,3,0.0665,15
+11575,7,b'7-syntactic_feature__root_word__next_system_utterance__is',146.7035,102,0.0613,16
+8533,5,b'5-phrase_feature__noun_phrases__current_user_utterance__phone_number',430.3287,35,0.0604,17
+7259,4.1,b'4.1-ngram.next_user_utterance__goodbye',182.2327,89,0.0590,18
+9457,5,b'5-phrase_feature__noun_phrases__next_system_utterance__postcode',199.0477,79,0.0584,19
+850,4.1,b'4.1-ngram.current_user_utterance__phone number',187.0974,85,0.0584,20
+848,4.1,b'4.1-ngram.current_user_utterance__phone',185.5460,86,0.0566,21
+12156,2.3.1,b'2.3.1-action_jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,270,0.0534,22
+9351,5,b'5-phrase_feature__noun_phrases__next_system_utterance__looking',1159.8529,4,0.0516,23
+11605,7,b'7-syntactic_feature__root_word__next_system_utterance__serv',137.5642,105,0.0479,24
+9857,5,b'5-phrase_feature__noun_phrases__next_user_utterance__bye',560.2088,12,0.0443,25
+11901,7,b'7-syntactic_feature__subj_word__current_user_utterance__address',192.6696,81,0.0403,26
+7765,4.1,b'4.1-ngram.next_user_utterance__thank goodbye',178.8764,90,0.0397,27
+12161,5,b'5-phrase_feature__next_noun_phrases__jaccard_similarity',0.0000,262,0.0366,28
+4494,4.1,b'4.1-ngram.next_system_utterance__like',99.0139,135,0.0339,29
+7762,4.1,b'4.1-ngram.next_user_utterance__thank good bye',215.8310,76,0.0338,30
+11583,7,b'7-syntactic_feature__root_word__next_system_utterance__look',1120.8550,5,0.0337,31
+9989,5,b'5-phrase_feature__noun_phrases__next_user_utterance__doesnt_matter',128.3749,113,0.0334,32
+8389,5,b'5-phrase_feature__noun_phrases__current_user_utterance__looking',80.9568,176,0.0333,33
+9564,5,b'5-phrase_feature__noun_phrases__next_system_utterance__romsey_area',65.7068,229,0.0330,34
+4742,4.1,b'4.1-ngram.next_system_utterance__looking',150.2643,99,0.0330,35
+10695,6,b'6-entity_feature__entity__next_system_utterance__6 pounds_MONEY',113.2600,117,0.0325,36
+18,2.1,b'2.1-user_action_words.current_user_utterance__price',63.5241,247,0.0306,37
+7576,4.1,b'4.1-ngram.next_user_utterance__phone',167.7216,95,0.0305,38
+7901,4.1,b'4.1-ngram.next_user_utterance__yes',99.4695,133,0.0304,39
+1097,4.1,b'4.1-ngram.current_user_utterance__television',98.8662,138,0.0297,40
+9528,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pub',71.4656,206,0.0279,41
+9236,5,b'5-phrase_feature__noun_phrases__next_system_utterance__great_venue',86.1426,159,0.0267,42
+10346,5,b'5-phrase_feature__noun_phrases__next_user_utterance__restaurant',240.2505,64,0.0264,43
+1281,4.1,b'4.1-ngram.current_user_utterance__whats',117.0458,115,0.0262,44
+30,3,b'3-time_feature__turns_to_end',10060.3908,0,0.0261,45
+10080,5,b'5-phrase_feature__noun_phrases__next_user_utterance__goodbye',311.8463,55,0.0245,46
+6995,4.1,b'4.1-ngram.next_user_utterance__address',232.4335,67,0.0235,47
+7935,5,b'5-phrase_feature__noun_phrases__current_user_utterance__address',517.1957,18,0.0234,48
+7074,4.1,b'4.1-ngram.next_user_utterance__bye',223.3413,71,0.0225,49
+7761,4.1,b'4.1-ngram.next_user_utterance__thank good',218.6260,75,0.0225,50
+9399,5,b'5-phrase_feature__noun_phrases__next_system_utterance__new',63.3533,249,0.0225,51
+273,4.1,b'4.1-ngram.current_user_utterance__does television',72.9991,203,0.0218,52
+11304,7,b'7-syntactic_feature__root_word__current_user_utterance__number',90.6671,155,0.0218,53
+10654,6,b'6-entity_feature__entity__next_system_utterance__2 pounds_MONEY',103.1301,130,0.0213,54
+0,1,b'1-utterance_length.current_user_utterance__utterance_length',255.2932,60,0.0212,55
+11816,7,b'7-syntactic_feature__root_word__next_user_utterance__restaur',155.9230,97,0.0210,56
+10942,6,b'6-entity_feature__entity__next_system_utterance__romsey_LOCATION',63.6785,246,0.0209,57
+9428,5,b'5-phrase_feature__noun_phrases__next_system_utterance__outstanding_restaurant',229.3330,69,0.0205,58
+9093,5,b'5-phrase_feature__noun_phrases__next_system_utterance__chesterton_area',98.4406,139,0.0201,59
+9867,5,b'5-phrase_feature__noun_phrases__next_user_utterance__care',419.7978,38,0.0192,60
+7514,4.1,b'4.1-ngram.next_user_utterance__number',169.3241,94,0.0192,61
+9389,5,b'5-phrase_feature__noun_phrases__next_system_utterance__mind',415.2967,40,0.0192,62
+9315,5,b'5-phrase_feature__noun_phrases__next_system_utterance__kind',495.5897,22,0.0191,63
+7178,4.1,b'4.1-ngram.next_user_utterance__doesnt matter',73.5668,202,0.0188,64
+24,2.2,b'2.2-#user_action_words.current_user_utterance__utterance_length',543.3024,14,0.0187,65
+9719,5,b'5-phrase_feature__noun_phrases__next_system_utterance__venue',356.3895,45,0.0187,66
+11784,7,b'7-syntactic_feature__root_word__next_user_utterance__no',192.4609,82,0.0185,67
+11086,7,b'7-syntactic_feature__obj_word__next_system_utterance__part',415.2967,39,0.0185,68
+6984,2.2,b'2.2-#user_action_words.next_user_utterance__utterance_length',358.3450,44,0.0183,69
+11992,7,b'7-syntactic_feature__subj_word__next_system_utterance__bar',92.7249,151,0.0182,70
+12154,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=10',0.0000,268,0.0181,71
+11857,7,b'7-syntactic_feature__root_word__next_user_utterance__thank',774.3776,7,0.0179,72
+3431,4.1,b'4.1-ngram.next_system_utterance__example',187.8127,84,0.0177,73
+11687,7,b'7-syntactic_feature__root_word__next_user_utterance__ditton',68.7038,214,0.0176,74
+10777,6,b'6-entity_feature__entity__next_system_utterance__castle hill_LOCATION',74.5649,200,0.0175,75
+7180,4.1,b'4.1-ngram.next_user_utterance__dont',229.8376,68,0.0173,76
+8549,5,b'5-phrase_feature__noun_phrases__current_user_utterance__postcode',107.4588,122,0.0173,77
+12115,7,b'7-syntactic_feature__subj_word__next_user_utterance__number',137.4681,106,0.0172,78
+10115,5,b'5-phrase_feature__noun_phrases__next_user_utterance__im_looking',76.8764,193,0.0169,79
+10690,6,b'6-entity_feature__entity__next_system_utterance__50_NUMBER',93.6761,150,0.0167,80
+11582,7,b'7-syntactic_feature__root_word__next_system_utterance__locat',273.3423,59,0.0165,81
+9233,5,b'5-phrase_feature__noun_phrases__next_system_utterance__great_restaurant',210.5947,78,0.0164,82
+9657,5,b'5-phrase_feature__noun_phrases__next_system_utterance__street',191.0994,83,0.0162,83
+26,3,b'3-time_feature__end_of_session',220.2308,74,0.0155,84
+10668,6,b'6-entity_feature__entity__next_system_utterance__3 pounds_MONEY',72.5980,204,0.0154,85
+10305,5,b'5-phrase_feature__noun_phrases__next_user_utterance__postcode',103.2587,129,0.0153,86
+11591,7,b'7-syntactic_feature__root_word__next_system_utterance__part',78.4996,184,0.0152,87
+11533,7,b'7-syntactic_feature__root_word__next_system_utterance__area',118.9033,114,0.0149,88
+7578,4.1,b'4.1-ngram.next_user_utterance__phone number',167.0499,96,0.0145,89
+11568,7,b'7-syntactic_feature__root_word__next_system_utterance__have',397.1010,42,0.0143,90
+11790,7,b'7-syntactic_feature__root_word__next_user_utterance__number',78.1672,192,0.0141,91
+9400,5,b'5-phrase_feature__noun_phrases__next_system_utterance__new_chesterton',64.1300,242,0.0140,92
+8921,5,b'5-phrase_feature__noun_phrases__next_system_utterance__area',130.4845,112,0.0132,93
+9005,5,b'5-phrase_feature__noun_phrases__next_system_utterance__castle_hill',76.4447,197,0.0132,94
+10718,6,b'6-entity_feature__entity__next_system_utterance__95_NUMBER',135.6486,108,0.0129,95
+12168,10.2.1,b'10.2.1-d2v_similarity.next_user_utterance_pairs__cosine',0.0000,272,0.0129,96
+9000,5,b'5-phrase_feature__noun_phrases__next_system_utterance__cappuccino',64.0749,243,0.0127,97
+7080,4.1,b'4.1-ngram.next_user_utterance__care',249.4201,63,0.0127,98
+9437,5,b'5-phrase_feature__noun_phrases__next_system_utterance__particular_venue',533.6286,16,0.0126,99
+5396,4.1,b'4.1-ngram.next_system_utterance__phone number',67.0234,216,0.0123,100
+11601,7,b'7-syntactic_feature__root_word__next_system_utterance__restaur',404.8427,41,0.0123,101
+9003,5,b'5-phrase_feature__noun_phrases__next_system_utterance__castle',107.3777,123,0.0122,102
+10625,6,b'6-entity_feature__entity__next_system_utterance__1 pound_MONEY',66.4517,221,0.0116,103
+8903,5,b'5-phrase_feature__noun_phrases__next_system_utterance__al_casbah',64.3940,239,0.0112,104
+8902,5,b'5-phrase_feature__noun_phrases__next_system_utterance__al',64.3940,240,0.0111,105
+5395,4.1,b'4.1-ngram.next_system_utterance__phone',67.0234,218,0.0109,106
+9518,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pound',66.4517,222,0.0109,107
+11580,7,b'7-syntactic_feature__root_word__next_system_utterance__let',253.6060,61,0.0104,108
+10680,6,b'6-entity_feature__entity__next_system_utterance__4 pounds_MONEY',89.5664,156,0.0103,109
+11615,7,b'7-syntactic_feature__root_word__next_system_utterance__venu',149.1464,100,0.0102,110
+12152,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=0',0.0000,266,0.0102,111
+11543,7,b'7-syntactic_feature__root_word__next_system_utterance__cheap',102.6693,132,0.0102,112
+9002,5,b'5-phrase_feature__noun_phrases__next_system_utterance__casbah',64.3940,238,0.0100,113
+1282,4.1,b'4.1-ngram.current_user_utterance__whats address',65.4413,233,0.0099,114
+5015,4.1,b'4.1-ngram.next_system_utterance__near particular venue',63.3013,255,0.0098,115
+9210,5,b'5-phrase_feature__noun_phrases__next_system_utterance__gallery',171.6527,92,0.0097,116
+10522,5,b'5-phrase_feature__noun_phrases__next_user_utterance__whats',214.6384,77,0.0096,117
+10174,5,b'5-phrase_feature__noun_phrases__next_user_utterance__matter',143.8108,104,0.0096,118
+12155,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=100',0.0000,269,0.0095,119
+11402,7,b'7-syntactic_feature__root_word__current_user_utterance__what',696.0335,8,0.0094,120
+9727,5,b'5-phrase_feature__noun_phrases__next_system_utterance__wheatsheaf',94.7995,148,0.0094,121
+4954,4.1,b'4.1-ngram.next_system_utterance__mind example',65.8548,225,0.0093,122
+12157,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,271,0.0092,123
+6964,2.1,b'2.1-user_action_words.next_user_utterance__area',97.9754,140,0.0092,124
+9092,5,b'5-phrase_feature__noun_phrases__next_system_utterance__chesterton',76.8686,194,0.0091,125
+9562,5,b'5-phrase_feature__noun_phrases__next_system_utterance__road',226.5808,70,0.0091,126
+10327,5,b'5-phrase_feature__noun_phrases__next_user_utterance__pub',81.3746,171,0.0089,127
+8325,5,b'5-phrase_feature__noun_phrases__current_user_utterance__im',69.6436,213,0.0088,128
+8055,5,b'5-phrase_feature__noun_phrases__current_user_utterance__castle_hill',75.9360,199,0.0088,129
+11208,7,b'7-syntactic_feature__root_word__current_user_utterance__ditton',66.1584,224,0.0086,130
+11738,7,b'7-syntactic_feature__root_word__next_user_utterance__im',78.7491,183,0.0085,131
+12039,7,b'7-syntactic_feature__subj_word__next_system_utterance__number',376.5040,43,0.0085,132
+11152,7,b'7-syntactic_feature__root_word__current_user_utterance__address',94.4334,149,0.0084,133
+10710,6,b'6-entity_feature__entity__next_system_utterance__8 pounds_MONEY',81.1778,173,0.0082,134
+7445,4.1,b'4.1-ngram.next_user_utterance__matter',80.6833,177,0.0081,135
+8970,5,b'5-phrase_feature__noun_phrases__next_system_utterance__burger',84.0501,165,0.0077,136
+11068,7,b'7-syntactic_feature__obj_word__current_user_utterance__televis',99.3218,134,0.0076,137
+9602,5,b'5-phrase_feature__noun_phrases__next_system_utterance__serving',106.9947,124,0.0076,138
+10167,5,b'5-phrase_feature__noun_phrases__next_user_utterance__looking',95.2432,142,0.0075,139
+9343,5,b'5-phrase_feature__noun_phrases__next_system_utterance__lion',66.7216,220,0.0074,140
+9448,5,b'5-phrase_feature__noun_phrases__next_system_utterance__phone_number',511.3760,21,0.0073,141
+4386,4.1,b'4.1-ngram.next_system_utterance__kind',105.2468,128,0.0073,142
+9110,5,b'5-phrase_feature__noun_phrases__next_system_utterance__clare',81.1585,174,0.0071,143
+9328,5,b'5-phrase_feature__noun_phrases__next_system_utterance__lamb',66.7216,219,0.0071,144
+7880,4.1,b'4.1-ngram.next_user_utterance__whats',91.4395,154,0.0071,145
+949,4.1,b'4.1-ngram.current_user_utterance__restaurant',154.6493,98,0.0070,146
+9429,5,b'5-phrase_feature__noun_phrases__next_system_utterance__outstanding_venue',65.1824,235,0.0069,147
+9698,5,b'5-phrase_feature__noun_phrases__next_system_utterance__trumpington_area',86.9930,157,0.0069,148
+4107,4.1,b'4.1-ngram.next_system_utterance__help',79.9664,180,0.0068,149
+9414,5,b'5-phrase_feature__noun_phrases__next_system_utterance__number',511.3760,20,0.0066,150
+11333,7,b'7-syntactic_feature__root_word__current_user_utterance__restaur',177.4425,91,0.0065,151
+4754,4.1,b'4.1-ngram.next_system_utterance__looking example',105.2468,127,0.0065,152
+8933,5,b'5-phrase_feature__noun_phrases__next_system_utterance__bakers',80.9973,175,0.0065,153
+11094,7,b'7-syntactic_feature__obj_word__next_system_utterance__you',70.2282,212,0.0064,154
+29,3,b'3-time_feature__turns_from_start',2854.4766,1,0.0063,155
+9447,5,b'5-phrase_feature__noun_phrases__next_system_utterance__phone',511.3760,19,0.0061,156
+6962,2.1,b'2.1-user_action_words.next_user_utterance__address',421.5448,37,0.0058,157
+12167,7,b'7-syntactic_feature__next_subj_words_overlap',0.0000,265,0.0058,158
+7642,4.1,b'4.1-ngram.next_user_utterance__restaurant',108.9029,119,0.0058,159
+9242,5,b'5-phrase_feature__noun_phrases__next_system_utterance__hakka',74.5415,201,0.0057,160
+9643,5,b'5-phrase_feature__noun_phrases__next_system_utterance__something',344.8455,46,0.0057,161
+9767,5,b'5-phrase_feature__noun_phrases__next_user_utterance__address',421.5448,36,0.0057,162
+11747,7,b'7-syntactic_feature__root_word__next_user_utterance__it',67.8629,215,0.0057,163
+9120,5,b'5-phrase_feature__noun_phrases__next_system_utterance__contemporary',81.2450,172,0.0056,164
+8329,5,b'5-phrase_feature__noun_phrases__current_user_utterance__im_looking',70.5478,210,0.0055,165
+8936,5,b'5-phrase_feature__noun_phrases__next_system_utterance__bar',133.8949,109,0.0053,166
+8917,5,b'5-phrase_feature__noun_phrases__next_system_utterance__anything',79.9664,179,0.0053,167
+11692,7,b'7-syntactic_feature__root_word__next_user_utterance__dont',326.9468,53,0.0052,168
+1,2.1,b'2.1-user_action_words.current_user_utterance__address',518.1937,17,0.0052,169
+11570,7,b'7-syntactic_feature__root_word__next_system_utterance__help',79.9664,181,0.0051,170
+11887,7,b'7-syntactic_feature__root_word__next_user_utterance__what',562.5987,11,0.0050,171
+8611,5,b'5-phrase_feature__noun_phrases__current_user_utterance__restaurant',235.1914,65,0.0050,172
+10030,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fen',109.7686,118,0.0050,173
+5726,4.1,b'4.1-ngram.next_system_utterance__price range looking',94.8001,147,0.0048,174
+9105,5,b'5-phrase_feature__noun_phrases__next_system_utterance__church',85.6462,161,0.0046,175
+12153,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=1',0.0000,267,0.0046,176
+11252,7,b'7-syntactic_feature__root_word__current_user_utterance__im',71.1030,207,0.0044,177
+16,2.1,b'2.1-user_action_words.current_user_utterance__phone',432.1026,33,0.0043,178
+5845,4.1,b'4.1-ngram.next_system_utterance__range looking',94.8001,146,0.0043,179
+11940,7,b'7-syntactic_feature__subj_word__current_user_utterance__number',136.7150,107,0.0042,180
+11600,7,b'7-syntactic_feature__root_word__next_system_utterance__rang',541.9996,15,0.0041,181
+11554,7,b'7-syntactic_feature__root_word__next_system_utterance__exampl',834.1992,6,0.0041,182
+8530,5,b'5-phrase_feature__noun_phrases__current_user_utterance__phone',432.1026,34,0.0041,183
+12159,5,b'5-phrase_feature__next_noun_phrases__#overlap',0.0000,264,0.0040,184
+9401,5,b'5-phrase_feature__noun_phrases__next_system_utterance__new_chesterton_area',80.3539,178,0.0040,185
+10287,5,b'5-phrase_feature__noun_phrases__next_user_utterance__phone',443.1393,27,0.0040,186
+9476,5,b'5-phrase_feature__noun_phrases__next_system_utterance__postcode_cb2',98.9364,136,0.0039,187
+10290,5,b'5-phrase_feature__noun_phrases__next_user_utterance__phone_number',438.1765,30,0.0038,188
+10774,6,b'6-entity_feature__entity__next_system_utterance__carringtons_ORGANIZATION',70.5144,211,0.0038,189
+11896,7,b'7-syntactic_feature__root_word__next_user_utterance__ye',102.8412,131,0.0037,190
+6963,2.1,b'2.1-user_action_words.next_user_utterance__ani',91.9102,152,0.0036,191
+10241,5,b'5-phrase_feature__noun_phrases__next_user_utterance__number',449.7773,24,0.0035,192
+6960,1,b'1-utterance_length.next_user_utterance__utterance_length',665.9143,9,0.0035,193
+8051,5,b'5-phrase_feature__noun_phrases__current_user_utterance__castle',78.4460,185,0.0034,194
+8828,5,b'5-phrase_feature__noun_phrases__current_user_utterance__whats',251.1847,62,0.0034,195
+11367,7,b'7-syntactic_feature__root_word__current_user_utterance__televis',83.5126,169,0.0033,196
+6977,2.1,b'2.1-user_action_words.next_user_utterance__phone',443.1393,26,0.0032,197
+6975,2.1,b'2.1-user_action_words.next_user_utterance__number',449.7773,25,0.0032,198
+8734,5,b'5-phrase_feature__noun_phrases__current_user_utterance__television',145.6289,103,0.0032,199
+9392,5,b'5-phrase_feature__noun_phrases__next_system_utterance__museum',195.4431,80,0.0032,200
+10441,5,b'5-phrase_feature__noun_phrases__next_user_utterance__television',85.6848,160,0.0031,201
+6973,2.1,b'2.1-user_action_words.next_user_utterance__matter',147.3281,101,0.0031,202
+9028,5,b'5-phrase_feature__noun_phrases__next_system_utterance__cb2',98.9364,137,0.0031,203
+12075,7,b'7-syntactic_feature__subj_word__next_system_utterance__wheatsheaf',63.9509,244,0.0031,204
+10863,6,b'6-entity_feature__entity__next_system_utterance__indian_MISC',70.6727,209,0.0030,205
+8555,5,b'5-phrase_feature__noun_phrases__current_user_utterance__price',65.6961,230,0.0028,206
+12029,7,b'7-syntactic_feature__subj_word__next_system_utterance__it',299.3307,58,0.0027,207
+7177,4.1,b'4.1-ngram.next_user_utterance__doesnt',71.5229,205,0.0027,208
+12079,7,b'7-syntactic_feature__subj_word__next_user_utterance__address',131.9496,111,0.0027,209
+9132,5,b'5-phrase_feature__noun_phrases__next_system_utterance__courses',332.8822,50,0.0024,210
+11776,7,b'7-syntactic_feature__root_word__next_user_utterance__moder',65.2483,234,0.0024,211
+9794,5,b'5-phrase_feature__noun_phrases__next_user_utterance__area',97.6922,141,0.0024,212
+8923,5,b'5-phrase_feature__noun_phrases__next_system_utterance__art',86.5666,158,0.0024,213
+11657,7,b'7-syntactic_feature__root_word__next_user_utterance__care',113.9109,116,0.0023,214
+6650,4.1,b'4.1-ngram.next_system_utterance__town mind',65.8548,228,0.0022,215
+10034,5,b'5-phrase_feature__noun_phrases__next_user_utterance__fen_ditton',108.4262,120,0.0022,216
+11099,7,b'7-syntactic_feature__obj_word__next_user_utterance__bye',466.5424,23,0.0021,217
+12165,7,b'7-syntactic_feature__next_obj_words_overlap',0.0000,260,0.0021,218
+9084,5,b'5-phrase_feature__noun_phrases__next_system_utterance__cheapest_pint',85.1925,162,0.0021,219
+9519,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pounds',332.8822,51,0.0021,220
+867,4.1,b'4.1-ngram.current_user_utterance__postcode',65.6016,232,0.0021,221
+11540,7,b'7-syntactic_feature__root_word__next_system_utterance__care',132.5613,110,0.0020,222
+9118,5,b'5-phrase_feature__noun_phrases__next_system_utterance__college',317.6879,54,0.0019,223
+9982,5,b'5-phrase_feature__noun_phrases__next_user_utterance__ditton',108.4262,121,0.0019,224
+8311,5,b'5-phrase_feature__noun_phrases__current_user_utterance__hill',76.0173,198,0.0019,225
+9361,5,b'5-phrase_feature__noun_phrases__next_system_utterance__main_courses',332.8822,52,0.0019,226
+10872,6,b'6-entity_feature__entity__next_system_utterance__king_ORGANIZATION',65.6828,231,0.0018,227
+9409,5,b'5-phrase_feature__noun_phrases__next_system_utterance__noodle_bar',105.3207,126,0.0018,228
+9449,5,b'5-phrase_feature__noun_phrases__next_system_utterance__pint',85.1925,163,0.0018,229
+9993,5,b'5-phrase_feature__noun_phrases__next_user_utterance__dont_care',64.2521,241,0.0017,230
+9001,5,b'5-phrase_feature__noun_phrases__next_system_utterance__carringtons',91.7260,153,0.0017,231
+10112,5,b'5-phrase_feature__noun_phrases__next_user_utterance__im',82.9665,170,0.0017,232
+6651,4.1,b'4.1-ngram.next_system_utterance__town mind example',65.8548,227,0.0016,233
+8948,5,b'5-phrase_feature__noun_phrases__next_system_utterance__beer',85.1925,164,0.0016,234
+10987,6,b'6-entity_feature__entity__next_system_utterance__trumpington_LOCATION',83.8955,166,0.0015,235
+9408,5,b'5-phrase_feature__noun_phrases__next_system_utterance__noodle',105.3207,125,0.0015,236
+9250,5,b'5-phrase_feature__noun_phrases__next_system_utterance__hill',70.6891,208,0.0013,237
+14,2.1,b'2.1-user_action_words.current_user_utterance__number',432.7138,32,0.0012,238
+4768,4.1,b'4.1-ngram.next_system_utterance__looking near',63.3013,252,0.0011,239
+10075,5,b'5-phrase_feature__noun_phrases__next_user_utterance__good_bye',554.4238,13,0.0011,240
+4953,4.1,b'4.1-ngram.next_system_utterance__mind',65.8548,226,0.0010,241
+8484,5,b'5-phrase_feature__noun_phrases__current_user_utterance__number',432.7138,31,0.0010,242
+9740,5,b'5-phrase_feature__noun_phrases__next_system_utterance__x',76.8598,195,0.0010,243
+9741,5,b'5-phrase_feature__noun_phrases__next_system_utterance__x_food',76.8598,196,0.0009,244
+9390,5,b'5-phrase_feature__noun_phrases__next_system_utterance__moderate_price',83.5297,167,0.0007,245
+9391,5,b'5-phrase_feature__noun_phrases__next_system_utterance__moderate_price_range',83.5297,168,0.0007,246
+4756,4.1,b'4.1-ngram.next_system_utterance__looking example cheap',64.6833,237,0.0006,247
+3503,4.1,b'4.1-ngram.next_system_utterance__example cheap',64.6833,236,0.0006,248
+5014,4.1,b'4.1-ngram.next_system_utterance__near particular',63.3013,254,0.0005,249
+9703,5,b'5-phrase_feature__noun_phrases__next_system_utterance__type',442.7794,29,0.0005,250
+9992,5,b'5-phrase_feature__noun_phrases__next_user_utterance__dont',66.3848,223,0.0005,251
+5846,4.1,b'4.1-ngram.next_system_utterance__range looking example',95.0734,145,0.0004,252
+6723,4.1,b'4.1-ngram.next_system_utterance__type',78.2133,188,0.0004,253
+11092,7,b'7-syntactic_feature__obj_word__next_system_utterance__type',442.7794,28,0.0004,254
+4387,4.1,b'4.1-ngram.next_system_utterance__kind price',95.0734,143,0.0003,255
+3753,4.1,b'4.1-ngram.next_system_utterance__food like example',78.2133,189,0.0003,256
+4519,4.1,b'4.1-ngram.next_system_utterance__like example',78.2133,186,0.0003,257
+6724,4.1,b'4.1-ngram.next_system_utterance__type food',78.2133,187,0.0003,258
+4388,4.1,b'4.1-ngram.next_system_utterance__kind price range',95.0734,144,0.0003,259
+7254,4.1,b'4.1-ngram.next_user_utterance__good bye',220.4684,73,0.0003,260
+3752,4.1,b'4.1-ngram.next_system_utterance__food like',78.2133,190,0.0003,261
+10921,6,b'6-entity_feature__entity__next_system_utterance__new chesterton_LOCATION',63.7538,245,0.0003,262
+5364,4.1,b'4.1-ngram.next_system_utterance__particular venue',63.3013,251,0.0003,263
+6725,4.1,b'4.1-ngram.next_system_utterance__type food like',78.2133,191,0.0002,264
+5013,4.1,b'4.1-ngram.next_system_utterance__near',63.5214,248,0.0002,265
+6793,4.1,b'4.1-ngram.next_system_utterance__venue example',63.3013,253,0.0001,266
+11606,7,b'7-syntactic_feature__root_word__next_system_utterance__someth',339.0116,48,0.0001,267
+5087,4.1,b'4.1-ngram.next_system_utterance__number',67.0234,217,0.0001,268
+5365,4.1,b'4.1-ngram.next_system_utterance__particular venue example',63.3013,250,0.0001,269
+12162,6,b'6-entity_feature__next_entity__#overlap',0.0000,257,0.0000,270
+12163,6,b'6-entity_feature__next_entity__have_overlap',0.0000,258,0.0000,271
+12164,6,b'6-entity_feature__next_entity__jaccard_similarity',0.0000,259,0.0000,272
