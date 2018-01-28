@@ -1285,7 +1285,7 @@ class Feature_Extractor():
         transformer_list.append(
             ('8.2.2-lda_similarity.last_user_utterance_pairs', Pipeline([
                 ('selector', ItemSelector(keys=['current_user_utterance', 'last_user_utterance'])),
-                ('cosine_similarity', CosineSimilarity(self.config, lda_feature_extractor)),
+                (' ', CosineSimilarity(self.config, lda_feature_extractor)),
                 ('vectorize', DictVectorizer()),
             ]))
         )
