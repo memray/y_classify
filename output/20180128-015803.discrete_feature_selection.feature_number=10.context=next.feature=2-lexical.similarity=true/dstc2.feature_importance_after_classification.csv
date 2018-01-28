@@ -1,0 +1,1027 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+928,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,1025,1.0000,0
+2530,4.1,b'4.1-ngram.next_system_utterance__like',388.2541,1,0.9822,1
+3527,4.1,b'4.1-ngram.next_system_utterance__road',33.8848,106,0.4477,2
+5066,4.1,b'4.1-ngram.next_user_utterance__thank',412.7607,0,0.3635,3
+4079,4.1,b'4.1-ngram.next_system_utterance__street',33.3375,108,0.2894,4
+2574,4.1,b'4.1-ngram.next_system_utterance__looking',85.7534,39,0.2455,5
+4089,4.1,b'4.1-ngram.next_system_utterance__sure',60.0399,59,0.2258,6
+4553,4.1,b'4.1-ngram.next_user_utterance__address',275.7813,14,0.1890,7
+4875,4.1,b'4.1-ngram.next_user_utterance__number',213.1081,19,0.1828,8
+4726,4.1,b'4.1-ngram.next_user_utterance__good',342.6585,7,0.1675,9
+2847,4.1,b'4.1-ngram.next_system_utterance__number',77.2558,44,0.1527,10
+3519,4.1,b'4.1-ngram.next_system_utterance__right',83.0720,40,0.1512,11
+3051,4.1,b'4.1-ngram.next_system_utterance__phone',77.2558,45,0.1486,12
+3052,4.1,b'4.1-ngram.next_system_utterance__phone number',77.2558,46,0.1449,13
+473,4.1,b'4.1-ngram.current_user_utterance__phone',199.8041,24,0.1031,14
+5174,4.1,b'4.1-ngram.next_user_utterance__yes',202.5400,21,0.1030,15
+5068,4.1,b'4.1-ngram.next_user_utterance__thank good',331.0370,10,0.1013,16
+5069,4.1,b'4.1-ngram.next_user_utterance__thank good bye',328.6396,11,0.0992,17
+3613,4.1,b'4.1-ngram.next_system_utterance__serves',23.9108,145,0.0961,18
+3,4.1,b'4.1-ngram.current_user_utterance__address phone number',29.4059,119,0.0794,19
+927,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,1024,0.0687,20
+119,4.1,b'4.1-ngram.current_user_utterance__code',58.8962,61,0.0644,21
+4673,4.1,b'4.1-ngram.next_user_utterance__doesnt',101.6540,33,0.0599,22
+4833,4.1,b'4.1-ngram.next_user_utterance__matter',99.7411,35,0.0585,23
+4938,4.1,b'4.1-ngram.next_user_utterance__post code',58.4127,63,0.0570,24
+2746,4.1,b'4.1-ngram.next_system_utterance__mind',278.7280,13,0.0544,25
+4362,4.1,b'4.1-ngram.next_system_utterance__town mind',278.7280,12,0.0501,26
+4370,4.1,b'4.1-ngram.next_system_utterance__town serving',15.8681,220,0.0478,27
+4615,4.1,b'4.1-ngram.next_user_utterance__bye',341.2626,8,0.0412,28
+2219,4.1,b'4.1-ngram.next_system_utterance__greek',9.3723,431,0.0410,29
+4676,4.1,b'4.1-ngram.next_user_utterance__dont care',247.8362,16,0.0389,30
+5156,4.1,b'4.1-ngram.next_user_utterance__whats',97.8851,36,0.0378,31
+2250,4.1,b'4.1-ngram.next_system_utterance__help',44.0128,79,0.0372,32
+3877,4.1,b'4.1-ngram.next_system_utterance__sorry',80.5223,42,0.0362,33
+223,4.1,b'4.1-ngram.current_user_utterance__greek',15.4312,228,0.0355,34
+583,4.1,b'4.1-ngram.current_user_utterance__restaurant south',22.2163,152,0.0348,35
+2,4.1,b'4.1-ngram.current_user_utterance__address phone',29.4522,118,0.0347,36
+5070,4.1,b'4.1-ngram.next_user_utterance__thank goodbye',67.7185,50,0.0346,37
+4009,4.1,b'4.1-ngram.next_system_utterance__south town prices',9.1077,453,0.0338,38
+494,4.1,b'4.1-ngram.current_user_utterance__post code',62.6675,54,0.0326,39
+4921,4.1,b'4.1-ngram.next_user_utterance__phone number',213.5485,18,0.0314,40
+4650,4.1,b'4.1-ngram.next_user_utterance__code',60.1021,58,0.0303,41
+4355,4.1,b'4.1-ngram.next_system_utterance__town',52.6597,69,0.0295,42
+1933,4.1,b'4.1-ngram.next_system_utterance__cuban',5.9566,832,0.0273,43
+4731,4.1,b'4.1-ngram.next_user_utterance__goodbye',67.4991,51,0.0270,44
+3943,4.1,b'4.1-ngram.next_system_utterance__sorry like',22.1429,153,0.0268,45
+2803,4.1,b'4.1-ngram.next_system_utterance__nice restaurant',12.3824,306,0.0263,46
+2398,4.1,b'4.1-ngram.next_system_utterance__italian food',8.0758,558,0.0236,47
+3658,4.1,b'4.1-ngram.next_system_utterance__serving',10.0014,408,0.0232,48
+543,4.1,b'4.1-ngram.current_user_utterance__restaurant north town',15.2181,235,0.0221,49
+4674,4.1,b'4.1-ngram.next_user_utterance__doesnt matter',100.8722,34,0.0219,50
+368,4.1,b'4.1-ngram.current_user_utterance__matter',5.7132,871,0.0213,51
+325,4.1,b'4.1-ngram.current_user_utterance__looking',45.7299,77,0.0208,52
+1749,4.1,b'4.1-ngram.next_system_utterance__chop house nice',5.7824,864,0.0199,53
+371,4.1,b'4.1-ngram.current_user_utterance__mexican',5.5824,900,0.0194,54
+3028,4.1,b'4.1-ngram.next_system_utterance__park',15.9047,219,0.0187,55
+493,4.1,b'4.1-ngram.current_user_utterance__post',62.7425,53,0.0181,56
+4920,4.1,b'4.1-ngram.next_user_utterance__phone',206.4758,20,0.0179,57
+810,4.1,b'4.1-ngram.current_user_utterance__type food',11.9334,322,0.0179,58
+430,4.1,b'4.1-ngram.current_user_utterance__number address',6.6979,711,0.0177,59
+1,4.1,b'4.1-ngram.current_user_utterance__address',350.4873,6,0.0175,60
+3337,4.1,b'4.1-ngram.next_system_utterance__restaurant',37.3161,96,0.0174,61
+500,4.1,b'4.1-ngram.current_user_utterance__price',10.6667,385,0.0174,62
+475,4.1,b'4.1-ngram.current_user_utterance__phone number address',6.6979,710,0.0174,63
+2533,4.1,b'4.1-ngram.next_system_utterance__like cheap',103.8026,32,0.0168,64
+3129,4.1,b'4.1-ngram.next_system_utterance__pizza',11.1956,356,0.0167,65
+3410,4.1,b'4.1-ngram.next_system_utterance__restaurant nice place',5.2749,989,0.0165,66
+2161,4.1,b'4.1-ngram.next_system_utterance__gardenia',5.1631,1011,0.0163,67
+529,4.1,b'4.1-ngram.current_user_utterance__restaurant',91.1197,38,0.0163,68
+1533,4.1,b'4.1-ngram.next_system_utterance__binh nice place',5.4463,928,0.0162,69
+2397,4.1,b'4.1-ngram.next_system_utterance__italian',6.3399,772,0.0158,70
+1702,4.1,b'4.1-ngram.next_system_utterance__cheap',20.0837,170,0.0157,71
+2325,4.1,b'4.1-ngram.next_system_utterance__house',10.5298,386,0.0156,72
+896,4.1,b'4.1-ngram.current_user_utterance__whats',122.0281,25,0.0156,73
+2065,4.1,b'4.1-ngram.next_system_utterance__family restaurant nice',11.3175,350,0.0146,74
+2346,4.1,b'4.1-ngram.next_system_utterance__house nice restaurant',7.7858,602,0.0146,75
+3967,4.1,b'4.1-ngram.next_system_utterance__sorry restaurant',54.0617,67,0.0146,76
+904,4.1,b'4.1-ngram.current_user_utterance__whats post',16.0649,211,0.0146,77
+2774,4.1,b'4.1-ngram.next_system_utterance__nandos',11.8552,326,0.0145,78
+4005,4.1,b'4.1-ngram.next_system_utterance__south town cheap',5.9266,844,0.0145,79
+102,4.1,b'4.1-ngram.current_user_utterance__cheap restaurant',18.9026,188,0.0144,80
+2085,4.1,b'4.1-ngram.next_system_utterance__food',95.8159,37,0.0144,81
+125,4.1,b'4.1-ngram.current_user_utterance__creative',13.2133,287,0.0143,82
+905,4.1,b'4.1-ngram.current_user_utterance__whats post code',16.0649,210,0.0143,83
+917,4.1,b'4.1-ngram.current_user_utterance__yes',81.1675,41,0.0140,84
+538,4.1,b'4.1-ngram.current_user_utterance__restaurant east',7.9250,578,0.0138,85
+897,4.1,b'4.1-ngram.current_user_utterance__whats address',78.9186,43,0.0135,86
+3442,4.1,b'4.1-ngram.next_system_utterance__restaurant serving chinese',6.3003,780,0.0135,87
+327,4.1,b'4.1-ngram.current_user_utterance__looking cheap',5.9384,838,0.0135,88
+429,4.1,b'4.1-ngram.current_user_utterance__number',201.0520,23,0.0126,89
+4675,4.1,b'4.1-ngram.next_user_utterance__dont',242.3177,17,0.0126,90
+4010,4.1,b'4.1-ngram.next_system_utterance__south town serving',7.0929,660,0.0125,91
+2570,4.1,b'4.1-ngram.next_system_utterance__lodge restaurant great',9.1811,450,0.0123,92
+3425,4.1,b'4.1-ngram.next_system_utterance__restaurant serving',42.9293,82,0.0123,93
+4454,4.1,b'4.1-ngram.next_system_utterance__vietnamese food',5.8275,854,0.0122,94
+5048,4.1,b'4.1-ngram.next_user_utterance__spanish food',17.2394,203,0.0121,95
+506,4.1,b'4.1-ngram.current_user_utterance__priced restaurant',34.7352,102,0.0120,96
+145,4.1,b'4.1-ngram.current_user_utterance__doesnt',5.7195,870,0.0120,97
+1669,4.1,b'4.1-ngram.next_system_utterance__centre',17.7544,197,0.0118,98
+130,4.1,b'4.1-ngram.current_user_utterance__cuban food',6.2162,795,0.0116,99
+584,4.1,b'4.1-ngram.current_user_utterance__restaurant south town',22.9142,149,0.0116,100
+4554,4.1,b'4.1-ngram.next_user_utterance__address phone',61.7898,55,0.0114,101
+1449,4.1,b'4.1-ngram.next_system_utterance__bar 01223',5.6867,876,0.0113,102
+422,4.1,b'4.1-ngram.current_user_utterance__north',40.1181,91,0.0113,103
+869,4.1,b'4.1-ngram.current_user_utterance__want expensive restaurant',9.3943,429,0.0113,104
+4667,4.1,b'4.1-ngram.next_user_utterance__does',10.7541,378,0.0112,105
+78,4.1,b'4.1-ngram.current_user_utterance__care',31.3192,111,0.0109,106
+148,4.1,b'4.1-ngram.current_user_utterance__dont care',31.8893,109,0.0109,107
+2807,4.1,b'4.1-ngram.next_system_utterance__nice restaurant south',7.9895,571,0.0107,108
+1421,4.1,b'4.1-ngram.next_system_utterance__austrian',11.2312,352,0.0106,109
+524,4.1,b'4.1-ngram.current_user_utterance__range',16.9122,204,0.0106,110
+4586,4.1,b'4.1-ngram.next_user_utterance__asian food',16.6575,206,0.0105,111
+2391,4.1,b'4.1-ngram.next_system_utterance__irish',5.6340,886,0.0103,112
+30,4.1,b'4.1-ngram.current_user_utterance__area',19.8410,174,0.0103,113
+348,4.1,b'4.1-ngram.current_user_utterance__looking restaurant',20.9511,162,0.0100,114
+501,4.1,b'4.1-ngram.current_user_utterance__price range',16.9122,205,0.0100,115
+4720,4.1,b'4.1-ngram.next_user_utterance__gastropub food',21.4846,158,0.0099,116
+2216,4.1,b'4.1-ngram.next_system_utterance__great',76.7710,47,0.0097,117
+3338,4.1,b'4.1-ngram.next_system_utterance__restaurant 01223',19.0528,187,0.0097,118
+3185,4.1,b'4.1-ngram.next_system_utterance__post code',35.1178,100,0.0097,119
+5044,4.1,b'4.1-ngram.next_user_utterance__south',52.4510,70,0.0096,120
+5026,4.1,b'4.1-ngram.next_user_utterance__serving',13.2579,285,0.0096,121
+1797,4.1,b'4.1-ngram.next_system_utterance__code',35.1178,99,0.0096,122
+2479,4.1,b'4.1-ngram.next_system_utterance__la',12.4013,304,0.0095,123
+435,4.1,b'4.1-ngram.current_user_utterance__number price',17.6305,198,0.0094,124
+1665,4.1,b'4.1-ngram.next_system_utterance__catalan',6.6436,729,0.0094,125
+436,4.1,b'4.1-ngram.current_user_utterance__number price range',17.6305,199,0.0094,126
+929,4.1,b'4.1-ngram.next_system_utterance__01223',72.5971,49,0.0093,127
+2785,4.1,b'4.1-ngram.next_system_utterance__nandos nice',5.6352,885,0.0093,128
+3223,4.1,b'4.1-ngram.next_system_utterance__prezzo',6.5497,738,0.0093,129
+3134,4.1,b'4.1-ngram.next_system_utterance__pizza hut',8.6509,503,0.0091,130
+778,4.1,b'4.1-ngram.current_user_utterance__town serves',13.1005,291,0.0090,131
+2361,4.1,b'4.1-ngram.next_system_utterance__hut',8.6509,502,0.0090,132
+59,4.1,b'4.1-ngram.current_user_utterance__bout',5.6116,895,0.0090,133
+2217,4.1,b'4.1-ngram.next_system_utterance__great restaurant',76.7710,48,0.0089,134
+426,4.1,b'4.1-ngram.current_user_utterance__north town',21.7228,154,0.0089,135
+479,4.1,b'4.1-ngram.current_user_utterance__phone number price',17.6305,200,0.0088,136
+5047,4.1,b'4.1-ngram.next_user_utterance__spanish',48.0353,74,0.0087,137
+171,4.1,b'4.1-ngram.current_user_utterance__expensive restaurant',41.1110,88,0.0087,138
+3281,4.1,b'4.1-ngram.next_system_utterance__rajmahal moderate',11.1585,358,0.0086,139
+4154,4.1,b'4.1-ngram.next_system_utterance__sure la',7.2317,645,0.0084,140
+907,4.1,b'4.1-ngram.current_user_utterance__whats price range',11.2154,355,0.0084,141
+1958,4.1,b'4.1-ngram.next_system_utterance__danish',11.7278,331,0.0084,142
+4838,4.1,b'4.1-ngram.next_user_utterance__moderate',37.2288,97,0.0083,143
+1726,4.1,b'4.1-ngram.next_system_utterance__chesterton',20.8422,163,0.0083,144
+2809,4.1,b'4.1-ngram.next_system_utterance__nirala',5.1277,1017,0.0083,145
+4669,4.1,b'4.1-ngram.next_user_utterance__does serve',11.0455,369,0.0082,146
+4377,4.1,b'4.1-ngram.next_system_utterance__town serving halal',6.2439,791,0.0080,147
+1768,4.1,b'4.1-ngram.next_system_utterance__city centre',24.6482,132,0.0080,148
+343,4.1,b'4.1-ngram.current_user_utterance__looking moderately',14.3014,268,0.0080,149
+4934,4.1,b'4.1-ngram.next_user_utterance__portuguese',10.7582,377,0.0080,150
+4205,4.1,b'4.1-ngram.next_system_utterance__sure royal',5.9917,815,0.0079,151
+4633,4.1,b'4.1-ngram.next_user_utterance__centre',6.0578,808,0.0079,152
+893,4.1,b'4.1-ngram.current_user_utterance__west town',9.5511,423,0.0078,153
+4621,4.1,b'4.1-ngram.next_user_utterance__care',251.4285,15,0.0077,154
+1448,4.1,b'4.1-ngram.next_system_utterance__bar',9.3260,436,0.0077,155
+906,4.1,b'4.1-ngram.current_user_utterance__whats price',11.2154,354,0.0076,156
+3184,4.1,b'4.1-ngram.next_system_utterance__post',35.1178,101,0.0076,157
+468,4.1,b'4.1-ngram.current_user_utterance__pan asian',12.3634,307,0.0076,158
+4256,4.1,b'4.1-ngram.next_system_utterance__tandoori',10.2820,394,0.0074,159
+743,4.1,b'4.1-ngram.current_user_utterance__south',41.9273,87,0.0074,160
+4612,4.1,b'4.1-ngram.next_user_utterance__breathing',12.3103,309,0.0073,161
+4957,4.1,b'4.1-ngram.next_user_utterance__restaurant',27.4754,125,0.0073,162
+4840,4.1,b'4.1-ngram.next_user_utterance__moderate price range',5.2602,993,0.0072,163
+542,4.1,b'4.1-ngram.current_user_utterance__restaurant north',18.3057,192,0.0072,164
+2755,4.1,b'4.1-ngram.next_system_utterance__moderate',19.7493,175,0.0071,165
+739,4.1,b'4.1-ngram.current_user_utterance__singaporean',11.0926,361,0.0071,166
+5155,4.1,b'4.1-ngram.next_user_utterance__west town',11.5654,347,0.0071,167
+750,4.1,b'4.1-ngram.current_user_utterance__spanish food',8.5816,509,0.0070,168
+4472,4.1,b'4.1-ngram.next_system_utterance__vinci pizzeria great',8.5778,510,0.0070,169
+3530,4.1,b'4.1-ngram.next_system_utterance__road chesterton',14.0473,276,0.0070,170
+200,4.1,b'4.1-ngram.current_user_utterance__food type',27.4940,124,0.0069,171
+4727,4.1,b'4.1-ngram.next_user_utterance__good bye',339.5286,9,0.0069,172
+4751,4.1,b'4.1-ngram.next_user_utterance__im',9.3932,430,0.0069,173
+4889,4.1,b'4.1-ngram.next_user_utterance__okay',7.0177,671,0.0069,174
+165,4.1,b'4.1-ngram.current_user_utterance__expensive',26.9996,126,0.0068,175
+255,4.1,b'4.1-ngram.current_user_utterance__im looking moderately',10.4653,387,0.0068,176
+4810,4.1,b'4.1-ngram.next_user_utterance__looking',13.0636,292,0.0068,177
+5157,4.1,b'4.1-ngram.next_user_utterance__whats address',62.8542,52,0.0067,178
+4604,4.1,b'4.1-ngram.next_user_utterance__bout',6.6919,712,0.0067,179
+587,4.1,b'4.1-ngram.current_user_utterance__restaurant west',8.8237,480,0.0067,180
+4753,4.1,b'4.1-ngram.next_user_utterance__im looking',9.8326,415,0.0066,181
+745,4.1,b'4.1-ngram.current_user_utterance__south town',42.5865,84,0.0066,182
+3108,4.1,b'4.1-ngram.next_system_utterance__phone number royal',7.9633,573,0.0065,183
+2050,4.1,b'4.1-ngram.next_system_utterance__expensive price range',34.2178,104,0.0064,184
+2049,4.1,b'4.1-ngram.next_system_utterance__expensive price',34.2178,103,0.0064,185
+4900,4.1,b'4.1-ngram.next_user_utterance__okay thank good',11.1941,357,0.0064,186
+588,4.1,b'4.1-ngram.current_user_utterance__restaurant west town',8.3311,542,0.0062,187
+441,4.1,b'4.1-ngram.current_user_utterance__ok',11.2270,353,0.0062,188
+4905,4.1,b'4.1-ngram.next_user_utterance__okay whats',8.7510,490,0.0062,189
+3274,4.1,b'4.1-ngram.next_system_utterance__rajmahal',5.1617,1012,0.0061,190
+758,4.1,b'4.1-ngram.current_user_utterance__swiss',8.2890,543,0.0061,191
+262,4.1,b'4.1-ngram.current_user_utterance__indian',11.2846,351,0.0060,192
+859,4.1,b'4.1-ngram.current_user_utterance__vietnamese',12.6595,298,0.0060,193
+2966,4.1,b'4.1-ngram.next_system_utterance__number royal',7.9633,572,0.0059,194
+2118,4.1,b'4.1-ngram.next_system_utterance__french restaurant west',7.2827,643,0.0059,195
+4771,4.1,b'4.1-ngram.next_user_utterance__international food',12.3999,305,0.0059,196
+4837,4.1,b'4.1-ngram.next_user_utterance__mexican food',5.2257,997,0.0059,197
+3376,4.1,b'4.1-ngram.next_system_utterance__restaurant bar great',5.5657,906,0.0059,198
+4821,4.1,b'4.1-ngram.next_user_utterance__looking restaurant',5.7573,869,0.0057,199
+2179,4.1,b'4.1-ngram.next_system_utterance__german',5.5612,907,0.0056,200
+514,4.1,b'4.1-ngram.current_user_utterance__priced restaurant west',6.4243,754,0.0056,201
+3332,4.1,b'4.1-ngram.next_system_utterance__regent street city',7.0374,669,0.0056,202
+1760,4.1,b'4.1-ngram.next_system_utterance__city',27.6487,123,0.0056,203
+4555,4.1,b'4.1-ngram.next_user_utterance__address phone number',61.0439,57,0.0055,204
+565,4.1,b'4.1-ngram.current_user_utterance__restaurant serves portuguese',5.4534,925,0.0055,205
+5153,4.1,b'4.1-ngram.next_user_utterance__west',36.9282,98,0.0055,206
+3970,4.1,b'4.1-ngram.next_system_utterance__sorry restaurant serving',53.1458,68,0.0054,207
+4899,4.1,b'4.1-ngram.next_user_utterance__okay thank',17.3009,202,0.0054,208
+903,4.1,b'4.1-ngram.current_user_utterance__whats phone number',54.3206,66,0.0054,209
+151,4.1,b'4.1-ngram.current_user_utterance__east',21.4818,159,0.0053,210
+4778,4.1,b'4.1-ngram.next_user_utterance__jamaican',9.2078,446,0.0053,211
+5082,4.1,b'4.1-ngram.next_user_utterance__town',31.3481,110,0.0053,212
+248,4.1,b'4.1-ngram.current_user_utterance__im looking cheap',5.8923,849,0.0053,213
+1689,4.1,b'4.1-ngram.next_system_utterance__centre town serving',5.4489,927,0.0052,214
+3924,4.1,b'4.1-ngram.next_system_utterance__sorry hear',46.8041,76,0.0052,215
+2796,4.1,b'4.1-ngram.next_system_utterance__nice',26.4518,128,0.0052,216
+759,4.1,b'4.1-ngram.current_user_utterance__swiss food',8.2890,544,0.0052,217
+3162,4.1,b'4.1-ngram.next_system_utterance__place south',5.4177,934,0.0052,218
+4582,4.1,b'4.1-ngram.next_user_utterance__area',12.1937,315,0.0052,219
+4636,4.1,b'4.1-ngram.next_user_utterance__cheap',61.2123,56,0.0052,220
+3024,4.1,b'4.1-ngram.next_system_utterance__panahar',6.4213,755,0.0052,221
+82,4.1,b'4.1-ngram.current_user_utterance__caribbean food',12.8383,296,0.0052,222
+4791,4.1,b'4.1-ngram.next_user_utterance__korean',12.5808,299,0.0051,223
+437,4.1,b'4.1-ngram.current_user_utterance__number type',10.9195,374,0.0051,224
+3163,4.1,b'4.1-ngram.next_system_utterance__place south town',5.4177,933,0.0051,225
+2801,4.1,b'4.1-ngram.next_system_utterance__nice place south',5.4177,932,0.0050,226
+480,4.1,b'4.1-ngram.current_user_utterance__phone number type',10.9195,373,0.0050,227
+4864,4.1,b'4.1-ngram.next_user_utterance__noise',5.3867,948,0.0050,228
+99,4.1,b'4.1-ngram.current_user_utterance__cheap',18.6211,189,0.0050,229
+491,4.1,b'4.1-ngram.current_user_utterance__portuguese food',6.2488,789,0.0050,230
+775,4.1,b'4.1-ngram.current_user_utterance__theres venue',8.8042,485,0.0049,231
+2249,4.1,b'4.1-ngram.next_system_utterance__hear',46.8041,75,0.0049,232
+856,4.1,b'4.1-ngram.current_user_utterance__venue',8.8982,461,0.0049,233
+3534,4.1,b'4.1-ngram.next_system_utterance__road fen ditton',9.2917,442,0.0049,234
+432,4.1,b'4.1-ngram.current_user_utterance__number post',7.8950,585,0.0049,235
+3533,4.1,b'4.1-ngram.next_system_utterance__road fen',9.2917,443,0.0049,236
+776,4.1,b'4.1-ngram.current_user_utterance__town',51.2997,71,0.0048,237
+892,4.1,b'4.1-ngram.current_user_utterance__west area',8.5931,508,0.0048,238
+4179,4.1,b'4.1-ngram.next_system_utterance__sure nandos',9.1548,451,0.0048,239
+5058,4.1,b'4.1-ngram.next_user_utterance__telephone',5.2665,992,0.0048,240
+4774,4.1,b'4.1-ngram.next_user_utterance__italian',23.8332,146,0.0047,241
+1480,4.1,b'4.1-ngram.next_system_utterance__bar serves',5.3595,954,0.0047,242
+740,4.1,b'4.1-ngram.current_user_utterance__singaporean food',19.0670,186,0.0047,243
+4571,4.1,b'4.1-ngram.next_user_utterance__alright',6.4112,757,0.0046,244
+433,4.1,b'4.1-ngram.current_user_utterance__number post code',7.8950,583,0.0046,245
+702,4.1,b'4.1-ngram.current_user_utterance__serving',10.2117,395,0.0046,246
+4625,4.1,b'4.1-ngram.next_user_utterance__caribbean food',6.9321,695,0.0046,247
+2046,4.1,b'4.1-ngram.next_system_utterance__expensive',26.1490,130,0.0046,248
+81,4.1,b'4.1-ngram.current_user_utterance__caribbean',12.7402,297,0.0045,249
+4635,4.1,b'4.1-ngram.next_user_utterance__change',12.9620,294,0.0045,250
+180,4.1,b'4.1-ngram.current_user_utterance__food',26.5851,127,0.0045,251
+4569,4.1,b'4.1-ngram.next_user_utterance__ah',11.8768,323,0.0045,252
+2208,4.1,b'4.1-ngram.next_system_utterance__graffiti nice place',8.4914,513,0.0045,253
+4770,4.1,b'4.1-ngram.next_user_utterance__international',14.9613,248,0.0045,254
+2119,4.1,b'4.1-ngram.next_system_utterance__fusion',15.2530,234,0.0044,255
+2374,4.1,b'4.1-ngram.next_system_utterance__indian food',6.0917,804,0.0044,256
+2088,4.1,b'4.1-ngram.next_system_utterance__food cheap',6.2673,786,0.0044,257
+83,4.1,b'4.1-ngram.current_user_utterance__catalan',7.0157,672,0.0044,258
+4639,4.1,b'4.1-ngram.next_user_utterance__cheap restaurant',5.1506,1013,0.0043,259
+2008,4.1,b'4.1-ngram.next_system_utterance__east town cheap',5.2684,990,0.0043,260
+762,4.1,b'4.1-ngram.current_user_utterance__telephone',14.3006,269,0.0043,261
+4766,4.1,b'4.1-ngram.next_user_utterance__indian restaurant',6.7871,707,0.0043,262
+520,4.1,b'4.1-ngram.current_user_utterance__prices',12.2084,313,0.0043,263
+4763,4.1,b'4.1-ngram.next_user_utterance__indian',41.9727,86,0.0042,264
+2344,4.1,b'4.1-ngram.next_system_utterance__house nice',5.4514,926,0.0042,265
+4873,4.1,b'4.1-ngram.next_user_utterance__north town',7.9935,570,0.0042,266
+4890,4.1,b'4.1-ngram.next_user_utterance__okay address',8.6845,501,0.0042,267
+4689,4.1,b'4.1-ngram.next_user_utterance__excellent',6.8158,705,0.0042,268
+3409,4.1,b'4.1-ngram.next_system_utterance__restaurant nice',5.4962,917,0.0042,269
+4994,4.1,b'4.1-ngram.next_user_utterance__serve',6.3574,769,0.0042,270
+2758,4.1,b'4.1-ngram.next_system_utterance__moderate expensive',106.9476,27,0.0041,271
+431,4.1,b'4.1-ngram.current_user_utterance__number area',5.1803,1006,0.0041,272
+3501,4.1,b'4.1-ngram.next_system_utterance__restaurant west town',9.8110,418,0.0041,273
+2089,4.1,b'4.1-ngram.next_system_utterance__food cheap price',6.2673,787,0.0041,274
+4999,4.1,b'4.1-ngram.next_user_utterance__serves',11.8666,324,0.0041,275
+4697,4.1,b'4.1-ngram.next_user_utterance__food',105.7182,31,0.0041,276
+210,4.1,b'4.1-ngram.current_user_utterance__gastropub',24.3483,141,0.0041,277
+2182,4.1,b'4.1-ngram.next_system_utterance__golden',5.5479,908,0.0041,278
+5061,4.1,b'4.1-ngram.next_user_utterance__thai',49.1467,73,0.0041,279
+4626,4.1,b'4.1-ngram.next_user_utterance__catalan',10.9754,372,0.0041,280
+490,4.1,b'4.1-ngram.current_user_utterance__portuguese',9.0979,454,0.0040,281
+2621,4.1,b'4.1-ngram.next_system_utterance__looking restaurant',58.5197,62,0.0040,282
+3500,4.1,b'4.1-ngram.next_system_utterance__restaurant west',9.8110,417,0.0040,283
+1596,4.1,b'4.1-ngram.next_system_utterance__british restaurant north',24.0421,142,0.0039,284
+880,4.1,b'4.1-ngram.current_user_utterance__want restaurant',5.3816,949,0.0039,285
+477,4.1,b'4.1-ngram.current_user_utterance__phone number post',7.8950,584,0.0039,286
+4365,4.1,b'4.1-ngram.next_system_utterance__town prices',19.3028,178,0.0039,287
+476,4.1,b'4.1-ngram.current_user_utterance__phone number area',5.1803,1007,0.0039,288
+391,4.1,b'4.1-ngram.current_user_utterance__modern european food',7.3166,639,0.0038,289
+809,4.1,b'4.1-ngram.current_user_utterance__type',15.6905,226,0.0038,290
+1487,4.1,b'4.1-ngram.next_system_utterance__barbeque',8.4137,521,0.0038,291
+2840,4.1,b'4.1-ngram.next_system_utterance__north town expensive',7.9297,576,0.0038,292
+291,4.1,b'4.1-ngram.current_user_utterance__kitalian',10.0446,407,0.0038,293
+4984,4.1,b'4.1-ngram.next_user_utterance__restaurants',5.9028,848,0.0038,294
+2322,4.1,b'4.1-ngram.next_system_utterance__hotpot nice',5.4883,919,0.0037,295
+2534,4.1,b'4.1-ngram.next_system_utterance__like cheap moderate',106.9476,29,0.0037,296
+4846,4.1,b'4.1-ngram.next_user_utterance__modern european',10.1624,402,0.0037,297
+2787,4.1,b'4.1-ngram.next_system_utterance__nandos nice restaurant',6.6360,732,0.0036,298
+5141,4.1,b'4.1-ngram.next_user_utterance__want address',15.1990,236,0.0036,299
+2759,4.1,b'4.1-ngram.next_system_utterance__moderate expensive price',106.9476,26,0.0036,300
+1962,4.1,b'4.1-ngram.next_system_utterance__danish restaurant matches',10.6987,382,0.0036,301
+4843,4.1,b'4.1-ngram.next_user_utterance__moderately priced',6.5441,739,0.0035,302
+467,4.1,b'4.1-ngram.current_user_utterance__pan',12.9853,293,0.0035,303
+850,4.1,b'4.1-ngram.current_user_utterance__unusual',20.6508,165,0.0035,304
+257,4.1,b'4.1-ngram.current_user_utterance__im looking restaurant',20.1319,169,0.0035,305
+292,4.1,b'4.1-ngram.current_user_utterance__kitalian food',10.0446,406,0.0035,306
+812,4.1,b'4.1-ngram.current_user_utterance__type food serve',6.2372,793,0.0035,307
+766,4.1,b'4.1-ngram.current_user_utterance__thai food',45.6629,78,0.0035,308
+3257,4.1,b'4.1-ngram.next_system_utterance__prices',19.3028,177,0.0035,309
+355,4.1,b'4.1-ngram.current_user_utterance__looking restaurant south',7.2373,644,0.0034,310
+2717,4.1,b'4.1-ngram.next_system_utterance__michaelhouse',8.3819,523,0.0034,311
+803,4.1,b'4.1-ngram.current_user_utterance__turkiesh',11.5529,348,0.0034,312
+4942,4.1,b'4.1-ngram.next_user_utterance__prezzo',19.8986,172,0.0034,313
+3415,4.1,b'4.1-ngram.next_system_utterance__restaurant serves',6.5113,740,0.0034,314
+2551,4.1,b'4.1-ngram.next_system_utterance__little',13.4255,281,0.0034,315
+2687,4.1,b'4.1-ngram.next_system_utterance__mediterranean food',6.4907,741,0.0034,316
+2310,4.1,b'4.1-ngram.next_system_utterance__hotel restaurant great',5.8559,852,0.0033,317
+60,4.1,b'4.1-ngram.current_user_utterance__bout asian',7.8840,591,0.0033,318
+273,4.1,b'4.1-ngram.current_user_utterance__irish food',6.4630,750,0.0033,319
+4842,4.1,b'4.1-ngram.next_user_utterance__moderately',8.8173,482,0.0033,320
+4784,4.1,b'4.1-ngram.next_user_utterance__kind',19.9644,171,0.0033,321
+1713,4.1,b'4.1-ngram.next_system_utterance__cheap moderate',106.9476,28,0.0033,322
+2015,4.1,b'4.1-ngram.next_system_utterance__efes restaurant',6.9468,686,0.0032,323
+4677,4.1,b'4.1-ngram.next_user_utterance__dont care price',5.2786,988,0.0032,324
+4944,4.1,b'4.1-ngram.next_user_utterance__price',7.6274,614,0.0032,325
+4876,4.1,b'4.1-ngram.next_user_utterance__number address',14.4021,266,0.0032,326
+1111,4.1,b'4.1-ngram.next_system_utterance__21',6.2306,794,0.0032,327
+2014,4.1,b'4.1-ngram.next_system_utterance__efes',6.9468,687,0.0032,328
+4061,4.1,b'4.1-ngram.next_system_utterance__star nice',5.7910,859,0.0032,329
+2718,4.1,b'4.1-ngram.next_system_utterance__michaelhouse cafe',8.3819,524,0.0032,330
+76,4.1,b'4.1-ngram.current_user_utterance__cantonese',5.6105,896,0.0032,331
+3321,4.1,b'4.1-ngram.next_system_utterance__raza',6.4890,743,0.0032,332
+3531,4.1,b'4.1-ngram.next_system_utterance__road city',8.8101,483,0.0032,333
+4922,4.1,b'4.1-ngram.next_user_utterance__phone number address',14.4021,267,0.0031,334
+2492,4.1,b'4.1-ngram.next_system_utterance__la raza',6.4890,742,0.0031,335
+4834,4.1,b'4.1-ngram.next_user_utterance__mediterranean',17.4223,201,0.0031,336
+853,4.1,b'4.1-ngram.current_user_utterance__vegetarian food',7.3394,638,0.0031,337
+4658,4.1,b'4.1-ngram.next_user_utterance__creative food',5.2421,996,0.0031,338
+3573,4.1,b'4.1-ngram.next_system_utterance__saint',9.2765,444,0.0031,339
+4898,4.1,b'4.1-ngram.next_user_utterance__okay restaurant',16.1598,209,0.0030,340
+572,4.1,b'4.1-ngram.current_user_utterance__restaurant serves welsh',7.7211,612,0.0030,341
+126,4.1,b'4.1-ngram.current_user_utterance__creative food',9.2197,445,0.0030,342
+393,4.1,b'4.1-ngram.current_user_utterance__moroccan',8.3530,527,0.0030,343
+245,4.1,b'4.1-ngram.current_user_utterance__im',39.8381,92,0.0030,344
+1634,4.1,b'4.1-ngram.next_system_utterance__cambridge leisure park',15.3466,230,0.0030,345
+1626,4.1,b'4.1-ngram.next_system_utterance__cambridge',16.6406,207,0.0030,346
+1633,4.1,b'4.1-ngram.next_system_utterance__cambridge leisure',15.3466,232,0.0030,347
+4764,4.1,b'4.1-ngram.next_user_utterance__indian food',23.5765,147,0.0030,348
+4657,4.1,b'4.1-ngram.next_user_utterance__creative',5.4065,943,0.0029,349
+2653,4.1,b'4.1-ngram.next_system_utterance__lucky star nice',5.7910,858,0.0029,350
+2294,4.1,b'4.1-ngram.next_system_utterance__hotel',7.8769,592,0.0029,351
+1714,4.1,b'4.1-ngram.next_system_utterance__cheap moderate expensive',106.9476,30,0.0029,352
+4644,4.1,b'4.1-ngram.next_user_utterance__chinese',27.6588,122,0.0029,353
+4742,4.1,b'4.1-ngram.next_user_utterance__hello',13.1196,290,0.0028,354
+5051,4.1,b'4.1-ngram.next_user_utterance__steak',7.0212,670,0.0028,355
+146,4.1,b'4.1-ngram.current_user_utterance__doesnt matter',6.0141,812,0.0028,356
+4557,4.1,b'4.1-ngram.next_user_utterance__address post code',5.6263,890,0.0028,357
+150,4.1,b'4.1-ngram.current_user_utterance__dont want',5.9791,823,0.0028,358
+600,4.1,b'4.1-ngram.current_user_utterance__scandinavian food',14.4335,265,0.0028,359
+791,4.1,b'4.1-ngram.current_user_utterance__town serving',8.0643,559,0.0028,360
+5158,4.1,b'4.1-ngram.next_user_utterance__whats address phone',8.9129,460,0.0028,361
+1918,4.1,b'4.1-ngram.next_system_utterance__creative',5.7042,873,0.0028,362
+1718,4.1,b'4.1-ngram.next_system_utterance__cherry hinton',21.5789,157,0.0028,363
+280,4.1,b'4.1-ngram.current_user_utterance__jamaican',7.5012,627,0.0028,364
+295,4.1,b'4.1-ngram.current_user_utterance__korean',14.5838,253,0.0027,365
+29,4.1,b'4.1-ngram.current_user_utterance__appleton',20.4393,167,0.0027,366
+2519,4.1,b'4.1-ngram.next_system_utterance__leisure park',15.3466,231,0.0027,367
+4871,4.1,b'4.1-ngram.next_user_utterance__north american food',6.9105,698,0.0027,368
+898,4.1,b'4.1-ngram.current_user_utterance__whats address phone',5.2082,999,0.0027,369
+2518,4.1,b'4.1-ngram.next_system_utterance__leisure',15.3466,229,0.0027,370
+5165,4.1,b'4.1-ngram.next_user_utterance__whats price',8.4794,515,0.0026,371
+5040,4.1,b'4.1-ngram.next_user_utterance__sil',9.9183,411,0.0026,372
+763,4.1,b'4.1-ngram.current_user_utterance__telephone number',15.7955,221,0.0026,373
+2764,4.1,b'4.1-ngram.next_system_utterance__moderate restaurant',7.8499,596,0.0026,374
+5062,4.1,b'4.1-ngram.next_user_utterance__thai food',30.9868,112,0.0026,375
+394,4.1,b'4.1-ngram.current_user_utterance__moroccan food',6.8374,704,0.0026,376
+847,4.1,b'4.1-ngram.current_user_utterance__um whats price',8.8975,462,0.0026,377
+4556,4.1,b'4.1-ngram.next_user_utterance__address post',5.6263,891,0.0026,378
+196,4.1,b'4.1-ngram.current_user_utterance__food serve',6.0942,803,0.0025,379
+1717,4.1,b'4.1-ngram.next_system_utterance__cherry',21.5789,155,0.0025,380
+4628,4.1,b'4.1-ngram.next_user_utterance__center',16.0079,216,0.0025,381
+344,4.1,b'4.1-ngram.current_user_utterance__looking moderately priced',14.4899,264,0.0025,382
+4502,4.1,b'4.1-ngram.next_system_utterance__west town prices',6.6609,721,0.0025,383
+35,4.1,b'4.1-ngram.current_user_utterance__asian food',13.8400,277,0.0025,384
+474,4.1,b'4.1-ngram.current_user_utterance__phone number',201.5084,22,0.0025,385
+826,4.1,b'4.1-ngram.current_user_utterance__uh restaurant',5.3996,945,0.0025,386
+503,4.1,b'4.1-ngram.current_user_utterance__priced',42.4535,85,0.0025,387
+3532,4.1,b'4.1-ngram.next_system_utterance__road city centre',8.8101,484,0.0025,388
+246,4.1,b'4.1-ngram.current_user_utterance__im looking',39.2327,94,0.0025,389
+4196,4.1,b'4.1-ngram.next_system_utterance__sure restaurant',5.6806,877,0.0025,390
+383,4.1,b'4.1-ngram.current_user_utterance__moderately priced restaurant',30.9704,113,0.0025,391
+4745,4.1,b'4.1-ngram.next_user_utterance__hungarian',6.3005,779,0.0025,392
+55,4.1,b'4.1-ngram.current_user_utterance__belgium food',5.5440,909,0.0024,393
+4767,4.1,b'4.1-ngram.next_user_utterance__indian type',8.8285,479,0.0024,394
+619,4.1,b'4.1-ngram.current_user_utterance__serves',14.6616,252,0.0024,395
+42,4.1,b'4.1-ngram.current_user_utterance__austrian',5.9441,837,0.0024,396
+5050,4.1,b'4.1-ngram.next_user_utterance__start',6.0690,806,0.0024,397
+331,4.1,b'4.1-ngram.current_user_utterance__looking expensive',20.7057,164,0.0024,398
+4654,4.1,b'4.1-ngram.next_user_utterance__corsica',6.0088,813,0.0024,399
+4775,4.1,b'4.1-ngram.next_user_utterance__italian food',14.6640,251,0.0024,400
+5166,4.1,b'4.1-ngram.next_user_utterance__whats price range',8.4794,516,0.0023,401
+2261,4.1,b'4.1-ngram.next_system_utterance__hinton',21.5789,156,0.0023,402
+3934,4.1,b'4.1-ngram.next_system_utterance__sorry jamaican restaurant',6.6621,719,0.0023,403
+3957,4.1,b'4.1-ngram.next_system_utterance__sorry moderate',7.8499,597,0.0023,404
+4768,4.1,b'4.1-ngram.next_user_utterance__indian type food',8.8285,478,0.0023,405
+4620,4.1,b'4.1-ngram.next_user_utterance__cantonese food',6.9861,681,0.0023,406
+5046,4.1,b'4.1-ngram.next_user_utterance__south town',11.8598,325,0.0023,407
+2200,4.1,b'4.1-ngram.next_system_utterance__graffiti',12.4158,303,0.0023,408
+1595,4.1,b'4.1-ngram.next_system_utterance__british restaurant',12.1972,314,0.0023,409
+267,4.1,b'4.1-ngram.current_user_utterance__indian type food',14.8258,250,0.0023,410
+2349,4.1,b'4.1-ngram.next_system_utterance__house restaurant great',8.6218,504,0.0023,411
+4585,4.1,b'4.1-ngram.next_user_utterance__asian',22.3373,151,0.0022,412
+135,4.1,b'4.1-ngram.current_user_utterance__danish food',6.3349,773,0.0022,413
+4297,4.1,b'4.1-ngram.next_system_utterance__tasty',15.7600,222,0.0022,414
+5142,4.1,b'4.1-ngram.next_user_utterance__want indian',7.8586,595,0.0022,415
+770,4.1,b'4.1-ngram.current_user_utterance__thank',15.3220,233,0.0022,416
+4790,4.1,b'4.1-ngram.next_user_utterance__know',9.0925,455,0.0022,417
+3789,4.1,b'4.1-ngram.next_system_utterance__serving tasty',15.7600,223,0.0022,418
+3933,4.1,b'4.1-ngram.next_system_utterance__sorry jamaican',6.6621,720,0.0022,419
+4719,4.1,b'4.1-ngram.next_user_utterance__gastropub',27.6853,121,0.0022,420
+2022,4.1,b'4.1-ngram.next_system_utterance__english',8.7815,486,0.0022,421
+3554,4.1,b'4.1-ngram.next_system_utterance__royal standard',5.3017,981,0.0021,422
+266,4.1,b'4.1-ngram.current_user_utterance__indian type',14.8258,249,0.0021,423
+4797,4.1,b'4.1-ngram.next_user_utterance__like',13.2486,286,0.0021,424
+4680,4.1,b'4.1-ngram.next_user_utterance__east town',10.7716,376,0.0021,425
+773,4.1,b'4.1-ngram.current_user_utterance__thats fine',15.0405,247,0.0021,426
+3546,4.1,b'4.1-ngram.next_system_utterance__royal',11.3388,349,0.0021,427
+3958,4.1,b'4.1-ngram.next_system_utterance__sorry moderate restaurant',7.8499,598,0.0021,428
+5137,4.1,b'4.1-ngram.next_user_utterance__vietnamese food',23.4919,148,0.0021,429
+2669,4.1,b'4.1-ngram.next_system_utterance__margherita',7.8163,601,0.0021,430
+4690,4.1,b'4.1-ngram.next_user_utterance__expensive',37.7586,95,0.0020,431
+4618,4.1,b'4.1-ngram.next_user_utterance__canapes',7.1235,654,0.0020,432
+868,4.1,b'4.1-ngram.current_user_utterance__want expensive',6.6486,728,0.0020,433
+4491,4.1,b'4.1-ngram.next_system_utterance__welsh',9.9818,409,0.0020,434
+4594,4.1,b'4.1-ngram.next_user_utterance__austrian food',7.2239,647,0.0020,435
+304,4.1,b'4.1-ngram.current_user_utterance__like',12.8701,295,0.0020,436
+134,4.1,b'4.1-ngram.current_user_utterance__danish',5.6053,898,0.0020,437
+3156,4.1,b'4.1-ngram.next_system_utterance__place centre',8.7024,499,0.0020,438
+3140,4.1,b'4.1-ngram.next_system_utterance__pizzeria',8.3605,526,0.0020,439
+508,4.1,b'4.1-ngram.current_user_utterance__priced restaurant north',6.0210,810,0.0019,440
+814,4.1,b'4.1-ngram.current_user_utterance__type venue',10.1765,401,0.0019,441
+3640,4.1,b'4.1-ngram.next_system_utterance__serves mediterranean',5.3026,978,0.0019,442
+4578,4.1,b'4.1-ngram.next_user_utterance__american food',6.9105,697,0.0019,443
+2691,4.1,b'4.1-ngram.next_system_utterance__mediterranean restaurant north',5.6204,894,0.0019,444
+471,4.1,b'4.1-ngram.current_user_utterance__persian food',5.2682,991,0.0019,445
+40,4.1,b'4.1-ngram.current_user_utterance__australian',9.3134,439,0.0019,446
+215,4.1,b'4.1-ngram.current_user_utterance__german',9.8687,412,0.0019,447
+5140,4.1,b'4.1-ngram.next_user_utterance__want',19.1721,185,0.0019,448
+902,4.1,b'4.1-ngram.current_user_utterance__whats phone',54.6836,65,0.0019,449
+3280,4.1,b'4.1-ngram.next_system_utterance__rajmahal great restaurant',7.4316,631,0.0019,450
+4945,4.1,b'4.1-ngram.next_user_utterance__price range',11.7848,328,0.0019,451
+4038,4.1,b'4.1-ngram.next_system_utterance__standard',5.3017,980,0.0019,452
+1637,4.1,b'4.1-ngram.next_system_utterance__cambridge lodge restaurant',6.1432,800,0.0019,453
+4391,4.1,b'4.1-ngram.next_system_utterance__town serving tasty',15.7600,224,0.0019,454
+2693,4.1,b'4.1-ngram.next_system_utterance__meghna',7.5041,626,0.0018,455
+4941,4.1,b'4.1-ngram.next_user_utterance__postcode',6.4366,753,0.0018,456
+4953,4.1,b'4.1-ngram.next_user_utterance__range',11.7848,327,0.0018,457
+395,4.1,b'4.1-ngram.current_user_utterance__need',7.0120,679,0.0018,458
+8,4.1,b'4.1-ngram.current_user_utterance__address telephone',5.3578,957,0.0018,459
+147,4.1,b'4.1-ngram.current_user_utterance__dont',30.0688,117,0.0018,460
+9,4.1,b'4.1-ngram.current_user_utterance__address telephone number',5.3578,958,0.0018,461
+373,4.1,b'4.1-ngram.current_user_utterance__moderate',6.0403,809,0.0018,462
+4645,4.1,b'4.1-ngram.next_user_utterance__chinese food',11.0352,370,0.0018,463
+2798,4.1,b'4.1-ngram.next_system_utterance__nice place centre',8.7024,500,0.0018,464
+3157,4.1,b'4.1-ngram.next_system_utterance__place centre town',8.7024,498,0.0017,465
+45,4.1,b'4.1-ngram.current_user_utterance__barbecue',10.4269,389,0.0017,466
+749,4.1,b'4.1-ngram.current_user_utterance__spanish',34.1039,105,0.0017,467
+5136,4.1,b'4.1-ngram.next_user_utterance__vietnamese',33.5846,107,0.0017,468
+863,4.1,b'4.1-ngram.current_user_utterance__want',10.3986,390,0.0017,469
+307,4.1,b'4.1-ngram.current_user_utterance__like expensive',6.2482,790,0.0017,470
+11,4.1,b'4.1-ngram.current_user_utterance__address type food',6.3535,771,0.0017,471
+3928,4.1,b'4.1-ngram.next_system_utterance__sorry indian restaurant',8.2691,546,0.0017,472
+4924,4.1,b'4.1-ngram.next_user_utterance__phone number post',12.2269,311,0.0017,473
+434,4.1,b'4.1-ngram.current_user_utterance__number postcode',10.1779,399,0.0017,474
+3641,4.1,b'4.1-ngram.next_system_utterance__serves mediterranean food',5.3026,979,0.0017,475
+3104,4.1,b'4.1-ngram.next_system_utterance__phone number restaurant',13.4698,279,0.0017,476
+251,4.1,b'4.1-ngram.current_user_utterance__im looking expensive',19.3958,176,0.0016,477
+137,4.1,b'4.1-ngram.current_user_utterance__different',5.7102,872,0.0016,478
+332,4.1,b'4.1-ngram.current_user_utterance__looking expensive restaurant',20.1949,168,0.0016,479
+4845,4.1,b'4.1-ngram.next_user_utterance__modern',8.8933,463,0.0016,480
+3893,4.1,b'4.1-ngram.next_system_utterance__sorry british restaurant',18.2377,193,0.0016,481
+152,4.1,b'4.1-ngram.current_user_utterance__east town',11.7743,329,0.0016,482
+1103,4.1,b'4.1-ngram.next_system_utterance__20',7.1425,648,0.0016,483
+3149,4.1,b'4.1-ngram.next_system_utterance__pizzeria great restaurant',7.6271,615,0.0016,484
+4448,4.1,b'4.1-ngram.next_system_utterance__victoria',7.0079,680,0.0016,485
+3148,4.1,b'4.1-ngram.next_system_utterance__pizzeria great',7.6271,616,0.0016,486
+612,4.1,b'4.1-ngram.current_user_utterance__serve kosher',9.8492,413,0.0016,487
+613,4.1,b'4.1-ngram.current_user_utterance__serve kosher food',9.8492,414,0.0016,488
+2566,4.1,b'4.1-ngram.next_system_utterance__lodge restaurant',6.1432,799,0.0016,489
+2792,4.1,b'4.1-ngram.next_system_utterance__newmarket road fen',7.7739,603,0.0015,490
+2956,4.1,b'4.1-ngram.next_system_utterance__number restaurant',13.4698,280,0.0015,491
+752,4.1,b'4.1-ngram.current_user_utterance__start',5.9951,814,0.0015,492
+3384,4.1,b'4.1-ngram.next_system_utterance__restaurant cheap price',5.8229,856,0.0015,493
+2480,4.1,b'4.1-ngram.next_system_utterance__la margherita',7.8163,600,0.0015,494
+478,4.1,b'4.1-ngram.current_user_utterance__phone number postcode',10.1779,400,0.0015,495
+2623,4.1,b'4.1-ngram.next_system_utterance__looking restaurant cheap',6.6397,730,0.0015,496
+324,4.1,b'4.1-ngram.current_user_utterance__location',12.3103,308,0.0015,497
+10,4.1,b'4.1-ngram.current_user_utterance__address type',6.3535,770,0.0015,498
+4781,4.1,b'4.1-ngram.next_user_utterance__japanese',8.4860,514,0.0015,499
+5173,4.1,b'4.1-ngram.next_user_utterance__yeah',7.1235,652,0.0015,500
+3927,4.1,b'4.1-ngram.next_system_utterance__sorry indian',8.2691,545,0.0015,501
+4257,4.1,b'4.1-ngram.next_system_utterance__tandoori 01223',5.5995,899,0.0015,502
+854,4.1,b'4.1-ngram.current_user_utterance__venetian',5.1478,1014,0.0015,503
+4878,4.1,b'4.1-ngram.next_user_utterance__number post',12.2269,312,0.0015,504
+3518,4.1,b'4.1-ngram.next_system_utterance__rice house serves',7.8887,589,0.0015,505
+3279,4.1,b'4.1-ngram.next_system_utterance__rajmahal great',7.4316,632,0.0014,506
+3383,4.1,b'4.1-ngram.next_system_utterance__restaurant cheap',5.8229,855,0.0014,507
+1553,4.1,b'4.1-ngram.next_system_utterance__bistro restaurant matches',8.2470,548,0.0014,508
+3892,4.1,b'4.1-ngram.next_system_utterance__sorry british',18.2377,194,0.0014,509
+891,4.1,b'4.1-ngram.current_user_utterance__west',22.5115,150,0.0014,510
+4987,4.1,b'4.1-ngram.next_user_utterance__right',18.5889,190,0.0014,511
+4879,4.1,b'4.1-ngram.next_user_utterance__number post code',12.2269,310,0.0014,512
+1656,4.1,b'4.1-ngram.next_system_utterance__caribbean',7.4192,636,0.0014,513
+4792,4.1,b'4.1-ngram.next_user_utterance__korean food',10.6937,384,0.0014,514
+211,4.1,b'4.1-ngram.current_user_utterance__gastropub food',5.6936,874,0.0014,515
+4666,4.1,b'4.1-ngram.next_user_utterance__different',5.4048,944,0.0014,516
+498,4.1,b'4.1-ngram.current_user_utterance__prezzo',19.8986,173,0.0014,517
+4613,4.1,b'4.1-ngram.next_user_utterance__british',21.1759,160,0.0014,518
+2629,4.1,b'4.1-ngram.next_system_utterance__looking restaurant right',26.1764,129,0.0014,519
+5128,4.1,b'4.1-ngram.next_user_utterance__unintelligible food',6.2083,796,0.0014,520
+2324,4.1,b'4.1-ngram.next_system_utterance__hotpot nice restaurant',6.7978,706,0.0014,521
+2362,4.1,b'4.1-ngram.next_system_utterance__hut cherry',11.6154,346,0.0014,522
+176,4.1,b'4.1-ngram.current_user_utterance__expensive restaurant south',18.4765,191,0.0013,523
+314,4.1,b'4.1-ngram.current_user_utterance__like restaurant',8.4676,517,0.0013,524
+4909,4.1,b'4.1-ngram.next_user_utterance__options',7.1235,653,0.0013,525
+2790,4.1,b'4.1-ngram.next_system_utterance__newmarket',11.6498,340,0.0013,526
+1744,4.1,b'4.1-ngram.next_system_utterance__chop house',7.4620,630,0.0013,527
+4591,4.1,b'4.1-ngram.next_user_utterance__australian',5.5264,912,0.0013,528
+3260,4.1,b'4.1-ngram.next_system_utterance__prices moderate',11.1311,359,0.0013,529
+239,4.1,b'4.1-ngram.current_user_utterance__id like',8.9684,459,0.0013,530
+272,4.1,b'4.1-ngram.current_user_utterance__irish',8.8221,481,0.0013,531
+4752,4.1,b'4.1-ngram.next_user_utterance__im good',6.5780,736,0.0013,532
+4926,4.1,b'4.1-ngram.next_user_utterance__phone number price',5.7837,861,0.0013,533
+4835,4.1,b'4.1-ngram.next_user_utterance__mediterranean food',10.4594,388,0.0013,534
+545,4.1,b'4.1-ngram.current_user_utterance__restaurant serves',6.6830,713,0.0013,535
+4614,4.1,b'4.1-ngram.next_user_utterance__british food',13.5533,278,0.0013,536
+4930,4.1,b'4.1-ngram.next_user_utterance__place',5.3803,950,0.0013,537
+5089,4.1,b'4.1-ngram.next_user_utterance__try',8.3331,541,0.0013,538
+3548,4.1,b'4.1-ngram.next_system_utterance__royal spice 01733',8.3447,536,0.0013,539
+3547,4.1,b'4.1-ngram.next_system_utterance__royal spice',7.8591,593,0.0013,540
+3398,4.1,b'4.1-ngram.next_system_utterance__restaurant great restaurant',15.9772,217,0.0012,541
+1743,4.1,b'4.1-ngram.next_system_utterance__chop',7.4620,629,0.0012,542
+238,4.1,b'4.1-ngram.current_user_utterance__id',8.9684,458,0.0012,543
+3941,4.1,b'4.1-ngram.next_system_utterance__sorry lebanese',6.4547,751,0.0012,544
+2281,4.1,b'4.1-ngram.next_system_utterance__hk fusion',15.1033,245,0.0012,545
+4685,4.1,b'4.1-ngram.next_user_utterance__european food',14.5269,263,0.0012,546
+380,4.1,b'4.1-ngram.current_user_utterance__moderately',43.4066,81,0.0012,547
+2791,4.1,b'4.1-ngram.next_system_utterance__newmarket road',11.6498,339,0.0012,548
+4368,4.1,b'4.1-ngram.next_system_utterance__town prices moderate',11.1311,360,0.0012,549
+1039,4.1,b'4.1-ngram.next_system_utterance__01733',8.3447,540,0.0012,550
+350,4.1,b'4.1-ngram.current_user_utterance__looking restaurant center',6.9522,685,0.0012,551
+1588,4.1,b'4.1-ngram.next_system_utterance__bridge street',8.3462,532,0.0012,552
+3141,4.1,b'4.1-ngram.next_system_utterance__pizzeria 01223',5.3870,947,0.0012,553
+427,4.1,b'4.1-ngram.current_user_utterance__north town serves',6.7054,708,0.0012,554
+4882,4.1,b'4.1-ngram.next_user_utterance__number price range',5.7837,863,0.0012,555
+1587,4.1,b'4.1-ngram.next_system_utterance__bridge',8.3462,533,0.0012,556
+4019,4.1,b'4.1-ngram.next_system_utterance__spice',7.8591,594,0.0012,557
+4021,4.1,b'4.1-ngram.next_system_utterance__spice 01733 553355',8.3447,534,0.0012,558
+4932,4.1,b'4.1-ngram.next_user_utterance__polynesian',5.7927,857,0.0012,559
+4366,4.1,b'4.1-ngram.next_system_utterance__town prices cheap',12.5451,301,0.0012,560
+2121,4.1,b'4.1-ngram.next_system_utterance__fusion great',11.7220,333,0.0012,561
+3942,4.1,b'4.1-ngram.next_system_utterance__sorry lebanese restaurant',6.4547,752,0.0012,562
+4935,4.1,b'4.1-ngram.next_user_utterance__portuguese food',5.4237,931,0.0012,563
+3914,4.1,b'4.1-ngram.next_system_utterance__sorry expensive',5.4784,920,0.0011,564
+1967,4.1,b'4.1-ngram.next_system_utterance__did',24.4134,140,0.0011,565
+2363,4.1,b'4.1-ngram.next_system_utterance__hut cherry hinton',11.6154,345,0.0011,566
+5049,4.1,b'4.1-ngram.next_user_utterance__spanish restaurant',5.2255,998,0.0011,567
+438,4.1,b'4.1-ngram.current_user_utterance__number type food',9.4750,425,0.0011,568
+3397,4.1,b'4.1-ngram.next_system_utterance__restaurant great',15.9772,218,0.0011,569
+321,4.1,b'4.1-ngram.current_user_utterance__like thai',30.3559,115,0.0011,570
+4847,4.1,b'4.1-ngram.next_user_utterance__modern european food',5.3964,946,0.0011,571
+2632,4.1,b'4.1-ngram.next_system_utterance__looking restaurant west',14.2445,270,0.0011,572
+2684,4.1,b'4.1-ngram.next_system_utterance__matches',14.0688,274,0.0011,573
+852,4.1,b'4.1-ngram.current_user_utterance__vegetarian',10.6968,383,0.0011,574
+322,4.1,b'4.1-ngram.current_user_utterance__like thai food',30.3559,114,0.0011,575
+4682,4.1,b'4.1-ngram.next_user_utterance__english',11.0776,368,0.0011,576
+2280,4.1,b'4.1-ngram.next_system_utterance__hk',15.1033,246,0.0011,577
+244,4.1,b'4.1-ngram.current_user_utterance__id like thai',30.3559,116,0.0011,578
+5065,4.1,b'4.1-ngram.next_user_utterance__thailand',6.9347,693,0.0011,579
+539,4.1,b'4.1-ngram.current_user_utterance__restaurant east town',7.6664,613,0.0011,580
+34,4.1,b'4.1-ngram.current_user_utterance__asian',20.4777,166,0.0011,581
+358,4.1,b'4.1-ngram.current_user_utterance__looking singaporean food',9.0201,457,0.0010,582
+2012,4.1,b'4.1-ngram.next_system_utterance__east town prices',5.7624,865,0.0010,583
+243,4.1,b'4.1-ngram.current_user_utterance__id like restaurant',6.0887,805,0.0010,584
+224,4.1,b'4.1-ngram.current_user_utterance__greek food',7.4252,633,0.0010,585
+4881,4.1,b'4.1-ngram.next_user_utterance__number price',5.7837,862,0.0010,586
+3258,4.1,b'4.1-ngram.next_system_utterance__prices cheap',12.5451,302,0.0010,587
+2154,4.1,b'4.1-ngram.next_system_utterance__garden great restaurant',6.2812,782,0.0010,588
+3401,4.1,b'4.1-ngram.next_system_utterance__restaurant matches',14.0688,272,0.0010,589
+4947,4.1,b'4.1-ngram.next_user_utterance__priced',6.3955,758,0.0010,590
+2051,4.1,b'4.1-ngram.next_system_utterance__expensive restaurant',5.4784,922,0.0010,591
+1610,4.1,b'4.1-ngram.next_system_utterance__cafe',8.8682,469,0.0010,592
+3155,4.1,b'4.1-ngram.next_system_utterance__place',23.9282,144,0.0010,593
+5093,4.1,b'4.1-ngram.next_user_utterance__turkish food',5.1155,1018,0.0010,594
+1969,4.1,b'4.1-ngram.next_system_utterance__did say looking',24.4134,135,0.0010,595
+4339,4.1,b'4.1-ngram.next_system_utterance__thanh binh serves',7.0448,667,0.0010,596
+3237,4.1,b'4.1-ngram.next_system_utterance__prezzo west town',12.1576,316,0.0010,597
+4020,4.1,b'4.1-ngram.next_system_utterance__spice 01733',8.3447,535,0.0010,598
+122,4.1,b'4.1-ngram.current_user_utterance__correct',6.3741,763,0.0010,599
+1308,4.1,b'4.1-ngram.next_system_utterance__553355',8.3447,537,0.0010,600
+3236,4.1,b'4.1-ngram.next_system_utterance__prezzo west',12.1576,317,0.0010,601
+2122,4.1,b'4.1-ngram.next_system_utterance__fusion great restaurant',11.7220,334,0.0010,602
+1040,4.1,b'4.1-ngram.next_system_utterance__01733 553355',8.3447,539,0.0010,603
+4849,4.1,b'4.1-ngram.next_user_utterance__moroccan',12.5800,300,0.0010,604
+1733,4.1,b'4.1-ngram.next_system_utterance__chinese food expensive',11.7220,335,0.0010,605
+5161,4.1,b'4.1-ngram.next_user_utterance__whats phone',41.0593,89,0.0010,606
+2775,4.1,b'4.1-ngram.next_system_utterance__nandos 01223',6.4670,746,0.0010,607
+5162,4.1,b'4.1-ngram.next_user_utterance__whats phone number',40.7171,90,0.0010,608
+3333,4.1,b'4.1-ngram.next_system_utterance__request',14.0688,271,0.0010,609
+3915,4.1,b'4.1-ngram.next_system_utterance__sorry expensive restaurant',5.4784,921,0.0010,610
+2800,4.1,b'4.1-ngram.next_system_utterance__nice place north',6.6557,727,0.0010,611
+1968,4.1,b'4.1-ngram.next_system_utterance__did say',24.4134,139,0.0010,612
+2685,4.1,b'4.1-ngram.next_system_utterance__matches request',14.0688,275,0.0010,613
+2258,4.1,b'4.1-ngram.next_system_utterance__hills',5.3065,977,0.0010,614
+4850,4.1,b'4.1-ngram.next_user_utterance__moroccan food',9.3597,432,0.0010,615
+3402,4.1,b'4.1-ngram.next_system_utterance__restaurant matches request',14.0688,273,0.0010,616
+5092,4.1,b'4.1-ngram.next_user_utterance__turkish',16.4281,208,0.0010,617
+4869,4.1,b'4.1-ngram.next_user_utterance__north',42.7284,83,0.0009,618
+1784,4.1,b'4.1-ngram.next_system_utterance__clifton',14.5417,259,0.0009,619
+4311,4.1,b'4.1-ngram.next_system_utterance__tasty indian food',6.9427,692,0.0009,620
+3161,4.1,b'4.1-ngram.next_system_utterance__place north town',6.6557,726,0.0009,621
+3160,4.1,b'4.1-ngram.next_system_utterance__place north',6.6557,725,0.0009,622
+3929,4.1,b'4.1-ngram.next_system_utterance__sorry international',5.1078,1020,0.0009,623
+4684,4.1,b'4.1-ngram.next_user_utterance__european',25.9453,131,0.0009,624
+1801,4.1,b'4.1-ngram.next_system_utterance__code backstreet',8.0054,569,0.0009,625
+4335,4.1,b'4.1-ngram.next_system_utterance__thanh binh 17',7.1164,659,0.0009,626
+2627,4.1,b'4.1-ngram.next_system_utterance__looking restaurant moderate',7.4122,637,0.0009,627
+3188,4.1,b'4.1-ngram.next_system_utterance__post code backstreet',8.0054,568,0.0009,628
+3585,4.1,b'4.1-ngram.next_system_utterance__say',24.4134,136,0.0009,629
+123,4.1,b'4.1-ngram.current_user_utterance__corsica',6.6385,731,0.0009,630
+2797,4.1,b'4.1-ngram.next_system_utterance__nice place',23.9282,143,0.0009,631
+3250,4.1,b'4.1-ngram.next_system_utterance__price range rajmahal',11.6829,336,0.0009,632
+3135,4.1,b'4.1-ngram.next_system_utterance__pizza hut cherry',11.6154,344,0.0009,633
+2939,4.1,b'4.1-ngram.next_system_utterance__number nandos 01223',6.4670,748,0.0009,634
+1536,4.1,b'4.1-ngram.next_system_utterance__binh serves vietnamese',7.0448,666,0.0009,635
+4915,4.1,b'4.1-ngram.next_user_utterance__pan',6.7034,709,0.0009,636
+2967,4.1,b'4.1-ngram.next_system_utterance__number royal spice',8.3447,538,0.0009,637
+3657,4.1,b'4.1-ngram.next_system_utterance__serves vietnamese food',7.0448,668,0.0009,638
+1887,4.1,b'4.1-ngram.next_system_utterance__corsica',5.3547,959,0.0009,639
+296,4.1,b'4.1-ngram.current_user_utterance__korean food',11.0118,371,0.0009,640
+3796,4.1,b'4.1-ngram.next_system_utterance__serving tasty indian',6.9427,691,0.0009,641
+1802,4.1,b'4.1-ngram.next_system_utterance__code backstreet bistro',8.0054,567,0.0009,642
+2388,4.1,b'4.1-ngram.next_system_utterance__international restaurant',5.1078,1021,0.0009,643
+3158,4.1,b'4.1-ngram.next_system_utterance__place east',8.0517,562,0.0009,644
+4897,4.1,b'4.1-ngram.next_user_utterance__okay phone number',5.5259,914,0.0009,645
+3587,4.1,b'4.1-ngram.next_system_utterance__say looking restaurant',24.4134,138,0.0009,646
+54,4.1,b'4.1-ngram.current_user_utterance__belgium',6.6073,734,0.0008,647
+4222,4.1,b'4.1-ngram.next_system_utterance__sure thanh',7.1164,658,0.0008,648
+3656,4.1,b'4.1-ngram.next_system_utterance__serves vietnamese',7.0448,665,0.0008,649
+1527,4.1,b'4.1-ngram.next_system_utterance__binh 17 magdalene',7.1164,657,0.0008,650
+5163,4.1,b'4.1-ngram.next_user_utterance__whats post',8.0392,565,0.0008,651
+2799,4.1,b'4.1-ngram.next_system_utterance__nice place east',8.0517,564,0.0008,652
+1090,4.1,b'4.1-ngram.next_system_utterance__17 magdalene street',7.8935,587,0.0008,653
+3864,4.1,b'4.1-ngram.next_system_utterance__sock',7.2891,642,0.0008,654
+258,4.1,b'4.1-ngram.current_user_utterance__im looking singaporean',9.0201,456,0.0008,655
+2376,4.1,b'4.1-ngram.next_system_utterance__indian restaurant',6.6254,733,0.0008,656
+3930,4.1,b'4.1-ngram.next_system_utterance__sorry international restaurant',5.1078,1019,0.0008,657
+4310,4.1,b'4.1-ngram.next_system_utterance__tasty indian',6.9427,690,0.0008,658
+2776,4.1,b'4.1-ngram.next_system_utterance__nandos 01223 327908',6.4670,747,0.0008,659
+2094,4.1,b'4.1-ngram.next_system_utterance__food like',363.3680,2,0.0008,660
+1997,4.1,b'4.1-ngram.next_system_utterance__duckling',10.3382,392,0.0008,661
+1785,4.1,b'4.1-ngram.next_system_utterance__clifton way',14.5417,260,0.0008,662
+4593,4.1,b'4.1-ngram.next_user_utterance__austrian',6.9165,696,0.0008,663
+172,4.1,b'4.1-ngram.current_user_utterance__expensive restaurant east',15.7592,225,0.0008,664
+3309,4.1,b'4.1-ngram.next_system_utterance__range rajmahal moderate',11.6829,337,0.0008,665
+4937,4.1,b'4.1-ngram.next_user_utterance__post',57.2932,64,0.0008,666
+5164,4.1,b'4.1-ngram.next_user_utterance__whats post code',8.0392,566,0.0008,667
+2521,4.1,b'4.1-ngram.next_system_utterance__leisure park clifton',14.5417,261,0.0008,668
+381,4.1,b'4.1-ngram.current_user_utterance__moderately priced',39.7867,93,0.0008,669
+4085,4.1,b'4.1-ngram.next_system_utterance__street city centre',24.4231,134,0.0008,670
+4223,4.1,b'4.1-ngram.next_system_utterance__sure thanh binh',7.1164,655,0.0008,671
+4422,4.1,b'4.1-ngram.next_system_utterance__ugly',10.3382,391,0.0008,672
+4782,4.1,b'4.1-ngram.next_user_utterance__japanese food',5.2027,1000,0.0008,673
+1422,4.1,b'4.1-ngram.next_system_utterance__austrian food',9.5647,420,0.0008,674
+3668,4.1,b'4.1-ngram.next_system_utterance__serving austrian food',9.5647,421,0.0008,675
+2284,4.1,b'4.1-ngram.next_system_utterance__hk fusion serves',6.6595,723,0.0008,676
+4423,4.1,b'4.1-ngram.next_system_utterance__ugly duckling',10.3382,393,0.0008,677
+2153,4.1,b'4.1-ngram.next_system_utterance__garden great',6.2812,781,0.0008,678
+129,4.1,b'4.1-ngram.current_user_utterance__cuban',6.0592,807,0.0008,679
+4976,4.1,b'4.1-ngram.next_user_utterance__restaurant serving',8.4073,522,0.0008,680
+1526,4.1,b'4.1-ngram.next_system_utterance__binh 17',7.1164,656,0.0008,681
+2245,4.1,b'4.1-ngram.next_system_utterance__halal',10.8282,375,0.0007,682
+3182,4.1,b'4.1-ngram.next_system_utterance__portuguese restaurant matches',8.0792,557,0.0007,683
+4807,4.1,b'4.1-ngram.next_user_utterance__like thai food',7.1278,649,0.0007,684
+3261,4.1,b'4.1-ngram.next_system_utterance__prince',5.3595,955,0.0007,685
+4896,4.1,b'4.1-ngram.next_user_utterance__okay phone',5.5259,913,0.0007,686
+4596,4.1,b'4.1-ngram.next_user_utterance__barbecue',7.8843,590,0.0007,687
+2748,4.1,b'4.1-ngram.next_system_utterance__missing sock',7.2891,640,0.0007,688
+1012,4.1,b'4.1-ngram.next_system_utterance__01223 413000',5.2910,983,0.0007,689
+764,4.1,b'4.1-ngram.current_user_utterance__tell',9.4874,424,0.0007,690
+1531,4.1,b'4.1-ngram.next_system_utterance__binh great restaurant',10.0642,404,0.0007,691
+1950,4.1,b'4.1-ngram.next_system_utterance__curry prince',5.3595,956,0.0007,692
+2259,4.1,b'4.1-ngram.next_system_utterance__hills road',5.3065,976,0.0007,693
+798,4.1,b'4.1-ngram.current_user_utterance__traditional',5.6261,893,0.0007,694
+118,4.1,b'4.1-ngram.current_user_utterance__christmas food',5.1377,1016,0.0007,695
+804,4.1,b'4.1-ngram.current_user_utterance__turkiesh food',14.5511,256,0.0007,696
+3908,4.1,b'4.1-ngram.next_system_utterance__sorry danish',8.0574,561,0.0007,697
+2070,4.1,b'4.1-ngram.next_system_utterance__fen',8.7315,493,0.0007,698
+774,4.1,b'4.1-ngram.current_user_utterance__theres',6.8975,699,0.0007,699
+2747,4.1,b'4.1-ngram.next_system_utterance__missing',7.2891,641,0.0007,700
+3159,4.1,b'4.1-ngram.next_system_utterance__place east town',8.0517,563,0.0007,701
+5071,4.1,b'4.1-ngram.next_user_utterance__thank goodbye noise',18.0231,196,0.0007,702
+1535,4.1,b'4.1-ngram.next_system_utterance__binh serves',7.0448,664,0.0007,703
+4738,4.1,b'4.1-ngram.next_user_utterance__greek',8.2593,547,0.0007,704
+2380,4.1,b'4.1-ngram.next_system_utterance__indonesian',5.6100,897,0.0007,705
+769,4.1,b'4.1-ngram.current_user_utterance__thailand',6.9750,684,0.0007,706
+3308,4.1,b'4.1-ngram.next_system_utterance__range rajmahal',11.6829,338,0.0007,707
+4084,4.1,b'4.1-ngram.next_system_utterance__street city',24.4231,133,0.0007,708
+4337,4.1,b'4.1-ngram.next_system_utterance__thanh binh great',10.0642,403,0.0007,709
+3430,4.1,b'4.1-ngram.next_system_utterance__restaurant serving austrian',9.5647,422,0.0007,710
+4712,4.1,b'4.1-ngram.next_user_utterance__french',20.9786,161,0.0007,711
+4732,4.1,b'4.1-ngram.next_user_utterance__goodbye noise',18.0231,195,0.0007,712
+2282,4.1,b'4.1-ngram.next_system_utterance__hk fusion great',11.7220,332,0.0007,713
+1382,4.1,b'4.1-ngram.next_system_utterance__alimentum 01223 413000',5.2910,982,0.0007,714
+1089,4.1,b'4.1-ngram.next_system_utterance__17 magdalene',7.8935,586,0.0007,715
+3607,4.1,b'4.1-ngram.next_system_utterance__seoul great restaurant',5.1798,1010,0.0007,716
+5074,4.1,b'4.1-ngram.next_user_utterance__thanks good bye',6.9807,683,0.0007,717
+1530,4.1,b'4.1-ngram.next_system_utterance__binh great',10.0642,405,0.0007,718
+4488,4.1,b'4.1-ngram.next_system_utterance__way',14.5417,262,0.0007,719
+2212,4.1,b'4.1-ngram.next_system_utterance__grafton',5.5727,904,0.0007,720
+4750,4.1,b'4.1-ngram.next_user_utterance__id like thai',7.1278,650,0.0007,721
+161,4.1,b'4.1-ngram.current_user_utterance__european restaurant',7.8220,599,0.0007,722
+4332,4.1,b'4.1-ngram.next_system_utterance__thanh',13.4074,282,0.0007,723
+1926,4.1,b'4.1-ngram.next_system_utterance__crossover',7.0692,663,0.0007,724
+2023,4.1,b'4.1-ngram.next_system_utterance__english food',6.8503,703,0.0007,725
+4587,4.1,b'4.1-ngram.next_user_utterance__asian oriental',9.3174,437,0.0007,726
+2539,4.1,b'4.1-ngram.next_system_utterance__like crossover modern',5.9195,847,0.0006,727
+3032,4.1,b'4.1-ngram.next_system_utterance__park clifton way',14.5417,258,0.0006,728
+2514,4.1,b'4.1-ngram.next_system_utterance__lebanese restaurant',7.5985,617,0.0006,729
+117,4.1,b'4.1-ngram.current_user_utterance__christmas',5.1377,1015,0.0006,730
+2558,4.1,b'4.1-ngram.next_system_utterance__little seoul great',5.1798,1008,0.0006,731
+4910,4.1,b'4.1-ngram.next_user_utterance__oriental',9.3174,438,0.0006,732
+4806,4.1,b'4.1-ngram.next_user_utterance__like thai',7.1278,651,0.0006,733
+2127,4.1,b'4.1-ngram.next_system_utterance__fusion serves',6.6595,724,0.0006,734
+374,4.1,b'4.1-ngram.current_user_utterance__moderate price',6.5961,735,0.0006,735
+2958,4.1,b'4.1-ngram.next_system_utterance__number restaurant alimentum',5.2910,987,0.0006,736
+352,4.1,b'4.1-ngram.current_user_utterance__looking restaurant north',7.2252,646,0.0006,737
+2213,4.1,b'4.1-ngram.next_system_utterance__grafton hotel',5.5727,905,0.0006,738
+2128,4.1,b'4.1-ngram.next_system_utterance__fusion serves chinese',6.6595,722,0.0006,739
+4679,4.1,b'4.1-ngram.next_user_utterance__east',43.4533,80,0.0006,740
+1970,4.1,b'4.1-ngram.next_system_utterance__ditton',8.7315,491,0.0006,741
+4748,4.1,b'4.1-ngram.next_user_utterance__id like',5.4980,916,0.0006,742
+3667,4.1,b'4.1-ngram.next_system_utterance__serving austrian',9.5647,419,0.0006,743
+3239,4.1,b'4.1-ngram.next_system_utterance__price range',5.5773,901,0.0006,744
+3366,4.1,b'4.1-ngram.next_system_utterance__restaurant alimentum 01223',5.2910,986,0.0006,745
+5073,4.1,b'4.1-ngram.next_user_utterance__thanks good',6.9807,682,0.0006,746
+3031,4.1,b'4.1-ngram.next_system_utterance__park clifton',14.5417,257,0.0006,747
+4333,4.1,b'4.1-ngram.next_system_utterance__thanh binh',13.4074,284,0.0006,748
+2554,4.1,b'4.1-ngram.next_system_utterance__little seoul',13.1650,288,0.0006,749
+3457,4.1,b'4.1-ngram.next_system_utterance__restaurant serving halal',7.4771,628,0.0006,750
+4577,4.1,b'4.1-ngram.next_user_utterance__american',8.3769,525,0.0005,751
+2377,4.1,b'4.1-ngram.next_system_utterance__indian restaurant east',29.0874,120,0.0005,752
+799,4.1,b'4.1-ngram.current_user_utterance__traditional food',5.6261,892,0.0005,753
+3909,4.1,b'4.1-ngram.next_system_utterance__sorry danish restaurant',8.0574,560,0.0005,754
+3498,4.1,b'4.1-ngram.next_system_utterance__restaurant town',19.2293,182,0.0005,755
+4713,4.1,b'4.1-ngram.next_user_utterance__french food',11.7318,330,0.0005,756
+3969,4.1,b'4.1-ngram.next_system_utterance__sorry restaurant moderate',6.2575,788,0.0005,757
+1928,4.1,b'4.1-ngram.next_system_utterance__crossover modern',5.9195,846,0.0005,758
+3723,4.1,b'4.1-ngram.next_system_utterance__serving greek',6.6775,715,0.0005,759
+3606,4.1,b'4.1-ngram.next_system_utterance__seoul great',5.1798,1009,0.0005,760
+4619,4.1,b'4.1-ngram.next_user_utterance__cantonese',5.7890,860,0.0005,761
+3724,4.1,b'4.1-ngram.next_system_utterance__serving greek food',6.6775,714,0.0005,762
+3586,4.1,b'4.1-ngram.next_system_utterance__say looking',24.4134,137,0.0005,763
+1523,4.1,b'4.1-ngram.next_system_utterance__binh',13.4074,283,0.0005,764
+1270,4.1,b'4.1-ngram.next_system_utterance__413000',5.2910,984,0.0005,765
+3006,4.1,b'4.1-ngram.next_system_utterance__ok restaurant town',19.2293,183,0.0005,766
+1929,4.1,b'4.1-ngram.next_system_utterance__crossover modern european',5.9195,845,0.0005,767
+444,4.1,b'4.1-ngram.current_user_utterance__okay address',6.3933,759,0.0005,768
+1723,4.1,b'4.1-ngram.next_system_utterance__cherry hinton nice',5.1032,1023,0.0005,769
+4060,4.1,b'4.1-ngram.next_system_utterance__star great restaurant',11.6463,341,0.0005,770
+3288,4.1,b'4.1-ngram.next_system_utterance__range',5.5773,902,0.0005,771
+4747,4.1,b'4.1-ngram.next_user_utterance__id',5.4980,915,0.0005,772
+2326,4.1,b'4.1-ngram.next_system_utterance__house 01223',5.4672,924,0.0005,773
+2220,4.1,b'4.1-ngram.next_system_utterance__greek food',7.7464,608,0.0005,774
+2071,4.1,b'4.1-ngram.next_system_utterance__fen ditton',8.7315,492,0.0005,775
+3004,4.1,b'4.1-ngram.next_system_utterance__ok',19.2293,184,0.0005,776
+1658,4.1,b'4.1-ngram.next_system_utterance__caribbean restaurant',6.8728,701,0.0005,777
+3897,4.1,b'4.1-ngram.next_system_utterance__sorry caribbean restaurant',6.8728,700,0.0005,778
+3490,4.1,b'4.1-ngram.next_system_utterance__restaurant serving welsh',16.0631,212,0.0004,779
+3896,4.1,b'4.1-ngram.next_system_utterance__sorry caribbean',6.8728,702,0.0004,780
+3456,4.1,b'4.1-ngram.next_system_utterance__restaurant serving greek',6.6775,716,0.0004,781
+2647,4.1,b'4.1-ngram.next_system_utterance__lucky',8.7807,487,0.0004,782
+3238,4.1,b'4.1-ngram.next_system_utterance__price',5.5773,903,0.0004,783
+2270,4.1,b'4.1-ngram.next_system_utterance__hinton nice',5.1032,1022,0.0004,784
+4492,4.1,b'4.1-ngram.next_system_utterance__welsh food',16.0631,214,0.0004,785
+1088,4.1,b'4.1-ngram.next_system_utterance__17',7.8935,588,0.0004,786
+846,4.1,b'4.1-ngram.current_user_utterance__um whats',6.0197,811,0.0004,787
+4361,4.1,b'4.1-ngram.next_system_utterance__town expensive price',5.6730,881,0.0004,788
+2915,4.1,b'4.1-ngram.next_system_utterance__number la',8.5705,511,0.0004,789
+3599,4.1,b'4.1-ngram.next_system_utterance__seoul',13.1650,289,0.0004,790
+3086,4.1,b'4.1-ngram.next_system_utterance__phone number la',8.5705,512,0.0004,791
+4025,4.1,b'4.1-ngram.next_system_utterance__spice great restaurant',9.3508,435,0.0004,792
+1381,4.1,b'4.1-ngram.next_system_utterance__alimentum 01223',5.2910,985,0.0004,793
+3822,4.1,b'4.1-ngram.next_system_utterance__serving welsh food',16.0631,213,0.0004,794
+4360,4.1,b'4.1-ngram.next_system_utterance__town expensive',5.6730,880,0.0004,795
+4946,4.1,b'4.1-ngram.next_user_utterance__price range venue',5.4294,930,0.0004,796
+5169,4.1,b'4.1-ngram.next_user_utterance__world',5.8292,853,0.0004,797
+227,4.1,b'4.1-ngram.current_user_utterance__hello',5.4768,923,0.0004,798
+3550,4.1,b'4.1-ngram.next_system_utterance__royal spice great',9.3508,434,0.0004,799
+3821,4.1,b'4.1-ngram.next_system_utterance__serving welsh',16.0631,215,0.0004,800
+4059,4.1,b'4.1-ngram.next_system_utterance__star great',11.6463,343,0.0004,801
+2648,4.1,b'4.1-ngram.next_system_utterance__lucky star',8.7807,488,0.0004,802
+3986,4.1,b'4.1-ngram.next_system_utterance__sorry thai restaurant',9.3082,440,0.0004,803
+4052,4.1,b'4.1-ngram.next_system_utterance__star',8.7807,489,0.0004,804
+1572,4.1,b'4.1-ngram.next_system_utterance__boat great',8.7310,496,0.0004,805
+2652,4.1,b'4.1-ngram.next_system_utterance__lucky star great',11.6463,342,0.0004,806
+4024,4.1,b'4.1-ngram.next_system_utterance__spice great',9.3508,433,0.0004,807
+2416,4.1,b'4.1-ngram.next_system_utterance__johns chop house',7.7633,606,0.0004,808
+1573,4.1,b'4.1-ngram.next_system_utterance__boat great restaurant',8.7310,495,0.0004,809
+1816,4.1,b'4.1-ngram.next_system_utterance__code efes',8.5972,506,0.0004,810
+532,4.1,b'4.1-ngram.current_user_utterance__restaurant center',6.4166,756,0.0004,811
+4788,4.1,b'4.1-ngram.next_user_utterance__kitalian',6.1997,798,0.0004,812
+3512,4.1,b'4.1-ngram.next_system_utterance__rice boat great',8.7310,494,0.0004,813
+3196,4.1,b'4.1-ngram.next_system_utterance__post code efes',8.5972,505,0.0004,814
+1107,4.1,b'4.1-ngram.next_system_utterance__20 milton road',6.9434,688,0.0004,815
+2674,4.1,b'4.1-ngram.next_system_utterance__margherita great',6.3879,762,0.0004,816
+3577,4.1,b'4.1-ngram.next_system_utterance__saint johns chop',7.7633,605,0.0003,817
+2415,4.1,b'4.1-ngram.next_system_utterance__johns chop',7.7633,607,0.0003,818
+2563,4.1,b'4.1-ngram.next_system_utterance__lodge',6.6724,717,0.0003,819
+744,4.1,b'4.1-ngram.current_user_utterance__south area',5.6905,875,0.0003,820
+3414,4.1,b'4.1-ngram.next_system_utterance__restaurant right',59.9355,60,0.0003,821
+3636,4.1,b'4.1-ngram.next_system_utterance__serves korean',5.1858,1004,0.0003,822
+2923,4.1,b'4.1-ngram.next_system_utterance__number little seoul',5.9664,829,0.0003,823
+3985,4.1,b'4.1-ngram.next_system_utterance__sorry thai',9.3082,441,0.0003,824
+1113,4.1,b'4.1-ngram.next_system_utterance__21 24 northampton',5.9520,833,0.0003,825
+3612,4.1,b'4.1-ngram.next_system_utterance__seoul serves korean',5.1858,1003,0.0003,826
+2783,4.1,b'4.1-ngram.next_system_utterance__nandos great',14.5576,254,0.0003,827
+1956,4.1,b'4.1-ngram.next_system_utterance__da vinci',8.8892,468,0.0003,828
+1817,4.1,b'4.1-ngram.next_system_utterance__code efes restaurant',8.5972,507,0.0003,829
+2784,4.1,b'4.1-ngram.next_system_utterance__nandos great restaurant',14.5576,255,0.0003,830
+4468,4.1,b'4.1-ngram.next_system_utterance__vinci pizzeria',8.8892,464,0.0003,831
+3670,4.1,b'4.1-ngram.next_system_utterance__serving barbeque food',8.3528,530,0.0003,832
+203,4.1,b'4.1-ngram.current_user_utterance__food west town',6.1368,801,0.0003,833
+3088,4.1,b'4.1-ngram.next_system_utterance__phone number little',5.9664,830,0.0003,834
+3005,4.1,b'4.1-ngram.next_system_utterance__ok restaurant',19.2293,179,0.0003,835
+2777,4.1,b'4.1-ngram.next_system_utterance__nandos cambridge',8.4297,520,0.0003,836
+4954,4.1,b'4.1-ngram.next_user_utterance__range venue',5.4294,929,0.0003,837
+1118,4.1,b'4.1-ngram.next_system_utterance__24',6.4660,749,0.0003,838
+4795,4.1,b'4.1-ngram.next_user_utterance__lebanese',5.4906,918,0.0003,839
+1106,4.1,b'4.1-ngram.next_system_utterance__20 milton',6.9434,689,0.0003,840
+2675,4.1,b'4.1-ngram.next_system_utterance__margherita great restaurant',6.3879,761,0.0003,841
+2778,4.1,b'4.1-ngram.next_system_utterance__nandos cambridge leisure',8.4297,519,0.0003,842
+2483,4.1,b'4.1-ngram.next_system_utterance__la margherita great',6.3879,760,0.0003,843
+3499,4.1,b'4.1-ngram.next_system_utterance__restaurant town right',19.2293,180,0.0003,844
+3431,4.1,b'4.1-ngram.next_system_utterance__restaurant serving barbeque',8.3528,529,0.0003,845
+3669,4.1,b'4.1-ngram.next_system_utterance__serving barbeque',8.3528,528,0.0003,846
+2560,4.1,b'4.1-ngram.next_system_utterance__little seoul serves',5.1858,1002,0.0003,847
+4836,4.1,b'4.1-ngram.next_user_utterance__mexican',6.2393,792,0.0003,848
+2610,4.1,b'4.1-ngram.next_system_utterance__looking korean restaurant',6.2695,783,0.0003,849
+202,4.1,b'4.1-ngram.current_user_utterance__food west',6.1368,802,0.0003,850
+4180,4.1,b'4.1-ngram.next_system_utterance__sure nandos cambridge',8.4297,518,0.0003,851
+3709,4.1,b'4.1-ngram.next_system_utterance__serving english',6.3272,774,0.0003,852
+1666,4.1,b'4.1-ngram.next_system_utterance__catalan food',12.0730,321,0.0003,853
+1955,4.1,b'4.1-ngram.next_system_utterance__da',8.8892,466,0.0003,854
+3576,4.1,b'4.1-ngram.next_system_utterance__saint johns',7.7633,604,0.0003,855
+908,4.1,b'4.1-ngram.current_user_utterance__whats type',6.4878,744,0.0003,856
+3600,4.1,b'4.1-ngram.next_system_utterance__seoul 01223',5.9664,827,0.0003,857
+4600,4.1,b'4.1-ngram.next_user_utterance__belgium',5.2499,994,0.0003,858
+4789,4.1,b'4.1-ngram.next_user_utterance__kitalian food',6.1997,797,0.0003,859
+3449,4.1,b'4.1-ngram.next_system_utterance__restaurant serving english',6.3272,776,0.0003,860
+4490,4.1,b'4.1-ngram.next_system_utterance__way cherry hinton',8.1033,551,0.0003,861
+3637,4.1,b'4.1-ngram.next_system_utterance__serves korean food',5.1858,1005,0.0003,862
+2467,4.1,b'4.1-ngram.next_system_utterance__korean restaurant right',6.2695,785,0.0003,863
+4369,4.1,b'4.1-ngram.next_system_utterance__town right',19.2293,181,0.0003,864
+3440,4.1,b'4.1-ngram.next_system_utterance__restaurant serving catalan',12.0730,320,0.0003,865
+1885,4.1,b'4.1-ngram.next_system_utterance__corner newmarket',5.3358,970,0.0003,866
+2555,4.1,b'4.1-ngram.next_system_utterance__little seoul 01223',5.9664,828,0.0003,867
+1635,4.1,b'4.1-ngram.next_system_utterance__cambridge lodge',6.6724,718,0.0003,868
+4907,4.1,b'4.1-ngram.next_user_utterance__okay whats phone',5.6675,882,0.0003,869
+3228,4.1,b'4.1-ngram.next_system_utterance__prezzo great',6.3202,777,0.0003,870
+4467,4.1,b'4.1-ngram.next_system_utterance__vinci',8.8892,465,0.0002,871
+900,4.1,b'4.1-ngram.current_user_utterance__whats area',15.5510,227,0.0002,872
+2609,4.1,b'4.1-ngram.next_system_utterance__looking korean',6.2695,784,0.0002,873
+3246,4.1,b'4.1-ngram.next_system_utterance__price range graffiti',5.6325,889,0.0002,874
+1525,4.1,b'4.1-ngram.next_system_utterance__binh 01223 362456',8.8495,470,0.0002,875
+4483,4.1,b'4.1-ngram.next_system_utterance__wagamama great restaurant',7.4230,635,0.0002,876
+909,4.1,b'4.1-ngram.current_user_utterance__whats type food',6.4878,745,0.0002,877
+3687,4.1,b'4.1-ngram.next_system_utterance__serving catalan',12.0730,318,0.0002,878
+457,4.1,b'4.1-ngram.current_user_utterance__okay whats',8.7200,497,0.0002,879
+3710,4.1,b'4.1-ngram.next_system_utterance__serving english food',6.3272,775,0.0002,880
+3688,4.1,b'4.1-ngram.next_system_utterance__serving catalan food',12.0730,319,0.0002,881
+1488,4.1,b'4.1-ngram.next_system_utterance__barbeque food',8.3528,531,0.0002,882
+1960,4.1,b'4.1-ngram.next_system_utterance__danish restaurant',9.8267,416,0.0002,883
+216,4.1,b'4.1-ngram.current_user_utterance__german food',5.3493,969,0.0002,884
+1374,4.1,b'4.1-ngram.next_system_utterance__ali baba',5.3735,951,0.0002,885
+2985,4.1,b'4.1-ngram.next_system_utterance__number thanh',8.8495,471,0.0002,886
+3601,4.1,b'4.1-ngram.next_system_utterance__seoul 01223 308681',5.9664,824,0.0002,887
+4334,4.1,b'4.1-ngram.next_system_utterance__thanh binh 01223',8.8495,473,0.0002,888
+3325,4.1,b'4.1-ngram.next_system_utterance__raza great restaurant',5.7592,868,0.0002,889
+995,4.1,b'4.1-ngram.next_system_utterance__01223 362456',8.8495,477,0.0002,890
+2988,4.1,b'4.1-ngram.next_system_utterance__number ugly duckling',7.0149,675,0.0002,891
+2844,4.1,b'4.1-ngram.next_system_utterance__northampton',5.9520,835,0.0002,892
+3229,4.1,b'4.1-ngram.next_system_utterance__prezzo great restaurant',6.3202,778,0.0002,893
+1112,4.1,b'4.1-ngram.next_system_utterance__21 24',5.9520,834,0.0002,894
+4425,4.1,b'4.1-ngram.next_system_utterance__ugly duckling dontcare',7.0149,676,0.0002,895
+2733,4.1,b'4.1-ngram.next_system_utterance__milton road',9.4708,428,0.0002,896
+5131,4.1,b'4.1-ngram.next_user_utterance__vegetarian',9.9210,410,0.0002,897
+4663,4.1,b'4.1-ngram.next_user_utterance__danish',5.2487,995,0.0002,898
+3164,4.1,b'4.1-ngram.next_system_utterance__place west',9.1934,447,0.0002,899
+2077,4.1,b'4.1-ngram.next_system_utterance__finders',5.3358,973,0.0002,900
+4469,4.1,b'4.1-ngram.next_system_utterance__vinci pizzeria 01223',5.3510,962,0.0002,901
+1427,4.1,b'4.1-ngram.next_system_utterance__baba',5.3735,952,0.0002,902
+1205,4.1,b'4.1-ngram.next_system_utterance__351707',5.3510,964,0.0002,903
+2802,4.1,b'4.1-ngram.next_system_utterance__nice place west',9.1934,449,0.0002,904
+2922,4.1,b'4.1-ngram.next_system_utterance__number little',5.9664,831,0.0002,905
+1957,4.1,b'4.1-ngram.next_system_utterance__da vinci pizzeria',8.8892,467,0.0002,906
+1524,4.1,b'4.1-ngram.next_system_utterance__binh 01223',8.8495,475,0.0002,907
+765,4.1,b'4.1-ngram.current_user_utterance__thai',50.8917,72,0.0002,908
+2986,4.1,b'4.1-ngram.next_system_utterance__number thanh binh',8.8495,472,0.0002,909
+2000,4.1,b'4.1-ngram.next_system_utterance__duckling dontcare',7.0149,677,0.0002,910
+3331,4.1,b'4.1-ngram.next_system_utterance__regent street',7.9552,575,0.0002,911
+3118,4.1,b'4.1-ngram.next_system_utterance__phone number ugly',7.0149,678,0.0002,912
+951,4.1,b'4.1-ngram.next_system_utterance__01223 308681',5.9664,825,0.0002,913
+2877,4.1,b'4.1-ngram.next_system_utterance__number da',5.3510,966,0.0002,914
+3067,4.1,b'4.1-ngram.next_system_utterance__phone number da',5.3510,963,0.0002,915
+3095,4.1,b'4.1-ngram.next_system_utterance__phone number missing',5.4092,941,0.0002,916
+3143,4.1,b'4.1-ngram.next_system_utterance__pizzeria 01223 351707',5.3510,965,0.0002,917
+1235,4.1,b'4.1-ngram.next_system_utterance__362456',8.8495,476,0.0002,918
+1121,4.1,b'4.1-ngram.next_system_utterance__24 northampton',5.9520,836,0.0002,919
+2494,4.1,b'4.1-ngram.next_system_utterance__la raza great',5.7592,866,0.0002,920
+973,4.1,b'4.1-ngram.next_system_utterance__01223 351707',5.3510,961,0.0002,921
+2878,4.1,b'4.1-ngram.next_system_utterance__number da vinci',5.3510,960,0.0002,922
+2987,4.1,b'4.1-ngram.next_system_utterance__number ugly',7.0149,673,0.0002,923
+3300,4.1,b'4.1-ngram.next_system_utterance__range graffiti',5.6325,888,0.0002,924
+3165,4.1,b'4.1-ngram.next_system_utterance__place west town',9.1934,448,0.0002,925
+3611,4.1,b'4.1-ngram.next_system_utterance__seoul serves',5.1858,1001,0.0002,926
+1342,4.1,b'4.1-ngram.next_system_utterance__812660',5.4092,939,0.0002,927
+4489,4.1,b'4.1-ngram.next_system_utterance__way cherry',8.1033,553,0.0002,928
+250,4.1,b'4.1-ngram.current_user_utterance__im looking european',7.0744,662,0.0002,929
+1991,4.1,b'4.1-ngram.next_system_utterance__dontcare',7.0149,674,0.0002,930
+330,4.1,b'4.1-ngram.current_user_utterance__looking european',7.0744,661,0.0002,931
+2734,4.1,b'4.1-ngram.next_system_utterance__milton road chesterton',9.4708,427,0.0002,932
+3301,4.1,b'4.1-ngram.next_system_utterance__range graffiti expensive',5.6325,887,0.0002,933
+1035,4.1,b'4.1-ngram.next_system_utterance__01223 812660',5.4092,940,0.0002,934
+1160,4.1,b'4.1-ngram.next_system_utterance__308681',5.9664,826,0.0002,935
+3252,4.1,b'4.1-ngram.next_system_utterance__price range right',15.1982,243,0.0002,936
+2936,4.1,b'4.1-ngram.next_system_utterance__number missing',5.4092,942,0.0002,937
+3324,4.1,b'4.1-ngram.next_system_utterance__raza great',5.7592,867,0.0001,938
+2732,4.1,b'4.1-ngram.next_system_utterance__milton',9.4708,426,0.0001,939
+1786,4.1,b'4.1-ngram.next_system_utterance__clifton way cherry',8.1033,552,0.0001,940
+4482,4.1,b'4.1-ngram.next_system_utterance__wagamama great',7.4230,634,0.0001,941
+1373,4.1,b'4.1-ngram.next_system_utterance__ali',5.3735,953,0.0001,942
+2079,4.1,b'4.1-ngram.next_system_utterance__finders corner newmarket',5.3358,975,0.0001,943
+1869,4.1,b'4.1-ngram.next_system_utterance__confirm',15.1982,242,0.0001,944
+2525,4.1,b'4.1-ngram.next_system_utterance__let confirm',15.1982,238,0.0001,945
+3865,4.1,b'4.1-ngram.next_system_utterance__sock 01223',5.4092,936,0.0001,946
+2078,4.1,b'4.1-ngram.next_system_utterance__finders corner',5.3358,974,0.0001,947
+1653,4.1,b'4.1-ngram.next_system_utterance__care',7.5802,623,0.0001,948
+4711,4.1,b'4.1-ngram.next_user_utterance__food west town',5.5301,911,0.0001,949
+2957,4.1,b'4.1-ngram.next_system_utterance__number restaurant 01223',9.1333,452,0.0001,950
+3117,4.1,b'4.1-ngram.next_system_utterance__phone number thanh',8.8495,474,0.0001,951
+2937,4.1,b'4.1-ngram.next_system_utterance__number missing sock',5.4092,935,0.0001,952
+3312,4.1,b'4.1-ngram.next_system_utterance__range right',15.1982,239,0.0001,953
+2524,4.1,b'4.1-ngram.next_system_utterance__let',15.1982,237,0.0001,954
+1884,4.1,b'4.1-ngram.next_system_utterance__corner',5.3358,972,0.0001,955
+4710,4.1,b'4.1-ngram.next_user_utterance__food west',5.5301,910,0.0001,956
+1988,4.1,b'4.1-ngram.next_system_utterance__dont',7.5802,625,0.0001,957
+2749,4.1,b'4.1-ngram.next_system_utterance__missing sock 01223',5.4092,938,0.0001,958
+3725,4.1,b'4.1-ngram.next_system_utterance__serving halal',10.7397,379,0.0001,959
+3744,4.1,b'4.1-ngram.next_system_utterance__serving kind food',11.0855,366,0.0001,960
+1989,4.1,b'4.1-ngram.next_system_utterance__dont care',7.5802,624,0.0001,961
+3866,4.1,b'4.1-ngram.next_system_utterance__sock 01223 812660',5.4092,937,0.0001,962
+3726,4.1,b'4.1-ngram.next_system_utterance__serving halal food',10.7397,381,0.0001,963
+2427,4.1,b'4.1-ngram.next_system_utterance__kind',355.3460,4,0.0001,964
+2526,4.1,b'4.1-ngram.next_system_utterance__let confirm looking',15.1982,244,0.0001,965
+2428,4.1,b'4.1-ngram.next_system_utterance__kind food',355.3460,5,0.0001,966
+3833,4.1,b'4.1-ngram.next_system_utterance__shanghai family',7.5878,619,0.0001,967
+1871,4.1,b'4.1-ngram.next_system_utterance__confirm looking restaurant',15.1982,240,0.0001,968
+4426,4.1,b'4.1-ngram.next_system_utterance__ugly duckling expensive',5.9295,841,0.0001,969
+1886,4.1,b'4.1-ngram.next_system_utterance__corner newmarket road',5.3358,971,0.0001,970
+3743,4.1,b'4.1-ngram.next_system_utterance__serving kind',11.0855,367,0.0001,971
+2001,4.1,b'4.1-ngram.next_system_utterance__duckling expensive',5.9295,840,0.0001,972
+4683,4.1,b'4.1-ngram.next_user_utterance__english food',6.9321,694,0.0001,973
+824,4.1,b'4.1-ngram.current_user_utterance__uh phone',5.6742,879,0.0001,974
+2246,4.1,b'4.1-ngram.next_system_utterance__halal food',10.7397,380,0.0001,975
+3465,4.1,b'4.1-ngram.next_system_utterance__restaurant serving kind',11.0855,363,0.0001,976
+3317,4.1,b'4.1-ngram.next_system_utterance__range ugly',5.9295,842,0.0001,977
+3255,4.1,b'4.1-ngram.next_system_utterance__price range ugly',5.9295,839,0.0001,978
+4244,4.1,b'4.1-ngram.next_system_utterance__taj tandoori great',6.5716,737,0.0001,979
+825,4.1,b'4.1-ngram.current_user_utterance__uh phone number',5.6742,878,0.0001,980
+3318,4.1,b'4.1-ngram.next_system_utterance__range ugly duckling',5.9295,843,0.0001,981
+3834,4.1,b'4.1-ngram.next_system_utterance__shanghai family restaurant',7.5878,620,0.0001,982
+2430,4.1,b'4.1-ngram.next_system_utterance__kind food right',11.0855,365,0.0001,983
+1870,4.1,b'4.1-ngram.next_system_utterance__confirm looking',15.1982,241,0.0001,984
+2097,4.1,b'4.1-ngram.next_system_utterance__food right',11.0855,362,0.0001,985
+5143,4.1,b'4.1-ngram.next_user_utterance__want indian food',5.6432,884,0.0001,986
+2061,4.1,b'4.1-ngram.next_system_utterance__family',7.5878,622,0.0001,987
+2062,4.1,b'4.1-ngram.next_system_utterance__family restaurant',7.5878,621,0.0000,988
+459,4.1,b'4.1-ngram.current_user_utterance__okay whats phone',5.6456,883,0.0000,989
+2630,4.1,b'4.1-ngram.next_system_utterance__looking restaurant serving',11.0855,364,0.0000,990
+3832,4.1,b'4.1-ngram.next_system_utterance__shanghai',7.5878,618,0.0000,991
+3330,4.1,b'4.1-ngram.next_system_utterance__regent',7.9552,574,0.0000,992
+5150,4.1,b'4.1-ngram.next_user_utterance__want thai food',5.3493,967,0.0000,993
+5149,4.1,b'4.1-ngram.next_user_utterance__want thai',5.3493,968,0.0000,994
+1386,4.1,b'4.1-ngram.next_system_utterance__alimentum great restaurant',7.7428,611,0.0000,995
+1185,4.1,b'4.1-ngram.next_system_utterance__327908',7.9103,581,0.0000,996
+2414,4.1,b'4.1-ngram.next_system_utterance__johns',7.9250,577,0.0000,997
+3096,4.1,b'4.1-ngram.next_system_utterance__phone number nandos',7.9103,582,0.0000,998
+3103,4.1,b'4.1-ngram.next_system_utterance__phone number rajmahal',5.9916,820,0.0000,999
+935,4.1,b'4.1-ngram.next_system_utterance__01223 244955',5.9916,822,0.0000,1000
+1385,4.1,b'4.1-ngram.next_system_utterance__alimentum great',7.7428,610,0.0000,1001
+3276,4.1,b'4.1-ngram.next_system_utterance__rajmahal 01223 244955',5.9916,821,0.0000,1002
+3368,4.1,b'4.1-ngram.next_system_utterance__restaurant alimentum great',7.7428,609,0.0000,1003
+2954,4.1,b'4.1-ngram.next_system_utterance__number rajmahal',5.9916,816,0.0000,1004
+481,4.1,b'4.1-ngram.current_user_utterance__phone number venue',5.8805,850,0.0000,1005
+439,4.1,b'4.1-ngram.current_user_utterance__number venue',5.8805,851,0.0000,1006
+2938,4.1,b'4.1-ngram.next_system_utterance__number nandos',7.9103,580,0.0000,1007
+2655,4.1,b'4.1-ngram.next_system_utterance__magdalene',10.2050,396,0.0000,1008
+966,4.1,b'4.1-ngram.next_system_utterance__01223 327908',7.9103,579,0.0000,1009
+3275,4.1,b'4.1-ngram.next_system_utterance__rajmahal 01223',5.9916,818,0.0000,1010
+2657,4.1,b'4.1-ngram.next_system_utterance__magdalene street city',10.2050,398,0.0000,1011
+2955,4.1,b'4.1-ngram.next_system_utterance__number rajmahal 01223',5.9916,817,0.0000,1012
+1129,4.1,b'4.1-ngram.next_system_utterance__244955',5.9916,819,0.0000,1013
+2656,4.1,b'4.1-ngram.next_system_utterance__magdalene street',10.2050,397,0.0000,1014
+4267,4.1,b'4.1-ngram.next_system_utterance__tandoori great restaurant',8.1615,549,0.0000,1015
+4266,4.1,b'4.1-ngram.next_system_utterance__tandoori great',8.1615,550,0.0000,1016
+4470,4.1,b'4.1-ngram.next_system_utterance__vinci pizzeria 20',6.3729,767,0.0000,1017
+2429,4.1,b'4.1-ngram.next_system_utterance__kind food like',363.2290,3,0.0000,1018
+4123,4.1,b'4.1-ngram.next_system_utterance__sure da vinci',6.3729,768,0.0000,1019
+3144,4.1,b'4.1-ngram.next_system_utterance__pizzeria 20',6.3729,766,0.0000,1020
+3145,4.1,b'4.1-ngram.next_system_utterance__pizzeria 20 milton',6.3729,764,0.0000,1021
+4122,4.1,b'4.1-ngram.next_system_utterance__sure da',6.3729,765,0.0000,1022
+1208,4.1,b'4.1-ngram.next_system_utterance__351880',8.0944,555,0.0000,1023
+3342,4.1,b'4.1-ngram.next_system_utterance__restaurant 01223 351880',8.0944,556,0.0000,1024
+975,4.1,b'4.1-ngram.next_system_utterance__01223 351880',8.0944,554,0.0000,1025

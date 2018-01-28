@@ -1,0 +1,19 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+2530,4.1,b'4.1-ngram.next_system_utterance__like',388.2541,1,1.0000,0
+928,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,17,0.4364,1
+5066,4.1,b'4.1-ngram.next_user_utterance__thank',412.7607,0,0.4336,2
+1,4.1,b'4.1-ngram.current_user_utterance__address',350.4873,6,0.2277,3
+4553,4.1,b'4.1-ngram.next_user_utterance__address',275.7813,14,0.2064,4
+4726,4.1,b'4.1-ngram.next_user_utterance__good',342.6585,7,0.1263,5
+2428,4.1,b'4.1-ngram.next_system_utterance__kind food',355.3460,4,0.1130,6
+2427,4.1,b'4.1-ngram.next_system_utterance__kind',355.3460,5,0.1074,7
+4362,4.1,b'4.1-ngram.next_system_utterance__town mind',278.7280,12,0.0672,8
+2746,4.1,b'4.1-ngram.next_system_utterance__mind',278.7280,13,0.0622,9
+4615,4.1,b'4.1-ngram.next_user_utterance__bye',341.2626,8,0.0601,10
+2094,4.1,b'4.1-ngram.next_system_utterance__food like',363.3680,2,0.0591,11
+5068,4.1,b'4.1-ngram.next_user_utterance__thank good',331.0370,10,0.0565,12
+4621,4.1,b'4.1-ngram.next_user_utterance__care',251.4285,15,0.0498,13
+5069,4.1,b'4.1-ngram.next_user_utterance__thank good bye',328.6396,11,0.0409,14
+2429,4.1,b'4.1-ngram.next_system_utterance__kind food like',363.2290,3,0.0334,15
+927,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,16,0.0143,16
+4727,4.1,b'4.1-ngram.next_user_utterance__good bye',339.5286,9,0.0010,17

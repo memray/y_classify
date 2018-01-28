@@ -1,0 +1,67 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+2530,4.1,b'4.1-ngram.next_system_utterance__like',388.2541,1,1.0000,0
+928,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,65,0.9952,1
+4089,4.1,b'4.1-ngram.next_system_utterance__sure',60.0399,59,0.4286,2
+3519,4.1,b'4.1-ngram.next_system_utterance__right',83.0720,40,0.3666,3
+4875,4.1,b'4.1-ngram.next_user_utterance__number',213.1081,19,0.3316,4
+5066,4.1,b'4.1-ngram.next_user_utterance__thank',412.7607,0,0.2583,5
+429,4.1,b'4.1-ngram.current_user_utterance__number',201.0520,23,0.2131,6
+4726,4.1,b'4.1-ngram.next_user_utterance__good',342.6585,7,0.1799,7
+4553,4.1,b'4.1-ngram.next_user_utterance__address',275.7813,14,0.1618,8
+2094,4.1,b'4.1-ngram.next_system_utterance__food like',363.3680,2,0.1594,9
+2621,4.1,b'4.1-ngram.next_system_utterance__looking restaurant',58.5197,62,0.1504,10
+3877,4.1,b'4.1-ngram.next_system_utterance__sorry',80.5223,42,0.1458,11
+2574,4.1,b'4.1-ngram.next_system_utterance__looking',85.7534,39,0.1425,12
+5068,4.1,b'4.1-ngram.next_user_utterance__thank good',331.0370,10,0.0954,13
+4362,4.1,b'4.1-ngram.next_system_utterance__town mind',278.7280,12,0.0891,14
+5156,4.1,b'4.1-ngram.next_user_utterance__whats',97.8851,36,0.0868,15
+494,4.1,b'4.1-ngram.current_user_utterance__post code',62.6675,54,0.0827,16
+2746,4.1,b'4.1-ngram.next_system_utterance__mind',278.7280,13,0.0781,17
+119,4.1,b'4.1-ngram.current_user_utterance__code',58.8962,61,0.0735,18
+5174,4.1,b'4.1-ngram.next_user_utterance__yes',202.5400,21,0.0623,19
+896,4.1,b'4.1-ngram.current_user_utterance__whats',122.0281,25,0.0608,20
+4615,4.1,b'4.1-ngram.next_user_utterance__bye',341.2626,8,0.0605,21
+5070,4.1,b'4.1-ngram.next_user_utterance__thank goodbye',67.7185,50,0.0584,22
+2533,4.1,b'4.1-ngram.next_system_utterance__like cheap',103.8026,32,0.0543,23
+4675,4.1,b'4.1-ngram.next_user_utterance__dont',242.3177,17,0.0539,24
+4676,4.1,b'4.1-ngram.next_user_utterance__dont care',247.8362,16,0.0531,25
+474,4.1,b'4.1-ngram.current_user_utterance__phone number',201.5084,22,0.0507,26
+4650,4.1,b'4.1-ngram.next_user_utterance__code',60.1021,58,0.0460,27
+4673,4.1,b'4.1-ngram.next_user_utterance__doesnt',101.6540,33,0.0441,28
+2847,4.1,b'4.1-ngram.next_system_utterance__number',77.2558,44,0.0419,29
+493,4.1,b'4.1-ngram.current_user_utterance__post',62.7425,53,0.0408,30
+897,4.1,b'4.1-ngram.current_user_utterance__whats address',78.9186,43,0.0401,31
+473,4.1,b'4.1-ngram.current_user_utterance__phone',199.8041,24,0.0399,32
+3051,4.1,b'4.1-ngram.next_system_utterance__phone',77.2558,45,0.0362,33
+4731,4.1,b'4.1-ngram.next_user_utterance__goodbye',67.4991,51,0.0344,34
+3052,4.1,b'4.1-ngram.next_system_utterance__phone number',77.2558,46,0.0330,35
+3414,4.1,b'4.1-ngram.next_system_utterance__restaurant right',59.9355,60,0.0322,36
+5069,4.1,b'4.1-ngram.next_user_utterance__thank good bye',328.6396,11,0.0299,37
+927,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,64,0.0291,38
+4621,4.1,b'4.1-ngram.next_user_utterance__care',251.4285,15,0.0260,39
+1,4.1,b'4.1-ngram.current_user_utterance__address',350.4873,6,0.0256,40
+2085,4.1,b'4.1-ngram.next_system_utterance__food',95.8159,37,0.0229,41
+4554,4.1,b'4.1-ngram.next_user_utterance__address phone',61.7898,55,0.0221,42
+2216,4.1,b'4.1-ngram.next_system_utterance__great',76.7710,48,0.0191,43
+2217,4.1,b'4.1-ngram.next_system_utterance__great restaurant',76.7710,47,0.0182,44
+1714,4.1,b'4.1-ngram.next_system_utterance__cheap moderate expensive',106.9476,26,0.0157,45
+5157,4.1,b'4.1-ngram.next_user_utterance__whats address',62.8542,52,0.0153,46
+4697,4.1,b'4.1-ngram.next_user_utterance__food',105.7182,31,0.0153,47
+4920,4.1,b'4.1-ngram.next_user_utterance__phone',206.4758,20,0.0151,48
+529,4.1,b'4.1-ngram.current_user_utterance__restaurant',91.1197,38,0.0145,49
+4833,4.1,b'4.1-ngram.next_user_utterance__matter',99.7411,35,0.0144,50
+4938,4.1,b'4.1-ngram.next_user_utterance__post code',58.4127,63,0.0140,51
+2758,4.1,b'4.1-ngram.next_system_utterance__moderate expensive',106.9476,27,0.0139,52
+2759,4.1,b'4.1-ngram.next_system_utterance__moderate expensive price',106.9476,28,0.0134,53
+4921,4.1,b'4.1-ngram.next_user_utterance__phone number',213.5485,18,0.0131,54
+2429,4.1,b'4.1-ngram.next_system_utterance__kind food like',363.2290,3,0.0130,55
+1713,4.1,b'4.1-ngram.next_system_utterance__cheap moderate',106.9476,30,0.0125,56
+929,4.1,b'4.1-ngram.next_system_utterance__01223',72.5971,49,0.0115,57
+2534,4.1,b'4.1-ngram.next_system_utterance__like cheap moderate',106.9476,29,0.0113,58
+4636,4.1,b'4.1-ngram.next_user_utterance__cheap',61.2123,56,0.0100,59
+2427,4.1,b'4.1-ngram.next_system_utterance__kind',355.3460,5,0.0082,60
+917,4.1,b'4.1-ngram.current_user_utterance__yes',81.1675,41,0.0075,61
+2428,4.1,b'4.1-ngram.next_system_utterance__kind food',355.3460,4,0.0069,62
+4674,4.1,b'4.1-ngram.next_user_utterance__doesnt matter',100.8722,34,0.0065,63
+4555,4.1,b'4.1-ngram.next_user_utterance__address phone number',61.0439,57,0.0025,64
+4727,4.1,b'4.1-ngram.next_user_utterance__good bye',339.5286,9,0.0003,65

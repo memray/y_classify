@@ -1,0 +1,67 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+8509,4.1,b'4.1-ngram.next_system_utterance__sorry',663.5020,0,1.0000,0
+8514,4.1,b'4.1-ngram.next_system_utterance__sorry don',323.0077,6,0.3255,1
+2899,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,65,0.2745,2
+4974,4.1,b'4.1-ngram.next_system_utterance__don',368.4234,5,0.2720,3
+9302,4.1,b'4.1-ngram.next_system_utterance__turning',51.4677,49,0.2626,4
+5783,4.1,b'4.1-ngram.next_system_utterance__help',575.0181,1,0.2581,5
+4978,4.1,b'4.1-ngram.next_system_utterance__don know',240.5310,7,0.2261,6
+6281,4.1,b'4.1-ngram.next_system_utterance__know',226.4448,9,0.1057,7
+8540,4.1,b'4.1-ngram.next_system_utterance__sorry sure',369.8694,4,0.0902,8
+4872,4.1,b'4.1-ngram.next_system_utterance__device',95.2261,19,0.0811,9
+8515,4.1,b'4.1-ngram.next_system_utterance__sorry don know',240.0449,8,0.0657,10
+8198,4.1,b'4.1-ngram.next_system_utterance__screen like',47.8197,63,0.0544,11
+8518,4.1,b'4.1-ngram.next_system_utterance__sorry help',178.4302,14,0.0485,12
+8197,4.1,b'4.1-ngram.next_system_utterance__screen',69.2170,30,0.0482,13
+4992,4.1,b'4.1-ngram.next_system_utterance__don understand',211.4860,12,0.0248,14
+9275,4.1,b'4.1-ngram.next_system_utterance__try',48.8943,58,0.0239,15
+6512,4.1,b'4.1-ngram.next_system_utterance__like watch',65.3965,31,0.0215,16
+3822,4.1,b'4.1-ngram.next_system_utterance__ask',82.7572,21,0.0203,17
+9496,4.1,b'4.1-ngram.next_system_utterance__video',54.7078,42,0.0197,18
+9589,4.1,b'4.1-ngram.next_system_utterance__watch',75.3387,22,0.0196,19
+11164,4.1,b'4.1-ngram.next_user_utterance__play love',55.6039,41,0.0181,20
+9401,4.1,b'4.1-ngram.next_system_utterance__understand',210.3998,13,0.0119,21
+1740,4.1,b'4.1-ngram.current_user_utterance__play love',52.0772,45,0.0118,22
+8172,4.1,b'4.1-ngram.next_system_utterance__saying',50.5268,50,0.0094,23
+9550,4.1,b'4.1-ngram.next_system_utterance__want',49.8661,52,0.0085,24
+2880,4.1,b'4.1-ngram.current_user_utterance__yes',50.4583,51,0.0053,25
+8173,4.1,b'4.1-ngram.next_system_utterance__saying include',48.4468,61,0.0053,26
+4980,4.1,b'4.1-ngram.next_system_utterance__don know help',217.5272,10,0.0049,27
+9287,4.1,b'4.1-ngram.next_system_utterance__try saying include',48.4468,62,0.0048,28
+6290,4.1,b'4.1-ngram.next_system_utterance__know help',217.5272,11,0.0045,29
+10352,4.1,b'4.1-ngram.next_user_utterance__eastern',83.9180,20,0.0044,30
+9551,4.1,b'4.1-ngram.next_system_utterance__want add',60.9383,35,0.0043,31
+1967,4.1,b'4.1-ngram.current_user_utterance__red light',56.9956,39,0.0042,32
+7379,4.1,b'4.1-ngram.next_system_utterance__okay long',60.8810,36,0.0042,33
+8517,4.1,b'4.1-ngram.next_system_utterance__sorry don understand',129.3792,15,0.0042,34
+8937,4.1,b'4.1-ngram.next_system_utterance__tell',55.9059,40,0.0042,35
+671,4.1,b'4.1-ngram.current_user_utterance__eastern',73.6705,23,0.0036,36
+10208,4.1,b'4.1-ngram.next_user_utterance__computer',70.0403,29,0.0036,37
+7636,4.1,b'4.1-ngram.next_system_utterance__played right',49.5286,57,0.0034,38
+3855,4.1,b'4.1-ngram.next_system_utterance__available played right',49.5286,54,0.0030,39
+12062,4.1,b'4.1-ngram.next_user_utterance__yes',64.0071,32,0.0030,40
+6632,4.1,b'4.1-ngram.next_system_utterance__looked',49.5286,56,0.0028,41
+6139,4.1,b'4.1-ngram.next_system_utterance__isn available played',49.5286,55,0.0027,42
+3854,4.1,b'4.1-ngram.next_system_utterance__available played',49.5286,53,0.0025,43
+2898,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,64,0.0025,44
+5787,4.1,b'4.1-ngram.next_system_utterance__help learning',62.5098,33,0.0023,45
+9286,4.1,b'4.1-ngram.next_system_utterance__try saying',51.8316,46,0.0020,46
+1478,4.1,b'4.1-ngram.current_user_utterance__open netflix shield',59.4949,38,0.0017,47
+9554,4.1,b'4.1-ngram.next_system_utterance__want reminded',53.3556,44,0.0014,48
+7994,4.1,b'4.1-ngram.next_system_utterance__reminded',53.3556,43,0.0013,49
+1841,4.1,b'4.1-ngram.current_user_utterance__play tunein station',51.4699,47,0.0012,50
+1477,4.1,b'4.1-ngram.current_user_utterance__open netflix',59.4949,37,0.0012,51
+3766,4.1,b'4.1-ngram.next_system_utterance__apologies don understand',114.4431,18,0.0012,52
+2555,4.1,b'4.1-ngram.current_user_utterance__tunein station',51.4699,48,0.0011,53
+3765,4.1,b'4.1-ngram.next_system_utterance__apologies don',114.4431,17,0.0010,54
+3764,4.1,b'4.1-ngram.next_system_utterance__apologies',114.4431,16,0.0008,55
+11141,4.1,b'4.1-ngram.next_user_utterance__play handclap',48.8581,60,0.0007,56
+10543,4.1,b'4.1-ngram.next_user_utterance__handclap',48.8581,59,0.0006,57
+8808,4.1,b'4.1-ngram.next_system_utterance__sure help',370.7657,3,0.0004,58
+8542,4.1,b'4.1-ngram.next_system_utterance__sorry sure help',370.7657,2,0.0004,59
+6372,4.1,b'4.1-ngram.next_system_utterance__learning',60.9885,34,0.0003,60
+3823,4.1,b'4.1-ngram.next_system_utterance__ask video',71.4934,25,0.0001,61
+3824,4.1,b'4.1-ngram.next_system_utterance__ask video tell',71.4934,28,0.0001,62
+9498,4.1,b'4.1-ngram.next_system_utterance__video tell',71.4934,24,0.0001,63
+8940,4.1,b'4.1-ngram.next_system_utterance__tell screen',71.4934,27,0.0001,64
+9499,4.1,b'4.1-ngram.next_system_utterance__video tell screen',71.4934,26,0.0000,65

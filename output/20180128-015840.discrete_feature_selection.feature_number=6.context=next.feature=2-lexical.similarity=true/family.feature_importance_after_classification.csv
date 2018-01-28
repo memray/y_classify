@@ -1,0 +1,73 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+7210,4.1,b'4.1-ngram.next_system_utterance__didn',80.2682,26,1.0000,0
+7388,4.1,b'4.1-ngram.next_system_utterance__don task',57.2768,63,0.8628,1
+16621,4.1,b'4.1-ngram.next_system_utterance__nfor example title',146.2958,13,0.6657,2
+11350,4.1,b'4.1-ngram.next_system_utterance__mean clear list',67.8482,49,0.5172,3
+16609,4.1,b'4.1-ngram.next_system_utterance__nfor',184.8938,8,0.4813,4
+22584,4.1,b'4.1-ngram.next_system_utterance__yes',79.9252,28,0.3682,5
+19096,4.1,b'4.1-ngram.next_system_utterance__request',236.6989,4,0.3028,6
+2756,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,68,0.2753,7
+3466,4.1,b'4.1-ngram.next_system_utterance__add',67.8749,43,0.1415,8
+7797,4.1,b'4.1-ngram.next_system_utterance__example title halloween',69.4395,42,0.1289,9
+8906,4.1,b'4.1-ngram.next_system_utterance__halloween party nyou',76.3495,33,0.1281,10
+7798,4.1,b'4.1-ngram.next_system_utterance__example title lunch',100.5301,21,0.1203,11
+6283,4.1,b'4.1-ngram.next_system_utterance__clarify',72.9151,37,0.1034,12
+10224,4.1,b'4.1-ngram.next_system_utterance__learning',72.9151,38,0.0924,13
+7297,4.1,b'4.1-ngram.next_system_utterance__discard',222.9657,5,0.0879,14
+8948,4.1,b'4.1-ngram.next_system_utterance__handle',64.3458,55,0.0874,15
+24417,4.1,b'4.1-ngram.next_user_utterance__yes',315.2330,0,0.0632,16
+3478,4.1,b'4.1-ngram.next_system_utterance__add items',59.7357,61,0.0552,17
+18773,4.1,b'4.1-ngram.next_system_utterance__reminder ntry',62.8033,57,0.0414,18
+18769,4.1,b'4.1-ngram.next_system_utterance__reminder nfor example',165.8424,10,0.0371,19
+2126,4.1,b'4.1-ngram.current_user_utterance__reminder',61.4610,60,0.0324,20
+24267,4.1,b'4.1-ngram.next_user_utterance__today',58.2791,62,0.0285,21
+7298,4.1,b'4.1-ngram.next_system_utterance__discard request',241.7519,3,0.0274,22
+1971,4.1,b'4.1-ngram.current_user_utterance__remind',80.0008,27,0.0259,23
+17428,4.1,b'4.1-ngram.next_system_utterance__party nyou discard',76.3495,34,0.0212,24
+742,4.1,b'4.1-ngram.current_user_utterance__clear',82.0707,25,0.0200,25
+20241,4.1,b'4.1-ngram.next_system_utterance__sorry',85.8791,22,0.0172,26
+24264,4.1,b'4.1-ngram.next_user_utterance__title',79.3643,29,0.0141,27
+2755,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,69,0.0106,28
+23297,4.1,b'4.1-ngram.next_user_utterance__discard',134.5622,14,0.0101,29
+6333,4.1,b'4.1-ngram.next_system_utterance__clear',63.0246,56,0.0100,30
+16891,4.1,b'4.1-ngram.next_system_utterance__nyou discard request',246.7700,2,0.0072,31
+8261,4.1,b'4.1-ngram.next_system_utterance__friday',72.6222,40,0.0059,32
+7770,4.1,b'4.1-ngram.next_system_utterance__example',148.1015,11,0.0059,33
+16610,4.1,b'4.1-ngram.next_system_utterance__nfor example',184.8938,7,0.0056,34
+8266,4.1,b'4.1-ngram.next_system_utterance__friday nyou',61.6700,58,0.0050,35
+16887,4.1,b'4.1-ngram.next_system_utterance__nyou',213.1769,6,0.0050,36
+743,4.1,b'4.1-ngram.current_user_utterance__clear list',66.7468,53,0.0047,37
+16890,4.1,b'4.1-ngram.next_system_utterance__nyou discard',246.7700,1,0.0046,38
+7796,4.1,b'4.1-ngram.next_system_utterance__example title',146.2958,12,0.0031,39
+8267,4.1,b'4.1-ngram.next_system_utterance__friday nyou discard',61.6700,59,0.0028,40
+8903,4.1,b'4.1-ngram.next_system_utterance__halloween',84.2551,24,0.0023,41
+7205,4.1,b'4.1-ngram.next_system_utterance__did',73.3346,36,0.0023,42
+21097,4.1,b'4.1-ngram.next_system_utterance__title halloween',76.3495,32,0.0019,43
+21098,4.1,b'4.1-ngram.next_system_utterance__title halloween party',76.3495,31,0.0018,44
+18393,4.1,b'4.1-ngram.next_system_utterance__really mean clear',67.8482,50,0.0016,45
+17427,4.1,b'4.1-ngram.next_system_utterance__party nyou',76.3495,30,0.0016,46
+18768,4.1,b'4.1-ngram.next_system_utterance__reminder nfor',165.8424,9,0.0015,47
+17420,4.1,b'4.1-ngram.next_system_utterance__party',67.8451,52,0.0015,48
+8904,4.1,b'4.1-ngram.next_system_utterance__halloween party',84.2551,23,0.0013,49
+10225,4.1,b'4.1-ngram.next_system_utterance__learning clarify',72.9151,39,0.0010,50
+10306,4.1,b'4.1-ngram.next_system_utterance__leslie',101.6853,19,0.0010,51
+10967,4.1,b'4.1-ngram.next_system_utterance__lunch leslie nyou',101.6853,15,0.0010,52
+21100,4.1,b'4.1-ngram.next_system_utterance__title lunch leslie',101.6853,18,0.0009,53
+10966,4.1,b'4.1-ngram.next_system_utterance__lunch leslie',101.6853,16,0.0008,54
+10725,4.1,b'4.1-ngram.next_system_utterance__list yes',67.8482,47,0.0007,55
+10307,4.1,b'4.1-ngram.next_system_utterance__leslie nyou',101.6853,20,0.0007,56
+11348,4.1,b'4.1-ngram.next_system_utterance__mean',74.4236,35,0.0003,57
+18381,4.1,b'4.1-ngram.next_system_utterance__reading n3 distance',0.0000,71,0.0003,58
+14244,4.1,b'4.1-ngram.next_system_utterance__n3 distance glasses',0.0000,70,0.0003,59
+14243,4.1,b'4.1-ngram.next_system_utterance__n3 distance',0.0000,64,0.0002,60
+7339,4.1,b'4.1-ngram.next_system_utterance__distance glasses',0.0000,66,0.0002,61
+7338,4.1,b'4.1-ngram.next_system_utterance__distance',0.0000,67,0.0002,62
+7340,4.1,b'4.1-ngram.next_system_utterance__distance glasses tree',0.0000,65,0.0001,63
+6334,4.1,b'4.1-ngram.next_system_utterance__clear list',64.9391,54,0.0001,64
+7209,4.1,b'4.1-ngram.next_system_utterance__did really mean',67.8482,46,0.0001,65
+10308,4.1,b'4.1-ngram.next_system_utterance__leslie nyou discard',101.6853,17,0.0000,66
+18392,4.1,b'4.1-ngram.next_system_utterance__really mean',67.8482,51,0.0000,67
+6335,4.1,b'4.1-ngram.next_system_utterance__clear list yes',67.8482,44,0.0000,68
+11349,4.1,b'4.1-ngram.next_system_utterance__mean clear',67.8482,48,0.0000,69
+7208,4.1,b'4.1-ngram.next_system_utterance__did really',67.8482,45,0.0000,70
+18391,4.1,b'4.1-ngram.next_system_utterance__really',70.6172,41,0.0000,71

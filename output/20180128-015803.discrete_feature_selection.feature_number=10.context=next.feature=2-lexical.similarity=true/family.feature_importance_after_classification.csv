@@ -1,0 +1,1033 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+7210,4.1,b'4.1-ngram.next_system_utterance__didn',80.2682,26,1.0000,0
+2756,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,1025,0.3473,1
+3755,4.1,b'4.1-ngram.next_system_utterance__alright',12.4312,317,0.2577,2
+22584,4.1,b'4.1-ngram.next_system_utterance__yes',79.9252,28,0.2207,3
+17005,4.1,b'4.1-ngram.next_system_utterance__ok',11.3052,376,0.2061,4
+21878,4.1,b'4.1-ngram.next_system_utterance__ve removed',10.7183,395,0.1917,5
+7297,4.1,b'4.1-ngram.next_system_utterance__discard',222.9657,5,0.1020,6
+20833,4.1,b'4.1-ngram.next_system_utterance__task',19.6359,174,0.1006,7
+18933,4.1,b'4.1-ngram.next_system_utterance__removed',10.4665,405,0.0922,8
+21873,4.1,b'4.1-ngram.next_system_utterance__ve',19.9675,167,0.0833,9
+266,4.1,b'4.1-ngram.current_user_utterance__add item',21.1614,154,0.0812,10
+16632,4.1,b'4.1-ngram.next_system_utterance__nhere',12.6013,309,0.0743,11
+214,4.1,b'4.1-ngram.current_user_utterance__add',24.3396,133,0.0657,12
+1481,4.1,b'4.1-ngram.current_user_utterance__list',17.3641,199,0.0649,13
+9369,4.1,b'4.1-ngram.next_system_utterance__item number',9.6016,482,0.0640,14
+296,4.1,b'4.1-ngram.current_user_utterance__add items',12.5252,311,0.0605,15
+11096,4.1,b'4.1-ngram.next_system_utterance__mar',5.4842,969,0.0594,16
+13435,4.1,b'4.1-ngram.next_system_utterance__n2',11.3346,375,0.0540,17
+2743,4.1,b'4.1-ngram.current_user_utterance__yes',37.0292,104,0.0504,18
+16891,4.1,b'4.1-ngram.next_system_utterance__nyou discard request',246.7700,2,0.0503,19
+2139,4.1,b'4.1-ngram.current_user_utterance__reminders',18.3222,191,0.0485,20
+16890,4.1,b'4.1-ngram.next_system_utterance__nyou discard',246.7700,1,0.0470,21
+15087,4.1,b'4.1-ngram.next_system_utterance__n5',8.2189,573,0.0459,22
+911,4.1,b'4.1-ngram.current_user_utterance__discard',41.2104,81,0.0423,23
+22891,4.1,b'4.1-ngram.next_user_utterance__add item',11.4289,371,0.0410,24
+3040,4.1,b'4.1-ngram.next_system_utterance__19',6.4313,804,0.0378,25
+2684,4.1,b'4.1-ngram.current_user_utterance__wednesday',6.4884,783,0.0375,26
+8703,4.1,b'4.1-ngram.next_system_utterance__great',17.0475,203,0.0366,27
+19717,4.1,b'4.1-ngram.next_system_utterance__send',16.1132,226,0.0364,28
+3184,4.1,b'4.1-ngram.next_system_utterance__25 pm nyou',9.9741,452,0.0338,29
+20241,4.1,b'4.1-ngram.next_system_utterance__sorry',85.8791,22,0.0332,30
+16777,4.1,b'4.1-ngram.next_system_utterance__nto add',39.5718,90,0.0318,31
+6285,4.1,b'4.1-ngram.next_system_utterance__clarify ntry commands',8.5842,535,0.0307,32
+2126,4.1,b'4.1-ngram.current_user_utterance__reminder',61.4610,60,0.0304,33
+9077,4.1,b'4.1-ngram.next_system_utterance__hey',10.8853,387,0.0303,34
+23465,4.1,b'4.1-ngram.next_user_utterance__help',15.7199,229,0.0287,35
+1971,4.1,b'4.1-ngram.current_user_utterance__remind',80.0008,27,0.0265,36
+3466,4.1,b'4.1-ngram.next_system_utterance__add',67.8749,43,0.0263,37
+24417,4.1,b'4.1-ngram.next_user_utterance__yes',315.2330,0,0.0262,38
+24034,4.1,b'4.1-ngram.next_user_utterance__remove',15.1882,241,0.0259,39
+8948,4.1,b'4.1-ngram.next_system_utterance__handle',64.3458,55,0.0239,40
+24292,4.1,b'4.1-ngram.next_user_utterance__tonight',8.2154,574,0.0234,41
+17935,4.1,b'4.1-ngram.next_system_utterance__pm nyou remove',6.1898,844,0.0231,42
+2190,4.1,b'4.1-ngram.current_user_utterance__remove reminder',33.9477,108,0.0231,43
+21059,4.1,b'4.1-ngram.next_system_utterance__times',8.3418,568,0.0229,44
+533,4.1,b'4.1-ngram.current_user_utterance__birthday',7.4200,662,0.0228,45
+7228,4.1,b'4.1-ngram.next_system_utterance__didn nto',41.7252,78,0.0226,46
+16565,4.1,b'4.1-ngram.next_system_utterance__nbut ve removed',5.7437,914,0.0226,47
+7229,4.1,b'4.1-ngram.next_system_utterance__didn nto add',41.7252,77,0.0217,48
+2500,4.1,b'4.1-ngram.current_user_utterance__time',17.9000,197,0.0204,49
+16799,4.1,b'4.1-ngram.next_system_utterance__ntry',45.6457,75,0.0204,50
+9059,4.1,b'4.1-ngram.next_system_utterance__help reminders',17.4207,198,0.0200,51
+1205,4.1,b'4.1-ngram.current_user_utterance__help',21.6342,152,0.0190,52
+11059,4.1,b'4.1-ngram.next_system_utterance__manage',6.0080,872,0.0189,53
+10705,4.1,b'4.1-ngram.next_system_utterance__list nhere',14.8791,248,0.0186,54
+24023,4.1,b'4.1-ngram.next_user_utterance__reminder',20.6886,158,0.0182,55
+10706,4.1,b'4.1-ngram.next_system_utterance__list nhere list',14.8791,247,0.0179,56
+21768,4.1,b'4.1-ngram.next_system_utterance__understand rephrase ntry',10.6706,397,0.0171,57
+14640,4.1,b'4.1-ngram.next_system_utterance__n4',9.3830,501,0.0165,58
+2160,4.1,b'4.1-ngram.current_user_utterance__remove item',10.1435,439,0.0163,59
+10747,4.1,b'4.1-ngram.next_system_utterance__ll',9.9915,450,0.0156,60
+7221,4.1,b'4.1-ngram.next_system_utterance__didn list',6.3652,815,0.0154,61
+21038,4.1,b'4.1-ngram.next_system_utterance__time',34.7701,107,0.0152,62
+21201,4.1,b'4.1-ngram.next_system_utterance__tomorrow 30',52.6603,67,0.0152,63
+1642,4.1,b'4.1-ngram.current_user_utterance__minutes',25.7377,122,0.0151,64
+20123,4.1,b'4.1-ngram.next_system_utterance__snooze hour',14.6421,255,0.0151,65
+24269,4.1,b'4.1-ngram.next_user_utterance__today 30',23.3465,148,0.0150,66
+9374,4.1,b'4.1-ngram.next_system_utterance__items',5.4909,968,0.0144,67
+21766,4.1,b'4.1-ngram.next_system_utterance__understand',55.2939,66,0.0140,68
+3493,4.1,b'4.1-ngram.next_system_utterance__added',15.4609,235,0.0139,69
+325,4.1,b'4.1-ngram.current_user_utterance__add member',5.3496,996,0.0139,70
+20006,4.1,b'4.1-ngram.next_system_utterance__skip',5.7760,903,0.0136,71
+19727,4.1,b'4.1-ngram.next_system_utterance__send reminder',34.8132,106,0.0136,72
+873,4.1,b'4.1-ngram.current_user_utterance__delete list',13.2380,281,0.0136,73
+348,4.1,b'4.1-ngram.current_user_utterance__add reminder',24.4421,132,0.0135,74
+11925,4.1,b'4.1-ngram.next_system_utterance__n1',13.3639,280,0.0135,75
+18897,4.1,b'4.1-ngram.next_system_utterance__remove',5.9482,878,0.0135,76
+23675,4.1,b'4.1-ngram.next_user_utterance__march',7.6017,638,0.0134,77
+23339,4.1,b'4.1-ngram.next_user_utterance__edit',5.4166,985,0.0132,78
+2182,4.1,b'4.1-ngram.current_user_utterance__remove member',12.1680,325,0.0131,79
+18773,4.1,b'4.1-ngram.next_system_utterance__reminder ntry',62.8033,57,0.0130,80
+21047,4.1,b'4.1-ngram.next_system_utterance__time set',50.2532,70,0.0126,81
+7881,4.1,b'4.1-ngram.next_system_utterance__family members',10.5907,398,0.0126,82
+24086,4.1,b'4.1-ngram.next_user_utterance__removed',14.1265,272,0.0126,83
+23362,4.1,b'4.1-ngram.next_user_utterance__family members',11.8042,347,0.0125,84
+21658,4.1,b'4.1-ngram.next_system_utterance__type skip',5.7760,904,0.0124,85
+18502,4.1,b'4.1-ngram.next_system_utterance__remind',10.1029,444,0.0118,86
+16887,4.1,b'4.1-ngram.next_system_utterance__nyou',213.1769,6,0.0117,87
+19037,4.1,b'4.1-ngram.next_system_utterance__removed schedule',6.3263,818,0.0115,88
+19080,4.1,b'4.1-ngram.next_system_utterance__rephrase',52.4997,68,0.0115,89
+2755,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,1024,0.0115,90
+23297,4.1,b'4.1-ngram.next_user_utterance__discard',134.5622,14,0.0115,91
+123,4.1,b'4.1-ngram.current_user_utterance__30',8.5205,537,0.0114,92
+24267,4.1,b'4.1-ngram.next_user_utterance__today',58.2791,62,0.0114,93
+742,4.1,b'4.1-ngram.current_user_utterance__clear',82.0707,25,0.0113,94
+21874,4.1,b'4.1-ngram.next_system_utterance__ve added',16.4481,223,0.0113,95
+7387,4.1,b'4.1-ngram.next_system_utterance__don',48.4406,71,0.0110,96
+21475,4.1,b'4.1-ngram.next_system_utterance__try typing',6.5579,777,0.0108,97
+23889,4.1,b'4.1-ngram.next_user_utterance__person',7.4055,665,0.0107,98
+2687,4.1,b'4.1-ngram.current_user_utterance__wednesday night',7.1766,696,0.0106,99
+18391,4.1,b'4.1-ngram.next_system_utterance__really',70.6172,41,0.0104,100
+2191,4.1,b'4.1-ngram.current_user_utterance__remove reminders',14.5267,257,0.0102,101
+23634,4.1,b'4.1-ngram.next_user_utterance__list',7.9606,591,0.0101,102
+23445,4.1,b'4.1-ngram.next_user_utterance__group',6.8488,722,0.0100,103
+660,4.1,b'4.1-ngram.current_user_utterance__carleigh',5.3550,995,0.0100,104
+242,4.1,b'4.1-ngram.current_user_utterance__add discard',8.0895,582,0.0100,105
+15448,4.1,b'4.1-ngram.next_system_utterance__n6',6.8542,721,0.0099,106
+6283,4.1,b'4.1-ngram.next_system_utterance__clarify',72.9151,39,0.0099,107
+22800,4.1,b'4.1-ngram.next_user_utterance__30',9.5653,493,0.0099,108
+417,4.1,b'4.1-ngram.current_user_utterance__amanda',7.7909,609,0.0097,109
+22851,4.1,b'4.1-ngram.next_user_utterance__add',16.2056,225,0.0096,110
+7298,4.1,b'4.1-ngram.next_system_utterance__discard request',241.7519,3,0.0095,111
+162,4.1,b'4.1-ngram.current_user_utterance__4pm',7.8653,598,0.0095,112
+6645,4.1,b'4.1-ngram.next_system_utterance__couldn',50.9553,69,0.0093,113
+10224,4.1,b'4.1-ngram.next_system_utterance__learning',72.9151,38,0.0092,114
+10225,4.1,b'4.1-ngram.next_system_utterance__learning clarify',72.9151,37,0.0092,115
+1234,4.1,b'4.1-ngram.current_user_utterance__hours',11.4341,370,0.0091,116
+18800,4.1,b'4.1-ngram.next_system_utterance__reminder time',25.2869,127,0.0090,117
+18418,4.1,b'4.1-ngram.next_system_utterance__recurring reminders',5.3804,992,0.0089,118
+23401,4.1,b'4.1-ngram.next_user_utterance__friday',10.3395,417,0.0086,119
+2053,4.1,b'4.1-ngram.current_user_utterance__remind lois',13.5483,276,0.0085,120
+18884,4.1,b'4.1-ngram.next_system_utterance__reminders time',16.0249,227,0.0084,121
+23581,4.1,b'4.1-ngram.next_user_utterance__june 14',5.8980,881,0.0081,122
+22819,4.1,b'4.1-ngram.next_user_utterance__45',5.4128,986,0.0081,123
+24366,4.1,b'4.1-ngram.next_user_utterance__watch',12.0039,329,0.0081,124
+2676,4.1,b'4.1-ngram.current_user_utterance__watch movies',6.0034,873,0.0080,125
+24076,4.1,b'4.1-ngram.next_user_utterance__remove reminders',10.4163,414,0.0080,126
+17437,4.1,b'4.1-ngram.next_system_utterance__past',9.6819,480,0.0079,127
+2624,4.1,b'4.1-ngram.current_user_utterance__update',7.4170,663,0.0078,128
+20703,4.1,b'4.1-ngram.next_system_utterance__sure',14.2587,269,0.0077,129
+2362,4.1,b'4.1-ngram.current_user_utterance__snooze',10.4752,404,0.0077,130
+23472,4.1,b'4.1-ngram.next_user_utterance__help reminders',11.1531,381,0.0075,131
+23501,4.1,b'4.1-ngram.next_user_utterance__item',15.0009,244,0.0075,132
+743,4.1,b'4.1-ngram.current_user_utterance__clear list',66.7468,53,0.0075,133
+21664,4.1,b'4.1-ngram.next_system_utterance__typing',6.7440,735,0.0074,134
+7772,4.1,b'4.1-ngram.next_system_utterance__example 10 pm',9.9091,458,0.0074,135
+24264,4.1,b'4.1-ngram.next_user_utterance__title',79.3643,29,0.0072,136
+2142,4.1,b'4.1-ngram.current_user_utterance__remove',5.6259,948,0.0071,137
+1019,4.1,b'4.1-ngram.current_user_utterance__family members',7.8358,603,0.0071,138
+768,4.1,b'4.1-ngram.current_user_utterance__come',5.9161,880,0.0070,139
+20252,4.1,b'4.1-ngram.next_system_utterance__sorry didn',11.0916,383,0.0070,140
+18902,4.1,b'4.1-ngram.next_system_utterance__remove item',8.6656,533,0.0069,141
+15789,4.1,b'4.1-ngram.next_system_utterance__n7',5.8831,882,0.0068,142
+16805,4.1,b'4.1-ngram.next_system_utterance__ntry examples manage',13.5123,278,0.0068,143
+22833,4.1,b'4.1-ngram.next_user_utterance__6pm',6.3655,814,0.0067,144
+21642,4.1,b'4.1-ngram.next_system_utterance__type help',16.9347,204,0.0066,145
+11139,4.1,b'4.1-ngram.next_system_utterance__mar 19',18.8137,181,0.0066,146
+723,4.1,b'4.1-ngram.current_user_utterance__christmas',18.4756,189,0.0066,147
+18722,4.1,b'4.1-ngram.next_system_utterance__reminder',18.8904,180,0.0066,148
+17420,4.1,b'4.1-ngram.next_system_utterance__party',67.8451,52,0.0066,149
+16779,4.1,b'4.1-ngram.next_system_utterance__nto add items',40.1059,88,0.0065,150
+1741,4.1,b'4.1-ngram.current_user_utterance__oct 11',6.1060,855,0.0064,151
+23300,4.1,b'4.1-ngram.next_user_utterance__discard reminder',11.5172,362,0.0064,152
+14103,4.1,b'4.1-ngram.next_system_utterance__n3',10.8643,389,0.0064,153
+2688,4.1,b'4.1-ngram.current_user_utterance__week',7.2911,676,0.0064,154
+21450,4.1,b'4.1-ngram.next_system_utterance__try 7pm title',6.3857,809,0.0064,155
+16804,4.1,b'4.1-ngram.next_system_utterance__ntry examples',13.5123,277,0.0064,156
+11348,4.1,b'4.1-ngram.next_system_utterance__mean',74.4236,35,0.0062,157
+21798,4.1,b'4.1-ngram.next_system_utterance__update reminder try',6.0352,860,0.0062,158
+2313,4.1,b'4.1-ngram.current_user_utterance__set reminder',18.8000,182,0.0060,159
+10226,4.1,b'4.1-ngram.next_system_utterance__learning clarify ntry',15.5943,231,0.0060,160
+1691,4.1,b'4.1-ngram.current_user_utterance__new',14.5091,258,0.0060,161
+8263,4.1,b'4.1-ngram.next_system_utterance__friday 10pm nyou',17.9440,196,0.0059,162
+16073,4.1,b'4.1-ngram.next_system_utterance__n8',5.5516,962,0.0059,163
+23580,4.1,b'4.1-ngram.next_user_utterance__june',6.0090,870,0.0059,164
+2012,4.1,b'4.1-ngram.current_user_utterance__remind days',6.4625,789,0.0059,165
+586,4.1,b'4.1-ngram.current_user_utterance__bring',6.4088,808,0.0057,166
+109,4.1,b'4.1-ngram.current_user_utterance__24th',9.9154,457,0.0057,167
+1143,4.1,b'4.1-ngram.current_user_utterance__graduation',6.4213,807,0.0057,168
+1020,4.1,b'4.1-ngram.current_user_utterance__fan',17.1789,201,0.0056,169
+2050,4.1,b'4.1-ngram.current_user_utterance__remind leave',11.7600,349,0.0056,170
+24087,4.1,b'4.1-ngram.next_user_utterance__remover',11.8479,337,0.0055,171
+18808,4.1,b'4.1-ngram.next_system_utterance__reminder try',7.8636,599,0.0055,172
+6284,4.1,b'4.1-ngram.next_system_utterance__clarify ntry',15.5943,230,0.0054,173
+24065,4.1,b'4.1-ngram.next_user_utterance__remove list',22.8344,150,0.0054,174
+23708,4.1,b'4.1-ngram.next_user_utterance__meds',10.0395,448,0.0053,175
+7781,4.1,b'4.1-ngram.next_system_utterance__example friday nyou',42.4897,76,0.0052,176
+1694,4.1,b'4.1-ngram.current_user_utterance__new list',11.7494,350,0.0052,177
+18783,4.1,b'4.1-ngram.next_system_utterance__reminder oct',10.8386,391,0.0052,178
+22755,4.1,b'4.1-ngram.next_user_utterance__13 32',9.8648,461,0.0052,179
+17685,4.1,b'4.1-ngram.next_system_utterance__person task',11.8187,346,0.0052,180
+18784,4.1,b'4.1-ngram.next_system_utterance__reminder oct 25',10.8386,390,0.0052,181
+1386,4.1,b'4.1-ngram.current_user_utterance__just',8.7508,530,0.0051,182
+673,4.1,b'4.1-ngram.current_user_utterance__change',6.1517,847,0.0051,183
+2583,4.1,b'4.1-ngram.current_user_utterance__trip',6.8401,723,0.0051,184
+1354,4.1,b'4.1-ngram.current_user_utterance__jasmine',11.2611,378,0.0050,185
+22763,4.1,b'4.1-ngram.next_user_utterance__15pm',5.8459,896,0.0050,186
+2118,4.1,b'4.1-ngram.current_user_utterance__remind week',6.3848,810,0.0050,187
+6333,4.1,b'4.1-ngram.next_system_utterance__clear',63.0246,56,0.0049,188
+8261,4.1,b'4.1-ngram.next_system_utterance__friday',72.6222,40,0.0049,189
+3060,4.1,b'4.1-ngram.next_system_utterance__19 pm nyou',20.8540,156,0.0049,190
+23645,4.1,b'4.1-ngram.next_user_utterance__ll',7.3773,667,0.0049,191
+2312,4.1,b'4.1-ngram.current_user_utterance__set',12.2262,324,0.0048,192
+24098,4.1,b'4.1-ngram.next_user_utterance__request',6.4931,782,0.0048,193
+2058,4.1,b'4.1-ngram.current_user_utterance__remind look',6.3170,820,0.0048,194
+23801,4.1,b'4.1-ngram.next_user_utterance__october',7.3576,668,0.0047,195
+2393,4.1,b'4.1-ngram.current_user_utterance__start',9.5596,494,0.0047,196
+21217,4.1,b'4.1-ngram.next_system_utterance__tony list nhere',5.6489,945,0.0047,197
+7807,4.1,b'4.1-ngram.next_system_utterance__examples manage shopping',10.5897,399,0.0046,198
+19728,4.1,b'4.1-ngram.next_system_utterance__send reminder nfor',8.1106,579,0.0046,199
+810,4.1,b'4.1-ngram.current_user_utterance__create',9.7855,468,0.0046,200
+391,4.1,b'4.1-ngram.current_user_utterance__agnes',6.4504,790,0.0046,201
+392,4.1,b'4.1-ngram.current_user_utterance__agnes birthday',6.4504,791,0.0046,202
+18770,4.1,b'4.1-ngram.next_system_utterance__reminder nto',12.9857,297,0.0045,203
+3473,4.1,b'4.1-ngram.next_system_utterance__add item',9.3764,502,0.0045,204
+24197,4.1,b'4.1-ngram.next_user_utterance__start new',5.2507,1019,0.0045,205
+641,4.1,b'4.1-ngram.current_user_utterance__cancel',15.9750,228,0.0044,206
+18802,4.1,b'4.1-ngram.next_system_utterance__reminder title',8.4927,553,0.0044,207
+21216,4.1,b'4.1-ngram.next_system_utterance__tony list',5.6489,946,0.0044,208
+23800,4.1,b'4.1-ngram.next_user_utterance__oct',5.3130,1006,0.0044,209
+22793,4.1,b'4.1-ngram.next_user_utterance__26th',5.6196,949,0.0043,210
+22825,4.1,b'4.1-ngram.next_user_utterance__4pm',6.9129,717,0.0042,211
+23674,4.1,b'4.1-ngram.next_user_utterance__mar',5.4084,987,0.0042,212
+22750,4.1,b'4.1-ngram.next_user_utterance__12 pm today',5.4327,983,0.0041,213
+16837,4.1,b'4.1-ngram.next_system_utterance__number remove',9.5220,497,0.0041,214
+855,4.1,b'4.1-ngram.current_user_utterance__days',11.2090,379,0.0041,215
+10190,4.1,b'4.1-ngram.next_system_utterance__laura',7.5159,659,0.0040,216
+23781,4.1,b'4.1-ngram.next_user_utterance__noon',13.7769,273,0.0040,217
+23657,4.1,b'4.1-ngram.next_user_utterance__loved',8.7347,531,0.0039,218
+2177,4.1,b'4.1-ngram.current_user_utterance__remove list',11.1165,382,0.0039,219
+20708,4.1,b'4.1-ngram.next_system_utterance__sure understand',26.1517,121,0.0039,220
+9789,4.1,b'4.1-ngram.next_system_utterance__john didn nto',6.3841,811,0.0038,221
+24031,4.1,b'4.1-ngram.next_user_utterance__reminders',27.6949,120,0.0038,222
+23825,4.1,b'4.1-ngram.next_user_utterance__order',7.6531,618,0.0038,223
+24167,4.1,b'4.1-ngram.next_user_utterance__skip',7.8862,596,0.0037,224
+17066,4.1,b'4.1-ngram.next_system_utterance__ok tony list',5.6489,944,0.0037,225
+2321,4.1,b'4.1-ngram.current_user_utterance__shani',5.5304,965,0.0037,226
+19790,4.1,b'4.1-ngram.next_system_utterance__set reminder ntry',33.0397,109,0.0037,227
+7388,4.1,b'4.1-ngram.next_system_utterance__don task',57.2768,64,0.0037,228
+1719,4.1,b'4.1-ngram.current_user_utterance__note',5.3200,1005,0.0037,229
+19081,4.1,b'4.1-ngram.next_system_utterance__rephrase ntry',11.7079,351,0.0036,230
+19906,4.1,b'4.1-ngram.next_system_utterance__shopping',8.3444,567,0.0036,231
+1993,4.1,b'4.1-ngram.current_user_utterance__remind carleigh',5.5498,963,0.0036,232
+24280,4.1,b'4.1-ngram.next_user_utterance__tomorrow',14.1987,270,0.0036,233
+562,4.1,b'4.1-ngram.current_user_utterance__bofa',5.6095,950,0.0036,234
+168,4.1,b'4.1-ngram.current_user_utterance__530',23.4807,141,0.0036,235
+24159,4.1,b'4.1-ngram.next_user_utterance__shopping list',10.0794,446,0.0036,236
+24026,4.1,b'4.1-ngram.next_user_utterance__reminder lucy',6.6562,747,0.0036,237
+23310,4.1,b'4.1-ngram.next_user_utterance__dr',6.0234,864,0.0035,238
+23002,4.1,b'4.1-ngram.next_user_utterance__appointment',5.4191,984,0.0035,239
+24214,4.1,b'4.1-ngram.next_user_utterance__sunday',11.7823,348,0.0035,240
+2332,4.1,b'4.1-ngram.current_user_utterance__shilpa',14.8204,250,0.0035,241
+10455,4.1,b'4.1-ngram.next_system_utterance__list',18.0010,195,0.0034,242
+7798,4.1,b'4.1-ngram.next_system_utterance__example title lunch',100.5301,21,0.0034,243
+2498,4.1,b'4.1-ngram.current_user_utterance__till',9.4198,500,0.0034,244
+23055,4.1,b'4.1-ngram.next_user_utterance__biotene',10.0113,449,0.0033,245
+19096,4.1,b'4.1-ngram.next_system_utterance__request',236.6989,4,0.0033,246
+1195,4.1,b'4.1-ngram.current_user_utterance__health',5.5653,956,0.0033,247
+23855,4.1,b'4.1-ngram.next_user_utterance__past',7.5722,639,0.0033,248
+23808,4.1,b'4.1-ngram.next_user_utterance__ok',6.3074,828,0.0032,249
+18928,4.1,b'4.1-ngram.next_system_utterance__remove type',5.7063,918,0.0032,250
+23386,4.1,b'4.1-ngram.next_user_utterance__flower',5.8189,900,0.0032,251
+20836,4.1,b'4.1-ngram.next_system_utterance__task discard',57.2768,65,0.0032,252
+1972,4.1,b'4.1-ngram.current_user_utterance__remind 10',6.5645,776,0.0032,253
+2108,4.1,b'4.1-ngram.current_user_utterance__remind tomorrow',6.8165,726,0.0032,254
+744,4.1,b'4.1-ngram.current_user_utterance__clear shopping',16.4140,224,0.0032,255
+7389,4.1,b'4.1-ngram.next_system_utterance__don task discard',57.2768,63,0.0031,256
+23353,4.1,b'4.1-ngram.next_user_utterance__est',5.4975,967,0.0031,257
+23771,4.1,b'4.1-ngram.next_user_utterance__night pm',5.5905,954,0.0031,258
+23605,4.1,b'4.1-ngram.next_user_utterance__later',6.3240,819,0.0031,259
+869,4.1,b'4.1-ngram.current_user_utterance__delete item',5.5480,964,0.0031,260
+24151,4.1,b'4.1-ngram.next_user_utterance__shared',8.2264,572,0.0031,261
+1977,4.1,b'4.1-ngram.current_user_utterance__remind 30',13.5525,275,0.0031,262
+23599,4.1,b'4.1-ngram.next_user_utterance__kttinz1e',8.3548,565,0.0030,263
+25,4.1,b'4.1-ngram.current_user_utterance__10am',7.0085,708,0.0030,264
+978,4.1,b'4.1-ngram.current_user_utterance__edit',36.9069,105,0.0030,265
+1762,4.1,b'4.1-ngram.current_user_utterance__open',8.1453,578,0.0030,266
+1980,4.1,b'4.1-ngram.current_user_utterance__remind alex',19.8668,173,0.0030,267
+915,4.1,b'4.1-ngram.current_user_utterance__discard request',20.8234,157,0.0029,268
+22838,4.1,b'4.1-ngram.next_user_utterance__8am',9.9321,456,0.0029,269
+22845,4.1,b'4.1-ngram.next_user_utterance__9pm',7.1085,702,0.0029,270
+22152,4.1,b'4.1-ngram.next_system_utterance__want',7.2461,688,0.0028,271
+19729,4.1,b'4.1-ngram.next_system_utterance__send reminder ntry',37.6856,100,0.0028,272
+980,4.1,b'4.1-ngram.current_user_utterance__edit reminder',14.4332,259,0.0027,273
+2395,4.1,b'4.1-ngram.current_user_utterance__start new list',5.6793,924,0.0027,274
+1372,4.1,b'4.1-ngram.current_user_utterance__july',5.5976,952,0.0026,275
+10473,4.1,b'4.1-ngram.next_system_utterance__list n1',13.5740,274,0.0026,276
+21875,4.1,b'4.1-ngram.next_system_utterance__ve added items',16.6288,210,0.0025,277
+1439,4.1,b'4.1-ngram.current_user_utterance__later',5.8094,901,0.0025,278
+23722,4.1,b'4.1-ngram.next_user_utterance__members',10.4517,413,0.0025,279
+643,4.1,b'4.1-ngram.current_user_utterance__cancel reminder',12.0393,328,0.0025,280
+17929,4.1,b'4.1-ngram.next_system_utterance__pm nto',6.2065,841,0.0025,281
+22875,4.1,b'4.1-ngram.next_user_utterance__add discard',7.9293,593,0.0025,282
+11142,4.1,b'4.1-ngram.next_system_utterance__mar 19 pm',23.6413,139,0.0025,283
+2059,4.1,b'4.1-ngram.current_user_utterance__remind lucy',22.8215,151,0.0025,284
+19067,4.1,b'4.1-ngram.next_system_utterance__removing',6.8590,720,0.0025,285
+1648,4.1,b'4.1-ngram.current_user_utterance__monday friday',5.5525,960,0.0025,286
+216,4.1,b'4.1-ngram.current_user_utterance__add avocado',6.5259,779,0.0024,287
+1514,4.1,b'4.1-ngram.current_user_utterance__lost',9.5678,491,0.0024,288
+22751,4.1,b'4.1-ngram.next_user_utterance__12pm',12.0796,327,0.0024,289
+18804,4.1,b'4.1-ngram.next_system_utterance__reminder title lunch',9.8757,460,0.0023,290
+24411,4.1,b'4.1-ngram.next_user_utterance__write',5.6470,947,0.0023,291
+2423,4.1,b'4.1-ngram.current_user_utterance__summer time',10.8678,388,0.0023,292
+8706,4.1,b'4.1-ngram.next_system_utterance__great ve added',16.6288,209,0.0023,293
+24340,4.1,b'4.1-ngram.next_user_utterance__update reminder',6.8239,725,0.0023,294
+2200,4.1,b'4.1-ngram.current_user_utterance__remove trash',7.7255,614,0.0023,295
+3494,4.1,b'4.1-ngram.next_system_utterance__added items',16.6288,207,0.0022,296
+1981,4.1,b'4.1-ngram.current_user_utterance__remind amanda',8.4026,560,0.0022,297
+24075,4.1,b'4.1-ngram.next_user_utterance__remove reminder',14.8432,249,0.0022,298
+1530,4.1,b'4.1-ngram.current_user_utterance__lucy',23.3169,149,0.0022,299
+6779,4.1,b'4.1-ngram.next_system_utterance__create',12.2309,323,0.0022,300
+23341,4.1,b'4.1-ngram.next_user_utterance__edit reminder',7.8921,594,0.0022,301
+1499,4.1,b'4.1-ngram.current_user_utterance__ll',6.9084,718,0.0022,302
+1737,4.1,b'4.1-ngram.current_user_utterance__number',14.3878,266,0.0022,303
+2560,4.1,b'4.1-ngram.current_user_utterance__tonite',5.5522,961,0.0021,304
+23597,4.1,b'4.1-ngram.next_user_utterance__kiran',7.8835,597,0.0021,305
+17933,4.1,b'4.1-ngram.next_system_utterance__pm nyou discard',30.0983,113,0.0021,306
+16811,4.1,b'4.1-ngram.next_system_utterance__ntry monday pm',20.5984,161,0.0021,307
+2363,4.1,b'4.1-ngram.current_user_utterance__snooze hour',7.6878,617,0.0021,308
+9629,4.1,b'4.1-ngram.next_system_utterance__items try',14.6596,254,0.0021,309
+251,4.1,b'4.1-ngram.current_user_utterance__add flowers',7.8425,601,0.0021,310
+19907,4.1,b'4.1-ngram.next_system_utterance__shopping list',8.2947,569,0.0021,311
+23198,4.1,b'4.1-ngram.next_user_utterance__coffe',6.1790,845,0.0020,312
+23356,4.1,b'4.1-ngram.next_user_utterance__events',6.8317,724,0.0020,313
+2368,4.1,b'4.1-ngram.current_user_utterance__sonya',5.7927,902,0.0020,314
+6498,4.1,b'4.1-ngram.next_system_utterance__comments report',6.4763,785,0.0020,315
+18806,4.1,b'4.1-ngram.next_system_utterance__reminder tomorrow',15.4307,237,0.0020,316
+914,4.1,b'4.1-ngram.current_user_utterance__discard reminder',19.9029,171,0.0019,317
+3392,4.1,b'4.1-ngram.next_system_utterance__7pm',7.2074,690,0.0019,318
+876,4.1,b'4.1-ngram.current_user_utterance__delete reminders',9.5668,492,0.0019,319
+23265,4.1,b'4.1-ngram.next_user_utterance__delete',7.9446,592,0.0019,320
+618,4.1,b'4.1-ngram.current_user_utterance__buy',12.4315,316,0.0019,321
+23394,4.1,b'4.1-ngram.next_user_utterance__food',6.2067,840,0.0019,322
+2455,4.1,b'4.1-ngram.current_user_utterance__target',5.6026,951,0.0019,323
+23937,4.1,b'4.1-ngram.next_user_utterance__read',7.4139,664,0.0019,324
+1687,4.1,b'4.1-ngram.current_user_utterance__need',5.7699,905,0.0019,325
+2009,4.1,b'4.1-ngram.current_user_utterance__remind davis',8.4637,557,0.0019,326
+16820,4.1,b'4.1-ngram.next_system_utterance__ntype feedback comments',6.4763,787,0.0019,327
+21094,4.1,b'4.1-ngram.next_system_utterance__title',9.7924,467,0.0019,328
+2215,4.1,b'4.1-ngram.current_user_utterance__request',12.7329,304,0.0019,329
+11444,4.1,b'4.1-ngram.next_system_utterance__members',9.7729,472,0.0019,330
+314,4.1,b'4.1-ngram.current_user_utterance__add jeannie',6.2064,842,0.0018,331
+16802,4.1,b'4.1-ngram.next_system_utterance__ntry commands',14.9858,245,0.0018,332
+2212,4.1,b'4.1-ngram.current_user_utterance__repost',5.3370,1000,0.0018,333
+16810,4.1,b'4.1-ngram.next_system_utterance__ntry monday',20.5984,160,0.0018,334
+22812,4.1,b'4.1-ngram.next_user_utterance__32',5.9358,879,0.0018,335
+19114,4.1,b'4.1-ngram.next_system_utterance__reservation',7.8148,607,0.0018,336
+1540,4.1,b'4.1-ngram.current_user_utterance__lysol',6.5279,778,0.0017,337
+18807,4.1,b'4.1-ngram.next_system_utterance__reminder tomorrow 30',15.4307,238,0.0017,338
+22536,4.1,b'4.1-ngram.next_system_utterance__xxx',10.0884,445,0.0017,339
+11791,4.1,b'4.1-ngram.next_system_utterance__month',10.9696,386,0.0017,340
+7913,4.1,b'4.1-ngram.next_system_utterance__feedback comments report',6.4763,786,0.0017,341
+1214,4.1,b'4.1-ngram.current_user_utterance__help reminders',6.9368,713,0.0017,342
+1355,4.1,b'4.1-ngram.current_user_utterance__jeannie',6.2064,843,0.0017,343
+18777,4.1,b'4.1-ngram.next_system_utterance__reminder ntry monday',20.5984,159,0.0017,344
+24164,4.1,b'4.1-ngram.next_user_utterance__siren',5.6864,923,0.0017,345
+20261,4.1,b'4.1-ngram.next_system_utterance__sorry john',7.6484,620,0.0017,346
+1128,4.1,b'4.1-ngram.current_user_utterance__girlfriend',10.2600,419,0.0016,347
+2369,4.1,b'4.1-ngram.current_user_utterance__soon',12.9390,299,0.0016,348
+23462,4.1,b'4.1-ngram.next_user_utterance__head lettuce',7.1249,699,0.0016,349
+23125,4.1,b'4.1-ngram.next_user_utterance__cancel',5.9606,877,0.0016,350
+24268,4.1,b'4.1-ngram.next_user_utterance__today 12',14.3328,267,0.0016,351
+21101,4.1,b'4.1-ngram.next_system_utterance__title lunch remind',7.1997,691,0.0016,352
+10750,4.1,b'4.1-ngram.next_system_utterance__ll remind',9.7710,473,0.0016,353
+7780,4.1,b'4.1-ngram.next_system_utterance__example friday friday',5.5907,953,0.0016,354
+22725,4.1,b'4.1-ngram.next_user_utterance__10 pm',6.3079,827,0.0016,355
+6499,4.1,b'4.1-ngram.next_system_utterance__comments report issues',6.4763,784,0.0016,356
+8705,4.1,b'4.1-ngram.next_system_utterance__great ve',16.6288,208,0.0015,357
+850,4.1,b'4.1-ngram.current_user_utterance__davis',8.4637,558,0.0015,358
+403,4.1,b'4.1-ngram.current_user_utterance__alert',5.7040,919,0.0015,359
+16803,4.1,b'4.1-ngram.next_system_utterance__ntry commands manage',14.9858,246,0.0015,360
+2392,4.1,b'4.1-ngram.current_user_utterance__stand',6.2078,839,0.0015,361
+10976,4.1,b'4.1-ngram.next_system_utterance__lunch remind',7.1997,692,0.0015,362
+644,4.1,b'4.1-ngram.current_user_utterance__cancel reminders',8.4867,554,0.0015,363
+2077,4.1,b'4.1-ngram.current_user_utterance__remind pay',6.6847,744,0.0014,364
+24088,4.1,b'4.1-ngram.next_user_utterance__remover reminder',8.0325,585,0.0014,365
+8264,4.1,b'4.1-ngram.next_system_utterance__friday friday',15.5591,232,0.0014,366
+1157,4.1,b'4.1-ngram.current_user_utterance__groceries',6.1753,846,0.0014,367
+8823,4.1,b'4.1-ngram.next_system_utterance__group type add',10.4543,408,0.0014,368
+23861,4.1,b'4.1-ngram.next_user_utterance__pay credit',13.1777,285,0.0014,369
+21462,4.1,b'4.1-ngram.next_system_utterance__try nhere list',7.6413,626,0.0014,370
+59,4.1,b'4.1-ngram.current_user_utterance__13 32',6.6124,775,0.0014,371
+19115,4.1,b'4.1-ngram.next_system_utterance__reservation dan',7.8148,608,0.0014,372
+8822,4.1,b'4.1-ngram.next_system_utterance__group type',10.4543,406,0.0014,373
+6998,4.1,b'4.1-ngram.next_system_utterance__dan',7.8148,606,0.0014,374
+2601,4.1,b'4.1-ngram.current_user_utterance__turn alerts',7.1240,701,0.0014,375
+17037,4.1,b'4.1-ngram.next_system_utterance__ok ll remind',8.3842,564,0.0014,376
+18835,4.1,b'4.1-ngram.next_system_utterance__reminders group members',10.4543,410,0.0014,377
+21638,4.1,b'4.1-ngram.next_system_utterance__type add',10.4543,412,0.0014,378
+2394,4.1,b'4.1-ngram.current_user_utterance__start new',6.3569,816,0.0013,379
+404,4.1,b'4.1-ngram.current_user_utterance__alerts',7.1240,700,0.0013,380
+2563,4.1,b'4.1-ngram.current_user_utterance__tornado siren',5.3252,1003,0.0013,381
+1264,4.1,b'4.1-ngram.current_user_utterance__item',25.7367,123,0.0013,382
+2202,4.1,b'4.1-ngram.current_user_utterance__removed',15.3468,239,0.0013,383
+7205,4.1,b'4.1-ngram.next_system_utterance__did',73.3346,36,0.0013,384
+8265,4.1,b'4.1-ngram.next_system_utterance__friday friday 10pm',15.5591,233,0.0013,385
+8811,4.1,b'4.1-ngram.next_system_utterance__group members',10.4543,409,0.0013,386
+2192,4.1,b'4.1-ngram.current_user_utterance__remove remove',24.3106,134,0.0013,387
+10977,4.1,b'4.1-ngram.next_system_utterance__lunch remind laura',7.1997,693,0.0013,388
+22578,4.1,b'4.1-ngram.next_system_utterance__yer',6.4259,806,0.0013,389
+23739,4.1,b'4.1-ngram.next_user_utterance__money',8.4826,555,0.0013,390
+18803,4.1,b'4.1-ngram.next_system_utterance__reminder title halloween',12.3393,319,0.0013,391
+22579,4.1,b'4.1-ngram.next_system_utterance__yer butt',6.4259,805,0.0013,392
+23318,4.1,b'4.1-ngram.next_user_utterance__drano',6.8715,719,0.0013,393
+21639,4.1,b'4.1-ngram.next_system_utterance__type add member',10.4543,411,0.0013,394
+9364,4.1,b'4.1-ngram.next_system_utterance__item',15.1002,242,0.0013,395
+23683,4.1,b'4.1-ngram.next_user_utterance__marcus',8.3917,562,0.0013,396
+16798,4.1,b'4.1-ngram.next_system_utterance__nto update reminder',6.9932,709,0.0013,397
+16935,4.1,b'4.1-ngram.next_system_utterance__oct 25 pm',7.1499,698,0.0012,398
+23743,4.1,b'4.1-ngram.next_user_utterance__mr',7.0986,703,0.0012,399
+18834,4.1,b'4.1-ngram.next_system_utterance__reminders group',10.4543,407,0.0012,400
+19782,4.1,b'4.1-ngram.next_system_utterance__set nfor',9.9671,453,0.0012,401
+17932,4.1,b'4.1-ngram.next_system_utterance__pm nyou',29.1627,119,0.0012,402
+16797,4.1,b'4.1-ngram.next_system_utterance__nto update',6.9932,710,0.0012,403
+2562,4.1,b'4.1-ngram.current_user_utterance__tornado',5.3252,1002,0.0012,404
+23655,4.1,b'4.1-ngram.next_user_utterance__love',19.9972,165,0.0011,405
+19789,4.1,b'4.1-ngram.next_system_utterance__set reminder nfor',25.1731,128,0.0011,406
+1954,4.1,b'4.1-ngram.current_user_utterance__recycling',12.7488,301,0.0011,407
+2648,4.1,b'4.1-ngram.current_user_utterance__view',5.4663,976,0.0011,408
+23082,4.1,b'4.1-ngram.next_user_utterance__bofa',8.8117,529,0.0011,409
+11768,4.1,b'4.1-ngram.next_system_utterance__monday',21.2926,153,0.0011,410
+1792,4.1,b'4.1-ngram.current_user_utterance__panties',5.4645,978,0.0011,411
+3439,4.1,b'4.1-ngram.next_system_utterance__able',7.6413,629,0.0011,412
+1069,4.1,b'4.1-ngram.current_user_utterance__francis',9.5349,496,0.0011,413
+2087,4.1,b'4.1-ngram.current_user_utterance__remind recycling',12.7488,300,0.0011,414
+7231,4.1,b'4.1-ngram.next_system_utterance__didn ntry searching',38.1452,94,0.0011,415
+18776,4.1,b'4.1-ngram.next_system_utterance__reminder ntry mar',12.4777,313,0.0011,416
+18395,4.1,b'4.1-ngram.next_system_utterance__really want remove',8.0278,588,0.0011,417
+2187,4.1,b'4.1-ngram.current_user_utterance__remove number',6.6658,746,0.0011,418
+999,4.1,b'4.1-ngram.current_user_utterance__evan',9.6734,481,0.0011,419
+22836,4.1,b'4.1-ngram.next_user_utterance__7am',12.3433,318,0.0011,420
+24080,4.1,b'4.1-ngram.next_user_utterance__remove stain remover',5.3756,994,0.0011,421
+17931,4.1,b'4.1-ngram.next_system_utterance__pm nto update',5.6771,925,0.0011,422
+18394,4.1,b'4.1-ngram.next_system_utterance__really want',8.0278,587,0.0011,423
+2070,4.1,b'4.1-ngram.current_user_utterance__remind mom',6.0033,874,0.0011,424
+24079,4.1,b'4.1-ngram.next_user_utterance__remove stain',5.3756,993,0.0011,425
+23397,4.1,b'4.1-ngram.next_user_utterance__foods',5.8651,893,0.0010,426
+8824,4.1,b'4.1-ngram.next_system_utterance__group yes',8.0278,586,0.0010,427
+1283,4.1,b'4.1-ngram.current_user_utterance__item fit',8.9511,527,0.0010,428
+24186,4.1,b'4.1-ngram.next_user_utterance__southern foods',5.8651,892,0.0010,429
+674,4.1,b'4.1-ngram.current_user_utterance__change bubbles',15.4568,236,0.0010,430
+24266,4.1,b'4.1-ngram.next_user_utterance__title love',15.0067,243,0.0010,431
+526,4.1,b'4.1-ngram.current_user_utterance__bib 30p',14.7710,252,0.0010,432
+24293,4.1,b'4.1-ngram.next_user_utterance__tonight 10',11.6824,356,0.0010,433
+2324,4.1,b'4.1-ngram.current_user_utterance__share list mattia',13.1374,287,0.0010,434
+18778,4.1,b'4.1-ngram.next_system_utterance__reminder ntry tomorrow',23.8570,138,0.0010,435
+22157,4.1,b'4.1-ngram.next_system_utterance__want remove',12.3340,320,0.0010,436
+22781,4.1,b'4.1-ngram.next_user_utterance__2017',12.5356,310,0.0010,437
+7874,4.1,b'4.1-ngram.next_system_utterance__family group yes',8.0278,589,0.0010,438
+6286,4.1,b'4.1-ngram.next_system_utterance__clarify ntry examples',11.0378,385,0.0010,439
+4820,4.1,b'4.1-ngram.next_system_utterance__birthday party',10.5612,400,0.0010,440
+22194,4.1,b'4.1-ngram.next_system_utterance__wasn able',7.6413,621,0.0010,441
+339,4.1,b'4.1-ngram.current_user_utterance__add panties',5.4645,977,0.0010,442
+1284,4.1,b'4.1-ngram.current_user_utterance__item fit active',8.9511,525,0.0010,443
+3350,4.1,b'4.1-ngram.next_system_utterance__4pm saturday nyou',8.3973,561,0.0010,444
+6782,4.1,b'4.1-ngram.next_system_utterance__create reminders',10.3249,418,0.0010,445
+141,4.1,b'4.1-ngram.current_user_utterance__30p',14.7710,251,0.0010,446
+21048,4.1,b'4.1-ngram.next_system_utterance__time set nfor',9.9671,455,0.0009,447
+8262,4.1,b'4.1-ngram.next_system_utterance__friday 10pm',17.1409,202,0.0009,448
+18630,4.1,b'4.1-ngram.next_system_utterance__remind nfor',46.0483,73,0.0009,449
+16610,4.1,b'4.1-ngram.next_system_utterance__nfor example',184.8938,7,0.0009,450
+7391,4.1,b'4.1-ngram.next_system_utterance__don think handle',24.6682,130,0.0009,451
+23732,4.1,b'4.1-ngram.next_user_utterance__minute',7.8873,595,0.0009,452
+18827,4.1,b'4.1-ngram.next_system_utterance__reminders',19.9760,166,0.0009,453
+1488,4.1,b'4.1-ngram.current_user_utterance__list mattia',18.4355,190,0.0009,454
+3399,4.1,b'4.1-ngram.next_system_utterance__7pm title',6.5138,781,0.0009,455
+18631,4.1,b'4.1-ngram.next_system_utterance__remind nfor example',46.0483,72,0.0009,456
+2820,4.1,b'4.1-ngram.next_system_utterance__10pm nyou discard',32.1431,111,0.0009,457
+24380,4.1,b'4.1-ngram.next_user_utterance__weeks',6.3678,812,0.0009,458
+2346,4.1,b'4.1-ngram.current_user_utterance__sign',5.8444,897,0.0009,459
+705,4.1,b'4.1-ngram.current_user_utterance__cheryl',11.9527,335,0.0009,460
+16815,4.1,b'4.1-ngram.next_system_utterance__ntry searching reminders',38.1452,96,0.0009,461
+17048,4.1,b'4.1-ngram.next_system_utterance__ok removed',6.0733,857,0.0008,462
+17049,4.1,b'4.1-ngram.next_system_utterance__ok removed schedule',6.0733,856,0.0008,463
+24294,4.1,b'4.1-ngram.next_user_utterance__tonight 10 pm',11.6824,355,0.0008,464
+19649,4.1,b'4.1-ngram.next_system_utterance__searching reminders time',38.1452,95,0.0008,465
+3441,4.1,b'4.1-ngram.next_system_utterance__able remove items',7.6413,625,0.0008,466
+2819,4.1,b'4.1-ngram.next_system_utterance__10pm nyou',32.1431,110,0.0008,467
+21645,4.1,b'4.1-ngram.next_system_utterance__type help reminders',38.1452,98,0.0008,468
+7390,4.1,b'4.1-ngram.next_system_utterance__don think',24.6682,129,0.0008,469
+22195,4.1,b'4.1-ngram.next_system_utterance__wasn able remove',7.6413,622,0.0008,470
+7230,4.1,b'4.1-ngram.next_system_utterance__didn ntry',38.1452,97,0.0008,471
+2326,4.1,b'4.1-ngram.current_user_utterance__share shopping list',12.4380,315,0.0008,472
+19783,4.1,b'4.1-ngram.next_system_utterance__set nfor example',9.9671,454,0.0008,473
+19082,4.1,b'4.1-ngram.next_system_utterance__rephrase ntry commands',8.3851,563,0.0008,474
+525,4.1,b'4.1-ngram.current_user_utterance__bib',14.7710,253,0.0008,475
+24274,4.1,b'4.1-ngram.next_user_utterance__today pm',5.3989,989,0.0008,476
+275,4.1,b'4.1-ngram.current_user_utterance__add item fit',8.9511,526,0.0008,477
+3440,4.1,b'4.1-ngram.next_system_utterance__able remove',7.6413,627,0.0008,478
+3400,4.1,b'4.1-ngram.next_system_utterance__7pm title lunch',6.5138,780,0.0008,479
+16609,4.1,b'4.1-ngram.next_system_utterance__nfor',184.8938,8,0.0008,480
+148,4.1,b'4.1-ngram.current_user_utterance__32',7.4253,661,0.0008,481
+2325,4.1,b'4.1-ngram.current_user_utterance__share shopping',12.4380,314,0.0008,482
+16934,4.1,b'4.1-ngram.next_system_utterance__oct 25',7.1499,697,0.0008,483
+1237,4.1,b'4.1-ngram.current_user_utterance__hrs',7.2719,678,0.0008,484
+24201,4.1,b'4.1-ngram.next_user_utterance__steve',5.5072,966,0.0008,485
+22193,4.1,b'4.1-ngram.next_system_utterance__wasn',7.6413,624,0.0008,486
+9209,4.1,b'4.1-ngram.next_system_utterance__hours',14.6153,256,0.0007,487
+17680,4.1,b'4.1-ngram.next_system_utterance__person',11.0470,384,0.0007,488
+2203,4.1,b'4.1-ngram.current_user_utterance__remover',15.5012,234,0.0007,489
+24114,4.1,b'4.1-ngram.next_user_utterance__sahil school 00pm',8.2530,571,0.0007,490
+9272,4.1,b'4.1-ngram.next_system_utterance__identify',18.6331,185,0.0007,491
+21461,4.1,b'4.1-ngram.next_system_utterance__try nhere',7.6413,628,0.0007,492
+18922,4.1,b'4.1-ngram.next_system_utterance__remove reminder yes',7.0982,706,0.0007,493
+979,4.1,b'4.1-ngram.current_user_utterance__edit list',6.7904,727,0.0007,494
+22159,4.1,b'4.1-ngram.next_system_utterance__want remove reminder',7.0982,704,0.0007,495
+20181,4.1,b'4.1-ngram.next_system_utterance__soccer',6.0127,869,0.0007,496
+1984,4.1,b'4.1-ngram.current_user_utterance__remind blake',5.8691,891,0.0007,497
+11279,4.1,b'4.1-ngram.next_system_utterance__matching',11.5073,365,0.0007,498
+16816,4.1,b'4.1-ngram.next_system_utterance__ntry tomorrow',23.8570,136,0.0007,499
+9928,4.1,b'4.1-ngram.next_system_utterance__justin',6.0083,871,0.0007,500
+20971,4.1,b'4.1-ngram.next_system_utterance__think',23.4850,140,0.0007,501
+19648,4.1,b'4.1-ngram.next_system_utterance__searching reminders',38.1452,93,0.0007,502
+315,4.1,b'4.1-ngram.current_user_utterance__add lacroix',8.0331,584,0.0007,503
+24132,4.1,b'4.1-ngram.next_user_utterance__school 00pm',8.2530,570,0.0007,504
+16817,4.1,b'4.1-ngram.next_system_utterance__ntry tomorrow 30',23.8570,137,0.0007,505
+9273,4.1,b'4.1-ngram.next_system_utterance__identify list',18.6331,186,0.0007,506
+23398,4.1,b'4.1-ngram.next_user_utterance__francis',8.3548,566,0.0007,507
+18826,4.1,b'4.1-ngram.next_system_utterance__reminder yes',7.0982,705,0.0007,508
+8903,4.1,b'4.1-ngram.next_system_utterance__halloween',84.2551,23,0.0007,509
+2204,4.1,b'4.1-ngram.current_user_utterance__remover reminder',8.0909,581,0.0007,510
+24285,4.1,b'4.1-ngram.next_user_utterance__tomorrow 2pm',7.2962,675,0.0007,511
+22729,4.1,b'4.1-ngram.next_user_utterance__10am',7.0622,707,0.0007,512
+2037,4.1,b'4.1-ngram.current_user_utterance__remind hours',18.1421,194,0.0007,513
+23169,4.1,b'4.1-ngram.next_user_utterance__christmas',6.9151,716,0.0007,514
+3480,4.1,b'4.1-ngram.next_system_utterance__add items try',29.8678,118,0.0007,515
+21200,4.1,b'4.1-ngram.next_system_utterance__tomorrow',37.3144,103,0.0006,516
+6647,4.1,b'4.1-ngram.next_system_utterance__couldn matching reminder',11.5073,366,0.0006,517
+7787,4.1,b'4.1-ngram.next_system_utterance__example mar 19',19.3099,178,0.0006,518
+2502,4.1,b'4.1-ngram.current_user_utterance__time zone',6.6965,742,0.0006,519
+7796,4.1,b'4.1-ngram.next_system_utterance__example title',146.2958,12,0.0006,520
+90,4.1,b'4.1-ngram.current_user_utterance__1pm tomorrow',12.1433,326,0.0006,521
+24403,4.1,b'4.1-ngram.next_user_utterance__work',10.3784,415,0.0006,522
+16618,4.1,b'4.1-ngram.next_system_utterance__nfor example mar',19.3099,177,0.0006,523
+20972,4.1,b'4.1-ngram.next_system_utterance__think handle',24.6682,131,0.0006,524
+24204,4.1,b'4.1-ngram.next_user_utterance__stop',13.0614,291,0.0006,525
+9630,4.1,b'4.1-ngram.next_system_utterance__items try nhere',7.6413,623,0.0006,526
+16814,4.1,b'4.1-ngram.next_system_utterance__ntry searching',38.1452,99,0.0006,527
+18801,4.1,b'4.1-ngram.next_system_utterance__reminder time set',23.9118,135,0.0006,528
+23667,4.1,b'4.1-ngram.next_user_utterance__lyle',8.1488,577,0.0006,529
+23298,4.1,b'4.1-ngram.next_user_utterance__discard remind',9.9799,451,0.0006,530
+8904,4.1,b'4.1-ngram.next_system_utterance__halloween party',84.2551,24,0.0006,531
+993,4.1,b'4.1-ngram.current_user_utterance__energy',16.8265,205,0.0006,532
+11280,4.1,b'4.1-ngram.next_system_utterance__matching reminder',11.5073,364,0.0006,533
+2752,4.1,b'4.1-ngram.current_user_utterance__zone',6.6965,741,0.0006,534
+6646,4.1,b'4.1-ngram.next_system_utterance__couldn matching',11.5073,363,0.0006,535
+1788,4.1,b'4.1-ngram.current_user_utterance__pancake',5.3008,1007,0.0006,536
+23114,4.1,b'4.1-ngram.next_user_utterance__buy milk',7.8371,602,0.0006,537
+24372,4.1,b'4.1-ngram.next_user_utterance__wb time sheet',6.7160,739,0.0006,538
+692,4.1,b'4.1-ngram.current_user_utterance__check reminders',5.4374,982,0.0006,539
+7797,4.1,b'4.1-ngram.next_system_utterance__example title halloween',69.4395,42,0.0006,540
+912,4.1,b'4.1-ngram.current_user_utterance__discard remind',9.0527,515,0.0005,541
+2683,4.1,b'4.1-ngram.current_user_utterance__wear',6.7802,728,0.0005,542
+24290,4.1,b'4.1-ngram.next_user_utterance__tomorrow noon',14.3940,265,0.0005,543
+657,4.1,b'4.1-ngram.current_user_utterance__card',7.8258,605,0.0005,544
+18881,4.1,b'4.1-ngram.next_system_utterance__reminders soccer type',10.1055,443,0.0005,545
+23990,4.1,b'4.1-ngram.next_user_utterance__remind marcus',5.6931,921,0.0005,546
+19647,4.1,b'4.1-ngram.next_system_utterance__searching',38.1452,92,0.0005,547
+1502,4.1,b'4.1-ngram.current_user_utterance__loan',6.9593,712,0.0005,548
+649,4.1,b'4.1-ngram.current_user_utterance__captain',6.2997,829,0.0005,549
+864,4.1,b'4.1-ngram.current_user_utterance__delay',12.7355,302,0.0005,550
+24265,4.1,b'4.1-ngram.next_user_utterance__title birthday',14.3071,268,0.0005,551
+7786,4.1,b'4.1-ngram.next_system_utterance__example mar',19.3099,176,0.0005,552
+23761,4.1,b'4.1-ngram.next_user_utterance__nasalcrom',10.6862,396,0.0005,553
+7799,4.1,b'4.1-ngram.next_system_utterance__example tomorrow',25.2991,124,0.0005,554
+16622,4.1,b'4.1-ngram.next_system_utterance__nfor example tomorrow',25.2991,125,0.0005,555
+17076,4.1,b'4.1-ngram.next_system_utterance__okay removed schedule',6.2779,830,0.0005,556
+20189,4.1,b'4.1-ngram.next_system_utterance__soccer type help',10.1055,441,0.0005,557
+20244,4.1,b'4.1-ngram.next_system_utterance__sorry ashlee',7.3569,671,0.0005,558
+18182,4.1,b'4.1-ngram.next_system_utterance__property taxes',6.3112,823,0.0005,559
+16621,4.1,b'4.1-ngram.next_system_utterance__nfor example title',146.2958,13,0.0005,560
+1789,4.1,b'4.1-ngram.current_user_utterance__pancake batter',5.3008,1008,0.0005,561
+20188,4.1,b'4.1-ngram.next_system_utterance__soccer type',10.1055,442,0.0005,562
+7800,4.1,b'4.1-ngram.next_system_utterance__example tomorrow 30',25.2991,126,0.0005,563
+865,4.1,b'4.1-ngram.current_user_utterance__delay 30',12.7355,303,0.0005,564
+17036,4.1,b'4.1-ngram.next_system_utterance__ok ll',8.4359,559,0.0005,565
+18573,4.1,b'4.1-ngram.next_system_utterance__remind friday nyou',16.7599,206,0.0005,566
+7782,4.1,b'4.1-ngram.next_system_utterance__example halloween',11.9967,334,0.0005,567
+23299,4.1,b'4.1-ngram.next_user_utterance__discard remind marcus',5.6931,920,0.0005,568
+3056,4.1,b'4.1-ngram.next_system_utterance__19 pm',18.9774,179,0.0005,569
+20245,4.1,b'4.1-ngram.next_system_utterance__sorry ashlee didn',7.3569,669,0.0005,570
+7948,4.1,b'4.1-ngram.next_system_utterance__file property taxes',6.3112,821,0.0004,571
+17424,4.1,b'4.1-ngram.next_system_utterance__party friday nyou',9.7786,471,0.0004,572
+2391,4.1,b'4.1-ngram.current_user_utterance__stain remover',11.3864,374,0.0004,573
+17203,4.1,b'4.1-ngram.next_system_utterance__original',8.6498,534,0.0004,574
+18181,4.1,b'4.1-ngram.next_system_utterance__property',6.3112,824,0.0004,575
+4158,4.1,b'4.1-ngram.next_system_utterance__ashlee didn',7.3569,670,0.0004,576
+7947,4.1,b'4.1-ngram.next_system_utterance__file property',6.3112,822,0.0004,577
+17075,4.1,b'4.1-ngram.next_system_utterance__okay removed',6.2779,831,0.0004,578
+24371,4.1,b'4.1-ngram.next_user_utterance__wb time',6.7160,737,0.0004,579
+19505,4.1,b'4.1-ngram.next_system_utterance__saturday nyou',11.5427,360,0.0004,580
+2208,4.1,b'4.1-ngram.current_user_utterance__rent april',7.6139,632,0.0004,581
+405,4.1,b'4.1-ngram.current_user_utterance__alex',20.5885,162,0.0004,582
+16616,4.1,b'4.1-ngram.next_system_utterance__nfor example halloween',11.9967,332,0.0004,583
+19506,4.1,b'4.1-ngram.next_system_utterance__saturday nyou discard',11.5427,361,0.0004,584
+68,4.1,b'4.1-ngram.current_user_utterance__15 list',7.5569,640,0.0004,585
+9698,4.1,b'4.1-ngram.next_system_utterance__jasmine',5.6539,943,0.0004,586
+16838,4.1,b'4.1-ngram.next_system_utterance__number remove list',10.2288,426,0.0004,587
+24286,4.1,b'4.1-ngram.next_user_utterance__tomorrow 30',5.8317,898,0.0004,588
+1851,4.1,b'4.1-ngram.current_user_utterance__phone',9.5022,498,0.0004,589
+23468,4.1,b'4.1-ngram.next_user_utterance__help notifications',6.3109,825,0.0004,590
+1795,4.1,b'4.1-ngram.current_user_utterance__papa johns pizza',6.0540,858,0.0004,591
+18904,4.1,b'4.1-ngram.next_system_utterance__remove item remove',10.2288,438,0.0004,592
+24358,4.1,b'4.1-ngram.next_user_utterance__voice',19.8878,172,0.0004,593
+2207,4.1,b'4.1-ngram.current_user_utterance__rent',7.6139,634,0.0004,594
+2722,4.1,b'4.1-ngram.current_user_utterance__withdraw bank',10.2403,423,0.0004,595
+18909,4.1,b'4.1-ngram.next_system_utterance__remove list',10.2288,434,0.0004,596
+24260,4.1,b'4.1-ngram.next_user_utterance__time sheet',6.7160,736,0.0004,597
+2100,4.1,b'4.1-ngram.current_user_utterance__remind sunday pm',6.3328,817,0.0004,598
+18775,4.1,b'4.1-ngram.next_system_utterance__reminder ntry friday',19.5450,175,0.0004,599
+1368,4.1,b'4.1-ngram.current_user_utterance__johns pizza',6.0540,859,0.0004,600
+24370,4.1,b'4.1-ngram.next_user_utterance__wb',6.7160,738,0.0004,601
+2045,4.1,b'4.1-ngram.current_user_utterance__remind kathleen pay',7.6139,636,0.0004,602
+17074,4.1,b'4.1-ngram.next_system_utterance__okay',6.2779,832,0.0004,603
+16615,4.1,b'4.1-ngram.next_system_utterance__nfor example friday',37.5421,101,0.0003,604
+1427,4.1,b'4.1-ngram.current_user_utterance__kttinz1e',9.5349,495,0.0003,605
+2390,4.1,b'4.1-ngram.current_user_utterance__stain',11.3864,373,0.0003,606
+7783,4.1,b'4.1-ngram.next_system_utterance__example halloween party',11.9967,333,0.0003,607
+21666,4.1,b'4.1-ngram.next_system_utterance__typing add items',29.8678,114,0.0003,608
+3478,4.1,b'4.1-ngram.next_system_utterance__add items',59.7357,61,0.0003,609
+3477,4.1,b'4.1-ngram.next_system_utterance__add item remove',10.2288,429,0.0003,610
+21665,4.1,b'4.1-ngram.next_system_utterance__typing add',29.8678,116,0.0003,611
+8905,4.1,b'4.1-ngram.next_system_utterance__halloween party friday',11.9967,330,0.0003,612
+1366,4.1,b'4.1-ngram.current_user_utterance__john',9.7150,479,0.0003,613
+24388,4.1,b'4.1-ngram.next_user_utterance__whiting',8.1695,576,0.0003,614
+19788,4.1,b'4.1-ngram.next_system_utterance__set reminder',40.0799,89,0.0003,615
+10709,4.1,b'4.1-ngram.next_system_utterance__list ntype',10.2288,432,0.0003,616
+21476,4.1,b'4.1-ngram.next_system_utterance__try typing add',29.8678,117,0.0003,617
+486,4.1,b'4.1-ngram.current_user_utterance__bank 964',10.2403,422,0.0003,618
+11072,4.1,b'4.1-ngram.next_system_utterance__manage shopping',10.2288,431,0.0003,619
+9372,4.1,b'4.1-ngram.next_system_utterance__item remove',20.4575,163,0.0003,620
+1392,4.1,b'4.1-ngram.current_user_utterance__kathleen pay rent',7.6139,635,0.0003,621
+7779,4.1,b'4.1-ngram.next_system_utterance__example friday',37.5421,102,0.0003,622
+2107,4.1,b'4.1-ngram.current_user_utterance__remind today',5.9983,875,0.0003,623
+1401,4.1,b'4.1-ngram.current_user_utterance__kevin',11.1748,380,0.0003,624
+17423,4.1,b'4.1-ngram.next_system_utterance__party friday',11.9967,331,0.0003,625
+2804,4.1,b'4.1-ngram.next_system_utterance__10 pm hours',16.6183,212,0.0003,626
+23785,4.1,b'4.1-ngram.next_user_utterance__notifications',6.3109,826,0.0003,627
+9370,4.1,b'4.1-ngram.next_system_utterance__item number remove',10.2288,425,0.0003,628
+20840,4.1,b'4.1-ngram.next_system_utterance__task type help',23.3634,146,0.0003,629
+1935,4.1,b'4.1-ngram.current_user_utterance__ray',12.2972,322,0.0003,630
+18914,4.1,b'4.1-ngram.next_system_utterance__remove number remove',5.2477,1022,0.0003,631
+9373,4.1,b'4.1-ngram.next_system_utterance__item remove item',20.4575,164,0.0003,632
+3479,4.1,b'4.1-ngram.next_system_utterance__add items milk',29.8678,115,0.0003,633
+23236,4.1,b'4.1-ngram.next_user_utterance__credit',9.4799,499,0.0003,634
+18769,4.1,b'4.1-ngram.next_system_utterance__reminder nfor example',165.8424,9,0.0003,635
+1823,4.1,b'4.1-ngram.current_user_utterance__pay rent',7.6139,630,0.0003,636
+23673,4.1,b'4.1-ngram.next_user_utterance__management',7.5161,658,0.0003,637
+2086,4.1,b'4.1-ngram.current_user_utterance__remind ray',12.2972,321,0.0003,638
+18903,4.1,b'4.1-ngram.next_system_utterance__remove item number',10.2288,436,0.0003,639
+16806,4.1,b'4.1-ngram.next_system_utterance__ntry friday',18.2761,192,0.0003,640
+20278,4.1,b'4.1-ngram.next_system_utterance__sorry vilas',6.0212,867,0.0003,641
+21876,4.1,b'4.1-ngram.next_system_utterance__ve reminders',5.2477,1020,0.0003,642
+1391,4.1,b'4.1-ngram.current_user_utterance__kathleen pay',7.6139,631,0.0003,643
+24242,4.1,b'4.1-ngram.next_user_utterance__test',11.6052,357,0.0003,644
+145,4.1,b'4.1-ngram.current_user_utterance__30th',6.7441,734,0.0003,645
+21203,4.1,b'4.1-ngram.next_system_utterance__tomorrow 30 nyou',41.5364,79,0.0003,646
+2141,4.1,b'4.1-ngram.current_user_utterance__reminders today',11.8622,336,0.0003,647
+1194,4.1,b'4.1-ngram.current_user_utterance__head lettuce',7.2759,677,0.0003,648
+21041,4.1,b'4.1-ngram.next_system_utterance__time nfor',9.3739,503,0.0003,649
+16807,4.1,b'4.1-ngram.next_system_utterance__ntry friday friday',18.2761,193,0.0003,650
+22355,4.1,b'4.1-ngram.next_system_utterance__weekly monday',10.2416,420,0.0003,651
+23316,4.1,b'4.1-ngram.next_user_utterance__dr whiting',8.1695,575,0.0003,652
+2723,4.1,b'4.1-ngram.current_user_utterance__withdraw bank 964',10.2403,421,0.0003,653
+7206,4.1,b'4.1-ngram.next_system_utterance__did mean',13.0347,295,0.0003,654
+1824,4.1,b'4.1-ngram.current_user_utterance__pay rent april',7.6139,633,0.0003,655
+24351,4.1,b'4.1-ngram.next_user_utterance__view',18.7818,184,0.0003,656
+388,4.1,b'4.1-ngram.current_user_utterance__add withdraw bank',10.2403,424,0.0003,657
+16894,4.1,b'4.1-ngram.next_system_utterance__nyou remove',5.2477,1023,0.0003,658
+23348,4.1,b'4.1-ngram.next_user_utterance__emergency',6.2389,837,0.0003,659
+24158,4.1,b'4.1-ngram.next_user_utterance__shopping',8.0236,590,0.0002,660
+21877,4.1,b'4.1-ngram.next_system_utterance__ve reminders n1',5.2477,1021,0.0002,661
+7771,4.1,b'4.1-ngram.next_system_utterance__example 10',9.7806,469,0.0002,662
+16604,4.1,b'4.1-ngram.next_system_utterance__new time nfor',9.3739,505,0.0002,663
+19908,4.1,b'4.1-ngram.next_system_utterance__shopping list add',10.2288,435,0.0002,664
+18768,4.1,b'4.1-ngram.next_system_utterance__reminder nfor',165.8424,10,0.0002,665
+1979,4.1,b'4.1-ngram.current_user_utterance__remind 7pm',5.9915,876,0.0002,666
+10710,4.1,b'4.1-ngram.next_system_utterance__list ntype feedback',10.2288,430,0.0002,667
+3282,4.1,b'4.1-ngram.next_system_utterance__30 nyou discard',41.5364,80,0.0002,668
+21042,4.1,b'4.1-ngram.next_system_utterance__time nfor example',9.3739,504,0.0002,669
+22879,4.1,b'4.1-ngram.next_user_utterance__add emergency',6.2389,836,0.0002,670
+24152,4.1,b'4.1-ngram.next_user_utterance__shaver',8.5673,536,0.0002,671
+18885,4.1,b'4.1-ngram.next_system_utterance__reminders time person',23.3634,144,0.0002,672
+18910,4.1,b'4.1-ngram.next_system_utterance__remove list ntype',10.2288,437,0.0002,673
+9210,4.1,b'4.1-ngram.next_system_utterance__hours nyou',16.6183,215,0.0002,674
+19843,4.1,b'4.1-ngram.next_system_utterance__shared shopping list',8.4932,547,0.0002,675
+2027,4.1,b'4.1-ngram.current_user_utterance__remind friday june',10.7939,392,0.0002,676
+17687,4.1,b'4.1-ngram.next_system_utterance__person task type',23.3634,143,0.0002,677
+3269,4.1,b'4.1-ngram.next_system_utterance__30 daily 10pm',19.9576,169,0.0002,678
+2818,4.1,b'4.1-ngram.next_system_utterance__10pm',31.3312,112,0.0002,679
+19777,4.1,b'4.1-ngram.next_system_utterance__set',38.2912,91,0.0002,680
+10456,4.1,b'4.1-ngram.next_system_utterance__list add',10.2288,427,0.0002,681
+11073,4.1,b'4.1-ngram.next_system_utterance__manage shopping list',10.2288,433,0.0002,682
+22456,4.1,b'4.1-ngram.next_system_utterance__wipe yer',5.5602,958,0.0002,683
+3268,4.1,b'4.1-ngram.next_system_utterance__30 daily',19.9576,168,0.0002,684
+10457,4.1,b'4.1-ngram.next_system_utterance__list add item',10.2288,428,0.0002,685
+1138,4.1,b'4.1-ngram.current_user_utterance__got',6.6732,745,0.0002,686
+17886,4.1,b'4.1-ngram.next_system_utterance__pm hours nyou',16.6183,213,0.0002,687
+20279,4.1,b'4.1-ngram.next_system_utterance__sorry vilas didn',6.0212,865,0.0002,688
+21044,4.1,b'4.1-ngram.next_system_utterance__time person task',23.3634,145,0.0002,689
+21043,4.1,b'4.1-ngram.next_system_utterance__time person',23.3634,142,0.0002,690
+23311,4.1,b'4.1-ngram.next_user_utterance__dr appointment',6.4745,788,0.0002,691
+6956,4.1,b'4.1-ngram.next_system_utterance__daily 10pm',18.5989,188,0.0002,692
+18883,4.1,b'4.1-ngram.next_system_utterance__reminders text messages',8.4932,541,0.0002,693
+4186,4.1,b'4.1-ngram.next_system_utterance__assistant help',8.4932,551,0.0002,694
+22741,4.1,b'4.1-ngram.next_user_utterance__119 hw',5.7450,911,0.0002,695
+22043,4.1,b'4.1-ngram.next_system_utterance__vilas didn ntry',6.0212,866,0.0002,696
+16611,4.1,b'4.1-ngram.next_system_utterance__nfor example 10',9.7806,470,0.0002,697
+9211,4.1,b'4.1-ngram.next_system_utterance__hours nyou discard',16.6183,214,0.0002,698
+20266,4.1,b'4.1-ngram.next_system_utterance__sorry mary',5.2837,1015,0.0002,699
+2352,4.1,b'4.1-ngram.current_user_utterance__siren',7.6514,619,0.0002,700
+6648,4.1,b'4.1-ngram.next_system_utterance__couldn notify',10.5592,401,0.0002,701
+611,4.1,b'4.1-ngram.current_user_utterance__bulb',7.7786,611,0.0002,702
+7207,4.1,b'4.1-ngram.next_system_utterance__did mean remove',13.0347,293,0.0002,703
+11466,4.1,b'4.1-ngram.next_system_utterance__messages',8.4932,545,0.0002,704
+9788,4.1,b'4.1-ngram.next_system_utterance__john didn',7.1814,695,0.0002,705
+21202,4.1,b'4.1-ngram.next_system_utterance__tomorrow 30 daily',19.9576,170,0.0002,706
+23485,4.1,b'4.1-ngram.next_user_utterance__hw',5.7450,910,0.0002,707
+2244,4.1,b'4.1-ngram.current_user_utterance__rubber',7.6131,637,0.0002,708
+604,4.1,b'4.1-ngram.current_user_utterance__bubbles',10.1065,440,0.0002,709
+913,4.1,b'4.1-ngram.current_user_utterance__discard remind marcus',5.7379,915,0.0002,710
+22455,4.1,b'4.1-ngram.next_system_utterance__wipe',5.5602,957,0.0002,711
+2075,4.1,b'4.1-ngram.current_user_utterance__remind oscar',11.5431,358,0.0002,712
+17885,4.1,b'4.1-ngram.next_system_utterance__pm hours',16.6183,211,0.0002,713
+6957,4.1,b'4.1-ngram.next_system_utterance__daily 10pm nyou',18.5989,187,0.0002,714
+23446,4.1,b'4.1-ngram.next_user_utterance__group code',5.7116,917,0.0002,715
+22740,4.1,b'4.1-ngram.next_user_utterance__119',5.7450,909,0.0002,716
+11251,4.1,b'4.1-ngram.next_system_utterance__mary didn',5.2837,1016,0.0002,717
+20839,4.1,b'4.1-ngram.next_system_utterance__task type',23.3634,147,0.0002,718
+9045,4.1,b'4.1-ngram.next_system_utterance__help family manage',8.4932,544,0.0002,719
+7878,4.1,b'4.1-ngram.next_system_utterance__family manage shared',8.4932,542,0.0002,720
+23869,4.1,b'4.1-ngram.next_user_utterance__pay rest bills',9.8517,464,0.0002,721
+3281,4.1,b'4.1-ngram.next_system_utterance__30 nyou',40.4809,87,0.0002,722
+21447,4.1,b'4.1-ngram.next_system_utterance__try 7pm',5.8577,894,0.0002,723
+2159,4.1,b'4.1-ngram.current_user_utterance__remove head lettuce',5.4492,981,0.0002,724
+2740,4.1,b'4.1-ngram.current_user_utterance__year',8.9142,528,0.0002,725
+22997,4.1,b'4.1-ngram.next_user_utterance__anniversary',7.8622,600,0.0002,726
+16619,4.1,b'4.1-ngram.next_system_utterance__nfor example monday',6.7466,731,0.0002,727
+22042,4.1,b'4.1-ngram.next_system_utterance__vilas didn',6.0212,868,0.0002,728
+10716,4.1,b'4.1-ngram.next_system_utterance__list reminders text',8.4932,538,0.0002,729
+21049,4.1,b'4.1-ngram.next_system_utterance__time set reminder',45.7396,74,0.0002,730
+24352,4.1,b'4.1-ngram.next_user_utterance__view reminders',18.7818,183,0.0002,731
+1472,4.1,b'4.1-ngram.current_user_utterance__light bulb',7.7786,610,0.0002,732
+1773,4.1,b'4.1-ngram.current_user_utterance__oscar',11.5431,359,0.0002,733
+17209,4.1,b'4.1-ngram.next_system_utterance__original reminder time',14.4170,262,0.0002,734
+23328,4.1,b'4.1-ngram.next_user_utterance__dummy',7.4656,660,0.0002,735
+11252,4.1,b'4.1-ngram.next_system_utterance__mary didn nto',5.2837,1017,0.0002,736
+458,4.1,b'4.1-ngram.current_user_utterance__august',17.2799,200,0.0002,737
+20267,4.1,b'4.1-ngram.next_system_utterance__sorry mary didn',5.2837,1018,0.0002,738
+21208,4.1,b'4.1-ngram.next_system_utterance__tomorrow type help',13.1032,290,0.0001,739
+9204,4.1,b'4.1-ngram.next_system_utterance__hour original',14.4170,261,0.0001,740
+18809,4.1,b'4.1-ngram.next_system_utterance__reminder try 7pm',5.8577,895,0.0001,741
+7788,4.1,b'4.1-ngram.next_system_utterance__example monday',6.7466,733,0.0001,742
+18593,4.1,b'4.1-ngram.next_system_utterance__remind laura',7.2325,689,0.0001,743
+2322,4.1,b'4.1-ngram.current_user_utterance__share',13.4530,279,0.0001,744
+22726,4.1,b'4.1-ngram.next_user_utterance__102',5.7450,906,0.0001,745
+2062,4.1,b'4.1-ngram.current_user_utterance__remind marcus',5.7379,916,0.0001,746
+18898,4.1,b'4.1-ngram.next_system_utterance__remove event',13.0347,292,0.0001,747
+24099,4.1,b'4.1-ngram.next_user_utterance__rest',9.8517,465,0.0001,748
+16747,4.1,b'4.1-ngram.next_system_utterance__notify family members',10.5592,402,0.0001,749
+23324,4.1,b'4.1-ngram.next_user_utterance__dry cleaner',6.7600,729,0.0001,750
+18740,4.1,b'4.1-ngram.next_system_utterance__reminder friday',7.6908,615,0.0001,751
+20124,4.1,b'4.1-ngram.next_system_utterance__snooze hour original',14.4170,264,0.0001,752
+24007,4.1,b'4.1-ngram.next_user_utterance__remind today',5.6889,922,0.0001,753
+1586,4.1,b'4.1-ngram.current_user_utterance__mattia',11.3936,372,0.0001,754
+22727,4.1,b'4.1-ngram.next_user_utterance__102 119',5.7450,912,0.0001,755
+4187,4.1,b'4.1-ngram.next_system_utterance__assistant help family',8.4932,550,0.0001,756
+7789,4.1,b'4.1-ngram.next_system_utterance__example monday pm',6.7466,732,0.0001,757
+1688,4.1,b'4.1-ngram.current_user_utterance__needed',6.7511,730,0.0001,758
+1078,4.1,b'4.1-ngram.current_user_utterance__friday june',5.8204,899,0.0001,759
+20262,4.1,b'4.1-ngram.next_system_utterance__sorry john didn',7.1814,694,0.0001,760
+24322,4.1,b'4.1-ngram.next_user_utterance__turn 102 119',5.7450,907,0.0001,761
+3062,4.1,b'4.1-ngram.next_system_utterance__1st',12.7133,305,0.0001,762
+22728,4.1,b'4.1-ngram.next_user_utterance__102 119 hw',5.7450,913,0.0001,763
+3063,4.1,b'4.1-ngram.next_system_utterance__1st month',12.7133,306,0.0001,764
+24321,4.1,b'4.1-ngram.next_user_utterance__turn 102',5.7450,908,0.0001,765
+23036,4.1,b'4.1-ngram.next_user_utterance__bday',6.6931,743,0.0001,766
+18889,4.1,b'4.1-ngram.next_system_utterance__reminders tomorrow type',13.1032,288,0.0001,767
+599,4.1,b'4.1-ngram.current_user_utterance__brush',8.0963,580,0.0001,768
+16743,4.1,b'4.1-ngram.next_system_utterance__notify',21.1184,155,0.0001,769
+18741,4.1,b'4.1-ngram.next_system_utterance__reminder friday nyou',7.6908,616,0.0001,770
+21207,4.1,b'4.1-ngram.next_system_utterance__tomorrow type',13.1032,289,0.0001,771
+18882,4.1,b'4.1-ngram.next_system_utterance__reminders text',8.4932,540,0.0001,772
+23868,4.1,b'4.1-ngram.next_user_utterance__pay rest',9.8517,463,0.0001,773
+18792,4.1,b'4.1-ngram.next_system_utterance__reminder soccer',7.5250,654,0.0001,774
+23338,4.1,b'4.1-ngram.next_user_utterance__edie use papa',6.1178,848,0.0001,775
+23054,4.1,b'4.1-ngram.next_user_utterance__bills',9.8517,462,0.0001,776
+556,4.1,b'4.1-ngram.current_user_utterance__bob',6.9632,711,0.0001,777
+11071,4.1,b'4.1-ngram.next_system_utterance__manage shared shopping',8.4932,552,0.0001,778
+8266,4.1,b'4.1-ngram.next_system_utterance__friday nyou',61.6700,58,0.0001,779
+334,4.1,b'4.1-ngram.current_user_utterance__add omaha',8.0331,583,0.0001,780
+11351,4.1,b'4.1-ngram.next_system_utterance__mean remove',13.0347,294,0.0001,781
+23257,4.1,b'4.1-ngram.next_user_utterance__davis',7.3320,672,0.0001,782
+24100,4.1,b'4.1-ngram.next_user_utterance__rest bills',9.8517,466,0.0001,783
+11352,4.1,b'4.1-ngram.next_system_utterance__mean remove event',13.0347,296,0.0001,784
+23809,4.1,b'4.1-ngram.next_user_utterance__okay',8.7200,532,0.0001,785
+1989,4.1,b'4.1-ngram.current_user_utterance__remind buy',12.5090,312,0.0001,786
+9777,4.1,b'4.1-ngram.next_system_utterance__jocelyn',5.5737,955,0.0001,787
+23336,4.1,b'4.1-ngram.next_user_utterance__edie',6.1178,853,0.0001,788
+17208,4.1,b'4.1-ngram.next_system_utterance__original reminder',14.4170,263,0.0001,789
+1976,4.1,b'4.1-ngram.current_user_utterance__remind 2pm',5.3996,988,0.0001,790
+2717,4.1,b'4.1-ngram.current_user_utterance__wipe',9.7422,474,0.0001,791
+22457,4.1,b'4.1-ngram.next_system_utterance__wipe yer butt',5.5602,959,0.0001,792
+2136,4.1,b'4.1-ngram.current_user_utterance__reminder paying',5.2864,1009,0.0001,793
+1829,4.1,b'4.1-ngram.current_user_utterance__paying',5.2864,1010,0.0001,794
+19842,4.1,b'4.1-ngram.next_system_utterance__shared shopping',8.4932,539,0.0001,795
+19912,4.1,b'4.1-ngram.next_system_utterance__shopping list reminders',8.4932,549,0.0001,796
+2742,4.1,b'4.1-ngram.current_user_utterance__yer butt',9.7422,478,0.0001,797
+7877,4.1,b'4.1-ngram.next_system_utterance__family manage',8.4932,543,0.0001,798
+7869,4.1,b'4.1-ngram.next_system_utterance__family assistant help',8.4932,546,0.0001,799
+19747,4.1,b'4.1-ngram.next_system_utterance__series ndo',7.2669,682,0.0001,800
+20945,4.1,b'4.1-ngram.next_system_utterance__text messages',8.4932,548,0.0001,801
+18925,4.1,b'4.1-ngram.next_system_utterance__remove reminders series',7.2669,680,0.0001,802
+17871,4.1,b'4.1-ngram.next_system_utterance__pm 1st month',10.7509,394,0.0001,803
+2741,4.1,b'4.1-ngram.current_user_utterance__yer',9.7422,476,0.0001,804
+23222,4.1,b'4.1-ngram.next_user_utterance__coupon',6.1178,851,0.0001,805
+2719,4.1,b'4.1-ngram.current_user_utterance__wipe yer butt',9.7422,477,0.0001,806
+16746,4.1,b'4.1-ngram.next_system_utterance__notify family',10.5592,403,0.0001,807
+16576,4.1,b'4.1-ngram.next_system_utterance__ndo want remove',7.2669,684,0.0001,808
+2718,4.1,b'4.1-ngram.current_user_utterance__wipe yer',9.7422,475,0.0001,809
+23965,4.1,b'4.1-ngram.next_user_utterance__remind davis',7.3320,673,0.0001,810
+22933,4.1,b'4.1-ngram.next_user_utterance__add member babydoll',5.6604,941,0.0001,811
+3257,4.1,b'4.1-ngram.next_system_utterance__2pm nyou discard',16.5840,220,0.0001,812
+2666,4.1,b'4.1-ngram.current_user_utterance__walnut come hacks',6.0350,862,0.0001,813
+23719,4.1,b'4.1-ngram.next_user_utterance__member babydoll',5.6604,940,0.0001,814
+18729,4.1,b'4.1-ngram.next_system_utterance__reminder date',7.5250,653,0.0001,815
+18793,4.1,b'4.1-ngram.next_system_utterance__reminder soccer practice',7.5250,643,0.0001,816
+11282,4.1,b'4.1-ngram.next_system_utterance__matching reminder nto',6.4407,799,0.0001,817
+18572,4.1,b'4.1-ngram.next_system_utterance__remind friday',13.1400,286,0.0001,818
+16614,4.1,b'4.1-ngram.next_system_utterance__nfor example file',5.4810,974,0.0001,819
+18876,4.1,b'4.1-ngram.next_system_utterance__reminders series',7.2669,686,0.0001,820
+2323,4.1,b'4.1-ngram.current_user_utterance__share list',10.0429,447,0.0001,821
+16575,4.1,b'4.1-ngram.next_system_utterance__ndo want',7.2669,685,0.0001,822
+184,4.1,b'4.1-ngram.current_user_utterance__7pm today',7.8348,604,0.0001,823
+2853,4.1,b'4.1-ngram.next_system_utterance__11am update',6.6267,761,0.0001,824
+16813,4.1,b'4.1-ngram.next_system_utterance__ntry reminder date',7.5250,642,0.0001,825
+23337,4.1,b'4.1-ngram.next_user_utterance__edie use',6.1178,854,0.0001,826
+17870,4.1,b'4.1-ngram.next_system_utterance__pm 1st',10.7509,393,0.0001,827
+3492,4.1,b'4.1-ngram.next_system_utterance__add reminder nto',9.5994,484,0.0001,828
+18184,4.1,b'4.1-ngram.next_system_utterance__property taxes saturday',5.4810,970,0.0001,829
+18877,4.1,b'4.1-ngram.next_system_utterance__reminders series ndo',7.2669,679,0.0001,830
+23970,4.1,b'4.1-ngram.next_user_utterance__remind edie',6.1178,849,0.0001,831
+18738,4.1,b'4.1-ngram.next_system_utterance__reminder family schedule',7.5250,656,0.0001,832
+23477,4.1,b'4.1-ngram.next_user_utterance__home',5.3204,1004,0.0001,833
+7802,4.1,b'4.1-ngram.next_system_utterance__examples manage',6.9163,715,0.0001,834
+6334,4.1,b'4.1-ngram.next_system_utterance__clear list',64.9391,54,0.0001,835
+2852,4.1,b'4.1-ngram.next_system_utterance__11am',6.6267,760,0.0001,836
+769,4.1,b'4.1-ngram.current_user_utterance__come hacks',6.0350,863,0.0001,837
+3349,4.1,b'4.1-ngram.next_system_utterance__4pm saturday',11.8206,342,0.0001,838
+21473,4.1,b'4.1-ngram.next_system_utterance__try title',6.6267,767,0.0001,839
+21052,4.1,b'4.1-ngram.next_system_utterance__time try',6.6267,750,0.0001,840
+1727,4.1,b'4.1-ngram.current_user_utterance__npotato',5.3850,990,0.0001,841
+9205,4.1,b'4.1-ngram.next_system_utterance__hour original reminder',14.4170,260,0.0001,842
+24355,4.1,b'4.1-ngram.next_user_utterance__visit',7.3039,674,0.0001,843
+20856,4.1,b'4.1-ngram.next_system_utterance__taxes saturday',5.4810,973,0.0001,844
+8267,4.1,b'4.1-ngram.next_system_utterance__friday nyou discard',61.6700,59,0.0001,845
+2854,4.1,b'4.1-ngram.next_system_utterance__11am update time',6.6267,762,0.0001,846
+9551,4.1,b'4.1-ngram.next_system_utterance__items milk',11.7064,352,0.0001,847
+18919,4.1,b'4.1-ngram.next_system_utterance__remove reminder soccer',7.5250,651,0.0001,848
+19968,4.1,b'4.1-ngram.next_system_utterance__simon airport update',6.6267,753,0.0001,849
+17422,4.1,b'4.1-ngram.next_system_utterance__party 4pm saturday',11.8206,344,0.0001,850
+23971,4.1,b'4.1-ngram.next_user_utterance__remind edie use',6.1178,850,0.0001,851
+7569,4.1,b'4.1-ngram.next_system_utterance__edie',5.4536,980,0.0001,852
+21105,4.1,b'4.1-ngram.next_system_utterance__title pickup simon',6.6267,757,0.0001,853
+23223,4.1,b'4.1-ngram.next_user_utterance__coupon saturday',6.1178,852,0.0001,854
+201,4.1,b'4.1-ngram.current_user_utterance__964',6.2631,835,0.0001,855
+19967,4.1,b'4.1-ngram.next_system_utterance__simon airport',6.6267,754,0.0001,856
+1728,4.1,b'4.1-ngram.current_user_utterance__npotato peeler',5.3850,991,0.0000,857
+17942,4.1,b'4.1-ngram.next_system_utterance__pm weekly',6.7107,740,0.0000,858
+21446,4.1,b'4.1-ngram.next_system_utterance__try 11am update',6.6267,759,0.0000,859
+21104,4.1,b'4.1-ngram.next_system_utterance__title pickup',6.6267,752,0.0000,860
+1168,4.1,b'4.1-ngram.current_user_utterance__hacks',6.0350,861,0.0000,861
+7212,4.1,b'4.1-ngram.next_system_utterance__didn catch update',5.6631,931,0.0000,862
+7778,4.1,b'4.1-ngram.next_system_utterance__example file property',5.4810,971,0.0000,863
+23020,4.1,b'4.1-ngram.next_user_utterance__babydoll',5.6604,942,0.0000,864
+21449,4.1,b'4.1-ngram.next_system_utterance__try 7pm pizza',5.6631,936,0.0000,865
+20251,4.1,b'4.1-ngram.next_system_utterance__sorry couldn understand',40.7132,83,0.0000,866
+5842,4.1,b'4.1-ngram.next_system_utterance__change try 11am',6.6267,770,0.0000,867
+11769,4.1,b'4.1-ngram.next_system_utterance__monday 2pm',16.5840,218,0.0000,868
+18772,4.1,b'4.1-ngram.next_system_utterance__reminder nto search',6.4407,794,0.0000,869
+24213,4.1,b'4.1-ngram.next_user_utterance__summer',5.3308,1001,0.0000,870
+11794,4.1,b'4.1-ngram.next_system_utterance__month nyou',13.2235,282,0.0000,871
+828,4.1,b'4.1-ngram.current_user_utterance__curtain',6.3667,813,0.0000,872
+7884,4.1,b'4.1-ngram.next_system_utterance__family schedule ntry',7.5250,646,0.0000,873
+4821,4.1,b'4.1-ngram.next_system_utterance__birthday party 4pm',11.8206,341,0.0000,874
+3348,4.1,b'4.1-ngram.next_system_utterance__4pm',11.8206,338,0.0000,875
+17943,4.1,b'4.1-ngram.next_system_utterance__pm weekly monday',14.1602,271,0.0000,876
+18774,4.1,b'4.1-ngram.next_system_utterance__reminder ntry 10',6.6183,774,0.0000,877
+7777,4.1,b'4.1-ngram.next_system_utterance__example file',5.4810,972,0.0000,878
+9552,4.1,b'4.1-ngram.next_system_utterance__items milk eggs',11.7064,353,0.0000,879
+11281,4.1,b'4.1-ngram.next_system_utterance__matching reminder family',7.5250,641,0.0000,880
+17421,4.1,b'4.1-ngram.next_system_utterance__party 4pm',11.8206,339,0.0000,881
+5841,4.1,b'4.1-ngram.next_system_utterance__change try',6.6267,766,0.0000,882
+7764,4.1,b'4.1-ngram.next_system_utterance__event',10.3464,416,0.0000,883
+2721,4.1,b'4.1-ngram.current_user_utterance__withdraw',6.2631,833,0.0000,884
+7774,4.1,b'4.1-ngram.next_system_utterance__example birthday party',11.8206,343,0.0000,885
+7773,4.1,b'4.1-ngram.next_system_utterance__example birthday',11.8206,345,0.0000,886
+16812,4.1,b'4.1-ngram.next_system_utterance__ntry reminder',7.5250,648,0.0000,887
+9631,4.1,b'4.1-ngram.next_system_utterance__items try typing',11.7064,354,0.0000,888
+18104,4.1,b'4.1-ngram.next_system_utterance__practice friday',7.5250,644,0.0000,889
+6651,4.1,b'4.1-ngram.next_system_utterance__couldn understand rephrase',40.7132,84,0.0000,890
+3064,4.1,b'4.1-ngram.next_system_utterance__1st month nyou',13.2235,284,0.0000,891
+16574,4.1,b'4.1-ngram.next_system_utterance__ndo',7.2669,687,0.0000,892
+19748,4.1,b'4.1-ngram.next_system_utterance__series ndo want',7.2669,683,0.0000,893
+19585,4.1,b'4.1-ngram.next_system_utterance__schedule ntry reminder',7.5250,645,0.0000,894
+21445,4.1,b'4.1-ngram.next_system_utterance__try 11am',6.6267,758,0.0000,895
+3660,4.1,b'4.1-ngram.next_system_utterance__airport update',6.6267,755,0.0000,896
+18929,4.1,b'4.1-ngram.next_system_utterance__remove type reminders',6.4407,795,0.0000,897
+11795,4.1,b'4.1-ngram.next_system_utterance__month nyou discard',13.2235,283,0.0000,898
+21767,4.1,b'4.1-ngram.next_system_utterance__understand rephrase',40.7132,85,0.0000,899
+18821,4.1,b'4.1-ngram.next_system_utterance__reminder want remove',6.4407,793,0.0000,900
+16612,4.1,b'4.1-ngram.next_system_utterance__nfor example birthday',11.8206,340,0.0000,901
+6785,4.1,b'4.1-ngram.next_system_utterance__create single',9.1781,510,0.0000,902
+19746,4.1,b'4.1-ngram.next_system_utterance__series',7.2669,681,0.0000,903
+7338,4.1,b'4.1-ngram.next_system_utterance__distance',0.0000,1026,0.0000,904
+11773,4.1,b'4.1-ngram.next_system_utterance__monday pm',12.9487,298,0.0000,905
+7214,4.1,b'4.1-ngram.next_system_utterance__didn change try',6.6267,771,0.0000,906
+7021,4.1,b'4.1-ngram.next_system_utterance__date remove',7.5250,650,0.0000,907
+153,4.1,b'4.1-ngram.current_user_utterance__3am',6.9270,714,0.0000,908
+796,4.1,b'4.1-ngram.current_user_utterance__coupon',6.2336,838,0.0000,909
+6650,4.1,b'4.1-ngram.next_system_utterance__couldn understand',40.7132,86,0.0000,910
+18381,4.1,b'4.1-ngram.next_system_utterance__reading n3 distance',0.0000,1031,0.0000,911
+5724,4.1,b'4.1-ngram.next_system_utterance__catch',5.6631,928,0.0000,912
+14244,4.1,b'4.1-ngram.next_system_utterance__n3 distance glasses',0.0000,1030,0.0000,913
+17430,4.1,b'4.1-ngram.next_system_utterance__party remind john',5.6631,938,0.0000,914
+6783,4.1,b'4.1-ngram.next_system_utterance__create reminders group',9.5994,488,0.0000,915
+20185,4.1,b'4.1-ngram.next_system_utterance__soccer practice friday',7.5250,652,0.0000,916
+21802,4.1,b'4.1-ngram.next_system_utterance__update time',6.6267,768,0.0000,917
+387,4.1,b'4.1-ngram.current_user_utterance__add withdraw',6.2631,834,0.0000,918
+11446,4.1,b'4.1-ngram.next_system_utterance__members need',9.5994,485,0.0000,919
+24049,4.1,b'4.1-ngram.next_user_utterance__remove head',5.3428,997,0.0000,920
+21803,4.1,b'4.1-ngram.next_system_utterance__update time try',6.6267,769,0.0000,921
+18771,4.1,b'4.1-ngram.next_system_utterance__reminder nto add',9.5994,483,0.0000,922
+18730,4.1,b'4.1-ngram.next_system_utterance__reminder date remove',7.5250,655,0.0000,923
+16793,4.1,b'4.1-ngram.next_system_utterance__nto search',6.4407,801,0.0000,924
+20250,4.1,b'4.1-ngram.next_system_utterance__sorry couldn',40.7132,82,0.0000,925
+21797,4.1,b'4.1-ngram.next_system_utterance__update reminder title',6.6267,763,0.0000,926
+19646,4.1,b'4.1-ngram.next_system_utterance__search reminder want',6.4407,802,0.0000,927
+3661,4.1,b'4.1-ngram.next_system_utterance__airport update reminder',6.6267,756,0.0000,928
+18393,4.1,b'4.1-ngram.next_system_utterance__really mean clear',67.8482,49,0.0000,929
+24050,4.1,b'4.1-ngram.next_user_utterance__remove head lettuce',5.3428,998,0.0000,930
+3398,4.1,b'4.1-ngram.next_system_utterance__7pm pizza party',5.6631,934,0.0000,931
+3491,4.1,b'4.1-ngram.next_system_utterance__add reminder',9.5994,489,0.0000,932
+17746,4.1,b'4.1-ngram.next_system_utterance__pickup simon',6.6267,749,0.0000,933
+17747,4.1,b'4.1-ngram.next_system_utterance__pickup simon airport',6.6267,748,0.0000,934
+7339,4.1,b'4.1-ngram.next_system_utterance__distance glasses',0.0000,1027,0.0000,935
+14243,4.1,b'4.1-ngram.next_system_utterance__n3 distance',0.0000,1029,0.0000,936
+2706,4.1,b'4.1-ngram.current_user_utterance__whiting march',5.8748,883,0.0000,937
+6786,4.1,b'4.1-ngram.next_system_utterance__create single reminder',9.1781,514,0.0000,938
+7340,4.1,b'4.1-ngram.next_system_utterance__distance glasses tree',0.0000,1028,0.0000,939
+2026,4.1,b'4.1-ngram.current_user_utterance__remind friday',8.4777,556,0.0000,940
+8813,4.1,b'4.1-ngram.next_system_utterance__group members need',9.5994,490,0.0000,941
+7213,4.1,b'4.1-ngram.next_system_utterance__didn change',6.6267,765,0.0000,942
+7022,4.1,b'4.1-ngram.next_system_utterance__date remove reminder',7.5250,649,0.0000,943
+16578,4.1,b'4.1-ngram.next_system_utterance__need add',9.5994,486,0.0000,944
+18820,4.1,b'4.1-ngram.next_system_utterance__reminder want',6.4407,803,0.0000,945
+16794,4.1,b'4.1-ngram.next_system_utterance__nto search reminder',6.4407,797,0.0000,946
+5726,4.1,b'4.1-ngram.next_system_utterance__catch update reminder',5.6631,930,0.0000,947
+1564,4.1,b'4.1-ngram.current_user_utterance__march 30 15',5.8748,884,0.0000,948
+677,4.1,b'4.1-ngram.current_user_utterance__charge',5.4567,979,0.0000,949
+19645,4.1,b'4.1-ngram.next_system_utterance__search reminder',6.4407,800,0.0000,950
+21053,4.1,b'4.1-ngram.next_system_utterance__time try title',6.6267,751,0.0000,951
+18737,4.1,b'4.1-ngram.next_system_utterance__reminder family',7.5250,657,0.0000,952
+17825,4.1,b'4.1-ngram.next_system_utterance__pizza party',5.6631,926,0.0000,953
+19584,4.1,b'4.1-ngram.next_system_utterance__schedule ntry',7.5250,647,0.0000,954
+22748,4.1,b'4.1-ngram.next_user_utterance__12 noon',5.4719,975,0.0000,955
+615,4.1,b'4.1-ngram.current_user_utterance__butt',5.6620,939,0.0000,956
+19786,4.1,b'4.1-ngram.next_system_utterance__set recurring',9.1781,507,0.0000,957
+23088,4.1,b'4.1-ngram.next_user_utterance__brain',15.3463,240,0.0000,958
+5725,4.1,b'4.1-ngram.next_system_utterance__catch update',5.6631,929,0.0000,959
+21460,4.1,b'4.1-ngram.next_system_utterance__try new time',8.9610,519,0.0000,960
+16800,4.1,b'4.1-ngram.next_system_utterance__ntry 10',6.6183,773,0.0000,961
+11770,4.1,b'4.1-ngram.next_system_utterance__monday 2pm nyou',16.5840,219,0.0000,962
+532,4.1,b'4.1-ngram.current_user_utterance__bird food',5.2855,1013,0.0000,963
+10308,4.1,b'4.1-ngram.next_system_utterance__leslie nyou discard',101.6853,16,0.0000,964
+11447,4.1,b'4.1-ngram.next_system_utterance__members need add',9.5994,487,0.0000,965
+2152,4.1,b'4.1-ngram.current_user_utterance__remove bird food',5.2855,1014,0.0000,966
+21459,4.1,b'4.1-ngram.next_system_utterance__try new',8.9610,520,0.0000,967
+22161,4.1,b'4.1-ngram.next_system_utterance__want remove type',6.4407,796,0.0000,968
+127,4.1,b'4.1-ngram.current_user_utterance__30 15 pm',5.8748,885,0.0000,969
+16809,4.1,b'4.1-ngram.next_system_utterance__ntry mar 19',11.4965,368,0.0000,970
+21063,4.1,b'4.1-ngram.next_system_utterance__times try new',8.9610,523,0.0000,971
+19787,4.1,b'4.1-ngram.next_system_utterance__set recurring reminders',9.1781,508,0.0000,972
+16638,4.1,b'4.1-ngram.next_system_utterance__nhere list n1',12.6168,308,0.0000,973
+2707,4.1,b'4.1-ngram.current_user_utterance__whiting march 30',5.8748,890,0.0000,974
+948,4.1,b'4.1-ngram.current_user_utterance__dr whiting march',5.8748,886,0.0000,975
+16801,4.1,b'4.1-ngram.next_system_utterance__ntry 10 pm',6.6183,772,0.0000,976
+21654,4.1,b'4.1-ngram.next_system_utterance__type reminders',6.4407,798,0.0000,977
+19970,4.1,b'4.1-ngram.next_system_utterance__single reminder',9.1781,509,0.0000,978
+19644,4.1,b'4.1-ngram.next_system_utterance__search',6.4407,792,0.0000,979
+24218,4.1,b'4.1-ngram.next_user_utterance__sunday pm',5.3410,999,0.0000,980
+17442,4.1,b'4.1-ngram.next_system_utterance__past times try',8.9610,518,0.0000,981
+18637,4.1,b'4.1-ngram.next_system_utterance__remind past times',8.9610,521,0.0000,982
+17826,4.1,b'4.1-ngram.next_system_utterance__pizza party remind',5.6631,927,0.0000,983
+21062,4.1,b'4.1-ngram.next_system_utterance__times try',8.9610,524,0.0000,984
+18828,4.1,b'4.1-ngram.next_system_utterance__reminders create',9.1781,511,0.0000,985
+24193,4.1,b'4.1-ngram.next_user_utterance__stain',7.7277,612,0.0000,986
+19969,4.1,b'4.1-ngram.next_system_utterance__single',9.1781,506,0.0000,987
+24194,4.1,b'4.1-ngram.next_user_utterance__stain remover',7.7277,613,0.0000,988
+16603,4.1,b'4.1-ngram.next_system_utterance__new time',8.9610,516,0.0000,989
+443,4.1,b'4.1-ngram.current_user_utterance__appointment dr whiting',5.8748,889,0.0000,990
+22356,4.1,b'4.1-ngram.next_system_utterance__weekly monday 2pm',16.5840,217,0.0000,991
+20253,4.1,b'4.1-ngram.next_system_utterance__sorry didn catch',5.6631,933,0.0000,992
+126,4.1,b'4.1-ngram.current_user_utterance__30 15',5.8748,887,0.0000,993
+23813,4.1,b'4.1-ngram.next_user_utterance__omaha',9.8836,459,0.0000,994
+2151,4.1,b'4.1-ngram.current_user_utterance__remove bird',5.2855,1012,0.0000,995
+531,4.1,b'4.1-ngram.current_user_utterance__bird',5.2855,1011,0.0000,996
+18419,4.1,b'4.1-ngram.next_system_utterance__recurring reminders create',9.1781,513,0.0000,997
+18829,4.1,b'4.1-ngram.next_system_utterance__reminders create single',9.1781,512,0.0000,998
+21474,4.1,b'4.1-ngram.next_system_utterance__try title pickup',6.6267,764,0.0000,999
+3057,4.1,b'4.1-ngram.next_system_utterance__19 pm 1st',11.4965,369,0.0000,1000
+21097,4.1,b'4.1-ngram.next_system_utterance__title halloween',76.3495,34,0.0000,1001
+1563,4.1,b'4.1-ngram.current_user_utterance__march 30',5.8748,888,0.0000,1002
+17429,4.1,b'4.1-ngram.next_system_utterance__party remind',5.6631,935,0.0000,1003
+16808,4.1,b'4.1-ngram.next_system_utterance__ntry mar',11.4965,367,0.0000,1004
+10966,4.1,b'4.1-ngram.next_system_utterance__lunch leslie',101.6853,19,0.0000,1005
+3397,4.1,b'4.1-ngram.next_system_utterance__7pm pizza',5.6631,937,0.0000,1006
+18636,4.1,b'4.1-ngram.next_system_utterance__remind past',8.9610,522,0.0000,1007
+17441,4.1,b'4.1-ngram.next_system_utterance__past times',8.9610,517,0.0000,1008
+11775,4.1,b'4.1-ngram.next_system_utterance__monday pm weekly',16.5840,216,0.0000,1009
+10307,4.1,b'4.1-ngram.next_system_utterance__leslie nyou',101.6853,17,0.0000,1010
+16637,4.1,b'4.1-ngram.next_system_utterance__nhere list',12.6168,307,0.0000,1011
+7211,4.1,b'4.1-ngram.next_system_utterance__didn catch',5.6631,932,0.0000,1012
+11510,4.1,b'4.1-ngram.next_system_utterance__milk eggs',11.2692,377,0.0000,1013
+21100,4.1,b'4.1-ngram.next_system_utterance__title lunch leslie',101.6853,15,0.0000,1014
+10967,4.1,b'4.1-ngram.next_system_utterance__lunch leslie nyou',101.6853,20,0.0000,1015
+6335,4.1,b'4.1-ngram.next_system_utterance__clear list yes',67.8482,44,0.0000,1016
+10306,4.1,b'4.1-ngram.next_system_utterance__leslie',101.6853,18,0.0000,1017
+132,4.1,b'4.1-ngram.current_user_utterance__30 minutes',7.4048,666,0.0000,1018
+3255,4.1,b'4.1-ngram.next_system_utterance__2pm',16.5840,222,0.0000,1019
+3256,4.1,b'4.1-ngram.next_system_utterance__2pm nyou',16.5840,221,0.0000,1020
+17428,4.1,b'4.1-ngram.next_system_utterance__party nyou discard',76.3495,32,0.0000,1021
+21098,4.1,b'4.1-ngram.next_system_utterance__title halloween party',76.3495,30,0.0000,1022
+8906,4.1,b'4.1-ngram.next_system_utterance__halloween party nyou',76.3495,33,0.0000,1023
+17427,4.1,b'4.1-ngram.next_system_utterance__party nyou',76.3495,31,0.0000,1024
+7208,4.1,b'4.1-ngram.next_system_utterance__did really',67.8482,50,0.0000,1025
+7209,4.1,b'4.1-ngram.next_system_utterance__did really mean',67.8482,48,0.0000,1026
+11349,4.1,b'4.1-ngram.next_system_utterance__mean clear',67.8482,51,0.0000,1027
+11350,4.1,b'4.1-ngram.next_system_utterance__mean clear list',67.8482,46,0.0000,1028
+18392,4.1,b'4.1-ngram.next_system_utterance__really mean',67.8482,45,0.0000,1029
+7770,4.1,b'4.1-ngram.next_system_utterance__example',148.1015,11,0.0000,1030
+10725,4.1,b'4.1-ngram.next_system_utterance__list yes',67.8482,47,0.0000,1031

@@ -1,0 +1,131 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+2530,4.1,b'4.1-ngram.next_system_utterance__like',388.2541,1,1.0000,0
+928,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,129,0.7425,1
+3519,4.1,b'4.1-ngram.next_system_utterance__right',83.0720,40,0.3335,2
+4875,4.1,b'4.1-ngram.next_user_utterance__number',213.1081,19,0.1970,3
+2094,4.1,b'4.1-ngram.next_system_utterance__food like',363.3680,2,0.1929,4
+5066,4.1,b'4.1-ngram.next_user_utterance__thank',412.7607,0,0.1766,5
+4089,4.1,b'4.1-ngram.next_system_utterance__sure',60.0399,59,0.1663,6
+2621,4.1,b'4.1-ngram.next_system_utterance__looking restaurant',58.5197,62,0.1449,7
+4726,4.1,b'4.1-ngram.next_user_utterance__good',342.6585,7,0.1440,8
+4553,4.1,b'4.1-ngram.next_user_utterance__address',275.7813,14,0.1194,9
+429,4.1,b'4.1-ngram.current_user_utterance__number',201.0520,23,0.1130,10
+2574,4.1,b'4.1-ngram.next_system_utterance__looking',85.7534,39,0.1116,11
+5156,4.1,b'4.1-ngram.next_user_utterance__whats',97.8851,36,0.1045,12
+4079,4.1,b'4.1-ngram.next_system_utterance__street',33.3375,108,0.1033,13
+119,4.1,b'4.1-ngram.current_user_utterance__code',58.8962,61,0.0903,14
+896,4.1,b'4.1-ngram.current_user_utterance__whats',122.0281,25,0.0894,15
+4362,4.1,b'4.1-ngram.next_system_utterance__town mind',278.7280,12,0.0867,16
+3527,4.1,b'4.1-ngram.next_system_utterance__road',33.8848,106,0.0835,17
+5174,4.1,b'4.1-ngram.next_user_utterance__yes',202.5400,21,0.0785,18
+897,4.1,b'4.1-ngram.current_user_utterance__whats address',78.9186,43,0.0701,19
+3877,4.1,b'4.1-ngram.next_system_utterance__sorry',80.5223,42,0.0666,20
+78,4.1,b'4.1-ngram.current_user_utterance__care',31.3192,111,0.0662,21
+2746,4.1,b'4.1-ngram.next_system_utterance__mind',278.7280,13,0.0641,22
+5070,4.1,b'4.1-ngram.next_user_utterance__thank goodbye',67.7185,50,0.0631,23
+147,4.1,b'4.1-ngram.current_user_utterance__dont',30.0688,117,0.0624,24
+3,4.1,b'4.1-ngram.current_user_utterance__address phone number',29.4059,119,0.0600,25
+2533,4.1,b'4.1-ngram.next_system_utterance__like cheap',103.8026,32,0.0548,26
+474,4.1,b'4.1-ngram.current_user_utterance__phone number',201.5084,22,0.0543,27
+4675,4.1,b'4.1-ngram.next_user_utterance__dont',242.3177,17,0.0528,28
+5068,4.1,b'4.1-ngram.next_user_utterance__thank good',331.0370,10,0.0518,29
+4921,4.1,b'4.1-ngram.next_user_utterance__phone number',213.5485,18,0.0433,30
+494,4.1,b'4.1-ngram.current_user_utterance__post code',62.6675,54,0.0422,31
+2085,4.1,b'4.1-ngram.next_system_utterance__food',95.8159,37,0.0377,32
+4615,4.1,b'4.1-ngram.next_user_utterance__bye',341.2626,8,0.0365,33
+4676,4.1,b'4.1-ngram.next_user_utterance__dont care',247.8362,16,0.0355,34
+927,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,128,0.0320,35
+4673,4.1,b'4.1-ngram.next_user_utterance__doesnt',101.6540,33,0.0311,36
+5069,4.1,b'4.1-ngram.next_user_utterance__thank good bye',328.6396,11,0.0302,37
+3052,4.1,b'4.1-ngram.next_system_utterance__phone number',77.2558,44,0.0271,38
+2250,4.1,b'4.1-ngram.next_system_utterance__help',44.0128,79,0.0267,39
+3051,4.1,b'4.1-ngram.next_system_utterance__phone',77.2558,45,0.0265,40
+493,4.1,b'4.1-ngram.current_user_utterance__post',62.7425,53,0.0263,41
+4650,4.1,b'4.1-ngram.next_user_utterance__code',60.1021,58,0.0255,42
+3967,4.1,b'4.1-ngram.next_system_utterance__sorry restaurant',54.0617,67,0.0246,43
+3414,4.1,b'4.1-ngram.next_system_utterance__restaurant right',59.9355,60,0.0244,44
+5157,4.1,b'4.1-ngram.next_user_utterance__whats address',62.8542,52,0.0243,45
+473,4.1,b'4.1-ngram.current_user_utterance__phone',199.8041,24,0.0239,46
+4355,4.1,b'4.1-ngram.next_system_utterance__town',52.6597,69,0.0237,47
+2847,4.1,b'4.1-ngram.next_system_utterance__number',77.2558,46,0.0233,48
+4731,4.1,b'4.1-ngram.next_user_utterance__goodbye',67.4991,51,0.0218,49
+3337,4.1,b'4.1-ngram.next_system_utterance__restaurant',37.3161,96,0.0218,50
+1,4.1,b'4.1-ngram.current_user_utterance__address',350.4873,6,0.0207,51
+148,4.1,b'4.1-ngram.current_user_utterance__dont care',31.8893,109,0.0186,52
+4920,4.1,b'4.1-ngram.next_user_utterance__phone',206.4758,20,0.0169,53
+2217,4.1,b'4.1-ngram.next_system_utterance__great restaurant',76.7710,47,0.0146,54
+4554,4.1,b'4.1-ngram.next_user_utterance__address phone',61.7898,55,0.0144,55
+2759,4.1,b'4.1-ngram.next_system_utterance__moderate expensive price',106.9476,30,0.0129,56
+2534,4.1,b'4.1-ngram.next_system_utterance__like cheap moderate',106.9476,26,0.0123,57
+4938,4.1,b'4.1-ngram.next_user_utterance__post code',58.4127,63,0.0121,58
+1713,4.1,b'4.1-ngram.next_system_utterance__cheap moderate',106.9476,29,0.0119,59
+4621,4.1,b'4.1-ngram.next_user_utterance__care',251.4285,15,0.0117,60
+2758,4.1,b'4.1-ngram.next_system_utterance__moderate expensive',106.9476,28,0.0116,61
+2216,4.1,b'4.1-ngram.next_system_utterance__great',76.7710,48,0.0114,62
+4833,4.1,b'4.1-ngram.next_user_utterance__matter',99.7411,35,0.0111,63
+1714,4.1,b'4.1-ngram.next_system_utterance__cheap moderate expensive',106.9476,27,0.0108,64
+2429,4.1,b'4.1-ngram.next_system_utterance__kind food like',363.2290,3,0.0102,65
+4697,4.1,b'4.1-ngram.next_user_utterance__food',105.7182,31,0.0097,66
+529,4.1,b'4.1-ngram.current_user_utterance__restaurant',91.1197,38,0.0095,67
+5061,4.1,b'4.1-ngram.next_user_utterance__thai',49.1467,73,0.0085,68
+325,4.1,b'4.1-ngram.current_user_utterance__looking',45.7299,77,0.0083,69
+917,4.1,b'4.1-ngram.current_user_utterance__yes',81.1675,41,0.0073,70
+4636,4.1,b'4.1-ngram.next_user_utterance__cheap',61.2123,56,0.0068,71
+5136,4.1,b'4.1-ngram.next_user_utterance__vietnamese',33.5846,107,0.0067,72
+3425,4.1,b'4.1-ngram.next_system_utterance__restaurant serving',42.9293,82,0.0065,73
+1760,4.1,b'4.1-ngram.next_system_utterance__city',27.6487,123,0.0064,74
+5047,4.1,b'4.1-ngram.next_user_utterance__spanish',48.0353,74,0.0063,75
+903,4.1,b'4.1-ngram.current_user_utterance__whats phone number',54.3206,66,0.0063,76
+766,4.1,b'4.1-ngram.current_user_utterance__thai food',45.6629,78,0.0062,77
+745,4.1,b'4.1-ngram.current_user_utterance__south town',42.5865,84,0.0061,78
+5153,4.1,b'4.1-ngram.next_user_utterance__west',36.9282,98,0.0059,79
+383,4.1,b'4.1-ngram.current_user_utterance__moderately priced restaurant',30.9704,113,0.0056,80
+3184,4.1,b'4.1-ngram.next_system_utterance__post',35.1178,101,0.0053,81
+2,4.1,b'4.1-ngram.current_user_utterance__address phone',29.4522,118,0.0053,82
+929,4.1,b'4.1-ngram.next_system_utterance__01223',72.5971,49,0.0052,83
+5044,4.1,b'4.1-ngram.next_user_utterance__south',52.4510,70,0.0051,84
+5162,4.1,b'4.1-ngram.next_user_utterance__whats phone number',40.7171,90,0.0051,85
+4679,4.1,b'4.1-ngram.next_user_utterance__east',43.4533,80,0.0048,86
+1797,4.1,b'4.1-ngram.next_system_utterance__code',35.1178,99,0.0048,87
+902,4.1,b'4.1-ngram.current_user_utterance__whats phone',54.6836,65,0.0047,88
+3185,4.1,b'4.1-ngram.next_system_utterance__post code',35.1178,100,0.0047,89
+503,4.1,b'4.1-ngram.current_user_utterance__priced',42.4535,85,0.0045,90
+743,4.1,b'4.1-ngram.current_user_utterance__south',41.9273,87,0.0045,91
+4719,4.1,b'4.1-ngram.next_user_utterance__gastropub',27.6853,121,0.0045,92
+165,4.1,b'4.1-ngram.current_user_utterance__expensive',26.9996,126,0.0045,93
+4838,4.1,b'4.1-ngram.next_user_utterance__moderate',37.2288,97,0.0041,94
+776,4.1,b'4.1-ngram.current_user_utterance__town',51.2997,71,0.0041,95
+422,4.1,b'4.1-ngram.current_user_utterance__north',40.1181,91,0.0041,96
+4674,4.1,b'4.1-ngram.next_user_utterance__doesnt matter',100.8722,34,0.0040,97
+246,4.1,b'4.1-ngram.current_user_utterance__im looking',39.2327,94,0.0039,98
+200,4.1,b'4.1-ngram.current_user_utterance__food type',27.4940,124,0.0036,99
+749,4.1,b'4.1-ngram.current_user_utterance__spanish',34.1039,105,0.0031,100
+4763,4.1,b'4.1-ngram.next_user_utterance__indian',41.9727,86,0.0029,101
+245,4.1,b'4.1-ngram.current_user_utterance__im',39.8381,92,0.0027,102
+4690,4.1,b'4.1-ngram.next_user_utterance__expensive',37.7586,95,0.0027,103
+2428,4.1,b'4.1-ngram.next_system_utterance__kind food',355.3460,4,0.0025,104
+3970,4.1,b'4.1-ngram.next_system_utterance__sorry restaurant serving',53.1458,68,0.0024,105
+2427,4.1,b'4.1-ngram.next_system_utterance__kind',355.3460,5,0.0021,106
+2049,4.1,b'4.1-ngram.next_system_utterance__expensive price',34.2178,104,0.0020,107
+380,4.1,b'4.1-ngram.current_user_utterance__moderately',43.4066,81,0.0019,108
+4957,4.1,b'4.1-ngram.next_user_utterance__restaurant',27.4754,125,0.0019,109
+180,4.1,b'4.1-ngram.current_user_utterance__food',26.5851,127,0.0018,110
+4869,4.1,b'4.1-ngram.next_user_utterance__north',42.7284,83,0.0018,111
+2050,4.1,b'4.1-ngram.next_system_utterance__expensive price range',34.2178,103,0.0018,112
+5062,4.1,b'4.1-ngram.next_user_utterance__thai food',30.9868,112,0.0017,113
+4644,4.1,b'4.1-ngram.next_user_utterance__chinese',27.6588,122,0.0016,114
+4727,4.1,b'4.1-ngram.next_user_utterance__good bye',339.5286,9,0.0015,115
+4555,4.1,b'4.1-ngram.next_user_utterance__address phone number',61.0439,57,0.0012,116
+2377,4.1,b'4.1-ngram.next_system_utterance__indian restaurant east',29.0874,120,0.0012,117
+244,4.1,b'4.1-ngram.current_user_utterance__id like thai',30.3559,116,0.0012,118
+3924,4.1,b'4.1-ngram.next_system_utterance__sorry hear',46.8041,76,0.0011,119
+2249,4.1,b'4.1-ngram.next_system_utterance__hear',46.8041,75,0.0010,120
+506,4.1,b'4.1-ngram.current_user_utterance__priced restaurant',34.7352,102,0.0009,121
+171,4.1,b'4.1-ngram.current_user_utterance__expensive restaurant',41.1110,88,0.0009,122
+321,4.1,b'4.1-ngram.current_user_utterance__like thai',30.3559,115,0.0008,123
+765,4.1,b'4.1-ngram.current_user_utterance__thai',50.8917,72,0.0008,124
+322,4.1,b'4.1-ngram.current_user_utterance__like thai food',30.3559,114,0.0007,125
+4937,4.1,b'4.1-ngram.next_user_utterance__post',57.2932,64,0.0005,126
+5082,4.1,b'4.1-ngram.next_user_utterance__town',31.3481,110,0.0005,127
+5161,4.1,b'4.1-ngram.next_user_utterance__whats phone',41.0593,89,0.0005,128
+381,4.1,b'4.1-ngram.current_user_utterance__moderately priced',39.7867,93,0.0004,129
