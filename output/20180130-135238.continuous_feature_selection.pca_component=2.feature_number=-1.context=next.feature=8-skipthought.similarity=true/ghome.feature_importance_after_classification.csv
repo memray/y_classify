@@ -1,0 +1,6 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+4,11.2.1,b'11.2.1-skipthought_similarity.next_user_utterance_pairs__cosine',0.0000,0,1.0000,0
+3,11.1,b'11.1-skipthought_feature.current_user_utterance__skipthought_dim=100',0.0000,1,0.5908,1
+1,11.1,b'11.1-skipthought_feature.current_user_utterance__skipthought_dim=1',0.0000,3,0.2893,2
+2,11.1,b'11.1-skipthought_feature.current_user_utterance__skipthought_dim=10',0.0000,2,0.2826,3
+0,11.1,b'11.1-skipthought_feature.current_user_utterance__skipthought_dim=0',0.0000,4,0.0551,4

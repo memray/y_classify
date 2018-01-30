@@ -1,0 +1,10 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+1,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=1',0.0000,7,1.0000,0
+2,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=10',0.0000,6,0.9137,1
+0,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=0',0.0000,8,0.5320,2
+3,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=100',0.0000,5,0.2914,3
+8,10.2.1,b'10.2.1-d2v_similarity.next_user_utterance_pairs__cosine',0.0000,0,0.2113,4
+6,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=103',0.0000,2,0.1971,5
+7,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=104',0.0000,1,0.1002,6
+5,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=102',0.0000,3,0.0982,7
+4,10.1,b'10.1-d2v_feature.current_user_utterance__d2v_dim=101',0.0000,4,0.0918,8

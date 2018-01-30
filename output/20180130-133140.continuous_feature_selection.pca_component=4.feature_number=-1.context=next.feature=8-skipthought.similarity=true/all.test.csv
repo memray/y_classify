@@ -1,0 +1,4 @@
+dataset,context_set,feature_set,model,test_round,accuracy,precision,recall,f1_score
+dstc2,next,8-skipthought w/ similarity,LR.pen=l1.C=1.000000,0,0.779334500876,0.56707404231,0.567191117583,0.565397299983
+dstc3,next,8-skipthought w/ similarity,LR.pen=l1.C=1.000000,0,0.685810810811,0.48204887218,0.476004494915,0.469007414503
+family,next,8-skipthought w/ similarity,LR.pen=l1.C=1.000000,0,0.792613636364,0.578033383772,0.477166666667,0.491707354879
