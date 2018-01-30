@@ -1,0 +1,2232 @@
+/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode continuous_feature_selection -selected_feature_set_id 6 -add_similarity_feature -selected_context_id 0 -k_feature_to_keep -1 -k_component_for_pca 2
+No. of param settings = 1
+[('experiment_mode', 'continuous_feature_selection'), ('deep_model', False), ('selected_context_id', 0), ('selected_feature_set_id', 6), ('similarity_feature', True), ('k_feature_to_keep', -1), ('k_component_for_pca', 2)]
+Loading extracted features of dstc2
+Loading extracted features of dstc3
+Loading extracted features of family
+Loading extracted features of ghome
+01/29/2018 20:20:41 [INFO] configuration: experiment_mode  :   continuous_feature_selection
+01/29/2018 20:20:41 [INFO] configuration: deep_model  :   False
+01/29/2018 20:20:41 [INFO] configuration: selected_context_id  :   0
+01/29/2018 20:20:41 [INFO] configuration: selected_feature_set_id  :   6
+01/29/2018 20:20:41 [INFO] configuration: similarity_feature  :   True
+01/29/2018 20:20:41 [INFO] configuration: k_feature_to_keep  :   -1
+01/29/2018 20:20:41 [INFO] configuration: k_component_for_pca  :   2
+01/29/2018 20:20:41 [INFO] configuration: seed  :   154316847
+01/29/2018 20:20:41 [INFO] configuration: root_path  :   /ihome/pbrusilosky/rum20/y_classify
+01/29/2018 20:20:41 [INFO] configuration: task_name  :   utterance_type
+01/29/2018 20:20:41 [INFO] configuration: timemark  :   20180129-202041
+01/29/2018 20:20:41 [INFO] configuration: context_set  :   next
+01/29/2018 20:20:41 [INFO] configuration: utterance_names  :   ['last_user_utterance', 'last_system_utterance', 'current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+01/29/2018 20:20:41 [INFO] configuration: utterance_range  :   ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+01/29/2018 20:20:41 [INFO] configuration: feature_set  :   6-w2v
+01/29/2018 20:20:41 [INFO] configuration: feature_set_number  :   ['9']
+01/29/2018 20:20:41 [INFO] configuration: experiment_name  :   20180129-202041.continuous_feature_selection.pca_component=2.feature_number=-1.context=next.feature=6-w2v.similarity=true
+01/29/2018 20:20:41 [INFO] configuration: experiment_path  :   /ihome/pbrusilosky/rum20/y_classify/output/20180129-202041.continuous_feature_selection.pca_component=2.feature_number=-1.context=next.feature=6-w2v.similarity=true
+01/29/2018 20:20:41 [INFO] configuration: log_path  :   /ihome/pbrusilosky/rum20/y_classify/output/20180129-202041.continuous_feature_selection.pca_component=2.feature_number=-1.context=next.feature=6-w2v.similarity=true/output.log
+01/29/2018 20:20:41 [INFO] configuration: valid_type  :   {'C', 'R', 'A', 'F'}
+01/29/2018 20:20:41 [INFO] configuration: data_name  :   
+01/29/2018 20:20:41 [INFO] configuration: data_names  :   ['dstc2', 'dstc3', 'family', 'ghome']
+01/29/2018 20:20:41 [INFO] configuration: raw_feature_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.raw_feature.pkl
+01/29/2018 20:20:41 [INFO] configuration: extracted_feature_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.extracted_feature.pkl
+01/29/2018 20:20:41 [INFO] configuration: pipeline_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/%s.pipeline.pkl
+01/29/2018 20:20:41 [INFO] configuration: metrics  :   ['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+01/29/2018 20:20:41 [INFO] configuration: do_cross_validation  :   True
+01/29/2018 20:20:41 [INFO] configuration: #division  :   5
+01/29/2018 20:20:41 [INFO] configuration: #cross_validation  :   10
+01/29/2018 20:20:41 [INFO] configuration: cv_index_cache_path  :   
+01/29/2018 20:20:41 [INFO] configuration: action_words  :   {'remove', 'findcare', 'delet', 'part', 'volume', 'remind', 'discard', 'temperature', 'cheap', 'next', 'list', 'south', 'area', 'snooz', 'stop', 'share', 'else', 'food', 'help', 'show', 'video', 'watch', 'shuffl', 'reminder', 'volum', 'cast', 'light', 'clear', 'time', 'song', 'skip', 'snooze', 'weather', 'moderate', 'phone', 'timer', 'matter', 'member', 'reminds', 'add', 'room', 'north', 'expens', 'shuffle', 'telephone', 'turn', 'number', 'telephon', 'ani', 'address', 'item', 'price', 'tell', 'any', 'centre', 'start', 'play', 'delete', 'temperatur', 'remov', 'expensive', 'moder', 'findcar', 'items', 'reminders', 'centr', 'alarm', 'post', 'music', 'els'}
+01/29/2018 20:20:41 [INFO] configuration: corenlp_jars  :   ('/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*', '/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar')
+01/29/2018 20:20:41 [INFO] configuration: lda_topic_number  :   50
+01/29/2018 20:20:41 [INFO] configuration: lda_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.topic=50.lda.pkl
+01/29/2018 20:20:41 [INFO] configuration: gensim_corpus_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.corpus.pkl
+01/29/2018 20:20:41 [INFO] configuration: gensim_dict_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.dict
+01/29/2018 20:20:41 [INFO] configuration: w2v_path  :   /home/memray/Data/glove/GoogleNews-vectors-negative300.bin
+01/29/2018 20:20:41 [INFO] configuration: w2v_vector_length  :   300
+01/29/2018 20:20:41 [INFO] configuration: d2v_vector_length  :   300
+01/29/2018 20:20:41 [INFO] configuration: d2v_window_size  :   5
+01/29/2018 20:20:41 [INFO] configuration: d2v_min_count  :   2
+01/29/2018 20:20:41 [INFO] configuration: d2v_model_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.model
+01/29/2018 20:20:41 [INFO] configuration: d2v_vector_path  :   /ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.vector
+01/29/2018 20:20:41 [INFO] configuration: num_word_keep  :   {'dstc2': 300, 'dstc3': 300, 'family': 1000, 'ghome': 1000}
+01/29/2018 20:20:41 [INFO] configuration: batch_size  :   128
+01/29/2018 20:20:41 [INFO] configuration: max_epoch  :   50
+01/29/2018 20:20:41 [INFO] configuration: early_stop_tolerance  :   2
+01/29/2018 20:20:41 [INFO] configuration: concat_sents  :   False
+01/29/2018 20:20:41 [INFO] configuration: cnn_setting  :   {'model': 'multichannel', 'early_stopping': True, 'word_dim': 300, 'filters': [3, 4, 5], 'filter_num': [100, 100, 100], 'class_size': 4, 'batch_size': 128, 'learning_rate': 0.001, 'norm_limit': 10, 'dropout_prob': 0.0, 'sentence_num': 3}
+01/29/2018 20:20:41 [INFO] configuration: skipthought_setting  :   {'skipthought_model_path': '/Users/memray/Data/skip-thought', 'skipthought_data_path': '/ihome/pbrusilosky/rum20/y_classify/dataset/feature/gensim/%s.skip-thought.biskip.vector', 'fixed_emb': True, 'sentence_num': 3, 'hidden_size': 2400, 'class_size': 4, 'learning_rate': 0.0001, 'norm_limit': 3, 'dropout_prob': 0.5}
+01/29/2018 20:20:41 [INFO] configuration: lstm_setting  :   {'model': 'non-static', 'hidden_size': 32, 'embedding_size': 300, 'num_layers': 1, 'bidirectional': False, 'learning_rate': 0.001, 'class_size': 4, 'norm_limit': 2, 'clip_grad_norm': 2, 'dropout_prob': 0.1}
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/29/2018 20:20:44 [INFO] exp_shallowmodel:           dataset=dstc2
+01/29/2018 20:20:44 [INFO] exp_shallowmodel:           X_new.shape=(5725, 6)
+01/29/2018 20:20:44 [INFO] exp_shallowmodel:           #(discrete_feature)=0
+01/29/2018 20:20:44 [INFO] exp_shallowmodel:           #(continuous_feature)=4
+01/29/2018 20:20:44 [INFO] exp_shallowmodel:           #(similarity_feature)=2
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: ******************** dstc2 - Round 0 
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: train time: 0.022s
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: accuracy:   0.795
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: f1_score:   0.580
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:44 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.80      0.81      0.80       164
+          F       0.82      0.93      0.87       268
+          R       0.73      0.58      0.65       125
+
+avg / total       0.77      0.80      0.78       571
+
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: 
+[[  0   3  11   0]
+ [  0 133  15  16]
+ [  0   9 248  11]
+ [  0  22  30  73]]
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: ******************** dstc2 - Round 1 
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: accuracy:   0.744
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: f1_score:   0.537
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:44 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.74      0.77      0.76       164
+          F       0.78      0.88      0.82       268
+          R       0.66      0.50      0.57       125
+
+avg / total       0.72      0.74      0.73       571
+
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: 
+[[  0   4  10   0]
+ [  0 127  20  17]
+ [  0  17 235  16]
+ [  0  24  38  63]]
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: ******************** dstc2 - Round 2 
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:44 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.765
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.553
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.74      0.73      0.73       164
+          F       0.82      0.91      0.87       268
+          R       0.65      0.58      0.61       125
+
+avg / total       0.74      0.77      0.75       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   5   8   1]
+ [  0 119  18  27]
+ [  0  11 245  12]
+ [  0  25  27  73]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 3 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.734
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.531
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.75      0.75      0.75       164
+          F       0.76      0.87      0.81       268
+          R       0.64      0.51      0.57       125
+
+avg / total       0.71      0.73      0.72       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  12   0]
+ [  0 123  20  21]
+ [  0  21 232  15]
+ [  0  18  43  64]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 4 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.022s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.750
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.545
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.73      0.74      0.73       164
+          F       0.78      0.89      0.83       268
+          R       0.71      0.54      0.62       125
+
+avg / total       0.73      0.75      0.73       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  11   1]
+ [  0 122  27  15]
+ [  0  18 238  12]
+ [  0  26  31  68]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 5 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.750
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.544
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.71      0.73      0.72       164
+          F       0.78      0.89      0.83       268
+          R       0.72      0.55      0.62       125
+
+avg / total       0.73      0.75      0.73       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   6   8   0]
+ [  0 120  29  15]
+ [  0  17 239  12]
+ [  0  27  29  69]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 6 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.772
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.558
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.77      0.82      0.79       164
+          F       0.80      0.91      0.85       268
+          R       0.70      0.51      0.59       125
+
+avg / total       0.75      0.77      0.75       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   1  10   3]
+ [  0 134  17  13]
+ [  0  13 243  12]
+ [  0  26  35  64]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 7 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.022s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.744
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.539
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.72      0.73      0.72       164
+          F       0.78      0.89      0.83       268
+          R       0.68      0.54      0.60       125
+
+avg / total       0.72      0.74      0.73       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   3  11   0]
+ [  0 119  24  21]
+ [  0  19 238  11]
+ [  0  25  32  68]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 8 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.730
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.524
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.72      0.71      0.71       164
+          F       0.79      0.88      0.84       268
+          R       0.58      0.52      0.55       125
+
+avg / total       0.71      0.73      0.72       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   4  10   0]
+ [  0 116  20  28]
+ [  0  12 236  20]
+ [  0  29  31  65]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 9 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4568
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.708
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.505
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        16
+          C       0.67      0.69      0.68       169
+          F       0.78      0.87      0.82       271
+          R       0.57      0.47      0.51       130
+
+avg / total       0.68      0.71      0.69       586
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   6  10   0]
+ [  0 117  24  28]
+ [  0  16 237  18]
+ [  0  35  34  61]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 10 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.751
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.542
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.74      0.80      0.77       164
+          F       0.78      0.88      0.83       268
+          R       0.67      0.50      0.57       125
+
+avg / total       0.73      0.75      0.73       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   4  10   0]
+ [  0 131  16  17]
+ [  0  19 236  13]
+ [  0  24  39  62]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 11 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.744
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.532
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.72      0.67      0.69       164
+          F       0.79      0.93      0.86       268
+          R       0.63      0.53      0.58       125
+
+avg / total       0.72      0.74      0.73       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   4  10   0]
+ [  0 110  26  28]
+ [  0   9 249  10]
+ [  0  30  29  66]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 12 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.739
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.530
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.74      0.71      0.72       164
+          F       0.77      0.90      0.83       268
+          R       0.64      0.50      0.57       125
+
+avg / total       0.71      0.74      0.72       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   3  10   1]
+ [  0 117  23  24]
+ [  0  16 242  10]
+ [  0  23  39  63]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 13 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.764
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.548
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.75      0.80      0.78       164
+          F       0.79      0.91      0.85       268
+          R       0.69      0.49      0.57       125
+
+avg / total       0.74      0.76      0.74       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   4  10   0]
+ [  0 131  17  16]
+ [  0  13 244  11]
+ [  0  26  38  61]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 14 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.750
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.548
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.73      0.72      0.72       164
+          F       0.78      0.88      0.83       268
+          R       0.69      0.60      0.64       125
+
+avg / total       0.73      0.75      0.74       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  12   0]
+ [  0 118  27  19]
+ [  0  19 235  14]
+ [  0  23  27  75]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 15 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.022s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.739
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.536
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.70      0.70      0.70       164
+          F       0.79      0.88      0.83       268
+          R       0.66      0.57      0.61       125
+
+avg / total       0.72      0.74      0.73       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  10   2]
+ [  0 115  25  24]
+ [  0  21 236  11]
+ [  0  27  27  71]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 16 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.769
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.556
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.75      0.76      0.76       164
+          F       0.81      0.91      0.86       268
+          R       0.67      0.56      0.61       125
+
+avg / total       0.74      0.77      0.75       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   6   7   1]
+ [  0 125  17  22]
+ [  0  12 244  12]
+ [  0  23  32  70]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 17 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.776
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.568
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.78      0.75      0.76       164
+          F       0.80      0.91      0.85       268
+          R       0.71      0.62      0.66       125
+
+avg / total       0.75      0.78      0.76       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  12   0]
+ [  0 123  20  21]
+ [  0  14 243  11]
+ [  0  19  29  77]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 18 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.751
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.541
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.70      0.77      0.73       164
+          F       0.82      0.88      0.85       268
+          R       0.63      0.53      0.58       125
+
+avg / total       0.73      0.75      0.74       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  11   1]
+ [  0 126  19  19]
+ [  0  13 237  18]
+ [  0  38  21  66]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 19 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4568
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.735
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.531
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        16
+          C       0.75      0.81      0.78       169
+          F       0.77      0.86      0.81       271
+          R       0.60      0.48      0.53       130
+
+avg / total       0.71      0.74      0.72       586
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   3  13   0]
+ [  0 137  17  15]
+ [  0  13 232  26]
+ [  0  30  38  62]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 20 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.022s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.764
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.553
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.76      0.75      0.75       164
+          F       0.81      0.90      0.85       268
+          R       0.65      0.57      0.60       125
+
+avg / total       0.74      0.76      0.75       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   3  10   1]
+ [  0 123  16  25]
+ [  0  13 242  13]
+ [  0  23  31  71]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 21 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.022s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.743
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.532
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.70      0.71      0.71       164
+          F       0.80      0.91      0.85       268
+          R       0.64      0.51      0.57       125
+
+avg / total       0.72      0.74      0.73       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  11   1]
+ [  0 117  22  25]
+ [  0  15 243  10]
+ [  0  32  29  64]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 22 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.022s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.765
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.555
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.79      0.83      0.81       164
+          F       0.80      0.88      0.83       268
+          R       0.64      0.53      0.58       125
+
+avg / total       0.74      0.77      0.75       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  11   1]
+ [  0 136  14  14]
+ [  0  11 235  22]
+ [  0  24  35  66]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 23 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.739
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.533
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.69      0.74      0.71       164
+          F       0.79      0.88      0.83       268
+          R       0.67      0.52      0.59       125
+
+avg / total       0.72      0.74      0.72       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   3  11   0]
+ [  0 122  23  19]
+ [  0  20 235  13]
+ [  0  33  27  65]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 24 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.716
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.507
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.71      0.72      0.72       164
+          F       0.77      0.88      0.82       268
+          R       0.55      0.44      0.49       125
+
+avg / total       0.69      0.72      0.70       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   4  10   0]
+ [  0 118  18  28]
+ [  0  15 236  17]
+ [  0  29  41  55]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 25 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.771
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.564
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.75      0.76      0.76       164
+          F       0.78      0.90      0.84       268
+          R       0.76      0.58      0.66       125
+
+avg / total       0.75      0.77      0.76       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   9   5   0]
+ [  0 125  28  11]
+ [  0  14 242  12]
+ [  0  18  34  73]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 26 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.757
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.545
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.71      0.79      0.75       164
+          F       0.81      0.89      0.85       268
+          R       0.67      0.51      0.58       125
+
+avg / total       0.73      0.76      0.74       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   3  11   0]
+ [  0 129  16  19]
+ [  0  17 239  12]
+ [  0  33  28  64]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 27 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.753
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.545
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.73      0.71      0.72       164
+          F       0.80      0.90      0.85       268
+          R       0.66      0.57      0.61       125
+
+avg / total       0.73      0.75      0.74       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   3  11   0]
+ [  0 117  19  28]
+ [  0  17 242   9]
+ [  0  23  31  71]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 28 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.753
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.545
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.75      0.75      0.75       164
+          F       0.79      0.89      0.84       268
+          R       0.66      0.54      0.60       125
+
+avg / total       0.73      0.75      0.74       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   1  12   1]
+ [  0 123  23  18]
+ [  0  13 239  16]
+ [  0  28  29  68]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 29 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4568
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.019s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.763
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.557
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        16
+          C       0.79      0.75      0.77       169
+          F       0.76      0.92      0.83       271
+          R       0.72      0.56      0.63       130
+
+avg / total       0.74      0.76      0.75       586
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  13   1]
+ [  0 126  26  17]
+ [  0  12 248  11]
+ [  0  19  38  73]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 30 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.716
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.513
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.70      0.73      0.71       164
+          F       0.77      0.85      0.81       268
+          R       0.59      0.48      0.53       125
+
+avg / total       0.69      0.72      0.70       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   1  11   2]
+ [  0 120  23  21]
+ [  0  20 229  19]
+ [  0  31  34  60]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 31 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.725
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.524
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.72      0.72      0.72       164
+          F       0.75      0.87      0.80       268
+          R       0.66      0.50      0.57       125
+
+avg / total       0.70      0.73      0.71       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   1  13   0]
+ [  0 118  25  21]
+ [  0  24 233  11]
+ [  0  21  41  63]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 32 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.022s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.746
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.533
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.71      0.74      0.72       164
+          F       0.79      0.91      0.85       268
+          R       0.67      0.48      0.56       125
+
+avg / total       0.72      0.75      0.73       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   3  11   0]
+ [  0 122  17  25]
+ [  0  20 244   4]
+ [  0  28  37  60]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 33 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.764
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.552
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.73      0.76      0.74       164
+          F       0.82      0.91      0.86       268
+          R       0.67      0.55      0.61       125
+
+avg / total       0.74      0.76      0.75       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   8   6   0]
+ [  0 124  20  20]
+ [  0  11 243  14]
+ [  0  27  29  69]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 34 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.755
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.546
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.78      0.73      0.75       164
+          F       0.79      0.90      0.84       268
+          R       0.62      0.56      0.59       125
+
+avg / total       0.73      0.75      0.74       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   3  10   1]
+ [  0 120  22  22]
+ [  0   7 241  20]
+ [  0  24  31  70]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 35 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.776
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.568
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.75      0.77      0.76       164
+          F       0.80      0.90      0.85       268
+          R       0.74      0.60      0.66       125
+
+avg / total       0.75      0.78      0.76       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   6   7   1]
+ [  0 126  24  14]
+ [  0  15 242  11]
+ [  0  21  29  75]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 36 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.767
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.559
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.76      0.80      0.78       164
+          F       0.78      0.90      0.83       268
+          R       0.74      0.54      0.62       125
+
+avg / total       0.75      0.77      0.75       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   2  12   0]
+ [  0 131  23  10]
+ [  0  15 240  13]
+ [  0  25  33  67]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 37 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.774
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.562
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.77      0.79      0.78       164
+          F       0.81      0.90      0.85       268
+          R       0.66      0.57      0.61       125
+
+avg / total       0.75      0.77      0.76       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   0  14   0]
+ [  0 130  16  18]
+ [  0   9 241  18]
+ [  0  29  25  71]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 38 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: accuracy:   0.736
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: f1_score:   0.525
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.71      0.68      0.69       164
+          F       0.80      0.91      0.85       268
+          R       0.60      0.52      0.56       125
+
+avg / total       0.71      0.74      0.72       571
+
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: 
+[[  0   4  10   0]
+ [  0 111  20  33]
+ [  0  14 244  10]
+ [  0  28  32  65]]
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ******************** dstc2 - Round 39 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(data) = 4568
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:45 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.746
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.542
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        16
+          C       0.72      0.75      0.73       169
+          F       0.79      0.89      0.83       271
+          R       0.66      0.55      0.60       130
+
+avg / total       0.72      0.75      0.73       586
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   5   9   2]
+ [  0 126  20  23]
+ [  0  20 240  11]
+ [  0  23  36  71]]
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 40 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.762
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.552
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.79      0.74      0.76       164
+          F       0.79      0.91      0.84       268
+          R       0.65      0.55      0.60       125
+
+avg / total       0.74      0.76      0.75       571
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   4   9   1]
+ [  0 122  21  21]
+ [  0   9 244  15]
+ [  0  20  36  69]]
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 41 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.737
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.528
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.70      0.68      0.69       164
+          F       0.81      0.90      0.85       268
+          R       0.60      0.54      0.57       125
+
+avg / total       0.71      0.74      0.72       571
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   2  12   0]
+ [  0 112  20  32]
+ [  0  13 241  14]
+ [  0  34  23  68]]
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 42 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.753
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.545
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.75      0.73      0.74       164
+          F       0.79      0.90      0.84       268
+          R       0.66      0.55      0.60       125
+
+avg / total       0.73      0.75      0.74       571
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   2  11   1]
+ [  0 120  24  20]
+ [  0  13 241  14]
+ [  0  26  30  69]]
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 43 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.767
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.562
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.74      0.76      0.75       164
+          F       0.79      0.89      0.84       268
+          R       0.74      0.60      0.66       125
+
+avg / total       0.75      0.77      0.75       571
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   5   9   0]
+ [  0 124  25  15]
+ [  0  17 239  12]
+ [  0  22  28  75]]
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 44 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.022s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.744
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.531
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.71      0.73      0.72       164
+          F       0.80      0.91      0.85       268
+          R       0.63      0.49      0.55       125
+
+avg / total       0.72      0.74      0.73       571
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   4   8   2]
+ [  0 120  18  26]
+ [  0  16 244   8]
+ [  0  28  36  61]]
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 45 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.751
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.541
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.72      0.76      0.74       164
+          F       0.80      0.90      0.85       268
+          R       0.65      0.52      0.58       125
+
+avg / total       0.73      0.75      0.74       571
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   6   8   0]
+ [  0 124  17  23]
+ [  0  16 240  12]
+ [  0  26  34  65]]
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 46 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.736
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.525
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.72      0.79      0.75       164
+          F       0.77      0.87      0.82       268
+          R       0.64      0.45      0.53       125
+
+avg / total       0.71      0.74      0.72       571
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   1  13   0]
+ [  0 130  20  14]
+ [  0  17 234  17]
+ [  0  33  36  56]]
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 47 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.758
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.551
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.75      0.77      0.76       164
+          F       0.78      0.90      0.83       268
+          R       0.71      0.54      0.61       125
+
+avg / total       0.74      0.76      0.74       571
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   2  11   1]
+ [  0 126  23  15]
+ [  0  16 240  12]
+ [  0  23  35  67]]
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 48 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4583
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.020s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.790
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.576
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        14
+          C       0.78      0.85      0.81       164
+          F       0.81      0.90      0.86       268
+          R       0.74      0.55      0.63       125
+
+avg / total       0.77      0.79      0.77       571
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   3  11   0]
+ [  0 140  11  13]
+ [  0  15 242  11]
+ [  0  22  34  69]]
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ******************** dstc2 - Round 49 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(data) = 4568
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: #(feature) = 6
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ================================================================================
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LR.pen=l1.C=1.000000
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: ________________________________________________________________________________
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: Training: 
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: LogisticRegression(C=1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
+          penalty='l1', random_state=None, solver='liblinear', tol=0.0001,
+          verbose=0, warm_start=False)
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: train time: 0.021s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: test time:  0.000s
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: accuracy:   0.749
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: f1_score:   0.545
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: classification report:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel:              precision    recall  f1-score   support
+
+          A       0.00      0.00      0.00        16
+          C       0.72      0.76      0.74       169
+          F       0.78      0.89      0.83       271
+          R       0.69      0.54      0.61       130
+
+avg / total       0.72      0.75      0.73       586
+
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: confusion matrix:
+01/29/2018 20:20:46 [INFO] exp_shallowmodel: 
+[[  0   4  12   0]
+ [  0 129  19  21]
+ [  0  21 240  10]
+ [  0  25  35  70]]
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:164: UserWarning: Numerical issues were encountered when centering the data and might not be solved. Dataset may contain too large values. You may need to prescale your features.
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:169: RuntimeWarning: invalid value encountered in subtract
+  Xr -= mean_1
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/data.py:181: UserWarning: Numerical issues were encountered when scaling the data and might not be solved. The standard deviation of the data is probably very close to 0. 
+  warnings.warn("Numerical issues were encountered "
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+Traceback (most recent call last):
+  File "/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/ihome/pbrusilosky/rum20/y_classify/dialogue/classify/task_runner.py", line 220, in <module>
+    worker(q, data_dict, opt)
+  File "/ihome/pbrusilosky/rum20/y_classify/dialogue/classify/task_runner.py", line 183, in worker
+    result = exp.run_cross_validation_with_continuous_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep, opt.k_component_for_pca)
+  File "/ihome/pbrusilosky/rum20/y_classify/dialogue/classify/exp_shallowmodel.py", line 1307, in run_cross_validation_with_continuous_feature_selection
+    chi2_stats, pvals        = chi2(X_discrete, Y)
+  File "/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/feature_selection/univariate_selection.py", line 213, in chi2
+    X = check_array(X, accept_sparse='csr')
+  File "/ihome/pbrusilosky/rum20/packages/anaconda3/lib/python3.6/site-packages/sklearn/utils/validation.py", line 470, in check_array
+    context))
+ValueError: Found array with 0 feature(s) (shape=(5725, 0)) while a minimum of 1 is required.
+srun: error: smp-n4: task 0: Exited with exit code 1
