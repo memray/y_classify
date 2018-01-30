@@ -316,9 +316,22 @@ class ShallowExperimenter():
         else:
             data_for_output = [('test', X_test, Y_test)]
 
+        # clf = None
         for valid_or_test, X, Y in data_for_output:
             t0 = time()
             pred = clf.predict(X)
+
+            '''
+            baseline, predict the majority label
+            '''
+            # majorarity_label = sorted(Counter(X).items(), key=lambda x:x[1])[::-1][0][0]
+            # pred = [majorarity_label] * len(Y)
+
+            '''
+            baseline, predict a uniform random number
+            '''
+            # pred = np.random.random_integers(low=0, high=3, size=(len(Y)))
+
             test_time = time() - t0
             self.logger.info("test time:  %0.3fs" % test_time)
             result = self.classification_report(Y, pred, model_name, valid_or_test, clf)
@@ -425,8 +438,8 @@ class ShallowExperimenter():
 
         global X_train, Y_train, X_test, Y_test
         for r_id, (train_id, test_id) in enumerate(zip(train_ids, test_ids)):
-            # if r_id > 1:
-            #     break
+            if r_id > 0:
+                break
 
             self.config['test_round'] = r_id
 
@@ -1302,14 +1315,18 @@ class ShallowExperimenter():
         '''
         print_important_features
         '''
-
-        X_discrete               = copy.deepcopy(X_original)[:,discrete_feature_indices]
-        chi2_stats, pvals        = chi2(X_discrete, Y)
-        chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
-        sorted_selectable_idx    = np.argsort(chi2_stats)[::-1]
-        selected_idx             = sorted(sorted_selectable_idx[:num_discrete_feature])
-        selected_chi2_stats      = chi2_stats[selected_idx]
-        selected_pvals           = pvals[selected_idx]
+        if len(discrete_feature_indices) > 0:
+            X_discrete               = copy.deepcopy(X_original)[:,discrete_feature_indices]
+            chi2_stats, pvals        = chi2(X_discrete, Y)
+            chi2_stats[np.where(np.isnan(chi2_stats))] = 0.0
+            sorted_selectable_idx    = np.argsort(chi2_stats)[::-1]
+            selected_idx             = sorted(sorted_selectable_idx[:num_discrete_feature])
+            selected_chi2_stats      = chi2_stats[selected_idx]
+            selected_pvals           = pvals[selected_idx]
+        else:
+            selected_idx = []
+            selected_chi2_stats = []
+            selected_pvals = []
 
         selectable_feature_indices      = np.asarray(discrete_feature_indices)
         selectable_feature_names        = np.asarray(discrete_feature_names)

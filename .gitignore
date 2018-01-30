@@ -129,3 +129,16 @@ output/bad(c=2.0)/feature_selection/no_regularization/[8+1.3.4]/
 output/feature_comparison/context=all.similarity=true/20180122-213235.cross_validation.context=all.feature=9-[2+1.3.4].similarity=true/family.test.pkl
 /output/feature_comparison/context=all.similarity=true/20180123-220214.cross_validation.context=all.feature=0-all.similarity=true/family.test.pkl
 /output/feature_comparison/context=all.similarity=true/20180123-220214.cross_validation.context=all.feature=0-all.similarity=true/ghome.test.pkl
+output/20180130-121127.continuous_feature_selection.pca_component=-1.feature_number=-1.context=next.feature=5-lda.similarity=true/
+output/20180130-122807.continuous_feature_selection.pca_component=-1.feature_number=-1.context=next.feature=5-lda.similarity=true/
+output/20180130-123217.continuous_feature_selection.pca_component=-1.feature_number=-1.context=next.feature=5-lda.similarity=true/
+output/feature_comparison/context=all.similarity=true/20180129-202138.cross_validation.context=all.feature=15-[5+1.2.3.4].similarity=true/family.test.pkl
+output/feature_comparison/context=all.similarity=true/20180129-202138.cross_validation.context=all.feature=16-[6+1.2.3.4].similarity=true/family.test.pkl
+output/feature_comparison/context=all.similarity=true/20180129-202138.cross_validation.context=all.feature=17-[7+1.2.3.4].similarity=true/family.test.pkl
+output/feature_comparison/context=all.similarity=true/20180129-202138.cross_validation.context=all.feature=18-[8+1.2.3.4].similarity=true/family.test.pkl
+output/feature_comparison/context=all.similarity=true/20180129-202138.cross_validation.context=all.feature=18-[8+1.2.3.4].similarity=true/ghome.test.pkl
+output/feature_comparison/context=all/20180129-202039.cross_validation.context=all.feature=18-[8+1.2.3.4].similarity=false/family.test.pkl
+output/feature_comparison/context=all/20180129-202039.cross_validation.context=all.feature=18-[8+1.2.3.4].similarity=false/ghome.test.pkl
+output/feature_comparison/context=all/20180129-202041.cross_validation.context=all.feature=15-[5+1.2.3.4].similarity=false/family.test.pkl
+output/feature_comparison/context=all/20180129-202041.cross_validation.context=all.feature=16-[6+1.2.3.4].similarity=false/family.test.pkl
+output/feature_comparison/context=all/20180129-202041.cross_validation.context=all.feature=17-[7+1.2.3.4].similarity=false/family.test.pkl
