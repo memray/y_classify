@@ -1519,3 +1519,64 @@ class Feature_Extractor():
         self.config['X_raw']           = X_raw
         self.config['Y']               = Y
         return X_raw, Y, le
+
+def print_printable_features(utterance_range, x_raw_feature):
+    logger.info('\nExtracted features:')
+
+    for utterance_type in utterance_range:
+        logger.info('*' * 20)
+        logger.info(utterance_type)
+        # print phrase features
+        key = 'noun_phrases__%s' % utterance_type
+        logger.info('\tnoun_phrases')
+        for k, v in x_raw_feature[key]:
+            logger.info('\t\t%s:\t%s' % (k, v))
+
+        # print entity features
+        key = 'parsed_results__%s' % utterance_type
+        logger.info('\tentity')
+        parse_record = x_raw_feature[key]
+        if len(parse_record) > 0:
+            for ner in np.concatenate([r['entitymentions'] for r in parse_record]):
+                ner['text'] = ner['text'].strip().lower()
+                if ner['text'].lower() == '\\' or len(ner['text']) == 1 or ner['ner'] == 'NUMBER':
+                    continue
+                    logger.info('\t\t' + ner['ner'] + ' : ' + ner['text'])
+
+        # print syntactic features
+        logger.info('\tsyntactic')
+        for sent in parse_record:
+            # 7.1 root_word: the word that at the root of parse tree (shot).
+            # for dep in sent['deps_basic']:
+            for dep in sent['basicDependencies']:
+                if dep['dep'].lower() == 'root':
+                    root_index = dep['dependent']
+                    dep_word = stemmer.stem(dep['dependentGloss'].lower())
+                    logger.info('\t\troot_word: %s' % (dep_word))
+
+            # 7.2 subj_word: the topmost subjects
+            for dep in sent['basicDependencies']:
+                if dep['dep'].lower().endswith('subj') and dep['governor'] == root_index:
+                    dep_word = stemmer.stem(dep['dependentGloss'].lower())
+                    logger.info('\t\tsubj_word: %s' % (dep_word))
+
+            # 7.3 obj_word: the topmost object
+            for dep in sent['basicDependencies']:
+                if dep['dep'].lower().endswith('obj') and dep['governor'] == root_index:
+                    dep_word = stemmer.stem(dep['dependentGloss'].lower())
+                    logger.info('\t\tobj_word: %s' % (dep_word))
+
+        # for f_name in x_raw_feature.dtype.names:
+        #     if f_name == 'x_raw' or f_name.find('last') > 0 or (
+        #         not f_name.startswith('parsed') and not f_name.startswith('noun')):
+        #         continue
+        #     print(f_name)
+        #
+        #     if f_name.startswith('parsed'):
+        #         items = x_raw_feature[f_name][0].items()
+        #     else:
+        #         items = x_raw_feature[f_name]
+        #
+        #     for k, v in items:
+        #         print('\t%s:\t%s' % (k, v))
+        #

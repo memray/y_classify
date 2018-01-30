@@ -43,7 +43,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.extmath import density
 from sklearn import metrics, preprocessing
 
-from dialogue.classify.feature_extractor import ItemSelector
+from dialogue.classify.feature_extractor import ItemSelector, print_printable_features
 from dialogue.data import data_loader
 
 __author__ = "Rui Meng"
@@ -61,6 +61,7 @@ op.add_option("--top10",
               help="Print ten most discriminative terms per class"
                    " for every classifier.")
 (opts, args) = op.parse_args([])
+
 
 class ShallowExperimenter():
     def __init__(self, config):
@@ -784,9 +785,97 @@ class ShallowExperimenter():
         return avg_results
 
 
-    def run_cross_validation_bad_case(self, X, Y):
-        X = np.nan_to_num(X.todense())
+    def run_cross_validation_bad_case(self):
+        '''
+        Compare the prediction and ground-truth, find the bad cases and print their features as well
+        :return:
+        '''
+        feature_names   = self.config['feature_names']
+        label_encoder   = self.config['label_encoder']
+        X_raw           = self.config['X_raw']
+        X_raw_feature   = self.config['X_raw_feature']
+        X               = self.config['X']
+        Y               = self.config['Y']
 
+        exp_path = 'output/feature_selection/continuous/15-[5+1.2.3.4]/20180123-220214.continuous_feature_selection.pca_component=5.feature_number=8.context=next.feature=15-[5+1.2.3.4].similarity=true/'
+        self.logger.info(os.path.abspath(exp_path))
+        pred_file = open(exp_path + self.config['data_name'] + '.test.pred.txt', 'r')
+        truth_file = open(exp_path + self.config['data_name'] + '.test.truth.txt', 'r')
+
+        print('*' * 50)
+        print(self.config['data_name'])
+        print('*' * 50)
+        labels   = self.config['label_encoder'].classes_
+
+        total_counter = 0
+        detail_counter = {}
+
+        # features = extractor.load_printable_features()
+        csv_file = open(self.config['experiment_path']+ '/' + self.config['data_name'] + '.bad_case.csv', 'w')
+        csv_file.write('data_id,session_id,user_id,time,direction,msg_text,ground-truth,prediction,annotion,note\n')
+
+        for did, (y_preds, y_test) in enumerate(zip(pred_file.readlines(), truth_file.readlines())):
+            # print('%s #%d' % (self.config['data_name'], did))
+            x               = X[did]
+            x_raw           = X_raw[did]
+            x_raw_feature   = X_raw_feature[did]
+            y               = Y[did]
+            assert y == int(y_test)
+            y_preds         = [labels[int(p.strip())] for p in y_preds.split(',')]
+            y_test          = labels[int(y_test.strip())]
+
+
+            num_wrong       = sum([pred != y_test for pred in y_preds])
+            if num_wrong != 5:
+                continue
+
+            total_counter += 1
+            detail_counter['%s -> %s' % (y_preds, y_test)] = detail_counter.get('%s -> %s' % (y_preds, y_test), 0) + 1
+
+            print('pred: %s' % y_preds)
+            print('truth: %s' % y_test)
+            print('num_wrong: %d' % num_wrong)
+
+            dialogue    = x_raw['dialogue']
+            utterance   = x_raw['utterance']
+
+            csv_file.write('%d, %s, , , , , %s, "%s", , \n' % (did, dialogue.session_id, y_test, y_preds))
+
+            self.logger.info('*' * 50)
+            self.logger.info(' ' * 10 + 'index=%d, true label=%s, predicted=%s' % (did, y_test, y_preds))
+            self.logger.info('*' * 50)
+            for u_id, u in enumerate(dialogue):
+                if x_raw['utterance'] != u:
+                    self.logger.info('\t [%s][%s] %s' % (u.time, u.direction, u.msg_text))
+                    csv_file.write('%d, %s, %s, %s, %s, "%s", , , , \n' % (did, dialogue.session_id, u.userid, u.time, u.direction, u.msg_text))
+                else:
+                    self.logger.info('')
+                    self.logger.info('\t [%s][%s] %s' % (u.time, u.direction, u.msg_text))
+                    self.logger.info('')
+                    csv_file.write('%d, %s, %s, %s, %s, "%s", %s, "%s", , \n' % (did, dialogue.session_id, u.userid, u.time, u.direction, u.msg_text, y_test, y_preds))
+
+            csv_file.write('\n')
+
+            print_printable_features(self.config['utterance_range'], x_raw_feature)
+
+            self.logger.info('-' * 50)
+
+            self.logger.info('Find %d data points in %s that classifier fails to predict' % (total_counter, self.config['data_name']))
+        sorted_counter = sorted(detail_counter.items(), key=lambda x:x[1], reverse=True)
+        for k,v in sorted_counter:
+            self.logger.info('\t%s : %d' % (k, v))
+
+        csv_file.close()
+
+        return []
+
+    def run_cross_validation_bad_case_deprecated(self, X, Y):
+        '''
+        Old version, actually it only outputs the predicted labels
+        :param X:
+        :param Y:
+        :return:
+        '''
         train_ids, test_ids = self.load_cv_index(X, Y)
         cv_results  = []
         y_preds     = []

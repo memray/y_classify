@@ -171,6 +171,7 @@ def worker(q, data_dict, opt):
                 # print_feature_stats(X, X_new, retained_feature_indices, retained_feature_names, exp, config)
             else:
                 X = X_all
+            config['X']                = X
 
             if opt.experiment_mode == 'cross_validation' or opt.experiment_mode == 'keep_one_only' or opt.experiment_mode == 'leave_one_out':
                 result = exp.run_cross_validation(X, Y)
@@ -180,6 +181,8 @@ def worker(q, data_dict, opt):
                 result = exp.run_cross_validation_with_discrete_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep)
             elif opt.experiment_mode == 'continuous_feature_selection':
                 result = exp.run_cross_validation_with_continuous_feature_selection(X, Y, retained_feature_indices, retained_feature_names, opt.k_feature_to_keep, opt.k_component_for_pca)
+            elif opt.experiment_mode == 'bad_case':
+                result = exp.run_cross_validation_bad_case()
             else:
                 assert "experiment type invalid"
 
