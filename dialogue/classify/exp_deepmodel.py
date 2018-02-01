@@ -20,6 +20,8 @@ from dialogue.deep.rnn.model import LSTM
 from dialogue.deep.skipthought.skipthoughts import BiSkipClassifier
 
 class DeepExperimenter(ShallowExperimenter):
+    word_vectors = None
+
     def init_model(self, vocab_dict, model_type):
         if model_type == 'cnn':
             params = self.config['cnn_setting']
@@ -28,7 +30,11 @@ class DeepExperimenter(ShallowExperimenter):
             if params["model"] != "rand":
                 # load word2vec
                 print("loading word2vec...")
-                word_vectors = gensim.models.KeyedVectors.load_word2vec_format(self.config['w2v_path'], binary=True)
+
+                if self.word_vectors == None:
+                    self.word_vectors = gensim.models.KeyedVectors.load_word2vec_format(self.config['w2v_path'], binary=True)
+
+                word_vectors = self.word_vectors
 
                 wv_matrix = []
 
