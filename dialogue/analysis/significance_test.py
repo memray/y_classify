@@ -53,9 +53,9 @@ def cli(sheet_names, inputfile):
     else:
         getsheets(inputfile)
 
-if __name__ == '__main__':
-    xlsx_folder_path        = '../../dataset/result/feature_comparison/'
-    base_xlsx_name        = 'context=next.similarity=false.xlsx'
+
+def compare_to_next_without_similairity(xlsx_folder_path):
+    base_xlsx_name   = 'context=next.similarity=true.xlsx'
     base_xlsx_path   = os.path.join(xlsx_folder_path, base_xlsx_name)
     base_xlsx        = pd.ExcelFile(base_xlsx_path)
 
@@ -84,7 +84,48 @@ if __name__ == '__main__':
             fscore2 = sheet2.iloc[:,8].as_matrix()
 
             # t, p_value = scipy.stats.wilcoxon(fscore1, fscore2)
-            t, p_value = scipy.stats.ttest_ind(fscore1, fscore2)
+            t, p_value = scipy.stats.ttest_rel(fscore1, fscore2)
 
             print('\tsheet %s, \t t=%f, \t p_value=%f' % (sheet_name, t, p_value))
             pass
+
+
+def compare_with_and_without_similarity(xlsx_folder_path):
+    for context_name in ['next', 'current', 'last', 'all']:
+        without_xlsx_name   = 'context=%s.similarity=false.xlsx' % context_name
+        without_xlsx_path   = os.path.join(xlsx_folder_path, without_xlsx_name)
+        without_xlsx        = pd.ExcelFile(without_xlsx_path)
+
+        with_xlsx_name      = 'context=%s.similarity=true.xlsx' % context_name
+        with_xlsx_path      = os.path.join(xlsx_folder_path, with_xlsx_name)
+        with_xlsx         = pd.ExcelFile(with_xlsx_path)
+
+        # print(os.path.join(xlsx_folder_path, xlsx_name))
+        print('%s vs %s' % (without_xlsx_name, with_xlsx_name))
+
+        for sheet_id, sheet_name in enumerate(without_xlsx.sheet_names):
+            print(sheet_name)
+
+            if sheet_name == 'Summary':
+                continue
+
+            sheet1  = without_xlsx.parse(sheetname=sheet_id)
+            sheet2  = with_xlsx.parse(sheetname=sheet_id)
+
+            # 8th column is f1_score
+            fscore1 = sheet1.iloc[:,8].as_matrix()
+            fscore2 = sheet2.iloc[:,8].as_matrix()
+
+            # t, p_value = scipy.stats.wilcoxon(fscore1, fscore2)
+            # t, p_value = scipy.stats.ttest_ind(fscore1, fscore2) # unpaired
+            t, p_value = scipy.stats.ttest_rel(fscore1, fscore2) # paired
+
+            print('\tsheet %s, \t t=%f, \t p_value=%f' % (sheet_name, t, p_value))
+            pass
+
+
+
+if __name__ == '__main__':
+    xlsx_folder_path        = '../../dataset/result/feature_comparison/'
+    # compare_to_next_without_similairity(xlsx_folder_path)
+    compare_with_and_without_similarity(xlsx_folder_path)

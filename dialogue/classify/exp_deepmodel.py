@@ -153,7 +153,7 @@ class DeepExperimenter(ShallowExperimenter):
         data_dict = {}
 
         if self.config.param['context_set'] == 'current':
-            context_range = ['current_user_utterance']
+            context_range = ['current_user_utterance', 'next_system_utterance']
         if self.config.param['context_set'] == 'next':
             context_range = ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
         if self.config.param['context_set'] == 'last':

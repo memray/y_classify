@@ -3,10 +3,10 @@
 export EXP_MODE='cross_validation'
 
 # 0.all, [1-8] each feature set, [9-13] is combined features([1,3,4] + one of [2,5,6,7,8]), [14] is [1,3,4], [15-18] is combined features([1,2,3,4] + one of [5,6,7,8])
-START=15
+START=0
 END=18
 
-for ((CONTEXT=0;CONTEXT<=3;CONTEXT++));
+for ((CONTEXT=1;CONTEXT<=1;CONTEXT++));
 do
     export CONTEXT
     for ((FEATURE_ID=START;FEATURE_ID<=END;FEATURE_ID++)); do
@@ -18,7 +18,7 @@ done
 
 #export CONTEXT=0
 
-for ((CONTEXT=0;CONTEXT<=3;CONTEXT++));
+for ((CONTEXT=1;CONTEXT<=1;CONTEXT++));
 do
     export CONTEXT
     for ((FEATURE_ID=START;FEATURE_ID<=END;FEATURE_ID++));

@@ -98,7 +98,7 @@ def load_config():
     # context window
     param['utterance_names'] = ['last_user_utterance', 'last_system_utterance','current_user_utterance', 'next_system_utterance', 'next_user_utterance']
     if param['context_set']     == 'current':
-        param['utterance_range'] = ['current_user_utterance']
+        param['utterance_range'] = ['current_user_utterance', 'next_system_utterance']
     elif param['context_set']   == 'next':
         param['utterance_range'] = ['current_user_utterance', 'next_system_utterance','next_user_utterance']
     elif param['context_set']   == 'last':
@@ -303,10 +303,10 @@ def load_batch_config(key_params):
     # selected_context_id: 0-3
     param['context_set']     = ['next', 'current', 'last', 'all'][param['selected_context_id']]
 
-    # context window
+    # context window (setting for deep models is located in exp_deepmodel line 155)
     param['utterance_names'] = ['last_user_utterance', 'last_system_utterance','current_user_utterance', 'next_system_utterance', 'next_user_utterance']
     if param['context_set']     == 'current':
-        param['utterance_range'] = ['current_user_utterance']
+        param['utterance_range'] = ['current_user_utterance', 'next_system_utterance']
     elif param['context_set']   == 'next':
         param['utterance_range'] = ['current_user_utterance', 'next_system_utterance','next_user_utterance']
     elif param['context_set']   == 'last':
