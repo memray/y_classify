@@ -462,7 +462,7 @@ def load_batch_config(key_params):
 
     # CNN setting
     param['cnn_setting'] = {
-        "model"             : 'multichannel', # available models: rand, static, non-static, multichannel
+        "model"             : 'rand', # available models: rand, static, non-static, multichannel
         "early_stopping"    : True,
         "word_dim"          : 300,
         "filters"           : [3, 4, 5],

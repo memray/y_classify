@@ -153,6 +153,7 @@ class DeepExperimenter(ShallowExperimenter):
         data_dict = {}
 
         if self.config.param['context_set'] == 'current':
+            # context_range = ['current_user_utterance']
             context_range = ['current_user_utterance', 'next_system_utterance']
         if self.config.param['context_set'] == 'next':
             context_range = ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
@@ -162,7 +163,8 @@ class DeepExperimenter(ShallowExperimenter):
             context_range = ['last_user_utterance', 'last_system_utterance', 'current_user_utterance', 'next_system_utterance', 'next_user_utterance']
 
         X_texts     = ItemSelector(keys=context_range).transform(X_raw_feature)
-        X_texts     = list(zip(*X_texts))
+        # X_texts     = list(zip(*X_texts))
+        X_texts     = list(zip([*X_texts]))
 
         vocab_counter = {}
 
