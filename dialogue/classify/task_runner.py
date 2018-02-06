@@ -86,9 +86,9 @@ def preload_X_Y(opt):
 def filter_X_by_contexts_features(X, config):
     X = np.nan_to_num(X)
 
-    # determine the context range
+    # determine the context range, new current=[current_user, next_system]
     if config.param['context_set'] == 'current':
-        excluded_context_keywords = ['next', 'last']
+        excluded_context_keywords = ['next_user', 'last']
     if config.param['context_set'] == 'next':
         excluded_context_keywords = ['last']
     if config.param['context_set'] == 'last':
