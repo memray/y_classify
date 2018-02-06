@@ -1563,8 +1563,8 @@ class ShallowExperimenter():
         '''
         with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.json'), 'w') as json_file:
             json.dump(results, json_file)
-        with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.pkl'), 'wb') as pkl_file:
-            pickle.dump(results, pkl_file)
+        # with open(os.path.join(self.config.param['experiment_path'], self.config.param['data_name']+'.test.pkl'), 'wb') as pkl_file:
+        #     pickle.dump(results, pkl_file)
 
     def export_averaged_summary(self, results, csv_path):
         '''
