@@ -168,7 +168,7 @@ def worker(q, data_dict, opt):
 
             if not opt.is_deep_model:
                 X, retained_feature_indices, retained_feature_names  = filter_X_by_contexts_features(X_all, config)
-                # print_feature_stats(X, X_new, retained_feature_indices, retained_feature_names, exp, config)
+                print_feature_stats(X_all, X, retained_feature_indices, retained_feature_names, exp, config)
             else:
                 X = X_all
             config['X']                = X

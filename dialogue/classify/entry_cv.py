@@ -39,6 +39,7 @@ if __name__ == '__main__':
         X_raw, Y, _                = extractor.split_to_instances(annotated_sessions)
         X                       = extractor.extract()
 
+        """
         '''
         the 1st version is scaled to zero-mean and uni-variance
         now it's scaled with MinMaxScaler to make feature values non-negative
@@ -70,4 +71,5 @@ if __name__ == '__main__':
             # result = result[np.asarray(result).T[4].argmax()]
             # best_results[data_name] = result
 
+        """
     # exp.export_summary(best_results.values(), os.path.join(config.param['experiment_path'], 'best_of_each_dataset.csv'))

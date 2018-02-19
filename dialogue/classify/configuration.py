@@ -63,7 +63,6 @@ def load_config():
     # two key feature settings
     param['context_set']     = ['next', 'current', 'last', 'all'][0]
 
-    """
     selected_feature_set_id  = 12
     '''
     Feature Combination:
@@ -93,7 +92,6 @@ def load_config():
     '''
     param['feature_set_number']  = [['1','2','3','4','5','6','7','8','9','10','11'], ['1','2','3'], ['4'], ['5','6'], ['7'], ['8'], ['9'], ['10'], ['11'], ['1','2','3','5','6','7', '4'], ['1','2','3','5','6','7', '8'], ['1','2','3','5','6','7', '9'], ['1','2','3','5','6','7', '10'], ['1','2','3','5','6','7', '11']][selected_feature_set_id]
     param['similarity_feature']  = False
-    """
 
     # context window
     param['utterance_names'] = ['last_user_utterance', 'last_system_utterance','current_user_utterance', 'next_system_utterance', 'next_user_utterance']

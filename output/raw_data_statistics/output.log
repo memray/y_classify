@@ -1,0 +1,114 @@
+02/12/2018 23:10:33 [INFO] configuration: seed  :   154316847
+02/12/2018 23:10:33 [INFO] configuration: root_path  :   /Users/memray/Project/yahoo/y_classify
+02/12/2018 23:10:33 [INFO] configuration: task_name  :   utterance_type
+02/12/2018 23:10:33 [INFO] configuration: timemark  :   20180212-231033
+02/12/2018 23:10:33 [INFO] configuration: context_set  :   next
+02/12/2018 23:10:33 [INFO] configuration: feature_set  :   12-[1.3.6]
+02/12/2018 23:10:33 [INFO] configuration: feature_set_number  :   ['1', '2', '3', '5', '6', '7', '10']
+02/12/2018 23:10:33 [INFO] configuration: similarity_feature  :   False
+02/12/2018 23:10:33 [INFO] configuration: utterance_names  :   ['last_user_utterance', 'last_system_utterance', 'current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+02/12/2018 23:10:33 [INFO] configuration: utterance_range  :   ['current_user_utterance', 'next_system_utterance', 'next_user_utterance']
+02/12/2018 23:10:33 [INFO] configuration: experiment_name  :   20180212-231033.context=next.feature=12-[1.3.6].similarity=false
+02/12/2018 23:10:33 [INFO] configuration: experiment_path  :   /Users/memray/Project/yahoo/y_classify/output/20180212-231033.context=next.feature=12-[1.3.6].similarity=false
+02/12/2018 23:10:33 [INFO] configuration: log_path  :   /Users/memray/Project/yahoo/y_classify/output/20180212-231033.context=next.feature=12-[1.3.6].similarity=false/output.log
+02/12/2018 23:10:33 [INFO] configuration: valid_type  :   {'F', 'C', 'A', 'R'}
+02/12/2018 23:10:33 [INFO] configuration: data_name  :   
+02/12/2018 23:10:33 [INFO] configuration: data_names  :   ['dstc2', 'dstc3', 'family', 'ghome']
+02/12/2018 23:10:33 [INFO] configuration: raw_feature_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/%s.raw_feature.pkl
+02/12/2018 23:10:33 [INFO] configuration: extracted_feature_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/%s.extracted_feature.pkl
+02/12/2018 23:10:33 [INFO] configuration: pipeline_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/%s.pipeline.pkl
+02/12/2018 23:10:33 [INFO] configuration: metrics  :   ['accuracy', 'precision', 'recall', 'f1_score', 'training_time', 'test_time']
+02/12/2018 23:10:33 [INFO] configuration: do_cross_validation  :   True
+02/12/2018 23:10:33 [INFO] configuration: #division  :   5
+02/12/2018 23:10:33 [INFO] configuration: #cross_validation  :   10
+02/12/2018 23:10:33 [INFO] configuration: cv_index_cache_path  :   
+02/12/2018 23:10:33 [INFO] configuration: action_words  :   {'list', 'start', 'north', 'remov', 'delet', 'else', 'address', 'south', 'share', 'music', 'help', 'shuffle', 'items', 'reminders', 'phone', 'snooze', 'remove', 'weather', 'snooz', 'any', 'discard', 'moderate', 'els', 'remind', 'food', 'price', 'reminder', 'cheap', 'song', 'centre', 'volum', 'turn', 'next', 'timer', 'stop', 'alarm', 'findcare', 'expensive', 'light', 'room', 'volume', 'moder', 'post', 'add', 'watch', 'ani', 'expens', 'delete', 'reminds', 'temperature', 'cast', 'tell', 'findcar', 'matter', 'skip', 'temperatur', 'centr', 'clear', 'area', 'member', 'video', 'telephone', 'shuffl', 'time', 'telephon', 'part', 'play', 'item', 'show', 'number'}
+02/12/2018 23:10:33 [INFO] configuration: corenlp_jars  :   ('/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/*', '/Users/memray/Project/stanford/stanford-corenlp-full-3.8.0/stanford-english-kbp-corenlp-2017-06-09-models.jar')
+02/12/2018 23:10:33 [INFO] configuration: lda_topic_number  :   50
+02/12/2018 23:10:33 [INFO] configuration: lda_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.topic=50.lda.pkl
+02/12/2018 23:10:33 [INFO] configuration: gensim_corpus_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.corpus.pkl
+02/12/2018 23:10:33 [INFO] configuration: gensim_dict_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.dict
+02/12/2018 23:10:33 [INFO] configuration: w2v_path  :   /Users/memray/Data/glove/GoogleNews-vectors-negative300.bin
+02/12/2018 23:10:33 [INFO] configuration: w2v_vector_length  :   300
+02/12/2018 23:10:33 [INFO] configuration: d2v_vector_length  :   300
+02/12/2018 23:10:33 [INFO] configuration: d2v_window_size  :   5
+02/12/2018 23:10:33 [INFO] configuration: d2v_min_count  :   2
+02/12/2018 23:10:33 [INFO] configuration: d2v_model_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.model
+02/12/2018 23:10:33 [INFO] configuration: d2v_vector_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.doc2vec.dim=300.window=5.min_count=2.vector
+02/12/2018 23:10:33 [INFO] configuration: skipthought_model_path  :   /Users/memray/Data/skip-thought
+02/12/2018 23:10:33 [INFO] configuration: skipthought_data_path  :   /Users/memray/Project/yahoo/y_classify/dataset/feature/gensim/%s.skip-thought.biskip.vector
+02/12/2018 23:10:33 [INFO] entry_cv: **************************************************
+02/12/2018 23:10:33 [INFO] entry_cv: --------------------dstc2--------------------
+02/12/2018 23:10:33 [INFO] entry_cv: **************************************************
+02/12/2018 23:10:33 [INFO] data_loader: Loading DSTC2 cache complete
+02/12/2018 23:10:33 [INFO] data_loader: Stats of raw data
+02/12/2018 23:10:33 [INFO] data_loader: session_count = 2118
+02/12/2018 23:10:33 [INFO] data_loader: utterance_count = 31222
+02/12/2018 23:10:33 [INFO] data_loader: user_utterance_count = 15611
+02/12/2018 23:10:33 [INFO] data_loader: system_utterance_count = 15611
+02/12/2018 23:10:33 [INFO] data_loader: average_session_length = 14.74127
+02/12/2018 23:10:33 [INFO] data_loader: **************************************************
+02/12/2018 23:10:33 [INFO] data_loader: Stats of annotated data
+02/12/2018 23:10:34 [INFO] data_loader: session_count = 1000
+02/12/2018 23:10:34 [INFO] data_loader: utterance_count = 14662
+02/12/2018 23:10:34 [INFO] data_loader: user_utterance_count = 7331
+02/12/2018 23:10:34 [INFO] data_loader: system_utterance_count = 7331
+02/12/2018 23:10:34 [INFO] data_loader: utterance_avg_length = 8.192266
+02/12/2018 23:10:34 [INFO] data_loader: user_utterance_avg_length = 3.864957
+02/12/2018 23:10:34 [INFO] data_loader: system_utterance_avg_length = 12.519574
+02/12/2018 23:10:39 [INFO] entry_cv: **************************************************
+02/12/2018 23:10:39 [INFO] entry_cv: --------------------dstc3--------------------
+02/12/2018 23:10:39 [INFO] entry_cv: **************************************************
+02/12/2018 23:10:39 [INFO] data_loader: Loading DSTC3 cache complete
+02/12/2018 23:10:39 [INFO] data_loader: Stats of raw data
+02/12/2018 23:10:39 [INFO] data_loader: session_count = 2264
+02/12/2018 23:10:39 [INFO] data_loader: utterance_count = 37430
+02/12/2018 23:10:39 [INFO] data_loader: user_utterance_count = 18715
+02/12/2018 23:10:39 [INFO] data_loader: system_utterance_count = 18715
+02/12/2018 23:10:39 [INFO] data_loader: average_session_length = 16.53269
+02/12/2018 23:10:39 [INFO] data_loader: **************************************************
+02/12/2018 23:10:39 [INFO] data_loader: Stats of annotated data
+02/12/2018 23:10:40 [INFO] data_loader: session_count = 1000
+02/12/2018 23:10:40 [INFO] data_loader: utterance_count = 16682
+02/12/2018 23:10:40 [INFO] data_loader: user_utterance_count = 8341
+02/12/2018 23:10:40 [INFO] data_loader: system_utterance_count = 8341
+02/12/2018 23:10:40 [INFO] data_loader: utterance_avg_length = 10.705791
+02/12/2018 23:10:40 [INFO] data_loader: user_utterance_avg_length = 4.001798
+02/12/2018 23:10:40 [INFO] data_loader: system_utterance_avg_length = 17.409783
+02/12/2018 23:10:51 [INFO] entry_cv: **************************************************
+02/12/2018 23:10:51 [INFO] entry_cv: --------------------family--------------------
+02/12/2018 23:10:51 [INFO] entry_cv: **************************************************
+02/12/2018 23:10:51 [INFO] data_loader: Family_Assistant : /Users/memray/Project/yahoo/y_classify/dataset/raw_datasets/Family_Assistant.20170306.interval=5min.session/part-v002-o000-r-00000
+02/12/2018 23:10:56 [INFO] data_loader: Stats of raw data
+02/12/2018 23:10:56 [INFO] data_loader: session_count = 11724
+02/12/2018 23:10:56 [INFO] data_loader: utterance_count = 144023
+02/12/2018 23:10:56 [INFO] data_loader: user_utterance_count = 59961
+02/12/2018 23:10:56 [INFO] data_loader: system_utterance_count = 84062
+02/12/2018 23:10:56 [INFO] data_loader: average_session_length = 12.28446
+02/12/2018 23:10:56 [INFO] data_loader: **************************************************
+02/12/2018 23:10:56 [INFO] data_loader: Stats of annotated data
+02/12/2018 23:10:56 [INFO] data_loader: session_count = 1000
+02/12/2018 23:10:56 [INFO] data_loader: utterance_count = 7569
+02/12/2018 23:10:56 [INFO] data_loader: user_utterance_count = 3783
+02/12/2018 23:10:56 [INFO] data_loader: system_utterance_count = 3786
+02/12/2018 23:10:56 [INFO] data_loader: utterance_avg_length = 14.016118
+02/12/2018 23:10:56 [INFO] data_loader: user_utterance_avg_length = 4.491673
+02/12/2018 23:10:56 [INFO] data_loader: system_utterance_avg_length = 23.551679
+02/12/2018 23:11:19 [INFO] entry_cv: **************************************************
+02/12/2018 23:11:19 [INFO] entry_cv: --------------------ghome--------------------
+02/12/2018 23:11:19 [INFO] entry_cv: **************************************************
+02/12/2018 23:11:21 [INFO] data_loader: Stats of raw data
+02/12/2018 23:11:21 [INFO] data_loader: session_count = 5943
+02/12/2018 23:11:21 [INFO] data_loader: utterance_count = 43109
+02/12/2018 23:11:21 [INFO] data_loader: user_utterance_count = 25390
+02/12/2018 23:11:21 [INFO] data_loader: system_utterance_count = 17719
+02/12/2018 23:11:21 [INFO] data_loader: average_session_length = 7.25374
+02/12/2018 23:11:21 [INFO] data_loader: **************************************************
+02/12/2018 23:11:21 [INFO] data_loader: Stats of annotated data
+02/12/2018 23:11:22 [INFO] data_loader: session_count = 1000
+02/12/2018 23:11:22 [INFO] data_loader: utterance_count = 16105
+02/12/2018 23:11:22 [INFO] data_loader: user_utterance_count = 9109
+02/12/2018 23:11:22 [INFO] data_loader: system_utterance_count = 6996
+02/12/2018 23:11:22 [INFO] data_loader: utterance_avg_length = 7.337411
+02/12/2018 23:11:22 [INFO] data_loader: user_utterance_avg_length = 4.174662
+02/12/2018 23:11:22 [INFO] data_loader: system_utterance_avg_length = 8.798112

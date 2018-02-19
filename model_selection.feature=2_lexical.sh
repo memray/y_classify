@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-export CONTEXT=0;
-export i=2;
-export CLASSIFIER="lr_svm_c=4";
+export EXP_MODE='cross_validation'
+export CONTEXT=3; # context=all
+export FEATURE_ID=2;
+export CLASSIFIER="svm_c=-4";
 echo "Context=$CONTEXT, Feature=$i";
-sbatch --export=CONTEXT=$CONTEXT,i=$i --job-name=context-$CONTEXT.feature-$i.run --output=slurm_log/classifier-$CLASSIFIER.context-$CONTEXT.feature-$i.out run_task.sbatch;
+
+sbatch --export=CONTEXT=$CONTEXT,FEATURE_ID=$FEATURE_ID,EXP_MODE=$EXP_MODE --job-name=classifier-$CLASSIFIER.$EXP_MODE.context-$CONTEXT.feature-$FEATURE_ID.similarity.run --output=slurm_log/classifier-$CLASSIFIER.$EXP_MODE.context-$CONTEXT.feature-$FEATURE_ID.similarity.run_task_log.out run_task.similarity.sbatch;

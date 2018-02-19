@@ -216,6 +216,11 @@ class DataLoader(object):
         return dialogue_dict.keys(), dialogue_dict.values()
 
     def stats(self):
+        ''''''
+        '''
+        Stats of raw data
+        '''
+        self.logger.info('Stats of raw data')
         session_count = len(self.session_list)
         user_utterance_count = sum([len([u for u in s if u.direction=='user_to_sb']) for s in self.session_list])
         system_utterance_count = sum([len([u for u in s if u.direction=='bot_to_sb']) for s in self.session_list])
@@ -231,12 +236,41 @@ class DataLoader(object):
         self.logger.info('average_session_length = %.5f' % (average_session_length))
 
         '''
-        stats of annotated data
+        Stats of annotated data
         '''
-        if not os.path.exists(os.path.join(self.config.param['experiment_path'], 'data.stats.csv')):
-            print_header = True
-        else:
-            print_header = False
+        self.logger.info('*' * 50)
+        self.logger.info('Stats of annotated data')
+        self.annoteted_list = [s for s in self.annoteted_list if s.session_id!='']
+
+        session_count = len(self.annoteted_list)
+
+        tokenized_utterance   = []
+        [[tokenized_utterance.append(u.msg_text.split()) for u in s] for s in self.annoteted_list]
+        tokenized_utterance   = [[w.strip('?:!.,;\'\"\\\/') for w in u if len(w.strip('?:!.,;\'\"\\\/')) > 0] for u in tokenized_utterance]
+
+        tokenized_user_utterance   = []
+        [[tokenized_user_utterance.append(u.msg_text.split()) for u in s if u.direction=='user_to_sb'] for s in self.annoteted_list]
+        tokenized_user_utterance   = [[w.strip('?:!.,;\'\"\\\/') for w in u if len(w.strip('?:!.,;\'\"\\\/')) > 0] for u in tokenized_user_utterance]
+
+        tokenized_system_utterance = []
+        [[tokenized_system_utterance.append(u.msg_text.split()) for u in s if u.direction=='bot_to_sb'] for s in self.annoteted_list]
+        tokenized_system_utterance   = [[w.strip('?:!.,;\'\"\\\/') for w in u if len(w.strip('?:!.,;\'\"\\\/')) > 0] for u in tokenized_system_utterance]
+
+        utterance_count         = sum([len([u for u in s]) for s in self.annoteted_list])
+        user_utterance_count    = sum([len([u for u in s if u.direction=='user_to_sb']) for s in self.annoteted_list])
+        system_utterance_count  = sum([len([u for u in s if u.direction=='bot_to_sb']) for s in self.annoteted_list])
+
+        utterance_avg_length    = float(sum([len(u) for u in tokenized_utterance])) / float(utterance_count)
+        user_utterance_avg_length    = float(sum([len(u) for u in tokenized_user_utterance])) / float(user_utterance_count)
+        system_utterance_avg_length  = float(sum([len(u) for u in tokenized_system_utterance])) / float(user_utterance_count)
+
+        self.logger.info('session_count = %d' % session_count)
+        self.logger.info('utterance_count = %d' % (user_utterance_count+system_utterance_count))
+        self.logger.info('user_utterance_count = %d' % user_utterance_count)
+        self.logger.info('system_utterance_count = %d' % system_utterance_count)
+        self.logger.info('utterance_avg_length = %f' % utterance_avg_length)
+        self.logger.info('user_utterance_avg_length = %f' % user_utterance_avg_length)
+        self.logger.info('system_utterance_avg_length = %f' % system_utterance_avg_length)
 
         types = list(['F', 'C', 'R', 'N', 'CC', 'A', 'Chitchat', 'G', 'O', 'Total'])
         type_set = list(['F', 'C', 'R', 'N', 'CC', 'A', 'Chitchat', 'G', 'O', 'Total'])
@@ -244,6 +278,16 @@ class DataLoader(object):
         counter = Counter(labels)
         counter['Total'] = len(labels)
         label_values    = [str(counter[l]) for l in types]
+
+        # append some summaries to the print-out
+        types = ['session_count', 'user_utterance_count', 'system_utterance_count', 'utterance_avg_length', 'user_utterance_avg_length', 'system_utterance_avg_length'] + types
+        label_values = [session_count, user_utterance_count, system_utterance_count, utterance_avg_length, user_utterance_avg_length, system_utterance_avg_length] + label_values
+        label_values = [str(v) for v in label_values]
+
+        if not os.path.exists(os.path.join(self.config.param['experiment_path'], 'data.stats.csv')):
+            print_header = True
+        else:
+            print_header = False
 
         with open(os.path.join(self.config.param['experiment_path'], 'data.stats.csv'), 'a') as csv_file:
 

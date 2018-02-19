@@ -54,8 +54,7 @@ def cli(sheet_names, inputfile):
         getsheets(inputfile)
 
 
-def compare_to_next_without_similairity(xlsx_folder_path):
-    base_xlsx_name   = 'context=next.similarity=true.xlsx'
+def compare_to_a_base_model(xlsx_folder_path, base_xlsx_name):
     base_xlsx_path   = os.path.join(xlsx_folder_path, base_xlsx_name)
     base_xlsx        = pd.ExcelFile(base_xlsx_path)
 
@@ -127,5 +126,7 @@ def compare_with_and_without_similarity(xlsx_folder_path):
 
 if __name__ == '__main__':
     xlsx_folder_path        = '../../dataset/result/feature_comparison/'
-    # compare_to_next_without_similairity(xlsx_folder_path)
-    compare_with_and_without_similarity(xlsx_folder_path)
+    # base_xlsx_name   = 'context=next.similarity=false.xlsx'
+    base_xlsx_name   = 'context=current_user.similarity=false.xlsx'
+    compare_to_a_base_model(xlsx_folder_path, base_xlsx_name)
+    # compare_with_and_without_similarity(xlsx_folder_path)
