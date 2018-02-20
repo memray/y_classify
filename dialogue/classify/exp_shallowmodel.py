@@ -473,15 +473,15 @@ class ShallowExperimenter():
 
         results = []
 
+        for C in [2**x for x in [-1]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
+            self.logger.info('=' * 80)
+            self.logger.info("LinearSVC.pen=l1, C=%f" % C)
+            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
         '''
-        for C in [2**x for x in [0]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
             self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
             results.append(self.benchmark('LR.pen=l1.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l1', C=C)))
 
-            self.logger.info('=' * 80)
-            self.logger.info("LinearSVC.pen=l1, C=%f" % C)
-            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
 
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l2, C=%f" % C)
@@ -523,6 +523,8 @@ class ShallowExperimenter():
         results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
         """
 
+
+        '''
         for clf, name in [
                 # (RidgeClassifier(tol=1e-2, solver="lsqr"), "Ridge Classifier"),
                 # (Perceptron(n_iter=50), "Perceptron"),
@@ -534,15 +536,13 @@ class ShallowExperimenter():
                 # (RandomForestClassifier(n_estimators=500, n_jobs=-1), "Random forest.#tree=500")
                 # (RandomForestClassifier(n_estimators=64, n_jobs=-1), "Random forest.#tree=64"),
                 # (RandomForestClassifier(n_estimators=128, n_jobs=-1), "Random forest.#tree=128"),
-                # (RandomForestClassifier(n_estimators=256, n_jobs=-1), "Random forest.#tree=256"),
-                # (RandomForestClassifier(n_estimators=512, n_jobs=-1), "Random forest.#tree=512"),
+                (RandomForestClassifier(n_estimators=256, n_jobs=-1), "Random forest.#tree=256"),
+                (RandomForestClassifier(n_estimators=512, n_jobs=-1), "Random forest.#tree=512"),
                 (RandomForestClassifier(n_estimators=1024, n_jobs=-1), "Random forest.#tree=1024")
         ]:
             self.logger.info('=' * 80)
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
-
-        '''
         for C in [2**x for x in [-4, 0, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%f" % C)
