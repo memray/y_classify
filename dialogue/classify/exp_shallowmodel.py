@@ -535,15 +535,14 @@ class ShallowExperimenter():
                 # (RandomForestClassifier(n_estimators=64, n_jobs=-1), "Random forest.#tree=64"),
                 # (RandomForestClassifier(n_estimators=128, n_jobs=-1), "Random forest.#tree=128"),
                 (RandomForestClassifier(n_estimators=256, n_jobs=-1), "Random forest.#tree=256"),
-                (RandomForestClassifier(n_estimators=512, n_jobs=-1), "Random forest.#tree=512"),
-                (RandomForestClassifier(n_estimators=1024, n_jobs=-1), "Random forest.#tree=1024")
+                # (RandomForestClassifier(n_estimators=512, n_jobs=-1), "Random forest.#tree=512"),
+                # (RandomForestClassifier(n_estimators=1024, n_jobs=-1), "Random forest.#tree=1024")
         ]:
             self.logger.info('=' * 80)
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
-
-
         '''
+
         for C in [2**x for x in [-4, 0, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%f" % C)
@@ -1746,7 +1745,7 @@ class ShallowExperimenter():
         result['y_test'] = list([int(y) for y in Y])
         result['y_pred'] = list([int(y) for y in pred])
 
-        if classifier and classifier.coef_:
+        if classifier and hasattr(classifier, 'coef_'):
             result['coef'] = classifier.coef_.tolist()
 
         return result
