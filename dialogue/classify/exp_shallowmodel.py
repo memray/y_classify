@@ -541,8 +541,8 @@ class ShallowExperimenter():
             self.logger.info('=' * 80)
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
-        '''
 
+        '''
         for C in [2**x for x in [-4, 0, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l1, C=%f" % C)
