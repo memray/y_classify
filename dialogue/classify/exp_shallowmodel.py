@@ -476,12 +476,12 @@ class ShallowExperimenter():
         '''
         for C in [2**x for x in [0]]: # [-4, -3, -2, -1, 0, 1, 2, 3]
             self.logger.info('=' * 80)
-            self.logger.info("LinearSVC.pen=l1, C=%f" % C)
-            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
-
-            self.logger.info('=' * 80)
             self.logger.info("LR.pen=l1.C=%f" % C)
             results.append(self.benchmark('LR.pen=l1.C=%f' % C, LogisticRegression(solver="liblinear", penalty='l1', C=C)))
+
+            self.logger.info('=' * 80)
+            self.logger.info("LinearSVC.pen=l1, C=%f" % C)
+            results.append(self.benchmark('LinearSVC.pen=l1.C=%f' % C, LinearSVC(penalty='l1', tol=1e-3, dual=False, C=C)))
 
             self.logger.info('=' * 80)
             self.logger.info("LinearSVC.pen=l2, C=%f" % C)
@@ -541,6 +541,7 @@ class ShallowExperimenter():
             self.logger.info('=' * 80)
             self.logger.info(name)
             results.append(self.benchmark(name, clf))
+
 
         '''
         for C in [2**x for x in [-4, 0, 2, 3]]: # [0]+[2**x for x in [-3, -2, -1, 0]]
@@ -1745,7 +1746,7 @@ class ShallowExperimenter():
         result['y_test'] = list([int(y) for y in Y])
         result['y_pred'] = list([int(y) for y in pred])
 
-        if classifier:
+        if classifier and classifier.coef_:
             result['coef'] = classifier.coef_.tolist()
 
         return result
