@@ -534,8 +534,8 @@ class ShallowExperimenter():
                 # (RandomForestClassifier(n_estimators=500, n_jobs=-1), "Random forest.#tree=500")
                 # (RandomForestClassifier(n_estimators=64, n_jobs=-1), "Random forest.#tree=64"),
                 # (RandomForestClassifier(n_estimators=128, n_jobs=-1), "Random forest.#tree=128"),
-                (RandomForestClassifier(n_estimators=256, n_jobs=-1), "Random forest.#tree=256"),
-                # (RandomForestClassifier(n_estimators=512, n_jobs=-1), "Random forest.#tree=512"),
+                # (RandomForestClassifier(n_estimators=256, n_jobs=-1), "Random forest.#tree=256"),
+                (RandomForestClassifier(n_estimators=512, n_jobs=-1), "Random forest.#tree=512"),
                 # (RandomForestClassifier(n_estimators=1024, n_jobs=-1), "Random forest.#tree=1024")
         ]:
             self.logger.info('=' * 80)
