@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="run discrete feature selection on c=2.0, k=2**8">
+    <list default="true" id="bb6d22fe-4cfa-4f67-bd1e-d64ecdf9f716" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogue/classify/exp_shallowmodel.py" afterPath="$PROJECT_DIR$/dialogue/classify/exp_shallowmodel.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model_selection.feature=2_lexical.sh" afterPath="$PROJECT_DIR$/model_selection.feature=2_lexical.sh" />
@@ -104,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/dialogue/classify/exp_shallowmodel.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="278">
-              <caret line="475" column="35" lean-forward="false" selection-start-line="475" selection-start-column="35" selection-end-line="475" selection-end-column="35" />
+              <caret line="475" column="33" lean-forward="true" selection-start-line="475" selection-start-column="33" selection-end-line="475" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -114,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/model_selection.feature=2_lexical.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="8" column="315" lean-forward="true" selection-start-line="8" selection-start-column="315" selection-end-line="8" selection-end-column="315" />
+              <caret line="8" column="310" lean-forward="true" selection-start-line="8" selection-start-column="310" selection-end-line="8" selection-end-column="310" />
               <folding />
             </state>
           </provider>
@@ -245,8 +245,8 @@
         <option value="$PROJECT_DIR$/dialogue/analysis/significance_test.py" />
         <option value="$PROJECT_DIR$/dialogue/classify/task_runner.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/dialogue/classify/exp_shallowmodel.py" />
         <option value="$PROJECT_DIR$/model_selection.feature=2_lexical.sh" />
+        <option value="$PROJECT_DIR$/dialogue/classify/exp_shallowmodel.py" />
       </list>
     </option>
   </component>
@@ -2056,13 +2056,6 @@
       <workItem from="1483229924318" duration="65606000" />
       <workItem from="1500499303147" duration="26032000" />
     </task>
-    <task id="LOCAL-00164" summary="feature selection">
-      <created>1514531737177</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1514531737177</updated>
-    </task>
     <task id="LOCAL-00165" summary="feature selection">
       <created>1514532883504</created>
       <option name="number" value="00165" />
@@ -2399,7 +2392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519095790977</updated>
     </task>
-    <option name="localTasksCounter" value="213" />
+    <task id="LOCAL-00213" summary="run svm on c=2^-2, context=all, similarity=true">
+      <created>1519095831146</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1519095831146</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2503,7 +2503,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="run discrete feature selection on c=1.0, fix plot bugs" />
     <MESSAGE value="run discrete feature selection on c=1.0, rerun the incomplete tasks" />
     <MESSAGE value="rerun incomplete jobs of discrete feature selection on c=1.0" />
     <MESSAGE value="run continuous feature selection on c=1.0" />
@@ -2528,7 +2527,8 @@
     <MESSAGE value="rerun current" />
     <MESSAGE value="run svm on c=2^-4" />
     <MESSAGE value="run svm on c=2^-3, context=all, similarity=true" />
-    <option name="LAST_COMMIT_MESSAGE" value="run svm on c=2^-3, context=all, similarity=true" />
+    <MESSAGE value="run svm on c=2^-2, context=all, similarity=true" />
+    <option name="LAST_COMMIT_MESSAGE" value="run svm on c=2^-2, context=all, similarity=true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3086,7 +3086,7 @@
     <entry file="file://$PROJECT_DIR$/dialogue/classify/exp_shallowmodel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
-          <caret line="475" column="35" lean-forward="false" selection-start-line="475" selection-start-column="35" selection-end-line="475" selection-end-column="35" />
+          <caret line="475" column="33" lean-forward="true" selection-start-line="475" selection-start-column="33" selection-end-line="475" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -3094,7 +3094,7 @@
     <entry file="file://$PROJECT_DIR$/model_selection.feature=2_lexical.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="8" column="315" lean-forward="true" selection-start-line="8" selection-start-column="315" selection-end-line="8" selection-end-column="315" />
+          <caret line="8" column="310" lean-forward="true" selection-start-line="8" selection-start-column="310" selection-end-line="8" selection-end-column="310" />
           <folding />
         </state>
       </provider>
