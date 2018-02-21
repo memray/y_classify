@@ -11,7 +11,9 @@ from classify.task_runner import preload_X_Y
 from dialogue.data.data_loader import data_loader
 
 if __name__ == '__main__':
-    experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_selection/continuous/0-all/'
+    # experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_selection/continuous/0-all/'
+    # experiment_path = '//Users/memray/Project/yahoo/y_classify/output/cnn_results/non-concat/next/'
+    experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_comparison/context=next.similarity=true/'
 
     config = configuration.load_basic_config()
     extractor = Feature_Extractor(config)
@@ -42,8 +44,10 @@ if __name__ == '__main__':
 
             X_raw, X_raw_feature, feature_names, label_encoder, X_all, Y = data_dict[data_name]
 
-            with open(os.path.join(experiment_path, folder, data_name + '.test.pkl'), 'rb') as pkl_file:
-                results = pickle.load(pkl_file)
+            # load predictions and ground-truth from disk
+            if os.path.exists(os.path.join(experiment_path, folder, data_name + '.test.pkl')):
+                with open(os.path.join(experiment_path, folder, data_name + '.test.pkl'), 'rb') as pkl_file:
+                    results = pickle.load(pkl_file)
 
             labels = np.asarray(label_encoder.classes_)
 
@@ -61,9 +65,9 @@ if __name__ == '__main__':
                     result = result[0]
                     y_pred = result['y_pred']
                     y_true = result['y_test']
-                    # report = metrics.classification_report(y_true, y_pred, target_names=labels)
+                    report = metrics.classification_report(y_true, y_pred, target_names=labels)
                     p, r, f1, s = metrics.precision_recall_fscore_support(y_true, y_pred)
-                    # print(report)
+                    print(report)
 
                     # write contents
                     line = data_name
@@ -75,6 +79,8 @@ if __name__ == '__main__':
                             prfs_dict['%s-%s' % (label, metric_name)] = prfs_list
 
                     csv_file.write(line+'\n')
+                    print(line)
+                    pass
 
             if data_id == 0:
                 with open(os.path.join(experiment_path, folder, 'all.test.detail.csv'), 'w') as csv_file:
@@ -93,6 +99,8 @@ if __name__ == '__main__':
                         line += ",%f" % v
 
                 csv_file.write(line+'\n')
+                print(line)
+                pass
 
             all_prfs_list.append(prfs_dict)
 
