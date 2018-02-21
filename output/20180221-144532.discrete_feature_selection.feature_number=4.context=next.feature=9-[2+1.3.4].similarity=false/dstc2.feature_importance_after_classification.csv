@@ -1,0 +1,17 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+8512,7,b'7-syntactic_feature__subj_word__next_system_utterance__you',1521.9407,2,1.0000,0
+8339,7,b'7-syntactic_feature__root_word__next_user_utterance__thank',938.0234,4,0.4187,1
+31,3,b'3-time_feature__turns_to_end',7328.0899,0,0.2161,2
+6947,5,b'5-phrase_feature__noun_phrases__next_user_utterance__bye',842.5880,5,0.1566,3
+8114,7,b'7-syntactic_feature__root_word__next_system_utterance__like',1172.1812,3,0.0968,4
+30,3,b'3-time_feature__turns_from_start',2873.4959,1,0.0484,5
+7701,7,b'7-syntactic_feature__obj_word__next_user_utterance__bye',767.8040,9,0.0462,6
+7074,5,b'5-phrase_feature__noun_phrases__next_user_utterance__good_bye',839.6950,6,0.0298,7
+6467,5,b'5-phrase_feature__noun_phrases__next_system_utterance__number',579.7128,12,0.0243,8
+6510,5,b'5-phrase_feature__noun_phrases__next_system_utterance__phone',579.7128,11,0.0229,9
+6511,5,b'5-phrase_feature__noun_phrases__next_system_utterance__phone_number',579.7128,10,0.0205,10
+6332,5,b'5-phrase_feature__noun_phrases__next_system_utterance__kind',806.6716,8,0.0161,11
+7421,6,b'6-entity_feature__entity__next_system_utterance__01223_DATE',529.1960,15,0.0116,12
+8480,7,b'7-syntactic_feature__subj_word__next_system_utterance__number',578.6295,13,0.0082,13
+4584,1,b'1-utterance_length.next_user_utterance__utterance_length',544.2346,14,0.0077,14
+7693,7,b'7-syntactic_feature__obj_word__next_system_utterance__kind',819.2124,7,0.0008,15

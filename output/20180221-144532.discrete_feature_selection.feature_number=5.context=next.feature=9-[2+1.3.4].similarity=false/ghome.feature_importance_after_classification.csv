@@ -1,0 +1,33 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+8556,4.1,b'4.1-ngram.next_system_utterance__sorry',663.5020,4,1.0000,0
+23343,5,b'5-phrase_feature__noun_phrases__next_system_utterance__turning',240.5849,20,0.3049,1
+5830,4.1,b'4.1-ngram.next_system_utterance__help',575.0181,5,0.2425,2
+34420,7,b'7-syntactic_feature__subj_word__next_system_utterance__i',1931.1082,0,0.1762,3
+5021,4.1,b'4.1-ngram.next_system_utterance__don',368.4234,11,0.1750,4
+8561,4.1,b'4.1-ngram.next_system_utterance__sorry don',323.0077,12,0.1514,5
+5039,4.1,b'4.1-ngram.next_system_utterance__don understand',211.4860,28,0.1146,6
+6328,4.1,b'4.1-ngram.next_system_utterance__know',226.4448,25,0.0832,7
+9909,1,b'1-utterance_length.next_user_utterance__utterance_length',386.2874,7,0.0634,8
+5025,4.1,b'4.1-ngram.next_system_utterance__don know',240.5310,21,0.0511,9
+17883,5,b'5-phrase_feature__noun_phrases__next_system_utterance__device',289.4626,15,0.0468,10
+33261,7,b'7-syntactic_feature__root_word__next_system_utterance__tell',293.9360,14,0.0353,11
+32954,7,b'7-syntactic_feature__root_word__next_system_utterance__know',726.7511,3,0.0245,12
+33305,7,b'7-syntactic_feature__root_word__next_system_utterance__understand',263.0493,16,0.0230,13
+22172,5,b'5-phrase_feature__noun_phrases__next_system_utterance__saying',230.8416,24,0.0222,14
+6337,4.1,b'4.1-ngram.next_system_utterance__know help',217.5272,26,0.0179,15
+8562,4.1,b'4.1-ngram.next_system_utterance__sorry don know',240.0449,22,0.0151,16
+5027,4.1,b'4.1-ngram.next_system_utterance__don know help',217.5272,27,0.0150,17
+32866,7,b'7-syntactic_feature__root_word__next_system_utterance__help',237.1259,23,0.0141,18
+8587,4.1,b'4.1-ngram.next_system_utterance__sorry sure',369.8694,10,0.0129,19
+9448,4.1,b'4.1-ngram.next_system_utterance__understand',210.3998,29,0.0126,20
+2946,1,b'1-utterance_length.next_system_utterance__utterance_length',392.8140,6,0.0106,21
+8589,4.1,b'4.1-ngram.next_system_utterance__sorry sure help',370.7657,8,0.0079,22
+31368,7,b'7-syntactic_feature__obj_word__next_system_utterance__me',309.9814,13,0.0073,23
+20716,5,b'5-phrase_feature__noun_phrases__next_system_utterance__name',201.1263,30,0.0068,24
+8855,4.1,b'4.1-ngram.next_system_utterance__sure help',370.7657,9,0.0068,25
+46,3,b'3-time_feature__turns_from_start',1855.8406,1,0.0065,26
+32965,7,b'7-syntactic_feature__root_word__next_system_utterance__learn',195.9882,31,0.0058,27
+23543,5,b'5-phrase_feature__noun_phrases__next_system_utterance__video',259.9380,17,0.0053,28
+32594,7,b'7-syntactic_feature__root_word__next_system_utterance__apolog',254.6443,19,0.0041,29
+16400,5,b'5-phrase_feature__noun_phrases__next_system_utterance__apologies',254.6443,18,0.0041,30
+47,3,b'3-time_feature__turns_to_end',1142.1987,2,0.0027,31
