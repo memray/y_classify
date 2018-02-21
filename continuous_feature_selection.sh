@@ -9,7 +9,7 @@ export CONTEXT=0
 declare -a FEATURE_IDs=(16 17 18)
 declare -a power=(3 4 5 6 7 8) # (2 3 4 5 6 7 8 9 10 -1)
 
-export DISCRETE_NUMBER_TO_KEEP=8
+export DISCRETE_NUMBER_TO_KEEP=7
 for FEATURE_ID in "${FEATURE_IDs[@]}"
 do
     export FEATURE_ID

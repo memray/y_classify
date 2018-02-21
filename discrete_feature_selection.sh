@@ -6,7 +6,7 @@ export EXP_MODE='discrete_feature_selection'
 
 export CONTEXT=0
 declare -a FEATURE_IDs=(9) # (0 9 10 11 12 13 14)
-declare -a power=(4 5 6 7 8 9 10 11 12 -1)
+declare -a power=(4 5 6 7 8 9) # (4 5 6 7 8 9 10 11 12 -1)
 
 for FEATURE_ID in "${FEATURE_IDs[@]}"
 do
