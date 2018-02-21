@@ -1,0 +1,77 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+961,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,71,1.0000,0
+2564,4.1,b'4.1-ngram.next_system_utterance__like',388.2541,38,0.4124,1
+5127,4.1,b'4.1-ngram.next_user_utterance__thank',412.7607,31,0.3508,2
+8126,7,b'7-syntactic_feature__root_word__next_system_utterance__like',1172.1812,3,0.3087,3
+8351,7,b'7-syntactic_feature__root_word__next_user_utterance__thank',938.0234,4,0.2663,4
+34,4.1,b'4.1-ngram.current_user_utterance__address',350.4873,49,0.2564,5
+8524,7,b'7-syntactic_feature__subj_word__next_system_utterance__you',1521.9407,2,0.2355,6
+6384,5,b'5-phrase_feature__noun_phrases__next_system_utterance__looking',367.7857,44,0.2119,7
+4787,4.1,b'4.1-ngram.next_user_utterance__good',342.6585,51,0.1320,8
+6900,5,b'5-phrase_feature__noun_phrases__next_user_utterance__address',469.2006,21,0.1224,9
+5239,5,b'5-phrase_feature__next_noun_phrases__jaccard_similarity',0.0000,64,0.1106,10
+960,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,68,0.1008,11
+7200,5,b'5-phrase_feature__noun_phrases__next_user_utterance__number',520.1140,17,0.0873,12
+6594,5,b'5-phrase_feature__noun_phrases__next_system_utterance__right',335.9529,54,0.0838,13
+4602,2.1,b'2.1-user_action_words.next_user_utterance__number',520.1140,16,0.0831,14
+7713,7,b'7-syntactic_feature__obj_word__next_user_utterance__bye',767.8040,9,0.0794,15
+6953,5,b'5-phrase_feature__noun_phrases__next_user_utterance__bye',842.5880,5,0.0779,16
+5614,5,b'5-phrase_feature__noun_phrases__current_user_utterance__number',410.6642,33,0.0776,17
+15,2.1,b'2.1-user_action_words.current_user_utterance__number',410.6642,32,0.0742,18
+27,2.3.1,b'2.3.1-action_jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,65,0.0717,19
+8478,7,b'7-syntactic_feature__subj_word__next_system_utterance__i',397.4483,37,0.0637,20
+32,3,b'3-time_feature__turns_to_end',7328.0899,0,0.0636,21
+8141,7,b'7-syntactic_feature__root_word__next_system_utterance__sorri',467.9169,22,0.0624,22
+6959,5,b'5-phrase_feature__noun_phrases__next_user_utterance__care',434.4164,25,0.0620,23
+6244,5,b'5-phrase_feature__noun_phrases__next_system_utterance__great_restaurant',288.3986,61,0.0605,24
+31,3,b'3-time_feature__turns_from_start',2873.4959,1,0.0605,25
+5241,5,b'5-phrase_feature__noun_phrases__current_user_utterance__address',425.7890,27,0.0604,26
+6473,5,b'5-phrase_feature__noun_phrases__next_system_utterance__number',579.7128,12,0.0581,27
+6516,5,b'5-phrase_feature__noun_phrases__next_system_utterance__phone',579.7128,10,0.0566,28
+7667,7,b'7-syntactic_feature__next_root_words_overlap',0.0000,70,0.0564,29
+6517,5,b'5-phrase_feature__noun_phrases__next_system_utterance__phone_number',579.7128,11,0.0519,30
+4588,2.1,b'2.1-user_action_words.next_user_utterance__address',467.7490,23,0.0516,31
+4589,2.1,b'2.1-user_action_words.next_user_utterance__ani',298.2324,60,0.0514,32
+1,2.1,b'2.1-user_action_words.current_user_utterance__address',426.6824,26,0.0504,33
+7957,7,b'7-syntactic_feature__root_word__current_user_utterance__what',458.4822,24,0.0454,34
+5129,4.1,b'4.1-ngram.next_user_utterance__thank good',331.0370,56,0.0425,35
+6506,5,b'5-phrase_feature__noun_phrases__next_system_utterance__part',383.2503,41,0.0410,36
+6743,5,b'5-phrase_feature__noun_phrases__next_system_utterance__something',335.0703,55,0.0349,37
+5720,5,b'5-phrase_feature__noun_phrases__current_user_utterance__restaurant',373.9228,43,0.0327,38
+8374,7,b'7-syntactic_feature__root_word__next_user_utterance__what',380.8588,42,0.0315,39
+4676,4.1,b'4.1-ngram.next_user_utterance__bye',341.2626,52,0.0259,40
+7243,5,b'5-phrase_feature__noun_phrases__next_user_utterance__phone_number',516.6008,18,0.0252,41
+4587,1,b'1-utterance_length.next_user_utterance__utterance_length',544.2346,14,0.0223,42
+5237,5,b'5-phrase_feature__next_noun_phrases__#overlap',0.0000,69,0.0220,43
+5238,5,b'5-phrase_feature__next_noun_phrases__have_overlap',0.0000,72,0.0212,44
+17,2.1,b'2.1-user_action_words.current_user_utterance__phone',407.0356,35,0.0187,45
+5655,5,b'5-phrase_feature__noun_phrases__current_user_utterance__phone',407.0356,36,0.0185,46
+7080,5,b'5-phrase_feature__noun_phrases__next_user_utterance__good_bye',839.6950,6,0.0176,47
+7427,6,b'6-entity_feature__entity__next_system_utterance__01223_DATE',529.1960,15,0.0160,48
+8210,7,b'7-syntactic_feature__root_word__next_user_utterance__dont',319.4758,59,0.0157,49
+8492,7,b'7-syntactic_feature__subj_word__next_system_utterance__number',578.6295,13,0.0156,50
+4604,2.1,b'2.1-user_action_words.next_user_utterance__phone',509.6378,19,0.0138,51
+4396,4.1,b'4.1-ngram.next_system_utterance__town mind',278.7280,62,0.0127,52
+6431,5,b'5-phrase_feature__noun_phrases__next_system_utterance__mind',424.7631,29,0.0117,53
+7706,7,b'7-syntactic_feature__obj_word__next_system_utterance__part',424.7631,28,0.0105,54
+7242,5,b'5-phrase_feature__noun_phrases__next_user_utterance__phone',509.6378,20,0.0104,55
+2780,4.1,b'4.1-ngram.next_system_utterance__mind',278.7280,63,0.0091,56
+8117,7,b'7-syntactic_feature__root_word__next_system_utterance__have',424.7631,30,0.0082,57
+7059,5,b'5-phrase_feature__noun_phrases__next_user_utterance__food',385.1523,40,0.0068,58
+4595,2.1,b'2.1-user_action_words.next_user_utterance__food',385.1523,39,0.0064,59
+7668,7,b'7-syntactic_feature__next_subj_words_overlap',0.0000,75,0.0052,60
+5656,5,b'5-phrase_feature__noun_phrases__current_user_utterance__phone_number',407.2975,34,0.0044,61
+962,1,b'1-utterance_length.next_system_utterance__utterance_length',325.2387,58,0.0041,62
+7707,7,b'7-syntactic_feature__obj_word__next_system_utterance__someth',349.5679,50,0.0032,63
+6338,5,b'5-phrase_feature__noun_phrases__next_system_utterance__kind',806.6716,8,0.0022,64
+5130,4.1,b'4.1-ngram.next_user_utterance__thank good bye',328.6396,57,0.0017,65
+7666,7,b'7-syntactic_feature__next_obj_words_overlap',0.0000,66,0.0015,66
+4788,4.1,b'4.1-ngram.next_user_utterance__good bye',339.5286,53,0.0008,67
+2463,4.1,b'4.1-ngram.next_system_utterance__kind food like',363.2290,46,0.0008,68
+7705,7,b'7-syntactic_feature__obj_word__next_system_utterance__kind',819.2124,7,0.0008,69
+2461,4.1,b'4.1-ngram.next_system_utterance__kind',355.3460,48,0.0002,70
+2128,4.1,b'4.1-ngram.next_system_utterance__food like',363.3680,45,0.0002,71
+2462,4.1,b'4.1-ngram.next_system_utterance__kind food',355.3460,47,0.0002,72
+7663,6,b'6-entity_feature__next_entity__#overlap',0.0000,74,0.0000,73
+7664,6,b'6-entity_feature__next_entity__have_overlap',0.0000,73,0.0000,74
+7665,6,b'6-entity_feature__next_entity__jaccard_similarity',0.0000,67,0.0000,75

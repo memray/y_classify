@@ -13,7 +13,8 @@ from dialogue.data.data_loader import data_loader
 if __name__ == '__main__':
     # experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_selection/continuous/0-all/'
     # experiment_path = '//Users/memray/Project/yahoo/y_classify/output/cnn_results/non-concat/next/'
-    experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_comparison/context=next.similarity=true/'
+    # experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_comparison/context=next.similarity=true/'
+    experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_selection/continuous/15-[5+1.2.3.4]/'
 
     config = configuration.load_basic_config()
     extractor = Feature_Extractor(config)

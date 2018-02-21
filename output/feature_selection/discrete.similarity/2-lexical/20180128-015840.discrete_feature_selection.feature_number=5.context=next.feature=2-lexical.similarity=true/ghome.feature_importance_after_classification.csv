@@ -1,0 +1,35 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+8509,4.1,b'4.1-ngram.next_system_utterance__sorry',663.5020,0,1.0000,0
+4974,4.1,b'4.1-ngram.next_system_utterance__don',368.4234,5,0.2318,1
+2899,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,33,0.2288,2
+8514,4.1,b'4.1-ngram.next_system_utterance__sorry don',323.0077,6,0.2146,3
+5783,4.1,b'4.1-ngram.next_system_utterance__help',575.0181,1,0.1962,4
+8540,4.1,b'4.1-ngram.next_system_utterance__sorry sure',369.8694,4,0.0730,5
+4872,4.1,b'4.1-ngram.next_system_utterance__device',95.2261,19,0.0609,6
+8515,4.1,b'4.1-ngram.next_system_utterance__sorry don know',240.0449,8,0.0433,7
+8197,4.1,b'4.1-ngram.next_system_utterance__screen',69.2170,30,0.0423,8
+8518,4.1,b'4.1-ngram.next_system_utterance__sorry help',178.4302,14,0.0419,9
+4978,4.1,b'4.1-ngram.next_system_utterance__don know',240.5310,7,0.0315,10
+4992,4.1,b'4.1-ngram.next_system_utterance__don understand',211.4860,12,0.0286,11
+3822,4.1,b'4.1-ngram.next_system_utterance__ask',82.7572,21,0.0196,12
+6281,4.1,b'4.1-ngram.next_system_utterance__know',226.4448,9,0.0176,13
+9401,4.1,b'4.1-ngram.next_system_utterance__understand',210.3998,13,0.0175,14
+6512,4.1,b'4.1-ngram.next_system_utterance__like watch',65.3965,31,0.0121,15
+9589,4.1,b'4.1-ngram.next_system_utterance__watch',75.3387,22,0.0117,16
+8517,4.1,b'4.1-ngram.next_system_utterance__sorry don understand',129.3792,15,0.0053,17
+10208,4.1,b'4.1-ngram.next_user_utterance__computer',70.0403,29,0.0040,18
+6290,4.1,b'4.1-ngram.next_system_utterance__know help',217.5272,11,0.0039,19
+10352,4.1,b'4.1-ngram.next_user_utterance__eastern',83.9180,20,0.0037,20
+671,4.1,b'4.1-ngram.current_user_utterance__eastern',73.6705,23,0.0035,21
+4980,4.1,b'4.1-ngram.next_system_utterance__don know help',217.5272,10,0.0035,22
+3765,4.1,b'4.1-ngram.next_system_utterance__apologies don',114.4431,18,0.0012,23
+3766,4.1,b'4.1-ngram.next_system_utterance__apologies don understand',114.4431,16,0.0012,24
+2898,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,32,0.0011,25
+3764,4.1,b'4.1-ngram.next_system_utterance__apologies',114.4431,17,0.0009,26
+3824,4.1,b'4.1-ngram.next_system_utterance__ask video tell',71.4934,27,0.0006,27
+9498,4.1,b'4.1-ngram.next_system_utterance__video tell',71.4934,25,0.0006,28
+8940,4.1,b'4.1-ngram.next_system_utterance__tell screen',71.4934,24,0.0006,29
+9499,4.1,b'4.1-ngram.next_system_utterance__video tell screen',71.4934,26,0.0005,30
+3823,4.1,b'4.1-ngram.next_system_utterance__ask video',71.4934,28,0.0005,31
+8808,4.1,b'4.1-ngram.next_system_utterance__sure help',370.7657,3,0.0005,32
+8542,4.1,b'4.1-ngram.next_system_utterance__sorry sure help',370.7657,2,0.0004,33
