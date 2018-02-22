@@ -6,18 +6,21 @@ import numpy as np
 import pickle
 
 from classify import configuration
+from classify import exp_shallowmodel
 from classify.feature_extractor import Feature_Extractor
-from classify.task_runner import preload_X_Y
+from classify.task_runner import preload_X_Y, filter_X_by_contexts_features
 from dialogue.data.data_loader import data_loader
 
 if __name__ == '__main__':
     # experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_selection/continuous/0-all/'
     # experiment_path = '//Users/memray/Project/yahoo/y_classify/output/cnn_results/non-concat/next/'
     # experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_comparison/context=next.similarity=true/'
-    experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_selection/continuous/15-[5+1.2.3.4]/'
+    experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_selection/continuous.similarity/15-[5+1.2.3.4]/'
 
     config = configuration.load_basic_config()
     extractor = Feature_Extractor(config)
+
+    exp = exp_shallowmodel.ShallowExperimenter(config)
 
     data_dict = {}
 
@@ -42,6 +45,8 @@ if __name__ == '__main__':
         for data_id, data_name in enumerate(config['data_names']):
             prfs_dict  = {}
             print('%s - %s' % (folder, data_name))
+            k_feature_to_keep = 0
+            k_component_for_pca = 0
 
             X_raw, X_raw_feature, feature_names, label_encoder, X_all, Y = data_dict[data_name]
 
@@ -52,6 +57,9 @@ if __name__ == '__main__':
 
             labels = np.asarray(label_encoder.classes_)
 
+            '''
+            Export performance for each dataset
+            '''
             with open(os.path.join(experiment_path, folder, data_name + '.test.detail.csv'), 'w') as csv_file:
                 target_names = ['%s' % l for l in labels]
                 # write header
@@ -105,6 +113,15 @@ if __name__ == '__main__':
 
             all_prfs_list.append(prfs_dict)
 
+            '''
+            Export feature importance, only workable for continuous feature selection for now
+            '''
+            X, retained_feature_indices, retained_feature_names  = filter_X_by_contexts_features(X_all, config)
+            exp.run_cross_validation_with_continuous_feature_selection(X, Y, retained_feature_indices, retained_feature_names, k_feature_to_keep, k_component_for_pca, results)
+
+        '''
+        Export overall performance
+        '''
         with open(os.path.join(experiment_path, folder, 'all.test.detail.csv'), 'a') as csv_file:
             line = 'all'
 
@@ -114,4 +131,3 @@ if __name__ == '__main__':
                     line += ",%f" % v
 
             csv_file.write(line + '\n')
-
