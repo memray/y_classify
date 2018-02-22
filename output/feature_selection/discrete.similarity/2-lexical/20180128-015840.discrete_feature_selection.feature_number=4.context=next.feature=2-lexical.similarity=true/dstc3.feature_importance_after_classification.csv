@@ -1,0 +1,19 @@
+id,name,prefix,chi2,chi2_rank,clf_weight,clf_weight_rank
+3399,4.1,b'4.1-ngram.next_system_utterance__example',187.8127,11,1.0000,0
+1293,4.3.1,b'4.3.1-jaccard_similarity.next_user_utterance_pairs__jaccard_similarity',0.0000,17,0.2760,1
+7699,4.1,b'4.1-ngram.next_user_utterance__thank',333.4715,1,0.1591,2
+9,4.1,b'4.1-ngram.current_user_utterance__address',344.7469,0,0.1110,3
+7017,4.1,b'4.1-ngram.next_user_utterance__bye',223.3413,6,0.1096,4
+6938,4.1,b'4.1-ngram.next_user_utterance__address',232.4335,4,0.0699,5
+7202,4.1,b'4.1-ngram.next_user_utterance__goodbye',182.2327,15,0.0695,6
+7705,4.1,b'4.1-ngram.next_user_utterance__thank good bye',215.8310,10,0.0432,7
+817,4.1,b'4.1-ngram.current_user_utterance__phone',185.5460,13,0.0406,8
+7704,4.1,b'4.1-ngram.next_user_utterance__thank good',218.6260,9,0.0345,9
+819,4.1,b'4.1-ngram.current_user_utterance__phone number',187.0974,12,0.0255,10
+7124,4.1,b'4.1-ngram.next_user_utterance__dont care',234.8901,3,0.0207,11
+7023,4.1,b'4.1-ngram.next_user_utterance__care',249.4201,2,0.0179,12
+7196,4.1,b'4.1-ngram.next_user_utterance__good',221.3249,7,0.0171,13
+7123,4.1,b'4.1-ngram.next_user_utterance__dont',229.8376,5,0.0131,14
+761,4.1,b'4.1-ngram.current_user_utterance__number',182.4017,14,0.0124,15
+1292,4.2.1,b'4.2.1-edit_distance.next_user_utterance_pairs__edit_distance',0.0000,16,0.0076,16
+7197,4.1,b'4.1-ngram.next_user_utterance__good bye',220.4684,8,0.0062,17

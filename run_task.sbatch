@@ -16,11 +16,16 @@
 #module restore
 
 # Run the job
-if [ "$EXP_MODE" = "cross_validation" ]; then
-    COMMAND="/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode $EXP_MODE -selected_feature_set_id $FEATURE_ID  -selected_context_id $CONTEXT"
-else
-    COMMAND="/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode $EXP_MODE -selected_feature_set_id $FEATURE_ID  -selected_context_id $CONTEXT -k_feature_to_keep $NUMBER_TO_KEEP"
+if [ "$EXP_MODE" = "cross_validation" ]
+then
+    COMMAND="/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode $EXP_MODE -selected_feature_set_id $FEATURE_ID -selected_context_id $CONTEXT"
+elif [ "$EXP_MODE" = "discrete_feature_selection" ]
+then
+    COMMAND="/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode $EXP_MODE -selected_feature_set_id $FEATURE_ID -selected_context_id $CONTEXT -k_feature_to_keep $NUMBER_TO_KEEP"
+else [ "$EXP_MODE" = "continuous_feature_selection" ]
+    COMMAND="/ihome/pbrusilosky/rum20/packages/anaconda3/bin/python -m dialogue.classify.task_runner -experiment_mode $EXP_MODE -selected_feature_set_id $FEATURE_ID -selected_context_id $CONTEXT -k_feature_to_keep $NUMBER_TO_KEEP -k_component_for_pca $PCA_COMPONENT"
 fi
+
 
 echo $COMMAND
 srun $COMMAND
