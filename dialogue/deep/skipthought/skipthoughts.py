@@ -9,8 +9,8 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 from collections import OrderedDict
 
-from dialogue.deep.skipthought.gru import BayesianGRU, GRU
-from dialogue.deep.skipthought.dropout import EmbeddingDropout, SequentialDropout
+from deep.skipthought.gru import BayesianGRU, GRU
+from deep.skipthought.dropout import EmbeddingDropout, SequentialDropout
 
 urls = {}
 urls['dictionary'] = 'http://www.cs.toronto.edu/~rkiros/models/dictionary.txt'

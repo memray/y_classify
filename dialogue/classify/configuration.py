@@ -272,8 +272,8 @@ def load_basic_config():
 
 
     # Skip-thought setting
-    # param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
-    param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
+    param['skipthought_model_path']     = '/Users/memray/Data/skip-thought'
+    # param['skipthought_model_path']     = '/home/memray/Data/skip-thought'
     param['skipthought_data_path']      = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.skip-thought.biskip.vector')
 
 
@@ -429,8 +429,8 @@ def load_batch_config(key_params):
     param['gensim_dict_path']           = os.path.join(param['root_path'], 'dataset', 'feature', 'gensim', '%s.dict' % ('%s'))
 
     # Word2Vec setting
-    # param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
-    param['w2v_path']                   = os.path.join('/home/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    param['w2v_path']                   = os.path.join('/Users/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
+    # param['w2v_path']                   = os.path.join('/home/memray/Data/glove', 'GoogleNews-vectors-negative300.bin')
     param['w2v_vector_length']          = 300
 
     # param['4.1-ngram']     = True

@@ -1,5 +1,5 @@
-from dialogue.deep.cnn.model import CNN
-import dialogue.deep.cnn.utils
+from deep.cnn.model import CNN
+import deep.cnn.utils
 
 from torch.autograd import Variable
 import torch

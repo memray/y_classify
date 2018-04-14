@@ -6,11 +6,11 @@ from torch.autograd import Variable
 from torch.optim import Adam
 from torch.utils.data.dataloader import DataLoader
 
-from dialogue.classify import configuration
-from dialogue.classify.exp_shallowmodel import ShallowExperimenter
-from dialogue.classify.feature_extractor import Feature_Extractor, ItemSelector
-from dialogue.data.data_loader import data_loader, DataLoader, Utterance
-from dialogue.deep.skipthought.skipthoughts import BiSkip, BiSkipClassifier
+from classify import configuration
+from classify.exp_shallowmodel import ShallowExperimenter
+from classify.feature_extractor import Feature_Extractor, ItemSelector
+from data.data_loader import data_loader, DataLoader, Utterance
+from deep.skipthought.skipthoughts import BiSkip, BiSkipClassifier
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker

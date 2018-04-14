@@ -3,10 +3,10 @@ from __future__ import print_function
 
 from sklearn import preprocessing
 
-from dialogue.data.data_loader import data_loader, DataLoader, Utterance
-from dialogue.classify import configuration
-from dialogue.classify.feature_extractor import Feature_Extractor
-from dialogue.classify.exp_shallowmodel import ShallowExperimenter
+from data.data_loader import data_loader, DataLoader, Utterance
+from classify import configuration
+from classify.feature_extractor import Feature_Extractor
+from classify.exp_shallowmodel import ShallowExperimenter
 import numpy as np
 import os
 

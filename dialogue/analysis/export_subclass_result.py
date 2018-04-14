@@ -9,7 +9,7 @@ from classify import configuration
 from classify import exp_shallowmodel
 from classify.feature_extractor import Feature_Extractor
 from classify.task_runner import preload_X_Y, filter_X_by_contexts_features
-from dialogue.data.data_loader import data_loader
+from data.data_loader import data_loader
 
 if __name__ == '__main__':
     # experiment_path = '/Users/memray/Project/yahoo/y_classify/output/feature_selection/continuous/0-all/'

@@ -3,8 +3,8 @@ import pickle
 
 import os
 import re
-from dialogue.analysis.parse_session import export_ramdom_samples
-from dialogue.data.data_loader import DataLoader
+from analysis.parse_session import export_ramdom_samples
+from data.data_loader import DataLoader
 
 class Utterance():
     def __init__(self, time, userid, direction, text):

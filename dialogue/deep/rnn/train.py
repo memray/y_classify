@@ -8,8 +8,8 @@ import pickle
 import random
 import argparse
 import numpy as np
-from data import preprocessing, getBatch
-from model import Encoder,Decoder
+from deep.rnn.data import preprocessing, getBatch
+from deep.rnn.model import Encoder,Decoder
 
 USE_CUDA = torch.cuda.is_available()
 

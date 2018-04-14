@@ -10,11 +10,11 @@ import numpy as np
 from multiprocessing import freeze_support
 from multiprocessing import current_process
 
-from dialogue.classify import exp_deepmodel
-from dialogue.classify import exp_shallowmodel
-from dialogue.classify import configuration
-from dialogue.classify.feature_extractor import Feature_Extractor
-from dialogue.data.data_loader import data_loader, DataLoader, Utterance
+from classify import exp_deepmodel
+from classify import exp_shallowmodel
+from classify import configuration
+from classify.feature_extractor import Feature_Extractor
+from data.data_loader import data_loader, DataLoader, Utterance
 
 def range_to_params(ranges_items, params, cache):
     '''
@@ -39,7 +39,7 @@ def init_task_queue(opt):
     queue = []
 
     if opt.is_deep_model:
-        parameter_ranges = {'selected_context_id': [1], 'deep_model': [True], 'deep_model_name': ['cnn']}
+        parameter_ranges = {'selected_context_id': opt.selected_context_id, 'deep_model': [True], 'deep_model_name': ['cnn']}
     else:
         parameter_ranges = {'experiment_mode': [opt.experiment_mode], 'deep_model': [False], 'selected_context_id': opt.selected_context_id, 'selected_feature_set_id': opt.selected_feature_set_id, 'similarity_feature': [opt.add_similarity_feature], 'k_feature_to_keep': [opt.k_feature_to_keep], 'k_component_for_pca': [opt.k_component_for_pca]}
     params           = []

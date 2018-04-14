@@ -43,8 +43,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.extmath import density
 from sklearn import metrics, preprocessing
 
-from dialogue.classify.feature_extractor import ItemSelector, print_printable_features
-from dialogue.data import data_loader
+from classify.feature_extractor import ItemSelector, print_printable_features
+from data import data_loader
 
 __author__ = "Rui Meng"
 __email__ = "rui.meng@pitt.edu"
@@ -851,7 +851,7 @@ class ShallowExperimenter():
             dialogue    = x_raw['dialogue']
             utterance   = x_raw['utterance']
 
-            csv_file.write('%d, %s, , , , , %s, "%s", , \n' % (did, dialogue.session_id, y_test, y_preds))
+            csv_file.write('%d, %s, , , , , %s, "%s", , \n' % (did, session_id, y_test, y_preds))
 
             self.logger.info('*' * 50)
             self.logger.info(' ' * 10 + 'index=%d, true label=%s, predicted=%s' % (did, y_test, y_preds))
@@ -859,12 +859,12 @@ class ShallowExperimenter():
             for u_id, u in enumerate(dialogue):
                 if x_raw['utterance'] != u:
                     self.logger.info('\t [%s][%s] %s' % (u.time, u.direction, u.msg_text))
-                    csv_file.write('%d, %s, %s, %s, %s, "%s", , , , \n' % (did, dialogue.session_id, u.userid, u.time, u.direction, u.msg_text))
+                    csv_file.write('%d, %s, %s, %s, %s, "%s", , , , \n' % (did, session_id, u.userid, u.time, u.direction, u.msg_text))
                 else:
                     self.logger.info('')
                     self.logger.info('\t [%s][%s] %s' % (u.time, u.direction, u.msg_text))
                     self.logger.info('')
-                    csv_file.write('%d, %s, %s, %s, %s, "%s", %s, "%s", , \n' % (did, dialogue.session_id, u.userid, u.time, u.direction, u.msg_text, y_test, y_preds))
+                    csv_file.write('%d, %s, %s, %s, %s, "%s", %s, "%s", , \n' % (did, session_id, u.userid, u.time, u.direction, u.msg_text, y_test, y_preds))
 
             csv_file.write('\n')
 

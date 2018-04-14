@@ -13,11 +13,11 @@ import operator
 import matplotlib.pyplot as plt
 
 
-from dialogue.classify.exp_shallowmodel import ShallowExperimenter
-from dialogue.classify.feature_extractor import ItemSelector
-from dialogue.deep.cnn.model import CNN
-from dialogue.deep.rnn.model import LSTM
-from dialogue.deep.skipthought.skipthoughts import BiSkipClassifier
+from classify.exp_shallowmodel import ShallowExperimenter
+from classify.feature_extractor import ItemSelector
+from deep.cnn.model import CNN
+from deep.rnn.model import LSTM
+from deep.skipthought.skipthoughts import BiSkipClassifier
 
 class DeepExperimenter(ShallowExperimenter):
     word_vectors = None
@@ -164,7 +164,7 @@ class DeepExperimenter(ShallowExperimenter):
 
         X_texts     = ItemSelector(keys=context_range).transform(X_raw_feature)
         # X_texts     = list(zip(*X_texts))
-        X_texts     = list(zip([*X_texts]))
+        X_texts     = list(zip(*[t.tolist() for t in X_texts]))
 
         vocab_counter = {}
 
